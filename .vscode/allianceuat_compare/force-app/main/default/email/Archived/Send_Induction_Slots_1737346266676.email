@@ -1,0 +1,20 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body style="height: auto; min-height: auto;">Good afternoon&nbsp;{{{Recipient.FirstName}}},&nbsp;<br />
+<br />
+We tried calling you and unfortunately could not get through to you.&nbsp;<br />
+<br />
+I am sending you my availabilities. Could you please choose a slot from there and I will give you a call during that time.<br />
+<br />
+Please click on the link below.<br />
+<br />
+<br />
+<a href="https://allianceaustralia--uat.sandbox.my.salesforce-sites.com/onboarding/b3o__SelfBookingConsole?id={{{Recipient.Id}}}"><strong>BOOK AN INDUCTION SLOT</strong></a><br />
+<br />
+<br />
+Thank you&nbsp;<br />
+<br />
+{{{Sender.FirstName}}}&nbsp;{{{Sender.LastName}}}</body>
+</html>

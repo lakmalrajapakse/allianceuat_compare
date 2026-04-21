@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>ARRH - Present Contract To Candidate</name>
+    <style>none</style>
+    <subject>Your next rural and remote adventure!</subject>
+    <textOnly>YOUR NEXT ADVENTURE AWAITS.
+
+Hi {!Contact.FirstName},
+
+Did you know we have plenty of contract opportunities available across Australia? Based on your skills and experience, there are role that we think could be a great fit for you!
+
+When you&apos;re ready to explore your next adevnture, head over to the Alliance Connect app and click through to the Job Board to apply and we&apos;ll guide you through the rest.
+
+Meanwhile, if you have any questions at all you can always call our friendly staff on 07 4998 5550.
+
+Kind regards,
+Your team at Alliance Rural &amp; Remote Health</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

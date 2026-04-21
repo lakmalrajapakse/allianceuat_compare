@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Services --></label>
+    <name>aa_Services__c</name>
+    <picklistValues>
+        <masterLabel>Enrolled Nurse</masterLabel>
+        <translation><!-- Enrolled Nurse --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Nursing Assistant</masterLabel>
+        <translation><!-- Nursing Assistant --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Personal Care Worker</masterLabel>
+        <translation><!-- Personal Care Worker --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Registered Nurse</masterLabel>
+        <translation><!-- Registered Nurse --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

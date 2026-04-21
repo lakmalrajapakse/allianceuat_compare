@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Match_Object__c</fullName>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <inlineHelpText>Must Always be set to the shift object</inlineHelpText>
+    <label>Match Object</label>
+    <referenceTo>EntityDefinition</referenceTo>
+    <relationshipLabel>Shift_Approval_Conditions1</relationshipLabel>
+    <relationshipName>Shift_Approval_Conditions1</relationshipName>
+    <required>false</required>
+    <type>MetadataRelationship</type>
+    <unique>false</unique>
+</CustomField>

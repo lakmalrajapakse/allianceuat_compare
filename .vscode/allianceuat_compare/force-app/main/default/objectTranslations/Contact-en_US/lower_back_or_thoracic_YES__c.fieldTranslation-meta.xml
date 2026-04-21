@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>
+        <!-- Lower back, neck or thoracic spinal pain or strain (including back surgery)?
+If YES please SPECIFY year, diagnosis, treatment, -->
+    </help>
+    <label><!-- lower,back or thoracic YES --></label>
+    <name>lower_back_or_thoracic_YES__c</name>
+</CustomFieldTranslation>

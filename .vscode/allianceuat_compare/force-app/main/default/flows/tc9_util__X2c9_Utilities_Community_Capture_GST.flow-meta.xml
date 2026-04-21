@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>62.0</apiVersion>
+    <description>This Screen Flow is designed for use in a Salesforce Community, allowing employees to securely submit and manage their GST Payee Withholding records.</description>
+    <environments>Default</environments>
+    <label>2c9 Utilities - Community Capture GST</label>
+    <processType>Flow</processType>
+</Flow>

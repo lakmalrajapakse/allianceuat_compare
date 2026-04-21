@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>
+        <!-- This field sets the maximum quantity for auto-processed allowances per timesheet. Use this field instead of the similarly named field on the related Payee Allowance Record to avoid issues with the 2cloudnine Sirenum Integration. 
+
+If you leave this field blank, there will be no maximum limit. -->
+    </help>
+    <label><!-- Maximum AP Quantity Per Timesheet --></label>
+    <name>Maximum_AP_Quantity_Per_Timesheet__c</name>
+</CustomFieldTranslation>

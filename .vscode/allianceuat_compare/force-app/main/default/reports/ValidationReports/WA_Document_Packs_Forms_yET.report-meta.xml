@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>b3o__Document__c$Name</field>
+    </columns>
+    <columns>
+        <field>b3o__Document__c$b3o__Document_Description__c</field>
+    </columns>
+    <columns>
+        <field>b3o__Document__c$Certificate_Type__c</field>
+    </columns>
+    <columns>
+        <field>b3o__Document__c$Document_approval_required__c</field>
+    </columns>
+    <description>WA Document Packs minus NurseWest</description>
+    <filter>
+        <criteriaItems>
+            <column>b3o__Document__c$b3o__Document_Pack__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>contains</operator>
+            <value>- WA</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>b3o__Document__c$b3o__Document_Pack__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>b3o__Document__c$b3o__Form__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>WA Document Packs, Forms</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>X3b_document__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>false</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>b3o__Document__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

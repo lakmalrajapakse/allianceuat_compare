@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Competency_Category__c</fullName>
+    <label>Competency Category</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>ID Doc</fullName>
+                <default>false</default>
+                <label>ID Doc</label>
+            </value>
+            <value>
+                <fullName>Licence</fullName>
+                <default>false</default>
+                <label>Licence</label>
+            </value>
+            <value>
+                <fullName>Mandatory Training</fullName>
+                <default>false</default>
+                <label>Mandatory Training</label>
+            </value>
+            <value>
+                <fullName>Practical Training</fullName>
+                <default>false</default>
+                <label>Practical Training</label>
+            </value>
+            <value>
+                <fullName>Qualification</fullName>
+                <default>false</default>
+                <label>Qualification</label>
+            </value>
+            <value>
+                <fullName>Client Induction</fullName>
+                <default>false</default>
+                <label>Client Induction</label>
+            </value>
+            <value>
+                <fullName>Clearance</fullName>
+                <default>false</default>
+                <label>Clearance</label>
+            </value>
+            <value>
+                <fullName>Vaccination/Immunisation</fullName>
+                <default>false</default>
+                <label>Vaccination/Immunisation</label>
+            </value>
+            <value>
+                <fullName>Skills</fullName>
+                <default>false</default>
+                <label>Skills</label>
+            </value>
+            <value>
+                <fullName>Exclusion</fullName>
+                <default>false</default>
+                <label>Exclusion</label>
+            </value>
+            <value>
+                <fullName>Paypoint</fullName>
+                <default>false</default>
+                <label>Paypoint</label>
+            </value>
+            <value>
+                <fullName>Job Type</fullName>
+                <default>false</default>
+                <label>Job Type</label>
+            </value>
+            <value>
+                <fullName>Driving Licenses</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Driving Licenses</label>
+            </value>
+            <value>
+                <fullName>Exclusions</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Exclusions</label>
+            </value>
+            <value>
+                <fullName>General</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>General</label>
+            </value>
+            <value>
+                <fullName>Heath &amp; Safety</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Heath &amp; Safety</label>
+            </value>
+            <value>
+                <fullName>Inductions</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Inductions</label>
+            </value>
+            <value>
+                <fullName>Medical</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Medical</label>
+            </value>
+            <value>
+                <fullName>Office/Admin</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Office/Admin</label>
+            </value>
+            <value>
+                <fullName>Specialties</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Specialties</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

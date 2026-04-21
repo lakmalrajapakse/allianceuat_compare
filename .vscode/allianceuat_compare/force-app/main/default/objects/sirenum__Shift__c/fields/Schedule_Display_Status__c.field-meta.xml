@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Schedule_Display_Status__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( RecordType.DeveloperName = &apos;Shift_Demand&apos;, 
+/* SHIFT DEMAND RECORD TYPE */
+
+  IF( sirenum__Cancelled__c = true, 
+    &apos;Shift Cancelled&apos;, 
+     IF(
+        ISPICKVAL(Reconfirmed__c, &apos;Both&apos;),
+         &apos;Reconfirm&apos;,
+           IF(
+             ISPICKVAL(Reconfirmed__c, &apos;Reconfirmed with Employee&apos;),
+              &apos;Reconfirm with Employee&apos;,
+                IF(
+                    ISPICKVAL(Reconfirmed__c, &apos;Reconfirmed with Facility&apos;),
+                    &apos;Reconfirm with Facility&apos;,
+    IF( sirenum__Scheduled_Start_Time__c &gt;= NOW(), &apos;Waiting&apos;, &apos;Unable to Fill&apos;
+    )
+)
+)
+)
+  ), 
+
+/* SHIFT RECORD TYPE */
+
+  IF( Cancel_Employee_Held__c = true, &apos;In a Cancelled Shift&apos;,
+
+    /* IF( sirenum__Cancelled__c = true, */
+
+      /* OLD IF( NOT(ISPICKVAL(sirenum__CancellationReason__c , &apos;Unable to Fill&apos;)) &amp;&amp; Cancellation_Completed__c = true, */
+      /* IF( Cancellation_Completed__c = true, 
+      &apos;Shift Cancelled Filled&apos;, &apos;Err Shift Canc Filled&apos;), */
+
+      /* IF( Cancellation_Completed__c = false, &apos;In a Cancelled Shift&apos;, &apos;Err In a Canc Shift&apos;) 
+
+    ), */
+     /* Cancel_Employee_Held__c = false */
+
+    IF( Cancellation_Completed__c = true, if( sirenum__Cancelled__c = true, &apos;Shift Cancelled Filled&apos;, &apos;In a Cancelled Shift&apos;),
+/* Cancellation_Completed__c = false */
+
+    IF( ISBLANK( TEXT(Reconfirmed__c)),
+
+      IF( sirenum__Published__c = true &amp;&amp; sirenum__Accepted__c = 1,
+
+          IF( Confirmed_With_Facility__c = false, 
+          &apos;Allocated&apos;,
+          IF( sirenum__Scheduled_Start_Time__c &gt;= NOW(), &apos;Confirmed&apos;, &apos;Completed&apos;)
+      ),
+      IF( Confirmed_With_Facility__c = false, &apos;Waiting&apos;, &apos;Name Given&apos;)
+
+      
+
+     /* IF( sirenum__Accepted__c = 0, 
+
+        IF( Confirmed_With_Facility__c = false, &apos;Waiting&apos;, &apos;Name Given&apos;), 
+
+
+        IF( sirenum__Published__c = true, 
+
+          IF( Confirmed_With_Facility__c = true, 
+
+            IF( sirenum__Scheduled_Start_Time__c &gt;= NOW(), &apos;Confirmed&apos;, &apos;Completed&apos;), 
+
+            &apos;Allocated&apos;),
+
+
+          &apos;ERR Accepted TRUE&apos;
+        ) */
+      ),
+
+      IF(ISPICKVAL( Reconfirmed__c, &apos;Both&apos;), &apos;Reconfirm&apos;,
+        IF(ISPICKVAL( Reconfirmed__c, &apos;Reconfirmed with Employee&apos;), &apos;Reconfirm with Employee&apos;,
+          IF(ISPICKVAL( Reconfirmed__c, &apos;Reconfirmed with Facility&apos;), &apos;Reconfirm with Facility&apos;,
+          &apos;ERR RECONFIRM WITH&apos;
+          )
+        )
+      )        
+    ) 
+  ))
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Schedule Display Status</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

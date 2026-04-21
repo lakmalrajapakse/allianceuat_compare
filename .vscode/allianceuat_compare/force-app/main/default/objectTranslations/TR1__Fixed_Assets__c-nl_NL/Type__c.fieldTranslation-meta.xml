@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Type --></label>
+    <name>Type__c</name>
+    <picklistValues>
+        <masterLabel>Long Length</masterLabel>
+        <translation><!-- Long Length --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Mens</masterLabel>
+        <translation><!-- Mens --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Reg Length</masterLabel>
+        <translation><!-- Reg Length --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Unisex</masterLabel>
+        <translation><!-- Unisex --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Womens</masterLabel>
+        <translation><!-- Womens --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

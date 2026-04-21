@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Based on current date and expiry date --></help>
+    <label><!-- TOB Current --></label>
+    <name>aa_TOB_Current__c</name>
+</CustomFieldTranslation>

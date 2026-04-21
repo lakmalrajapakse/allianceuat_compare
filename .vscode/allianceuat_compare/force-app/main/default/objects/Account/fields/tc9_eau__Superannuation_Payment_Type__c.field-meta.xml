@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>tc9_eau__Superannuation_Payment_Type__c</fullName>
+    <deprecated>false</deprecated>
+    <description>The method by which superannuation contributions will be paid - included in SuperChoice Contributions API.</description>
+    <inlineHelpText>The method by which superannuation contributions will be paid - included in SuperChoice Contributions API.</inlineHelpText>
+    <label>Superannuation Payment Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>tc9_eau__Superannuation_Payment_Types</valueSetName>
+    </valueSet>
+</CustomField>

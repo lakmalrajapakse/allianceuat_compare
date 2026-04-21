@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Facilities not to work at - R&amp;R --></label>
+    <name>Facilities_not_to_work_at_R_R__c</name>
+</CustomFieldTranslation>

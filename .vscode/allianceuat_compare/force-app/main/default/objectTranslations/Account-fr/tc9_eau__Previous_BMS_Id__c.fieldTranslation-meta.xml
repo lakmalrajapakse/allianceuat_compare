@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Indicates the previous BMS Id for STP2 reporting if required. --></help>
+    <label><!-- Previous BMS Id --></label>
+    <name>tc9_eau__Previous_BMS_Id__c</name>
+</CustomFieldTranslation>

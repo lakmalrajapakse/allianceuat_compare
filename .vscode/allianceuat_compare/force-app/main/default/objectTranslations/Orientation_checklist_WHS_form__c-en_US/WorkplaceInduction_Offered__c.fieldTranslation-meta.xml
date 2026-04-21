@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Does the facility offer an wokrplace specific induction (including OH&amp;S) to all employees and agency staff? --></help>
+    <label><!-- WorkplaceInduction Offered --></label>
+    <name>WorkplaceInduction_Offered__c</name>
+</CustomFieldTranslation>

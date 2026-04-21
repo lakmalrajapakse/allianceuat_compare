@@ -1,0 +1,184 @@
+<apex:page standardController="tc9_pr__Payee__c" recordSetVar="payees" extensions="AlliancePayeePDFController" renderAs="pdf"  showHeader="false" sidebar="false" applyBodyTag="false" >
+    <head>
+        <style type="text/css" media="print">
+            @page {
+                size: A4;
+                margin: 4.5cm 1cm 3cm 1cm;
+                @top-center { content: element(header); }
+                @bottom-left { content: element(footer); }
+            }
+
+            div.header {
+                display: block;
+                position: running(header);
+                padding-top: 20pt;
+            }
+            /* div.footer {
+                display: block;
+                padding-top: 1pt;
+                position: running(footer);
+            } */
+            div.footer {
+            display: block;
+            padding: 5px;
+            padding-left: 20px;
+            position: running(footer);
+            }
+
+            .pagenumber:before {
+                content: 'Page ' counter(page);
+                font-size: 9pt;
+                font-family: Sans-serif;
+            }
+
+            table {
+                font-family: Sans-serif;
+                font-size: 9pt;
+                border-collapse: collapse;
+                width: 100%;
+                page-break-inside: auto;
+            }
+
+            tr, thead, tfoot {
+                page-break-inside: avoid;
+            }
+
+            .invoiceTable th, .invoiceTable td,
+            .backingSheetTable th, .backingSheetTable td {
+                border: 0.5pt solid #D3D3D3;
+                text-align: center;
+                padding: 4pt;
+                font-size: 9pt;
+            }
+
+            .text-header {
+                font-weight: bold;
+                font-size: 12pt;
+            }
+
+            .text-body-bold {
+                font-weight: bold;
+                font-size: 10pt;
+            }
+
+            .text-body {
+                font-size: 10pt;
+            }
+
+            .grey-box {
+                background-color: #d3d3d3;
+                border: 1px solid #000000;
+                padding: 5pt;
+            }
+
+            .disclaimer {
+                width: 80%;
+                text-align: center;
+                font-family: Sans-serif;
+                font-size: 10pt;
+                margin-top: 20pt;
+            }
+
+            .m-top-2 { margin-top: 2pt; }
+            .m-top-4 { margin-top: 4pt; }
+            .m-top-8 { margin-top: 8pt; }
+        </style>
+    </head>
+    <div class="header " style="height: 150px;">
+        <table style="width: 100%; font-family:Sans-serif;"> 
+            <tr>
+                <td style="width: 50%; vertical-align: top">
+                    <div style="margin-top: 10px; font-family: Sans-serif; font-size: 9pt;">
+                        <apex:outputText value="{0, date, d MMMM yyyy}">
+                            <apex:param value="{!NOW()}" />
+                        </apex:outputText>
+                    </div>
+                </td> 
+                <td style="width: 50%; vertical-align: top; text-align: right;">
+                    <div style="display: inline-block; text-align: left; font-family: Sans-serif; font-size: 9pt;">
+                        <img src="{!logoUrl}" alt="Logo" style="max-width: 100px; margin-bottom: 10px;" />
+                        <div style="margin-top: 2px;">{!payeeRecord.tc9_pr__Payment_Entity__r.BillingStreet}</div>
+                        <div style="margin-top: 2px;">{!payeeRecord.tc9_pr__Payment_Entity__r.BillingCity}</div>
+                        <div style="margin-top: 2px;">{!payeeRecord.tc9_pr__Payment_Entity__r.BillingState}</div>
+                        <div style="margin-top: 2px;">{!payeeRecord.tc9_pr__Payment_Entity__r.BillingPostalCode}</div>
+                        <div style="margin-top: 9px;">t {!payeeRecord.tc9_pr__Payment_Entity__r.Phone}</div>
+                        <div style="margin-top: 9px;">e {!payeeRecord.tc9_pr__Payment_Entity__r.Payment_Entity_Email__c}</div>
+                    </div>
+                </td> 
+            </tr>
+            <tr>
+                <td style="width: 50%; vertical-align: top">
+                    <div style="margin-top: 8px; font-family: Sans-serif; font-size: 10pt;">
+                        To whom it may concern,
+                    </div>
+                </td> 
+            </tr>
+        </table>
+        <div style="text-align: center; font-weight: bold; text-decoration: underline; font-family: Sans-serif; font-size: 12pt; margin-top: 30pt;">
+            STATEMENT OF SERVICE
+        </div>
+        <div style="font-family: Sans-serif; font-size: 10pt; margin-top: 30pt; white-space: normal; line-height: 1.5; word-break: break-word;">
+            <span style="margin-bottom: 4pt;">
+                I write to confirm that {!payeeRecord.tc9_pr__Employee__r.Name}, of {!payeeRecord.tc9_pr__Employee__r.MailingStreet}, {!payeeRecord.tc9_pr__Employee__r.MailingCity}, {!payeeRecord.tc9_pr__Employee__r.MailingState}, {!payeeRecord.tc9_pr__Employee__r.MailingPostalCode} is employed as an on-hire employee with {!payeeRecord.tc9_pr__Payment_Entity__r.Name}
+            </span>
+            <span style="margin-bottom: 4pt;">
+                (ABN {!payeeRecord.tc9_pr__Payment_Entity__r.tc9_pr__ABN__c}) trading as {!payeeRecord.tc9_pr__Payment_Entity__r.Trading_Name__c}.
+                <span style="font-weight: bold;">
+                    Prior to 30ᵗʰ September 2024, this entity was known as Recruitment
+                </span>
+            </span>
+            <span style="font-weight: bold; margin-bottom: 4pt;">
+                Solutions Group Australia Pty Ltd (ABN 86 157 291 541) as trustee for the Recruitment Solutions Group Australia
+            </span>
+            <span style="font-weight: bold;">
+                Trust trading as Alliance Nursing.
+            </span>
+        </div>
+        <div style="font-family: Sans-serif; font-size: 10pt; margin-top: 30pt; white-space: normal; line-height: 1.5; word-break: break-word;">
+            {!payeeRecord.tc9_pr__Employee__r.Name} commenced employment on 
+            <apex:outputText value="{0, date, d MMMM yyyy}">
+                <apex:param value="{!payeeRecord.tc9_pr__Payroll_Start_Date__c}" />
+            </apex:outputText>. Below is a breakdown of hours worked and position as of the most recent pay period worked, 
+            <apex:outputText value="{0, date, d MMMM yyyy}">
+                <apex:param value="{!mostRecentPayPeriodDate}" />
+            </apex:outputText>.
+        </div>
+        <div style="margin-top: 30pt;">
+            <table class="invoiceTable m-top-8">
+                <thead>
+                    <tr style="border: none;">
+                        <th style="text-align: left; border: none;">POSITION</th>
+                        <th style="text-align: left; border: none;">TOTAL HOURS</th>
+                        <th style="text-align: left; border: none;">COMMENCEMENT DATE</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <apex:repeat value="{!payeeServices}" var="svc">
+                        <tr style="background-color: #f0f0f0;">
+                            <td style="text-align: left; border-bottom: none; border-left: none;">{!svc.Award_Classifications__r.Name} &nbsp; {!svc.Award_Level__r.Name}</td>
+                            <td style="text-align: left; border-bottom: none; border-right: none;">{!svc.Total_Hours__c}</td>
+                            <td style="text-align: left; border-bottom: none; border-left: none; border-right: none;">
+                                <apex:outputText value="{0, date, d MMMM yyyy}">
+                                    <apex:param value="{!svc.Commencement_Date__c}" />
+                                </apex:outputText>
+                            </td>
+                        </tr>
+                    </apex:repeat>
+                </tbody>
+            </table>
+        </div>
+        <div style="font-family: Sans-serif; font-size: 10pt; margin-top: 30pt; white-space: normal; line-height: 2.5; word-break: break-word;">
+            Should you required further information, please do not hesitate to contact me.<br/>
+            Yours sincerely,
+        </div>
+        <div style="font-family: Sans-serif; font-size: 10pt; margin-top: 50pt; white-space: normal; line-height: 2.5; word-break: break-word;">
+           Name<br/>
+           <span style="font-weight: bold;">Central Support<br/></span>
+           <span style="font-weight: bold;">{!payeeRecord.tc9_pr__Payment_Entity__r.Name}</span>
+        </div>
+        
+    </div>
+    <div class="footer" style="text-align: center; color: rgb(173, 173, 173); padding: 4pt; font-size: 9pt; font-family: Sans-serif;">
+        {!payeeRecord.tc9_pr__Payment_Entity__r.Name} &mdash; {!payeeRecord.tc9_pr__Payment_Entity__r.tc9_pr__ABN__c} &mdash; {!payeeRecord.tc9_pr__Payment_Entity__r.Phone}
+    </div>
+</apex:page>

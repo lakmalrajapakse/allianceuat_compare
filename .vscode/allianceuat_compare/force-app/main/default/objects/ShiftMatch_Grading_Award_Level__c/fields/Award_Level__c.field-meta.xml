@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Award_Level__c</fullName>
+    <label>Award Level</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>tc9_et__Award_Classifications_and_Levels__c.RecordType.DeveloperName</field>
+            <operation>equals</operation>
+            <value>Award_Level</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>tc9_et__Award_Classifications_and_Levels__c</referenceTo>
+    <relationshipLabel>ShiftMatch Grading Award Levels</relationshipLabel>
+    <relationshipName>ShiftMatch_Grading_Award_Levels</relationshipName>
+    <relationshipOrder>1</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

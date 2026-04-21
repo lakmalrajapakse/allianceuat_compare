@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Accommodation_on_site_OR_off_site__c</fullName>
+    <label>Accommodation on site OR off site?</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>On site</fullName>
+                <default>false</default>
+                <label>On site</label>
+            </value>
+            <value>
+                <fullName>Off site (Distance from the facility in km?)</fullName>
+                <default>false</default>
+                <label>Off site (Distance from the facility in km?)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

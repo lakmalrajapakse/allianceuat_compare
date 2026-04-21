@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SMS_Incoming</fullName>
+    <columns>NAME</columns>
+    <columns>sirenum__Category__c</columns>
+    <columns>sirenum__Details__c</columns>
+    <columns>CREATED_DATE</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>sirenum__Category__c</field>
+        <operation>equals</operation>
+        <value>SMS Incoming</value>
+    </filters>
+    <label>SMS Incoming</label>
+</ListView>

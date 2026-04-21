@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>b3o__Log_Entry__c$Name</field>
+    </columns>
+    <columns>
+        <field>b3o__Log_Entry__c$Id</field>
+    </columns>
+    <columns>
+        <field>b3o__Log_Entry__c$b3o__Description__c</field>
+    </columns>
+    <columns>
+        <field>b3o__Log_Entry__c$CreatedDate</field>
+    </columns>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>b3o__Log_Entry__c$b3o__Type__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>3B Log Entries - 4 Report</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>X3B_Log_Entries_4__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>b3o__Log_Entry__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

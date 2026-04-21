@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prevent_Confirmed_While_Role_Multi</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(sirenum__Team__r.Name = &apos;Multi&apos;, OR(ISPICKVAL(Schedule_Status__c , &quot;Confirmed&quot;),ISPICKVAL(Schedule_Status__c , &quot;Completed&quot;)))</errorConditionFormula>
+    <errorMessage>Job Role must be set correctly before this shift can be Confirmed</errorMessage>
+</ValidationRule>

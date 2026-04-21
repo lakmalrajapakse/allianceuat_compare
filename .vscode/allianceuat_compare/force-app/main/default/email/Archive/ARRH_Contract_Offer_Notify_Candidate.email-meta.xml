@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>ARRH - Contract Offer - Notify candidate</name>
+    <style>none</style>
+    <subject>Good news for you!</subject>
+    <textOnly>THE FACILITY IS HAPPY TO PROCEED.
+
+Hi {!Contact.FirstName},
+
+[Client Name] have informed us they would like to proceed your application for the [Contract name] contract to an Offer.
+
+Before we complie the formal Offer, we&apos;d like to confirm a couple of final details:
+
+Travel
+Accomodation
+Pay
+Allowances
+Work schedule
+Other condistions
+
+
+Also please make sure to login to the Alliance Connect app and check your banking details? A separate email named &apos;Alliance Connect app&apos; includes all the login details and should be in your inbox already.
+
+If you&apos;re happy to proceed with the anove details, simply reply to this email and we&apos;ll get the formal offer prepared for your review.
+
+Should any additional documentation be required from your end, we&apos;ll send a separate request via the portal to submit certificates or similar.
+
+If you have any questions you can always call us on 07 4998 5550.
+
+Kind regards,
+Your team at Alliance Rural &amp; Remote Health</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

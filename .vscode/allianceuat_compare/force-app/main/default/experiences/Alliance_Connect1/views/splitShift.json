@@ -1,0 +1,71 @@
+{
+  "appPageId" : "d9ce9f69-0e14-4b11-9233-6c5ce091d546",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "f5953f37-027e-4fbc-8e74-147240c6c063",
+  "label" : "Split Shift",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "bbbd4b61-9613-4816-94b8-264000469c2a",
+          "columns" : [ {
+            "UUID" : "85b97daa-fd1b-469b-bcad-333c73738255",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "bbbd4b61-9613-4816-94b8-264000469c2a",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "flowArguments" : "[{\"label\":\"shiftRecordId\",\"dataType\":\"String\",\"supportsRecordId\":false,\"value\":\"{!id}\"}]",
+            "flowName" : "X1218_Split_Shift_Site"
+          },
+          "componentName" : "forceCommunity:flowCommunity",
+          "id" : "5d6d9a73-3f98-4f08-b6bd-7f44f1afb211",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "85b97daa-fd1b-469b-bcad-333c73738255",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "26f68055-d88b-4fa2-8591-52007a28b12e",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Split Shift"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "d595acb9-007d-4a3e-b19e-5456dbd40623",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "c7acc353-4f1a-485e-af0e-59447fff35ec",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-split-shift"
+}

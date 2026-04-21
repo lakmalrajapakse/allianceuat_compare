@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ensure_Correct_Size_Selection</fullName>
+    <active>true</active>
+    <description>Ensure Correct Size Selection</description>
+    <errorConditionFormula>AND(
+    OR(
+        AND(
+            TEXT(Uniform__c) = &quot;Scrub Shirt&quot;, 
+            TEXT(Type__c) = &quot;Womens&quot;, 
+            NOT(
+                OR(TEXT(Size__c) = &quot;6&quot;, TEXT(Size__c) = &quot;8&quot;, TEXT(Size__c) = &quot;10&quot;, 
+                   TEXT(Size__c) = &quot;12&quot;, TEXT(Size__c) = &quot;14&quot;, TEXT(Size__c) = &quot;16&quot;)
+            )
+        ),
+        AND(
+            TEXT(Uniform__c) = &quot;Scrub Shirt&quot;, 
+            TEXT(Type__c) = &quot;Unisex&quot;, 
+            NOT(
+                OR(TEXT(Size__c) = &quot;XS&quot;, TEXT(Size__c) = &quot;S&quot;, TEXT(Size__c) = &quot;M&quot;, 
+                   TEXT(Size__c) = &quot;L&quot;, TEXT(Size__c) = &quot;XL&quot;, TEXT(Size__c) = &quot;2XL&quot;)
+            )
+        ),
+        AND(
+            TEXT(Uniform__c) = &quot;Polo Shirt&quot;, 
+            TEXT(Type__c) = &quot;Womens&quot;, 
+            NOT(
+                OR(TEXT(Size__c) = &quot;6&quot;, TEXT(Size__c) = &quot;8&quot;, TEXT(Size__c) = &quot;10&quot;, 
+                   TEXT(Size__c) = &quot;12&quot;, TEXT(Size__c) = &quot;14&quot;, TEXT(Size__c) = &quot;16&quot;, 
+                   TEXT(Size__c) = &quot;22&quot;, TEXT(Size__c) = &quot;24&quot;)
+            )
+        ),
+        AND(
+            TEXT(Uniform__c) = &quot;Polo Shirt&quot;, 
+            TEXT(Type__c) = &quot;Unisex&quot;, 
+            NOT(
+                OR(TEXT(Size__c) = &quot;S&quot;, TEXT(Size__c) = &quot;M&quot;, TEXT(Size__c) = &quot;L&quot;, 
+                   TEXT(Size__c) = &quot;XL&quot;, TEXT(Size__c) = &quot;2XL&quot;, TEXT(Size__c) = &quot;3XL&quot;)
+            )
+        ),
+        AND(
+            TEXT(Uniform__c) = &quot;Scrub Pants&quot;, 
+            TEXT(Type__c) = &quot;Regular Length&quot;, 
+            NOT(
+                OR(TEXT(Size__c) = &quot;XS&quot;, TEXT(Size__c) = &quot;S&quot;, TEXT(Size__c) = &quot;M&quot;, 
+                   TEXT(Size__c) = &quot;L&quot;, TEXT(Size__c) = &quot;XL&quot;, TEXT(Size__c) = &quot;2XL&quot;, 
+                   TEXT(Size__c) = &quot;3XL&quot;)
+            )
+        ),
+        AND(
+            TEXT(Uniform__c) = &quot;Scrub Pants&quot;, 
+            TEXT(Type__c) = &quot;Long Length&quot;, 
+            NOT(
+                OR(TEXT(Size__c) = &quot;XS&quot;, TEXT(Size__c) = &quot;S&quot;, TEXT(Size__c) = &quot;M&quot;, 
+                   TEXT(Size__c) = &quot;L&quot;, TEXT(Size__c) = &quot;XL&quot;, TEXT(Size__c) = &quot;2XL&quot;, 
+                   TEXT(Size__c) = &quot;3XL&quot;)
+            )
+        )
+    )
+)</errorConditionFormula>
+    <errorDisplayField>Size__c</errorDisplayField>
+    <errorMessage>Select the correct size for the selected Uniform and Type.</errorMessage>
+</ValidationRule>

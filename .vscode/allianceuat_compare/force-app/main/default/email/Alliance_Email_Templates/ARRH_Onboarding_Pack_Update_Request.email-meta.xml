@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>ARRH - Onboarding Pack Update Request</name>
+    <style>none</style>
+    <subject>Please update your documentation</subject>
+    <textOnly>SOMETHING NEEDS YOUR ATTENTION.
+
+Hi {!Contact.FirstName},
+
+We&apos;ve had a look at the documentation you&apos;ve provided and have a couple of comments.
+
+Please head to the Portal and review {!b3o__Document_Assignment__c.b3o__Document_Pack__c}. You will see a red dot next to the document we need you to update.
+
+UPDATE DOCUMENTATION
+
+If you have any questions, please don&apos;t hesitate to call us on 1300 034 494.
+
+Kind regards,
+Your team at Alliance Rural &amp; Remote Health</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

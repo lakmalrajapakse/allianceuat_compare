@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <value>Anlagevermögen</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <value>Anlagevermögen</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <value>Anlagevermögen</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>true</plural>
+        <value>Anlagevermögen</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <value>Anlagevermögen</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>true</plural>
+        <value>Anlagevermögen</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <value>Anlagevermögen</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>true</plural>
+        <value>Anlagevermögen</value>
+    </caseValues>
+    <gender>Neuter</gender>
+    <layouts>
+        <layout>ID Badge</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Uniform</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Name Anlagevermögen</nameFieldLabel>
+    <quickActions>
+        <label><!-- Print ID Badge --></label>
+        <name>Print_ID_Badge</name>
+    </quickActions>
+    <recordTypes>
+        <label><!-- ID Badge --></label>
+        <name>ID_Badge</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Uniform --></label>
+        <name>Uniform</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- Select the correct size for the selected Uniform and Type. --></errorMessage>
+        <name>Ensure_Correct_Size_Selection</name>
+    </validationRules>
+</CustomObjectTranslation>

@@ -1,0 +1,49 @@
+{
+  "appPageId" : "d9ce9f69-0e14-4b11-9233-6c5ce091d546",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "dataProviders" : [ ],
+  "id" : "98aa3712-adde-4b15-927f-f2debf481c01",
+  "label" : "Shift Approval",
+  "regions" : [ {
+    "id" : "3a7a2af4-1dc2-4fa7-86eb-72172b01a0f0",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "flowArguments" : "[{\"label\":\"recordId\",\"dataType\":\"String\",\"supportsRecordId\":false,\"value\":\"{!id}\"}]",
+        "flowName" : "X1218_Alliance_Connect_Shift_Approval_Manager_V3"
+      },
+      "componentName" : "forceCommunity:flowCommunity",
+      "id" : "7a2414d3-6553-4caa-a1ef-89ea71b30fa6",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "594b48f9-a613-4122-be28-b90341b80301",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "8f24627d-c958-489a-b130-67efdcd8df7d",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Shift Approval"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "c79892e0-e8bd-4798-a1bb-be7cff38a1b4",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "eab6e836-d018-4f0d-b3b9-e3d691bdff7a",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-shift-approval"
+}

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Clinical_Skills__c</fullName>
+    <inlineHelpText>How would you rate the clinical skills demonstrated by the candidate in this role?</inlineHelpText>
+    <label>Clinical Skills</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Highly skilled</fullName>
+                <default>false</default>
+                <label>Highly skilled</label>
+            </value>
+            <value>
+                <fullName>Competent</fullName>
+                <default>false</default>
+                <label>Competent</label>
+            </value>
+            <value>
+                <fullName>Needing assistance</fullName>
+                <default>false</default>
+                <label>Needing assistance</label>
+            </value>
+            <value>
+                <fullName>Not applicable</fullName>
+                <default>false</default>
+                <label>Not applicable</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

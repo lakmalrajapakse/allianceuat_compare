@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>tc9_et__Merge_Invoice_Emails__c</fullName>
+    <defaultValue>false</defaultValue>
+    <deprecated>false</deprecated>
+    <description>Indicates if Invoices to be emailed to the Contact should be included in a single email (where invoice size permits). If unchecked each invoice will be sent as a separate email</description>
+    <inlineHelpText>Indicates if Invoices to be emailed to the Contact should be included in a single email (where invoice size permits). If unchecked each invoice will be sent as a separate email</inlineHelpText>
+    <label>Merge Invoice Emails</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

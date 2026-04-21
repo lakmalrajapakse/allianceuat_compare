@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>tc9_et__Default_Invoice_Tax_ID__c</fullName>
+    <deleteConstraint>Restrict</deleteConstraint>
+    <deprecated>false</deprecated>
+    <description>Defines the Default Invoice Tax ID that applies to the Client. This value can be overridden at lower levels</description>
+    <inlineHelpText>Defines the Default Invoice Tax ID that applies to the Client. This value can be overridden at lower levels</inlineHelpText>
+    <label>Default Invoice Tax ID</label>
+    <referenceTo>tc9_et__Invoice_Tax_ID__c</referenceTo>
+    <relationshipLabel>Accounts</relationshipLabel>
+    <relationshipName>Accounts</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

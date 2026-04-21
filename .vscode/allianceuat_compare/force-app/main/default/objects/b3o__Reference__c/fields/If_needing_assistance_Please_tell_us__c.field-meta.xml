@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>If_needing_assistance_Please_tell_us__c</fullName>
+    <inlineHelpText>If needing assistance or not applicable - Please tell us a bit more</inlineHelpText>
+    <label>If needing assistance - Please tell us</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

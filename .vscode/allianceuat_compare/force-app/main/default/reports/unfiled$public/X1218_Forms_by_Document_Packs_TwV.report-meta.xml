@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>b3o__Document__c$b3o__Document_Pack__c</field>
+    </columns>
+    <columns>
+        <field>b3o__Document__c$Name</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>b3o__Document__c$b3o__Order__c</field>
+    </columns>
+    <columns>
+        <field>b3o__Document__c$b3o__Document_Description__c</field>
+    </columns>
+    <columns>
+        <field>b3o__Document__c$Certificate_Type__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>b3o__Document__c$Document_approval_required__c</field>
+    </columns>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>b3o__Document__c$b3o__Form__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>1218 - Forms by Document Packs</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>X3b_document__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>b3o__Document__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_CURRENT</interval>
+    </timeFrameFilter>
+</Report>

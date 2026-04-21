@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>ARRH - Induction invite</name>
+    <style>none</style>
+    <subject>Time to book your Alliance Rural &amp; Remote Health Induction Session</subject>
+    <textOnly>BOOK YOUR INDUCTION SESSION AND GET STARTED.
+
+Hi {!Contact.FirstName},
+
+Your first Alliance shift is just around the corner! But first you need to complete the Alliance Rural &amp; Remote Health Induction.
+
+Start by selecting a day and time that suits you:
+
+BOOK MY INDUCTION
+
+We will send you your uniform and ID badge separately.
+
+If you have any question, remember you can always call us on 07 4998 5550.
+
+Kind regards,
+Your team at Alliance Rural &amp; Remote Health</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

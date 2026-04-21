@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>agx_Job_Type__c</fullName>
+    <label>Job Type</label>
+    <required>true</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Timesheet Approve</fullName>
+                <default>false</default>
+                <label>Timesheet Approve</label>
+            </value>
+            <value>
+                <fullName>Timesheet Unprocess to NEW</fullName>
+                <default>false</default>
+                <label>Timesheet Unprocess to NEW</label>
+            </value>
+            <value>
+                <fullName>Timesheet Unprocess to READY</fullName>
+                <default>false</default>
+                <label>Timesheet Unprocess to READY</label>
+            </value>
+            <value>
+                <fullName>Timesheet Submit</fullName>
+                <default>false</default>
+                <label>Timesheet Submit</label>
+            </value>
+            <value>
+                <fullName>Timesheet Process Parameters</fullName>
+                <default>false</default>
+                <label>Timesheet Process Parameters</label>
+            </value>
+            <value>
+                <fullName>Timesheet Unprocess Parameters</fullName>
+                <default>false</default>
+                <label>Timesheet Unprocess Parameters</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

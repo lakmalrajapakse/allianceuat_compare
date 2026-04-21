@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- The date/time of the last Timesheet submission that required a Link Token to be generated for the Contact. --></help>
+    <label><!-- Link Token Timesheet Submission --></label>
+    <name>tc9_et__Link_Token_Timesheet_Submission__c</name>
+</CustomFieldTranslation>

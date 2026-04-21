@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Uniform_Tops__c</fullName>
+    <label>Uniform Tops</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Women&apos;s scrub shirt</fullName>
+                <default>false</default>
+                <label>Women&apos;s scrub shirt</label>
+            </value>
+            <value>
+                <fullName>Unisex scrub shirt</fullName>
+                <default>false</default>
+                <label>Unisex scrub shirt</label>
+            </value>
+            <value>
+                <fullName>Women&apos;s polo shirt</fullName>
+                <default>false</default>
+                <label>Women&apos;s polo shirt</label>
+            </value>
+            <value>
+                <fullName>Unisex polo shirt</fullName>
+                <default>false</default>
+                <label>Unisex polo shirt</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Contact$Name</field>
+    </columns>
+    <columns>
+        <field>Contact.sirenum__Tickets__r$Name</field>
+    </columns>
+    <columns>
+        <field>Contact.sirenum__Tickets__r$sirenum__TicketType__c</field>
+    </columns>
+    <columns>
+        <field>Contact.sirenum__Tickets__r$sirenum__Status__c</field>
+    </columns>
+    <columns>
+        <field>Contact.sirenum__Tickets__r$SK_Status__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Contact.sirenum__Tickets__r$sirenum__TicketType__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Forklift Safety Operation,Proof of Qualification</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Contact$TR1__Candidate_Status__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Active</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Tabular</format>
+    <name>Competencies report for 1378</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>People_with_Tickets__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Contact$Birthdate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

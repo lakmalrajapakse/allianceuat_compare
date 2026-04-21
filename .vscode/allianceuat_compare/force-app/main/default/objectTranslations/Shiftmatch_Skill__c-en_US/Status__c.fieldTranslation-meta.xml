@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Status --></label>
+    <name>Status__c</name>
+    <picklistValues>
+        <masterLabel>Ignore Skill</masterLabel>
+        <translation><!-- Ignore Skill --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Mandatory</masterLabel>
+        <translation><!-- Mandatory --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Mandatory Induction</masterLabel>
+        <translation><!-- Mandatory Induction --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Optional</masterLabel>
+        <translation><!-- Optional --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

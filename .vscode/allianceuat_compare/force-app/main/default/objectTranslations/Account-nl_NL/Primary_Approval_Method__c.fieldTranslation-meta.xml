@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Primary Approval Method --></label>
+    <name>Primary_Approval_Method__c</name>
+    <picklistValues>
+        <masterLabel>Offline Timesheet</masterLabel>
+        <translation><!-- Offline Timesheet --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PIN Only</masterLabel>
+        <translation><!-- PIN Only --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PIN and Signature</masterLabel>
+        <translation><!-- PIN and Signature --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Signature Only</masterLabel>
+        <translation><!-- Signature Only --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

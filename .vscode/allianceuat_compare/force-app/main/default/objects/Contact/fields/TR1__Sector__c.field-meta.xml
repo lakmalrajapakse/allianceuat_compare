@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TR1__Sector__c</fullName>
+    <deprecated>false</deprecated>
+    <label>Sector</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Virtual School</fullName>
+                <default>false</default>
+                <label>Virtual School</label>
+            </value>
+            <value>
+                <fullName>Rural &amp; Remote</fullName>
+                <default>false</default>
+                <label>Rural &amp; Remote</label>
+            </value>
+            <value>
+                <fullName>International</fullName>
+                <default>false</default>
+                <label>International</label>
+            </value>
+            <value>
+                <fullName>Nurisng</fullName>
+                <default>false</default>
+                <label>Nurisng</label>
+            </value>
+            <value>
+                <fullName>Health &amp; Hospo</fullName>
+                <default>false</default>
+                <label>Health &amp; Hospo</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

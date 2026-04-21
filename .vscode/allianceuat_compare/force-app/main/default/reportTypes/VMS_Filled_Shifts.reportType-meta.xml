@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ReportType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <baseObject>VMS_Filled_Shift__c</baseObject>
+    <category>other</category>
+    <deployed>true</deployed>
+    <description>VMS Filled Shifts</description>
+    <label>VMS Filled Shifts</label>
+    <sections>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Id</field>
+            <table>VMS_Filled_Shift__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Name</field>
+            <table>VMS_Filled_Shift__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>CreatedDate</field>
+            <table>VMS_Filled_Shift__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>CreatedBy</field>
+            <table>VMS_Filled_Shift__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>LastModifiedDate</field>
+            <table>VMS_Filled_Shift__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>LastModifiedBy</field>
+            <table>VMS_Filled_Shift__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Shift__c</field>
+            <table>VMS_Filled_Shift__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Status__c</field>
+            <table>VMS_Filled_Shift__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>VMS_Source__c</field>
+            <table>VMS_Filled_Shift__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Error_Message__c</field>
+            <table>VMS_Filled_Shift__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>VMS_Account__c</field>
+            <table>VMS_Filled_Shift__c</table>
+        </columns>
+        <masterLabel>VMS Filled Shifts</masterLabel>
+    </sections>
+</ReportType>

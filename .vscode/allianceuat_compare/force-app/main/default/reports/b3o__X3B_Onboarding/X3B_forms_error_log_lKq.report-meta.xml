@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>b3f__Form__c$Name</field>
+    </columns>
+    <columns>
+        <field>b3f__Form__c.b3f__FormResponses__r$Name</field>
+    </columns>
+    <columns>
+        <field>b3f__Form__c.b3f__FormResponses__r$b3f__Type__c</field>
+    </columns>
+    <columns>
+        <field>b3f__Form__c.b3f__FormResponses__r$b3f__Error_Type__c</field>
+    </columns>
+    <columns>
+        <field>b3f__Form__c.b3f__FormResponses__r$b3f__Browser__c</field>
+    </columns>
+    <columns>
+        <field>b3f__Form__c.b3f__FormResponses__r$b3f__Browser_Version__c</field>
+    </columns>
+    <columns>
+        <field>b3f__Form__c.b3f__FormResponses__r$b3f__System_Details__c</field>
+    </columns>
+    <columns>
+        <field>b3f__Form__c.b3f__FormResponses__r$b3f__LastUpdateTime__c</field>
+    </columns>
+    <description>Check error logs for 3B forms</description>
+    <filter>
+        <criteriaItems>
+            <column>b3f__Form__c.b3f__FormResponses__r$CreatedDate</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>greaterThan</operator>
+            <value>1/18/2026 12:00 AM</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>b3f__Form__c$Name</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>contains</operator>
+            <value>EOI</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Tabular</format>
+    <name>3B forms error log</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>X3b_forms_and_responses__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>b3f__Form__c.b3f__FormResponses__r$b3f__LastUpdateTime__c</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>b3f__Form__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

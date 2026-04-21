@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- The sum total of all related Invoiceable Fees with a record type of  Client Paid Expense --></help>
+    <label><!-- Total Client Paid Expense Scheduled --></label>
+    <name>tc9_et__Total_Client_Paid_Expense_Scheduled__c</name>
+</CustomFieldTranslation>

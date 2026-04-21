@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>tc9_pr__Pay_Transaction_Distribution__c.tc9_pr__Payroll_Tax_on_Earnings__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>tc9_pr__Pay_Transaction_Distribution__c.tc9_pr__Payroll_Tax_on_Super__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>tc9_pr__Pay_Transaction_Distribution__c.tc9_pr__Payroll_Tax_Total__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>tc9_pr__Pay_Transaction_Distribution__c.tc9_pr__WorkCover_on_Earnings__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>tc9_pr__Pay_Transaction_Distribution__c.tc9_pr__WorkCover_on_Super__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>tc9_pr__Pay_Transaction_Distribution__c.tc9_pr__WorkCover_Total__c</field>
+    </columns>
+    <columns>
+        <field>tc9_pr__Pay_Transaction_Distribution__c.tc9_pr__Pay_Batch__c</field>
+    </columns>
+    <description>used for WC reclass and PRT reconciliation</description>
+    <filter>
+        <criteriaItems>
+            <column>tc9_pr__Pay_Transaction_Distribution__c.tc9_pr__Pay_Batch__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value></value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Tabular</format>
+    <name>Payroll Tax and Workcover by Locality</name>
+    <params>
+        <name>co</name>
+        <value>0</value>
+    </params>
+    <reportType>CustomEntity$tc9_pr__Pay_Transaction_Distribution__c@tc9_pr__Pay_Transaction_Distribution__c.tc9_pr__Assignment__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>CUST_CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

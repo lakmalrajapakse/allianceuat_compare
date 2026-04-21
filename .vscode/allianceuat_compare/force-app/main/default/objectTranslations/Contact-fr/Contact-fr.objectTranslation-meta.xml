@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldSets>
+        <label><!-- DG_AA_Nursing --></label>
+        <name>DG_AA_Nursing</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- ATS QuickAdd FieldSet --></label>
+        <name>TR1__ATS_QuickAdd_FieldSet</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- ATS_SendOutSchedule_NewContact --></label>
+        <name>TR1__ATS_SendOutSchedule_NewContact</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- ATSv2 CallList CandidateLookup --></label>
+        <name>TR1__ATSv2_CallList_CandidateLookup</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Browse --></label>
+        <name>TR1__Browse</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- BrowsePulldown --></label>
+        <name>TR1__BrowsePulldown</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- CandidateFinderFieldSet --></label>
+        <name>TR1__CandidateFinderFieldSet</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Candidate Info Fields --></label>
+        <name>TR1__Candidate_Info_Fields</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Contact  Availability Section FieldSet --></label>
+        <name>TR1__Contact_Availability_Section_FieldSet</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Contact Fields On Candidate Calender --></label>
+        <name>TR1__Contact_Fields_On_Candidate_Calender</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Contact Mobility Section FieldSet --></label>
+        <name>TR1__Contact_Mobility_FieldSet</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Contact details --></label>
+        <name>TR1__Contact_details</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Contact query fields --></label>
+        <name>TR1__Contact_query_fields</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- CriteriaFieldSet --></label>
+        <name>TR1__CriteriaFieldSet</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- DetailFieldSet --></label>
+        <name>TR1__DetailFieldSet</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Filter Criteria on Job Scheduler --></label>
+        <name>TR1__Filter_Criteria_on_Job_Scheduler</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Filter to add on Contact Scheduler --></label>
+        <name>TR1__Filter_to_add_on_Contact_Scheduler</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Generic Lookup --></label>
+        <name>TR1__Generic_Lookup</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Job Search Detail Fields --></label>
+        <name>TR1__Job_Search_Detail_Fields</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Job Search Result Fields --></label>
+        <name>TR1__Job_Search_Result_Fields</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- KanbanCardLine1FieldSet --></label>
+        <name>TR1__KanbanCardLine1FieldSet</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- KanbanCardLine2FieldSet --></label>
+        <name>TR1__KanbanCardLine2FieldSet</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- KanbanCardLine3FieldSet --></label>
+        <name>TR1__KanbanCardLine3FieldSet</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- KanbanCardLine4FieldSet --></label>
+        <name>TR1__KanbanCardLine4FieldSet</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- KanbanCardMiniLayoutFS --></label>
+        <name>TR1__KanbanCardMiniLayoutFS</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- LocationFieldSet --></label>
+        <name>TR1__LocationFieldSet</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- My_Profile_Header --></label>
+        <name>TR1__My_Profile_Header</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Parse Resume Duplicates --></label>
+        <name>TR1__Parse_Resume_Duplicates</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Power Notes Lookups --></label>
+        <name>TR1__Power_Notes_Lookups</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Power Notes Search List --></label>
+        <name>TR1__Power_Notes_Search_List</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Candidate Hover Fields --></label>
+        <name>TR1__SMGL_Candidate_Hover_Fields</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- SearchListFieldSet --></label>
+        <name>TR1__SearchListFieldSet</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- SimilarCandidateFieldSet --></label>
+        <name>TR1__SimilarCandidateFieldSet</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- SummaryFieldSet --></label>
+        <name>TR1__SummaryFieldSet</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Tooltip fields Contact - Search Results --></label>
+        <name>TR1__Tooltip_fields_Contact_Search_Results</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Search_Match_Engine --></label>
+        <name>b3o__Search_Match_Engine</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- DocGenBullhorn --></label>
+        <name>bh4fdocgen__DocGenBullhorn</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- ils_find_workers_fields --></label>
+        <name>ils_find_workers_fields</name>
+    </fieldSets>
+    <layouts>
+        <layout>Candidate Layout</layout>
+        <sections>
+            <label><!-- AHPRA Information --></label>
+            <section>AHPRA Information</section>
+        </sections>
+        <sections>
+            <label><!-- Candidate EOI Information --></label>
+            <section>Candidate EOI Information</section>
+        </sections>
+        <sections>
+            <label><!-- Compliance --></label>
+            <section>Compliance</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Key Dates --></label>
+            <section>Key Dates</section>
+        </sections>
+        <sections>
+            <label><!-- Marketing --></label>
+            <section>Marketing</section>
+        </sections>
+        <sections>
+            <label><!-- Photo --></label>
+            <section>Photo</section>
+        </sections>
+        <sections>
+            <label><!-- Resume --></label>
+            <section>Resume</section>
+        </sections>
+        <sections>
+            <label><!-- Right to Work --></label>
+            <section>Right to Work</section>
+        </sections>
+        <sections>
+            <label><!-- Visa Entitlement Notes (VEVO) --></label>
+            <section>Visa Entitlement Notes (VEVO)</section>
+        </sections>
+        <sections>
+            <label><!-- Visa Entitlement Verification Online (VEVO) --></label>
+            <section>Visa Entitlement Verification Online (VEVO)</section>
+        </sections>
+        <sections>
+            <label><!-- WFM --></label>
+            <section>WFM</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Contact Layout - BH Connect</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Non Editable --></label>
+            <section>Non Editable</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>USAMContact</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Onboarding --></label>
+            <section>Onboarding</section>
+        </sections>
+        <sections>
+            <label><!-- Photo --></label>
+            <section>Photo</section>
+        </sections>
+        <sections>
+            <label><!-- WFM --></label>
+            <section>WFM</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Ahpra Check --></label>
+        <name>Ahpra_Check</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Contract Availability --></label>
+        <name>Contract_Availability</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Contract Information --></label>
+        <name>Contract_Information</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Document Pack Assignment --></label>
+        <name>Document_Pack_Assignment</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Generate CV --></label>
+        <name>Generate_CV</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Print CV --></label>
+        <name>Print_CV</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Reset Password --></label>
+        <name>Reset_Passwords</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- VEVO Check --></label>
+        <name>VEVO_Check</name>
+    </quickActions>
+    <recordTypes>
+        <description><!-- To be used for individuals that are going through onboarding process. To be converted to Employees when fully onboarded and active --></description>
+        <label><!-- Candidate --></label>
+        <name>Candidate</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- To be used for defining Client Contact details --></description>
+        <label><!-- Client Contact --></label>
+        <name>tc9_et__Client_Contact</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Employee nominated Emergency Contact --></description>
+        <label><!-- Emergency Contact --></label>
+        <name>tc9_pr__Emergency_Contact</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Employee --></description>
+        <label><!-- Employee --></label>
+        <name>tc9_pr__Employee</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- The candidate must have a Birthdate and Candidate Time Zone before activation. Please enter both fields before updating the status to Active. --></errorMessage>
+        <name>Activation_Validations</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please set the alternative email address when selecting &apos;Alternative&apos; as an approver --></errorMessage>
+        <name>Alternative_Email_Not_Set</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Study Break End Date must be equal to or later than Study Break Start Date. --></errorMessage>
+        <name>End_Date_equal_greater_than_Start_Date</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You are not allowed to change First Name or Last Name. Contact your local branch to change your name. --></errorMessage>
+        <name>Name_update_restriction_for_Mobile_App</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Study Break End Date must be populated to apply the study break. --></errorMessage>
+        <name>Study_Break_End_Date_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You can not update RecordType --></errorMessage>
+        <name>ValidationforRecordTypeupdate</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Home Phone number cannot contain letters --></errorMessage>
+        <name>sirenum__noLettersHomePhone</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Mobile Phone number cannot contain letters --></errorMessage>
+        <name>sirenum__noLettersMobilePhone</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Phone number cannot contain letters --></errorMessage>
+        <name>sirenum__noLettersPhone</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- Communication_Manager --></label>
+        <name>Communication_Manager</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleMaps --></label>
+        <name>GoogleMaps</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleSearch --></label>
+        <name>GoogleSearch</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- SendGmail --></label>
+        <name>SendGmail</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- ATS --></label>
+        <name>TR1__ATS</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Add_To_Call_List --></label>
+        <name>TR1__Add_To_Call_List</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Add_To_Call_List_Lightning --></label>
+        <name>TR1__Add_To_Call_List_Lightning</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Add_To_Longlist --></label>
+        <name>TR1__Add_To_Longlist</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Add_to_Call_List_New --></label>
+        <name>TR1__Add_to_Call_List_New</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Add_to_Job --></label>
+        <name>TR1__Add_to_Job</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Add_to_Long_List --></label>
+        <name>TR1__Add_to_Long_List</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Apply_To_Job_With_Stage --></label>
+        <name>TR1__Apply_To_Job_With_Stage</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Apply_To_Job_With_Stage_And_Source --></label>
+        <name>TR1__Apply_To_Job_With_Stage_And_Source</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Assign_Job_Role --></label>
+        <name>TR1__Assign_Job_Role</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Browse --></label>
+        <name>TR1__Browse</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- CreateOffLimitPolicy --></label>
+        <name>TR1__CreateOffLimitPolicy</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Create_Job_Off_Limit_Policy --></label>
+        <name>TR1__Create_Job_Off_Limit_Policy</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- DocuSign --></label>
+        <name>TR1__DocuSign</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Log_a_Call --></label>
+        <name>TR1__Log_a_Call</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Match --></label>
+        <name>TR1__Match</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- New_Application --></label>
+        <name>TR1__New_Application</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- New_Contact_Off_Limit_Policy --></label>
+        <name>TR1__New_Contact_Off_Limit_Policy</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Request_Consent --></label>
+        <name>TR1__Request_Consent</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- ResumeUpdate --></label>
+        <name>TR1__ResumeUpdate</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_Consent --></label>
+        <name>TR1__Send_Consent</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_Email --></label>
+        <name>TR1__Send_Email</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_an_Email --></label>
+        <name>TR1__Send_an_Email</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Similar_Candidates --></label>
+        <name>TR1__Similar_Candidates</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Sync --></label>
+        <name>TR1__Sync</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- YahooMaps --></label>
+        <name>YahooMaps</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- YahooWeather --></label>
+        <name>YahooWeather</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Mass_Document_Generator --></label>
+        <name>bh4fdocgen__Mass_Document_Generator</name>
+    </webLinks>
+</CustomObjectTranslation>

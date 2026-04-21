@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Shiftmatch_Skill__c</fullName>
+    <label>Shiftmatch Skill</label>
+    <referenceTo>Shiftmatch_Skill__c</referenceTo>
+    <relationshipLabel>Shiftmatch Skill Job Types</relationshipLabel>
+    <relationshipName>Shiftmatch_Skill_Job_Types</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

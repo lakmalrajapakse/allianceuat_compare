@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Alliance Extra Staff Albury Allocations</label>
+    <protected>false</protected>
+    <values>
+        <field>API_Endpoint__c</field>
+        <value xsi:type="xsd:string">https://api.messagemedia.com</value>
+    </values>
+    <values>
+        <field>API_Site_Domain_URL__c</field>
+        <value xsi:type="xsd:string">https://allianceaustralia.my.salesforce-sites.com/smsintegration</value>
+    </values>
+    <values>
+        <field>Account_SID__c</field>
+        <value xsi:type="xsd:string">4xRtp5zOpqsR8dI9SvOB</value>
+    </values>
+    <values>
+        <field>Application_Name__c</field>
+        <value xsi:type="xsd:string">Alliance_SMS_Settings</value>
+    </values>
+    <values>
+        <field>Authentication_Token__c</field>
+        <value xsi:type="xsd:string">LFQWQvKUa057PuG3pugD89eM1ZXVZl</value>
+    </values>
+    <values>
+        <field>Default_Admin_Id__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Default_Admin_Name__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Default_Greetings_Message__c</field>
+        <value xsi:type="xsd:string">Hello from Alliance</value>
+    </values>
+    <values>
+        <field>Event_Description_Length__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Inbound_Header__c</field>
+        <value xsi:type="xsd:string">x-messagemedia-auth</value>
+    </values>
+    <values>
+        <field>Inbound_Token__c</field>
+        <value xsi:type="xsd:string">QWxsaWFuY2UgVUFUIGF1dGhlbnRpY2F0aW9u</value>
+    </values>
+    <values>
+        <field>Profile_ID__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Provider_Name__c</field>
+        <value xsi:type="xsd:string">MessageMedia</value>
+    </values>
+    <values>
+        <field>SMS_Cost_Center__c</field>
+        <value xsi:type="xsd:string">Extra Staff Albury Allocations</value>
+    </values>
+    <values>
+        <field>Sender_Phone_Number__c</field>
+        <value xsi:type="xsd:string">+61484356764</value>
+    </values>
+    <values>
+        <field>isActive__c</field>
+        <value xsi:type="xsd:boolean">false</value>
+    </values>
+</CustomMetadata>

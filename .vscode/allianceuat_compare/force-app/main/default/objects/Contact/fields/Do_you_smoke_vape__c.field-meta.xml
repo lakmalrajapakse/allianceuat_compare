@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Do_you_smoke_vape__c</fullName>
+    <defaultValue>false</defaultValue>
+    <inlineHelpText>Do you smoke/vape?</inlineHelpText>
+    <label>Do you smoke/vape?</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

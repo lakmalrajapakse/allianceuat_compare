@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Indicates funding requirements for Expense Claims at a Client level. This value will be used to populate the Funding Requirement field on related Expense Claim based Pay Transactions --></help>
+    <label><!-- Expense Claim Funding Requirement --></label>
+    <name>tc9_et__Expense_Claim_Funding_Requirement__c</name>
+</CustomFieldTranslation>

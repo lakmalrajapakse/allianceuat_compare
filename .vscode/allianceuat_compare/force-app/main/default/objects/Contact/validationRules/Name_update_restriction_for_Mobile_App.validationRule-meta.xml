@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Name_update_restriction_for_Mobile_App</fullName>
+    <active>true</active>
+    <description>Name update restriction for connect app user</description>
+    <errorConditionFormula>AND(
+ISCHANGED(FirstName) || ISCHANGED(LastName),
+NOT(ISNEW()),
+$Profile.Name = &quot;Alliance Connect User&quot;
+)</errorConditionFormula>
+    <errorMessage>You are not allowed to change First Name or Last Name. Contact your local branch to change your name.</errorMessage>
+</ValidationRule>

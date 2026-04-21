@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Header_Columns__c</fullName>
+    <description>REFERENCE, PO NUMBER, BOOKING DATE, SCHEDULED DATE, WORKER, SITE, ROTA, JOB ROLE, SHIFT TYPE, START, END, REQUIRED SHIFTS, COMMENTS, CANCELLED, BOOKED BY, Result</description>
+    <inlineHelpText>There are 15 headers. To rename any of the header, just list all the headers with renamed values.  Default list is:
+REFERENCE, PO NUMBER, BOOKING DATE, SCHEDULED DATE, WORKER, SITE, ROTA, JOB ROLE, SHIFT TYPE, START, END, REQUIRED SHIFTS, COMMENTS, CANCELLED, BOOKED BY, Result</inlineHelpText>
+    <label>Header Columns</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

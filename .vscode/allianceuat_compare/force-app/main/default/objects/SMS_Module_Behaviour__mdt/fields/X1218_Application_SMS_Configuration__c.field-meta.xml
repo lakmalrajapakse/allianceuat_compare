@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X1218_Application_SMS_Configuration__c</fullName>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>X1218 Application SMS Configuration</label>
+    <referenceTo>Application_SMS_Configuration__mdt</referenceTo>
+    <relationshipLabel>SMS Module Behaviours</relationshipLabel>
+    <relationshipName>SMS_Module_Behaviours</relationshipName>
+    <required>true</required>
+    <type>MetadataRelationship</type>
+    <unique>true</unique>
+</CustomField>

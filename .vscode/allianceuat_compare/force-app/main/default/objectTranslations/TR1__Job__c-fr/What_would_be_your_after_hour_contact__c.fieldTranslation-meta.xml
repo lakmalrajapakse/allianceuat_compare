@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- where to collect the keys, etc. --></help>
+    <label><!-- What would be your after hour contact? --></label>
+    <name>What_would_be_your_after_hour_contact__c</name>
+</CustomFieldTranslation>

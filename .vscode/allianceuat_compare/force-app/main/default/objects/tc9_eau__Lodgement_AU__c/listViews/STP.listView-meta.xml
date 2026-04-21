@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>STP</fullName>
+    <columns>NAME</columns>
+    <columns>RECORDTYPE</columns>
+    <columns>tc9_eau__Lodgement_Manager__c</columns>
+    <columns>tc9_eau__Event_Type__c</columns>
+    <columns>tc9_eau__Status__c</columns>
+    <columns>tc9_eau__Filter_Payment_Entity__c</columns>
+    <columns>tc9_eau__Total_Contributions__c</columns>
+    <columns>tc9_eau__Payer_Total_Gross__c</columns>
+    <columns>tc9_eau__Tax_Year_Start_Date__c</columns>
+    <columns>tc9_eau__Confirmed_On__c</columns>
+    <columns>tc9_eau__Sent_to_ATO__c</columns>
+    <columns>CREATED_DATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>tc9_eau__Lodgement_AU__c.tc9_eau__Single_Touch_Payroll</value>
+    </filters>
+    <label>STP</label>
+</ListView>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Accommodation on site OR off site? --></label>
+    <name>Accommodation_on_site_OR_off_site__c</name>
+    <picklistValues>
+        <masterLabel>Off site (Distance from the facility in km?)</masterLabel>
+        <translation><!-- Off site (Distance from the facility in km?) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>On site</masterLabel>
+        <translation><!-- On site --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

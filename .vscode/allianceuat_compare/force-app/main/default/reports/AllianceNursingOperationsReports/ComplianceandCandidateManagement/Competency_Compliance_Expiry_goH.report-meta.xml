@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>sirenum__Ticket__c$sirenum__TicketType__c</field>
+    </columns>
+    <columns>
+        <field>sirenum__Ticket__c$CreatedBy</field>
+    </columns>
+    <columns>
+        <field>sirenum__Ticket__c$Name</field>
+    </columns>
+    <columns>
+        <field>sirenum__Ticket__c$sirenum__Expiry_Date_Required__c</field>
+    </columns>
+    <columns>
+        <field>sirenum__Ticket__c$sirenum__Valid_from__c</field>
+    </columns>
+    <columns>
+        <field>sirenum__Ticket__c$sirenum__Valid_until__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>sirenum__Ticket__c$sirenum__Valid__c</field>
+    </columns>
+    <format>Tabular</format>
+    <name>Competency Compliance - Expiry</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Qualifications_Custom__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>sirenum__Ticket__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

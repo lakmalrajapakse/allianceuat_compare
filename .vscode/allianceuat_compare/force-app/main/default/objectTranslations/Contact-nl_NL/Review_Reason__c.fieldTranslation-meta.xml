@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Review Reason --></label>
+    <name>Review_Reason__c</name>
+    <picklistValues>
+        <masterLabel>AHPRA issue(s)</masterLabel>
+        <translation><!-- AHPRA issue(s) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Expired ticket(s)</masterLabel>
+        <translation><!-- Expired ticket(s) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>External investigation</masterLabel>
+        <translation><!-- External investigation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Internal investigation</masterLabel>
+        <translation><!-- Internal investigation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>WH&amp;S</masterLabel>
+        <translation><!-- WH&amp;S --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

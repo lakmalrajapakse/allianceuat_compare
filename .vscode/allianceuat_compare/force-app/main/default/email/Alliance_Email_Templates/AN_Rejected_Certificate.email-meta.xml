@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>AN - Rejected Certificate</name>
+    <style>none</style>
+    <subject>You need to update one of your documents</subject>
+    <textOnly>REJECTED CERTIFICATE.
+
+Hi {!Contact.FirstName},
+
+The {!b3o__Certificate__c.b3o__Certificate_Type__c} certificate has been rejected due to the following reson: {!b3o__Certificate__c.Rejection_Reason__c}.
+
+Please follow the link below to upload a new certificate and proceed with your application. The {!b3o__Certificate__c.b3o__Certificate_Type__c} certificate is marked with a red dot on the document list.
+
+UPDATE MY DOCUMENTATION
+
+
+If you have any questions, please don&apos;t hesitate to call us on 1300 034 494.
+
+Kind regards,
+Your team at Alliance Nursing</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

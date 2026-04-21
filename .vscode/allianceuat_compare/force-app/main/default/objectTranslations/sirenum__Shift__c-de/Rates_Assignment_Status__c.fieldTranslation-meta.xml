@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- This field gets populated automatically through the process that assigns rates to the Shift. --></help>
+    <label><!-- Rates Assignment Status --></label>
+    <name>Rates_Assignment_Status__c</name>
+</CustomFieldTranslation>

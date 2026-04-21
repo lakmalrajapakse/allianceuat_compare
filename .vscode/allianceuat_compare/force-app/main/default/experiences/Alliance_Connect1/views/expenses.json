@@ -1,0 +1,71 @@
+{
+  "appPageId" : "d9ce9f69-0e14-4b11-9233-6c5ce091d546",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "919f45b4-ec96-4a3e-934b-7e548a02efb0",
+  "label" : "Expenses",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "0e17bda3-a850-4844-8d25-d9c0b40b49af",
+          "columns" : [ {
+            "UUID" : "948acde1-6aeb-4f23-9bb8-dbf310f48957",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "0e17bda3-a850-4844-8d25-d9c0b40b49af",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "flowArguments" : "[{\"label\":\"varShift\",\"dataType\":\"String\",\"supportsRecordId\":false,\"value\":\"{!id}\"}]",
+            "flowName" : "nuuco_Shift_Create_Expense"
+          },
+          "componentName" : "forceCommunity:flowCommunity",
+          "id" : "8c618682-eb1c-4124-8ddf-0dca76b8b1af",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "948acde1-6aeb-4f23-9bb8-dbf310f48957",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "4b6f219a-3b65-4b6b-8557-86e30d6b9362",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Expenses"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "6059ded5-8ae5-4d46-ae9e-b7e36fcc39d9",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "7e910de3-b361-4a50-b3dc-da3fbfd9e1eb",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-expenses"
+}

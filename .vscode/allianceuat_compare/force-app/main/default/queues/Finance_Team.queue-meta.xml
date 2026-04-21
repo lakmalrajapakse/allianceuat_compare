@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>Finance Team</name>
+    <queueMembers>
+        <users>
+            <user>1218-sfdc-support@1218global.com.alliance</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>tc9_bgl__Acc_Default_Accounts__c</sobjectType>
+    </queueSobject>
+</Queue>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>b3o__Session_Schedule__c$b3o__Session__c</field>
+    </columns>
+    <columns>
+        <field>b3o__Session_Schedule__c$Name</field>
+    </columns>
+    <columns>
+        <field>b3o__Session_Schedule__c.b3o__Session_Invitations__r$Name</field>
+    </columns>
+    <columns>
+        <field>b3o__Session_Schedule__c$b3o__Status__c</field>
+    </columns>
+    <columns>
+        <field>b3o__Session_Schedule__c$b3o__Start_Time__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>b3o__Session_Schedule__c$b3o__Start_Time__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>greaterThan</operator>
+            <value>12/1/2025 12:00 AM</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>b3o__Session_Schedule__c$b3o__Status__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Fully Booked</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Tabular</format>
+    <name>Session Schedules and Invitations</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Session_Schedules_and_Invitations__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>b3o__Session_Schedule__c$b3o__Start_Time__c</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>b3o__Session_Schedule__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

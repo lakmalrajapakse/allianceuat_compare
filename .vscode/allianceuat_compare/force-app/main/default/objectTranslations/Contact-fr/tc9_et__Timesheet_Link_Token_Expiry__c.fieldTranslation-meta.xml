@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- The expiry date for the current Timesheet Link Token. After this date a new link token must be generated to allow access to the Timesheet Approver Pages within the Portal --></help>
+    <label><!-- Timesheet Link Token Expiry --></label>
+    <name>tc9_et__Timesheet_Link_Token_Expiry__c</name>
+</CustomFieldTranslation>

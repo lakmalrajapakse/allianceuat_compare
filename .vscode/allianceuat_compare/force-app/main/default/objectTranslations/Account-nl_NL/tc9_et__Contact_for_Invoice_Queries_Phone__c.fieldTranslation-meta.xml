@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Defines the phone number for Clients of the User who will be detailed as a Invoice Entity&apos;s Invoice Contact. --></help>
+    <label><!-- Contact for Invoice Queries Phone --></label>
+    <name>tc9_et__Contact_for_Invoice_Queries_Phone__c</name>
+</CustomFieldTranslation>

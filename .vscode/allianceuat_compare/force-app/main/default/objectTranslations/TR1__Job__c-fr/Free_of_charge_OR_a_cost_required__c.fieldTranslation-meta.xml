@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Free of charge OR a cost required? --></label>
+    <name>Free_of_charge_OR_a_cost_required__c</name>
+    <picklistValues>
+        <masterLabel>Cost required (please specify how much?)</masterLabel>
+        <translation><!-- Cost required (please specify how much?) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Free of charge</masterLabel>
+        <translation><!-- Free of charge --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

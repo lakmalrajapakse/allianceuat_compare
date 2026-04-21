@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Is_Role_Competency__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>If true, indicates that the Competency is a Role. Else it is a Skill.</description>
+    <label>Is Role Competency?</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

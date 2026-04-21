@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>idibu e-mail handler config</label>
+    <protected>false</protected>
+    <values>
+        <field>TR1__Application_Object_Name__c</field>
+        <value xsi:type="xsd:string">Application</value>
+    </values>
+    <values>
+        <field>TR1__Cancel_Threshold__c</field>
+        <value xsi:type="xsd:double">3.0</value>
+    </values>
+    <values>
+        <field>TR1__CleanupChunksize__c</field>
+        <value xsi:type="xsd:double">100.0</value>
+    </values>
+    <values>
+        <field>TR1__DaysBeforeDeleting__c</field>
+        <value xsi:type="xsd:double">14.0</value>
+    </values>
+    <values>
+        <field>TR1__Job_Reference_Field_Name__c</field>
+        <value xsi:type="xsd:string">TR1__Job_Number__c</value>
+    </values>
+    <values>
+        <field>TR1__Queuables_Threshold__c</field>
+        <value xsi:type="xsd:double">5.0</value>
+    </values>
+</CustomMetadata>

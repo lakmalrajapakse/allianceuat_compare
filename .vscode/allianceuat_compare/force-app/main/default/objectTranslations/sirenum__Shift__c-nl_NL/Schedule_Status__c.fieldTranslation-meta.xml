@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Schedule Status --></label>
+    <name>Schedule_Status__c</name>
+    <picklistValues>
+        <masterLabel>Allocated</masterLabel>
+        <translation><!-- Allocated --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Completed</masterLabel>
+        <translation><!-- Completed --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Confirmed</masterLabel>
+        <translation><!-- Confirmed --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>In a Cancelled Shift</masterLabel>
+        <translation><!-- In a Cancelled Shift --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Name Given</masterLabel>
+        <translation><!-- Name Given --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Reconfirm</masterLabel>
+        <translation><!-- Reconfirm --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Reconfirm with Employee</masterLabel>
+        <translation><!-- Reconfirm with Employee --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Reconfirm with Facility</masterLabel>
+        <translation><!-- Reconfirm with Facility --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Shift Cancelled</masterLabel>
+        <translation><!-- Shift Cancelled --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Shift Cancelled Filled</masterLabel>
+        <translation><!-- Shift Cancelled Filled --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Unable to Fill</masterLabel>
+        <translation><!-- Unable to Fill --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Waiting</masterLabel>
+        <translation><!-- Waiting --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

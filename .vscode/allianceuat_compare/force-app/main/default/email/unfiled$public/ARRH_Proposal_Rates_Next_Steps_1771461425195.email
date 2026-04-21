@@ -1,0 +1,94 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body style="margin: 0px; padding: 0px; background-color: #f6f6f6; font-family: Roboto, sans-serif; height: auto; min-height: auto;">
+<table border="0" cellpadding="0" cellspacing="0" style="background-color: #f6f6f6; padding: 10px;" width="100%">
+	
+		<tr>
+			<td align="center" bgcolor="#f6f6f6">
+			<table border="0" cellpadding="0" cellspacing="0" style="background-color:#ffffff; width: 600px;">
+				
+					<tr>
+						<td style="padding: 0; background-color: #ffffff;"><img alt="Alliance Rural &amp; Remote - Email header (2)" src="https://allianceaustralia--uat.sandbox.file.force.com/file-asset-public/Alliance_Rural_Remote_Email_heade?oid=00DAD00000BK4sL" style="max-width: 683.05px" title="Alliance Rural &amp; Remote - Email header (2)" /><a href="https://www.alliancenursing.com.au"> </a></td>
+					</tr>
+					<tr>
+						<td style="height: 30px;">&nbsp;</td>
+					</tr>
+					<tr>
+						<td align="left" style="padding: 0 45px;">
+						<p>Dear&nbsp;{{{Recipient.FirstName}}},</p>
+
+						<p>Thank you for reaching out to Alliance Rural &amp; Remote Health – it was a pleasure to hear from you.<br />
+						&nbsp;<br />
+						With over 20 years of experience supporting Rural &amp; Remote communities across Australia, we would be delighted to partner with you to meet your staffing needs.<br />
+						&nbsp;<br />
+						Attached you’ll find:</p>
+
+						<ul>
+							<li><strong>Client Proposal</strong>&nbsp;– an overview of who we are, the values we work by, and the steps we take to ensure all&nbsp;our nurses are fully “work ready” when they arrive at your facility.</li>
+							<li><strong>Charge Rates</strong>&nbsp;– covering Labour Hire (agency payroll). We also offer a Fee for Service option (client&nbsp;payroll). If this is of interest, we’d be happy to provide further details.</li>
+						</ul>
+
+						<p><strong>Terms of Business</strong><br />
+						Before we can provide nursing staff, a Terms of Business (TOB) must be established. To generate this document, we kindly ask you to provide the following details:</p>
+
+						<ul>
+							<li>Legal business name of your organisation</li>
+							<li>ABN</li>
+							<li>Address (please specify head office or facility address)</li>
+							<li>Phone number</li>
+							<li>Billing contact name, email, and address (if different)</li>
+							<li>Authorised signatory’s name and contact email</li>
+							<li>Your preference for&nbsp;<strong>Labour Hire (agency payroll)</strong>&nbsp;and/or <strong>Fee for Service (client payroll)</strong>&nbsp;recruitment (separate TOBs will be issued for each option)</li>
+						</ul>
+
+						<p>&nbsp;<br />
+						Once received, we’ll prepare the TOB for electronic signature via our secure portal,&nbsp;ContractPodAi&nbsp;(emails will appear from Business Australia or Business NSW). If you would like to review the TOB before signing, we are happy to send you a draft copy.<br />
+						&nbsp;<br />
+						<strong>What’s Included in Our Labour Hire Rates</strong><br />
+						Our agency payroll (Labour Hire) charge rates are comprehensive and cover:</p>
+
+						<ul>
+							<li>Mandatory training (completed prior to placement)</li>
+							<li>Statutory obligations and employment liabilities (superannuation, payroll tax, insurance, wages, workers’ compensation)</li>
+							<li>National criminal history checks</li>
+							<li>Reduced HR and administrative overhead for your facility through streamlined onboarding</li>
+						</ul>
+
+						<p>&nbsp;<br />
+						We look forward to the opportunity to work with you and support your team. If you have any questions, please don’t hesitate to reach out.<br />
+						&nbsp;<br />
+						Kind regards,<br />
+						{{{Sender.FirstName}}}&nbsp;{{{Sender.LastName}}}<br />
+						Alliance Rural &amp; Remote Health</p>
+						</td>
+					</tr>
+					<tr>
+						<td style="height: 20px;">&nbsp;</td>
+					</tr>
+					<tr>
+						<td style="padding: 35px 0px 10px 0px;"><img alt="Alliance-graphic-line" src="https://allianceaustralia--uat.sandbox.file.force.com/file-asset-public/Alliancegraphicline?oid=00DAD00000BK4sL" style="max-width: 1623.55px" title="Alliance-graphic-line" /></td>
+					</tr>
+					<tr>
+						<td style="padding: 26px 45px 40px 45px;font-size: 12px;line-height: 22px;color: #374250;">
+						<table border="0" cellpadding="0" cellspacing="0" style="/* margin: 0 auto; */">
+							
+								<tr>
+									<td style="padding-right: 32px" valign="middle"><a href="https://www.facebook.com/allianceruralremote" rel="noopener noreferrer"><img alt="fb" src="https://allianceaustralia--uat.sandbox.file.force.com/file-asset-public/fb?oid=00DAD00000BK4sL" style="max-width: 1623.55px" title="fb" /></a></td>
+									<td style="padding-right: 32px" valign="middle"><a href="https://www.linkedin.com/company/373910" rel="noopener noreferrer"><img alt="in" src="https://allianceaustralia--uat.sandbox.file.force.com/file-asset-public/in?oid=00DAD00000BK4sL" style="max-width: 1623.55px" title="in" /></a></td>
+									<td style="padding-right: 32px" valign="middle"><a href="https://www.instagram.com/allianceruralremote/" rel="noopener noreferrer"><img alt="is" src="https://allianceaustralia--uat.sandbox.file.force.com/file-asset-public/is?oid=00DAD00000BK4sL" style="max-width: 1623.55px" title="is" /></a></td>
+									<td valign="middle"><a href="https://www.youtube.com/channel/UCVvnStor2YEhu-sOfyJOvbw" rel="noopener noreferrer"><img alt="yt" src="https://allianceaustralia--uat.sandbox.file.force.com/file-asset-public/yt?oid=00DAD00000BK4sL" style="max-width: 1623.55px" title="yt" /></a></td>
+								</tr>
+							
+						</table>
+						</td>
+					</tr>
+				
+			</table>
+			</td>
+		</tr>
+	
+</table>
+</body>
+</html>

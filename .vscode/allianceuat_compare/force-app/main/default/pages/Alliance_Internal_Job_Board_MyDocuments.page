@@ -1,0 +1,125 @@
+<apex:page showHeader="false" sidebar="false" standardStylesheets="false" docType="HTML-5.0" applyHtmlTag="false" applyBodyTag="false" controller="b3o.GlobalRemotingRouter" cache="false">
+<html lang="en">
+    <head>
+        <title>Documents</title>
+        <meta name="description" content="3B CLM"/>
+        <meta name="apple-mobile-web-app-title" content="3B CLM"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui"/>
+        <meta charset="utf-8"/>
+        <meta name="apple-mobile-web-app-status-bar-style" content="default"/>
+        <meta name="msapplication-TileColor" content="#00aba9"/>
+        <meta name="theme-color" content="#ffffff"/>
+
+        <link rel="shortcut icon" href="{!URLFOR($Resource.b3p__Branding, '/icons/favicon.ico')}"/>
+        <link rel="icon" type="image/png" sizes="16x16" href="{!URLFOR($Resource.b3p__Branding, '/icons/favicon-16x16.png')}"/>
+        <link rel="icon" type="image/png" sizes="36x36" href="{!URLFOR($Resource.b3p__Branding, '/icons/favicon-36x36.png')}"/>
+        <link rel="icon" type="image/png" sizes="96x96" href="{!URLFOR($Resource.b3p__Branding, '/icons/favicon-96x96.png')}"/>
+        <link rel="apple-touch-startup-image" href="{!URLFOR($Resource.b3p__Branding, '/images/splash/launch-640x1136.png')}" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"/>
+        <link rel="apple-touch-startup-image" href="{!URLFOR($Resource.b3p__Branding, '/images/splash/launch-750x1294.png')}" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"/>
+        <link rel="apple-touch-startup-image" href="{!URLFOR($Resource.b3p__Branding, '/images/splash/launch-1242x2148.png')}" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"/>
+        <link rel="apple-touch-startup-image" href="{!URLFOR($Resource.b3p__Branding, '/images/splash/launch-1125x2436.png')}" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"/>
+        <link rel="apple-touch-startup-image" href="{!URLFOR($Resource.b3p__Branding, '/images/splash/launch-1536x2048.png')}" media="(min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)"/>
+        <link rel="apple-touch-startup-image" href="{!URLFOR($Resource.b3p__Branding, '/images/splash/launch-1668x2224.png')}" media="(min-device-width: 834px) and (max-device-width: 834px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)"/>
+        <link rel="apple-touch-startup-image" href="{!URLFOR($Resource.b3p__Branding, '/images/splash/launch-2048x2732.png')}" media="(min-device-width: 1024px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)"/>
+        <link rel="apple-touch-icon" sizes="180x180" href="{!URLFOR($Resource.b3p__Branding, '/icons/apple-touch-icon.png')}"/>        
+
+        <!--
+        * user-documents has the following properties
+        * hide-theme-switch="false"
+        * hide-current-user="false"
+        * theme-type="light"
+        * user-id="" - current user (contact id)
+        * app-id="" - if passed, we will auto-relate newly created document pack to 
+        * 3B Application (used in conjunction with doc-pack-id)
+        * doc-pack-id="" - if passed, we wil get/create and show only that document pack
+        -->
+
+        <script>
+            window.performanceStart = new Date();
+            window['globals'] = {
+                sessionId: '{!GETSESSIONID()}',
+                siteUrl: '{!JSENCODE($Setup.AllianceJobBoardCustomSettings__c.SiteURL__c)}',
+                orgUrl: '{!JSENCODE($Setup.AllianceJobBoardCustomSettings__c.OrgURL__c)}',
+                onboardingUrl: '{!JSENCODE($Setup.AllianceJobBoardCustomSettings__c.onboardingURL__c)}',
+                userTimezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
+                userId: '{!$User.Id}',
+                userType: 'CspLitePortal',
+                clientTimezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
+                customerLogo: "{!JSENCODE($Setup.b3o__Onboarding_Default_Settings__c.b3o__Customer_Logo__c)}",
+                router: b3o.GlobalRemotingRouter
+            }
+            if(!window["globals"]?.onboardingUrl){
+                alert('Please set b3o__Onboarding_Default_Settings__c.b3o__Site_URL__c');
+            }
+        </script>
+        <script type="module" src="{!URLFOR($Resource.b3o__MyDocuments, 'index.js')}"></script>
+        <style>
+            * {
+                --global-white: white;
+            }
+            /**
+            * Default Body Styling
+            */
+            body {
+                background-color: var(--global-white);
+                font-size: 14px;
+                letter-spacing: 0.01em;
+                color: #39464e;
+                font-family: system-ui;
+            }
+
+            div.container {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="app" oncontextmenu="return false;">
+                <user-documents
+                    theme-type="{!IF(ISBLANK($CurrentPage.parameters.themeType), 'light', JSENCODE($CurrentPage.parameters.themeType))}"
+                    hide-theme-switch="{!IF(ISBLANK($CurrentPage.parameters.hideThemeSwitch), 'true', JSENCODE($CurrentPage.parameters.hideThemeSwitch))}"
+                    hide-current-user="{!IF(ISBLANK($CurrentPage.parameters.hideCurrentUser), 'false', JSENCODE($CurrentPage.parameters.hideCurrentUser))}"
+                    application-field-path="Job_Application_V2__c"
+                    failed-to-identify-msg="{!$Label.b3o__UD_failed_to_identify_msg}"
+                    no-assignments-msg="{!$Label.b3o__UD_no_assignments_msg}"
+                    submit-docs-btn="{!$Label.b3o__UD_submit_docs_btn}"
+                    dashboard-btn="{!$Label.b3o__UD_dashboard_btn}"
+                    expired-lbl="{!$Label.b3o__UD_expired_lbl}"
+                    expireds-lbl="{!$Label.b3o__UD_expires_lbl}"
+                    due-in-lbl="{!$Label.b3o__UD_due_in_lbl}"
+                    status-lbl="{!$Label.b3o__UD_status_lbl}"
+                    submit-btn="{!$Label.b3o__UD_submit_btn}"
+                    re-submit-btn="{!$Label.b3o__UD_re_submit_btn}"
+                    view-submission-btn="{!$Label.b3o__UD_view_submission_btn}"
+                    days-lbl="{!$Label.b3o__UD_days_lbl}"
+                    requested-lbl="{!$Label.b3o__UD_requested_lbl}"
+                    rejected-lbl="{!$Label.b3o__UD_rejected_lbl}"
+                    pending-review-lbl="{!$Label.b3o__UD_pending_review_lbl}"
+                    requested-update-lbl="{!$Label.b3o__UD_requested_update_lbl}"
+                    approved-lbl="{!$Label.b3o__UD_approved_lbl}"
+                    rejected-submission-msg="{!$Label.b3o__UD_rejected_submission_msg}"
+                    packs-lbl="{!$Label.b3o__UD_packs_lbl}"
+                    number-of-requests-lbl="{!$Label.b3o__UD_number_of_requests_lbl}"
+                    number-of-documents-lbl="{!$Label.b3o__UD_number_of_documents_lbl}"
+                    expiring-soon-lbl="{!$Label.b3o__UD_expiring_soon_lbl}"
+                    pending-lbl="{!$Label.b3o__UD_pending_lbl}"
+                    waiting-submission-lbl="{!$Label.b3o__UD_waiting_submission_lbl}"
+                    submissions-lbl="{!$Label.b3o__UD_submissions_lbl}"
+                    no-submissions-lbl="{!$Label.b3o__UD_no_submissions_lbl}"
+                    complete-lbl="{!$Label.b3o__UD_complete_lbl}"
+                    completed-lbl="{!$Label.b3o__UD_completed_lbl}"
+                    not-completed-lbl="{!$Label.b3o__UD_not_completed_lbl}"
+                    submitted-lbl="{!$Label.b3o__UD_submitted_lbl}"
+                    issued-lbl="{!$Label.b3o__UD_issued_lbl}"
+                    due-lbl="{!$Label.b3o__UD_due_lbl}"
+                    submit-previous-document-msg="{!$Label.b3o__UD_submit_previous_document_msg}"
+                ></user-documents>
+            </div>
+        </div>
+    </body>
+</html>
+</apex:page>

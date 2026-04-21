@@ -1,0 +1,70 @@
+{
+  "appPageId" : "d9ce9f69-0e14-4b11-9233-6c5ce091d546",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "40eb9d2d-d892-476f-97c7-65353a2898df",
+  "label" : "FAQ New",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "ad4a8b11-7774-42fc-9af0-8e636efb147c",
+          "columns" : [ {
+            "UUID" : "11d59904-9a5f-47f2-a257-ee258bd0ae45",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "ad4a8b11-7774-42fc-9af0-8e636efb147c",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<h1><strong>Get started</strong></h1><p>To access all features, including online timesheets, make sure you’re using the latest app version. Check for updates using these links:</p><p><strong>iPhone:</strong>&nbsp;<a href=\"https://apps.apple.com/au/app/id1606069583?platform=iphone\" rel=\"noopener noreferrer\" target=\"_blank\">Download from App Store</a></p><p><strong>Android:</strong>&nbsp;<a href=\"https://play.google.com/store/apps/details?id=com.actassa.alliancenursing\" rel=\"noopener noreferrer\" target=\"_blank\">Download from Google Play</a></p><p>If you ever need help, our Allocations Team is just a phone call away at&nbsp;<a href=\"tel:1300034494\" rel=\"noopener noreferrer\" target=\"null\">1300 034 494</a>.</p><p><br></p><h2>How to use the app</h2><h2><br></h2><iframe class=\"ql-video\" frameborder=\"0\" allowfullscreen=\"true\" src=\"https://www.youtube.com/embed/G9Ez-Ygl_3o\"></iframe><h4><br></h4><h4>Receive &amp; accept shifts</h4><p><br></p><p><strong style=\"color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);\">Will I only receive shifts through the app?</strong></p><p><span style=\"color: rgb(0, 0, 0);\">No, you might also get shift offers via SMS or phone calls from our Allocations Team.</span></p><p><br></p><p><strong style=\"color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);\">How do I confirm my shift?</strong></p><p><span style=\"color: rgb(0, 0, 0);\">When you’re booked for a shift, you’ll receive an SMS confirmation. If asked to confirmation, simply reply ‘CONFIRMED.</span></p><p><br></p><h4>Cancelled shifts</h4><p><br></p><p><strong style=\"background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);\">Can I cancel a confirmed shift through the app?</strong></p><p><span style=\"color: rgb(0, 0, 0);\">No, once a shift is confirmed by the Allocations Team, you'll need to call us at&nbsp;</span><a href=\"tel:1300034494\" rel=\"noopener noreferrer\" target=\"null\">1300 034 494</a><span style=\"color: rgb(0, 0, 0);\">&nbsp;to cancel.</span></p><p><br></p><p><strong style=\"color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);\">Do I get paid if a shift has been cancelled?</strong></p><p><span style=\"color: rgb(0, 0, 0);\">Start by filling out the&nbsp;</span><a href=\"https://forms.office.com/r/11kjps3jVw\" rel=\"noopener noreferrer\" target=\"null\">Shift cancellation form</a><span style=\"color: rgb(0, 0, 0);\">. If you’re entitled to a cancellation fee, this will be processed with your weekly pay, just like usual.</span></p><p><br></p><h2>Online timesheets</h2><p><br></p><h4>How to use Online timesheets (QLD and SA)</h4><iframe class=\"ql-video\" frameborder=\"0\" allowfullscreen=\"true\" src=\"https://www.youtube.com/embed/Q_gvtLKNZD8?si=tCc-ejDBkhwZ5u1F\"></iframe><h2><br></h2><h4>How to use Online timesheets (VIC)</h4><iframe class=\"ql-video\" frameborder=\"0\" allowfullscreen=\"true\" src=\"https://www.youtube.com/embed/Q_gvtLKNZD8?si=V8ST-_TWxRWyLsJp\"></iframe><p><br></p><p><strong>How do I complete a timesheet?</strong></p><p>You can fill out a timesheet directly in the app. Start by going to 'Timesheets' in the main (see the three horisontal lines at the topleft corner of this screen). Fill out the details in the timesheet form and don’t forget to get your supervisor’s signature when your shift ends.</p><p><br></p><p><strong>What if my ward changes during my shift?</strong></p><p>No worries! You can update your ward at the end of your shift by selecting the arrow on the right-hand side and choosing the correct option from the dropdown menu. If your ward isn’t listed, select ‘Other’ and type it in.</p><p><br></p><p><strong>What if I work in two wards during a shift?</strong></p><p>You can easily log a ‘split shift’ if you move from one ward to another. This ensures that your timesheet reflects all the areas you’ve worked in.</p><p><br></p><p><strong>Can I adjust my shift times?</strong></p><p>Yes, you can change your start and end times in the app, but your supervisor will need to approve these changes.</p><p><br></p><p><strong>What is my pay point?</strong></p><p>Your pay point is your grade—the same one you use on your current paper dockets. If you’re unsure of your pay point, give our Allocations Team a call, and they’ll help you out. Please note this is only applicable if you work for Alliance Nursing VIC.</p><p><br></p><p><strong>Can I note that I didn’t take a meal break?</strong></p><p>Yes, you can. To delete a meal break, click on the pen icon and select ‘Delete.’ You can also adjust the time of your meal break. Both actions will need to be approved by your supervisor. Just make sure you’re only logging meal breaks here, not tea breaks.</p><p><br></p><p><strong>What if I forget to get my shift authorised?</strong></p><p>Getting your shift signed off by your supervisor is crucial for getting paid. If you leave without a signature, the Allocations Team will ask you to return to the site to get it.</p><p><br></p><p><strong>Does the app change how I get paid?</strong></p><p>No, the payroll process remains the same. Shifts completed by Wednesday night will be processed on Thursday for payment on Friday. Keep in mind that some banks might cause slight delays.</p><p><br></p><p><strong>Can I note an owed allowance in the app?</strong></p><p>Yes, you can! There’s a section in the timesheet where you can add any allowances and extra notes related to your shift.</p><p><br></p><h2>Training</h2><p><br></p><p><strong>Do I get paid for completed hospital training?</strong></p><p>If you work for Alliance Nursing VIC, you can get paid for time spent completing hospital training. Email your training completion evidence to the Education Team at and fill out the hospital training form. Payment will be processed in your weekly pay.</p><p><br></p><h2>Payroll</h2><p><br></p><p><strong>I need help with my pay</strong></p><p>For any payroll-related questions, please reach out to your local Alliance Nursing team.</p><p><br></p><p><br></p><p><br></p><p>&nbsp;</p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "13f55f24-5656-4d99-9d1c-f44819291ae8",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "11d59904-9a5f-47f2-a257-ee258bd0ae45",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "2736a4d7-6617-472a-a3ca-e5df0a0794ec",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "FAQ"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "df9ef591-f468-4d9c-93dd-007ac3e85d17",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "8a0e8cad-4cc3-48bd-8bf3-0bafe32758ef",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-faq"
+}

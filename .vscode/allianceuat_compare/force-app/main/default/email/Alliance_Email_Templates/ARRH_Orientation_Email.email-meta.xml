@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>ARRH - Orientation Email</name>
+    <style>none</style>
+    <subject>Placement Orientation | Alliance Rural &amp; Remote Health</subject>
+    <textOnly>ORIENTATION CHECKLIST.
+
+Hi {!Contact.FirstName},
+
+Once you&apos;ve arrived at your location, please make sure to complete the Orientation Checklist within the first 48 hrs:
+
+COMPLETE CHECKLIST
+
+Remember you can always call us on 07 4998 5550 if you want to speak to a consultant directly.
+
+Kind regards,
+Your team at Alliance Rural &amp; Remote Health</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,29 @@
+<template>
+    <lightning-card title="Preview Invoices">
+      <template if:true={tooMany}>
+        <div class="slds-p-around_small slds-text-color_error">
+          Too many invoices, please narrow your search.
+        </div>
+      </template>
+  
+      <template if:true={hasRows}>
+        <lightning-datatable key-field="Id" data={rows} columns={columns} hide-checkbox-column></lightning-datatable>
+      </template>
+  
+      <template if:true={loading}>
+        <lightning-spinner alternative-text="Loading"></lightning-spinner>
+      </template>
+  
+      <template if:true={error}>
+        <div class="slds-text-color_error slds-m-top_small">{error}</div>
+      </template>
+  
+      <template if:true={showEmpty}>
+        <div class="slds-p-around_small slds-text-color_weak">No invoices match your filters.</div>
+      </template>
+      
+      <div class="slds-p-around_small">
+        <lightning-button variant="brand" label="Generate PDF" onclick={handleGenerate}></lightning-button>
+      </div>
+    </lightning-card>
+  </template>

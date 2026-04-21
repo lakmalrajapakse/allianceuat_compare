@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- This field checks if this ticket is related to a Skill Competency. --></help>
+    <label><!-- Skill Competency Ticket --></label>
+    <name>Skill_Competency_Ticket__c</name>
+</CustomFieldTranslation>

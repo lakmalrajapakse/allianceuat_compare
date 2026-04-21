@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>Hierarchy</customSettingsType>
+    <description>ALN-343 - Holds configuration values for laundry allowance processing according to ATO guidelines. Includes daily and weekly non-taxable thresholds, and associated pay codes for taxable and non-taxable allowances by uniform type. Used by automation to correctly split Timesheet and Pay Transaction amounts.</description>
+    <enableFeeds>false</enableFeeds>
+    <label>nuuco ATO Laundry Allowance</label>
+    <visibility>Public</visibility>
+</CustomObject>

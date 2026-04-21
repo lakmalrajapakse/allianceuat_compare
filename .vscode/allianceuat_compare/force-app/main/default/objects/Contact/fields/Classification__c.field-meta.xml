@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Classification__c</fullName>
+    <label>Classification</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Registered Nurse</fullName>
+                <default>false</default>
+                <label>Registered Nurse</label>
+            </value>
+            <value>
+                <fullName>Registered Midwife</fullName>
+                <default>false</default>
+                <label>Registered Midwife</label>
+            </value>
+            <value>
+                <fullName>Enrolled Nurse</fullName>
+                <default>false</default>
+                <label>Enrolled Nurse</label>
+            </value>
+            <value>
+                <fullName>Nursing Assistant</fullName>
+                <default>false</default>
+                <label>Nursing Assistant</label>
+            </value>
+            <value>
+                <fullName>Personal Care Worker</fullName>
+                <default>false</default>
+                <label>Personal Care Worker</label>
+            </value>
+            <value>
+                <fullName>Patient Services Assistant (PSA)</fullName>
+                <default>false</default>
+                <label>Patient Services Assistant (PSA)</label>
+            </value>
+            <value>
+                <fullName>Theatre Technician</fullName>
+                <default>false</default>
+                <label>Theatre Technician</label>
+            </value>
+            <value>
+                <fullName>CSSD Attendant</fullName>
+                <default>false</default>
+                <label>CSSD Attendant</label>
+            </value>
+            <value>
+                <fullName>Chef</fullName>
+                <default>false</default>
+                <label>Chef</label>
+            </value>
+            <value>
+                <fullName>Cook</fullName>
+                <default>false</default>
+                <label>Cook</label>
+            </value>
+            <value>
+                <fullName>Food Services Assistant</fullName>
+                <default>false</default>
+                <label>Food Services Assistant</label>
+            </value>
+            <value>
+                <fullName>Kitchen Hand</fullName>
+                <default>false</default>
+                <label>Kitchen Hand</label>
+            </value>
+            <value>
+                <fullName>Laundry</fullName>
+                <default>false</default>
+                <label>Laundry</label>
+            </value>
+            <value>
+                <fullName>Cleaner</fullName>
+                <default>false</default>
+                <label>Cleaner</label>
+            </value>
+            <value>
+                <fullName>Chef / Kitchen Hand</fullName>
+                <default>false</default>
+                <label>Chef / Kitchen Hand</label>
+            </value>
+            <value>
+                <fullName>Kitchen Hand / Cleaner</fullName>
+                <default>false</default>
+                <label>Kitchen Hand / Cleaner</label>
+            </value>
+            <value>
+                <fullName>Regional, Rural and Remote</fullName>
+                <default>false</default>
+                <label>Regional, Rural and Remote</label>
+            </value>
+            <value>
+                <fullName>Medical and Healthcare Assistant</fullName>
+                <default>false</default>
+                <label>Medical and Healthcare Assistant</label>
+            </value>
+            <value>
+                <fullName>Management</fullName>
+                <default>false</default>
+                <label>Management</label>
+            </value>
+            <value>
+                <fullName>Catering Supervisor</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Catering Supervisor</label>
+            </value>
+            <value>
+                <fullName>Clinical Midwife</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Clinical Midwife</label>
+            </value>
+            <value>
+                <fullName>Clinical Midwife Consultant</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Clinical Midwife Consultant</label>
+            </value>
+            <value>
+                <fullName>Clinical Nurse</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Clinical Nurse</label>
+            </value>
+            <value>
+                <fullName>Clinical Nurse Consultant</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Clinical Nurse Consultant</label>
+            </value>
+            <value>
+                <fullName>Director of Nursing</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Director of Nursing</label>
+            </value>
+            <value>
+                <fullName>Director of Nursing - Midwifery</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Director of Nursing - Midwifery</label>
+            </value>
+            <value>
+                <fullName>Executive Director of Nursing</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Executive Director of Nursing</label>
+            </value>
+            <value>
+                <fullName>Executive Director of Nursing / Midwifery</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Executive Director of Nursing / Midwifery</label>
+            </value>
+            <value>
+                <fullName>Maintenance Worker</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Maintenance Worker</label>
+            </value>
+            <value>
+                <fullName>Midwifery Unit Manager</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Midwifery Unit Manager</label>
+            </value>
+            <value>
+                <fullName>Nurse Unit Manager</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Nurse Unit Manager</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

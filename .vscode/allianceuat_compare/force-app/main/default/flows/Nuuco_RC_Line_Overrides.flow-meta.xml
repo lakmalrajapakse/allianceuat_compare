@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>62.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <name>Update_RC_Line</name>
+        <label>Update RC Line</label>
+        <locationX>176</locationX>
+        <locationY>287</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.tc9_et__Invoice_Rate_Ex_Tax_Override__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>frmInvoiceRate</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.tc9_et__Invoice_Rate_Ex_Tax__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>frmInvoiceRate</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <description>ALN-309/311 - Removing pay rate overrides from flow
+ALN-173 - Added additional logic to cater for invoice rate, pay rate and margin overrides</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>ff_multiplied_pay_rate</name>
+        <dataType>Number</dataType>
+        <expression>IF( 
+NOT(ISBLANK({!$Record.tc9_et__Rate_Calculator_Rate__r.tc9_et__Entered_Rate__c})),
+{!$Record.tc9_et__Rate_Calculator_Rate__r.tc9_et__Entered_Rate__c},
+null
+)</expression>
+        <scale>6</scale>
+    </formulas>
+    <formulas>
+        <name>ff_PayRate</name>
+        <dataType>Number</dataType>
+        <expression>IF( 
+NOT(ISBLANK({!$Record.tc9_et__Rate_Calculator_Rate__r.tc9_et__Entered_Rate__c})),
+{!$Record.tc9_et__Rate_Calculator_Rate__r.tc9_et__Entered_Rate__c},
+{!$Record.tc9_et__Entered_Rate__c}
+)</expression>
+        <scale>6</scale>
+    </formulas>
+    <formulas>
+        <name>frmInvoiceRate</name>
+        <dataType>Number</dataType>
+        <expression>IF(
+NOT(ISBLANK({!$Record.tc9_et__Rate_Calculator_Rate__r.tc9_et__Custom_Pay_Rate_1__c})),{!$Record.tc9_et__Rate_Calculator_Rate__r.tc9_et__Custom_Pay_Rate_1__c},{!$Record.tc9_et__Invoice_Rate_Ex_Tax__c}
+)</expression>
+        <scale>6</scale>
+    </formulas>
+    <interviewLabel>Nuuco - RC Line Overrides {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Nuuco - RC Line Overrides</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Update_RC_Line</targetReference>
+        </connector>
+        <object>tc9_et__Rate_Calculator_Line__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Split_Workcover_by_State__c</fullName>
+    <defaultValue>false</defaultValue>
+    <inlineHelpText>When true will split the workcover transactions in COP Journals by state</inlineHelpText>
+    <label>Split Workcover by State</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cross_Assignment_Timesheet_Status__c</fullName>
+    <description>Defines which Timesheets will be included in the cross-assignment interpretation process.
+
+Approved - Only Timesheets that meet the cross-assignment criteria wth an Approval Status of &apos;Approved&apos; will be processed for cross-assignment interpretation.
+
+All - All Timesheets that meet the cross-assignment criteria will be processed for cross-assignment interpretation.</description>
+    <inlineHelpText>Defines which Timesheets will be included in the cross-assignment interpretation process.
+
+Approved - Only Timesheets that meet the cross-assignment criteria wth an Approval Status of &apos;Approved&apos; will be processed for cross-assignment interpretation.
+
+All - All Timesheets that meet the cross-assignment criteria will be processed for cross-assignment interpretation.</inlineHelpText>
+    <label>Cross Assignment Timesheet Status</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Approved</fullName>
+                <default>true</default>
+                <label>Approved</label>
+            </value>
+            <value>
+                <fullName>All</fullName>
+                <default>false</default>
+                <label>All</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

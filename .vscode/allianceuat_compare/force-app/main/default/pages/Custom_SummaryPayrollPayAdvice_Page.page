@@ -1,0 +1,739 @@
+<!--
+ - Created by Adelaide Greenaway on 31/10/2022.
+ -->
+<!-- renderas="pdf" -->
+<apex:page standardController="tc9_pr__Pay_Advice__c" extensions="Custom_SummaryPayAdviceCtrl" renderAs="pdf" recordSetVar="tc9_pr__Pay_Advice__c" showheader="false" sidebar="false" applyhtmltag="false" language="{!Locale}">
+    <head>
+        <meta charset="utf-8" content="text/html;charset=UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <title></title>
+        <style type="text/css" media="print">
+        @page {
+            margin-top:5.5cm;
+            margin-left:1cm; 
+            margin-right:1cm;
+            
+            @bottom-center {
+                content: element(footer);
+            }
+            
+            @top-left {
+            	content: element(header);
+            }
+        }
+
+        @media print {
+        table { page-break-inside:auto }
+        tr    { page-break-inside:avoid; page-break-after:auto; }
+        thead { display:table-header-group; page-break-inside: avoid; overflow-hidden; }
+        tfoot { display:table-footer-group; }
+        
+        tbody::after {
+          content: ''; display: block;
+          page-break-after: auto;
+          page-break-inside: avoid;
+          page-break-before: avoid;
+          overflow:hidden;
+        }
+      }
+      
+        .watermark {
+            background-image: url("{!URLFOR($Resource.tc9_pr__Payroll_resources, 'AUS_Payroll/Images/Watermark.png')}");
+            background-repeat : no-repeat;
+            background-position : center top;
+            width="100%";
+            height="100%";
+            padding-top : 35px;
+        }
+        .borderRight{
+            border-right : 0px solid red;
+        }
+        .borderLeft{
+            border-left : 0px solid white;
+        }
+        .footer {
+            display: block;
+            padding: 0.5px;
+            position: running(footer);
+            font-family: sans-serif;
+            font-size: 8pt;
+        }
+            
+         div.header {
+            display: block;
+            position: running(header);
+            padding-top:20pt;
+         }
+            
+         .th-padding {
+         	padding-top: 4px;
+            padding-bottom: 4px;
+         }
+           
+         .border-top {
+            border-top: 1px solid black;
+         }
+            
+         .border-bottom {
+            border-bottom: 1px solid black
+         }
+            
+         .backingsheet-table {
+            -fs-table-paginate: paginate;
+            border-collapse: collapse;
+            border-spacing: 0;
+            page-break-inside: avoid;
+         } 
+
+         .border-line-black {
+            border: 1px solid black;
+         }
+
+         .tr-border-line-l {
+            border-left: 1px solid black;
+         }
+         .tr-border-line-t {
+            border-top: 1px solid black;
+         }
+         .tr-border-line-b {
+            border-bottom: 1px solid black;
+         }
+         .tr-border-line-r {
+            border-right: 1px solid black;
+         }
+
+         .td-padding-vertical {
+            padding-top: 2px;
+            padding-bottom: 2px;
+         }
+
+         .white-bg{
+            background: #ffffff;
+         }
+
+         .lg-bg{
+            background: #d4d4d4;
+         }
+      </style>
+    </head>
+
+    <body class="{!IF(isDraft == true ,'watermark','')}">
+        <div class="header">
+            <div class="fixedImage">
+                <input type="hidden" name="currentvfpage" value="{!$CurrentPage.Name}"/>
+                <center style="font-family: sans-serif;"><b>{!documentTitle}</b></center>
+                
+                <table style="width:100%;border:0px solid white;border-collapse: collapse; font-family: sans-serif; font-size: 8pt;">
+                    <tr>
+                        <td colspan="2" style="width:50%;border:0px solid white;padding-left:9px;vertical-align: top;padding-bottom:5px;">
+                            <span style="width:100%;float:left;"> <apex:image url="/sfc/servlet.shepherd/version/download/{!logoId}" height="90" style="margin-left:0.02%" rendered="{!foundLogo}"/> </span>
+                        </td>
+                        <td colspan="2" style="width:50%;border:0px solid white;text-align: right;padding-right:9px;">
+                            <span style="color: {!colorHeaderValue};width:100%;float:right;">{!payAdvice.tc9_pr__Payment_Entity__r.Name}</span>
+                            <span style="width:100%;float:right;"><span style="color: {!colorHeaderLabel};">ABN: </span>&nbsp;<span style="color: {!colorHeaderValue};">{!payAdvice.tc9_pr__Payment_Entity__r.tc9_pr__ABN__c}</span></span>
+                            <span style="width:100%;float:right;"><span style="color: {!colorHeaderLabel};">Phone: </span>&nbsp;<span style="color: {!colorHeaderValue};">{!payAdvice.tc9_pr__Payment_Entity__r.tc9_eau__STP_Contact_Phone__c}</span></span>
+                            <span style="width:100%;float:right;"><span style="color: {!colorHeaderLabel};">Email: </span>&nbsp;<span style="color: {!colorHeaderValue};">{!payAdvice.tc9_pr__Payment_Entity__r.tc9_eau__STP_Contact_Email__c}</span></span>
+                            <span style="width:100%;float:right;margin-top:20px;"><span style="color: {!colorHeaderLabel};">Current Period:</span>&nbsp;
+                                <span style="color: {!colorHeaderValue};">
+                                    <apex:outputText value="{0,date,dd'/'MM'/'yyyy}">
+                                        <apex:param value="{!payAdvice.tc9_pr__Period_Start_Date__c}" />
+                                    </apex:outputText> -&nbsp;
+                                    <apex:outputText value="{0,date,dd'/'MM'/'yyyy}">
+                                        <apex:param value="{!payAdvice.tc9_pr__Period_End_Date__c}" />
+                                    </apex:outputText>
+                                </span>
+                            </span>
+                            <span style="width:100%;float:right;"><span style="color: {!colorHeaderLabel};">Payment Date:</span>&nbsp;
+                                <span style="color: {!colorHeaderValue};">
+                                    <apex:outputText value="{0,date,dd'/'MM'/'yyyy}">
+                                        <apex:param value="{!payAdvice.tc9_pr__Pay_Batch__r.tc9_pr__Payment_Date__c}" />
+                                    </apex:outputText>
+                                </span>
+                            </span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <table style="width:100%;border:0px solid white;border-collapse: collapse; font-family: sans-serif; font-size: 8pt;">
+                <tr>
+                    <td colspan="2" style="color: {!colorHeaderValue};width:50%;border: {!IF((displayAddressBorder == 'Yes'), '1px solid', '0px')};border-color: {!IF((displayAddressBorder == 'Yes'),colorHeaderValue,'white')};text-align: left;padding-left:9px;vertical-align: top;">
+                        <span style="width:100%;float:left;">{!employeeName}</span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td style="color: {!colorHeaderValue};width:50%;border: {!IF((displayAddressBorder == 'Yes'), '1px solid', '0px')};border-color: {!IF((displayAddressBorder == 'Yes'),colorHeaderValue,'white')};text-align: left;padding-left:9px;vertical-align: top;padding-bottom:5px;">
+                        <span style="width:100%;float:left;">{!payAdvice.tc9_pr__Employee__r.MailingStreet}</span>
+                        <span style="width:100%;float:left;">{!payAdvice.tc9_pr__Employee__r.MailingCity}&nbsp;&nbsp;{!payAdvice.tc9_pr__Employee__r.MailingState}&nbsp;&nbsp;{!payAdvice.tc9_pr__Employee__r.MailingPostalCode}</span>
+                        <span style="width:100%;float:left;">{!payAdvice.tc9_pr__Employee__r.MailingCountry}</span>
+                    </td>
+
+                    <td style="width:50%;border:0px solid white;text-align: right;padding-right:9px;padding-bottom:5px;">
+                        <div>
+                            <div style="display:inline-block; width: 80px;text-align:right;"><apex:outputLabel styleClass="invHeading" value="Payroll Id:"/></div>
+                            <div style="display:inline-block; min-width:60px;"><apex:outputText value="{!payAdvice.tc9_pr__Payee__r.tc9_pr__Payroll_Id__c}"/></div>
+                        </div>
+
+                        <div> 
+                            <div style="display:inline-block; width: 80px;text-align:right;"><apex:outputLabel styleClass="invHeading" value="Total Earnings:"/></div>
+                            
+                            <div style="display:inline-block; min-width:60px">
+                                <apex:outputText value="${0,number,###,##0.00} ">
+                                <apex:param value="{!summaryGross}" /></apex:outputText>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div style="display:inline-block; width: 80px;text-align:right;"><apex:outputLabel styleClass="invHeading" value="Total Tax:"/></div>
+                            <div style="display:inline-block; min-width:60px">
+                                <apex:outputText value="${0,number,###,##0.00} ">
+                                <apex:param value="{!summaryPAYG}" /></apex:outputText>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div style="display:inline-block; width: 80px;text-align:right;"><apex:outputLabel styleClass="invHeading" value="Total Net:"/></div>
+                            <div style="display:inline-block; min-width:60px">
+                                <apex:outputText value="${0,number,###,##0.00} ">
+                                <apex:param value="{!summaryNet}" /></apex:outputText>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        
+        
+        <!-- NEW FRONT PAGE -->   
+        <br/>
+        <table class="front-table" style="width:100%;border-collapse:collapse; border:1px solid black;font-family: sans-serif; font-size: 8pt;">
+            <tr>
+                <td></td>
+                <td colspan="3" class="tr-border-line-l tr-border-line-t tr-border-line-r" style="padding-top:5px;padding-bottom:5px; color: {!colorHeaderLabel}; text-align: center; background: {!colorSectionHeadingBg}"><b>Current Period</b></td>
+                <td colspan="2" class="tr-border-line-t tr-border-line-r"  style="padding-top:5px;padding-bottom:5px; color: {!colorHeaderLabel}; text-align: center; background: {!colorSectionHeadingBg}"><b>Year to Date</b></td>
+            </tr>
+            <tr style="background: {!colorSectionHeadingBg}">
+                <!-- <td style="width: 10%; color: {!colorHeaderLabel}; text-align: left;vertical-align: bottom;padding-left: 9px;">{!$Label.Pay_Advice_Col_Shift_Date}</td> -->
+                <!-- <td style="width: 16%; color: {!colorHeaderLabel}; text-align: left;vertical-align: bottom;padding-left: 9px;">Pay Code <br/></td> -->
+                <td class="border-line-black" style="color: {!colorHeaderLabel}; text-align: left;vertical-align: bottom;padding-left: 1px;"><b>Pay Code </b><br/></td>
+                <td class="border-line-black" style="color: {!colorHeaderLabel}; text-align: left;width:15%;"><b>Units</b></td>
+                <td class="border-line-black" style="color: {!colorHeaderLabel}; text-align: left;width:15%; "><b>Rate</b></td>
+                <td class="border-line-black" style="color: {!colorHeaderLabel}; text-align: left;width:20%;padding-right:5px "><b>Total</b></td>
+                <td class="border-line-black" style="color: {!colorHeaderLabel}; text-align: left;width:13% "><b>Units</b></td>
+                <td class="border-line-black" style="color: {!colorHeaderLabel}; text-align: left;width:13%;"><b>Total</b></td>
+            </tr>
+            <apex:variable var="sectionItemIndex" value="{!0}" /> 
+            <apex:repeat value="{!listOfPayCodeWrappersGroup1}" var="payCodeWrapperG1">
+                <tr style="">
+                    <td class="border-line-black" colspan="6" style="color:{!colorSectionHeadingText};border:1px solid black;background: {!colorSectionHeadingBg};font-weight: bold;padding:0px 0px 0px 1px !important;margin:0px !important;">{!payCodeWrapperG1.payCode}
+                    </td>
+                </tr>
+                <!--SC-35538 -- add empty row for better formatting -->
+                <!-- <tr style="color:{!colorSectionDetailText};background: {!colorSectionDetailBg};display: {!IF((key == 'Default'), 'none', '')};">
+                    <td class="tr-border-line-l" colspan="4">&nbsp;</td>
+                    <td class="tr-border-line-r" colspan="2">&nbsp;</td>
+                </tr> -->
+                
+                <apex:repeat value="{!payCodeWrapperG1.GroupKeys}" var="key">
+                    <tr style="color:{!colorSectionDetailText};background: {!colorSectionDetailBg};display: {!IF((key == 'Default'), 'none', '')};">
+                        <td class="tr-border-line-l tr-border-line-t tr-border-line-b" style="font-weight: bold" colspan="4">{!key}</td>
+                        <td class="tr-border-line-r tr-border-line-t tr-border-line-b" colspan="2"></td>
+                    </tr>
+
+                    <apex:variable var="itemIndex" value="{!0}" /> 
+                    <apex:variable var="linesWrapper" value="{!payCodeWrapperG1.mapOfAssignmentPayAdviceLinesWrapper[key]}" /> 
+                    <apex:repeat value="{!payCodeWrapperG1.mapOfAssignmentPayAdviceLinesWrapper[key]}" var="payAdviceLineWrapper">
+                        <tr class="{!IF(linesWrapper.size-1 == itemIndex, 'tr-border-line-b', '')}" style="{!IF(AND(payAdviceLineWrapper.CP_TotalValue != 0), 'color:' + colorSectionDetailText + ';', 'display:none')}">
+                            <td class="tr-border-line-l tr-border-line-r" style="text-align: left;font-size: 8pt; padding-top:4px;">
+                                {!IF(OR(payAdviceLineWrapper.CP_totalUnits!=0.00,payAdviceLineWrapper.CP_totalValue!=0.00,payAdviceLineWrapper.PP_totalUnits!=0.00,payAdviceLineWrapper.PP_totalValue!=0.00, payAdviceLineWrapper.currentPlusPriorValue!=0.00), payAdviceLineWrapper.PayCode, '')}
+                                <div rendered="{!NOT(ISBLANK(payAdviceLineWrapper.timesheetActivityName))}" style="text-align: left;font-size: 8pt; padding-top:4px;">
+                                    {!payAdviceLineWrapper.timesheetActivityName}
+                                </div>
+
+                                <div rendered="{!NOT(ISBLANK(payAdviceLineWrapper.projectCodeName))}" style="text-align: left;font-size: 8pt; padding-top:4px;">
+                                    {!payAdviceLineWrapper.projectCodeName}
+                                </div>
+
+                            </td>
+                            <td class="tr-border-line-l tr-border-line-r" style="text-align: right;width:15%; vertical-align: top;"><apex:outputText value=" {!IF(OR(payAdviceLineWrapper.CP_totalUnits!=0.00,payAdviceLineWrapper.CP_totalValue!=0.00),payAdviceLineWrapper.CP_totalUnits, '<div style=\"color:white\">-</div>')}" escape="false" /></td>
+                            <td class="tr-border-line-l tr-border-line-r" style="text-align: right;width:15%; vertical-align: top;"><apex:outputText value=" {!IF(OR(payAdviceLineWrapper.rate!=0.00,payAdviceLineWrapper.CP_totalUnits!=0.00),payAdviceLineWrapper.rate, '')}" /></td>
+                            <td class="tr-border-line-l tr-border-line-r" style="text-align: right;width:20%;padding-right:2px; vertical-align: top;"><apex:outputText value=" {!IF(OR(payAdviceLineWrapper.CP_totalUnits!=0.00,payAdviceLineWrapper.CP_totalValue!=0.00),payAdviceLineWrapper.CP_totalValue, '')}" /></td>    
+                            <td class="tr-border-line-l tr-border-line-r" style="text-align: right;padding-right:2px;width:13%; vertical-align: top;">
+                                <span style="{!IF(payAdviceLineWrapper.displayTPTotalUnit, 'width:100%;float:left;vertical-align: top;', 'display: none')}">{!payAdviceLineWrapper.TP_TotalUnits}</span>
+                            </td>
+                            <td class="tr-border-line-l tr-border-line-r" style="text-align: right;padding-right:2px;width:13%; vertical-align: top;">
+                                <span style="{!IF(payAdviceLineWrapper.displayYTDTotalValue, 'width:100%;float:left;', 'display: none')}" >{!IF(OR(payAdviceLineWrapper.CP_totalUnits!=0.00,payAdviceLineWrapper.CP_totalValue!=0.00,payAdviceLineWrapper.PP_totalUnits!=0.00,payAdviceLineWrapper.PP_totalValue!=0.00, payAdviceLineWrapper.YTD_totalValue!=0.00),payAdviceLineWrapper.YTD_totalValue, ' ')}</span>
+                            </td>
+                        </tr>
+                        <apex:variable var="itemIndex" value="{!itemIndex + 1}" />
+                    </apex:repeat>
+                </apex:repeat>
+
+                <tr>
+                    <td colspan="6" class="tr-border-line-t tr-border-line-r" style="{!IF(sectionItemIndex = 0, 'padding-bottom:10px', '')};display:{!IF(AND(payCodeWrapperG1.payCodeTotalValue = null, payCodeWrapperG1.payCodeYTDTotalValue = null), '', 'none')};"></td>
+                    <td class="tr-border-line-l tr-border-line-b tr-border-line-t" colspan="1" style="{!IF(sectionItemIndex = 0, 'padding-bottom:10px', '')};display:{!IF(AND(payCodeWrapperG1.payCodeTotalValue = null, payCodeWrapperG1.payCodeYTDTotalValue = null), 'none', '')};"></td>
+                    <td class="tr-border-line-l tr-border-line-b tr-border-line-t" colspan="3" style="{!IF(sectionItemIndex = 0, 'padding-bottom:10px', '')};text-align: right;padding-right:2px;padding-top:10px;display:{!IF(AND(payCodeWrapperG1.payCodeTotalValue = null, payCodeWrapperG1.payCodeYTDTotalValue = null), 'none', '')};">
+                        <apex:outputText value="{!payCodeWrapperG1.payCodeTotalLabel} " />
+                        <apex:outputText value="{0, number, ###0.00}">
+                            <apex:param value="{!payCodeWrapperG1.payCodeTotalValue}" />
+                        </apex:outputText>
+                    </td>
+                    <td class="tr-border-line-l tr-border-line-r tr-border-line-b tr-border-line-t" colspan="2" style="{!IF(sectionItemIndex = 0, 'padding-bottom:10px', '')};text-align: right; padding-right: 2px;padding-top:10px;display:{!IF(AND(payCodeWrapperG1.payCodeTotalValue = null, payCodeWrapperG1.payCodeYTDTotalValue = null), 'none', '')};">
+                        <apex:outputText value=" {!payCodeWrapperG1.payCodeYTDTotalLabel} " />
+                        <apex:outputText value="{0, number, ###0.00}">
+                            <apex:param value="{!payCodeWrapperG1.payCodeYTDTotalValue}" />
+                        </apex:outputText>
+                    </td>
+                </tr>
+
+                <!-- <tr>
+                    <td colspan="6" style="padding:5px"></td>
+                </tr> -->
+                <apex:variable var="sectionItemIndex" value="{!sectionItemIndex + 1}" />
+            </apex:repeat>
+            <tr>
+                <td style="padding:5px;"></td>
+                <td style="padding:5px;"></td>
+                <td style="padding:5px;"></td>
+            </tr>
+
+            <apex:repeat value="{!listOfPayCodeWrappersGroup2}" var="payCodeWrapperG2">
+                <tr style="">
+                    <td colspan="6" style="color:{!colorSectionHeadingText};border:1px solid black;background: {!colorSectionHeadingBg};font-weight: bold;padding:0px 0px 0px 1px !important;margin:0px !important;">{!payCodeWrapperG2.payCode}
+                    </td>
+                </tr>
+                <!--SC-35538 -- add empty row for better formatting -->
+                <!-- <tr style="color:{!colorSectionDetailText};background: {!colorSectionDetailBg};display: {!IF((key == 'Default'), 'none', '')};">
+                    <td class="tr-border-line-l" colspan="4">&nbsp;</td>
+                    <td class="tr-border-line-r" colspan="2">&nbsp;</td>
+                </tr> -->
+                <apex:repeat value="{!payCodeWrapperG2.mapOfAssignmentPayAdviceLinesWrapper}" var="key">
+                    <tr style="color:{!colorSectionDetailText}; background: {!colorSectionDetailBg}; display: {!IF((key == 'Default'), 'none', '')};">
+                        <td class="tr-border-line-l tr-border-line-t tr-border-line-b" style="font-weight: bold" colspan="4">{!key}</td>
+                        <td class="tr-border-line-r tr-border-line-t tr-border-line-b" colspan="2"></td>
+                    </tr>
+
+                    <apex:variable var="itemIndex" value="{!0}" /> 
+                    <apex:variable var="linesWrapper" value="{!payCodeWrapperG2.mapOfAssignmentPayAdviceLinesWrapper[key]}" /> 
+                    <apex:repeat value="{!payCodeWrapperG2.mapOfAssignmentPayAdviceLinesWrapper[key]}" var="payAdviceLineWrapper">
+                        <!-- {!IF(linesWrapper.size-1 == itemIndex, 'tr-border-line-b', '')} -->
+                         <!--SKIE-33693 REMOVED class="{!IF(MOD(itemIndex, 2) == 0, 'white-bg', 'lg-bg')}" -->
+                        <tr  style="{!IF(OR(payCodeWrapperG2.PayCode == 'PAYG Withholding', AND(payAdviceLineWrapper.CP_totalValue!=0.00)), '', 'display:none')}">
+                            <td class="tr-border-line-l tr-border-line-r {!IF(linesWrapper.size-1 == itemIndex, 'tr-border-line-b', '')}
+                            " style="text-align: left;font-size: 8pt; ">
+                                {!IF(OR(payAdviceLineWrapper.CP_totalUnits!=0.00,payAdviceLineWrapper.CP_totalValue!=0.00,payAdviceLineWrapper.PP_totalUnits!=0.00,payAdviceLineWrapper.PP_totalValue!=0.00, payAdviceLineWrapper.currentPlusPriorValue!=0.00), payAdviceLineWrapper.PayCode, '')}
+                                <div rendered="{!NOT(ISBLANK(payAdviceLineWrapper.timesheetActivityName))}" style="text-align: left;font-size: 8pt; padding-top:4px;">
+                                    {!payAdviceLineWrapper.timesheetActivityName}
+                                </div>
+
+                                <div rendered="{!NOT(ISBLANK(payAdviceLineWrapper.projectCodeName))}" style="text-align: left;font-size: 8pt; padding-top:4px;">
+                                    {!payAdviceLineWrapper.projectCodeName}
+                                </div>
+                            </td>
+                            <td class="tr-border-line-l tr-border-line-r" style="text-align: right;width:15%; vertical-align: top;">
+                                <apex:outputText value=" {!IF(AND(payAdviceLineWrapper.CP_totalUnits!=0.00, payAdviceLineWrapper.CP_totalValue!=0.00, payCodeWrapperG2.payCode != 'PAYG Withholding'), payAdviceLineWrapper.CP_totalUnits, '<div style=\"color:white\">-</div>')}" escape="false" />
+                            </td>
+                            <td class="tr-border-line-l tr-border-line-r" style="text-align: right;width:15%; vertical-align: top;">
+                                <apex:outputText value=" {!IF(AND(payAdviceLineWrapper.rate!=0.00, payAdviceLineWrapper.CP_totalUnits!=0.00, payCodeWrapperG2.payCode != 'PAYG Withholding'), payAdviceLineWrapper.rate, '')}" />
+                            </td>
+                            <td class="tr-border-line-l tr-border-line-r" style="text-align: right;width:20%;padding-right:2px; vertical-align: top;">
+                                <apex:outputText value=" {!IF(OR(payAdviceLineWrapper.CP_totalUnits!=0.00, payAdviceLineWrapper.CP_totalValue!=0.00), payAdviceLineWrapper.CP_totalValue, '')}" />
+                            </td>
+                            <td class="tr-border-line-l tr-border-line-r" style="text-align: right;padding-right:2px;width:13%; vertical-align: top;">
+                                <apex:outputText style="width:100%;float:left;" value=" {!IF(AND(payAdviceLineWrapper.CP_totalUnits!=0.00, payAdviceLineWrapper.CP_totalValue!=0.00, payCodeWrapperG2.payCode != 'PAYG Withholding'), payAdviceLineWrapper.TP_TotalUnits, '<div style=\"color:white\">-</div>')}" escape="false" />
+                            </td>
+
+                            <!-- C9D-170 changed payAdviceLineWrapper.currentPlusPriorValue to payAdviceLineWrapper.YTD_totalValue -->
+                            <td class="tr-border-line-l tr-border-line-r" style="text-align: right;padding-right:2px;width:13%; vertical-align: top;">
+                                <span style="width:100%;float:left;" >{!IF(OR(payAdviceLineWrapper.CP_totalUnits!=0.00,payAdviceLineWrapper.CP_totalValue!=0.00,payAdviceLineWrapper.PP_totalUnits!=0.00,payAdviceLineWrapper.PP_totalValue!=0.00, payAdviceLineWrapper.YTD_totalValue!=0.00),payAdviceLineWrapper.YTD_totalValue, ' ')}</span>
+                            </td>
+                            
+                            <!-- <td style="text-align: right;padding-right:2px;"> -->
+                                <!--SC-35538-->
+                                <!--                            <span style="width:100%;float:left;" >{!IF((payAdviceLineWrapper.currentPlusPriorValue!=0.00),payAdviceLineWrapper.currentPlusPriorValue, ' ')}</span>-->
+                                <!-- <span style="width:100%;float:left;" >{!IF(OR(payAdviceLineWrapper.CP_totalUnits!=0.00,payAdviceLineWrapper.CP_totalValue!=0.00,payAdviceLineWrapper.PP_totalUnits!=0.00,payAdviceLineWrapper.PP_totalValue!=0.00, payAdviceLineWrapper.currentPlusPriorValue!=0.00),payAdviceLineWrapper.currentPlusPriorValue, ' ')}</span>
+                            </td> -->
+                        </tr>
+                        <apex:variable var="itemIndex" value="{!itemIndex + 1}" />
+                    </apex:repeat>
+                    <tr style="display:{!IF(AND(payCodeWrapperG2.payCodeTotalValue = null, payCodeWrapperG2.payCodeYTDTotalValue = null), 'none', '')};">
+                        <!-- style="display:{!IF(AND(payCodeWrapperG2.payCodeTotalValue = null, payCodeWrapperG2.payCodeYTDTotalValue = null), '', 'none')};" -->
+                        <!-- <td colspan="6" class="tr-border-line-t" ></td> -->
+                        <!-- style="display:{!IF(AND(payCodeWrapperG2.payCodeTotalValue = null, payCodeWrapperG2.payCodeYTDTotalValue = null), 'none', '')};" -->
+                        <td class="tr-border-line-l tr-border-line-b tr-border-line-t" colspan="1" ></td>
+                        <td class="tr-border-line-l tr-border-line-b tr-border-line-t" colspan="3" style="text-align: right;padding-right:2px;padding-top:10px; ">
+                            <apex:outputText value="{!payCodeWrapperG2.payCodeTotalLabel} " />
+                            <apex:outputText value="{0, number, ###0.00}">
+                                <apex:param value="{!payCodeWrapperG2.payCodeTotalValue}" />
+                            </apex:outputText>
+                        </td>
+                        <td class="tr-border-line-l tr-border-line-r tr-border-line-b tr-border-line-t" colspan="2" style="text-align: right; padding-right: 2px;padding-top:10px;">
+                            <apex:outputText value=" {!payCodeWrapperG2.payCodeYTDTotalLabel} " />
+                            <apex:outputText value="{0, number, ###0.00}">
+                                <apex:param value="{!payCodeWrapperG2.payCodeYTDTotalValue}" />
+                            </apex:outputText>
+                        </td>
+                    </tr>
+                </apex:repeat>
+                <tr>
+                    <td colspan="6" style="padding:4px"></td>
+                </tr>
+            </apex:repeat>
+            <tr>
+                <td style="padding:0px;"></td>
+                <td style="padding:0px;"></td>
+                <td style="padding:0px;"></td>
+                <td style="padding:0px;"></td>
+                <td style="padding:0px;"></td>
+                <td style="padding:0px;"></td>
+            </tr>
+        </table>
+        <br/>
+        <br/>
+        <!-- style="width:100%;border-collapse:collapse; border:1px solid black;font-family: sans-serif; font-size: 8pt;" -->
+        <table class="front-table" style="border-collapse:collapse;width:100%;font-family: sans-serif; font-size: 8pt;">
+            <tr>
+                <td colspan="5" style="color:{!colorSectionHeadingText};background: {!colorSectionHeadingBg};padding:0px 0px 0px 4px !important;border:1px solid black;"><b>{!labelSuperannuationDistribution}</b></td>
+            </tr>
+            <tr style="color:{!colorSectionDetailText};background: {!colorSectionDetailBg};">
+                <td class="border-line-black" style="background: {!colorSectionHeadingBg}" colspan="2"><b>Fund Name</b></td>
+                <td class="border-line-black" style="background: {!colorSectionHeadingBg}"><b>Member Number</b></td>
+                <td class="border-line-black" style="background: {!colorSectionHeadingBg}"><b>Amount</b></td>
+                <td class="border-line-black" style="background: {!colorSectionHeadingBg}"><b>YTD Amount</b></td>
+            </tr>
+
+            <apex:variable var="itemIndex" value="{!0}" /> 
+            <apex:repeat value="{!listOfPayTransactionsWrapper}" var="payTransactionsWrapper">
+                <tr class="{!IF(MOD(itemIndex, 2) = 0, 'white-bg', 'lg-bg')}" style="color:{!colorSectionDetailText};border-bottom:1px solid black;">
+                    <td class="tr-border-line-l tr-border-line-r" colspan="2">{!payTransactionsWrapper.fundName}</td>
+                    <td class="tr-border-line-l tr-border-line-r">{!payTransactionsWrapper.memberNumber}</td>
+                    <td class="tr-border-line-l tr-border-line-r">{!payTransactionsWrapper.amount}</td>
+                    
+                    <td class="tr-border-line-l tr-border-line-r">
+                        <apex:outputText value="{0, number, ###0.00}">
+                            <apex:param value="{!payTransactionsWrapper.ytdAmount}" />
+                        </apex:outputText>
+                    </td>
+                </tr>
+                <apex:variable var="itemIndex" value="{!itemIndex + 1}" />
+            </apex:repeat>
+
+            <tr>
+                <td class="tr-border-line-t" colspan="5" style="padding:5px"></td>
+            </tr>
+
+            <tr>
+                <td colspan="5" style="color:{!colorSectionHeadingText};background: {!colorSectionHeadingBg};padding:0px 0px 0px 4px !important;border:1px solid black;"><b>{!labelNetPayDistribution}</b></td>
+            </tr>
+            <tr style="color:{!colorSectionDetailText};background: {!colorSectionDetailBg};">
+                <td class="border-line-black" style="background: {!colorSectionHeadingBg}" colspan="2"><b>Account Name</b></td>
+                <td class="border-line-black" style="background: {!colorSectionHeadingBg}"><b>Account Number</b></td>
+                <td class="border-line-black" style="background: {!colorSectionHeadingBg}"><b>BSB</b></td>
+                <td class="border-line-black" style="background: {!colorSectionHeadingBg}"><b>Amount</b></td>
+            </tr>
+            
+            <apex:variable var="itemIndex" value="{!0}" /> 
+            <apex:repeat value="{!listOfPaymentFileLinesWrapper}" var="paymentFileLinesWrapper" id="theRepeat1-temp">
+                <tr class="{!IF(MOD(itemIndex, 2) = 0, 'white-bg', 'lg-bg')}" style="color:{!colorSectionDetailText};border-bottom:1px solid black;">
+                    <td class="tr-border-line-l tr-border-line-r" colspan="2">{!paymentFileLinesWrapper.bankAccountName}</td>
+                    <td class="tr-border-line-l tr-border-line-r">{!paymentFileLinesWrapper.bankAccountNumber}</td>
+                    <td class="tr-border-line-l tr-border-line-r">{!paymentFileLinesWrapper.bankBranchCode}</td>
+                    <td class="tr-border-line-l tr-border-line-r">{!paymentFileLinesWrapper.paymentAmount}</td>
+                </tr>
+                <apex:variable var="itemIndex" value="{!itemIndex + 1}" />
+            </apex:repeat>
+
+            <tr>
+                <td class="tr-border-line-t" colspan="5" style="padding:5px"></td>
+            </tr>
+            
+            <tr>
+                <td colspan="5" style="color:{!colorSectionHeadingText};background: {!colorSectionHeadingBg};padding:0px 0px 0px 4px !important;border:1px solid black;"><b>{!labelLeaveBalance}</b></td>
+            </tr>
+            <tr style="color:{!colorSectionDetailText};background: {!colorSectionDetailBg};">
+                <td class="border-line-black" style="background: {!colorSectionHeadingBg}" colspan="2"><b>Leave Rule</b></td>
+                <td class="border-line-black" style="background: {!colorSectionHeadingBg}"><b>Balance (hours)</b></td>
+                <td class="border-line-black" style="background: {!colorSectionHeadingBg}"><b>Balance (days)</b></td>
+                <td class="border-line-black" style="background: {!colorSectionHeadingBg}"></td>
+            </tr>
+
+            <apex:variable var="itemIndex" value="{!0}" /> 
+            <apex:repeat value="{!listOfLeaveBalancesWrappers}" var="leaveBalancesWrapper">
+                <tr class="{!IF(MOD(itemIndex, 2) = 0, 'white-bg', 'lg-bg')}" style="color:{!colorSectionDetailText};">
+                    <td class="tr-border-line-l tr-border-line-r" colspan="2">{!leaveBalancesWrapper.leaveRuleName}</td>
+                    <td class="tr-border-line-l tr-border-line-r" >{!leaveBalancesWrapper.balanceHours}</td>
+                    <td class="tr-border-line-l tr-border-line-r" >{!leaveBalancesWrapper.balanceDays}</td>
+                    <td class="tr-border-line-l tr-border-line-r" ></td>
+                </tr>
+                <apex:variable var="itemIndex" value="{!itemIndex + 1}" />
+            </apex:repeat>
+
+            <tr>
+                <td class="tr-border-line-t" colspan="5" style="" ></td>
+            </tr>
+        </table>
+
+       <div style="padding-top:10px;"><p></p></div>
+
+        <table style="border-collapse:collapse;margin-top: 10px;width:100%;font-family: sans-serif; font-size: 8pt;page-break-inside:avoid;">
+            <tr>
+                <td colspan="6" style="color:{!colorSectionHeadingText};background: {!colorSectionHeadingBg};padding:0px 0px 0px 4px !important;border:1px solid black;"><b>{!labelPersonalMessage}</b></td>
+            </tr>
+            <tr>
+                <td colspan="6" style="" class="tr-border-line-t tr-border-line-l tr-border-line-r tr-border-line-b">
+                    <apex:outputText style="white-space:pre-wrap;" escape="false" value=" {!personalMessage}" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="6" style="border-bottom:0px solid white;" ></td>
+            </tr>
+        </table>
+
+        <div style="padding-top:10px;"><p></p></div>
+        <table style="border-collapse:collapse;margin-top: 10px;width:100%; font-family: sans-serif; font-size: 8pt;page-break-inside:avoid;">
+            <tr>
+                <td colspan="6" style="color:{!colorSectionHeadingText};background: {!colorSectionHeadingBg};padding:0px 0px 0px 4px !important;border:1px solid black;"><b>{!labelGeneralMessage}</b></td>
+            </tr>
+            <tr>
+                <td colspan="6" style="" class="tr-border-line-t tr-border-line-l tr-border-line-r tr-border-line-b">
+                    <apex:outputText style="white-space:pre-wrap;" escape="false" value=" {!generalMessage}" />
+                </td>
+            </tr>
+        </table>
+
+        <!-- SHIFT BACKINGSHEET -->
+        <table style="page-break-before:always;border-collapse:collapse;margin-top: 10px;width:100%; font-family: sans-serif; font-size: 8pt;page-break-inside:avoid;">
+            <thead>
+                 <tr>
+                    <th class="border-top border-bottom th-padding tr-border-line-l " style="width: 10%; background: {!colorSectionHeadingBg}">{!$Label.Pay_Advice_Col_Shift_Date}</th>
+                    <!-- <th class="border-top border-bottom th-padding" style="width: 16%;">{!$Label.Pay_Advice_Col_Site}</th> -->
+                    <th class="border-top border-bottom th-padding tr-border-line-l " style="width: 16%; background: {!colorSectionHeadingBg}">{!$Label.Pay_Advice_Col_Department_Ward}</th>
+                    <!-- <th class="border-top border-bottom th-padding" style="width: 14%;">{!$Label.Pay_Advice_Col_Department_Ward}</th> -->
+                    <th class="border-top border-bottom th-padding tr-border-line-l " style="width: 12%; background: {!colorSectionHeadingBg}">{!$Label.Pay_Advice_Col_Job_Type}</th>
+                    <th class="border-top border-bottom th-padding tr-border-line-l " style="width: 6%; background: {!colorSectionHeadingBg}">{!$Label.Pay_Advice_Col_Start}</th>
+                    <th class="border-top border-bottom th-padding tr-border-line-l " style="width: 6%; background: {!colorSectionHeadingBg}">{!$Label.Pay_Advice_Col_Finish}</th>
+                    <th class="border-top border-bottom th-padding tr-border-line-l " style="width: 12%; background: {!colorSectionHeadingBg}">{!$Label.Pay_Advice_Col_Shift_Type}</th>
+                    <th class="border-top border-bottom th-padding tr-border-line-l " style="width: 6%; text-align: right; background: {!colorSectionHeadingBg}">{!$Label.Pay_Advice_Col_Quantity}</th>
+                    <th class="border-top border-bottom th-padding tr-border-line-l " style="width: 8.5%; text-align: right; background: {!colorSectionHeadingBg}">Casual Loading Amount</th>
+                    <th class="border-top border-bottom th-padding tr-border-line-l " style="width: 8.5%; text-align: right; background: {!colorSectionHeadingBg}">Rate Excl Casual Loading</th>
+                    <th class="border-top border-bottom th-padding tr-border-line-l " style="width: 7%; text-align: right; background: {!colorSectionHeadingBg}">{!$Label.Pay_Advice_Col_Rate}</th>
+                    <th class="border-top border-bottom th-padding tr-border-line-l tr-border-line-r" style="width: 8%; text-align: right; background: {!colorSectionHeadingBg}">{!$Label.Pay_Advice_Col_Amount}</th>
+                </tr>
+            </thead>
+            <tbody>
+                <apex:variable var="priorTime" value="" /> 
+                <apex:repeat value="{!shiftBackingSheetData.shiftGroups}" var="group">
+                    <tr style="font-size: 8pt"> 
+                        <td style="vertical-align: top;" class="tr-border-line-l tr-border-line-t td-padding-vertical">
+                            <apex:outputText rendered="{!IF(group.firstGroupDetail.shiftDate!=NULL, true, false)}" value="{0,date,dd MMM yyyy}">
+                                <apex:param value="{!group.firstGroupDetail.shiftDate}" /> 
+                            </apex:outputText>
+                        </td>
+                        <td style="vertical-align: top;" class="tr-border-line-l tr-border-line-t td-padding-vertical ">{!group.firstGroupDetail.siteName}</td>
+                        <!-- <td style="vertical-align: top;">{!group.firstGroupDetail.department}</td> -->
+                        <td style="vertical-align: top;" class="tr-border-line-l tr-border-line-t td-padding-vertical ">{!group.firstGroupDetail.jobType}</td>
+                        <td style="vertical-align: top;" class="tr-border-line-l tr-border-line-t td-padding-vertical ">
+                            <apex:outputText rendered="{!IF(group.firstGroupDetail.startDateTime!=NULL, true, false)}" value="{0,date,HH:mm}">
+                                <apex:param value="{!group.firstGroupDetail.startDateTime}" /> 
+                            </apex:outputText>
+                        </td>
+                        <td style="vertical-align: top;" class="tr-border-line-l tr-border-line-t td-padding-vertical ">
+                            <apex:outputText rendered="{!IF(group.firstGroupDetail.endDateTime!=NULL, true, false)}" value="{0,date,HH:mm}">
+                                <apex:param value="{!group.firstGroupDetail.endDateTime}" /> 
+                            </apex:outputText>
+                        </td>
+                        <td style="vertical-align: top;" class="tr-border-line-l tr-border-line-t td-padding-vertical ">{!group.firstGroupDetail.shiftType}</td>
+                        <td style="text-align: right;vertical-align: top;" class="tr-border-line-l tr-border-line-t td-padding-vertical ">
+                            <apex:outputText value="{0,number,###,##0.00} " >
+                                <apex:param value="{!group.firstGroupDetail.quantity}" />
+                            </apex:outputText>
+                        </td>
+                        <td style="text-align: right;vertical-align: top;" class="tr-border-line-l tr-border-line-t td-padding-vertical ">
+                            <apex:outputText value="{0,number,###,##0.00} " >
+                                <apex:param value="{!group.firstGroupDetail.casualLoadingAmount}" />
+                            </apex:outputText>
+                        </td>
+                        <td style="text-align: right;vertical-align: top;" class="tr-border-line-l tr-border-line-t td-padding-vertical ">
+                            <apex:outputText value="{0,number,###,##0.00} " >
+                                <apex:param value="{!group.firstGroupDetail.rateExclCasualLoading}" />
+                            </apex:outputText>
+                        </td>
+                        <td style="text-align: right;vertical-align: top;" class="tr-border-line-l tr-border-line-t td-padding-vertical ">
+                            <apex:outputText value="{0,number,###,##0.00} " >
+                                <apex:param value="{!group.firstGroupDetail.rate}" />
+                            </apex:outputText>
+                        </td>
+                        <td style="text-align: right;vertical-align: top;" class="tr-border-line-l tr-border-line-t td-padding-vertical tr-border-line-r">
+                            <apex:outputText value="{0,number,###,##0.00} " >
+                                <apex:param value="{!group.firstGroupDetail.amount}" />
+                            </apex:outputText>
+                        </td>
+                        <apex:variable var="priorTime" value="{! TEXT(group.firstGroupDetail.startDateTime) + TEXT(group.firstGroupDetail.endDateTime) }" /> 
+                    </tr>
+
+                    <apex:repeat value="{!group.followingGroupDetails}" var="subGroup">
+                        <tr style="font-size: 8pt">
+                            <td style="vertical-align: top; " class="tr-border-line-l td-padding-vertical"></td>
+                            <td style="vertical-align: top; " class="tr-border-line-l td-padding-vertical"></td>
+                            <td style="vertical-align: top; " class="tr-border-line-l td-padding-vertical"></td>
+
+                            <apex:variable var="curTime" value="{! TEXT(subGroup.startDateTime) + TEXT(subGroup.endDateTime) }" /> 
+                            <apex:outputPanel layout="none" rendered="{!priorTime == curTime}">
+                                <td style="vertical-align: top; " class="tr-border-line-l td-padding-vertical"></td>
+                                <td style="vertical-align: top; " class="tr-border-line-l td-padding-vertical"></td>
+                            </apex:outputPanel>
+
+                            <apex:outputPanel layout="none" rendered="{!priorTime != curTime}">
+                                <td style="vertical-align: top; " class="tr-border-line-l td-padding-vertical">
+                                    <apex:outputText rendered="{!IF(subGroup.startDateTime!=NULL, true, false)}" value="{0,date,HH:mm}">
+                                        <apex:param value="{!subGroup.startDateTime}" /> 
+                                    </apex:outputText>
+                                </td>
+                                <td style="vertical-align: top; " class="tr-border-line-l td-padding-vertical">
+                                    <apex:outputText rendered="{!IF(subGroup.startDateTime!=NULL, true, false)}" value="{0,date,HH:mm}">
+                                        <apex:param value="{!subGroup.endDateTime}" /> 
+                                    </apex:outputText>
+                                </td>
+                            </apex:outputPanel>
+
+                            <td style="vertical-align: top; " class="tr-border-line-l td-padding-vertical">{!subGroup.shiftType}</td>
+                            <td style="text-align: right;vertical-align: top; " class="tr-border-line-l td-padding-vertical">
+                                <apex:outputText value="{0,number,###,##0.00} " >
+                                    <apex:param value="{!subGroup.quantity}" />
+                                </apex:outputText>
+                            </td>
+                            <td style="text-align: right;vertical-align: top; " class="tr-border-line-l td-padding-vertical">
+                                <apex:outputText value="{0,number,###,##0.00} " >
+                                    <apex:param value="{!subGroup.casualLoadingAmount}" />
+                                </apex:outputText>
+                            </td>
+                            <td style="text-align: right;vertical-align: top; " class="tr-border-line-l td-padding-vertical">
+                                <apex:outputText value="{0,number,###,##0.00} " >
+                                    <apex:param value="{!subGroup.rateExclCasualLoading}" />
+                                </apex:outputText>
+                            </td>
+                            <td style="text-align: right;vertical-align: top; " class="tr-border-line-l td-padding-vertical">
+                                <apex:outputText value="{0,number,###,##0.00} " >
+                                    <apex:param value="{!subGroup.rate}" />
+                                </apex:outputText>
+                            </td>
+                            <td style="text-align: right;vertical-align: top; " class="tr-border-line-l td-padding-vertical tr-border-line-r">
+                                <apex:outputText value="{0,number,###,##0.00} " >
+                                    <apex:param value="{!subGroup.amount}" />
+                                </apex:outputText>
+                            </td>
+                        </tr>
+                        <apex:variable var="priorTime" value="{! curTime }" /> 
+                    </apex:repeat>
+                </apex:repeat>
+            </tbody>
+        </table>
+        
+        <table style="border-collapse:collapse;margin-top: 0px;width:100%; font-family: sans-serif; font-size: 8pt;page-break-inside:avoid;">
+            <tr>
+                <td style="text-align: right" class="tr-border-line-l tr-border-line-b tr-border-line-t"><b>Total Gross Amount:</b></td>
+                <td style="text-align: right; width: 10%" class="tr-border-line-r tr-border-line-b tr-border-line-t">
+                    <apex:outputText value="${0,number,###,##0.00}" >
+                        <apex:param value="{!IF(ISBLANK(shiftBackingSheetData.totalGrossAmount),0,shiftBackingSheetData.totalGrossAmount)}"/>
+                    </apex:outputText>
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: right" class="tr-border-line-l tr-border-line-b"><b>Total Allowance Quantity:</b></td>
+                <td style="text-align: right; width: 10%" class="tr-border-line-r tr-border-line-b">
+                    <apex:outputText value="{0,number,###,##0}" >
+                        <apex:param value="{!IF(ISBLANK(shiftBackingSheetData.totalAllowanceQty),0,shiftBackingSheetData.totalAllowanceQty)}"/>
+                    </apex:outputText>
+                </td>
+            </tr>
+            <tr>
+                <td  style="text-align: right" class="tr-border-line-l tr-border-line-b"><b>Total Hours:</b></td>
+                <td style="text-align: right; width: 10%" class="tr-border-line-r tr-border-line-b">
+                    <apex:outputText value="{0,number,###,##0.00}" >
+                        <apex:param value="{!IF(ISBLANK(shiftBackingSheetData.totalHours),0,shiftBackingSheetData.totalHours)}"/>
+                    </apex:outputText>
+                </td>
+            </tr>
+        </table>
+        <table style="border-collapse:collapse;margin-top: 0px;width:100%;font-family: sans-serif; font-size: 8pt;page-break-inside:avoid; margin-top:10px;">
+            <thead>
+                <tr>
+                    <th class="border-top border-bottom th-padding tr-border-line-l tr-border-line-r" style="width: 100%; padding-left: 4px; background: {!colorSectionHeadingBg}" colspan="4">Leave Details</th>
+                </tr>
+                <tr>
+                    <th class="border-top border-bottom th-padding tr-border-line-l " style="width: 50%;  padding-left: 4px; background: {!colorSectionHeadingBg}">Leave Event</th>
+                    <th class="border-top border-bottom th-padding tr-border-line-l " style="width: 16.6667%;  padding-left: 4px; background: {!colorSectionHeadingBg}">Hours</th>
+                    <th class="border-top border-bottom th-padding tr-border-line-l " style="width: 16.6667%;  padding-left: 4px; background: {!colorSectionHeadingBg}">Start Date</th>
+                    <th class="border-top border-bottom th-padding tr-border-line-l tr-border-line-r" style="width: 16.6667%;  padding-left: 4px; background: {!colorSectionHeadingBg}">End Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                <apex:repeat value="{!leaveTransactions}" var="txn">
+                    <tr style="font-size: 8pt">
+                        <td style="vertical-align: top; padding-left: 2px;" class="tr-border-line-l tr-border-line-b">{!txn.tc9_pr__Pay_Code__r.Name}</td>
+                        <td style="vertical-align: top; padding-left: 2px;" class="tr-border-line-l tr-border-line-b">{!txn.tc9_pr__Quantity__c}</td>
+                        <td style="vertical-align: top; padding-left: 2px;" class="tr-border-line-l tr-border-line-b">
+                            <apex:outputText value="{0,date,dd/MM/yyyy}">
+                                <apex:param value="{!txn.tc9_pr__Payee_Leave_Event__r.tc9_pr__Start_Date__c}" />
+                            </apex:outputText>
+                        </td>
+                        <td style="vertical-align: top; padding-left: 2px;" class="tr-border-line-l tr-border-line-b tr-border-line-r">
+                            <apex:outputText value="{0,date,dd/MM/yyyy}">
+                                <apex:param value="{!txn.tc9_pr__Payee_Leave_Event__r.tc9_pr__End_Date__c}" />
+                            </apex:outputText>
+                        </td>
+                    </tr>
+                </apex:repeat>
+            </tbody>
+        </table>
+        
+
+        
+        <apex:variable var="toilCredits" value="{!TOILCreditEvents}" />
+        <apex:outputPanel rendered="{!NOT(ISNULL(toilCredits))}">
+            <table style="border-collapse:collapse;margin-top: 0px;width:100%;font-family: sans-serif; font-size: 8pt;page-break-inside:avoid; margin-top:10px;">
+                <thead>
+                    <tr>
+                        <th class="border-top border-bottom th-padding tr-border-line-l tr-border-line-r" style="width: 100%; padding-left: 4px; background: {!colorSectionHeadingBg}" colspan="4">Leave Credit</th>
+                    </tr>
+                    <tr>
+                        <th class="border-top border-bottom th-padding tr-border-line-l" style="width: 50%; padding-left: 4px; background: {!colorSectionHeadingBg}">Leave Event</th>
+                        <th class="border-top border-bottom th-padding tr-border-line-l" style="width: 16.6667%; padding-left: 4px; background: {!colorSectionHeadingBg}">Hours</th>
+                        <th class="border-top border-bottom th-padding tr-border-line-l" style="width: 16.6667%; padding-left: 4px; background: {!colorSectionHeadingBg}">Start Date</th>
+                        <th class="border-top border-bottom th-padding tr-border-line-l tr-border-line-r" style="width: 16.6667%; padding-left: 4px; background: {!colorSectionHeadingBg}">End Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <apex:repeat value="{!TOILCreditEvents}" var="credit">
+                        <tr style="font-size: 8pt">
+                            <td style="vertical-align: top; padding-left: 2px;" class="tr-border-line-l tr-border-line-b">{!credit.tc9_pr__Payee_Leave_Rule__r.tc9_pr__Leave_Rule__r.Name}</td>
+                            <td style="vertical-align: top; padding-left: 2px;" class="tr-border-line-l tr-border-line-b">
+                                <apex:outputText value="{0,number,0.##}">
+                                    <apex:param value="{!credit.tc9_pr__Hours__c}" />
+                                </apex:outputText>
+                            </td>
+                            <td style="vertical-align: top; padding-left: 2px;" class="tr-border-line-l tr-border-line-b">
+                                <apex:outputText value="{0,date,dd/MM/yyyy}">
+                                    <apex:param value="{!credit.tc9_pr__Start_Date__c}" />
+                                </apex:outputText>
+                            </td>
+                            <td style="vertical-align: top; padding-left: 2px;" class="tr-border-line-l tr-border-line-b tr-border-line-r">
+                                <apex:outputText value="{0,date,dd/MM/yyyy}">
+                                    <apex:param value="{!credit.tc9_pr__End_Date__c}" />
+                                </apex:outputText>
+                            </td>
+                        </tr>
+                    </apex:repeat>
+                </tbody>
+            </table>
+        </apex:outputPanel>
+
+<div class="footer" style="height:100mm; width:100%;">
+            <div style="text-align: {!footerPosition}; color:{!colorFooterText};">
+                <apex:outputtext value="{!footerText}"  escape="false"></apex:outputtext>
+            </div>
+        </div>
+    </body>
+
+</apex:page>

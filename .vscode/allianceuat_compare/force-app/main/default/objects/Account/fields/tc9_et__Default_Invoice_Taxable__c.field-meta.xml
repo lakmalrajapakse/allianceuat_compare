@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>tc9_et__Default_Invoice_Taxable__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Indicates if by default there will be tax applied to the invoice. This value can be overridden at lower levels</description>
+    <inlineHelpText>Indicates if by default there will be tax applied to the invoice. This value can be overridden at lower levels</inlineHelpText>
+    <label>Default Invoice Taxable</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>tc9_pr__Yes_No_Picklists</valueSetName>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email to candidates with links to ALS providers</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>ARRH - ALS providers</name>
+    <style>none</style>
+    <subject>Recommended ALS providers</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+Thank you for your enquiry.
+
+Below are providers for Advanced Life Support courses:
+
+Crana:
+crana.org.au/courses/advanced-life-support
+
+The Australian College of Critical Care Nurses Ltd (ACCCN)
+acccn.com.au/als/als-courses
+
+PLEASE NOTE:
+These courses are suggestions only, it is always best to also do your own research.
+
+Kind regards,
+{!User.FirstName}
+Alliance Rural &amp; Remote Health
+Tel: 07 4998 5550</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

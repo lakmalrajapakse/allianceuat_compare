@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>tc9_pr__Employee_Community__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Defines the Employee Community that will be used by Employees related to the Payment Entity via their Primary Payee. This value is used in auto creating Community User records</description>
+    <inlineHelpText>Defines the Employee Community that will be used by Employees related to the Payment Entity via their Primary Payee. This value is used in auto creating Community User records</inlineHelpText>
+    <label>Employee Community</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>tc9_pr__Employee_Community</valueSetName>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Select Team for Notifications --></help>
+    <label><!-- Team --></label>
+    <name>Team__c</name>
+    <picklistValues>
+        <masterLabel>Allocations</masterLabel>
+        <translation><!-- Allocations --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>General</masterLabel>
+        <translation><!-- General --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Recruitment</masterLabel>
+        <translation><!-- Recruitment --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

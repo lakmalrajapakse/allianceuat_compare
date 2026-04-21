@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Speciality --></label>
+    <name>Speciality__c</name>
+    <picklistValues>
+        <masterLabel>Aged Care</masterLabel>
+        <translation><!-- Aged Care --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Childcare</masterLabel>
+        <translation><!-- Childcare --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Clinical Midwife</masterLabel>
+        <translation><!-- Clinical Midwife --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Clinical Midwife Consultant</masterLabel>
+        <translation><!-- Clinical Midwife Consultant --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Clinical Nurse</masterLabel>
+        <translation><!-- Clinical Nurse --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Clinical Nurse Consultant</masterLabel>
+        <translation><!-- Clinical Nurse Consultant --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Corporate Health</masterLabel>
+        <translation><!-- Corporate Health --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Director of Nursing</masterLabel>
+        <translation><!-- Director of Nursing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Director of Nursing - Midwifery</masterLabel>
+        <translation><!-- Director of Nursing - Midwifery --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Disability</masterLabel>
+        <translation><!-- Disability --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Executive Director of Nursing</masterLabel>
+        <translation><!-- Executive Director of Nursing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Executive Director of Nursing / Midwifery</masterLabel>
+        <translation><!-- Executive Director of Nursing / Midwifery --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Facility Manager</masterLabel>
+        <translation><!-- Facility Manager --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Flight Nurse</masterLabel>
+        <translation><!-- Flight Nurse --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GP</masterLabel>
+        <translation><!-- GP --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Hospital</masterLabel>
+        <translation><!-- Hospital --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Midwifery Unit Manager</masterLabel>
+        <translation><!-- Midwifery Unit Manager --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Nurse Unit Manager</masterLabel>
+        <translation><!-- Nurse Unit Manager --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Paediatrics</masterLabel>
+        <translation><!-- Paediatrics --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Regional, Rural and Remote</masterLabel>
+        <translation><!-- Regional, Rural and Remote --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Remote Area Midwife (RAM)</masterLabel>
+        <translation><!-- Remote Area Midwife (RAM) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Remote Area Nurse (RAN)</masterLabel>
+        <translation><!-- Remote Area Nurse (RAN) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>School</masterLabel>
+        <translation><!-- School --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Timesheet_Calendars</fullName>
+    <columns>NAME</columns>
+    <columns>tc9_pr__Status__c</columns>
+    <columns>tc9_et__Timesheet_Entry_Format__c</columns>
+    <columns>tc9_et__Timesheet_Frequency__c</columns>
+    <columns>tc9_et__Break_Entry_Format__c</columns>
+    <columns>RECORDTYPE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>tc9_pr__Calendar__c.tc9_et__Timesheet</value>
+    </filters>
+    <label>Timesheet Calendars</label>
+</ListView>

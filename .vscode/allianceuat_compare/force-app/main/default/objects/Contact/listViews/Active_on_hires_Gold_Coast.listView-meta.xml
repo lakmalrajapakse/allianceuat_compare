@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Active_on_hires_Gold_Coast</fullName>
+    <columns>CONTACT.TITLE</columns>
+    <columns>FULL_NAME</columns>
+    <columns>CONTACT.FIRST_NAME</columns>
+    <columns>CONTACT.EMAIL</columns>
+    <columns>CONTACT.PHONE3</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>Classification__c</columns>
+    <columns>Speciality__c</columns>
+    <columns>Skill_area__c</columns>
+    <columns>Skill__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>TR1__Candidate_Status__c</field>
+        <operation>equals</operation>
+        <value>Active</value>
+    </filters>
+    <filters>
+        <field>Branch_Name__c</field>
+        <operation>contains</operation>
+        <value>Gold</value>
+    </filters>
+    <filters>
+        <field>AA_Record_Type_Name__c</field>
+        <operation>equals</operation>
+        <value>Candidate</value>
+    </filters>
+    <label>Active on-hires - Gold Coast</label>
+</ListView>

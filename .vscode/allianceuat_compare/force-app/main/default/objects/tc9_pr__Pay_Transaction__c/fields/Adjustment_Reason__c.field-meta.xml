@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Adjustment_Reason__c</fullName>
+    <description>Reason for the automated adjustment applied to this pay transaction. This reason was automatically copied from the associated timesheet adjustment.</description>
+    <inlineHelpText>Reason for the automated adjustment applied to this pay transaction. This reason was automatically copied from the associated timesheet adjustment.</inlineHelpText>
+    <label>Adjustment Reason</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>tc9_et__Credit_Reason_Picklists</valueSetName>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- When checked, changes in core fields at the parent level automatically update all corresponding child records. --></help>
+    <label><!-- Update with Parent Expense --></label>
+    <name>Update_with_Parent_Expense__c</name>
+</CustomFieldTranslation>

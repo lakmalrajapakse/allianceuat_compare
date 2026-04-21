@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Any_3_forms_of_identification__c</fullName>
+    <label>Any 3 forms of identification</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Birth Certificate (inc Marriage Cert OR Change of Name Cert)</fullName>
+                <default>false</default>
+                <label>Birth Certificate (inc Marriage Cert OR Change of Name Cert)</label>
+            </value>
+            <value>
+                <fullName>Passport</fullName>
+                <default>false</default>
+                <label>Passport</label>
+            </value>
+            <value>
+                <fullName>Driver’s License</fullName>
+                <default>false</default>
+                <label>Driver’s License</label>
+            </value>
+            <value>
+                <fullName>Medicare Card</fullName>
+                <default>false</default>
+                <label>Medicare Card</label>
+            </value>
+            <value>
+                <fullName>WWCC</fullName>
+                <default>false</default>
+                <label>WWCC</label>
+            </value>
+            <value>
+                <fullName>Bank Card (incl expiry date)</fullName>
+                <default>false</default>
+                <label>Bank Card (incl expiry date)</label>
+            </value>
+            <value>
+                <fullName>Any Government issued ID</fullName>
+                <default>false</default>
+                <label>Any Government issued ID</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

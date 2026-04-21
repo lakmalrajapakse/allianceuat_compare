@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Work_Cover_Payable_Rate__c</fullName>
+    <description>Work Cover Payable Rate %</description>
+    <externalId>false</externalId>
+    <formula>tc9_pr__Assignment_Rate__r.tc9_et__Rate_Calculator_Line__r.tc9_et__WorkCover_Invoiceable_Rate__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Work Cover Payable Rate % from rate calculator line</inlineHelpText>
+    <label>Work Cover Payable Rate %</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>TR1__Job__c</entityName>
+    <fieldName>TR1__Status__c</fieldName>
+    <masterLabel>Job Stage</masterLabel>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;This Sourcing Pool has sufficiently been filled with vetted candidates&lt;/p&gt;</info>
+        <picklistValueName>Closed</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;This Sourcing Role is on Hold&lt;/p&gt;</info>
+        <picklistValueName>Hold</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;Souring Role is Active. Alliance still has a need to build a sustainable pool for vetted candidates&lt;/p&gt;</info>
+        <picklistValueName>Open</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>Consulting</recordTypeName>
+</PathAssistant>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <chart>
+        <backgroundColor1>#FFFFFF</backgroundColor1>
+        <backgroundColor2>#FFFFFF</backgroundColor2>
+        <backgroundFadeDir>Diagonal</backgroundFadeDir>
+        <chartSummaries>
+            <axisBinding>y</axisBinding>
+            <column>RowCount</column>
+        </chartSummaries>
+        <chartType>HorizontalBarGrouped</chartType>
+        <enableHoverLabels>false</enableHoverLabels>
+        <expandOthers>true</expandOthers>
+        <groupingColumn>sirenum__Shift__c$Branch_for_reporting__c</groupingColumn>
+        <legendPosition>Right</legendPosition>
+        <location>CHART_BOTTOM</location>
+        <secondaryGroupingColumn>sirenum__Shift__c$sirenum__Contract__c.sirenum__Client__c.Name</secondaryGroupingColumn>
+        <showAxisLabels>true</showAxisLabels>
+        <showPercentage>false</showPercentage>
+        <showTotal>false</showTotal>
+        <showValues>false</showValues>
+        <size>Medium</size>
+        <summaryAxisRange>Auto</summaryAxisRange>
+        <textColor>#000000</textColor>
+        <textSize>12</textSize>
+        <titleColor>#000000</titleColor>
+        <titleSize>18</titleSize>
+    </chart>
+    <columns>
+        <field>sirenum__Shift__c$Name</field>
+    </columns>
+    <columns>
+        <field>sirenum__Shift__c$Schedule_Display_Status__c</field>
+    </columns>
+    <columns>
+        <field>sirenum__Shift__c$sirenum__Contract__c.sirenum__Client__c.Parent.Name</field>
+    </columns>
+    <columns>
+        <field>sirenum__Shift__c$sirenum__Scheduled_Local_Start_Date__c</field>
+    </columns>
+    <columns>
+        <field>sirenum__Shift__c$sirenum__Scheduled_Local_Start_Time__c</field>
+    </columns>
+    <columns>
+        <field>sirenum__Shift__c$sirenum__Scheduled_Local_End_Time__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Average</aggregateTypes>
+        <field>CDF1</field>
+    </columns>
+    <customDetailFormulas>
+        <calculatedFormula>IF(AND(sirenum__Shift__c.Schedule_Display_Status__c = &apos;Shift Cancelled&apos;,
+   OR(text(sirenum__Shift__c.sirenum__CancellationReason__c) = &apos;Facility Beds Closed / Surgery Cancelled&apos;,
+   text(sirenum__Shift__c.sirenum__CancellationReason__c) = &apos;Facility Booked filled by other Agency&apos;,
+   text(sirenum__Shift__c.sirenum__CancellationReason__c) = &apos;Facility Booking Error&apos;,
+   text(sirenum__Shift__c.sirenum__CancellationReason__c) = &apos;Facility Boooking Filled Internally&apos;,
+   text(sirenum__Shift__c.sirenum__CancellationReason__c) = &apos;Facility Cancelled Not Required&apos;,
+   text(sirenum__Shift__c.sirenum__CancellationReason__c) = &apos;Facility Pre-bookings Cancelled&apos;,
+   text(sirenum__Shift__c.sirenum__CancellationReason__c) = &apos;Facility Cancelled on Arrival&apos;)),
+   100, 0
+)</calculatedFormula>
+        <dataType>Double</dataType>
+        <developerName>CDF1</developerName>
+        <label>Client Cancellation Rate</label>
+        <scale>2</scale>
+    </customDetailFormulas>
+    <filter>
+        <criteriaItems>
+            <column>sirenum__Shift__c$VMS_Source__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value></value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>sirenum__Shift__c$sirenum__FillRateByCount__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value>100</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>sirenum__Shift__c$Branch_for_reporting__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <aggregateType>Average</aggregateType>
+        <dateGranularity>Day</dateGranularity>
+        <field>sirenum__Shift__c$sirenum__Contract__c.sirenum__Client__c.Name</field>
+        <sortByName>CDF1</sortByName>
+        <sortOrder>Desc</sortOrder>
+        <sortType>Aggregate</sortType>
+    </groupingsDown>
+    <name>1_Monthly Shift Cancellation Rate</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Shifts_Custom__c</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>sirenum__Shift__c$sirenum__Scheduled_Local_Start_Date__c</dateColumn>
+        <interval>INTERVAL_LASTMONTH</interval>
+    </timeFrameFilter>
+</Report>

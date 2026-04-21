@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Connect User to an SMS Cost Center --></help>
+    <label><!-- SMS Cost Center --></label>
+    <name>SMS_Cost_Center__c</name>
+    <picklistValues>
+        <masterLabel>Adelaide Nursing Allocations</masterLabel>
+        <translation><!-- Adelaide Nursing Allocations --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Adelaide Nursing General</masterLabel>
+        <translation><!-- Adelaide Nursing General --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Brisbane Nursing Allocations</masterLabel>
+        <translation><!-- Brisbane Nursing Allocations --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Brisbane Nursing General</masterLabel>
+        <translation><!-- Brisbane Nursing General --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Extra Staff Adelaide Allocations</masterLabel>
+        <translation><!-- Extra Staff Adelaide Allocations --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Extra Staff Adelaide General</masterLabel>
+        <translation><!-- Extra Staff Adelaide General --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Extra Staff Albury Allocations</masterLabel>
+        <translation><!-- Extra Staff Albury Allocations --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Extra Staff Albury General</masterLabel>
+        <translation><!-- Extra Staff Albury General --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Perth Nursing Allocations</masterLabel>
+        <translation><!-- Perth Nursing Allocations --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Perth Nursing General</masterLabel>
+        <translation><!-- Perth Nursing General --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sydney Nursing  Allocations</masterLabel>
+        <translation><!-- Sydney Nursing  Allocations --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sydney Nursing General</masterLabel>
+        <translation><!-- Sydney Nursing General --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

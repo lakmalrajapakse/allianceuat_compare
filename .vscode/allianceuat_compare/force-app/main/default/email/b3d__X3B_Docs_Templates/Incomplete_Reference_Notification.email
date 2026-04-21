@@ -1,0 +1,28 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<p class="MsoNormal"><span style="font-size:12.0pt;line-height:107%">Dear&nbsp;{!Contact.OwnerFullName},<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-size:12.0pt;line-height:107%"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span style="font-size:12.0pt;line-height:107%">A Referee
+has not completed their reference form for&nbsp;{!Contact.Name}.<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-size:12.0pt;line-height:107%"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span style="font-size:12.0pt;line-height:107%">Please click
+on the link below and go to the related Tab &gt; Reference to see the completed
+References.<o:p></o:p></span></p><p class="MsoNormal"><span style="font-size:12.0pt;line-height:107%"><br></span></p>
+
+<p class="MsoNormal"><span style="font-size:12.0pt;line-height:107%">{!Contact.Link}<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-size:12.0pt;line-height:107%"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span style="font-size:12.0pt;line-height:107%"><br></span></p><p class="MsoNormal"><span style="font-size:12.0pt;line-height:107%">Thank you<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-size:12.0pt;line-height:107%"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span style="font-size:12.0pt;line-height:107%">Alliance
+Team<o:p></o:p></span></p><br>]]></td>
+</tr>
+</table>

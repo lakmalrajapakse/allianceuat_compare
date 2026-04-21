@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Specify the Timesheet Entry quantity for the starting range to qualify for Minimum Engagement. Any Timesheet Entries with a quantity below the value will not be considered for Minimum Engagement. --></help>
+    <label><!-- Minimum Hours to Uplift --></label>
+    <name>Minimum_Hours_to_Uplift__c</name>
+</CustomFieldTranslation>

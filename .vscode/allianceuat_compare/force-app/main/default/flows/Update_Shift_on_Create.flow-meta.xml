@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>55.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <environments>Default</environments>
+    <formulas>
+        <name>frm2c9CheckPass</name>
+        <dataType>Boolean</dataType>
+        <expression>IF(
+AND(
+NOT(ISBLANK({!$Record.sirenum__Site__r.sirenum__Timezone__c})),
+NOT(ISBLANK({!$Record.sirenum__Contact__c})),
+NOT(ISBLANK({!$Record.tc9_ext_sirint__Public_Holiday_Calendar__c})),
+{!frmTimeCheck} = true,
+OR(
+AND(
+ISPICKVAL({!$Record.sirenum__Team__r.tc9_ext_sirint__Inherit_Rate_Calculator_Values_From__c}, &quot;Assignment&quot;),
+NOT(ISBLANK({!$Record.Minimum_Pay_Rate__c}))
+),
+ISPICKVAL({!$Record.sirenum__Team__r.tc9_ext_sirint__Inherit_Rate_Calculator_Values_From__c}, &quot;Rate Calculator Template&quot;))
+),true, false)</expression>
+    </formulas>
+    <formulas>
+        <name>frmAssignmentString</name>
+        <dataType>String</dataType>
+        <expression>{!$Record.sirenum__Team__r.Id} + &quot;_&quot; + {!$Record.sirenum__Contact__r.Id} + &quot;_&quot; + {!$Record.Minimum_Pay_Rate__c} + &quot;_&quot; + {!$Record.tc9_ext_sirint__Public_Holiday_Calendar__c}</expression>
+    </formulas>
+    <formulas>
+        <name>frmScheduledJobProcessed</name>
+        <dataType>Boolean</dataType>
+        <expression>IF(
+AND(
+{!frm2c9CheckPass} = TRUE,
+NOT(ISBLANK({!$Record.sirenum__Approved_By_Client__c}))
+),true, false
+)</expression>
+    </formulas>
+    <formulas>
+        <name>frmTimeCheck</name>
+        <dataType>Boolean</dataType>
+        <expression>IF(
+OR(
+AND(
+ISPICKVAL({!$Record.tc9_ext_sirint__Payroll_Time_Type__c}, &quot;Billable&quot;),
+NOT(ISBLANK({!$Record.sirenum__Billable_Start_Time__c})),
+NOT(ISBLANK({!$Record.sirenum__Billable_End_Time__c}))
+),
+AND(
+ISPICKVAL({!$Record.tc9_ext_sirint__Payroll_Time_Type__c}, &quot;Scheduled&quot;),
+NOT(ISBLANK({!$Record.sirenum__Scheduled_Start_Time__c})),
+NOT(ISBLANK({!$Record.sirenum__Scheduled_End_Time__c}))
+),
+AND(
+ISBLANK(TEXT({!$Record.tc9_ext_sirint__Payroll_Time_Type__c})),
+NOT(ISBLANK({!$Record.sirenum__Scheduled_Start_Time__c})),
+NOT(ISBLANK({!$Record.sirenum__Scheduled_End_Time__c}))
+),
+AND(
+ISPICKVAL({!$Record.tc9_ext_sirint__Payroll_Time_Type__c}, &quot;Actual&quot;),
+NOT(ISBLANK({!$Record.sirenum__Actual_Start_Time__c})),
+NOT(ISBLANK({!$Record.sirenum__Actual_End_Time__c}))
+)
+),true,false)</expression>
+    </formulas>
+    <interviewLabel>Update Shift on Create {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Update Shift on Create</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Update_Shift</name>
+        <label>Update Shift</label>
+        <locationX>176</locationX>
+        <locationY>323</locationY>
+        <inputAssignments>
+            <field>tc9_ext_sirint__AssignmentString__c</field>
+            <value>
+                <elementReference>frmAssignmentString</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>tc9_ext_sirint__Public_Holiday_Calendar__c</field>
+            <value>
+                <elementReference>$Record.sirenum__Team__r.tc9_ext_sirint__Public_Holiday_Calendar__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>tc9_ext_sirint__ScheduledJobProcessed__c</field>
+            <value>
+                <elementReference>frmScheduledJobProcessed</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>tc9_ext_sirint__Sent_to_Payroll__c</field>
+            <value>
+                <elementReference>frmScheduledJobProcessed</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Update_Shift</targetReference>
+        </connector>
+        <object>sirenum__Shift__c</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>physical_psychological_condition_that_ma__c</fullName>
+    <defaultValue>false</defaultValue>
+    <inlineHelpText>Are you being treated for any physical/psychological condition that may impact on your ability to do your job effectively?</inlineHelpText>
+    <label>physical/psychological condition that ma</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

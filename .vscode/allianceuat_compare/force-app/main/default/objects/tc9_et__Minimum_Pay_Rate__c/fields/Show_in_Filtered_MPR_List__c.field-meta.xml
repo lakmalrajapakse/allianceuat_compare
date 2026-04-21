@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Show_in_Filtered_MPR_List__c</fullName>
+    <description>ALN-286 Indicates whether this Minimum Pay Rate record should be visible in the Template Group related list. The record will be included if the Pay Code is blank or if it is marked as a Default Pay Rate Pay Code.</description>
+    <formula>ISBLANK( tc9_et__Allowance_Pay_Code__c ) || tc9_et__Allowance_Pay_Code__r.RecordType.DeveloperName &lt;&gt; &quot;Payment&quot; || Default_Pay_Rate_Pay_Code__c = TRUE</formula>
+    <inlineHelpText>Indicates whether this Minimum Pay Rate record should be visible in the Template Group related list. The record will be included if the Pay Code is blank or if it is marked as a Default Pay Rate Pay Code.</inlineHelpText>
+    <label>Show in Filtered MPR List</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>tc9_eau__STP_Address_Line_1__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Business Address Line 1 of source payer for inclusion in STP communication</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Business Address Line 1 of source payer for inclusion in STP communication</inlineHelpText>
+    <label>STP Address Line 1</label>
+    <length>38</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

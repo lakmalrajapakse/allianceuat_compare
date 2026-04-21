@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Are you being treated for any physical/psychological condition that may impact on your ability to do your job effectively? --></help>
+    <label><!-- physical/psychological condition that ma --></label>
+    <name>physical_psychological_condition_that_ma__c</name>
+</CustomFieldTranslation>

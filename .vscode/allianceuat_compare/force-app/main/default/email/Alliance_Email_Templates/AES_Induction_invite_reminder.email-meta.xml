@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>AES - Induction invite reminder</name>
+    <style>none</style>
+    <subject>Time to book your Alliance Extra Staff Induction Session</subject>
+    <textOnly>REMINDER: BOOK YOUR INDUCTION SESSION.
+
+Hi {!Candidate.FirstName},
+
+Your first shift is just around the corner! This is a gentle reminder to book your Alliance Extra Staff Induction. Start by selecting a day and time that suits you:
+
+BOOK MY INDUCTION
+
+If you come to one of our offices, you will leave with your new Alliance Extra Staff uniform, ID badge and your first shift!
+
+We are looking forward to working with you!
+
+Kind regards,
+Your team at Alliance Extra Staff</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

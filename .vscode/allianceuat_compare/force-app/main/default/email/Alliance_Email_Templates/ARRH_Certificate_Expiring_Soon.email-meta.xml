@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>ARRH - Certificate Expiring Soon</name>
+    <style>none</style>
+    <subject>Time to update one of your certificates</subject>
+    <textOnly>TIME TO UPDATE ONE OF YOUR CERTIFICATES.
+
+Hi {!Contact.FirstName},
+
+One of your certificates is about to expire. Please renew the required documentation and follow the link below to your Alliance Portal to upload your evidence of completion..
+
+OPEN MY ALLIANCE PORTAL
+
+If you have any questions, please don&apos;t hesitate to call us on 1300 034 494.
+
+Kind regards,
+Your team at Alliance Rural &amp; Remote Health</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>AES - Screening Pack Reminder</name>
+    <style>none</style>
+    <subject>Reminder to proceed your application with Alliance Extra Staff</subject>
+    <textOnly>REMINDER: TELL US A BIT MORE ABOUT YOU.
+
+Hi {!Contact.FirstName},
+
+In order to match you with shifts and contracts that plays on your skills and experience, we need a few more details from you. Follow the link below to tell us a bit more about you:
+
+OK, LET&apos;S GET STARTED
+
+Once you’ve booked your interview, you’ll receive a confirmation email with all the details. We’ll also send you a reminder before your session. You can also use the link above and click on the calendar to view your bookings at any time.
+
+Before your interview, please complete the screening pack assigned to you in your Alliance Portal.
+
+If you have any questions, please feel free to call our friendly staff on 1300 662 511.
+
+Kind regards,
+Your team at Alliance Extra Staff</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

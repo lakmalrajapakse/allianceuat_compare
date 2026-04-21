@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>tc9_imp__External_Id_it__c</fullName>
+    <caseSensitive>false</caseSensitive>
+    <deprecated>false</deprecated>
+    <description>Defines the unique external system ID of the corresponding record that has been used to create/update the record to hold unique values for integration as part Import Tool process</description>
+    <externalId>true</externalId>
+    <inlineHelpText>Defines the unique external system ID of the corresponding record that has been used to create/update the record to hold unique values for integration as part Import Tool process</inlineHelpText>
+    <label>External ID (it)</label>
+    <length>255</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>true</unique>
+</CustomField>

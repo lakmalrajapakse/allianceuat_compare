@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pay_Batch_Payment_Date__c</fullName>
+    <description>Payment Date of the related Pay Batch</description>
+    <formula>tc9_pr__Pay_Batch__r.tc9_pr__Payment_Date__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Payment Date of the related Pay Batch</inlineHelpText>
+    <label>Pay Batch Payment Date</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

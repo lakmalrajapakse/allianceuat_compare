@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Deduction_Reason__c</fullName>
+    <description>The reason of the Payee Deduction. For wage overpayments, this reason will be shown in the Employee Community when reviewing wage overpayment deductions for approval.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The reason of the Payee Deduction. For wage overpayments, this reason will be shown in the Employee Community when reviewing wage overpayment deductions for approval.</inlineHelpText>
+    <label>Deduction Reason</label>
+    <length>65</length>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

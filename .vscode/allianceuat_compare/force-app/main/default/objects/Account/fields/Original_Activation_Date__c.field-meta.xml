@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Original_Activation_Date__c</fullName>
+    <description>The date the Account record was first set to Active Status</description>
+    <inlineHelpText>The date the Account record was first set to Active Status</inlineHelpText>
+    <label>Original Activation Date</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Date</type>
+</CustomField>

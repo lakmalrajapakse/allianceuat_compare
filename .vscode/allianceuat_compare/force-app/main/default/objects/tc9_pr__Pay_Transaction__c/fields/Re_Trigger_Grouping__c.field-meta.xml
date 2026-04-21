@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Re_Trigger_Grouping__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Used in flow &apos;Pay Transaction On Create&apos; to trigger the custom grouping used in Invoices.</description>
+    <label>Re-Trigger Grouping</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

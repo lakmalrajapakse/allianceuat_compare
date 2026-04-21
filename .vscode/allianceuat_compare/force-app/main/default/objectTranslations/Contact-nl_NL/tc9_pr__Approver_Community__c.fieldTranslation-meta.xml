@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Defines the Approver Community that the Approver will use. This value is used in generating the Approver Link Token --></help>
+    <label><!-- Approver Community --></label>
+    <name>tc9_pr__Approver_Community__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Minimum Pay Rate record related to the Shift. This value is automatically set by system automation. --></help>
+    <label><!-- Minimum Pay Rate --></label>
+    <name>Minimum_Pay_Rate__c</name>
+    <relationshipLabel><!-- Shifts --></relationshipLabel>
+</CustomFieldTranslation>

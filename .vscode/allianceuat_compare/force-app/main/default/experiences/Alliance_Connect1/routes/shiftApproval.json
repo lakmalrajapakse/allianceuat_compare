@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "98aa3712-adde-4b15-927f-f2debf481c01",
+  "appPageId" : "d9ce9f69-0e14-4b11-9233-6c5ce091d546",
+  "configurationTags" : [ ],
+  "devName" : "shiftApproval__c",
+  "id" : "3ddda69f-3f49-4bc0-8e82-35a0be9025df",
+  "label" : "Shift Approval",
+  "pageAccess" : "UseParent",
+  "routeType" : "custom-shift-approval",
+  "type" : "route",
+  "urlPrefix" : "shift-approval"
+}

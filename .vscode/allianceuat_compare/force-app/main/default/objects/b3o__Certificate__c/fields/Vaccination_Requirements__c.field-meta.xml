@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Vaccination_Requirements__c</fullName>
+    <label>Vaccination Requirements</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Annual Influenza</fullName>
+                <default>false</default>
+                <label>Annual Influenza</label>
+            </value>
+            <value>
+                <fullName>Hepatitis B</fullName>
+                <default>false</default>
+                <label>Hepatitis B</label>
+            </value>
+            <value>
+                <fullName>Measles, Mumps, Rubella (MMR)</fullName>
+                <default>false</default>
+                <label>Measles, Mumps, Rubella (MMR)</label>
+            </value>
+            <value>
+                <fullName>Varicella</fullName>
+                <default>false</default>
+                <label>Varicella</label>
+            </value>
+            <value>
+                <fullName>MRSA</fullName>
+                <default>false</default>
+                <label>MRSA</label>
+            </value>
+            <value>
+                <fullName>Hepatitis A</fullName>
+                <default>false</default>
+                <label>Hepatitis A</label>
+            </value>
+            <value>
+                <fullName>Pertussis</fullName>
+                <default>false</default>
+                <label>Pertussis</label>
+            </value>
+            <value>
+                <fullName>Tuberculosis</fullName>
+                <default>false</default>
+                <label>Tuberculosis</label>
+            </value>
+            <value>
+                <fullName>Diphtheria/Tetanus/Pertussis (dTpa)</fullName>
+                <default>false</default>
+                <label>Diphtheria/Tetanus/Pertussis (dTpa)</label>
+            </value>
+            <value>
+                <fullName>COVID x1</fullName>
+                <default>false</default>
+                <label>COVID x1</label>
+            </value>
+            <value>
+                <fullName>COVID x2</fullName>
+                <default>false</default>
+                <label>COVID x2</label>
+            </value>
+            <value>
+                <fullName>COVID Booster</fullName>
+                <default>false</default>
+                <label>COVID Booster</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

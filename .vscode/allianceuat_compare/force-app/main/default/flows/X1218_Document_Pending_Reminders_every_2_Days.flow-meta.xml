@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Reminder_to_Candidate_after_2_Business_Days</name>
+        <label>Reminder to Candidate after 2 Business Days</label>
+        <locationX>50</locationX>
+        <locationY>468</locationY>
+        <actionName>b3o__Document_Assignment__c.AN_Onboarding_pack_reminder</actionName>
+        <actionType>emailAlert</actionType>
+        <connector>
+            <targetReference>Update_Document_Assignment</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>b3o__Document_Assignment__c.AN_Onboarding_pack_reminder</nameSegment>
+        <offset>0</offset>
+    </actionCalls>
+    <actionCalls>
+        <name>Reminder_to_Candidate_after_4_Business_Days</name>
+        <label>Reminder to Candidate after 4 Business Days</label>
+        <locationX>50</locationX>
+        <locationY>876</locationY>
+        <actionName>b3o__Document_Assignment__c.AN_Onboarding_Pack_Update_Request</actionName>
+        <actionType>emailAlert</actionType>
+        <connector>
+            <targetReference>Update_Document_Assignment_0</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>b3o__Document_Assignment__c.AN_Onboarding_Pack_Update_Request</nameSegment>
+        <offset>0</offset>
+    </actionCalls>
+    <actionCalls>
+        <name>Reminder_to_Candidate_after_6_Business_Days</name>
+        <label>Reminder to Candidate after 6 Business Days</label>
+        <locationX>50</locationX>
+        <locationY>1284</locationY>
+        <actionName>b3o__Document_Assignment__c.AN_Onboarding_pack_Final_reminder</actionName>
+        <actionType>emailAlert</actionType>
+        <connector>
+            <targetReference>Update_Document_Assignment_0_0</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>b3o__Document_Assignment__c.AN_Onboarding_pack_Final_reminder</nameSegment>
+        <offset>0</offset>
+    </actionCalls>
+    <apiVersion>62.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <decisions>
+        <name>Candidate_Completed_Document_Pack</name>
+        <label>Candidate Completed Document Pack?</label>
+        <locationX>182</locationX>
+        <locationY>360</locationY>
+        <defaultConnector>
+            <targetReference>Candidate_Completed_Document_Pack_0</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>No_Send_First_Reminder</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>NumberofDaysfromDocumentAssignedDate_Datefield</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <numberValue>3.0</numberValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.b3o__Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>New</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Reminder_Email_Sent__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Initial Documents Assigned</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.b3o__Document_Pack__r.Name</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>Onboarding</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Reminder_to_Candidate_after_2_Business_Days</targetReference>
+            </connector>
+            <label>No, Send First Reminder</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Candidate_Completed_Document_Pack_0</name>
+        <label>Candidate Completed Document Pack?</label>
+        <locationX>182</locationX>
+        <locationY>768</locationY>
+        <defaultConnector>
+            <targetReference>Candidate_Completed_Document_Pack_0_0</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>No_Send_2nd_Reminder</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Reminder_Email_Sent__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>1st Reminder Sent</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>NumberofDaysfromDocumentAssignedDate_Datefield</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <numberValue>5.0</numberValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.b3o__Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>New</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.b3o__Document_Pack__r.Name</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>Onboarding</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Reminder_to_Candidate_after_4_Business_Days</targetReference>
+            </connector>
+            <label>No, Send 2nd Reminder</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Candidate_Completed_Document_Pack_0_0</name>
+        <label>Candidate Completed Document Pack?</label>
+        <locationX>182</locationX>
+        <locationY>1176</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>No_Send_Final_Reminder</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Reminder_Email_Sent__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>2nd Reminder Sent</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>NumberofDaysfromDocumentAssignedDate_Datefield</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <numberValue>7.0</numberValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.b3o__Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>New</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.b3o__Document_Pack__r.Name</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>Onboarding</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Reminder_to_Candidate_after_6_Business_Days</targetReference>
+            </connector>
+            <label>No, Send Final Reminder</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Is_Today_a_Week_Day</name>
+        <label>Is Today a Week Day?</label>
+        <locationX>380</locationX>
+        <locationY>252</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Yes</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>TodayIsaBusinessDay</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Candidate_Completed_Document_Pack</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <description>Sends an Email Reminder to the Candidate every 2 Business Days, if Documents from the Document Packs are still pending.
+Added generic sender email 02/05/2025</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>DocumentAssignedDate_Datefield</name>
+        <dataType>Date</dataType>
+        <expression>DATEVALUE ( {!$Record.Document_Assigned_Date__c} )</expression>
+    </formulas>
+    <formulas>
+        <name>NumberofDaysfromDocumentAssignedDate_Datefield</name>
+        <dataType>Number</dataType>
+        <expression>CASE (
+    MOD ({!DocumentAssignedDate_Datefield}  -  DATE (1985, 6, 24) , 7),
+    0, CASE ( MOD ( TODAY() - {!DocumentAssignedDate_Datefield} , 7), 1, 2, 2, 3, 3, 4, 4, 5, 5, 5, 6, 5, 1 ), 
+    1, CASE(  MOD ( TODAY() - {!DocumentAssignedDate_Datefield} , 7),  1, 2, 2,  3,  3, 4, 4,  4, 5, 4, 6,  5, 1 ),
+    2, CASE(  MOD ( TODAY() - {!DocumentAssignedDate_Datefield} , 7),  1, 2, 2, 3, 3, 3,  4, 3, 5,  4, 6, 5, 1 ),
+    3, CASE (  MOD ( TODAY() - ({!DocumentAssignedDate_Datefield} ), 7),  1, 2, 2,  2, 3, 2, 4, 3, 5,  4,  6, 5, 1 ),
+    4, CASE (  MOD ( TODAY() -  {!DocumentAssignedDate_Datefield} , 7), 1, 1, 2,  1, 3, 2, 4, 3, 5, 4, 6, 5, 1 ),
+    5, CASE (  MOD ( TODAY() - {!DocumentAssignedDate_Datefield} , 7), 1, 0, 2, 1, 3, 2, 4,  3, 5, 4, 6,  5, 0  ),
+    6, CASE ( MOD ( TODAY() - {!DocumentAssignedDate_Datefield} , 7), 1, 1, 2,  2, 3,  3, 4,  4, 5, 5, 6, 5, 0 ),
+    999
+) + 
+(FLOOR((TODAY() - {!DocumentAssignedDate_Datefield} ) / 7) * 5)</expression>
+        <scale>0</scale>
+    </formulas>
+    <formulas>
+        <name>TodayIsaBusinessDay</name>
+        <dataType>Boolean</dataType>
+        <expression>WEEKDAY({!$Flow.CurrentDate}) &gt;= 2 
+&amp;&amp; WEEKDAY({!$Flow.CurrentDate}) &lt;= 6</expression>
+    </formulas>
+    <interviewLabel>1218 - Send Reminders every 2 Business Days {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>1218 - Document Pending Reminders every 2 Days</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Update_Document_Assignment</name>
+        <label>Update Document Assignment</label>
+        <locationX>50</locationX>
+        <locationY>576</locationY>
+        <connector>
+            <targetReference>Candidate_Completed_Document_Pack_0</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Reminder_Email_Sent__c</field>
+            <value>
+                <stringValue>1st Reminder Sent</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Document_Assignment_0</name>
+        <label>Update Document Assignment</label>
+        <locationX>50</locationX>
+        <locationY>984</locationY>
+        <connector>
+            <targetReference>Candidate_Completed_Document_Pack_0_0</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Reminder_Email_Sent__c</field>
+            <value>
+                <stringValue>2nd Reminder Sent</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Document_Assignment_0_0</name>
+        <label>Update Document Assignment</label>
+        <locationX>50</locationX>
+        <locationY>1392</locationY>
+        <inputAssignments>
+            <field>Reminder_Email_Sent__c</field>
+            <value>
+                <stringValue>Final Reminder Sent</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>254</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Is_Today_a_Week_Day</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Complete__c</field>
+            <operator>LessThan</operator>
+            <value>
+                <numberValue>100.0</numberValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Document_Assigned_Date__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <object>b3o__Document_Assignment__c</object>
+        <schedule>
+            <frequency>Daily</frequency>
+            <startDate>2025-02-12</startDate>
+            <startTime>04:00:00.000Z</startTime>
+        </schedule>
+        <triggerType>Scheduled</triggerType>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>DocumentAssignmentsList</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <objectType>b3o__Document_Assignment__c</objectType>
+    </variables>
+    <variables>
+        <name>DocumentPacksList</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <objectType>b3o__Document_Pack__c</objectType>
+    </variables>
+</Flow>

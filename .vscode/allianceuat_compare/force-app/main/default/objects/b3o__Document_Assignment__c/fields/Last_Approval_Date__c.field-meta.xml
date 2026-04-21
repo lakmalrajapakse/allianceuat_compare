@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Last_Approval_Date__c</fullName>
+    <description>The last date when our recruitment consultant approved.
+If the review status is &apos;Finalised - Approved&apos;, this field indicates the date when this document pack has been finalised.</description>
+    <inlineHelpText>The last date when our recruitment consultant approved.
+If the review status is &apos;Finalised - Approved&apos;, this field indicates the date when this document pack has been finalised.</inlineHelpText>
+    <label>Last Approval Date</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

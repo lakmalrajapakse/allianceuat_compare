@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>tc9_et__Expense_Claim_Link_Token_Expiry__c</fullName>
+    <deprecated>false</deprecated>
+    <description>The expiry date for the current Expense Claim Link Token. After this date a new link token must be generated to allow access to the Expense Claim Approver Pages within the Portal</description>
+    <inlineHelpText>The expiry date for the current Expense Claim Link Token</inlineHelpText>
+    <label>Expense Claim Link Token Expiry</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>DateTime</type>
+</CustomField>

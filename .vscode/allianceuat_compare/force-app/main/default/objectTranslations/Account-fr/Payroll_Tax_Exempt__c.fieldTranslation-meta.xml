@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Payroll Tax Exempt? --></label>
+    <name>Payroll_Tax_Exempt__c</name>
+    <picklistValues>
+        <masterLabel>No</masterLabel>
+        <translation><!-- No --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Yes - Workcover Only</masterLabel>
+        <translation><!-- Yes - Workcover Only --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

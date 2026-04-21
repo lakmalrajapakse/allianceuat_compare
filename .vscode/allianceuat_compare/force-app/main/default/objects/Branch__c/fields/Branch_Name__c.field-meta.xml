@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Branch_Name__c</fullName>
+    <description>Name of the branch.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Name of the branch.</inlineHelpText>
+    <label>Branch Name</label>
+    <length>80</length>
+    <required>true</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

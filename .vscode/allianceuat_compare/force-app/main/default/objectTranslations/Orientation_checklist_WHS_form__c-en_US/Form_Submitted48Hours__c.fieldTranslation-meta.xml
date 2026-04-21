@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- This form has been completed and submited to Alliance Rural &amp; Remote Health within 48 hours of commencing at the facility. --></help>
+    <label><!-- Form Submitted48Hours --></label>
+    <name>Form_Submitted48Hours__c</name>
+</CustomFieldTranslation>

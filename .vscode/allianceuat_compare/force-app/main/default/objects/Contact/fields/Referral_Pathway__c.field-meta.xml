@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Referral_Pathway__c</fullName>
+    <label>Referral Pathway</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>AN Website</fullName>
+                <default>false</default>
+                <label>AN Website</label>
+            </value>
+            <value>
+                <fullName>Clan Na Gael</fullName>
+                <default>false</default>
+                <label>Clan Na Gael</label>
+            </value>
+            <value>
+                <fullName>Cork Seminar</fullName>
+                <default>false</default>
+                <label>Cork Seminar</label>
+            </value>
+            <value>
+                <fullName>Dublin seminar</fullName>
+                <default>false</default>
+                <label>Dublin seminar</label>
+            </value>
+            <value>
+                <fullName>DUL Expo</fullName>
+                <default>false</default>
+                <label>DUL Expo</label>
+            </value>
+            <value>
+                <fullName>E-Guide</fullName>
+                <default>false</default>
+                <label>E-Guide</label>
+            </value>
+            <value>
+                <fullName>Email/EDM</fullName>
+                <default>false</default>
+                <label>Email/EDM</label>
+            </value>
+            <value>
+                <fullName>Facebook</fullName>
+                <default>false</default>
+                <label>Facebook</label>
+            </value>
+            <value>
+                <fullName>Galway Seminar</fullName>
+                <default>false</default>
+                <label>Galway Seminar</label>
+            </value>
+            <value>
+                <fullName>Glasgow Event 2024</fullName>
+                <default>false</default>
+                <label>Glasgow Event 2024</label>
+            </value>
+            <value>
+                <fullName>Google</fullName>
+                <default>false</default>
+                <label>Google</label>
+            </value>
+            <value>
+                <fullName>Indeed</fullName>
+                <default>false</default>
+                <label>Indeed</label>
+            </value>
+            <value>
+                <fullName>Influencer</fullName>
+                <default>false</default>
+                <label>Influencer</label>
+            </value>
+            <value>
+                <fullName>Instagram</fullName>
+                <default>false</default>
+                <label>Instagram</label>
+            </value>
+            <value>
+                <fullName>Limerick Seminar</fullName>
+                <default>false</default>
+                <label>Limerick Seminar</label>
+            </value>
+            <value>
+                <fullName>Linkedln</fullName>
+                <default>false</default>
+                <label>Linkedln</label>
+            </value>
+            <value>
+                <fullName>Liverpool Event 2023</fullName>
+                <default>false</default>
+                <label>Liverpool Event 2023</label>
+            </value>
+            <value>
+                <fullName>Manchester Event 2026</fullName>
+                <default>false</default>
+                <label>Manchester Event 2026</label>
+            </value>
+            <value>
+                <fullName>Partner Referral</fullName>
+                <default>false</default>
+                <label>Partner Referral</label>
+            </value>
+            <value>
+                <fullName>Podcast</fullName>
+                <default>false</default>
+                <label>Podcast</label>
+            </value>
+            <value>
+                <fullName>Pre RDB</fullName>
+                <default>false</default>
+                <label>Pre RDB</label>
+            </value>
+            <value>
+                <fullName>Quiz</fullName>
+                <default>false</default>
+                <label>Quiz</label>
+            </value>
+            <value>
+                <fullName>Seminar - pre location definition</fullName>
+                <default>false</default>
+                <label>Seminar - pre location definition</label>
+            </value>
+            <value>
+                <fullName>University Lead</fullName>
+                <default>false</default>
+                <label>University Lead</label>
+            </value>
+            <value>
+                <fullName>Web Enquiry (old attribute)</fullName>
+                <default>false</default>
+                <label>Web Enquiry (old attribute)</label>
+            </value>
+            <value>
+                <fullName>Word of mouth</fullName>
+                <default>false</default>
+                <label>Word of mouth</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

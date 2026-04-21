@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Interpretation_Template_Group__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <inlineHelpText>The Interpretation Template Group this competency relates to.</inlineHelpText>
+    <label>Interpretation Template Group</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>tc9_pr__Template_Group__c.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Interpretation Rules</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>tc9_pr__Template_Group__c</referenceTo>
+    <relationshipLabel>Competencies</relationshipLabel>
+    <relationshipName>Competencies</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

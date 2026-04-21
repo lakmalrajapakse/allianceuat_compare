@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AuthProvider xmlns="http://soap.sforce.com/2006/04/metadata">
+    <authorizeUrl>https://allianceaustralia.my.salesforce-sites.com/services/oauth2/authorize</authorizeUrl>
+    <consumerKey>3MVG9QJ.PEcCek9Z._Jl6zfy_UKAmbcBoXBlSf2AVFEcYgYT2tx.tCKW2ulOLyyH7xSkfJyj8Iu8XYyttwu7U</consumerKey>
+    <consumerSecret>Placeholder_Value</consumerSecret>
+    <defaultScopes>refresh_token full</defaultScopes>
+    <friendlyName>This Org</friendlyName>
+    <includeOrgIdInIdentifier>true</includeOrgIdInIdentifier>
+    <isPkceEnabled>true</isPkceEnabled>
+    <providerType>Salesforce</providerType>
+    <requireMfa>false</requireMfa>
+    <sendAccessTokenInHeader>false</sendAccessTokenInHeader>
+    <sendClientCredentialsInHeader>false</sendClientCredentialsInHeader>
+    <sendSecretInApis>true</sendSecretInApis>
+    <tokenUrl>https://allianceaustralia.my.salesforce-sites.com/services/oauth2/token</tokenUrl>
+</AuthProvider>

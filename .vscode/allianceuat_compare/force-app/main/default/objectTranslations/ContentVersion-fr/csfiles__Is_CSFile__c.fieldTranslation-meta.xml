@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Identifies whether this File is a CloudSands File --></help>
+    <label><!-- Is CSFile --></label>
+    <name>csfiles__Is_CSFile__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>TR1__Notify_On_Resume_Uploaded_Successfully</fullName>
+        <description>Notify Resume Parsed Successfully</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>TR1__Talent_Rover_Email_Templates/TR1__Successful_Resume_Upload</template>
+    </alerts>
+    <alerts>
+        <fullName>X1218_Submit_Your_Documents</fullName>
+        <description>1218 - Submit Your Documents</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Email</field>
+            <type>email</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Alliance_Email_Templates/X1218_Submit_your_Documents</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>TR1__Reset_LinekdIn_Integration</fullName>
+        <field>TR1__LinkedIn_Integration__c</field>
+        <literalValue>0</literalValue>
+        <name>Reset LinekdIn Integration</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>TR1__UpdateConsentCheck</fullName>
+        <field>TR1__IsConsentEmailTobeSend__c</field>
+        <literalValue>1</literalValue>
+        <name>UpdateConsentCheck</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>sirenum__Update_Manual_NI_Entry_to_False</fullName>
+        <field>sirenum__Manual_NIC__c</field>
+        <literalValue>0</literalValue>
+        <name>Update Invalid NI Entry to False</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>sirenum__Update_Manual_NI_Entry_to_True</fullName>
+        <field>sirenum__Manual_NIC__c</field>
+        <literalValue>1</literalValue>
+        <name>Update Invalid NI Entry to True</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <outboundMessages>
+        <fullName>TR1__syncContact</fullName>
+        <apiVersion>37.0</apiVersion>
+        <endpointUrl>https://do-not-use.com</endpointUrl>
+        <fields>CreatedDate</fields>
+        <fields>Email</fields>
+        <fields>FirstName</fields>
+        <fields>Id</fields>
+        <fields>LastActivityDate</fields>
+        <fields>LastName</fields>
+        <fields>OtherCity</fields>
+        <fields>OtherCountry</fields>
+        <fields>OtherPostalCode</fields>
+        <fields>OwnerId</fields>
+        <fields>TR1__Additional_Background__c</fields>
+        <fields>TR1__Call_List_IDs__c</fields>
+        <fields>TR1__Candidate_Status__c</fields>
+        <fields>TR1__Client_Status__c</fields>
+        <fields>TR1__Cross_Functional_Background__c</fields>
+        <fields>TR1__Desired_Hourly__c</fields>
+        <fields>TR1__Desired_Salary__c</fields>
+        <fields>TR1__Experience_Level__c</fields>
+        <fields>TR1__External_Candidate_Id__c</fields>
+        <fields>TR1__Function__c</fields>
+        <fields>TR1__Language__c</fields>
+        <fields>TR1__Primary_Background__c</fields>
+        <fields>TR1__Regional_Area__c</fields>
+        <fields>TR1__Secondary_Background__c</fields>
+        <fields>TR1__Skills__c</fields>
+        <fields>TR1__State_Area__c</fields>
+        <includeSessionId>false</includeSessionId>
+        <integrationUser>alliance@bullhorn.com</integrationUser>
+        <name>syncContact</name>
+        <protected>false</protected>
+        <useDeadLetterQueue>false</useDeadLetterQueue>
+    </outboundMessages>
+    <rules>
+        <fullName>TR1__GDPRConsentFiltersForNewContact</fullName>
+        <actions>
+            <name>TR1__UpdateConsentCheck</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <booleanFilter>1 OR 2</booleanFilter>
+        <criteriaItems>
+            <field>Contact.MailingCountry</field>
+            <operation>contains</operation>
+            <value>USA</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Contact.MailingState</field>
+            <operation>contains</operation>
+            <value>Newyork</value>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>TR1__Reset LinekdIn Integration Flag</fullName>
+        <actions>
+            <name>TR1__Reset_LinekdIn_Integration</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Contact.TR1__LinkedIn_Integration__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>TR1__Successful File Sync Upload</fullName>
+        <actions>
+            <name>TR1__Notify_On_Resume_Uploaded_Successfully</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <description>Emails User when Parsing Successful</description>
+        <formula>AND(ISCHANGED( TR1__Last_Mass_Resume_Upload__c ),$Setup.TR1__MassResumeProcessor__c.TR1__Email_Notifications_on_Upload_Success__c )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>TR1__syncContact</fullName>
+        <active>false</active>
+        <formula>AND( !ISCHANGED(TR1__SMWS_Date_Time__c),  OR(  !ISBLANK(TR1__External_Candidate_Id__c),  !ISBLANK( TR1__Batch_ID__c)  )  ,  OR(  TR1__SMWS_Status_Code__c=&apos;Queued&apos;,   ISCHANGED(TR1__Function__c),  ISCHANGED(TR1__Primary_Background__c),  ISCHANGED(FirstName),  ISCHANGED(LastActivityDate),  ISCHANGED(LastName),  ISCHANGED(OtherCity),  ISCHANGED(OtherCountry),  ISCHANGED(OtherPostalCode),  ISCHANGED(OwnerId),  ISCHANGED(TR1__Additional_Background__c),  ISCHANGED(TR1__Call_List_IDs__c),  ISCHANGED(TR1__Candidate_Status__c),  ISCHANGED(TR1__Client_Status__c),  ISCHANGED(TR1__Cross_Functional_Background__c),  ISCHANGED(TR1__Desired_Hourly__c),  ISCHANGED(TR1__Desired_Salary__c),  ISCHANGED(TR1__Experience_Level__c),  ISCHANGED(TR1__Language__c),  ISCHANGED(TR1__Regional_Area__c),  ISCHANGED(TR1__Secondary_Background__c),  ISCHANGED(TR1__Skills__c),  ISCHANGED(TR1__State_Area__c)  )  )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>sirenum__Correct Employee Valid National Insurance Number</fullName>
+        <actions>
+            <name>sirenum__Update_Manual_NI_Entry_to_False</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <description>This rule Unchecks the &quot;Manual NI Entry&quot; in the case where the NI is compliant</description>
+        <formula>ISCHANGED(sirenum__National_Insurance__c) &amp;&amp; (ISBLANK(sirenum__National_Insurance__c) || REGEX(sirenum__National_Insurance__c ,&quot;[A-CEGHJ-NOPR-TW-Z]{2}[0-9]{6}[ABCD]?&quot;))</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>sirenum__Incorrect Employee Valid National Insurance Number</fullName>
+        <actions>
+            <name>sirenum__Update_Manual_NI_Entry_to_True</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <description>This rule Checks the &quot;Invalid NI&quot; in the case where the NI is non-compliant</description>
+        <formula>ISCHANGED(sirenum__National_Insurance__c) &amp;&amp;  NOT(ISBLANK(sirenum__National_Insurance__c)) &amp;&amp;  NOT(REGEX(sirenum__National_Insurance__c ,&quot;[A-CEGHJ-NOPR-TW-Z]{2}[0-9]{6}[ABCD]?&quot;))</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+</Workflow>

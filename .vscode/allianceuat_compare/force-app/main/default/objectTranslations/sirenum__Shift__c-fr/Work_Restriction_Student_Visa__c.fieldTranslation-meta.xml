@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- This field compares the Scheduled Start Date and the assigned candidate&apos;s study break dates, and tells whether the work restriction is applied or not. --></help>
+    <label><!-- Work Restriction - Student Visa --></label>
+    <name>Work_Restriction_Student_Visa__c</name>
+</CustomFieldTranslation>

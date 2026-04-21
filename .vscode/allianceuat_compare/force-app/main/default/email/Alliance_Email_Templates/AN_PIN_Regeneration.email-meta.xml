@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email to shift approval manager when requested new PIN code</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>AN - PIN Regeneration</name>
+    <style>none</style>
+    <subject>Your new shift approval PIN</subject>
+    <textOnly>YOUR NEW ALLIANCE NURSING SHIFT APPROVAL PIN CODE.
+
+Hi {!Contact.FirstName},
+
+You&apos;ve requested a new Shift Approval PIN.
+
+Here’s your updated code:
+
+{!Contact.Shift_Approval_PIN_Number__c}
+
+To approve timesheets, enter your PIN and signature in the Alliance Connect app.
+
+If you have any questions, feel free to reach out to us at 1300 034 494 — we’re here to help!
+
+Kind regards,
+Your team at Alliance Nursing</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

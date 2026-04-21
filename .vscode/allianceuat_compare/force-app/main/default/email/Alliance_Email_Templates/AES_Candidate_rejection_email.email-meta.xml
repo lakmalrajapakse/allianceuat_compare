@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>AES - Candidate rejection email</name>
+    <style>none</style>
+    <subject>Update on your application with Alliance Extra Staff</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+Thank you for taking the time to apply with Alliance Extra Staff. We regret to inform you that we won’t be moving forward with your application at this time.
+
+If you have any questions, please feel free to call our friendly staff on 1300 662 511.
+
+Kind regards,
+Your team at Alliance Extra Staff</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

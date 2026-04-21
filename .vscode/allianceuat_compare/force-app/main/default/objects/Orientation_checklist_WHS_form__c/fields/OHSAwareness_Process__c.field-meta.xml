@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OHSAwareness_Process__c</fullName>
+    <description>How are workers made aware of OH&amp;S issues/responsibilities? Is this documented in procedures?</description>
+    <externalId>false</externalId>
+    <inlineHelpText>How are workers made aware of OH&amp;S issues/responsibilities? Is this documented in procedures?</inlineHelpText>
+    <label>OHSAwareness Process</label>
+    <length>255</length>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

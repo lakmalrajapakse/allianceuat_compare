@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- The sum total of all related Invoice Items with a record type of Project Services Fee --></help>
+    <label><!-- Total Project Services Fee Invoiced --></label>
+    <name>tc9_et__Total_Project_Services_Fee_Invoiced__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reversed_From_Timesheet__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <label>Reversed From Timesheet</label>
+    <referenceTo>tc9_et__Timesheet__c</referenceTo>
+    <relationshipLabel>Pay Transactions (Reversed From Timesheet)</relationshipLabel>
+    <relationshipName>Pay_Transactions</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

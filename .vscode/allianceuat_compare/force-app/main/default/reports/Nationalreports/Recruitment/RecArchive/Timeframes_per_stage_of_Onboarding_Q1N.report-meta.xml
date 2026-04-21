@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Account.TR1__Jobs__r.TR1__Application1__r$TR1__Stage__c</field>
+    </columns>
+    <columns>
+        <field>Account.TR1__Jobs__r.TR1__Application1__r$LastModifiedDate</field>
+    </columns>
+    <columns>
+        <field>Account.TR1__Jobs__r$Name</field>
+    </columns>
+    <columns>
+        <field>Account$Name</field>
+    </columns>
+    <columns>
+        <field>Account.TR1__Jobs__r.TR1__Application1__r$Name</field>
+    </columns>
+    <columns>
+        <field>Account.TR1__Jobs__r.TR1__Application1__r$LastModifiedBy</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Account.TR1__Jobs__r.TR1__Application1__r$TR1__Reject__c</field>
+    </columns>
+    <description>Timeframes per stage of Onboarding</description>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Account$Branch_Name__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Account.TR1__Jobs__r.TR1__Application1__r$TR1__Applicant__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Timeframes per stage of Onboarding</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Accounts_with_jobs_and_applications__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>false</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Account$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

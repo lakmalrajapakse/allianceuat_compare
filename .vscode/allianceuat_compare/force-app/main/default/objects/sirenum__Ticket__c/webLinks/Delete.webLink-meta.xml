@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Delete</fullName>
+    <availability>online</availability>
+    <description>Delete Selected</description>
+    <displayType>massActionButton</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Delete</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <requireRowSelection>true</requireRowSelection>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/57.0/connection.js&quot;)}
+
+var ids = {!GETRECORDIDS($ObjectType.sirenum__Ticket__c)};
+
+if (!ids || ids.length === 0) {
+  alert(&apos;Please select at least one Ticket.&apos;);
+} else {
+  if (confirm(&apos;Delete &apos; + ids.length + &apos; selected Ticket record(s)? This cannot be undone.&apos;)) {
+    try {
+      // Bulk delete; returns an array of SaveResult
+      var results = sforce.connection.deleteIds(ids);
+      var errors = [];
+      for (var i = 0; i &lt; results.length; i++) {
+        if (!results[i].success) {
+          errors.push(&apos;Row &apos; + (i+1) + &apos;: &apos; + results[i].errors[0].message);
+        }
+      }
+      if (errors.length &gt; 0) {
+        alert(&apos;Some Tickets were not deleted:\n&apos; + errors.join(&apos;\n&apos;));
+      }
+      // Refresh the list view after delete
+      window.location.reload();
+    } catch (e) {
+      alert(&apos;Unexpected error: &apos; + (e &amp;&amp; e.message ? e.message : e));
+    }
+  }
+}</url>
+</WebLink>

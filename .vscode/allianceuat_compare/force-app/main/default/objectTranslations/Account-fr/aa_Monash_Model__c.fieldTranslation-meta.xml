@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Monash Model --></label>
+    <name>aa_Monash_Model__c</name>
+    <picklistValues>
+        <masterLabel>MM1</masterLabel>
+        <translation><!-- MM1 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MM2</masterLabel>
+        <translation><!-- MM2 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MM3</masterLabel>
+        <translation><!-- MM3 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MM4</masterLabel>
+        <translation><!-- MM4 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MM5</masterLabel>
+        <translation><!-- MM5 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MM6</masterLabel>
+        <translation><!-- MM6 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MM7</masterLabel>
+        <translation><!-- MM7 --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

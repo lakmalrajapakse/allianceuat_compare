@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>64.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <decisions>
+        <name>Check_Before_Notification_Contact_and_Shift_are_Linked</name>
+        <label>Check Before Notification Contact and Shift are Linked ?</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Yes</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.sirenum__Shift__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.sirenum__Contact__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Create_Push_Notification</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <interviewLabel>1218 - Connect App Push Notification for New Job Offer. {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>1218 - Connect App Push Notification for New Job Offer.</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <name>Create_Push_Notification</name>
+        <label>Create Push Notification.</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputAssignments>
+            <field>sirenum__Message__c</field>
+            <value>
+                <stringValue>A new job offer has been added to your account. Tap to view the details.</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>sirenum__Title__c</field>
+            <value>
+                <stringValue>You’ve got a new job offer!</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>sirenum__WhatId__c</field>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>sirenum__WhoId__c</field>
+            <value>
+                <elementReference>$Record.sirenum__Contact__r.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <object>sirenum__PushNotificationEvent__e</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Check_Before_Notification_Contact_and_Shift_are_Linked</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>sirenum__Status__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Broadcasting</stringValue>
+            </value>
+        </filters>
+        <object>sirenum__Shift_Invitation__c</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

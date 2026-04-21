@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SamlSsoConfig xmlns="http://soap.sforce.com/2006/04/metadata">
+    <identityLocation>SubjectNameId</identityLocation>
+    <identityMapping>Username</identityMapping>
+    <issuer>exk1bpetdiiAVI3Fw0x8</issuer>
+    <loginUrl>https://talentrover.okta.com/app/salesforce/exk1bpetdiiAVI3Fw0x8/sso/saml</loginUrl>
+    <name>Talent Rover Administrator</name>
+    <oauthTokenEndpoint>https://allianceaustralia--uat.sandbox.my.salesforce.com/services/oauth2/token</oauthTokenEndpoint>
+    <redirectBinding>false</redirectBinding>
+    <requestSignatureMethod>1</requestSignatureMethod>
+    <requestSigningCertId>0P1QE000000OiKr</requestSigningCertId>
+    <salesforceLoginUrl>https://allianceaustralia--uat.sandbox.my.salesforce.com</salesforceLoginUrl>
+    <samlEntityId>https://allianceaustralia.my.salesforce.com</samlEntityId>
+    <samlVersion>SAML2_0</samlVersion>
+    <useConfigRequestMethod>true</useConfigRequestMethod>
+    <useSameDigestAlgoForSigning>true</useSameDigestAlgoForSigning>
+    <userProvisioning>false</userProvisioning>
+    <validationCert>MIIDpjCCAo6gAwIBAgIGAZeNP2yaMA0GCSqGSIb3DQEBCwUAMIGTMQswCQYDVQQGEwJVUzETMBEGA1UECAwKQ2FsaWZvcm5pYTEWMBQGA1UEBwwNU2FuIEZyYW5jaXNjbzENMAsGA1UECgwET2t0YTEUMBIGA1UECwwLU1NPUHJvdmlkZXIxFDASBgNVBAMMC3RhbGVudHJvdmVyMRwwGgYJKoZIhvcNAQkBFg1pbmZvQG9rdGEuY29tMB4XDTI1MDYyMDEyMDkzM1oXDTM1MDYyMDEyMTAzM1owgZMxCzAJBgNVBAYTAlVTMRMwEQYDVQQIDApDYWxpZm9ybmlhMRYwFAYDVQQHDA1TYW4gRnJhbmNpc2NvMQ0wCwYDVQQKDARPa3RhMRQwEgYDVQQLDAtTU09Qcm92aWRlcjEUMBIGA1UEAwwLdGFsZW50cm92ZXIxHDAaBgkqhkiG9w0BCQEWDWluZm9Ab2t0YS5jb20wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDBCGLSLGi6VPKWaHFdSJZt577hySCXo9WJvpoCCRehh4VS+4NytoaZCPXoj3MoHVb8ks30eF9AC60src8yoEnVGmtVJa6tjsWlxGF0tslh3Je3tcaglSkQIEzW4hybWmyozaApmZFwRh/FCJ+aV0MfwVWPEynRk8BGJQlYBsk8eHXHUZis8mCq8oXPcj8xAF22ADrwuJtZLqwI0ckWngzfyYk1pT3U26fivAzGM10kwFDkR/XaINRSCl71wTKVUIZBpcsa1kuImHFA8U6+DExVfCzP6AzGuCBa5kG/NWSFd7NURwNMQijLUKHy1iWuEH4EviU4+lM+sgUNEead8m4HAgMBAAEwDQYJKoZIhvcNAQELBQADggEBAAG1nPJW2jYQfD9wxS9RqSt5ibh4V2pFeFK6m8fHIZiwumXL/soz8/jLy3hzg1HCz/TDZitdl0OqbF9cnksAWbXRPPWqgpc84MnBSUUXns279oYMAzVSmq7Fg3j8WgVkqVXDqd4FVfKxTwf9bRvPS/jDZsboTE+GEviD0x5uAttqTZr1XKg7qDynduknI4PkUzXst28ImZsv7DGuGwyTrFyIkIDfFBxV8RD2/JTvP1YknrT1VkYzgtrIC3id5Whxtdr7Ce+hADQCPaznaqVf5zUzz3iVRBdh+6vt62qa9K6roULaSus02Qr4OTh1n8A9jDvlc7NbFH8B3/mlEqxc+1w=</validationCert>
+</SamlSsoConfig>

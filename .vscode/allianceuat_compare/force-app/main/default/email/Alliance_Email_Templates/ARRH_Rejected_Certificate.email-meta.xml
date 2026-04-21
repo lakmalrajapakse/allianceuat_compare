@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>ARRH - Rejected Certificate</name>
+    <style>none</style>
+    <subject>You need to update one of your documents</subject>
+    <textOnly>Hi {!Contact.FirstName} ,
+
+The {!b3o__Certificate__c.b3o__Certificate_Type__c} certificate has been rejected due to {!b3o__Certificate__c.Rejection_Reason__c}.
+
+Please follow the link below to upload a new certificate and proceed with your application.
+
+UPLOAD A NEW CERTIFICATE
+
+If you have any questions, feel free to give us a call on 07 4998 5550— we&apos;re always happy to help.
+
+Kind regards,
+Your team at Alliance Rural &amp; Remote Health</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

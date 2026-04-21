@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Integration_Pending</fullName>
+    <columns>NAME</columns>
+    <columns>sirenum__Contact__c</columns>
+    <columns>sirenum__Scheduled_Start_Time__c</columns>
+    <columns>sirenum__Scheduled_End_Time__c</columns>
+    <columns>sirenum__Site__c</columns>
+    <columns>RECORDTYPE</columns>
+    <columns>tc9_ext_sirint__ScheduledJobProcessed__c</columns>
+    <columns>tc9_ext_sirint__Timesheet__c</columns>
+    <columns>tc9_ext_sirint__Timesheet_Entry__c</columns>
+    <columns>tc9_ext_sirint__Assignment__c</columns>
+    <columns>LAST_UPDATE</columns>
+    <columns>Integration_Error_Checks__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>tc9_ext_sirint__ScheduledJobProcessed__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <label>Integration Pending</label>
+</ListView>

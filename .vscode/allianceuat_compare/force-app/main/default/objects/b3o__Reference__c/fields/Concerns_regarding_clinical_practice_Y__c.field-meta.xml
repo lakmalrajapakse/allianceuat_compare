@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Concerns_regarding_clinical_practice_Y__c</fullName>
+    <inlineHelpText>If yes - Please tell us a bit more</inlineHelpText>
+    <label>Concerns regarding clinical practice - Y</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

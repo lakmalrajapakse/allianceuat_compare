@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>aa_TOB_Current__c</fullName>
+    <defaultValue>false</defaultValue>
+    <inlineHelpText>Based on current date and expiry date</inlineHelpText>
+    <label>TOB Current</label>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

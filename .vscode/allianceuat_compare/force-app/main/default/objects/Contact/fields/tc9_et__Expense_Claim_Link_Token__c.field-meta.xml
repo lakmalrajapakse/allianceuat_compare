@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>tc9_et__Expense_Claim_Link_Token__c</fullName>
+    <deprecated>false</deprecated>
+    <description>The link token used to provide Expense Claim Approvers with access to the Expense Claim Approval pages within the Portal</description>
+    <inlineHelpText>The link token used to provide Expense Claim Approvers with access to the Expense Claim Approval pages within the Portal</inlineHelpText>
+    <label>Expense Claim Link Token</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>TextArea</type>
+</CustomField>

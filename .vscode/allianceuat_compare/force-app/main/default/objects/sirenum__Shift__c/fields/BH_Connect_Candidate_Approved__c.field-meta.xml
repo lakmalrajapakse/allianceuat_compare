@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BH_Connect_Candidate_Approved__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>When the Shift allows Offline Timesheet Approval, this is to confirm the Candidate has confirmed the details of the shift.</description>
+    <label>BH Connect Candidate Approved</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

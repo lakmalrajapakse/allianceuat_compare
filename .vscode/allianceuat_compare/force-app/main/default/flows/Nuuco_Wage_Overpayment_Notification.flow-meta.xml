@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Email_Employee</name>
+        <label>Email Employee</label>
+        <locationX>176</locationX>
+        <locationY>323</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>senderType</name>
+            <value>
+                <stringValue>OrgWideEmailAddress</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>senderAddress</name>
+            <value>
+                <stringValue>delivery@nuuco.com.au</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <elementReference>ttSubject</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <elementReference>ttBody</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>sendRichBody</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>recipientId</name>
+            <value>
+                <elementReference>$Record.tc9_pr__Employee__c</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>logEmailOnSend</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <nameSegment>emailSimple</nameSegment>
+        <offset>0</offset>
+    </actionCalls>
+    <apiVersion>62.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <description>Sends an email to Employees notifying them of pending wage overpayments.</description>
+    <environments>Default</environments>
+    <interviewLabel>Nuuco - Wage Overpayment Notification {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Nuuco - Wage Overpayment Notification</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Email_Employee</targetReference>
+        </connector>
+        <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+        <filterFormula>AND(
+ISPICKVAL({!$Record.tc9_pr__Status__c}, &quot;On Hold&quot;),
+{!$Record.tc9_pr__Pay_Code__r.Name} = &quot;Overpayment Recovery&quot;
+)</filterFormula>
+        <object>tc9_pr__Payee_Deduction_Record__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <textTemplates>
+        <name>ttBody</name>
+        <isViewedAsPlainText>false</isViewedAsPlainText>
+        <text>&lt;p&gt;Dear {!$Record.tc9_pr__Employee__r.FirstName},&lt;/p&gt;&lt;p&gt;I hope this message finds you well.&lt;/p&gt;&lt;p&gt;We have identified that you were recently overpaid an amount of {!$Record.tc9_pr__Deduction_Rate__c}. &lt;/p&gt;&lt;p&gt;The reason for this overpayment was due to: {!$Record.Deduction_Reason__c}&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;To correct this, we need to process a deduction from your upcoming pay.&lt;/p&gt;&lt;p&gt;To approve the deduction, please follow these steps in your Active App:&lt;/p&gt;&lt;ol&gt;&lt;li&gt;Open the Active App.&lt;/li&gt;&lt;li&gt;Navigate to the Menu and select Payroll Profile.&lt;/li&gt;&lt;li&gt;Click on the Deductions tab.&lt;/li&gt;&lt;li&gt;Locate the Overpayments section and approve the pending deduction.&lt;/li&gt;&lt;/ol&gt;&lt;p&gt;If you have any questions related to this overpayment, please contact our payroll department ASAP.&lt;/p&gt;&lt;p&gt;Thank you for your understanding and prompt attention to this matter.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Kind regards,&lt;/p&gt;&lt;p&gt;Alliance Payroll&lt;/p&gt;</text>
+    </textTemplates>
+    <textTemplates>
+        <name>ttSubject</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>Notice of Overpayment and Approval for Deduction</text>
+    </textTemplates>
+</Flow>

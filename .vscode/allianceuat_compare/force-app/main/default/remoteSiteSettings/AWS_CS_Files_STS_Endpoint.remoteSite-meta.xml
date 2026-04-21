@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RemoteSiteSetting xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>CloudSands Files Salesforce packages’ AWS STS URL. Enables CS Files to get temporary AWS credentials</description>
+    <disableProtocolSecurity>false</disableProtocolSecurity>
+    <isActive>true</isActive>
+    <url>https://sts.ap-southeast-2.amazonaws.com</url>
+</RemoteSiteSetting>

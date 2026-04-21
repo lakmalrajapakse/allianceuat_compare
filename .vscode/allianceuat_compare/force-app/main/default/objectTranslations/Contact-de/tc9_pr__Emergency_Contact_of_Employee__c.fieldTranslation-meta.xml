@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- The employee this emergency contact is related to --></help>
+    <label><!-- Emergency Contact of Employee --></label>
+    <name>tc9_pr__Emergency_Contact_of_Employee__c</name>
+    <relationshipLabel><!-- Emergency Contacts --></relationshipLabel>
+</CustomFieldTranslation>

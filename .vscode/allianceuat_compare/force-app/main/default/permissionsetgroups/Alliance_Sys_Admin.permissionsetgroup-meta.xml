@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Alliance Sys Admin</label>
+    <permissionSets>Branch_Expense_Rules</permissionSets>
+    <permissionSets>Lightning_Emails</permissionSets>
+    <permissionSets>System_Permissions</permissionSets>
+    <permissionSets>TR1__ATSv2</permissionSets>
+    <permissionSets>TR1__Power_Notes_Admin</permissionSets>
+    <permissionSets>WFM_Admin</permissionSets>
+    <permissionSets>b3f__Forms_Admin_User</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

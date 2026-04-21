@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ResourceNumber__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+    NOT(ISBLANK(tc9_et__Employee__r.aa_RDB_Legacy_ID__c)),
+    tc9_et__Employee__r.aa_RDB_Legacy_ID__c,
+    tc9_et__Employee__r.Id
+)</formula>
+    <label>ResourceNumber</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

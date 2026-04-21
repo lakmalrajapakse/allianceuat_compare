@@ -1,0 +1,42 @@
+.grid-container {
+  min-height: 100px;
+  position: relative;
+}
+
+.bold-text {
+  font-weight: bold;
+}
+
+table.fixed {
+  table-layout: fixed;
+}
+
+.centered-text {
+  text-align: center;
+}
+
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+table.fixed tr>td.centered {
+  text-align: center;
+}
+
+table.fixed tr>td.right-align {
+  text-align: right;
+  padding-right: 10px;
+}
+
+table.fixed tr>td.vertical-align {
+  padding-top: 7px;
+}
+
+table.fixed tr > th:nth-of-type(1) {
+  width: 40%;
+}
+
+table.fixed tr > th:nth-of-type(5) {
+  width: 32px;
+}

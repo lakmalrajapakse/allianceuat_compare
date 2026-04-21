@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- What areas are you interested in? --></help>
+    <label><!-- Areas of Interest --></label>
+    <name>Areas_of_Interest__c</name>
+    <picklistValues>
+        <masterLabel>Agency Nursing</masterLabel>
+        <translation><!-- Agency Nursing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Health Hospitality &amp; Support</masterLabel>
+        <translation><!-- Health Hospitality &amp; Support --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Regional, Rural and Remote Nursing</masterLabel>
+        <translation><!-- Regional, Rural and Remote Nursing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Workplace immunisation and health checks</masterLabel>
+        <translation><!-- Workplace immunisation and health checks --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

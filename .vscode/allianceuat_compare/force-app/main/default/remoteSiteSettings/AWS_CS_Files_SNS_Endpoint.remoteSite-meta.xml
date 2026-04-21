@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RemoteSiteSetting xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>CloudSands Files Salesforce packages’ AWS SNS topic endpoint URL. Enables CS Files to make calls out to S3 to perform file transfer via SNS</description>
+    <disableProtocolSecurity>false</disableProtocolSecurity>
+    <isActive>true</isActive>
+    <url>https://sns.ap-southeast-2.amazonaws.com</url>
+</RemoteSiteSetting>

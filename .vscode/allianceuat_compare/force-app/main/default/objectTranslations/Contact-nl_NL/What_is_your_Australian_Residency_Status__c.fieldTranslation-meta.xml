@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- What is your Australian Residency Status --></label>
+    <name>What_is_your_Australian_Residency_Status__c</name>
+    <picklistValues>
+        <masterLabel>Australian Citizen</masterLabel>
+        <translation><!-- Australian Citizen --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>New Zealand Citizen</masterLabel>
+        <translation><!-- New Zealand Citizen --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Non Resident/VISA</masterLabel>
+        <translation><!-- Non Resident/VISA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>None</masterLabel>
+        <translation><!-- None --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Permanent Resident</masterLabel>
+        <translation><!-- Permanent Resident --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

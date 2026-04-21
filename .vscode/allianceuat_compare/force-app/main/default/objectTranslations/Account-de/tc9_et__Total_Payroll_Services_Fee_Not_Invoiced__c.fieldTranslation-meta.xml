@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- The balance of the Total Payroll Services Fee Scheduled less Total Payroll Services Fee Invoiced. Denotes any outstanding scheduled Payroll Services Fee that still needs to be invoiced for the Client --></help>
+    <label><!-- Total Payroll Services Fee Not Invoiced --></label>
+    <name>tc9_et__Total_Payroll_Services_Fee_Not_Invoiced__c</name>
+</CustomFieldTranslation>

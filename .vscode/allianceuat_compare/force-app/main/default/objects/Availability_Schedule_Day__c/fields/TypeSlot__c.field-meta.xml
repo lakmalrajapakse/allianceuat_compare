@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TypeSlot__c</fullName>
+    <label>Type</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>AM - Available</fullName>
+                <default>false</default>
+                <label>AM - Available</label>
+            </value>
+            <value>
+                <fullName>AM - Unavailable</fullName>
+                <default>false</default>
+                <label>AM - Unavailable</label>
+            </value>
+            <value>
+                <fullName>PM - Available</fullName>
+                <default>false</default>
+                <label>PM - Available</label>
+            </value>
+            <value>
+                <fullName>PM - Unavailable</fullName>
+                <default>false</default>
+                <label>PM - Unavailable</label>
+            </value>
+            <value>
+                <fullName>ND - Available</fullName>
+                <default>false</default>
+                <label>ND - Available</label>
+            </value>
+            <value>
+                <fullName>ND - Unavailable</fullName>
+                <default>false</default>
+                <label>ND - Unavailable</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

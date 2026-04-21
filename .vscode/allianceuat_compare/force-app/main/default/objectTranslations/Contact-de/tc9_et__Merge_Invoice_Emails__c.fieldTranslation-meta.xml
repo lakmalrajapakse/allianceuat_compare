@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Indicates if Invoices to be emailed to the Contact should be included in a single email (where invoice size permits). If unchecked each invoice will be sent as a separate email --></help>
+    <label><!-- Merge Invoice Emails --></label>
+    <name>tc9_et__Merge_Invoice_Emails__c</name>
+</CustomFieldTranslation>

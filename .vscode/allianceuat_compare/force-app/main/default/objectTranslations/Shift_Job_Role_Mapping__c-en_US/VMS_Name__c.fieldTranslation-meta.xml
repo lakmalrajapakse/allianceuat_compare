@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- VMS Name --></label>
+    <name>VMS_Name__c</name>
+    <picklistValues>
+        <masterLabel>Emprevo</masterLabel>
+        <translation><!-- Emprevo --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ShiftMatch</masterLabel>
+        <translation><!-- ShiftMatch --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>StaffCentral</masterLabel>
+        <translation><!-- StaffCentral --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

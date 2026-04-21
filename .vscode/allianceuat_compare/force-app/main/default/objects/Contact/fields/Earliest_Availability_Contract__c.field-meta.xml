@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Earliest_Availability_Contract__c</fullName>
+    <description>Earliest Date a Candidate will be available for contract work, based on Availability Periods</description>
+    <inlineHelpText>Earliest Date a Candidate will be available for contract work, based on Availability Periods</inlineHelpText>
+    <label>Earliest Availability (Contract)</label>
+    <summarizedField>TR1__Availability_Period__c.TR1__Start_Date__c</summarizedField>
+    <summaryFilterItems>
+        <field>TR1__Availability_Period__c.TR1__Type__c</field>
+        <operation>equals</operation>
+        <value>Available</value>
+    </summaryFilterItems>
+    <summaryForeignKey>TR1__Availability_Period__c.TR1__Contact__c</summaryForeignKey>
+    <summaryOperation>max</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

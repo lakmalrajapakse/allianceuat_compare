@@ -1,0 +1,73 @@
+{
+  "appPageId" : "d9ce9f69-0e14-4b11-9233-6c5ce091d546",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "dataProviders" : [ ],
+  "id" : "f90c4c1c-e119-493e-ad2d-1df1883c064f",
+  "label" : "job-detail",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "richTextValue" : "<h1><img class=\"sfdcCbImage\" alt=\"\" src=\"{!contentAsset.alliance_rural_logo.1}\" style=\"width: 211.906px; height: 41.7734px;\">&nbsp;&nbsp;&nbsp;&nbsp;<span style=\"font-size: 18px;\">&nbsp;</span></h1>\n<p><strong style=\"font-size: 14px; font-family: sans-serif;\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Job Application</strong></p>"
+      },
+      "componentName" : "forceCommunity:richTextInline",
+      "id" : "7446d3d0-93d4-4b6c-83f7-aac123a1ac2c",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "d7608f4f-a196-438f-8613-ac36cade5279",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "alignment" : "left",
+        "label" : "Back to the Job Board",
+        "showAs" : "button",
+        "url" : "/allianceconnect/s/job-board",
+        "variant" : "brand"
+      },
+      "componentName" : "c:navigate",
+      "id" : "3e7555ce-2e2e-4038-b1f7-96469d51e829",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "height" : "1000",
+        "pageName" : "Alliance_Internal_Job_Post",
+        "recordId" : "{!recordId}"
+      },
+      "componentName" : "forceCommunity:visualforcePage",
+      "id" : "42381aa4-6369-4a98-93d3-02b2218b3ed6",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "727776f3-3ad9-44fd-b80c-50074b26e2d4",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "19e6b778-30df-429c-ad5d-f0d677dc1750",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "job-detail"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "3f65696b-a17f-47b9-a657-1583743abbdd",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "eab55bc1-e070-4825-ba88-d9c7f9f40b8d",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-job-detail"
+}

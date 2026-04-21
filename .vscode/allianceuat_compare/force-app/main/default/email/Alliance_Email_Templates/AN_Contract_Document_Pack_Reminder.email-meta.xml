@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>AN - Contract Document Pack Reminder</name>
+    <style>none</style>
+    <subject>Reminder to sign your contract with Alliance Nursing</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+We are excited to welcome you to the Alliance Nursing family! This is a gentle reminders to sign your employment contract so you can start accessing thousands of shifts across Australia:
+
+SIGN CONTRACT
+
+In your portal, you will also find your Employment handbook, Fair Work Information Statement and the Casual Employment Information Statement. Please take a moment to read these. Once you&apos;ve signed the contract, we&apos;ll book you in for Induction and after that, you&apos;re ready to get booked in for shifts!
+
+If you have any questions or need further information, please don&apos;t hesitate to call us on 1300 034 494.
+
+We can&apos;t wait to get you started!
+
+Kind regards,
+Your team at Alliance Nursing</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

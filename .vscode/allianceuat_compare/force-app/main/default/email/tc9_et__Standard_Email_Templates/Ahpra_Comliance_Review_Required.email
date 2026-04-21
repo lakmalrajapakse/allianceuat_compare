@@ -1,0 +1,6 @@
+An Ahpra check has been performed on candidate {!Contact.FirstName} {!Contact.LastName} and one or more compliance elements need a review.
+
+Please review the associated Ahpra record {!Ahpra_Candidate_Check__c.Name}.
+
+Thanks
+The Alliance Team.

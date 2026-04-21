@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Sets the language of the Approver Community. Required for token access users. --></help>
+    <label><!-- Approver Community Language --></label>
+    <name>tc9_util__Approver_Community_Language__c</name>
+    <picklistValues>
+        <masterLabel>English</masterLabel>
+        <translation><!-- English --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

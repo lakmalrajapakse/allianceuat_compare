@@ -1,0 +1,54 @@
+{
+  "appPageId" : "d9ce9f69-0e14-4b11-9233-6c5ce091d546",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "dataProviders" : [ ],
+  "id" : "5c7e16f4-cba6-4af0-9a4b-c5f1c0fc3bf7",
+  "label" : "Contract Availability",
+  "regions" : [ {
+    "id" : "59e52336-91f2-4277-ac09-612e79ab2dab",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customTitle" : "",
+        "parentRecordId" : "{!id}",
+        "relatedListName" : "TR1__Availability_Periods__r",
+        "showBreadCrumbs" : true,
+        "showCustomTitle" : false,
+        "showManualRefreshButton" : true,
+        "showRowNumbers" : true
+      },
+      "componentName" : "forceCommunity:relatedList",
+      "id" : "a4ac08d8-2e72-438a-8ab2-afa8b04c08a3",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "5aefe349-b458-4008-903f-7f3a0608a16f",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "c2ecd98c-211b-4035-a13a-5c8bf17c8f6f",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Contract Availability"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "442e519e-072a-4499-af50-8e73fe484428",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "c1efeafb-415a-4bef-a318-4a9fedc91e82",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-contract-availability"
+}

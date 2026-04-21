@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Child_Expense</fullName>
+    <active>true</active>
+    <description>Expense from Child Client</description>
+    <label>Child Expense</label>
+    <picklistValues>
+        <picklist>Oncost_Setting__c</picklist>
+        <values>
+            <fullName>Margin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Markup</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

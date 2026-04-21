@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- The expiry date for the current Expense Claim Link Token --></help>
+    <label><!-- Expense Claim Link Token Expiry --></label>
+    <name>tc9_et__Expense_Claim_Link_Token_Expiry__c</name>
+</CustomFieldTranslation>

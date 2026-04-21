@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Create_Cost_of_Payroll_Journal</name>
+        <label>Create Cost of Payroll Journal</label>
+        <locationX>1085</locationX>
+        <locationY>460</locationY>
+        <actionName>tc9_bgl__InvokeBatch_CreateJournalsForEarning</actionName>
+        <actionType>apex</actionType>
+        <connector>
+            <targetReference>Create_Leave_Accrual_Journals</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>accSysSetupId</name>
+            <value>
+                <elementReference>$Setup.tc9_bgl__GL_Configuration__c.tc9_bgl__Default_Accounting_System_Setup_Id__c</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>payBatchId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>tc9_bgl__InvokeBatch_CreateJournalsForEarning</nameSegment>
+    </actionCalls>
+    <actionCalls>
+        <name>Create_Leave_Accrual_Journals</name>
+        <label>Create Leave Accrual Journals</label>
+        <locationX>1237</locationX>
+        <locationY>454</locationY>
+        <actionName>tc9_bgl__InvokeBatch_CreateJournalsForLeaveAccr</actionName>
+        <actionType>apex</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>accSysSetupId</name>
+            <value>
+                <elementReference>$Setup.tc9_bgl__GL_Configuration__c.tc9_bgl__Default_Accounting_System_Setup_Id__c</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>payBatchId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>tc9_bgl__InvokeBatch_CreateJournalsForLeaveAccr</nameSegment>
+    </actionCalls>
+    <apiVersion>57.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <description>Flow to create Cost of Payroll and Leave Accrual Journals at the end of the pay batch.  To be used for TESTING</description>
+    <environments>Default</environments>
+    <interviewLabel>GL Journals - Create GL Journals {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>GL Journals - Create GL Journals</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>963</locationX>
+        <locationY>48</locationY>
+        <connector>
+            <targetReference>Create_Cost_of_Payroll_Journal</targetReference>
+        </connector>
+        <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>tc9_pr__Status__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Payment File Released</stringValue>
+            </value>
+        </filters>
+        <object>tc9_pr__Pay_Batch__c</object>
+        <recordTriggerType>Update</recordTriggerType>
+        <scheduledPaths>
+            <name>X1m_after</name>
+            <label>1m after</label>
+            <offsetNumber>1</offsetNumber>
+            <offsetUnit>Minutes</offsetUnit>
+            <recordField>LastModifiedDate</recordField>
+            <timeSource>RecordField</timeSource>
+        </scheduledPaths>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

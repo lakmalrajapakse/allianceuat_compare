@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>aa_Inactive_Reason__c</fullName>
+    <label>Inactive Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Do not Service</fullName>
+                <default>false</default>
+                <label>Do not Service</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Credit check fail</fullName>
+                <default>false</default>
+                <label>Credit check fail</label>
+            </value>
+            <value>
+                <fullName>Terms Expired</fullName>
+                <default>false</default>
+                <label>Terms Expired</label>
+            </value>
+            <value>
+                <fullName>Service no longer Required</fullName>
+                <default>false</default>
+                <label>Service no longer Required</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

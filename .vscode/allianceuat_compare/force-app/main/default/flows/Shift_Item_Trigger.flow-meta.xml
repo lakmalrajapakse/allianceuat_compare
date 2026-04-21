@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>60.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <description>Runs on the creation and update of Shift Items to set the record and related Shift ready for integration processing.</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>frmSenttoPayroll</name>
+        <dataType>Boolean</dataType>
+        <expression>IF(
+AND(
+{!$Record__Prior.tc9_ext_sirint__Sent_to_Payroll__c} = true,
+{!$Record.tc9_ext_sirint__Sent_to_Payroll__c} = false
+), false, true
+)</expression>
+    </formulas>
+    <interviewLabel>Shift Item Trigger {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Shift Item Trigger</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Update_Shift</name>
+        <label>Update Shift</label>
+        <locationX>176</locationX>
+        <locationY>431</locationY>
+        <inputAssignments>
+            <field>tc9_ext_sirint__Shift_Item_Integration_Pending__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record.tc9_ext_sirint__Shift__r</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Shift_Item</name>
+        <label>Update Shift Item</label>
+        <locationX>176</locationX>
+        <locationY>323</locationY>
+        <connector>
+            <targetReference>Update_Shift</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>tc9_ext_sirint__Sent_to_Payroll__c</field>
+            <value>
+                <elementReference>frmSenttoPayroll</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>tc9_ext_sirint__Shift_Item_Integration_Pending__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Update_Shift_Item</targetReference>
+        </connector>
+        <filterFormula>OR(
+ISNEW(),
+ISCHANGED({!$Record.tc9_ext_sirint__Allowance__c}),
+ISCHANGED({!$Record.tc9_ext_sirint__Quantity__c}),
+ISCHANGED({!$Record.tc9_ext_sirint__Employee_Notes__c}),
+ISCHANGED({!$Record.tc9_ext_sirint__Sent_to_Payroll__c}),
+ISCHANGED({!$Record.tc9_ext_sirint__Approval_Status__c})
+)</filterFormula>
+        <object>tc9_ext_sirint__Shift_Item__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

@@ -1,0 +1,225 @@
+<apex:page standardStylesheets="false" 
+  standardController="b3o__Reference__c" 
+  extensions="ReferenceCheckExtension" 
+  renderAs="pdf"
+  applyBodyTag="false">
+  <apex:variable var="record" value="{!record}" />
+  <head>
+    <style type="text/CSS" media="print">
+      @page {
+        font-family: Arial, Helvetica, sans-serif;
+        margin-top: 2cm;
+        @top-center {
+          content: element(header);
+        }
+        /* @bottom-left{ */
+        @bottom-center{
+          content: element(footer);
+        }
+        @bottom-right{
+          font-size: 12px;
+          content: "Page " counter(page) " of " counter(pages);
+        }
+      }
+      div.header {
+        height: auto;
+        display: block;
+        position: running(header);
+      }
+      div.footer {
+        height: auto;
+        display: block;
+        position: running(footer);
+      }
+      table { page-break-inside:auto }
+      thead { display:table-header-group }
+      tfoot { display:table-footer-group }
+
+      .title{        
+        color: black;
+        font-size: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+        padding:5px;
+      }
+      .titleBold{        
+        color: black;
+        padding:10px;
+        font-size: 20px;
+        font-weight:bold;
+        font-family: Arial, Helvetica, sans-serif;
+        padding:5px;
+      }
+      .largetext{
+        color: #7ed3f6;
+        font-size: 18px;
+        font-family: Arial, Helvetica, sans-serif;
+        padding-top:10px;
+      }
+      .largetextbold{
+        color: #7ed3f6;
+        font-size: 18px;
+        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif;
+        padding-top:10px;
+      }
+      .standardtext{
+        color: #017dc3;
+        font-size: 14px;
+        font-family: Arial, Helvetica, sans-serif;
+        padding-top:10px;
+      }
+      .boldtext{
+        color: #017dc3;
+        font-size: 14px;
+        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif;
+        padding-top:10px;
+      }
+      .smalltext{
+        color: black;
+        font-size: 12px;
+        font-family: Arial, Helvetica, sans-serif;
+        padding-top:2px;
+      }
+      h2{
+        font-family: Arial, Helvetica, sans-serif;
+      }
+    </style>
+  </head>
+    <div class="header">
+      <table style="width:100%" cellspacing="0">
+        <tr>
+            <td>
+              <div style="text-align:left">
+                <img src="{!$Resource.Logo_Alliance_RRH}" width="200px"/>
+              </div>
+            </td>
+            <td>
+              <div class="smalltext" style="text-align:right">SRTTMP-RNEEN-Reference-Check-Proforma</div>
+            </td>
+        </tr>
+      </table>
+    </div>
+    <div class="footer" style="">
+       <!-- <table style="width:80%"> -->
+        <table style="width:100%">
+        <tr>
+          <td class="smalltext" style="width:25%;text-align:left">Created: Sep 11<br/>Reviewed: Dec 22</td>
+          <td class="smalltext" style="width:50%; text-align:center">Paper copies are uncontrolled copies<br/>SRTTMP-RNEEN-Reference-Check-Proforma</td>
+          <td class="smalltext" style="width:25%;"></td>
+        </tr>
+        <!-- <tr>
+          <td class="smalltext" style="width:25%">Reviewed: Dec 22</td>
+          <td class="smalltext" style="width:50%; text-align:center">SRTTMP-RNEEN-Reference-Check-Proforma</td>
+        </tr> -->
+       </table>
+      <!-- <div style="text-align:center">SRTTMP-RNEEN-Reference-Check-Proforma</div> -->
+    </div>
+    <h2 style="color: #141d60">Reference Check Summary for {!record.b3o__Contact__r.FirstName} {!record.b3o__Contact__r.LastName}</h2>
+    <!--Styling is included in the elements for now because nothing else seems to make it so that styling get applied when rendering as pdf-->
+    <div class="largetextbold">Referee Details</div>
+    <div class="boldtext">Name: {!record.b3o__First_Name_Referee__c} {!record.b3o__Last_Name_Referee__c}</div>
+    <div class="boldtext">Current job title: {!record.b3o__Position_Referee__c}</div>
+    <div class="boldtext">Email: {!record.b3o__Email_Referee__c}</div>
+    <div class="boldtext">Phone Number: {!record.b3o__Phone_Referee__c}</div>
+
+    <div class="largetextbold">Reference Details</div>
+    <!-- <div class="standardtext">Are you happy to provide a reference for your time working with {!record.b3o__Contact__r.FirstName}? Yes | No</div> -->
+    <div class="standardtext">
+      <b>Are you happy to provide a reference for your time working with {!record.b3o__Contact__r.FirstName}? </b> <apex:outputText escape="false" value="{!respProvideRefs}" /> 
+    </div>
+      <!-- {!record.Happy_to_provide_References__c} -->
+    
+    <!-- <div class="standardtext">Do we have your permission to disclose this reference to selected potential employers for the duration of {!firstNameApos} employment with our agency? Yes | No</div> -->
+    <div class="standardtext">
+      <b>Do we have your permission to disclose this reference to selected potential employers for the duration of {!firstNameApos} employment with our agency? </b> <apex:outputText escape="false" value="{!respDiscloseRefs}" /> 
+      <!-- {!record.Permission_to_disclose_reference_check__c} -->
+    </div>
+
+    <!-- <div class="standardtext">Has {!record.b3o__Contact__r.FirstName} been subject to any Facility or AHPRA based investigations, disputes or complaints? Yes | No</div> -->
+    <div class="standardtext">
+      <b>Has {!record.b3o__Contact__r.FirstName} been subject to any Facility or AHPRA based investigations, disputes or complaints? </b> <apex:outputText escape="false" value="{!respAHPRAInvDisps}" />
+      <!-- {!record.AHPRA_based_investigations_or_disputes__c} -->
+    </div>   
+    <!-- <div class="standardtext">[If ‘Yes’, additional comments go here. If ‘No’, No additional comments.]</div> -->
+    <div class="standardtext" style="{!IF( record.AHPRA_based_investigations_or_disputes__c = 'Yes', 'display:all', 'display:none')}">{!record.AHPRA_based_investigations_yes__c}</div>
+    
+    <div class="boldtext">Can you briefly describe the clinical / community setting in which {!record.b3o__Contact__r.FirstName} worked (demographics/specialities etc)?</div>
+    <div class="standardtext">{!record.Describe_clinical_community_setting__c}</div>
+    
+    <div class="boldtext">What were {!firstNameApos} clinical duties &amp; responsibilities in this role?</div>
+    <div class="standardtext">{!record.Applicant_s_duties_responsibilies__c}</div>
+    
+    <div class="standardtext">
+      <b>How would you rate {!firstNameApos} ability to carry out their daily duties (time management, ability to prioritise etc)? </b> <apex:outputText escape="false" value="{!respDailyTasks}" />
+      <!-- {!record.Rating_applicant_s_ability_to_do_tasks__c}  -->
+    </div>
+    <!-- <div class="standardtext">[If ‘1-3’, additional comments go here. If ‘4-5’, No additional comments.]</div> -->
+    <div class="standardtext" style="{!IF( ratingDailyTasks = true, 'display:all', 'display:none')}">{!record.Ability_to_carry_out_daily_routines_1_3__c}</div>
+    
+    <div class="standardtext">
+      <b>Would you say {!firstNameApos} performance is consistent &amp; are they able to work well unsupervised? </b> <apex:outputText escape="false" value="{!respApplUnsupervised}" />
+      <!-- {!record.Applicant_can_work_unsupervised__c} -->
+    </div>
+    <!-- <div class="standardtext">[If ‘Yes’, additional comments go here. If ‘No’, No additional comments.]</div> -->
+    <div class="standardtext" style="{!IF( record.Applicant_can_work_unsupervised__c = 'Yes', 'display:all', 'display:none')}">{!record.Work_well_unsupervised_No__c}</div>
+    
+    <div class="standardtext">
+      <b>How would you rate {!firstNameApos} communication / documentation skills (if electronic notes are used, can you comment on their effectiveness)? </b> <apex:outputText escape="false" value="{!respCommSkills}" />
+      <!-- {!record.Communication_Documentation_Skills__c} -->
+    </div>
+    <!-- <div class="standardtext">[If ‘1-3’, additional comments go here. If ‘4-5’, No additional comments.]</div> -->
+    <div class="standardtext" style="{!IF( ratingCommSkills = true , 'display:all', 'display:none')}">{!record.Communication_Skills_1_3__c}</div>
+    
+    <div class="boldtext">How would you rate {!firstNameApos} clinical skills when working in this setting? </div>
+    <div class="standardtext"><apex:outputText escape="false" value="{!respClinicalSkills}" /></div>
+    <!-- <div class="standardtext"> {!record.Clinical_Skills__c}</div> -->
+    <!-- <div class="standardtext">[If ‘1-3’, additional comments go here. If ‘4-5’, No additional comments.]</div> -->
+    <div class="standardtext" style="{!IF( ratingClinicalSkills = true, 'display:all', 'display:none')}">{!record.Clinical_Skill_More_Information__c}</div>
+
+    <div class="standardtext">
+      <b>Does {!record.b3o__Contact__r.FirstName} demonstrate due care &amp; attention to medication administration/ distribution? Any errors to your knowledge? </b> <apex:outputText escape="false" value="{!respHandlingMeds}" />
+    </div>
+    <!-- <div class="standardtext"> {!record.Handling_medication_administration__c}</div> -->
+    <!-- <div class="standardtext">[If ‘Yes’, additional comments go here. If ‘No’, No additional comments.]</div> -->
+    <div class="standardtext" style="{!IF( record.Handling_medication_administration__c = 'Yes', 'display:all', 'display:none')}">{!record.Handling_medication_administration_No__c}</div>
+
+    <div class="standardtext">    
+      <b>How would you rate {!firstNameApos} ability to deal with emergency situations &amp; do you have confidence they are able to accurately assess, diagnose &amp; treat in these situations? </b> <apex:outputText escape="false" value="{!respEmergencySits}" />
+      <!-- {!record.Dealing_with_emergency_situation__c} -->
+    </div>
+    <!-- <div class="standardtext">[If ‘1-3’, additional comments go here. If ‘4-5’, No additional comments.]</div> -->
+    <div class="standardtext" style="{!IF( ratingEmergencySits = true, 'display:all', 'display:none')}">
+      {!record.Dealing_with_emergency_situation_1_3__c}
+    </div>
+   
+    <div class="standardtext">
+      <b>Does {!record.b3o__Contact__r.FirstName} adhere to OHS guidelines (e.g. infection control, PPE, security, handwashing &amp; lifting)? </b> <apex:outputText escape="false" value="{!respOHSGuidelines}" />
+      <!-- {!record.Adhering_to_OHS_guidelines__c} -->
+    </div>
+    <!-- <div class="standardtext">[If ‘Yes’, additional comments go here. If ‘No’, No additional comments.]</div> -->
+    <div class="standardtext" style="{!IF( record.Adhering_to_OHS_guidelines__c = 'Yes', 'display:all', 'display:none')}">{!record.Adhering_to_OHS_guidelines_No__c}</div>
+
+    <div class="standardtext"><b>Would you rehire {!record.b3o__Contact__r.FirstName} &amp; do you have any further comments you’d like to make? </b> <apex:outputText escape="false" value="{!respRehireAppl}" />
+      <!-- {!record.Rehire_applicant_further_comments__c} -->
+    </div> 
+    <!-- <div class="standardtext">[If ‘Yes’, additional comments go here. If ‘No’, No additional comments.]</div> -->
+    <div class="standardtext" style="{!IF( record.Rehire_applicant_further_comments__c = 'Yes', 'display:all', 'display:none')}">{!record.Rehire_applicant_further_comments_Yes__c}</div>
+
+    <!-- <div>
+    </div> -->
+
+
+
+    <!-- <table style="width:100%" cellspacing="0">
+
+      <tr style="font-size: 24px; background-color: #dde2f6"><th colspan="2">Test</th></tr>
+      <tr>
+        <td style="font-size: 14px;border: 1px solid #a0afe6;width: 100px; overflow: wrap; color: #141d60;" colspan="2">Test</td>
+      </tr>
+      <tr>
+        <td style="font-size: 14px;border: 1px solid #a0afe6;width: 100px; overflow: wrap; color: #141d60; page-break-inside:avoid; page-break-after:auto " colspan="2">
+        </td>
+      </tr>
+    </table> -->
+</apex:page>

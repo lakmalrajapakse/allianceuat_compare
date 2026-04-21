@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>ARRH - TA requirements candidate</name>
+    <style>none</style>
+    <subject>Travel &amp; Accomodation Preferences</subject>
+    <textOnly>TRAVEL &amp; ACCOMMODATION PREFERENCES.
+
+
+Hi {!Contact.FirstName},
+
+To proceed with your application, we need to know a bit more about your travel plans to and from site, what accommodation you may require and if you&apos;ll be travelling with company. Please head to the portal and fill out the travel and accommodation preference form.
+
+OPEN THE PORTAL
+
+
+
+If you have any questions at all you can always call us on 07 4998 5550.
+
+Kind regards,
+Your team at Alliance Rural &amp; Remote Health</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

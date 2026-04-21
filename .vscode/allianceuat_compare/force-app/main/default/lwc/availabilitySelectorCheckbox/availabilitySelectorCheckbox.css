@@ -1,0 +1,30 @@
+.custom-button {
+    border-radius: 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    width: 90%;
+    height: 90%;
+}
+
+.custom-button-unavailable {
+    background-color: orange;
+    border: 2px solid orange;
+    color: white;
+}
+
+.custom-button-available {
+    background-color: #add8e6;
+    border: 2px solid #add8e6;
+    color: white;
+    
+}
+
+.custom-button-unknown {
+    background-color: white;
+    border: 2px solid #add8e6;
+    color: white;
+}

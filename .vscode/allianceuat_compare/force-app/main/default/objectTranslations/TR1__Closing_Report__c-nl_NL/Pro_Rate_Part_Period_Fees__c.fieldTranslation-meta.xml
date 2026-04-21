@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Where set to &apos;Yes&apos; the part period value of the number of contract fees will be rounded up to the next whole number.  So if there was 5.25 contract fees then a total of 6 contract fees for the full period value will be created --></help>
+    <label><!-- Round Up Part Period Fees --></label>
+    <name>Pro_Rate_Part_Period_Fees__c</name>
+    <picklistValues>
+        <masterLabel>No</masterLabel>
+        <translation><!-- No --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Yes</masterLabel>
+        <translation><!-- Yes --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,873 @@
+<!-- sldsValidatorIgnore -->
+<!--
+   @description       : 
+   @author            : Simon Coles
+   @group             : 
+   @last modified on  : 20-11-2024
+   Modifications Log 
+   Ver   Date         Author        Modification
+   1.0   20-11-2024   Simon Coles   Initial Version
+   -->
+<template>
+   <article class="slds-card">
+      <div class="slds-card__body">
+         <header class="slds-theme_default slds-border_bottom" style="z-index:1">
+            <div class="slds-grid slds-gutters slds-p-horizontal_small">
+               <div class="slds-col slds-size_1-of-12">
+                  <lightning-input type="date" name="startDate" label="Start Date" value={startDate}
+                     onchange={handleStartDateChange}></lightning-input>
+               </div>
+               <div class="slds-col slds-size_1-of-12 ">
+                  <lightning-input type="date" name="endDate" label="End Date" value={endDate}
+                     onchange={handleEndDateChange}></lightning-input>
+               </div>
+               <div class="slds-col slds-size_1-of-12 slds-col_bump-left">
+                  <fieldset style="margin-top: var(--lwc-spacingXxSmall, 0.125rem);"
+                     class="slds-form-element slds-form-element_compound slds-p_right-medium">
+                     <span class="slds-text-title_caps rightAdjust">Person</span>
+                     <c-lookup-search data-validated-component="true" variant="label-hidden" sobject-name="Contact"
+                        title="Name" icon-name="standard:contact" onselectionchange={handleContactsSelect}
+                        placeholder="Search.." is-multi-entry="true">
+                     </c-lookup-search>
+                  </fieldset>
+               </div>
+               <div class="slds-col slds-size_1-of-12 slds-col_bump-left">
+                  <fieldset style="margin-top: var(--lwc-spacingXxSmall, 0.125rem);"
+                     class="slds-form-element slds-form-element_compound slds-p_right-medium">
+                     <span class="slds-text-title_caps rightAdjust">Account</span>
+                     <c-lookup-search data-validated-component="true" variant="label-hidden" sobject-name="Account"
+                        title="Name" icon-name="standard:account" onselectionchange={handleAccountsSelect}
+                        placeholder="Search.." is-multi-entry="true">
+                     </c-lookup-search>
+                  </fieldset> 
+               </div>
+               <div class="slds-col slds-size_2-of-12 slds-col_bump-left">
+                  <fieldset style="margin-top: var(--lwc-spacingXxSmall, 0.125rem);"
+                     class="slds-form-element slds-form-element_compound slds-p_right-medium">
+                     <span class="slds-text-title_caps rightAdjust">Site</span>
+                     <c-lookup-search data-validated-component="true" variant="label-hidden"
+                        sobject-name="sirenum__Site__c" title="Name" subtitle="Name" icon-name="standard:location"
+                        onselectionchange={handleSitesSelect} placeholder="Search.." is-multi-entry="true">
+                     </c-lookup-search>
+                  </fieldset>
+               </div>
+               <div class="slds-col slds-size_2-of-12 slds-col_bump-left">
+                  <fieldset style="margin-top: var(--lwc-spacingXxSmall, 0.125rem);"
+                     class="slds-form-element slds-form-element_compound slds-p_right-medium">
+                     <span class="slds-text-title_caps rightAdjust">Branch</span>
+                     <c-lookup-search data-validated-component="true" variant="label-hidden" sobject-name="Branch__c"
+                        title="Branch_Name__c" subtitle="Name" icon-name="standard:location"
+                        onselectionchange={handleBranchSelect} placeholder="Search.." is-multi-entry="true">
+                     </c-lookup-search>
+                  </fieldset>
+               </div>
+               <div class="slds-col slds-size_1-of-12 slds-col_bump-left">
+                  <fieldset style="margin-top: var(--lwc-spacingXxSmall, 0.125rem);"
+                     class="slds-form-element slds-form-element_compound slds-p_right-medium">
+                     <span class="slds-text-title_caps rightAdjust">Job Role</span>
+                     <c-lookup-search data-validated-component="true" variant="label-hidden"
+                        sobject-name="sirenum__Team__c" title="Name" subtitle="Name" icon-name="standard:location"
+                        onselectionchange={handleJobRoleSelect} placeholder="Search.." is-multi-entry="true">
+                     </c-lookup-search>
+                  </fieldset>
+               </div>
+               <div class="slds-col slds-size_1-of-12 slds-col_bump-left">
+                  <fieldset class="slds-form-element slds-form-element_compound slds-p_right-medium">
+                     <span class="slds-text-title_caps rightAdjust">File Type</span>
+                     <lightning-combobox
+                        name="fileType"
+                        value={selectedFileType}
+                        options={fileTypeOptions}
+                        onchange={handleFileTypeChange}
+                        variant="label-hidden">
+                     </lightning-combobox>
+                  </fieldset>
+               </div>
+
+               <div class="slds-col slds-no-flex" if:false={isLoading}>
+                  <div class="slds-m-top_medium">
+                     <lightning-button-icon-stateful icon-name="utility:filterList" size="medium" disabled={isSaving}
+                        class="slds-m-left_xx-small" onclick={toggleFiltersPanel}
+                        selected={showingFilters}></lightning-button-icon-stateful>
+                     <lightning-button-icon icon-name="utility:refresh" size="medium" disabled={isSaving}
+                        class="slds-m-left_xx-small" onclick={refresh}></lightning-button-icon>
+                  </div>
+                  <!-- <div class="slds-m-top_medium">
+                        <lightning-button-icon-stateful icon-name="utility:filterList" size="medium" disabled={isSaving} class="slds-m-left_xx-small" onclick={toggleFiltersPanel} selected={showingFilters}></lightning-button-icon-stateful>
+                        <lightning-button-icon icon-name="utility:refresh"  size="medium" disabled={isSaving} class="slds-m-left_xx-small" onclick={refresh}></lightning-button-icon>
+   
+                        <lightning-button label="Approve All" title="Approve All" class="slds-m-left_x-small" onclick={approveAll} if:true={_CAN_APPROVE_PAY_AND_CHARGE}></lightning-button>
+                        <lightning-button label="Cancel" title="Cancel" class="slds-m-left_x-small" onclick={refresh} disabled={isSaving} if:true={hasChanges}></lightning-button>
+                        <lightning-button variant="brand" label="Save" title="Save Changes" class="slds-m-left_x-small" onclick={saveChanges} disabled={isSaving} if:true={hasChanges}></lightning-button>
+                        <a class="slds-button c-custom-error-indicator" tabindex="-1" if:true={hasGeneralError} onclick={toggleGeneralError}>
+                           <svg aria-hidden="true" class="slds-icon slds-icon-text-error slds-icon--x-small">
+                              <use xlink:href="/_slds/icons/utility-sprite/svg/symbols.svg#error"></use>
+                           </svg>
+                        </a>
+                     </div> -->
+               </div>
+            </div>
+         </header>
+         <div style="position:relative;min-height:600px;overflow:hidden;display:flex;flex-direction:row-reverse">
+            <div class="slds-panel slds-size_medium slds-panel_docked slds-panel_docked-right slds-panel_drawer">
+               <div class="slds-panel__header">
+                  <h2 class="slds-panel__header-title slds-text-heading_small slds-truncate">Filters</h2>
+                  <div class="slds-panel__header-actions">
+                     <lightning-button-icon icon-name="utility:custom_apps" size="small" onclick={openFiltersModal}
+                        variant="container"></lightning-button-icon>
+                  </div>
+               </div>
+               <div class="slds-panel__body">
+                  <c-filter-breadcrumbs value={filterBreadcrumbs} hide-delete-action="true"></c-filter-breadcrumbs>
+               </div>
+            </div>
+            <div class="slds-col slds-p-around_medium">
+               <!-- Page Pagination -->
+               <div class="slds-grid slds-grid_align-space slds-m-bottom_medium">
+                  <div class="slds-col">
+                     <span></span>
+                  </div>
+                  <div class="slds-col slds-col_bump-right">
+                     <template if:false={isLoading}>
+                        <c-paginator total-records={totalResultsCount} visible-pages="4"
+                           onpagechange={handlePaginationChange}></c-paginator>
+                     </template>
+                  </div>
+                  <div class="slds-col button-container">
+                     <ul class="slds-button-group-row">
+                        <li class="slds-button-group-item" lwc:if={hasGeneralError}>
+                           <a class="slds-button c-custom-error-indicator" tabindex="-1" if:true={hasGeneralError}
+                              onclick={toggleGeneralError}>
+                              <svg aria-hidden="true" class="slds-icon slds-icon-text-error slds-icon--x-small">
+                                 <use xlink:href="/_slds/icons/utility-sprite/svg/symbols.svg#error"></use>
+                              </svg>
+                           </a>
+                        </li>
+                        <li class="slds-button-group-item" lwc:if={_CAN_APPROVE_PAY_AND_CHARGE}>
+                           <lightning-button label="Approve All" title="Approve All" class="slds-m-left_x-small"
+                              onclick={approveAll} disabled={isSaving}></lightning-button>
+                        </li>
+                        <li class="slds-button-group-item" lwc:if={hasChanges}>
+                           <lightning-button label="Cancel" title="Cancel" class="slds-m-left_x-small" onclick={refresh}
+                              disabled={isSaving}></lightning-button>
+                        </li>
+                        <li class="slds-button-group-item" lwc:if={hasChanges}>
+                           <lightning-button variant="brand" label="Save" title="Save Changes"
+                              class="slds-m-left_x-small" onclick={saveChanges} disabled={isSaving}></lightning-button>
+                        </li>
+                        <li class="slds-button-group-item" lwc:if={hasRecords}>
+                           <lightning-button-icon icon-name="action:download" title="Export" class="slds-m-left_x-small"
+                              onclick={handleExport} disabled={isSaving}></lightning-button-icon>
+                        </li>
+                        <li class="slds-button-group-item" lwc:if={hasRecords}>
+                           <lightning-button-icon icon-name="action:upload" title="Import" class="slds-m-left_x-small"
+                              onclick={handleImport} disabled={isSaving}></lightning-button-icon>
+                        </li>
+                     </ul>
+                     <!-- <template if:true={_CAN_SUBMIT_ALL}>
+                           <lightning-button label="Submit All" title="Submit All" class="slds-m-left_x-small" onclick={submitAll} disabled={isSaving} ></lightning-button>
+                        </template> -->
+                  </div>
+               </div>
+               <!-- Data Loading -->
+               <template if:true={isLoading}>
+                  <div class="slds-is-relative" style="height:6rem;">
+                     <div class="stencil-timeline-spinner">
+                        <lightning-spinner alternative-text="Loading" size="large" variant="brand"></lightning-spinner>
+                     </div>
+                  </div>
+               </template>
+               <template if:false={isLoading}>
+                  <!-- Saving Spinner -->
+                  <template if:true={isSaving}>
+                     <div class="slds-is-relative" style="height:6rem;">
+                        <div class="stencil-timeline-spinner">
+                           <lightning-spinner alternative-text="Loading" size="large"
+                              variant="brand"></lightning-spinner>
+                        </div>
+                     </div>
+                  </template>
+
+                  <!-- Loaded - Without Results -->
+                  <c-illustration-desert header="No Data" body="Please amend your filter criteria"
+                     if:false={hasRecords}></c-illustration-desert>
+                  <!-- Loaded - With Results -->
+                  <table class="slds-table slds-table_cell-buffer slds-no-row-hover slds-table_bordered"
+                     style="table-layout:fixed" if:true={hasRecords}>
+                     <template if:true={_USE_TIME_TYPE_ON_SHIFT}>
+                        <thead>
+                           <tr class="slds-line-height_reset">
+                              <th class="" scope="col" if:true={showSaveResults}>
+                                 <!-- Results -->
+                              </th>
+                              <th class="" scope="col">
+                                 <div>{SHIFT_DESC.label}</div>
+                              </th>
+                              <th class="" scope="col">
+                                 <div>Account</div>
+                              </th>
+                              <th class="" scope="col">
+                                 <div>Worker</div>
+                              </th>
+                              <th class="" scope="col">
+                                 <div>Minimum Pay Rate</div>
+                              </th>
+                              <th class="" scope="col">
+                                 <div>PO Number</div>
+                              </th>
+                              <th class="" scope="col">
+                                 <div>Scheduled</div>
+                              </th>
+                              <th class="" scope="col" if:true={_CAN_ENTER_ACTUAL}>
+                                 <div>Actual Time</div>
+                              </th>
+                              <th class="" scope="col">
+                                 <div>eSignature</div>
+                              </th>
+                              <th class="" scope="col" if:true={_CAN_ENTER_BILLABLE} style="width:12%">
+                                 <div>Approved Hours</div>
+                              </th>
+                              <th class="" scope="col" style="width:10%">
+                                 <div>TS Approver - Position</div>
+                              </th>
+                              <th class="" scope="col">
+                                 <div>Breaks</div>
+                              </th>
+                              <!--<th class="" scope="col">
+                                    <div>Query</div>
+                                </th> -->
+                              <!-- <th class="" scope="col" if:true={_CAN_ENTER_BILLABLE}>
+                                 <div>Total Approved</div>
+                              </th> -->
+                              <!--  <th class="" scope="col">
+                                    <div>Client Rating</div>
+                                </th> -->
+                              <th class="" scope="col">
+                                 <div>Worker Feedback</div>
+                              </th>
+                              <th class="multi-row-header" scope="col" if:true={_CAN_SEE_APPROVE_PAY_AND_CHARGE}>
+                                 <div>Approved</div>
+                              </th>
+                              <th scope="col" style="width:50px">
+                                 <div>Files</div>
+                              </th>
+                              <!-- <th class="multi-row-header" scope="col" if:true={_CAN_REJECT_SHIFT}>
+                                   <div>Rejected</div>
+                                </th> -->
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <template for:each={records} for:item="record">
+                              <tr class="slds-hint-parent" key={record.Id}>
+                                 <!-- Save Results Cell -->
+                                 <td if:true={showSaveResults}>
+                                    <template if:true={record.saveSuccess}>
+                                       <a href="javascript:void(0);" class="slds-button" tabindex="-1">
+                                          <svg aria-hidden="true"
+                                             class="slds-icon slds-icon-text-success slds-icon--x-small">
+                                             <use xlink:href="/_slds/icons/utility-sprite/svg/symbols.svg#check"></use>
+                                          </svg>
+                                       </a>
+                                    </template>
+                                    <template if:true={record.saveError}>
+                                       <div class="c-record-error-wrapper">
+                                          <section data-shift={record.Id} if:true={record.showPopover}
+                                             class="slds-popover slds-popover_error slds-nubbin_bottom-left c-absolute-position c-line-error-popover"
+                                             role="dialog">
+                                             <button
+                                                class="slds-button slds-button_icon slds-button_icon-small slds-float_right slds-popover__close slds-button_icon-inverse"
+                                                title="Close dialog" onclick={closeErrorPopover}>
+                                                <svg class="slds-button__icon" aria-hidden="true">
+                                                   <use xlink:href="/_slds/icons/utility-sprite/svg/symbols.svg#close">
+                                                   </use>
+                                                </svg>
+                                                <span class="slds-assistive-text">Close dialog</span>
+                                             </button>
+                                             <header class="slds-popover__header">
+                                                <div class="slds-media slds-media_center slds-has-flexi-truncate ">
+                                                   <div class="slds-media__figure">
+                                                      <span class="slds-icon_container slds-icon-utility-error">
+                                                         <svg class="slds-icon slds-icon_x-small" aria-hidden="true">
+                                                            <use
+                                                               xlink:href="/_slds/icons/utility-sprite/svg/symbols.svg#error">
+                                                            </use>
+                                                         </svg>
+                                                      </span>
+                                                   </div>
+                                                   <div class="slds-media__body">
+                                                      <h2 class="slds-truncate slds-text-heading_medium" title="Errors">
+                                                         Errors</h2>
+                                                   </div>
+                                                </div>
+                                             </header>
+                                             <div class="slds-popover__body">
+                                                <ul>
+                                                   <template for:each={record.errorMessages} for:item="errorMessage"
+                                                      for:index="index">
+                                                      <li key={errorMessage.errorItem}>
+                                                         <b>{errorMessage.errorItem}</b><span>&nbsp;-&nbsp;</span><i>{errorMessage.message}</i>
+                                                      </li>
+                                                   </template>
+                                                </ul>
+                                             </div>
+                                          </section>
+                                          <a class="slds-button" tabindex="-1" data-shift={record.Id}
+                                             onclick={showErrorPopover}>
+                                             <svg aria-hidden="true"
+                                                class="slds-icon slds-icon-text-error slds-icon--x-small">
+                                                <use xlink:href="/_slds/icons/utility-sprite/svg/symbols.svg#error">
+                                                </use>
+                                             </svg>
+                                          </a>
+                                       </div>
+                                    </template>
+                                 </td>
+                                 <th scope="row">
+                                    <div title={record.shift.Name}>
+                                       <a data-record={record.Id} data-object="sirenum__Shift__c"
+                                          onclick={handleNavigateClick}>{record.shift.Name}</a>
+                                    </div>
+                                    <div if:true={record.shift.sirenum__Site__c} class="slds-truncate"
+                                       title={record.shift.sirenum__Site__r.Name} style="width: 5rem;">
+                                       <a data-record={record.shift.sirenum__Site__c} data-object="sirenum__Site__c"
+                                          onclick={handleNavigateClick}>{record.shift.sirenum__Site__r.Name}</a>
+                                    </div>
+                                    <div if:false={record.shift.sirenum__Site__c}>
+                                       No {SHIFT_DESC.fields.sirenum__Site__c.label}
+                                    </div>
+                                    <!-- <div>
+                                          <span>{record.shift.sirenum__AdHoc__c}</span>
+                                          </div> -->
+                                    <div if:true={record.isAdhoc}>
+                                       <span class="slds-text-color_error">{record.shift.sirenum__AdHoc__c}</span>
+                                    </div>
+                                 </th>
+                                 <td>
+                                    <div class="slds-truncate" title={record.accountName}>
+                                       <a data-record={record.account} data-object="Account"
+                                          onclick={handleNavigateClick}>{record.accountName}</a>
+                                    </div>
+                                 </td>
+                                 <td>
+                                    <!-- Contact -->
+                                    <div if:true={record.shift.sirenum__Contact__c} class="slds-truncate"
+                                       title={record.shift.sirenum__Contact__r.Name}
+                                       style="min-width: 5rem; max-width: 7rem;">
+                                       <a data-record={record.shift.sirenum__Contact__c} data-object="Contact"
+                                          onclick={handleNavigateClick}>{record.shift.sirenum__Contact__r.Name}</a>
+                                    </div>
+                                    <div if:false={record.shift.sirenum__Contact__c}>
+                                       No {SHIFT_DESC.fields.sirenum__Contact__c.label}
+                                    </div>
+                                    <div if:true={record.shift.sirenum__Team__c} class="slds-truncate"
+                                       title={record.shift.sirenum__Team__r.Name} style="width: 7rem;">
+                                       <a data-record={record.shift.sirenum__Team__c} data-object="sirenum__Team__c"
+                                          onclick={handleNavigateClick}>{record.shift.sirenum__Team__r.Name}</a>
+                                    </div>
+                                    <div if:false={record.shift.sirenum__Team__c}>
+                                       No {SHIFT_DESC.fields.sirenum__Team__c.label}
+                                    </div>
+                                    <!-- Asignee Number -->
+                                    <!-- <div if:false={record.shift.sirenum__Contact__c}>
+                                          No {SHIFT_DESC.fields.sirenum__Contact__c.label}
+                                          </div> -->
+                                    <!-- Closing Report -->
+                                    <!-- <div if:true={record.shift.s5m__BH4SFClosingReport__c} class="slds-truncate" title={record.shift.s5m__BH4SFClosingReport__r.Name} style="width: 7rem;">
+                                          <a data-record={record.shift.s5m__BH4SFClosingReport__c} data-object="TR1__Closing_Report__c" 
+                                          onclick={handleNavigateClick}>{record.shift.s5m__BH4SFClosingReport__r.Name}</a>
+                                          </div>
+                                          <div if:false={record.shift.s5m__BH4SFClosingReport__c}>
+                                          No {SHIFT_DESC.fields.s5m__BH4SFClosingReport__c.label}
+                                          </div> -->
+                                 </td>
+                                 <!-- <td>
+                                       Job
+                                       Site
+                                       <div if:true={record.shift.sirenum__Site__c} class="slds-truncate" title={record.shift.sirenum__Site__r.Name} style="width: 13rem;">
+                                          <a data-record={record.shift.sirenum__Site__c} data-object="sirenum__Site__c" 
+                                             onclick={handleNavigateClick}>{record.shift.sirenum__Site__r.Name}</a>
+                                       </div>
+                                       <div if:false={record.shift.sirenum__Site__c}>
+                                          No {SHIFT_DESC.fields.sirenum__Site__c.label}
+                                       </div>
+                                    </td> -->
+                                 <!-- Minimum Pay Rate -->
+                                 <td>
+                                    <div if:true={record.shift.Minimum_Pay_Rate__c} class="slds-truncate"
+                                       title={record.shift.Minimum_Pay_Rate__r.Name}>
+
+                                       <a data-record={record.shift.Minimum_Pay_Rate__c}
+                                          data-object="Minimum_Pay_Rate__c" onclick={handleNavigateClick}>
+
+                                          {record.shift.Minimum_Pay_Rate__r.Name}
+                                       </a>
+                                    </div>
+
+                                    <div if:false={record.shift.Minimum_Pay_Rate__c}>
+                                       N/A
+                                    </div>
+                                 </td>
+                                 <td>
+                                    <div style="width: 5rem; max-width: 7rem;">
+                                       <lightning-input type="text" variant="label-hidden" data-record-id={record.Id}
+                                          data-write-to="PO_Number__c" value={record.poNumber}
+                                          onchange={handleTextInputChange}
+                                          disabled={record.shift.sirenum__Allow_pay__c}></lightning-input>
+                                    </div>
+                                 </td>
+                                 <!---Scheduled times-->
+                                 <td>
+                                    <div style="width: 5rem; max-width: 7rem;">
+                                       <c-input-shift-times data-id={record.shift.Id}
+                                          start-time-template={record.shift.sirenum__Scheduled_Start_Time__c}
+                                          end-time-template={record.shift.sirenum__Scheduled_End_Time__c}
+                                          start-time-value={record.shift.sirenum__Scheduled_Start_Time__c}
+                                          end-time-value={record.shift.sirenum__Scheduled_End_Time__c}
+                                          site-timezone={record.timezone} start-disabled end-disabled
+                                          populate-on-blur="true"></c-input-shift-times>
+                                    </div>
+                                 </td>
+                                 <!-- Actual Times -->
+                                 <td if:true={_CAN_ENTER_ACTUAL}>
+                                    <div style="width: 5rem; max-width: 7rem;">
+                                       <c-input-shift-times data-id={record.shift.Id}
+                                          start-time-template={record.shift.sirenum__Actual_Start_Time__c}
+                                          end-time-template={record.shift.sirenum__Actual_End_Time__c}
+                                          start-time-value={record.shift.sirenum__Actual_Start_Time__c}
+                                          end-time-value={record.shift.sirenum__Actual_End_Time__c}
+                                          site-timezone={record.timezone} start-disabled end-disabled
+                                          populate-on-blur="true"></c-input-shift-times>
+                                    </div>
+                                 </td>
+                                 <!-- esig-->
+                                 <td>
+                                    <div if:true={record.hasImages} style="width: 5rem;">
+                                       <template iterator:img={record.images}>
+                                          <div key={img.value.name}>
+                                             <img data-shift-id={record.Id} data-signature-link={img.value.link}
+                                                src={img.value.link} onclick={handleOpenSignature}
+                                                data-hassignature={record.hasImages}></img>
+                                          </div>
+                                       </template>
+                                    </div>
+                                    <div if:false={record.hasImages} style="width: 5rem;">
+                                       <span data-shift-id={record.Id} class="slds-text-color_error">N/A</span>
+                                    </div>
+                                 </td>
+                                 <!-- Billable Times -->
+                                 <td if:true={_CAN_ENTER_BILLABLE}>
+                                    <c-input-time-and-hours data-id={record.shift.Id}
+                                       data-write-to-start="sirenum__Billable_Start_Time__c"
+                                       data-write-to-end="sirenum__Billable_End_Time__c"
+                                       onfieldchange={handleTimesChange} record={record}>
+                                    </c-input-time-and-hours>
+                                    <!-- <c-input-shift-times
+                                          data-write-to-start="sirenum__Billable_Start_Time__c"
+                                          data-write-to-end="sirenum__Billable_End_Time__c"
+                                          start-time-template={record.shift.sirenum__Scheduled_Start_Time__c}
+                                          end-time-template={record.shift.sirenum__Scheduled_End_Time__c}
+                                          start-time-value={record.shift.sirenum__Billable_Start_Time__c}
+                                          end-time-value={record.shift.sirenum__Billable_End_Time__c}
+                                          populate-on-blur="true" 
+                                       ></c-input-shift-times>
+                                       <c-input-shift-hours
+                                          u-id={record.Id}
+                                          data-write-to-start="sirenum__Billable_Start_Time__c"
+                                          data-write-to-end="sirenum__Billable_End_Time__c"
+                                          start-time-template={record.shift.sirenum__Scheduled_Start_Time__c}
+                                          end-time-template={record.shift.sirenum__Scheduled_End_Time__c}
+                                          start-time-value={record.shift.sirenum__Billable_Start_Time__c}
+                                          end-time-value={record.shift.sirenum__Billable_End_Time__c}
+                                          onfieldchange={handleTimesChange}
+                                          disabled={record.shift.Lock_Client_Approval__c}
+                                          populate-on-blur="true"  
+                                       ></c-input-shift-hours> -->
+                                 </td>
+                                 <!-- Approver -->
+                                 <td>
+                                    <div style="width: 5rem;">
+                                       {record.shift.Timesheet_Approver_Name__c} -
+                                       {record.shift.Timesheet_Approver_Position__c}
+                                    </div>
+                                 </td>
+                                 <!-- Break -->
+                                 <!-- <td>
+                                    <div if:true={record.hasBreaks}>
+                                       <div if:true={record.portalHoursEntry}>
+                                          <ul>
+                                             <template for:each={record.breaks} for:item="shiftBreak">
+                                                <li key={shiftBreak.Id}>
+                                                   <a data-shift={shiftBreak.sirenum__Shift__c} data-is-edit="true"
+                                                      data-break={shiftBreak.Id}
+                                                      data-start-time={shiftBreak.sirenum__Start_Time__c}
+                                                      data-end-time={shiftBreak.sirenum__End_Time__c}
+                                                      onclick={handleBreakEdit}>
+                                                      <span
+                                                         class="slds-text-color_success">{shiftBreak.BreakHourMinuteLength}</span>
+                                                   </a>
+                                                </li>
+                                             </template>
+                                             <li if:false={record.shift.sirenum__Allow_charge__c}>
+                                                <a data-shift={record.Id} data-date={record.shiftDate}
+                                                   data-start-time={record.shift.sirenum__Scheduled_Start_Time__c}
+                                                   data-end-time={record.shift.sirenum__Scheduled_End_Time__c}
+                                                   onclick={handleBreakEdit}>
+                                                   Add
+                                                </a>
+                                             </li>
+                                          </ul>
+                                       </div>
+                                    </div>
+                                    <div if:false={record.hasBreaks}>
+                                       <ul>
+                                          <li>
+                                             No Breaks
+                                          </li>
+                                          <div if:true={record.portalHoursEntry}>
+                                             <li if:false={record.shift.sirenum__Allow_Charge__c}>
+                                                <a data-shift={record.Id} data-date={record.shiftDate}
+                                                   data-start-time={record.shift.sirenum__Scheduled_Start_Time__c}
+                                                   data-end-time={record.shift.sirenum__Scheduled_End_Time__c}
+                                                   onclick={handleBreakEdit}>
+                                                   Add
+                                                </a>
+                                             </li>
+                                          </div>
+                                       </ul>
+                                    </div>
+                                 </td> -->
+
+                                 <!-- Break -->
+                                 <td>
+                                    <div if:true={record.portalHoursEntry}>
+                                       <ul>
+
+                                          <!-- First Break -->
+                                          <li if:true={record.shift.sirenum__Break_Length__c}>
+                                             <a data-shift={record.shift.Id} data-break="first"
+                                                onclick={handleBreakEdit}>
+                                                <span class="slds-text-color_success">
+                                                   First Break: {record.shift.sirenum__Break_Length__c} min
+                                                </span>
+                                             </a>
+                                          </li>
+
+                                          <!-- Second Break -->
+                                          <li if:true={record.shift.tc9_ext_sirint__Second_Break_Length__c}>
+                                             <a data-shift={record.shift.Id} data-break="second"
+                                                onclick={handleBreakEdit}>
+                                                <span class="slds-text-color_success">
+                                                   Second Break: {record.shift.tc9_ext_sirint__Second_Break_Length__c}
+                                                   min
+                                                </span>
+                                             </a>
+                                          </li>
+
+                                          <!-- SINGLE Add Option -->
+                                          <li if:false={record.shift.tc9_ext_sirint__Second_Break_Length__c}>
+                                             <a data-shift={record.shift.Id} data-break="add" onclick={handleBreakEdit}>
+                                                Add
+                                             </a>
+                                          </li>
+
+                                       </ul>
+                                    </div>
+
+                                    <div if:false={record.portalHoursEntry}>
+                                       <ul>
+                                          <li>No Breaks</li>
+                                       </ul>
+                                    </div>
+                                 </td>
+
+
+
+                                 <!-- <td>
+                                       <div class="slds-truncate" data-query={record.query}>
+                                          <a data-query={record.query} onclick={handleOpenQuery} if:true={record.hasQuery}>
+                                             <span class="">{record.query}</span>
+                                         </a>
+                                         <div if:false={record.hasQuery}>
+                                             <span><strong>N/A</strong></span>                                          
+                                         </div>
+                                       </div>
+                                    </td> -->
+                                 <!-- <td>
+                                    <div data-total={record.shift.Id} class="total-column slds-truncate">
+                                       {record.shiftTotalColumn}
+                                    </div>
+                                 </td> -->
+                                 <!-- <td>
+                                       <div lwc:if={record.hasGoodRating} class="slds-text-color_success">
+                                          {record.clientRating}
+                                       </div>
+                                       <div lwc:if={record.hasPoorRating} class="slds-text-color_error">
+                                          {record.clientRating}
+                                       </div>
+                                       <div lwc:if={record.hasAvgRating} class="warning-feedback">
+                                          {record.clientRating}
+                                       </div>
+                                       <div if:false={record.hasRatings}>
+                                          <strong>{record.ratingPlaceholder}</strong>
+                                       </div>
+                                    </td> -->
+                                 <td>
+                                    <div lwc:if={record.poorFeedback} class="slds-text-color_error">
+                                       {record.feedback}
+                                    </div>
+                                    <div lwc:if={record.lowFeedback} class="warning-feedback">
+                                       {record.feedback}
+                                    </div>
+                                    <div lwc:if={record.goodFeedback} class="slds-text-color_success">
+                                       {record.feedback}
+                                    </div>
+                                    <div lwc:if={record.noFeedback}>
+                                       {record.feedback}
+                                    </div>
+                                 </td>
+                                 <!-- <td>
+                                       <template if:true={record.shift.sirenum__Contract__c}>
+                                          <template if:true={record.shift.sirenum__Contract__r.sirenum__Account_Manager__c}>
+                                             <div if:true={record.shift.sirenum__Contract__r.sirenum__Account_Manager__c} class="slds-truncate" title={record.shift.sirenum__Contract__r.sirenum__Account_Manager__r.Name} style="width: 5rem;">
+                                                <a data-record={record.shift.sirenum__Contract__r.sirenum__Account_Manager__c} data-object="Contact" 
+                                                   onclick={handleNavigateClick}>{record.shift.sirenum__Contract__r.sirenum__Account_Manager__r.Name}</a>
+                                             </div>
+                                             <div if:false={record.shift.sirenum__Contract__r.sirenum__Account_Manager__c}>
+                                                No {SHIFT_DESC.fields.sirenum__Contract__r.sirenum__Account_Manager__c.label}
+                                             </div>
+                                          </template>
+                                       </template>
+                                    </td> -->
+                                 <!-- Pay and Charge Approval -->
+                                 <td if:true={_CAN_SEE_APPROVE_PAY_AND_CHARGE}>
+                                    <template if:true={_CAN_APPROVE_PAY_AND_CHARGE}>
+                                       <lightning-input type="checkbox-button" variant="label-hidden"
+                                          data-record-id={record.Id} data-name="sirenum__Allow_charge__c"
+                                          data-name-second="sirenum__Allow_pay__c"
+                                          data-approver="sirenum__Client_Approval_By__c"
+                                          checked={record.shift.sirenum__Allow_charge__c}
+                                          onchange={handleCheckboxChange}
+                                          disabled={record.shift.Lock_Approve_Charge__c}></lightning-input>
+                                    </template>
+                                    <template if:false={_CAN_APPROVE_PAY_AND_CHARGE}>
+                                       <lightning-input type="checkbox-button" variant="label-hidden"
+                                          data-record-id={record.Id} data-name="sirenum__Allow_charge__c"
+                                          data-name-second="sirenum__Allow_pay__c"
+                                          checked={record.shift.sirenum__Allow_charge__c}
+                                          onchange={handleCheckboxChange} disabled></lightning-input>
+                                    </template>
+                                 </td>
+                                 <!-- Attachment icon -->
+                                 <td>
+                                    <template if:true={record.hasAttachment}>
+                                       <lightning-button-icon icon-name="utility:attach" alternative-text="Attachments"
+                                          title="View Attachments" data-id={record.Id} onclick={openAttachmentPopup}>
+                                       </lightning-button-icon>
+                                    </template>
+                                 </td>
+                                 <!-- <td if:true={_CAN_REJECT_SHIFT}>
+                                       <lightning-input type="checkbox-button" variant="label-hidden"
+                                          data-record-id={record.Id}
+                                          data-rejection-reason={record.shift.Rejection_Reason__c}
+                                          data-rejection-reason-other={record.shift.Rejection_Reason_Other__c}
+                                          data-name="Rejected__c"
+                                          checked={record.shift.Rejected__c}
+                                          onchange={handleRejection}
+                                       ></lightning-input>
+                                    </td> -->
+                              </tr>
+                           </template>
+                        </tbody>
+                     </template>
+                  </table>
+               </template>
+            </div>
+         </div>
+      </div>
+   </article>
+   <footer class="slds-card__footer" if:true={hasChanges}>
+      <!-- Saving General Error -->
+      <div class="slds-popover_container">
+         <!-- Disabled - now using a popover 
+               <section class="slds-popover slds-popover_error slds-nubbin_bottom-left c-absolute-position c-general-error-popover" role="dialog" if:true={showGeneralError}>
+               <button class="slds-button slds-button_icon slds-button_icon-small slds-float_right slds-popover__close slds-button_icon-inverse" title="Close dialog" onclick={toggleGeneralError}>
+                   <svg class="slds-button__icon" aria-hidden="true">
+                       <use xlink:href="/_slds/icons/utility-sprite/svg/symbols.svg#close"></use>
+                   </svg>
+               </button>
+               <header class="slds-popover__header">
+                   <div class="slds-media slds-media_center slds-has-flexi-truncate ">
+                       <div class="slds-media__figure">
+                           <span class="slds-icon_container slds-icon-utility-error">
+                               <svg class="slds-icon slds-icon_x-small" aria-hidden="true"><use xlink:href="/_slds/icons/utility-sprite/svg/symbols.svg#error"></use></svg>
+                           </span>
+                       </div>
+                       <div class="slds-media__body">
+                           <h2 class="slds-truncate slds-text-heading_medium" title="Resolve error">Resolve error</h2>
+                       </div>
+                   </div>
+               </header>
+               <div class="slds-popover__body">
+                   <p>{generalErrorMessage}</p>
+               </div>
+               </section> -->
+         <!-- General Error Indicator -->
+         <a class="slds-button c-custom-error-indicator" tabindex="-1" if:true={hasGeneralError}
+            onclick={toggleGeneralError}>
+            <svg aria-hidden="true" class="slds-icon slds-icon-text-error slds-icon--x-small">
+               <use xlink:href="/_slds/icons/utility-sprite/svg/symbols.svg#error"></use>
+            </svg>
+         </a>
+
+      </div>
+   </footer>
+
+   <!-- FILTERING COMPONENT MODAL -->
+   <div class={getExpressionBuilderWrapperClass}>
+      <section role="dialog" tabindex="-1" aria-modal="true" class="slds-modal slds-fade-in-open slds-modal_large">
+         <div class="slds-modal__container">
+            <header class="slds-modal__header">
+               <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close"
+                  onclick={closeFiltersModal}>
+                  <lightning-icon icon-name="utility:close" variant="inverse" size="small"></lightning-icon>
+               </button>
+               <h2 class="slds-text-heading_medium slds-hyphenate">Filters Manager</h2>
+            </header>
+            <div class="slds-modal__content slds-p-around_medium">
+               <c-filter-component target-object="sirenum__Shift__c" onloadingstatechange={handleFilterLoadingState}
+                  value={filterComponentValue} filter-group="1"></c-filter-component>
+            </div>
+            <footer class="slds-modal__footer">
+               <lightning-button label="Cancel" title="Cancel" class="slds-m-left_x-small" onclick={closeFiltersModal}
+                  disabled={isSaving}></lightning-button>
+               <lightning-button variant="brand" label="Apply" title="Apply Filters" class="slds-m-left_x-small"
+                  onclick={applyFilter} disabled={isSaving}></lightning-button>
+            </footer>
+         </div>
+      </section>
+      <div class="slds-backdrop slds-backdrop_open"></div>
+   </div>
+
+   <!-- GENERAL ERROR POPOVER -->
+   <div if:true={showGeneralError}>
+      <section role="alertdialog" tabindex="0" class="slds-modal slds-fade-in-open slds-modal_prompt" aria-modal="true">
+         <div class="slds-modal__container">
+            <header class="slds-modal__header slds-theme_error slds-theme_alert-texture">
+               <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close"
+                  onclick={toggleGeneralError}>
+                  <svg class="slds-button__icon slds-button__icon_large" aria-hidden="true">
+                     <use xlink:href="/_slds/icons/utility-sprite/svg/symbols.svg#close"></use>
+                  </svg>
+               </button>
+               <h2 class="slds-text-heading_medium">Saving Error</h2>
+            </header>
+            <div class="slds-modal__content slds-p-around_medium">
+               <p>{generalErrorMessage}</p>
+            </div>
+            <footer class="slds-modal__footer slds-theme_default">
+               <button class="slds-button slds-button_neutral" onclick={toggleGeneralError}>Close</button>
+            </footer>
+         </div>
+      </section>
+      <div class="slds-backdrop slds-backdrop_open"></div>
+   </div>
+   <!-- Breaks Create/Edit/Delete -->
+   <c-shift-break-editor onupdate={refresh}></c-shift-break-editor>
+   <!--Expenses Create/Edit/Delete-->
+   <c-expense-editor onupdate={refresh}></c-expense-editor>
+   <!--Rejection reason addition-->
+   <c-rejection-editor onupdate={updateRejection}></c-rejection-editor>
+   <c-signature-modal></c-signature-modal>
+   <c-query-modal></c-query-modal>
+
+   <!-- ================= ATTACHMENT POPUP MODAL ================= -->
+   <template if:true={showAttachmentModal}>
+      <section role="dialog" class="slds-modal slds-fade-in-open slds-modal_medium">
+         <div class="slds-modal__container">
+
+            <!-- HEADER -->
+            <header class="slds-modal__header slds-theme_shade">
+               <h2 class="slds-text-heading_medium">
+                  Attachments ({currentFiles.length})
+               </h2>
+            </header>
+
+            <!-- BODY -->
+            <div class="slds-modal__content slds-p-around_medium" style="min-height:200px">
+
+               <!-- IF FILES PRESENT -->
+               <template if:true={currentFiles}>
+
+                  <div class="slds-grid slds-wrap">
+
+                     <template for:each={currentFiles} for:item="file">
+
+                        <div key={file.Id} class="slds-col slds-size_1-of-1 slds-p-around_x-small">
+
+                           <div class="file-card">
+
+                              <div class="slds-grid slds-grid_align-spread slds-grid_vertical-align-center">
+
+                                 <!-- LEFT SIDE -->
+                                 <div class="slds-grid slds-grid_vertical-align-center">
+
+                                    <!-- FILE ICON -->
+                                    <lightning-icon icon-name="doctype:attachment" size="small"
+                                       class="slds-m-right_small">
+                                    </lightning-icon>
+
+                                    <!-- FILE NAME CLICKABLE -->
+                                    <a class="file-name" data-id={file.Id} data-versionid={file.versionId} data-isattachment={file.isAttachment} onclick={previewFile}>
+                                       {file.title}
+                                    </a>
+
+                                 </div>
+
+                                 <!-- RIGHT SIDE BUTTONS -->
+                                 <div>
+
+                                    <!-- PREVIEW ICON -->
+                                    <lightning-button-icon icon-name="utility:preview" variant="border-filled"
+                                       alternative-text="Preview" title="Preview" data-id={file.Id} data-versionid={file.versionId} data-isattachment={file.isAttachment}
+                                       onclick={previewFile}>
+                                    </lightning-button-icon>
+
+                                 </div>
+
+                              </div>
+
+                           </div>
+
+                        </div>
+
+                     </template>
+
+                  </div>
+
+               </template>
+
+               <!-- NO FILE -->
+               <template if:false={currentFiles}>
+                  <div class="slds-align_absolute-center slds-p-around_large">
+                     <div class="slds-text-color_weak">
+                        No Attachments Available
+                     </div>
+                  </div>
+               </template>
+
+            </div>
+
+            <!-- FOOTER -->
+            <footer class="slds-modal__footer">
+               <lightning-button variant="neutral" label="Close" onclick={closeAttachmentPopup}>
+               </lightning-button>
+            </footer>
+
+         </div>
+      </section>
+
+      <div class="slds-backdrop slds-backdrop_open"></div>
+   </template>
+
+
+</template>

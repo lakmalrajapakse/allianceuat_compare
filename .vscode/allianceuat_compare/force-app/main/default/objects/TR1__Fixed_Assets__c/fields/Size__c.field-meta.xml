@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Size__c</fullName>
+    <inlineHelpText>Please select the appropriate size based on your uniform type:
+
+**For Scrub Shirt:
+- Women&apos;s: Select size 6, 8, 10, 12, 14, or 16
+- Unisex: Select size XS, S, M, L, XL, or 2XL
+
+**For Polo Shirt:
+- Women&apos;s: Select size 6, 8, 10, 12, 14, 16, 22, or 24
+- Unisex: Select size S, M, L, XL, 2XL, or 3XL
+
+**For Scrub Pants (both Regular and Long Length):
+Select size XS, S, M, L, XL, 2XL, or 3XL</inlineHelpText>
+    <label>Size</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Type__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>6</fullName>
+                <default>false</default>
+                <label>6</label>
+            </value>
+            <value>
+                <fullName>8</fullName>
+                <default>false</default>
+                <label>8</label>
+            </value>
+            <value>
+                <fullName>10</fullName>
+                <default>false</default>
+                <label>10</label>
+            </value>
+            <value>
+                <fullName>12</fullName>
+                <default>false</default>
+                <label>12</label>
+            </value>
+            <value>
+                <fullName>14</fullName>
+                <default>false</default>
+                <label>14</label>
+            </value>
+            <value>
+                <fullName>16</fullName>
+                <default>false</default>
+                <label>16</label>
+            </value>
+            <value>
+                <fullName>22</fullName>
+                <default>false</default>
+                <label>22</label>
+            </value>
+            <value>
+                <fullName>24</fullName>
+                <default>false</default>
+                <label>24</label>
+            </value>
+            <value>
+                <fullName>XS</fullName>
+                <default>false</default>
+                <label>XS</label>
+            </value>
+            <value>
+                <fullName>S</fullName>
+                <default>false</default>
+                <label>S</label>
+            </value>
+            <value>
+                <fullName>M</fullName>
+                <default>false</default>
+                <label>M</label>
+            </value>
+            <value>
+                <fullName>L</fullName>
+                <default>false</default>
+                <label>L</label>
+            </value>
+            <value>
+                <fullName>XL</fullName>
+                <default>false</default>
+                <label>XL</label>
+            </value>
+            <value>
+                <fullName>2XL</fullName>
+                <default>false</default>
+                <label>2XL</label>
+            </value>
+            <value>
+                <fullName>3XL</fullName>
+                <default>false</default>
+                <label>3XL</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Womens</controllingFieldValue>
+            <valueName>6</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Womens</controllingFieldValue>
+            <valueName>8</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Womens</controllingFieldValue>
+            <valueName>10</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Womens</controllingFieldValue>
+            <valueName>12</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Womens</controllingFieldValue>
+            <valueName>14</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Womens</controllingFieldValue>
+            <valueName>16</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Womens</controllingFieldValue>
+            <valueName>22</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Womens</controllingFieldValue>
+            <valueName>24</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mens</controllingFieldValue>
+            <controllingFieldValue>Unisex</controllingFieldValue>
+            <controllingFieldValue>Reg Length</controllingFieldValue>
+            <controllingFieldValue>Long Length</controllingFieldValue>
+            <valueName>XS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mens</controllingFieldValue>
+            <controllingFieldValue>Unisex</controllingFieldValue>
+            <controllingFieldValue>Reg Length</controllingFieldValue>
+            <controllingFieldValue>Long Length</controllingFieldValue>
+            <valueName>S</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mens</controllingFieldValue>
+            <controllingFieldValue>Unisex</controllingFieldValue>
+            <controllingFieldValue>Reg Length</controllingFieldValue>
+            <controllingFieldValue>Long Length</controllingFieldValue>
+            <valueName>M</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mens</controllingFieldValue>
+            <controllingFieldValue>Unisex</controllingFieldValue>
+            <controllingFieldValue>Reg Length</controllingFieldValue>
+            <controllingFieldValue>Long Length</controllingFieldValue>
+            <valueName>L</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mens</controllingFieldValue>
+            <controllingFieldValue>Unisex</controllingFieldValue>
+            <controllingFieldValue>Reg Length</controllingFieldValue>
+            <controllingFieldValue>Long Length</controllingFieldValue>
+            <valueName>XL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mens</controllingFieldValue>
+            <controllingFieldValue>Unisex</controllingFieldValue>
+            <controllingFieldValue>Reg Length</controllingFieldValue>
+            <controllingFieldValue>Long Length</controllingFieldValue>
+            <valueName>2XL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mens</controllingFieldValue>
+            <controllingFieldValue>Unisex</controllingFieldValue>
+            <controllingFieldValue>Reg Length</controllingFieldValue>
+            <controllingFieldValue>Long Length</controllingFieldValue>
+            <valueName>3XL</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

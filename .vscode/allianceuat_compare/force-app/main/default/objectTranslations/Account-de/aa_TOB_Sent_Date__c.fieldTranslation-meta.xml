@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- To show when the contract has been sent to the client --></help>
+    <label><!-- TOB Sent Date --></label>
+    <name>aa_TOB_Sent_Date__c</name>
+</CustomFieldTranslation>

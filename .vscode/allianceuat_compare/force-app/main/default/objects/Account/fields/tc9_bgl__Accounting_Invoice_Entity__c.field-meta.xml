@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>tc9_bgl__Accounting_Invoice_Entity__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <deprecated>false</deprecated>
+    <description>Lookup to the related Invoice Entity record from the Accounting System</description>
+    <inlineHelpText>Lookup to the related Invoice Entity record from the Accounting System</inlineHelpText>
+    <label>Accounting Invoice Entity</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>tc9_bgl__Acc_Segments__c.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Invoice Entity</value>
+        </filterItems>
+        <isOptional>true</isOptional>
+    </lookupFilter>
+    <referenceTo>tc9_bgl__Acc_Segments__c</referenceTo>
+    <relationshipLabel>Invoice Entities</relationshipLabel>
+    <relationshipName>Accounts</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

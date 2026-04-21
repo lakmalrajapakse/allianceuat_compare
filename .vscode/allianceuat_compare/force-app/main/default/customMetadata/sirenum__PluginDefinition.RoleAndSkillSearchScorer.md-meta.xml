@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>RoleAndSkillSearchScorer</label>
+    <protected>false</protected>
+    <values>
+        <field>sirenum__Active__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>sirenum__ClassName__c</field>
+        <value xsi:type="xsd:string">RoleAndSkillSearchScorer</value>
+    </values>
+    <values>
+        <field>sirenum__Enabled__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>sirenum__InitialState__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>sirenum__LongInitialState__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>sirenum__Namespace__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>sirenum__Type__c</field>
+        <value xsi:type="xsd:string">WorkerSearchScorer</value>
+    </values>
+</CustomMetadata>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>tc9_et__Timesheet__c.Branch__c</field>
+    </columns>
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>tc9_et__Timesheet__c.tc9_et__Assignment__c</field>
+    </columns>
+    <columns>
+        <field>tc9_et__Timesheet__c.tc9_et__Employee__c</field>
+    </columns>
+    <columns>
+        <field>tc9_et__Timesheet__c.tc9_et__Payee__c</field>
+    </columns>
+    <columns>
+        <field>tc9_et__Timesheet__c.tc9_et__Client_Name__c</field>
+    </columns>
+    <columns>
+        <field>tc9_et__Timesheet__c.tc9_et__Approval_Status_Colour__c</field>
+    </columns>
+    <columns>
+        <field>tc9_et__Timesheet__c.tc9_et__Transaction_Creation_Status_Colour__c</field>
+    </columns>
+    <columns>
+        <field>tc9_et__Timesheet__c.tc9_et__Start_Date__c</field>
+    </columns>
+    <columns>
+        <field>tc9_et__Timesheet__c.tc9_et__End_Date__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>tc9_et__Timesheet__c.tc9_et__Total_Hours__c</field>
+    </columns>
+    <description>Timesheets with payee</description>
+    <format>Tabular</format>
+    <name>Timesheets with payee</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$tc9_et__Timesheet__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>tc9_et__Timesheet__c.tc9_et__End_Date__c</dateColumn>
+        <interval>INTERVAL_LAST120</interval>
+    </timeFrameFilter>
+</Report>

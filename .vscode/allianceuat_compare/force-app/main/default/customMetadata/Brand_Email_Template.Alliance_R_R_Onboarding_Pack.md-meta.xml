@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Alliance R&amp;R Onboarding Pack</label>
+    <protected>false</protected>
+    <values>
+        <field>Brand__c</field>
+        <value xsi:type="xsd:string">Rural &amp; Remote</value>
+    </values>
+    <values>
+        <field>Email_Template_Name__c</field>
+        <value xsi:type="xsd:string">ARRH - Onboarding Pack</value>
+    </values>
+    <values>
+        <field>Notification_Name__c</field>
+        <value xsi:type="xsd:string">Onboarding Pack</value>
+    </values>
+</CustomMetadata>

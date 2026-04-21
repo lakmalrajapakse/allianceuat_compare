@@ -1,0 +1,802 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>56.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <decisions>
+        <name>Invoice_Type</name>
+        <label>Invoice Type</label>
+        <locationX>440</locationX>
+        <locationY>384</locationY>
+        <defaultConnector>
+            <targetReference>Get_Payroll_Invoice_Setting_Record_Type</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Payroll_Items</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.RecordType.Name</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>Payroll Items</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Get_Payroll_Invoice_Setting_Record_Type</targetReference>
+            </connector>
+            <label>Payroll Items</label>
+        </rules>
+        <rules>
+            <name>Invoiceable_Fees</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.RecordType.Name</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>Invoiceable Fees</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Get_Invoiceable_Fee_Setting_Record_Type</targetReference>
+            </connector>
+            <label>Invoiceable Fees</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Update_Invoice_for_Custom</name>
+        <label>Update Invoice for Custom?</label>
+        <locationX>440</locationX>
+        <locationY>1290</locationY>
+        <defaultConnector>
+            <targetReference>Get_Orphaned_PT</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>No_Custom</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Pay_Transaction.WFM_Contract__r.Custom_Invoice_Group_By__c</leftValueReference>
+                <operator>EqualTo</operator>
+            </conditions>
+            <conditions>
+                <leftValueReference>Get_Pay_Transaction</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Invoice_No_Custom</targetReference>
+            </connector>
+            <label>No Custom</label>
+        </rules>
+        <rules>
+            <name>Yes</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Pay_Transaction.WFM_Contract__r.Custom_Invoice_Group_By__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+            </conditions>
+            <conditions>
+                <leftValueReference>Get_Pay_Transaction</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Get_Site</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <description>ALN-436 - Updated to get Invoice Settings of Invoice To Account
+ALN-439 - Used Overrides on invoices</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>frmDeliveryMethod</name>
+        <dataType>String</dataType>
+        <expression>IF(
+OR(
+{!frmInvoicetoAccount} = {!Get_Invoice_to_Account_Default.Id},
+AND(
+{!$Record.tc9_et__Invoice_Total_Ex_Tax__c} = 0,
+{!$Record.tc9_et__Invoice_Total_Inc_Tax__c} = 0
+)), &quot;Paper&quot;, TEXT({!Get_Invoice_Setting.tc9_et__Delivery_Method__c})
+)</expression>
+    </formulas>
+    <formulas>
+        <name>frmDueDate</name>
+        <dataType>Date</dataType>
+        <expression>{!$Record.tc9_et__Invoice_Date__c} + {!Get_Invoice_Setting.tc9_et__Payment_Terms__r.tc9_et__Days_From__c}</expression>
+    </formulas>
+    <formulas>
+        <name>frmFeeDueDate</name>
+        <dataType>Date</dataType>
+        <expression>{!$Record.tc9_et__Invoice_Date__c} + {!Get_Invoiceable_Fee_Invoice_Setting.tc9_et__Payment_Terms__r.tc9_et__Days_From__c}</expression>
+    </formulas>
+    <formulas>
+        <name>frmInvoiceEmailCC</name>
+        <dataType>String</dataType>
+        <expression>CASE(TEXT({!Get_Pay_Transaction.WFM_Contract__r.Custom_Invoice_Group_By__c}),
+&quot;Account &amp; Site&quot;, {!Get_Pay_Transaction.tc9_pr__Client__r.tc9_et__Invoice_Email_CC__c},
+&quot;Contract &amp; Site&quot;,{!Get_Pay_Transaction.WFM_Contract__r.Invoice_Email_CC__c},
+&quot;Contract&quot;, {!Get_Pay_Transaction.WFM_Contract__r.Invoice_Email_CC__c},
+&quot;Site&quot;, {!Get_Site.Invoice_Email_CC__c},
+&quot;Site &amp; Employee&quot;, {!Get_Site.Invoice_Email_CC__c},
+&quot;Location&quot;, {!Get_Location.Invoice_Email_CC__c},
+&quot;Location &amp; Employee&quot;, {!Get_Location.Invoice_Email_CC__c},
+&quot;Location &amp; Job Type&quot;, {!Get_Location.Invoice_Email_CC__c}, &quot;&quot;
+)</expression>
+    </formulas>
+    <formulas>
+        <name>frmInvoiceHeader</name>
+        <dataType>String</dataType>
+        <expression>&quot;&lt;br/&gt;&quot; &amp;
+CASE(
+    TEXT({!Get_Pay_Transaction.WFM_Contract__r.Custom_Invoice_Group_By__c}),
+    &quot;Account &amp; Site&quot;, &quot;&lt;b&gt;Site:&lt;/b&gt; &quot; &amp; {!Get_Site.Name},
+    &quot;Contract &amp; Site&quot;, &quot;&lt;b&gt;Contract: &lt;/b&gt;&quot; &amp; {!Get_Pay_Transaction.WFM_Contract__r.Name} &amp; &quot;&lt;br/&gt;&quot; &amp; &quot;&lt;b&gt;Site:&lt;/b&gt; &quot; &amp; {!Get_Site.Name},
+    &quot;Contract&quot;, &quot;&lt;b&gt;Contract: &lt;/b&gt;&quot; &amp; {!Get_Pay_Transaction.WFM_Contract__r.Name},
+    &quot;Site&quot;, &quot;&lt;b&gt;Site:&lt;/b&gt; &quot; &amp; {!Get_Site.Name},
+    &quot;Site &amp; Employee&quot;, &quot;&lt;b&gt;Site:&lt;/b&gt; &quot; &amp; {!Get_Site.Name},
+    &quot;Location&quot;, &quot;&lt;b&gt;Site:&lt;/b&gt; &quot; &amp; {!Get_Site.Name} &amp; &quot;&lt;br/&gt;&quot; &amp; &quot;&lt;b&gt;Location:&lt;/b&gt; &quot; &amp; {!Get_Location.Name},
+    &quot;Location &amp; Employee&quot;, &quot;&lt;b&gt;Site:&lt;/b&gt; &quot; &amp; {!Get_Site.Name} &amp; &quot;&lt;br/&gt;&quot; &amp; &quot;&lt;b&gt;Location:&lt;/b&gt; &quot; &amp; {!Get_Location.Name},
+    &quot;Location &amp; Job Type&quot;, &quot;&lt;b&gt;Site:&lt;/b&gt; &quot; &amp; {!Get_Site.Name} &amp; &quot;&lt;br/&gt;&quot; &amp; &quot;&lt;b&gt;Location:&lt;/b&gt; &quot; &amp; {!Get_Location.Name},
+    &quot;&quot;
+)</expression>
+    </formulas>
+    <formulas>
+        <name>frmInvoicetoAccount</name>
+        <dataType>String</dataType>
+        <expression>CASE(TEXT({!Get_Pay_Transaction.WFM_Contract__r.Custom_Invoice_Group_By__c}),
+&quot;Account &amp; Site&quot;, {!Get_Pay_Transaction.tc9_pr__Client__c},
+&quot;Contract &amp; Site&quot;,{!Get_Pay_Transaction.WFM_Contract__r.tc9_ext_sirint__Invoice_To_Account__c},
+&quot;Contract&quot;, {!Get_Pay_Transaction.WFM_Contract__r.tc9_ext_sirint__Invoice_To_Account__c},
+&quot;Site&quot;, {!Get_Site.Invoice_to_Account__c},
+&quot;Site &amp; Employee&quot;, {!Get_Site.Invoice_to_Account__c},
+&quot;Location&quot;, {!Get_Location.Invoice_to_Account__c},
+&quot;Location &amp; Employee&quot;, {!Get_Location.Invoice_to_Account__c},
+&quot;Location &amp; Job Type&quot;, {!Get_Location.Invoice_to_Account__c}, {!Get_Pay_Transaction.tc9_pr__Client__c}
+)</expression>
+    </formulas>
+    <formulas>
+        <name>frmInvoicetoContact</name>
+        <dataType>String</dataType>
+        <expression>CASE(TEXT({!Get_Pay_Transaction.WFM_Contract__r.Custom_Invoice_Group_By__c}),
+&quot;Account &amp; Site&quot;, {!Get_Pay_Transaction.tc9_pr__Client__r.tc9_et__Invoice_Contact__c},
+&quot;Contract &amp; Site&quot;,{!Get_Pay_Transaction.WFM_Contract__r.Invoice_to_Contact__c},
+&quot;Contract&quot;, {!Get_Pay_Transaction.WFM_Contract__r.Invoice_to_Contact__c},
+&quot;Site&quot;, {!Get_Site.Invoice_to_Contact__c},
+&quot;Site &amp; Employee&quot;, {!Get_Site.Invoice_to_Contact__c},
+&quot;Location&quot;, {!Get_Location.Invoice_to_Contact__c},
+&quot;Location &amp; Employee&quot;, {!Get_Location.Invoice_to_Contact__c},
+&quot;Location &amp; Job Type&quot;, {!Get_Location.Invoice_to_Contact__c}, {!Get_Pay_Transaction.tc9_pr__Client__r.tc9_et__Invoice_Contact__c}
+)</expression>
+    </formulas>
+    <formulas>
+        <name>frmOrphanedDeliveryMethod</name>
+        <dataType>String</dataType>
+        <expression>IF(
+OR(
+{!frmOrphanedInvoiceToAccount} = {!Get_Invoice_to_Account_Default.Id},
+AND(
+{!$Record.tc9_et__Invoice_Total_Ex_Tax__c} = 0,
+{!$Record.tc9_et__Invoice_Total_Inc_Tax__c} = 0
+)), &quot;Paper&quot;, TEXT({!Get_Orphaned_Invoice_Setting.tc9_et__Delivery_Method__c})
+)</expression>
+    </formulas>
+    <formulas>
+        <name>frmOrphanedDueDate</name>
+        <dataType>Date</dataType>
+        <expression>{!$Record.tc9_et__Invoice_Date__c} + {!Get_Orphaned_Invoice_Setting.tc9_et__Payment_Terms__r.tc9_et__Days_From__c}</expression>
+    </formulas>
+    <formulas>
+        <name>frmOrphanedInvoiceToAccount</name>
+        <dataType>String</dataType>
+        <expression>{!Get_Orphaned_PT.tc9_pr__Client__c}</expression>
+    </formulas>
+    <formulas>
+        <name>frmOrphanedInvoicetoContact</name>
+        <dataType>String</dataType>
+        <expression>IF(
+NOT(ISBLANK({!Get_Orphaned_PT.tc9_pr__Assignment__r.tc9_et__Invoice_To_Contact__c})),{!Get_Orphaned_PT.tc9_pr__Assignment__r.tc9_et__Invoice_To_Contact__c}, {!Get_Orphaned_PT.tc9_pr__Client__r.tc9_et__Invoice_Contact__c})</expression>
+    </formulas>
+    <interviewLabel>Invoice Update for Custom Grouping {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Invoice Update for Custom Grouping</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>Get_Invoice_Setting</name>
+        <label>Get Invoice Setting</label>
+        <locationX>440</locationX>
+        <locationY>1614</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Update_Invoice</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>tc9_et__Account__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>frmInvoicetoAccount</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>RecordTypeId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Get_Payroll_Invoice_Setting_Record_Type.Id</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>tc9_et__Invoice_Record_Type__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Payroll_Items</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>tc9_et__Invoice_Setting__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_Invoice_to_Account_Default</name>
+        <label>Get Invoice to Account Default</label>
+        <locationX>440</locationX>
+        <locationY>1074</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Get_Pay_Transaction</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Invoice to Account Default</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Account</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_Invoiceable_Fee_Invoice_Setting</name>
+        <label>Get Invoiceable Fee Invoice Setting</label>
+        <locationX>396</locationX>
+        <locationY>600</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Update_Fee_Invoice</targetReference>
+        </connector>
+        <filterLogic>1 AND 2 AND 5 AND 6 AND (3 OR 4)</filterLogic>
+        <filters>
+            <field>tc9_et__Account__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.tc9_et__Invoice_To_Account__c</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>tc9_et__Effective_Date__c</field>
+            <operator>LessThanOrEqualTo</operator>
+            <value>
+                <elementReference>$Record.tc9_et__Invoice_Date__c</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>tc9_et__Expiry_Date__c</field>
+            <operator>GreaterThanOrEqualTo</operator>
+            <value>
+                <elementReference>$Record.tc9_et__Invoice_Date__c</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>tc9_et__Expiry_Date__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>RecordTypeId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Get_Invoiceable_Fee_Setting_Record_Type.Id</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>tc9_et__Invoice_Record_Type__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Invoiceable_Fees</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>tc9_et__Invoice_Setting__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_Invoiceable_Fee_Setting_Record_Type</name>
+        <label>Get Invoiceable Fee Setting Record Type</label>
+        <locationX>396</locationX>
+        <locationY>492</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Get_Invoiceable_Fee_Invoice_Setting</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>SobjectType</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>tc9_et__Invoice_Setting__c</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Invoiceable Fees</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>RecordType</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_Location</name>
+        <label>Get Location</label>
+        <locationX>440</locationX>
+        <locationY>1506</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Get_Invoice_Setting</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Get_Pay_Transaction.WFM_Location_ID__c</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>sirenum__Location__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_Orphaned_Invoice_Setting</name>
+        <label>Get Orphaned Invoice Setting</label>
+        <locationX>704</locationX>
+        <locationY>1506</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Update_Invoice_for_Orphaned</targetReference>
+        </connector>
+        <filterLogic>1 AND 2 AND 5 AND 6 AND (3 OR 4)</filterLogic>
+        <filters>
+            <field>tc9_et__Account__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>frmOrphanedInvoiceToAccount</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>tc9_et__Effective_Date__c</field>
+            <operator>LessThanOrEqualTo</operator>
+            <value>
+                <elementReference>$Record.tc9_et__Invoice_Date__c</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>tc9_et__Expiry_Date__c</field>
+            <operator>GreaterThanOrEqualTo</operator>
+            <value>
+                <elementReference>$Record.tc9_et__Invoice_Date__c</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>tc9_et__Expiry_Date__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>RecordTypeId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Get_Payroll_Invoice_Setting_Record_Type.Id</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>tc9_et__Invoice_Record_Type__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Payroll_Items</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>tc9_et__Invoice_Setting__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_Orphaned_PT</name>
+        <label>Get Orphaned PT</label>
+        <locationX>704</locationX>
+        <locationY>1398</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Get_Orphaned_Invoice_Setting</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Invoice_ID__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>tc9_pr__Pay_Transaction__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_Pay_Transaction</name>
+        <label>Get Pay Transaction</label>
+        <locationX>440</locationX>
+        <locationY>1182</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Update_Invoice_for_Custom</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Invoice_ID__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>WFM_Contract__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Shift__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>tc9_pr__Pay_Transaction__c</object>
+        <sortField>tc9_et__Purchase_Order_Number__c</sortField>
+        <sortOrder>Desc</sortOrder>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_Payroll_Invoice_Setting_Record_Type</name>
+        <label>Get Payroll Invoice Setting Record Type</label>
+        <locationX>440</locationX>
+        <locationY>966</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Get_Invoice_to_Account_Default</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>SobjectType</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>tc9_et__Invoice_Setting__c</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Payroll Items</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>RecordType</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_Site</name>
+        <label>Get Site</label>
+        <locationX>440</locationX>
+        <locationY>1398</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Get_Location</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Get_Pay_Transaction.WFM_Site_ID__c</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>sirenum__Site__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <name>Turn_OFF_Override</name>
+        <label>Turn OFF Override</label>
+        <locationX>440</locationX>
+        <locationY>1914</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>tc9_et__OV_Invoice__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>tc9_et__OV_Invoice__c</field>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </inputAssignments>
+        <object>tc9_pr__Override_TC9P_Validation__c</object>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Turn_ON_Override</name>
+        <label>Turn ON Override</label>
+        <locationX>440</locationX>
+        <locationY>276</locationY>
+        <connector>
+            <targetReference>Invoice_Type</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>tc9_et__OV_Invoice__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>tc9_et__OV_Invoice__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <object>tc9_pr__Override_TC9P_Validation__c</object>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Fee_Invoice</name>
+        <label>Update Fee Invoice</label>
+        <locationX>396</locationX>
+        <locationY>708</locationY>
+        <connector>
+            <isGoTo>true</isGoTo>
+            <targetReference>Turn_OFF_Override</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>tc9_et__Due_Date__c</field>
+            <value>
+                <elementReference>frmFeeDueDate</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>tc9_et__Invoice_Message__c</field>
+            <value>
+                <elementReference>$Record.tc9_et__Invoice_Entity__r.tc9_et__Invoice_Message__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>tc9_et__Invoice_Setting__c</field>
+            <value>
+                <elementReference>Get_Invoiceable_Fee_Invoice_Setting.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>tc9_et__Payment_Terms__c</field>
+            <value>
+                <elementReference>Get_Invoiceable_Fee_Invoice_Setting.tc9_et__Payment_Terms__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Invoice</name>
+        <label>Update Invoice</label>
+        <locationX>440</locationX>
+        <locationY>1722</locationY>
+        <connector>
+            <targetReference>Turn_OFF_Override</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Invoice_Header__c</field>
+            <value>
+                <elementReference>frmInvoiceHeader</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Location__c</field>
+            <value>
+                <elementReference>Get_Pay_Transaction.WFM_Location_ID__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Site__c</field>
+            <value>
+                <elementReference>Get_Pay_Transaction.WFM_Site_ID__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>WFM_Contract__c</field>
+            <value>
+                <elementReference>Get_Pay_Transaction.WFM_Contract__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>tc9_et__Delivery_Method__c</field>
+            <value>
+                <elementReference>frmDeliveryMethod</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>tc9_et__Due_Date__c</field>
+            <value>
+                <elementReference>frmDueDate</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>tc9_et__Invoice_Email_CC__c</field>
+            <value>
+                <elementReference>frmInvoiceEmailCC</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>tc9_et__Invoice_Entity__c</field>
+            <value>
+                <elementReference>Get_Invoice_Setting.tc9_et__Invoice_Entity__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>tc9_et__Invoice_Message__c</field>
+            <value>
+                <elementReference>$Record.tc9_et__Invoice_Entity__r.tc9_et__Invoice_Message__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>tc9_et__Invoice_Setting__c</field>
+            <value>
+                <elementReference>Get_Invoice_Setting.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>tc9_et__Invoice_To_Account__c</field>
+            <value>
+                <elementReference>frmInvoicetoAccount</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>tc9_et__Invoice_To_Contact__c</field>
+            <value>
+                <elementReference>frmInvoicetoContact</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>tc9_et__Payment_Terms__c</field>
+            <value>
+                <elementReference>Get_Invoice_Setting.tc9_et__Payment_Terms__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Invoice_for_Orphaned</name>
+        <label>Update Invoice for Orphaned</label>
+        <locationX>704</locationX>
+        <locationY>1614</locationY>
+        <connector>
+            <targetReference>Turn_OFF_Override</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>tc9_et__Delivery_Method__c</field>
+            <value>
+                <elementReference>frmOrphanedDeliveryMethod</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>tc9_et__Due_Date__c</field>
+            <value>
+                <elementReference>frmOrphanedDueDate</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>tc9_et__Invoice_Message__c</field>
+            <value>
+                <elementReference>$Record.tc9_et__Invoice_Entity__r.tc9_et__Invoice_Message__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>tc9_et__Invoice_Setting__c</field>
+            <value>
+                <elementReference>Get_Orphaned_Invoice_Setting.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>tc9_et__Invoice_To_Account__c</field>
+            <value>
+                <elementReference>frmOrphanedInvoiceToAccount</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>tc9_et__Invoice_To_Contact__c</field>
+            <value>
+                <elementReference>frmOrphanedInvoicetoContact</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>tc9_et__Payment_Terms__c</field>
+            <value>
+                <elementReference>Get_Orphaned_Invoice_Setting.tc9_et__Payment_Terms__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Invoice_No_Custom</name>
+        <label>Update Invoice - No Custom</label>
+        <locationX>176</locationX>
+        <locationY>1398</locationY>
+        <connector>
+            <targetReference>Turn_OFF_Override</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>tc9_et__Invoice_Message__c</field>
+            <value>
+                <elementReference>$Record.tc9_et__Invoice_Entity__r.tc9_et__Invoice_Message__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+        <filterFormula>NOT(ISBLANK({!$Record.tc9_et__Invoice_Total_Inc_Tax__c}))</filterFormula>
+        <object>tc9_et__Invoice__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <scheduledPaths>
+            <connector>
+                <targetReference>Turn_ON_Override</targetReference>
+            </connector>
+            <pathType>AsyncAfterCommit</pathType>
+        </scheduledPaths>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

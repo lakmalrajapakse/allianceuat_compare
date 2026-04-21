@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Default</label>
+    <protected>false</protected>
+    <values>
+        <field>mancom__Custom_Field_Config__c</field>
+        <value xsi:type="xsd:string">{&quot;version&quot;:0,&quot;categories&quot;:{&quot;ID Doc&quot;:{&quot;editableFields&quot;:[&quot;sirenum__status__c&quot;],&quot;displayFields&quot;:[&quot;sirenum__status__c&quot;]},&quot;Client Induction&quot;:{&quot;editableFields&quot;:[&quot;sirenum__status__c&quot;],&quot;displayFields&quot;:[&quot;sirenum__status__c&quot;]},&quot;Exclusion&quot;:{&quot;editableFields&quot;:[&quot;exclusion_type__c&quot;,&quot;exclusion_note__c&quot;,&quot;sirenum__status__c&quot;],&quot;displayFields&quot;:[&quot;exclusion_type__c&quot;,&quot;exclusion_note__c&quot;,&quot;sirenum__status__c&quot;]},&quot;Clearance&quot;:{&quot;editableFields&quot;:[],&quot;displayFields&quot;:[&quot;sirenum__comments__c&quot;]},&quot;Skills&quot;:{&quot;editableFields&quot;:[&quot;sk_status__c&quot;],&quot;displayFields&quot;:[&quot;sirenum__status__c&quot;]}}}</value>
+    </values>
+</CustomMetadata>

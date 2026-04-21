@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Condition_Object_Title_Field__c</fullName>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>Condition Object Title Field</label>
+    <metadataRelationshipControllingField>SIM_Filter_Condition__mdt.Condition_Object__c</metadataRelationshipControllingField>
+    <referenceTo>FieldDefinition</referenceTo>
+    <relationshipLabel>Shift_Approval_Conditions1</relationshipLabel>
+    <relationshipName>Shift_Approval_Conditions1</relationshipName>
+    <required>false</required>
+    <type>MetadataRelationship</type>
+    <unique>false</unique>
+</CustomField>

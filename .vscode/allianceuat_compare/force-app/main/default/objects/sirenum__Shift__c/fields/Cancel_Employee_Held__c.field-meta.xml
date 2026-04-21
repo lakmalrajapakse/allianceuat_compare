@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cancel_Employee_Held__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Hold Shift before Cancellation to enable Worker to be assigned to a new Shift</description>
+    <label>Cancel Employee Held</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

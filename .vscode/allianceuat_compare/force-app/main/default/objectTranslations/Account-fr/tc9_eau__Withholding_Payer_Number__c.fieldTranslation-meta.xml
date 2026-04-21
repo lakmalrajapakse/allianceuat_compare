@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- ATO Withholding Payer Number for inclusion in STP communication --></help>
+    <label><!-- Withholding Payer Number --></label>
+    <name>tc9_eau__Withholding_Payer_Number__c</name>
+</CustomFieldTranslation>

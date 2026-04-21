@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Vaccination_Status__c</fullName>
+    <label>Vaccination Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>I have received the full dTpa vaccination (Diphtheria, Tetanus &amp; Pertussis)</fullName>
+                <default>false</default>
+                <label>I have received the full dTpa vaccination (Diphtheria, Tetanus &amp; Pertussis)</label>
+            </value>
+            <value>
+                <fullName>I’ve only been vaccinated for Pertussis (Whooping Cough)</fullName>
+                <default>false</default>
+                <label>I’ve only been vaccinated for Pertussis (Whooping Cough)</label>
+            </value>
+            <value>
+                <fullName>I have not been vaccinated yet</fullName>
+                <default>false</default>
+                <label>I have not been vaccinated yet</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

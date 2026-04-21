@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- The balance of the Total Client Paid Expense Scheduled less Total Client Paid Expense Invoiced. Denotes any outstanding scheduled Client Paid Expense that still needs to be invoiced for the Client --></help>
+    <label><!-- Total Client Paid Expense Not Invoiced --></label>
+    <name>tc9_et__Total_Client_Paid_Expense_Not_Invoiced__c</name>
+</CustomFieldTranslation>

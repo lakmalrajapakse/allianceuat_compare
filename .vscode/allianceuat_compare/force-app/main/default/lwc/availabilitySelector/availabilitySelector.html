@@ -1,0 +1,175 @@
+<template>
+    <article class="slds-card slds-m-bottom_small">
+        <div class="slds-card__header slds-grid">
+            <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                <div class="slds-media__figure">
+                    <lightning-icon
+                        icon-name="standard:business_hours"
+                        alternative-text="Availability"
+                        title="Availability"
+                    ></lightning-icon>
+                </div>
+                <div class="slds-media__body">
+                    <h2 class="slds-card__header-title">
+                        <a href="#" class="slds-card__header-link slds-truncate" title="Manage Availability">
+                            <span>Manage Availability</span>
+                        </a>
+                    </h2>
+                </div>
+            </header>
+        </div>
+    </article>
+
+    <article class="slds-card slds-p-around_small">
+        <p>Update your availability regularly to get priority access to shifts that match your preferences!</p>
+        <form>
+            <lightning-layout pull-to-boundary="medium" multiple-rows="true" vertical-align="stretch">
+                <lightning-layout-item
+                    padding="around-small"
+                    flexibility="auto"
+                    size="6"
+                    small-device-size="12"
+                    medium-device-size="12"
+                    large-device-size="6"
+                >
+                    <lightning-input
+                        data-id="dateField"
+                        type="date"
+                        name="fromDateInput"
+                        label="From"
+                        value={fromDate}
+                        onchange={handleDateChange}
+                        required
+                    ></lightning-input>
+                </lightning-layout-item>
+                <lightning-layout-item
+                    padding="around-small"
+                    flexibility="auto"
+                    size="6"
+                    small-device-size="12"
+                    medium-device-size="12"
+                    large-device-size="6"
+                >
+                    <lightning-input
+                        data-id="daysInput"
+                        type="number"
+                        name="daysInput"
+                        required
+                        value={days}
+                        label="Number of Days"
+                        min="1"
+                        max="14"
+                        onchange={handleDaysChange}
+                        message-when-range-underflow="Enter a number between 1 and 14"
+                        message-when-range-overflow="Enter a number between 1 and 14"
+                    ></lightning-input>
+                </lightning-layout-item>
+                <lightning-layout-item
+                    padding="around-small"
+                    size="12"
+                    small-device-size="12"
+                    medium-device-size="12"
+                    large-device-size="12"
+                >
+                    <button
+                        type="submit"
+                        class="slds-button slds-button_neutral slds-button_stretch"
+                        onclick={handleRefreshClick}
+                    >
+                        Refresh
+                    </button>
+                </lightning-layout-item>
+            </lightning-layout>
+        </form>
+        <div class="slds-card__body grid-container">
+            <lightning-spinner alternative-text="Loading" if:true={isLoading} variant="brand"></lightning-spinner>
+            <table if:true={hasData} class="fixed">
+                <tr>
+                    <th>Date</th>
+                    <th class="centered-text ellipsis">AM</th>
+                    <th class="centered-text ellipsis">PM</th>
+                    <th class="centered-text ellipsis">ND</th>
+                    <th class="centered-text ellipsis">All</th>
+                </tr>
+                <template for:each={availabilityDays} for:item="day">
+                    <tr key={day.index}>
+                        <td>
+                            <lightning-formatted-date-time
+                                month="short"
+                                day="2-digit"
+                                weekday="short"
+                                value={day.date}
+                            ></lightning-formatted-date-time>
+                        </td>
+                        <td class="centered">
+                            <c-availability-selector-checkbox
+                                data-day={day.date}
+                                checked={day.am.available}
+                                onavailabilitychanged={handleAmAvailabilityChanged}
+                            ></c-availability-selector-checkbox>
+                        </td>
+                        <td class="centered">
+                            <c-availability-selector-checkbox
+                                data-day={day.date}
+                                checked={day.pm.available}
+                                onavailabilitychanged={handlePmAvailabilityChanged}
+                            ></c-availability-selector-checkbox>
+                        </td>
+                        <td class="centered">
+                            <c-availability-selector-checkbox
+                                data-day={day.date}
+                                checked={day.night.available}
+                                onavailabilitychanged={handleNightAvailabilityChanged}
+                            ></c-availability-selector-checkbox>
+                        </td>
+                        <td class="centered">
+                            <c-availability-selector-checkbox
+                                data-day={day.date}
+                                checked={day.available}
+                                hide-symbol
+                                onavailabilitychanged={handleAllDayAvailabilityChanged}
+                            ></c-availability-selector-checkbox>
+                        </td>
+                    </tr>
+                </template>
+                <tr class="select-all-row">
+                    <td class="right-align vertical-align bold-text">All</td>
+                    <td class="centered">
+                        <c-availability-selector-checkbox
+                            height={periodRowHeight}
+                            hide-symbol
+                            checked={allAmAvailable}
+                            onavailabilitychanged={handleAllAmAvailabilityChanged}
+                        ></c-availability-selector-checkbox>
+                    </td>
+                    <td class="centered">
+                        <c-availability-selector-checkbox
+                            height={periodRowHeight}
+                            hide-symbol
+                            checked={allPmAvailable}
+                            onavailabilitychanged={handleAllPmAvailabilityChanged}
+                        ></c-availability-selector-checkbox>
+                    </td>
+                    <td class="centered">
+                        <c-availability-selector-checkbox
+                            height={periodRowHeight}
+                            hide-symbol
+                            checked={allNightAvailable}
+                            onavailabilitychanged={handleAllNightAvailabilityChanged}
+                        ></c-availability-selector-checkbox>
+                    </td>
+                    <td class="centered"></td>
+                </tr>
+            </table>
+            <c-no-data-illustration if:false={hasData} class="slds-align_absolute-center" style="height: 250px">
+                <div slot="message" class="slds-text-body_regular">No data to show, yet.</div>
+            </c-no-data-illustration>
+            <button
+                class="slds-button slds-m-top_small slds-button_brand slds-button_stretch"
+                onclick={handleSaveClick}
+            >
+                Save
+            </button>
+        </div>
+    </article>
+</template>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Temp_PIN_Expired__c</fullName>
+    <formula>IF(
+    AND(
+								CONTAINS(Account_Approval_Method__c, &quot;PIN&quot;),
+        ISBLANK(Temp_Approver_Mobile__c ),
+								RecordType.Name = &apos;Temporary Approver&apos;
+    ),
+    TRUE,
+    IF(
+        NOT(ISBLANK(Contact__c)),
+        FALSE,
+        (NOW() - PIN_Number_Generated__c) * 24 &gt; 24
+    )
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Temp PIN Expired</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

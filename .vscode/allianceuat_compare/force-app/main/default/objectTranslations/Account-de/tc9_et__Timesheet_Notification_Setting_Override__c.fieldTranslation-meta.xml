@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Defines the notification setting which will be used for Timesheet Notifications when an Assignment is related to the Client. If blank the Timesheet Notification Setting defined on the Pay Schedule related to the Assignment will be applied. --></help>
+    <label><!-- Timesheet Notification Setting Override --></label>
+    <name>tc9_et__Timesheet_Notification_Setting_Override__c</name>
+    <relationshipLabel><!-- Accounts --></relationshipLabel>
+</CustomFieldTranslation>

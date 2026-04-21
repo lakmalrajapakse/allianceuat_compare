@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Idibu e-mail sender</label>
+    <protected>false</protected>
+    <values>
+        <field>TR1__Blacklist_Attachment_Pattern__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>TR1__Email_address_for_Contact__c</field>
+        <value xsi:type="xsd:string">replyTo</value>
+    </values>
+    <values>
+        <field>TR1__Sender_Domain__c</field>
+        <value xsi:type="xsd:string">default</value>
+    </values>
+    <values>
+        <field>TR1__jobPattern__c</field>
+        <value xsi:type="xsd:string">Ref:\s(\w*\s?-\w*\-?\w*)</value>
+    </values>
+    <values>
+        <field>TR1__sourcePattern__c</field>
+        <value xsi:type="xsd:string">Source:\s([a-zA-Z0-9\s]+)\/</value>
+    </values>
+</CustomMetadata>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Do_you_have_any_known_allergies__c</fullName>
+    <defaultValue>false</defaultValue>
+    <inlineHelpText>Do you have any known allergies?</inlineHelpText>
+    <label>Do you have any known allergies?</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

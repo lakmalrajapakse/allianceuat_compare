@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>JobBoard_Employment_Type__c</fullName>
+    <label>Employment Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Full_Time</fullName>
+                <default>false</default>
+                <label>Full Time</label>
+            </value>
+            <value>
+                <fullName>part_time</fullName>
+                <default>false</default>
+                <label>Part Time</label>
+            </value>
+            <value>
+                <fullName>Contract/Temp</fullName>
+                <default>false</default>
+                <label>Contract/Temp</label>
+            </value>
+            <value>
+                <fullName>Casual</fullName>
+                <default>false</default>
+                <label>Casual</label>
+            </value>
+            <value>
+                <fullName>Site 1</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Site 1</label>
+            </value>
+            <value>
+                <fullName>Site 2</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Site 2</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

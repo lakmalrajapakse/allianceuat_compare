@@ -1,0 +1,60 @@
+{
+  "appPageId" : "d9ce9f69-0e14-4b11-9233-6c5ce091d546",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "dataProviders" : [ ],
+  "id" : "4d262173-3b03-4b5d-8bf7-2c59902faa0d",
+  "label" : "Job Board",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "richTextValue" : "<p><strong style=\"font-size: 14px; font-family: sans-serif;\">Job Board</strong></p>"
+      },
+      "componentName" : "forceCommunity:richTextInline",
+      "id" : "32e1fd9c-1ea1-49de-8d5f-14a70f5e82e5",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "a702e6db-9293-41cd-8458-fad41ba7e69e",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "height" : "1000",
+        "pageName" : "Alliance_Internal_Job_Board",
+        "recordId" : "{!recordId}"
+      },
+      "componentName" : "forceCommunity:visualforcePage",
+      "id" : "b71a3fef-a09f-4d34-b87d-9761bc9e08e7",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "13599eb4-5695-4f9d-88df-6462803f64ce",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "27bffda1-71cc-4b58-856e-9761f055fc40",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Job Board"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "622474be-15c2-4aa5-ae1f-c24cfc0f198f",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "00dc4351-7044-4c9b-b8a5-96f1a2bb3e2b",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-job-board"
+}

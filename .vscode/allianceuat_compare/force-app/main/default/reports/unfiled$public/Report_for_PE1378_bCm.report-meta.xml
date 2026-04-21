@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Contact$Name</field>
+    </columns>
+    <columns>
+        <field>Contact.b3o__Certificates__r$Name</field>
+    </columns>
+    <columns>
+        <field>Contact.b3o__Certificates__r$b3o__Certificate_Type__c</field>
+    </columns>
+    <columns>
+        <field>Contact.b3o__Certificates__r$b3o__Status__c</field>
+    </columns>
+    <columns>
+        <field>Contact.b3o__Certificates__r$Certificate_Status__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Contact.b3o__Certificates__r$b3o__Certificate_Type__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Cleaner / Chemical safety,Certificate in Dermoscope and/or Skin Cancer Medicine,Forklift Licence,Influenza Administration Information,Influenza Standing Order,Meal Assistance in Residential Aged Care,NHHI - Hand Hygiene,Vaccine Storage and Cold Chain Management</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Contact$TR1__Candidate_Status__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Active</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Tabular</format>
+    <name>Certificates report for 1378</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>People_with_3b_certificates__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Contact$Birthdate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

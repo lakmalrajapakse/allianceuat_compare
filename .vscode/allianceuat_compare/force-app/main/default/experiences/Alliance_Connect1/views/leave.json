@@ -1,0 +1,76 @@
+{
+  "appPageId" : "d9ce9f69-0e14-4b11-9233-6c5ce091d546",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "e8975374-5ef4-4f27-a413-24eb05aa0ae9",
+  "label" : "Leave",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "72d174fd-821e-4c9c-9c1b-35385673b362",
+          "columns" : [ {
+            "UUID" : "7e95150d-26e6-442b-8930-866b75971401",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "72d174fd-821e-4c9c-9c1b-35385673b362",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "approvedLeaveTab" : "yes",
+            "balancesLeaveTab" : "yes",
+            "currentLeaveTab" : "yes",
+            "forecastEnabled" : "yes",
+            "historyLeaveTab" : "yes",
+            "rejectedLeaveTab" : "yes",
+            "submittedLeaveTab" : "yes"
+          },
+          "componentName" : "tc9_ec:empCommLeave",
+          "id" : "9e9337b4-a7aa-46d7-868a-0e8f8c3f6053",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "7e95150d-26e6-442b-8930-866b75971401",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "3ba59273-5eab-47e6-a33c-e9c0b2cb13b7",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Leave"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "cc5bb518-09b1-4d0c-b010-7c52f0a4afc0",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "78cb72de-7eab-4522-aa30-bed538e3d6d6",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-leave"
+}

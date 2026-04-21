@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SafetyPrecautions_Accommodation__c</fullName>
+    <description>What safety precautions are takeing to ensure the safety of staff in the accomodation?</description>
+    <externalId>false</externalId>
+    <inlineHelpText>What safety precautions are takeing to ensure the safety of staff in the accomodation?</inlineHelpText>
+    <label>SafetyPrecautions Accommodation</label>
+    <length>255</length>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

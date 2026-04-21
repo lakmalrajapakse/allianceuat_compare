@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>ARRH - Screening Pack Final Reminder</name>
+    <style>none</style>
+    <subject>Final reminder to proceed your application with Alliance Rural &amp; Remote Health</subject>
+    <textOnly>FINAL REMINDER TO PROCEED YOUR APPLICATION.
+
+Hi {!Contact.FirstName},
+
+We noticed you haven&apos;t submitted the Screening pack yet.
+
+As we&apos;d love to continue your journey to work with us, please follow the link below to let us know a bit more about you and when would be a good time to call and discuss your application.
+
+OK, LET&apos;S GET STARTED
+
+
+If you have any questions, please feel free to call our friendly staff on 07 4998 5550.
+
+Kind regards,
+Your team at Alliance Rural &amp; Remote Health</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

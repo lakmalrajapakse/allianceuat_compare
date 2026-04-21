@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>tc9_bgl__Integration_Sync_Message__c</fullName>
+    <deprecated>false</deprecated>
+    <description>This is the sync message retrieved from the external application that this record is being synced to/from.</description>
+    <inlineHelpText>This is the sync message retrieved from the external application that this record is being synced to/from.</inlineHelpText>
+    <label>Integration Sync Message</label>
+    <length>32768</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

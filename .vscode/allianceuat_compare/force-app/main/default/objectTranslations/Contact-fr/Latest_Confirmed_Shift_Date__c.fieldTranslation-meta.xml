@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- This is used in the DLRS to pull the latest confirmed shift date for this candidate. --></help>
+    <label><!-- Latest Confirmed Shift Date --></label>
+    <name>Latest_Confirmed_Shift_Date__c</name>
+</CustomFieldTranslation>

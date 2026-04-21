@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>Account</entityName>
+    <fieldName>TR1__Status__c</fieldName>
+    <masterLabel>Account Path</masterLabel>
+    <pathAssistantSteps>
+        <fieldNames>aa_Credit_Check_Status__c</fieldNames>
+        <picklistValueName>Credit Check</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>aa_Inactive_Reason__c</fieldNames>
+        <picklistValueName>Inactive</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>BillingAddress</fieldNames>
+        <fieldNames>tc9_et__Client_Number__c</fieldNames>
+        <picklistValueName>Invoicing &amp; Billing</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>tc9_pr__ABN__c</fieldNames>
+        <fieldNames>OwnerId</fieldNames>
+        <picklistValueName>Prospect</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>aa_TOB_Commencement_Date__c</fieldNames>
+        <fieldNames>aa_TOB_Current__c</fieldNames>
+        <fieldNames>aa_TOB_on_file_ContractPod__c</fieldNames>
+        <fieldNames>aa_TOB_Sent_Date__c</fieldNames>
+        <picklistValueName>Terms &amp; Conditions</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>Client</recordTypeName>
+</PathAssistant>

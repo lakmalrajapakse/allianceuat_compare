@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Number_of_Contract_Fees__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+ISPICKVAL(Contract_Fee_Type__c, &quot;Weekly Fee&quot;),
+(
+CASE(
+    Pro_Rate_Part_Period_Fees__c,
+    &quot;Yes&quot;, CEILING(((TR1__End_Date__c - TR1__Start_Date__c) + 1) / 7),
+    ROUND(((TR1__End_Date__c - TR1__Start_Date__c) + 1) / 7, 2)
+)
+),
+IF(
+ISPICKVAL(Contract_Fee_Type__c, &quot;Monthly Fee&quot;),
+(
+CASE(
+    Pro_Rate_Part_Period_Fees__c,
+    &quot;Yes&quot;, CEILING((TR1__End_Date__c  -  TR1__Start_Date__c )/30.4375 + (MONTH(TR1__End_Date__c) - MONTH( TR1__Start_Date__c))/12.0),
+ROUND((TR1__End_Date__c  -  TR1__Start_Date__c )/30.4375 + (MONTH(TR1__End_Date__c) - MONTH( TR1__Start_Date__c))/12.0, 2)
+)
+),
+0.00
+)
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Number of Contract Fees</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

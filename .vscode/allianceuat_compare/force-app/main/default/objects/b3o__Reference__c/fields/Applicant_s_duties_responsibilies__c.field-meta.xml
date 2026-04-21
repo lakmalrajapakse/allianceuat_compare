@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Applicant_s_duties_responsibilies__c</fullName>
+    <inlineHelpText>What were “applicant” clinical duties &amp; responsibilities in this role?</inlineHelpText>
+    <label>Applicant&apos;s duties &amp; responsibilies</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

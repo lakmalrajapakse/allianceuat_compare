@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Select the origin of the Invoice Settings for Assignments related to this Contract. Choose &apos;Contract&apos; if the settings should be specific to this Contract, or &apos;Account&apos; if the settings should be inherited from the related Account. If &apos;Contract&apos; is selected, the system will automatically create Invoice Settings related to this Contract. --></help>
+    <label><!-- Invoice Settings Source --></label>
+    <name>Invoice_Settings_Source__c</name>
+    <picklistValues>
+        <masterLabel>Account</masterLabel>
+        <translation><!-- Account --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Contract</masterLabel>
+        <translation><!-- Contract --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CDF1</field>
+    </columns>
+    <columns>
+        <field>FK_NAME</field>
+    </columns>
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>sirenum__Shift__c.Schedule_Status__c</field>
+    </columns>
+    <columns>
+        <field>sirenum__Shift__c.sirenum__Shift_Status__c</field>
+    </columns>
+    <columns>
+        <field>sirenum__Shift__c.sirenum__Scheduled_Local_Start_Time__c</field>
+    </columns>
+    <columns>
+        <field>sirenum__Shift__c.sirenum__Scheduled_End_Time__c</field>
+    </columns>
+    <columns>
+        <field>sirenum__Shift__c.sirenum__Scheduled_Local_End_Time__c</field>
+    </columns>
+    <columns>
+        <field>sirenum__Shift__c.sirenum__CancellationReason__c</field>
+    </columns>
+    <customDetailFormulas>
+        <calculatedFormula>IF(
+    (WEEKDAY(sirenum__Shift__c.sirenum__Scheduled_Local_Start_Date__c)) = 1, 
+    &quot;Sunday&quot;, 
+IF(
+    (WEEKDAY(sirenum__Shift__c.sirenum__Scheduled_Local_Start_Date__c)) = 2, 
+    &quot;Monday&quot;,
+IF(
+    (WEEKDAY(sirenum__Shift__c.sirenum__Scheduled_Local_Start_Date__c)) = 3, 
+    &quot;Tuesday&quot;,
+IF(
+    (WEEKDAY(sirenum__Shift__c.sirenum__Scheduled_Local_Start_Date__c)) = 4, 
+    &quot;Wednesday&quot;,
+IF(
+    (WEEKDAY(sirenum__Shift__c.sirenum__Scheduled_Local_Start_Date__c)) = 5, 
+    &quot;Thursday&quot;,
+IF(
+    (WEEKDAY(sirenum__Shift__c.sirenum__Scheduled_Local_Start_Date__c)) = 6, 
+    &quot;Friday&quot;,
+IF(
+    (WEEKDAY(sirenum__Shift__c.sirenum__Scheduled_Local_Start_Date__c)) = 7, 
+    &quot;Saturday&quot;,
+    &quot;No Weekday&quot;)))))))</calculatedFormula>
+        <dataType>Text</dataType>
+        <developerName>CDF1</developerName>
+        <label>Week Day</label>
+        <scale>2</scale>
+    </customDetailFormulas>
+    <filter>
+        <criteriaItems>
+            <column>sirenum__Shift__c.Schedule_Status__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>,Allocated,Completed,Waiting,Name Given,Confirmed,Reconfirm with Employee,Reconfirm with Facility,Reconfirm,In a Cancelled Shift,Shift Cancelled Filled,Shift Cancelled,Unable to Fill</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>sirenum__Shift__c.sirenum__Cancelled__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>0</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>sirenum__Shift__c.sirenum__CancellationReason__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value></value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>FK_$sirenum__Site__c.Branch__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <field>sirenum__Shift__c.sirenum__Scheduled_Start_Time__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Extrastaff Shift Report</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$sirenum__Shift__c@sirenum__Shift__c.sirenum__Site__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>false</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>sirenum__Shift__c.sirenum__Absolute_Local_End_Date__c</dateColumn>
+        <endDate>2025-10-12</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2025-10-06</startDate>
+    </timeFrameFilter>
+</Report>

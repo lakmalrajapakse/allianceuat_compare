@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- All Pay Transactions related to this Contract will be assigned to this Invoice Entity for Invoicing. --></help>
+    <label><!-- Default Invoice Entity --></label>
+    <name>Default_Invoice_Entity__c</name>
+    <relationshipLabel><!-- WFM Contracts (Default Invoice Entity) --></relationshipLabel>
+</CustomFieldTranslation>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>2c9 Client Services</label>
+    <mutingPermissionSets>xc9_Client_Services_Muted</mutingPermissionSets>
+    <permissionSets>Alliance_Custom_Client_Services_Permission_set</permissionSets>
+    <permissionSets>X2cloudnine_Standard_Objects_Permission_Set</permissionSets>
+    <permissionSets>tc9_et__X2Cloudnine_Rate_Calculator</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

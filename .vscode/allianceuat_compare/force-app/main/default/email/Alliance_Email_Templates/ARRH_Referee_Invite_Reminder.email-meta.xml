@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>ARRH - Referee Invite Reminder</name>
+    <style>none</style>
+    <subject>We’d appreciate your help with a reference</subject>
+    <textOnly>WE&apos;D APPRECIATE YOUR INSIGHTS.
+
+Hi {!Referee.FirstName},
+
+Hope this email finds you well. {!TR1__Candidates_Marketed__c.Name} has applied for a {Job title} role with Alliance Rural &amp; Remote Health, and they have listed you as a reference. We’d greatly appreciate it if you could take a few moments to share your insights about their professional experience and suitability for the role.
+
+You can provide the reference by filling out this form: {Link to reference collection form}
+
+If you have any questions at all you can always call us on 07 4998 5550.
+
+Kind regards,
+Your team at Alliance Rural &amp; Remote Health</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

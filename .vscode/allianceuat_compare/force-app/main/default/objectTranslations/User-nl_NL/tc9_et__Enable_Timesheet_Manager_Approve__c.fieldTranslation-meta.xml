@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- When set to TRUE, if the &apos;Hide Timesheet Manager Approve&apos; setting within the TimeCards Config custom setting is set to TRUE, the user will be able to use the &quot;Approve On Behalf&quot; button --></help>
+    <label><!-- Enable Timesheet Manager Approve --></label>
+    <name>tc9_et__Enable_Timesheet_Manager_Approve__c</name>
+</CustomFieldTranslation>

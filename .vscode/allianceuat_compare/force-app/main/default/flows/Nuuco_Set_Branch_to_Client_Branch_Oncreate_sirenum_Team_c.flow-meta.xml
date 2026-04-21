@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>62.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <description>ALN-140 / ALN:30</description>
+    <environments>Default</environments>
+    <interviewLabel>Nuuco: Set Branch to Client Branch Oncreate [] {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Nuuco: Set Branch to Client Branch Oncreate [sirenum__Team__c]</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Update_Job_Role</name>
+        <label>Update Job Role</label>
+        <locationX>176</locationX>
+        <locationY>287</locationY>
+        <inputAssignments>
+            <field>Branch__c</field>
+            <value>
+                <elementReference>$Record.sirenum__Account__r.sirenum__Client__r.Branch__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Update_Job_Role</targetReference>
+        </connector>
+        <filterFormula>AND(
+{!$Record.sirenum__Account__r.sirenum__Client__r.Branch__c} != &apos;&apos;,
+{!$Record.Branch__c} = &apos;&apos;,
+{!$Setup.Automation_Kill_Switch__c.Disabled__c} = False
+)</filterFormula>
+        <object>sirenum__Team__c</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

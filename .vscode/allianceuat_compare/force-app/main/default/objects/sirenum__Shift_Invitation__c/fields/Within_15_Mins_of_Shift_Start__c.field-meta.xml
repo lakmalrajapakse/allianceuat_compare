@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Within_15_Mins_of_Shift_Start__c</fullName>
+    <formula>NOW() &gt; (  sirenum__Shift__r.sirenum__Scheduled_Start_Time__c  - (15 / 1440))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Within 15 Mins of Shift Start</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

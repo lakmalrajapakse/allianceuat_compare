@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Provides front office users with community and Time2Pay access to manage employee records, payroll objects, onboarding clients, and generate reports through the self-service portal.</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>2c9 Front Office</label>
+    <mutingPermissionSets>Alliance_Front_End_User_Muting_Set</mutingPermissionSets>
+    <permissionSets>Alliance_Custom_2cloudnine_Employee_Community_Permission_Set</permissionSets>
+    <permissionSets>tc9_ec__Employee_Community_Permission_Set</permissionSets>
+    <permissionSets>tc9_et__X2cloudnine_Time2Pay_All_Access</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

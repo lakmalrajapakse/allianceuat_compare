@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Période de disponibilité</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Périodes de disponibilité</value>
+    </caseValues>
+    <fieldSets>
+        <label><!-- SAMAvailabilityPeriodFieldset --></label>
+        <name>SAMAvailabilityPeriodFieldset</name>
+    </fieldSets>
+    <gender>Masculine</gender>
+    <layouts>
+        <layout>Availability Period Layout - Alliance</layout>
+        <sections>
+            <label><!-- Applicable Days --></label>
+            <section>Applicable Days</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Availability Period Layout - Alliance Candidate</layout>
+        <sections>
+            <label><!-- Applicable Days --></label>
+            <section>Applicable Days</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Nom de période de disponibilité</nameFieldLabel>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

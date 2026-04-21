@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Custom_Rules</fullName>
+    <active>true</active>
+    <description>To be used for creating Template Groups for Custom Rules</description>
+    <label>Custom Rules</label>
+    <picklistValues>
+        <picklist>Exemption_Type__c</picklist>
+        <values>
+            <fullName>Payroll Tax and Workcover</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Workcover Only</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

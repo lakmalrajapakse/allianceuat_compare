@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "5c7e16f4-cba6-4af0-9a4b-c5f1c0fc3bf7",
+  "appPageId" : "d9ce9f69-0e14-4b11-9233-6c5ce091d546",
+  "configurationTags" : [ ],
+  "devName" : "Contract_Availability__c",
+  "id" : "90fc388d-c676-4090-be2d-a9209f02219c",
+  "label" : "Contract Availability",
+  "pageAccess" : "UseParent",
+  "routeType" : "custom-contract-availability",
+  "type" : "route",
+  "urlPrefix" : "contract-availability"
+}

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- ATO Branch of Payment Entity for inclusion in STP communication --></help>
+    <label><!-- Branch --></label>
+    <name>tc9_eau__Branch__c</name>
+</CustomFieldTranslation>

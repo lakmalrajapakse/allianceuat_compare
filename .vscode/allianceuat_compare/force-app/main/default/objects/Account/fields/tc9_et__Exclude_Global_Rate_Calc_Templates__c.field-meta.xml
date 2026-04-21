@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>tc9_et__Exclude_Global_Rate_Calc_Templates__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Indicates whether global rate calculator templates can be applied to Assignments related to this Account record.</description>
+    <inlineHelpText>Indicates whether global rate calculator templates can be applied to Assignments related to this Account record.</inlineHelpText>
+    <label>Exclude Global Rate Calc Templates?</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>tc9_pr__Yes_No_Picklists</valueSetName>
+    </valueSet>
+</CustomField>

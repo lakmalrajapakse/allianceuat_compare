@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>ALN-489 - Created to set the Payroll Time type to Actual where actual time worked.
+ALN-527 - Replaced with Update_Shift_on_Edit Flow</description>
+    <masterLabel>(REDUNDANT) nuuco - Shift - Set Payroll to Actual Times when populated</masterLabel>
+</FlowDefinition>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <layouts>
+        <layout>Backup of Time2pay Minimum Pay Rate Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Fee for Service Rate --></label>
+            <section>Fee for Service Rate</section>
+        </sections>
+        <sections>
+            <label><!-- Margin --></label>
+            <section>Margin</section>
+        </sections>
+        <sections>
+            <label><!-- Rate Calculator Only --></label>
+            <section>Rate Calculator Only</section>
+        </sections>
+        <sections>
+            <label><!-- Rate Detail --></label>
+            <section>Rate Detail</section>
+        </sections>
+    </layouts>
+</CustomObjectTranslation>

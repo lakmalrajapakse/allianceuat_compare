@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>tc9_et__Time2Pay_Account_Invoice_Entity</fullName>
+    <fields>Name</fields>
+    <fields>tc9_pr__ABN__c</fields>
+    <fields>tc9_et__Contact_for_Invoice_Queries__c</fields>
+    <fields>tc9_et__Contact_for_Invoice_Queries_Phone__c</fields>
+    <label>Time2Pay Account - Invoice Entity</label>
+</CompactLayout>

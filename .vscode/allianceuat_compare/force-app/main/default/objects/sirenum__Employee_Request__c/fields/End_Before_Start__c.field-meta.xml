@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>End_Before_Start__c</fullName>
+    <formula>AND(
+  NOT(ISBLANK(sirenum__Start_Time__c)),
+  NOT(ISBLANK(sirenum__End_Time__c)),
+  sirenum__End_Time__c &lt; sirenum__Start_Time__c
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>End Before Start</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

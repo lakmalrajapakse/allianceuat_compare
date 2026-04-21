@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RemoteSiteSetting xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Provides access to Superchoice to retrieve all active APRA superannuation
+funds.</description>
+    <disableProtocolSecurity>false</disableProtocolSecurity>
+    <isActive>true</isActive>
+    <url>https://desktoppayrollprovider.superchoice.com.au</url>
+</RemoteSiteSetting>

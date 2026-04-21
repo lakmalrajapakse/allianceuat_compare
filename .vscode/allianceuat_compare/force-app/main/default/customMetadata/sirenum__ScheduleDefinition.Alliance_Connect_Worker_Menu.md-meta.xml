@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Alliance Connect Worker Menu</label>
+    <protected>false</protected>
+    <values>
+        <field>sirenum__Configuration__c</field>
+        <value xsi:type="xsd:string">{
+  &quot;realTimeActions&quot;: [
+    {
+      &quot;name&quot;: &quot;profile&quot;,
+      &quot;icon&quot;: { &quot;literal&quot;: &quot;user&quot; },
+      &quot;label&quot;: {
+        &quot;label&quot;: {
+          &quot;default&quot;: &quot;Profile&quot;,
+          &quot;de&quot;: &quot;Profil&quot;,
+          &quot;es&quot;: &quot;Perfil&quot;,
+          &quot;nl&quot;: &quot;Profiel&quot;,
+          &quot;fr&quot;: &quot;Profil&quot;,
+          &quot;it&quot;: &quot;Profilo&quot;
+        }
+      },
+      &quot;uri&quot;: {
+        &quot;pattern&quot;: {
+          &quot;format&quot;: { &quot;default&quot;: &quot;$page:embedded/profile?id={0}&quot; },
+          &quot;values&quot;: [{ &quot;user&quot;: &quot;contactId&quot; }]
+        }
+      }
+    },
+    {
+      &quot;name&quot;: &quot;payroll-profile&quot;,
+      &quot;icon&quot;: { &quot;literal&quot;: &quot;identity&quot; },
+      &quot;label&quot;: { &quot;label&quot;: { &quot;default&quot;: &quot;Payroll Profile&quot; } },
+      &quot;uri&quot;: {
+        &quot;pattern&quot;: {
+          &quot;format&quot;: { &quot;default&quot;: &quot;$page:embedded/payroll-profile?id={0}&quot; },
+          &quot;values&quot;: [{ &quot;user&quot;: &quot;contactId&quot; }]
+        }
+      }
+    },
+    {
+      &quot;name&quot;: &quot;availability&quot;,
+      &quot;icon&quot;: { &quot;literal&quot;: &quot;event&quot; },
+      &quot;label&quot;: { &quot;label&quot;: { &quot;default&quot;: &quot;Availability&quot; } },
+      &quot;uri&quot;: {
+        &quot;pattern&quot;: {
+          &quot;format&quot;: {
+            &quot;default&quot;: &quot;$page:embedded/availability-list-view?id={0}&quot;
+          },
+          &quot;values&quot;: [{ &quot;user&quot;: &quot;contactId&quot; }]
+        }
+      }
+    },
+    {
+      &quot;name&quot;: &quot;contract-availability&quot;,
+      &quot;icon&quot;: { &quot;literal&quot;: &quot;event&quot; },
+      &quot;label&quot;: { &quot;label&quot;: { &quot;default&quot;: &quot;Contract Availability&quot; } },
+      &quot;uri&quot;: {
+        &quot;pattern&quot;: {
+          &quot;format&quot;: {
+            &quot;default&quot;: &quot;$page:embedded/contract-availability?id={0}&quot;
+          },
+          &quot;values&quot;: [{ &quot;user&quot;: &quot;contactId&quot; }]
+        }
+      }
+    },
+    {
+      &quot;name&quot;: &quot;jobboard&quot;,
+      &quot;icon&quot;: { &quot;literal&quot;: &quot;info&quot; },
+      &quot;label&quot;: { &quot;label&quot;: { &quot;default&quot;: &quot;Job Board&quot; } },
+      &quot;uri&quot;: {
+        &quot;pattern&quot;: {
+          &quot;format&quot;: { &quot;default&quot;: &quot;$page:embedded/job-board?id={0}&quot; },
+          &quot;values&quot;: [{ &quot;user&quot;: &quot;contactId&quot; }]
+        }
+      }
+    },
+    {
+      &quot;name&quot;: &quot;pay-advices&quot;,
+      &quot;icon&quot;: { &quot;literal&quot;: &quot;file&quot; },
+      &quot;label&quot;: { &quot;label&quot;: { &quot;default&quot;: &quot;Pay Advices&quot; } },
+      &quot;uri&quot;: {
+        &quot;pattern&quot;: {
+          &quot;format&quot;: { &quot;default&quot;: &quot;$page:embedded/pay-advice?id={0}&quot; },
+          &quot;values&quot;: [{ &quot;user&quot;: &quot;contactId&quot; }]
+        }
+      }
+    },
+    {
+      &quot;name&quot;: &quot;faq&quot;,
+      &quot;icon&quot;: { &quot;literal&quot;: &quot;info&quot; },
+      &quot;label&quot;: { &quot;label&quot;: { &quot;default&quot;: &quot;FAQ&quot; } },
+      &quot;uri&quot;: { &quot;literal&quot;: &quot;$page:embedded/faq&quot; }
+    },
+    {
+      &quot;name&quot;: &quot;get-in-touch&quot;,
+      &quot;icon&quot;: { &quot;literal&quot;: &quot;chat&quot; },
+      &quot;label&quot;: {
+        &quot;label&quot;: {
+          &quot;default&quot;: &quot;Get in Touch&quot;,
+          &quot;de&quot;: &quot;Kontakt aufnehmen&quot;,
+          &quot;es&quot;: &quot;Ponerse en contacto&quot;,
+          &quot;nl&quot;: &quot;Neem contact op&quot;,
+          &quot;fr&quot;: &quot;Entrer en contact&quot;,
+          &quot;it&quot;: &quot;Mettiti in contatto&quot;
+        }
+      },
+      &quot;uri&quot;: { &quot;literal&quot;: &quot;$page:embedded/get-in-touch&quot; }
+    }
+  ]
+}</value>
+    </values>
+    <values>
+        <field>sirenum__Schema__c</field>
+        <value xsi:type="xsd:string">https://sirenum.com/schema/2020/10/mobile-definition.json</value>
+    </values>
+</CustomMetadata>

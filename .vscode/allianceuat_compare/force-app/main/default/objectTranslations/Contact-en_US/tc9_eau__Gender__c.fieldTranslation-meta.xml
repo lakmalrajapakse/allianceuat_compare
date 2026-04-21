@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- The employee&apos;s identified gender, if provided. --></help>
+    <label><!-- Gender --></label>
+    <name>tc9_eau__Gender__c</name>
+</CustomFieldTranslation>

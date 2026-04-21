@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldSets>
+        <label><!-- AccountWithAlias --></label>
+        <name>TR1__AccountWithAlias</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Child Account --></label>
+        <name>TR1__Child_Account_Fieldset</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Power Notes Lookups --></label>
+        <name>TR1__Power_Notes_Lookups</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Power Notes Search List --></label>
+        <name>TR1__Power_Notes_Search_List</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- DocGenUnitTests --></label>
+        <name>bh4fdocgen__DocGenUnitTests</name>
+    </fieldSets>
+    <layouts>
+        <layout>Account Layout - Connect User</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Payment Entity Layout</layout>
+        <sections>
+            <label><!-- Additional Information --></label>
+            <section>Additional Information</section>
+        </sections>
+        <sections>
+            <label><!-- Credit Check --></label>
+            <section>Credit Check</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Expense Management --></label>
+            <section>Expense Management</section>
+        </sections>
+        <sections>
+            <label><!-- Payroll Tax Exemption --></label>
+            <section>Payroll Tax Exemption</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Candidate Pool --></label>
+        <name>Candidate_Pool</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- To be used to define Client Accounts --></description>
+        <label><!-- Client --></label>
+        <name>tc9_et__Client</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- To be used to define Invoice Entities --></description>
+        <label><!-- Invoice Entity --></label>
+        <name>tc9_et__Invoice_Entity</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- To be used to define Payment Entities --></description>
+        <label><!-- Payment Entity --></label>
+        <name>tc9_pr__Payment_Entity</name>
+    </recordTypes>
+    <webLinks>
+        <label><!-- AltavistaNews --></label>
+        <name>AltavistaNews</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleMaps --></label>
+        <name>GoogleMaps</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleNews --></label>
+        <name>GoogleNews</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleSearch --></label>
+        <name>GoogleSearch</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- HooversProfile --></label>
+        <name>HooversProfile</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Add_Target_Account --></label>
+        <name>TR1__Add_Target_Account</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Add_To_Account_List --></label>
+        <name>TR1__Add_To_Account_List</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- YahooMaps --></label>
+        <name>YahooMaps</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Create_Invoiceable_Client_Paid_Expense --></label>
+        <name>tc9_et__Create_Invoiceable_Client_Paid_Expense</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Create_Invoiceable_Payroll_Services_Fee --></label>
+        <name>tc9_et__Create_Invoiceable_Payroll_Services_Fee</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Create_Invoiceable_Project_Services_Fee --></label>
+        <name>tc9_et__Create_Invoiceable_Project_Services_Fee</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Create_Invoiceable_Retainer_Fee --></label>
+        <name>tc9_et__Create_Invoiceable_Retainer_Fee</name>
+    </webLinks>
+</CustomObjectTranslation>

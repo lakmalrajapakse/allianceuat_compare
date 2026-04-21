@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Custom_Invoice_Group_By__c</fullName>
+    <description>Defines how the Pay Transactions related to this Contract will be grouped onto an Invoice.
+If used, the related Account &apos;Invoice Group By&apos; must be set to &apos;Invoice to Account&apos;.</description>
+    <inlineHelpText>Defines how the Pay Transactions related to this Contract will be grouped onto an Invoice.
+If used, the related Account &apos;Invoice Group By&apos; must be set to &apos;Invoice to Account&apos;.</inlineHelpText>
+    <label>Custom Invoice Group By</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Account &amp; Site</fullName>
+                <default>false</default>
+                <label>Account &amp; Site</label>
+            </value>
+            <value>
+                <fullName>Account</fullName>
+                <default>false</default>
+                <label>Account</label>
+            </value>
+            <value>
+                <fullName>Contract &amp; Site</fullName>
+                <default>false</default>
+                <label>Contract &amp; Site</label>
+            </value>
+            <value>
+                <fullName>Contract</fullName>
+                <default>false</default>
+                <label>Contract</label>
+            </value>
+            <value>
+                <fullName>Site &amp; Employee</fullName>
+                <default>false</default>
+                <label>Site &amp; Employee</label>
+            </value>
+            <value>
+                <fullName>Site</fullName>
+                <default>false</default>
+                <label>Site</label>
+            </value>
+            <value>
+                <fullName>Branch</fullName>
+                <default>false</default>
+                <label>Branch</label>
+            </value>
+            <value>
+                <fullName>Job Type</fullName>
+                <default>false</default>
+                <label>Job Type</label>
+            </value>
+            <value>
+                <fullName>Shift</fullName>
+                <default>false</default>
+                <label>Shift</label>
+            </value>
+            <value>
+                <fullName>Award Classification</fullName>
+                <default>false</default>
+                <label>Award Classification</label>
+            </value>
+            <value>
+                <fullName>Award Level</fullName>
+                <default>false</default>
+                <label>Award Level</label>
+            </value>
+            <value>
+                <fullName>PO Number</fullName>
+                <default>false</default>
+                <label>PO Number</label>
+            </value>
+            <value>
+                <fullName>Employee</fullName>
+                <default>false</default>
+                <label>Employee</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

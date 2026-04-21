@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Do you think it will be in the next few weeks, next few months or longer? --></help>
+    <label><!-- When do you prefer to start work? --></label>
+    <name>Will_it_be_in_the_next_coming_weeks__c</name>
+    <picklistValues>
+        <masterLabel>As soon as possible</masterLabel>
+        <translation><!-- As soon as possible --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>In more than 4 weeks</masterLabel>
+        <translation><!-- In more than 4 weeks --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Within 1-2 weeks</masterLabel>
+        <translation><!-- Within 1-2 weeks --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Within 2-4 weeks</masterLabel>
+        <translation><!-- Within 2-4 weeks --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

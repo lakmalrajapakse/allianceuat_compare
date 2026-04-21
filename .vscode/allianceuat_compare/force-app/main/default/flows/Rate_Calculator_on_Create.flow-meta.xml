@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>62.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <environments>Default</environments>
+    <interviewLabel>Rate Calculator on Create {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Rate Calculator on Create</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Update_Rate_Calcualtor</name>
+        <label>Update Rate Calcualtor</label>
+        <locationX>176</locationX>
+        <locationY>287</locationY>
+        <inputAssignments>
+            <field>tc9_et__Minimum_Pay_Rate_Template__c</field>
+            <value>
+                <elementReference>$Record.tc9_et__Assignment__r.tc9_ext_sirint__Job_Role__r.Rate_Template_Group__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Update_Rate_Calcualtor</targetReference>
+        </connector>
+        <filterFormula>AND(
+{!$Record.RecordType.DeveloperName} = &quot;Employee_Specific&quot;,
+NOT(ISBLANK({!$Record.tc9_et__Assignment__r.tc9_ext_sirint__Job_Role__c})),
+NOT(ISBLANK({!$Record.tc9_et__Assignment__r.tc9_ext_sirint__Job_Role__r.Rate_Template_Group__c})),
+ISPICKVAL({!$Record.tc9_et__Assignment__r.tc9_ext_sirint__Job_Role__r.tc9_ext_sirint__Inherit_Rate_Calculator_Values_From__c}, &quot;Assignment&quot;)
+)</filterFormula>
+        <object>tc9_et__Rate_Calculator__c</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Skill_area__c</fullName>
+    <label>Skill area</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Aged care sector</fullName>
+                <default>false</default>
+                <label>Aged care sector</label>
+            </value>
+            <value>
+                <fullName>General medical/surgical</fullName>
+                <default>false</default>
+                <label>General medical/surgical</label>
+            </value>
+            <value>
+                <fullName>Medical Departments</fullName>
+                <default>false</default>
+                <label>Medical Departments</label>
+            </value>
+            <value>
+                <fullName>Diagnostic &amp; Support Departments</fullName>
+                <default>false</default>
+                <label>Diagnostic &amp; Support Departments</label>
+            </value>
+            <value>
+                <fullName>Specialised Care Units</fullName>
+                <default>false</default>
+                <label>Specialised Care Units</label>
+            </value>
+            <value>
+                <fullName>Community and Outpatient Services</fullName>
+                <default>false</default>
+                <label>Community and Outpatient Services</label>
+            </value>
+            <value>
+                <fullName>Offender Health / Prison Health</fullName>
+                <default>false</default>
+                <label>Offender Health / Prison Health</label>
+            </value>
+            <value>
+                <fullName>Operating Theatres / Perioperative Services</fullName>
+                <default>false</default>
+                <label>Operating Theatres / Perioperative Services</label>
+            </value>
+            <value>
+                <fullName>Mental Health</fullName>
+                <default>false</default>
+                <label>Mental Health</label>
+            </value>
+            <value>
+                <fullName>Critical Care Units</fullName>
+                <default>false</default>
+                <label>Critical Care Units</label>
+            </value>
+            <value>
+                <fullName>Surgical Departments</fullName>
+                <default>false</default>
+                <label>Surgical Departments</label>
+            </value>
+            <value>
+                <fullName>Immunisation / Vaccination</fullName>
+                <default>false</default>
+                <label>Immunisation / Vaccination</label>
+            </value>
+            <value>
+                <fullName>Health Assessment</fullName>
+                <default>false</default>
+                <label>Health Assessment</label>
+            </value>
+            <value>
+                <fullName>General Practice / Primary Care</fullName>
+                <default>false</default>
+                <label>General Practice / Primary Care</label>
+            </value>
+            <value>
+                <fullName>Midwifery</fullName>
+                <default>false</default>
+                <label>Midwifery</label>
+            </value>
+            <value>
+                <fullName>School</fullName>
+                <default>false</default>
+                <label>School</label>
+            </value>
+            <value>
+                <fullName>Food Services</fullName>
+                <default>false</default>
+                <label>Food Services</label>
+            </value>
+            <value>
+                <fullName>Environmental Services</fullName>
+                <default>false</default>
+                <label>Environmental Services</label>
+            </value>
+            <value>
+                <fullName>Warehouse</fullName>
+                <default>false</default>
+                <label>Warehouse</label>
+            </value>
+            <value>
+                <fullName>Wards</fullName>
+                <default>false</default>
+                <label>Wards</label>
+            </value>
+            <value>
+                <fullName>Maintenance</fullName>
+                <default>false</default>
+                <label>Maintenance</label>
+            </value>
+            <value>
+                <fullName>R&amp;R</fullName>
+                <default>false</default>
+                <label>R&amp;R</label>
+            </value>
+            <value>
+                <fullName>Kitchen</fullName>
+                <default>false</default>
+                <label>Kitchen</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

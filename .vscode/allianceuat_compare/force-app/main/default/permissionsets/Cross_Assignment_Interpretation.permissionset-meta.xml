@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <classAccesses>
+        <apexClass>CrossAssignmentBaseSetupTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>CrossAssignmentBatchTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>CrossAssignmentDeleteBatch</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>CrossAssignmentInsertBatch</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <customSettingAccesses>
+        <enabled>true</enabled>
+        <name>tc9_pr__Override_TC9P_Validation__c</name>
+    </customSettingAccesses>
+    <description>Permissions to access the custom metadata to perform the cross-assignment interpretation functionality.</description>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>tc9_et__Timesheet_Entry__c.Cross_Assignment_Timesheet_Entry__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>tc9_et__Timesheet__c.Cross_Assignment_Details__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>tc9_et__Timesheet__c.Cross_Assignment_Status__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>tc9_pr__Assignment__c.Cross_Assignment_Group_By_ID__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>tc9_pr__Assignment__c.Cross_Assignment_Timesheet_Status__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Cross-Assignment Interpretation</label>
+</PermissionSet>

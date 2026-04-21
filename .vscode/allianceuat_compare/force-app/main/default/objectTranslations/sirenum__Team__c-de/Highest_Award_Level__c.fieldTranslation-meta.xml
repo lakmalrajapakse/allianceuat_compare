@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Enter the Highest Award Level for this Award Classification. If provided, any Employees assigned to a Shift without a matching Award Classification will automatically be placed at this highest Award Level. This feature is helpful for accommodating Employees with a higher Award Classification in situations where they are assigned to a lower Classification, ensuring they receive payment at the highest level. --></help>
+    <label><!-- Highest Award Level --></label>
+    <name>Highest_Award_Level__c</name>
+    <relationshipLabel><!-- Job Roles (Highest Award Level) --></relationshipLabel>
+</CustomFieldTranslation>

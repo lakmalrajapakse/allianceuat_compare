@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "5f5875b2-737f-4e88-822b-8b33f36b81cc",
+  "appPageId" : "d9ce9f69-0e14-4b11-9233-6c5ce091d546",
+  "configurationTags" : [ ],
+  "devName" : "Expense_Claims__c",
+  "id" : "2f263d01-d5e1-4a1b-8e13-8e2a2cd28d38",
+  "label" : "Expense Claims",
+  "pageAccess" : "UseParent",
+  "routeType" : "custom-expense-claims",
+  "type" : "route",
+  "urlPrefix" : "expense-claims"
+}

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Suburb/Town of source payer for inclusion in STP communication --></help>
+    <label><!-- STP Suburb/Town --></label>
+    <name>tc9_eau__STP_Suburb__c</name>
+</CustomFieldTranslation>

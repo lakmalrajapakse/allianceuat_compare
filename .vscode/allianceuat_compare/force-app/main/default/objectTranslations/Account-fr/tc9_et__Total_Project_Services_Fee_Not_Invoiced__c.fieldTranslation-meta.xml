@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- The balance of the Total Project Services Fee Scheduled less Total Project Services Fee Invoiced. Denotes any outstanding scheduled Project Services Fee that still needs to be invoiced for the Client --></help>
+    <label><!-- Total Project Services Fee Not Invoiced --></label>
+    <name>tc9_et__Total_Project_Services_Fee_Not_Invoiced__c</name>
+</CustomFieldTranslation>

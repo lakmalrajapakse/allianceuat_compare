@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "e8975374-5ef4-4f27-a413-24eb05aa0ae9",
+  "appPageId" : "d9ce9f69-0e14-4b11-9233-6c5ce091d546",
+  "configurationTags" : [ ],
+  "devName" : "Leave__c",
+  "id" : "de109350-8d2c-4f56-8ed9-730ba27cc4cb",
+  "label" : "Leave",
+  "pageAccess" : "UseParent",
+  "routeType" : "custom-leave",
+  "type" : "route",
+  "urlPrefix" : "leave"
+}

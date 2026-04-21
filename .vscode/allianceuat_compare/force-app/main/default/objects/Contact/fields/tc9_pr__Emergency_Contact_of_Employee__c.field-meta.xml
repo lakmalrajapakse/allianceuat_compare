@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>tc9_pr__Emergency_Contact_of_Employee__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <deprecated>false</deprecated>
+    <description>The employee this emergency contact is related to</description>
+    <inlineHelpText>The employee this emergency contact is related to</inlineHelpText>
+    <label>Emergency Contact of Employee</label>
+    <referenceTo>Contact</referenceTo>
+    <relationshipLabel>Emergency Contacts</relationshipLabel>
+    <relationshipName>Contacts</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

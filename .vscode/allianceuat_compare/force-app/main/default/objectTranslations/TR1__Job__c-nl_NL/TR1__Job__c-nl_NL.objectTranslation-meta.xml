@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Vacature</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Vacatures</value>
+    </caseValues>
+    <gender>Neuter</gender>
+    <layouts>
+        <layout>Contract</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- External Job Posting --></label>
+            <section>External Job Posting</section>
+        </sections>
+        <sections>
+            <label><!-- Job Internal Notes --></label>
+            <section>Job Internal Notes</section>
+        </sections>
+        <sections>
+            <label><!-- Job Status --></label>
+            <section>Job Status</section>
+        </sections>
+        <sections>
+            <label><!-- Pay/Bill --></label>
+            <section>Pay/Bill</section>
+        </sections>
+        <sections>
+            <label><!-- VMS Information --></label>
+            <section>VMS Information</section>
+        </sections>
+        <sections>
+            <label><!-- VMS Payload --></label>
+            <section>VMS Payload</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Contract (WFM)</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Internal Job Board --></label>
+            <section>Internal Job Board</section>
+        </sections>
+        <sections>
+            <label><!-- Job Status --></label>
+            <section>Job Status</section>
+        </sections>
+        <sections>
+            <label><!-- New Section --></label>
+            <section>New Section</section>
+        </sections>
+        <sections>
+            <label><!-- Travel &amp; Accommodation --></label>
+            <section>Travel &amp; Accommodation</section>
+        </sections>
+        <sections>
+            <label><!-- WFM Config --></label>
+            <section>WFM Config</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Fee for Service</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Internal Job Board --></label>
+            <section>Internal Job Board</section>
+        </sections>
+        <sections>
+            <label><!-- Job Status --></label>
+            <section>Job Status</section>
+        </sections>
+        <sections>
+            <label><!-- New Section --></label>
+            <section>New Section</section>
+        </sections>
+        <sections>
+            <label><!-- Travel &amp; Accommodation --></label>
+            <section>Travel &amp; Accommodation</section>
+        </sections>
+        <sections>
+            <label><!-- VMS Information --></label>
+            <section>VMS Information</section>
+        </sections>
+        <sections>
+            <label><!-- VMS Payload --></label>
+            <section>VMS Payload</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Sourcing Role</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Job Status --></label>
+            <section>Job Status</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Vacaturenaam</nameFieldLabel>
+    <quickActions>
+        <label><!-- Match Candidate --></label>
+        <name>Match_Candidate</name>
+    </quickActions>
+    <recordTypes>
+        <description><!-- Job for a Contract Placement --></description>
+        <label><!-- Contract --></label>
+        <name>Contract</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Used for payroll service fee job types --></description>
+        <label><!-- Fee for Service --></label>
+        <name>Fee_for_Service</name>
+    </recordTypes>
+    <webLinks>
+        <label><!-- View_in_Idibu --></label>
+        <name>View_in_Idibu</name>
+    </webLinks>
+</CustomObjectTranslation>

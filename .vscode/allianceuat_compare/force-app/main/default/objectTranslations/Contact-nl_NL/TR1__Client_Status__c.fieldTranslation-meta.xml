@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Client Status --></label>
+    <name>TR1__Client_Status__c</name>
+    <picklistValues>
+        <masterLabel>Active</masterLabel>
+        <translation>Actief</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Not Applicable</masterLabel>
+        <translation>Niet van toepassing</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Past</masterLabel>
+        <translation>Verleden</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Prospect</masterLabel>
+        <translation>Potentiële klant</translation>
+    </picklistValues>
+</CustomFieldTranslation>

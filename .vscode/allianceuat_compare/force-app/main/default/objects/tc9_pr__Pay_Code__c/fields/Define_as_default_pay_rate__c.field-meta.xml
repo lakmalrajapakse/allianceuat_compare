@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Define_as_default_pay_rate__c</fullName>
+    <defaultValue>false</defaultValue>
+    <inlineHelpText>Where this is set to true, set the Default Pay Rate to Yes on an assignment rate.  This will then be used for the Payee Leave Rule (LLR) where appropriate</inlineHelpText>
+    <label>Define as default pay rate</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

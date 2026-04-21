@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>AES - Induction invite details reminder</name>
+    <style>none</style>
+    <subject>Reminder: your induction with Alliance Extra Staff</subject>
+    <textOnly>REMINDER: YOUR INTERVIEW WITH ALLIANCE EXTRASTAFF.
+
+Hi {!Contact.FirstName},
+
+This is a kind remider for your upcoming interview with Alliance Extra Staff.
+
+Start time: {!b3o__Session_Invitation__c.Booking_Time_Local__c}
+End time: {!b3o__Session_Invitation__c.Booking_End_Time_Local__c}
+Message:{!b3o__Session__c.b3o__Booking_Confirmation_Message__c}
+
+If you have any questions, please feel free to call our friendly staff on 1300 662 511.
+
+
+
+Kind regards,
+Your team at Alliance Extra Staff</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

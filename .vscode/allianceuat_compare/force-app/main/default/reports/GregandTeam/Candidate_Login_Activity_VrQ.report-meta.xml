@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>User$Name</field>
+    </columns>
+    <columns>
+        <field>User$Profile</field>
+    </columns>
+    <columns>
+        <field>User$Username</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>User$IsActive</field>
+    </columns>
+    <columns>
+        <field>User$LastLoginDate</field>
+    </columns>
+    <columns>
+        <field>User$Contact.TR1__Candidate_Status__c</field>
+    </columns>
+    <columns>
+        <field>User$Contact.MobilePhone</field>
+    </columns>
+    <columns>
+        <field>User$Contact.Classification__c</field>
+    </columns>
+    <columns>
+        <field>User$Contact.sirenum__Availability_Activity_Date__c</field>
+    </columns>
+    <columns>
+        <field>User$Contact.Latest_Confirmed_Shift_Date__c</field>
+    </columns>
+    <columns>
+        <field>User$Contact.Working_Today__c</field>
+    </columns>
+    <customDetailFormulas>
+        <calculatedFormula>IF(User.LastLoginDate != null, &apos;Has logged in&apos;, &apos;Has NOT logged in&apos;)</calculatedFormula>
+        <dataType>Text</dataType>
+        <description>Login Activity</description>
+        <developerName>CDF1</developerName>
+        <label>Login Activity</label>
+        <scale>2</scale>
+    </customDetailFormulas>
+    <filter>
+        <criteriaItems>
+            <column>User$Profile</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>alliance connect user</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>User$Contact.Branch_Name__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Alliance Nursing - Adelaide,Alliance Nursing - Perth,Alliance Extra Staff - Adelaide,Alliance Extra Staff - Albury</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>User$IsActive</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>1</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>User$Contact.Branch_Name__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>CDF1</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Candidate Login Activity</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Users_Custom__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>User$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

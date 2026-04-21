@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- This field is used in the fieldset TR1__Power_Notes_Tableview as a cue to allow the PowerNotes table view component to show the source if the field is in the displayed fields section. --></help>
+    <label><!-- Source --></label>
+    <name>TR1__Power_Share_Source_Name__c</name>
+</CustomFieldTranslation>

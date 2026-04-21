@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- The end date the candidate has expressed interest in a contracting position to --></help>
+    <label><!-- Available End Date --></label>
+    <name>Available_End_Date__c</name>
+</CustomFieldTranslation>

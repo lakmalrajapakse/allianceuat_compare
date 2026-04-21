@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Source --></label>
+    <name>TR1__Source__c</name>
+    <picklistValues>
+        <masterLabel>Alliance Nursing</masterLabel>
+        <translation><!-- Alliance Nursing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Approached by Recruiter</masterLabel>
+        <translation><!-- Approached by Recruiter --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Belmore Nurses</masterLabel>
+        <translation><!-- Belmore Nurses --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CV Reader</masterLabel>
+        <translation><!-- CV Reader --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CareerOne</masterLabel>
+        <translation><!-- CareerOne --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Direct / Walk In</masterLabel>
+        <translation><!-- Direct / Walk In --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Event</masterLabel>
+        <translation><!-- Event --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Extrastaff</masterLabel>
+        <translation><!-- Extrastaff --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Facebook</masterLabel>
+        <translation><!-- Facebook --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>From chatbot</masterLabel>
+        <translation><!-- From chatbot --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Google</masterLabel>
+        <translation><!-- Google --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Indeed</masterLabel>
+        <translation><!-- Indeed --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Job Active</masterLabel>
+        <translation><!-- Job Active --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>LinkedIn</masterLabel>
+        <translation><!-- LinkedIn --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Nursing (HSGA)</masterLabel>
+        <translation><!-- Nursing (HSGA) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Referred</masterLabel>
+        <translation><!-- Referred --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Seek</masterLabel>
+        <translation><!-- Seek --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Website</masterLabel>
+        <translation><!-- Website --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>idibu CV manager</masterLabel>
+        <translation><!-- idibu CV manager --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

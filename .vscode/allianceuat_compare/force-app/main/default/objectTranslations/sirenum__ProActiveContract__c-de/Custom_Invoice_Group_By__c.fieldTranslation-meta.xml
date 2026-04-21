@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>
+        <!-- Defines how the Pay Transactions related to this Contract will be grouped onto an Invoice.
+If used, the related Account &apos;Invoice Group By&apos; must be set to &apos;Invoice to Account&apos;. -->
+    </help>
+    <label><!-- Custom Invoice Group By --></label>
+    <name>Custom_Invoice_Group_By__c</name>
+    <picklistValues>
+        <masterLabel>Account</masterLabel>
+        <translation><!-- Account --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Account &amp; Site</masterLabel>
+        <translation><!-- Account &amp; Site --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Award Classification</masterLabel>
+        <translation><!-- Award Classification --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Award Level</masterLabel>
+        <translation><!-- Award Level --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Branch</masterLabel>
+        <translation><!-- Branch --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Contract</masterLabel>
+        <translation><!-- Contract --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Contract &amp; Site</masterLabel>
+        <translation><!-- Contract &amp; Site --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Employee</masterLabel>
+        <translation><!-- Employee --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Job Type</masterLabel>
+        <translation><!-- Job Type --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PO Number</masterLabel>
+        <translation><!-- PO Number --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Shift</masterLabel>
+        <translation><!-- Shift --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Site</masterLabel>
+        <translation><!-- Site --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Site &amp; Employee</masterLabel>
+        <translation><!-- Site &amp; Employee --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

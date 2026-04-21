@@ -1,0 +1,319 @@
+<apex:page standardStylesheets="false" 
+  standardController="TR1__Fixed_Assets__c" 
+  extensions="PDF_IDBadgeExtension" 
+  renderAs="pdf"
+  applyBodyTag="false"
+  applyHtmlTag="false"
+  showHeader="false">
+  <apex:variable var="record" value="{!record}" />
+    <head>
+        <style type="text/CSS" media="print">
+            @page {
+                size: 5.4cm 8.56cm; /* width height */
+                margin-top: 0.25cm;
+                margin-bottom: 0.1cm;
+                /* margin-left: 0.25cm;
+                margin-right: 0.25cm; */
+                margin-left: 0.05cm;
+                margin-right: 0.05cm;
+                /* @top-center {
+                content: element(header);
+                } */
+                /* @bottom-center{
+                content: element(footer);
+                }
+                @bottom-right{
+                content: "Page " counter(page) " of " counter(pages);
+                } */
+            }
+
+            /* div.header {
+                height: auto;
+                display: block;
+                position: running(header);
+            }
+
+            div.footer {
+                height: auto;
+                display: block;
+                position: running(footer);
+            } */
+
+            table { page-break-inside:auto }
+            thead { display:table-header-group }
+            tfoot { display:table-footer-group }
+
+            /* NEW CSS */
+            .pageLayout{ 
+                /* size: 4.9cm 7.56cm; */
+                /* size: 4.9cm 8.06cm; width height */
+                size: 5.3cm 8.06cm; /* width height */
+                /* border: 0.5px dashed red; */
+                /* height: 100%; */
+                /* width: 100%; */
+                /* padding: 5px 5px; */ /* commment out to stop padding */
+                /* background-color: yellow; */
+                color: black;
+                text-align: center; 
+                /* font-family: Arial, Helvetica, sans-serif; */
+                font-family: sans-serif, "Arial Unicode MS", serif;
+                /* font-family: "Montserrat Black", Verdana;  */
+            }
+            .imageTop{
+                height: 2.7cm;
+                /* border: 0.5px dotted Black; */
+                /* background-color: lightgoldenrodyellow; */
+            }
+            .name{        
+                height: 0.82cm;
+                /* border: 0.5px dashed rgb(0, 89, 255); */
+                /* color: black; */
+                /* background-color: lightblue; */
+                font-size: 15px;
+                font-weight: bold;
+                /* margin: 10px 1px 25px;  */
+                padding: 0px 1px; 
+            }
+            .jobTitle{     
+                /* height: 1.06cm;    */
+                height: 0.51cm;  
+                /* border: 0.5px dashed orange; */
+                /* color: black; */
+                /* background-color: lightblue; */
+                font-size: 15px;
+                font-weight: bold;
+                /* margin: 10px 1px 25px;  */
+                padding: 0px 1px; 
+            }
+            .regNoTitle{        
+                /* color: darkblue; */
+                /* background-color: lightgreen; */
+                font-size: 10px;
+                font-weight: bold;
+                margin: 10px 1px 0px;
+                padding: 1px 1px;
+            }
+            .regNo{     
+                /* height: 1cm; */
+                height: 0.38cm;        
+                /* border: 0.5px dashed rgb(0, 255, 106); */
+                /* color: blue; */
+                /* background-color: lightgreen; */
+                font-size: 13px;
+                /* font-weight: bold; */
+                /* margin: 0px 1px 10px; */
+                padding: 0px 1px;
+            }
+            .logoBottomFront{
+                /* height: 2cm; */
+                height: 2.35cm;
+                /* border: 0.5px dotted Black; */
+                display: flex;
+                justify-content: center;
+                align-items: flex-end;
+                /* vertical-align: text-bottom; */
+                /* background-color: lightpink; */
+            }
+            .logoBottomFront img{
+                /* width:5.25cm; */
+                width:100%;
+            }
+            .emptyBlock{
+                color: white; 
+                height: 1.2cm;
+            }
+            .title{        
+                height: 1.76cm;    
+                /* height: 2.25cm;  */
+                /* border: 0.5px dashed rgb(0, 81, 255); */
+                /* color: black; */
+                /* background-color: lightblue; */
+                font-size: 15px;
+                font-weight: bold;
+                /* margin: 10px 1px 25px;  */
+                padding: 0px 1px; 
+            }
+            .branch{     
+                height: 0.95cm;  
+                /* height: 1.55cm;   */
+                /* border: 0.5px dashed orange;    */
+                /* color: red; */
+                /* background-color: lightgrey; */
+                font-size: 11px;
+                /* margin: 20px 1px 0px; */
+                padding:  0px 1px;
+                vertical-align: text-bottom;
+            }
+            .phone{    
+                height: 0.85cm;     
+                /* border: 1px dashed orange;  */
+                /* color: blue; */
+                /* background-color: lightgreen; */
+                font-size: 12px;
+                font-weight: bold;
+                /* margin: 0px 1px 10px; */
+                padding:  0px 1px;
+                vertical-align: text-top;
+            }
+            .address{        
+                /* color: green; */
+                /* background-color: lightgreen; */
+                font-size: 6px;
+                /* margin: 12px 1px; */
+                padding:  0px 1px;
+            }
+            .email{      
+                height: 0.85cm;     
+                /* border: 0.5px dashed rgb(0, 255, 0);   */
+                /* color: red; */
+                /* background-color: orange; */
+                font-size: 8px;
+                font-weight: bold;
+                /* margin: 12px 1px 10px; */
+                padding: 0px 1px;
+            }
+            .logoBottomBack{
+                height: 2.35cm;
+                /* border: 0.5px dotted Black; */
+                display: flex;
+                justify-content: center;
+                align-items: flex-end;
+                /* vertical-align: text-bottom; */
+                /* background-color: lightpink; */
+            }
+            .logoBottomBack img{
+                width:100%;
+            }
+
+        </style>
+    </head>
+    <!-- <div class="header">
+      <table style="width:100%" cellspacing="0">
+        <tr>
+            <td>
+                <div class="largetext" style="text-align:left">CV Summary Sheet</div>
+              </td>
+            <td>
+              <div style="text-align:right">
+                <img src="{!$Resource.Logo_Alliance_RRH}" width="200px"/>
+              </div>
+            </td>
+        </tr>
+      </table>
+    </div> -->
+    <!-- <div class="footer" style="">
+        <table class="footerTable" style="width:100%" cellspacing="0">
+            <tr class="standardtext">
+                <td>
+                    <div style="text-align:center">
+                      <img src="{!$Resource.Logo_Alliance_RRH}" width="200px"/>
+                       LOGO HERE 
+                    </div>
+                </td>
+            </tr>
+       </table>
+    </div> -->
+
+    <!-- Page One  -->
+    <div class="pageLayout" style="page-break-after: always;">
+        <div class="emptyBlock">Block</div>
+        <div class="imageTop">
+            <!-- PICTURE HERE -->
+            <!-- <apex:image id="theImage" value="{!photoIdLink}" width="100" height="100" /> -->
+            <!-- <apex:image id="theImage" url="{!photoIdLink}" width="100" height="100" /> -->
+            <apex:image id="theImage" url="{!photoIdLink}" height="100" />
+        </div>
+        <div class="name">
+            <!-- Name: {!record.FirstName} -->
+            <!-- Name: {!record.Preferred_Name__c} -->
+            {!record.Preferred_Name__c}
+        </div>
+        <div class="jobTitle">
+            <!-- Position: Nursing Assistant -->
+            {!record.Position__c}
+        </div>
+        <div class="regNo">
+            <!-- NAW100010001 -->
+            {!record.AHPRA_Number__c}
+        </div>
+        <div class="logoBottomFront" style="{!IF( record.Brand__c = 'Nursing', 'text-align:center', 'display:none')}">
+            <!-- <img src="{!$Resource.Logo_JPG_ID_Badge_Alliance_Nursing}"  width="100px"/> -->
+            <!-- <img src="{!$Resource.Logo_JPG_ID_Badge_Alliance_Nursing}"  width="125px"/> -->
+            <!-- <img src="{!$Resource.Logo_JPG_ID_Badge_Alliance_Nursing}"  width="150px"/> -->
+            <!-- <img src="{!$Resource.Logo_ID_Badge_Alliance_Nursing}"  width="150px"/> -->
+            <!-- <img src="{!$Resource.Logo_ID_Badge_Alliance_Nursing}" width="5.28cm"/> -->
+            <img src="{!$Resource.Logo_ID_Badge_Alliance_Nursing}"/>
+            <!-- NURSING PICTURE HERE  -->
+        </div>
+        <div class="logoBottomFront" style="{!IF( record.Brand__c = 'Extra Staff', 'text-align:center', 'display:none')}">
+            <!-- <img src="{!$Resource.Logo_JPG_ID_Badge_Alliance_Extra_Staff}" width="100px"/> -->
+            <!-- <img src="{!$Resource.Logo_JPG_ID_Badge_Alliance_Extra_Staff}"/> -->
+             <!-- <img src="{!$Resource.Logo_JPG_ID_Badge_Alliance_Extra_Staff}" width="125px"/> -->
+             <!-- <img src="{!$Resource.Logo_ID_Badge_Alliance_Extra_Staff}" width="150px"/> -->
+             <!-- <img src="{!$Resource.Logo_ID_Badge_Alliance_Extra_Staff}" width="5.28cm"/> -->
+             <img src="{!$Resource.Logo_ID_Badge_Alliance_Extra_Staff}"/>
+            <!-- EXTRA STAFF PICTURE HERE  -->
+        </div>
+        <div class="logoBottomFront" style="{!IF( record.Brand__c = 'R&R', 'text-align:center', 'display:none')}">
+            <!-- <img src="{!$Resource.Logo_JPG_ID_Badge_Alliance_RRH}"  width="100px"/> -->
+            <!-- <img src="{!$Resource.Logo_JPG_ID_Badge_Alliance_RRH}"/> -->
+             <!-- <img src="{!$Resource.Logo_JPG_ID_Badge_Alliance_RRH}"  width="125px"/> -->
+             <!-- <img src="{!$Resource.Logo_ID_Badge_Alliance_RRH}"  width="200px"/> -->
+             <!-- <img src="{!$Resource.Logo_ID_Badge_Alliance_RRH}" width="5.28cm"/> -->
+             <img src="{!$Resource.Logo_ID_Badge_Alliance_RRH}"/>
+            <!-- R&amp;R PICTURE HERE  -->
+        </div>
+    </div>  
+
+    <!-- Page Two  -->
+    <div class="pageLayout">
+        <div class="emptyBlock">Block</div>
+        <div class="title">
+            <!-- {!record.Name} -->
+            {!record.Assigned__r.Name}
+        </div>
+        <!-- <div class="regNoTitle">
+            Registration No:
+        </div>
+        <div class="regNo">
+            NAW100010001
+        </div> -->
+        <div class="branch">
+            <!-- Alliance Nursing - Brisbane -->
+            <div>{!record.Branch__r.Branch_Name__c}</div>
+            <!-- <div><b>{!record.Branch_Phone_Number__c}</b></div> -->
+        </div>
+        <div class="phone">
+            {!record.Branch_Phone_Number__c}
+        </div>
+        <!-- <div class="address">
+            647 Stanley St, Woolloongabba, QLD 4102
+        </div>     -->
+        <div class="email">
+            <!-- e info.brisbane@alliancenursing.com.au -->
+            {!record.Branch_Email__c}
+        </div>
+        <div class="logoBottomBack" style="{!IF( record.Brand__c = 'Nursing', 'text-align:center', 'display:none')}">
+            <!-- <img src="{!$Resource.Logo_ID_Badge_Alliance_Nursing}" width="100px"/> -->
+            <!-- <img src="{!$Resource.Logo_ID_Badge_noline_Alliance_Nursing}" width="100px"/> -->
+            <!-- <img src="{!$Resource.Logo_ID_Badge_noline_Alliance_Nursing}" width="5.28cm"/> -->
+            <img src="{!$Resource.Logo_ID_Badge_noline_Alliance_Nursing}"/>
+            <!-- NURSING PICTURE HERE  -->
+        </div>
+        <div class="logoBottomBack" style="{!IF( record.Brand__c = 'Extra Staff', 'text-align:center', 'display:none')}">
+            <!-- <img src="{!$Resource.Logo_ID_Badge_Alliance_Extra_Staff}" width="100px"/> -->
+            <!-- <img src="{!$Resource.Logo_ID_Badge_noline_Alliance_Extra_Staff}" width="100px"/> -->
+            <!-- <img src="{!$Resource.Logo_ID_Badge_noline_Alliance_Extra_Staff}" width="5.28cm"/> -->
+             <img src="{!$Resource.Logo_ID_Badge_noline_Alliance_Extra_Staff}"/>
+            <!-- EXTRA STAFF PICTURE HERE  -->
+        </div>
+        <div class="logoBottomBack" style="{!IF( record.Brand__c = 'R&R', 'text-align:center', 'display:none')}">
+            <!-- <img src="{!$Resource.Logo_ID_Badge_Alliance_RRH}" width="100px"/> -->
+            <!-- <img src="{!$Resource.Logo_ID_Badge_noline_Alliance_RRH}" width="100px"/> -->
+            <!-- <img src="{!$Resource.Logo_ID_Badge_noline_Alliance_RRH}" width="5.28cm"/> -->
+            <img src="{!$Resource.Logo_ID_Badge_noline_Alliance_RRH}"/>
+            <!-- R&amp;R PICTURE HERE  -->
+        </div>
+    </div>
+
+</apex:page>

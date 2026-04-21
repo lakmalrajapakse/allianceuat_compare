@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "1592ba31-99ae-4151-a73e-44fca843231b",
+  "appPageId" : "d9ce9f69-0e14-4b11-9233-6c5ce091d546",
+  "configurationTags" : [ ],
+  "devName" : "Allowances__c",
+  "id" : "090f4b24-7ddf-4558-a18f-0b7f284f0575",
+  "label" : "Allowances",
+  "pageAccess" : "UseParent",
+  "routeType" : "custom-allowances",
+  "type" : "route",
+  "urlPrefix" : "allowances"
+}

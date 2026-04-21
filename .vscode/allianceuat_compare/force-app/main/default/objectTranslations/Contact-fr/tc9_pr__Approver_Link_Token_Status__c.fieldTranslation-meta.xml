@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- The status of the link token used to provide Approvers with access to the Approval pages within the Portal --></help>
+    <label><!-- Approver Link Token Status --></label>
+    <name>tc9_pr__Approver_Link_Token_Status__c</name>
+</CustomFieldTranslation>

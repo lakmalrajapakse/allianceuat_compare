@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Reference Type --></label>
+    <name>Reference_Type__c</name>
+    <picklistValues>
+        <masterLabel>General - Clinical</masterLabel>
+        <translation><!-- General - Clinical --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Non-clinical</masterLabel>
+        <translation><!-- Non-clinical --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Rural Remote</masterLabel>
+        <translation><!-- Rural Remote --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

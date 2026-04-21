@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- API name of field to be used to match Job Roles. Defaults to Name --></help>
+    <label><!-- Match: Job Roles --></label>
+    <name>Match_Job_Roles__c</name>
+</CustomFieldTranslation>

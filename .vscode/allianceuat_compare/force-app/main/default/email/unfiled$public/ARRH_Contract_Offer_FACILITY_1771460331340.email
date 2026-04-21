@@ -1,0 +1,210 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body style="height: auto; min-height: auto;">
+<table border="0" cellpadding="0" cellspacing="0" style="background-color: #f6f6f6; padding: 10px;" width="100%">
+	
+		<tr>
+			<td align="center" bgcolor="#f6f6f6">
+			<table border="0" cellpadding="0" cellspacing="0" style="background-color:#ffffff; width: 600px;">
+				
+					<tr>
+						<td style="padding: 0; background-color: #ffffff;"><img alt="Alliance Rural &amp; Remote - Email header (2)" src="https://allianceaustralia--uat.sandbox.file.force.com/file-asset-public/Alliance_Rural_Remote_Email_heade?oid=00DAD00000BK4sL" style="max-width: 683.05px" title="Alliance Rural &amp; Remote - Email header (2)" /><a href="https://www.alliancenursing.com.au"> </a></td>
+					</tr>
+					<tr>
+						<td style="height: 30px;">&nbsp;</td>
+					</tr>
+					<tr>
+						<td align="left" style="padding: 0 45px;">
+						<h1 style="font-size: 30px; line-height: 37px; color: #007DC3; font-weight: 900; font-family: 'Montserrat', 'Arial Black', Arial, sans-serif;">PLACEMENT OFFER FOR FACILITY.</h1>
+
+						<p style="font-size:18px;line-height:25px;color:#000000; font-weight: 400; font-family: 'Roboto', Arial, sans-serif; margin:10px 0 20px;"><br />
+						Hi {{{Recipient.FirstName}}},&nbsp;<br />
+						<br />
+						[Facility name] would like to offer you a contract from [Contract start date] to [Contract end date]<br />
+						<br />
+						<strong>Facility information:</strong></p>
+
+						<ul>
+							<li style="font-size: 18px; line-height: 25px; color: rgb(0, 0, 0); font-weight: 400; font-family: Roboto, Arial, sans-serif; margin: 10px 0px 20px;">Please note that although this is an offer for a particular facility, things can change unforseeably and there is a possibility that <strong>CAHS/TEHS</strong> may need to move you to another clinic at their discretion. They try to avoid this at all costs however we want to advise of this in advance, in the event that a transfer is required.</li>
+							<li style="font-size: 18px; line-height: 25px; color: rgb(0, 0, 0); font-weight: 400; font-family: Roboto, Arial, sans-serif; margin: 10px 0px 20px;">Mobile service - Since we cannot confirm the mobile service from each telecommunication provider in every town, please click <a href="https://www.whistleout.com.au/MobilePhones/Guides/who-has-the-best-mobile-coverage">here</a> to see if your provider has service available to you.</li>
+						</ul>
+
+						<p style="font-size:18px;line-height:25px;color:#000000; font-weight: 400; font-family: 'Roboto', Arial, sans-serif; margin:10px 0 20px;"><strong>Please review the below details carefully and <u>reply to this email with your approval in writing</u>, if you're happy to proceed</strong>:</p>
+
+						<table style="width: 100%; border-collapse: collapse; font-family: Arial, sans-serif; margin-top: 20px;">
+							<thead>
+								<tr>
+									<th colspan="2" style="border: 1px solid #ddd; padding: 8px; text-align: left; background-color: #f4f4f4;">Contract Details</th>
+								</tr>
+							</thead>
+							
+								<tr>
+									<td style="border: 1px solid #ddd; padding: 8px; width: 30%; padding: 10px;">Contract weeks</td>
+									<td style="border: 1px solid #ddd; padding: 8px; width: 70%; padding: 10px;"><span style="color:#3498db;">Insert contract length in weeks</span></td>
+								</tr>
+								<tr>
+									<td style="border: 1px solid #ddd; padding: 8px; width: 30%; padding: 10px;">Hours of work</td>
+									<td style="border: 1px solid #ddd; padding: 8px; width: 70%; padding: 10px;">Insert # of hours / week
+									<p>This is based on a 7.6 to 8 hour day, dependent on clinic requirements and opening times. If the clinic / facility manager requires you to attend work whilst on fatigue, yourself and the PHCM are to escalate it to the District Manager and gain approval PRIOR&nbsp;to you attending the clinic for work.&nbsp;</p>
+
+									<p>As always, on call requirements are to be recorded on the on call addendum.</p>
+									</td>
+								</tr>
+								<tr>
+									<td style="border: 1px solid #ddd; padding: 8px; width: 30%; padding: 10px;">Shift types/days</td>
+									<td style="border: 1px solid #ddd; padding: 8px; width: 70%; padding: 10px;">
+									<p><span style="color:#3498db;">List shifts required to be worked</span></p>
+									</td>
+								</tr>
+								<tr>
+									<td style="border: 1px solid #ddd; padding: 8px; width: 30%; padding: 10px;">Working within</td>
+									<td style="border: 1px solid #ddd; padding: 8px; width: 70%; padding: 10px;"><span style="color:#3498db;">List areas required to be worked</span></td>
+								</tr>
+								<tr>
+									<td style="border: 1px solid #ddd; padding: 8px; width: 30%; padding: 10px;">Position level and increment</td>
+									<td style="border: 1px solid #ddd; padding: 8px; width: 70%; padding: 10px;">
+									<p><span style="color:#3498db;">Insert nurse level or increment</span></p>
+
+									<p>On the provision that verified hours are provided to Alliance Rural &amp; Remote Health and facility name. Increments will be paid based on evidence provided to Alliance Rural &amp; Remote Health. If you do not provide evidence in the form of Statements of Service and/or Stat Decs, you will be paid at the lowest increment at this level until such time that the evidence is produced.</p>
+									</td>
+								</tr>
+								<tr>
+									<td style="border: 1px solid #ddd; padding: 8px; width: 30%; padding: 10px;">Rates of pay</td>
+									<td style="border: 1px solid #ddd; padding: 8px; width: 70%; padding: 10px;">
+									<p>This placement will be paid on Agency rates – please see attached. Being an agency contract, you will be employed as a casual employee and paid by Alliance Rural &amp; Remote Health weekly.</p>
+
+									<p>Timesheets will be required to be sent to our Finance team by midday on Monday.</p>
+									</td>
+								</tr>
+								<tr>
+									<td style="border: 1px solid #ddd; padding: 8px; width: 30%; padding: 10px;">Work Perks</td>
+									<td style="border: 1px solid #ddd; padding: 8px; width: 70%; padding: 10px;">If accepted, this contract adds to your Alliance Rural &amp; Remote Health&nbsp;<a href="https://www.allianceruralremote.com.au/rural-remote-nursing/rewards">Work More Earn More</a> bonus. Ask how far away you are from your next bonus!</td>
+								</tr>
+							
+						</table>
+
+						<table style="width: 100%; border-collapse: collapse; font-family: Arial, sans-serif; margin-top: 20px;">
+							<thead>
+								<tr>
+									<th colspan="2" style="border: 1px solid #ddd; padding: 8px; text-align: left; background-color: #f4f4f4;">Accommodation</th>
+								</tr>
+							</thead>
+							
+								<tr>
+									<td style="border: 1px solid #ddd; padding: 8px; width: 30%; padding: 10px;">Accommodation type</td>
+									<td style="border: 1px solid #ddd; padding: 8px; width: 70%; padding: 10px;"><span style="color:#3498db;">Insert accommodation type available</span></td>
+								</tr>
+								<tr>
+									<td style="border: 1px solid #ddd; padding: 8px;">Accommodation costs</td>
+									<td style="border: 1px solid #ddd; padding: 8px;">
+									<p>Provided <span style="color:#3498db;">free of charge/at a cost of $xxx per week/fortnight.</span></p>
+
+									<p>Alliance Rural &amp; Remote Health cannot guarantee that accommodation will be non-shared.</p>
+									</td>
+								</tr>
+							
+						</table>
+
+						<table style="width: 100%; border-collapse: collapse; font-family: Arial, sans-serif; margin-top: 20px;">
+							<thead>
+								<tr>
+									<th colspan="2" style="border: 1px solid #ddd; padding: 8px; text-align: left; background-color: #f4f4f4;">Travel</th>
+								</tr>
+							</thead>
+							
+								<tr>
+									<td style="border: 1px solid #ddd; padding: 8px; width: 30%; padding: 10px;">Travel bookings undertaken by</td>
+									<td style="border: 1px solid #ddd; padding: 8px; width: 70%; padding: 10px;">
+									<p><span style="color:#3498db;">Alliance Rural &amp; Remote Health/Facility/Nurse</span></p>
+									</td>
+								</tr>
+								<tr>
+									<td style="border: 1px solid #ddd; padding: 8px; width: 30%; padding: 10px;">Nurse travelling by</td>
+									<td style="border: 1px solid #ddd; padding: 8px; width: 70%; padding: 10px;"><span style="color:#3498db;">Air/Car/Public Transport</span></td>
+								</tr>
+								<tr>
+									<td style="border: 1px solid #ddd; padding: 8px; width: 30%; padding: 10px;">Travel will commence from</td>
+									<td style="border: 1px solid #ddd; padding: 8px; width: 70%; padding: 10px;"><span style="color:#3498db;">Home base</span></td>
+								</tr>
+								<tr>
+									<td style="border: 1px solid #ddd; padding: 8px; width: 30%; padding: 10px;">Nurse will commence travel on:</td>
+									<td style="border: 1px solid #ddd; padding: 8px; width: 70%; padding: 10px;"><span style="color:#3498db;">Travel commencement date</span></td>
+								</tr>
+								<tr>
+									<td style="border: 1px solid #ddd; padding: 8px; width: 30%; padding: 10px;">Paid travel day</td>
+									<td style="border: 1px solid #ddd; padding: 8px; width: 70%; padding: 10px;">The facility <span style="color:#3498db;">will/will not</span> pay a travel day.<br />
+									This will be<span style="color:#3498db;"> inclusive/exclusive</span> of your rostered hours.</td>
+								</tr>
+							
+						</table>
+
+						<table style="width: 100%; border-collapse: collapse; font-family: Arial, sans-serif; margin-top: 20px;">
+							<thead>
+								<tr>
+									<th colspan="2" style="border: 1px solid #ddd; padding: 8px; text-align: left; background-color: #f4f4f4;">Travel Costs</th>
+								</tr>
+							</thead>
+							
+								<tr>
+									<td style="border: 1px solid #ddd; padding: 8px; width: 30%; padding: 10px;">Facility will cover:</td>
+									<td style="border: 1px solid #ddd; padding: 8px; width: 70%; padding: 10px;">Forward: <span style="color:#3498db;">$$ capped amount</span><br />
+									Homeward: <span style="color:#3498db;">$$ capped amount</span><br />
+									En-route accommodation, if required: <span style="color:#3498db;">$$ capped amount</span><br />
+									<br />
+									Reimbursement will only be made upon provision of legible digital copies or original tax invoices and a completed travel reimbursement form being provided to Alliance Rural &amp; Remote Health.&nbsp;<strong>OR</strong><br />
+									To be reimbursed by the facility directly upon provision of original tax invoices and the appropriate Health Service form.</td>
+								</tr>
+								<tr>
+									<td style="border: 1px solid #ddd; padding: 8px; width: 30%; padding: 10px;">Alliance Nursing&nbsp;will cover:</td>
+									<td style="border: 1px solid #ddd; padding: 8px; width: 70%; padding: 10px;">Forward:<span style="color:#3498db;"> $$ capped amount</span><br />
+									Homeward: <span style="color:#3498db;">$$ capped amount</span><br />
+									En-route accommodation, if required: <span style="color:#3498db;">$$ capped amount.</span><br />
+									<br />
+									Reimbursement will only be made upon provision of legible digital copies or original tax invoices and a completed travel reimbursement form being provided to Alliance Nursing.</td>
+								</tr>
+								<tr>
+									<td style="border: 1px solid #ddd; padding: 8px; width: 30%; padding: 10px;">Nurse will cover</td>
+									<td style="border: 1px solid #ddd; padding: 8px; width: 70%; padding: 10px;">Any costs incurred in excess of the amounts listed above under costs of travel. This may include but is not limited to en-route accommodation, taxi fares, excess baggage, phone calls, meal costs. If driving, this may also include but is not limited to wear and tear on your vehicle, phone calls, car repairs, insurance excess, tolls, traffic infringements and meals.</td>
+								</tr>
+							
+						</table>
+						&nbsp;
+
+						<p style="font-family: Arial, sans-serif;font-size:18px;line-height:25px;color:#000000;margin:10px 0 20px;">*Please refer to attachments for Alliance Rural &amp; Remote Health’s <a href="https://allianceaustralia--uat.sandbox.my.salesforce.com/sfc/p/AD00000BK4sL/a/AD000000UkAH/Hhil4nCZg1RtPE36Nirib4lDe4c_Ow1W2cdi5xznmt8">Placement Offer conditions</a>&nbsp;and&nbsp;<a href="https://allianceaustralia--uat.sandbox.my.salesforce.com/sfc/p/AD00000BK4sL/a/AD000000UjUM/AtTInViy5tsJg.Ycij1E0_baVLUUgr7YaYxCdDjQhuk">Cancelation and refund policy</a> which form part of this offer.<br />
+						<br />
+						If you have any questions at all please call us on <a href="tel:1300034494">07 4998 5550</a>.<br />
+						<br />
+						Kind regards,<br />
+						{{{Sender.Name}}} and your team at Alliance Rural &amp; Remote Health</p>
+						</td>
+					</tr>
+					<tr>
+						<td style="height: 20px;">&nbsp;</td>
+					</tr>
+					<tr>
+						<td style="padding: 35px 0px 10px 0px;"><img alt="Alliance-graphic-line" src="https://allianceaustralia--uat.sandbox.file.force.com/file-asset-public/Alliancegraphicline?oid=00DAD00000BK4sL" style="max-width: 1623.55px" title="Alliance-graphic-line" /></td>
+					</tr>
+					<tr>
+						<td style="padding: 26px 45px 40px 45px;font-size: 12px;line-height: 22px;color: #374250;">
+						<table border="0" cellpadding="0" cellspacing="0" style="/* margin: 0 auto; */">
+							
+								<tr>
+									<td style="padding-right: 32px" valign="middle"><a href="https://www.facebook.com/allianceruralremote" rel="noopener noreferrer"><img alt="fb" src="https://allianceaustralia--uat.sandbox.file.force.com/file-asset-public/fb?oid=00DAD00000BK4sL" style="max-width: 1623.55px" title="fb" /></a></td>
+									<td style="padding-right: 32px" valign="middle"><a href="https://www.linkedin.com/company/373910" rel="noopener noreferrer"><img alt="in" src="https://allianceaustralia--uat.sandbox.file.force.com/file-asset-public/in?oid=00DAD00000BK4sL" style="max-width: 1623.55px" title="in" /></a></td>
+									<td style="padding-right: 32px" valign="middle"><a href="https://www.instagram.com/allianceruralremote/" rel="noopener noreferrer"><img alt="is" src="https://allianceaustralia--uat.sandbox.file.force.com/file-asset-public/is?oid=00DAD00000BK4sL" style="max-width: 1623.55px" title="is" /></a></td>
+									<td valign="middle"><a href="https://www.youtube.com/channel/UCVvnStor2YEhu-sOfyJOvbw" rel="noopener noreferrer"><img alt="yt" src="https://allianceaustralia--uat.sandbox.file.force.com/file-asset-public/yt?oid=00DAD00000BK4sL" style="max-width: 1623.55px" title="yt" /></a></td>
+								</tr>
+							
+						</table>
+						</td>
+					</tr>
+				
+			</table>
+			</td>
+		</tr>
+	
+</table>
+</body>
+</html>

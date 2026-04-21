@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- What protecion is in place for staff experienecing discrimination and harassment in the workplace? --></help>
+    <label><!-- StaffProtection Discrimination --></label>
+    <name>StaffProtection_Discrimination__c</name>
+</CustomFieldTranslation>

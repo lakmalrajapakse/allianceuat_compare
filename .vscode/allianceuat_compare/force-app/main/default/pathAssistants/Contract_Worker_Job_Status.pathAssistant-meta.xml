@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>TR1__Job__c</entityName>
+    <fieldName>s5m__ShiftDemandGeneration__c</fieldName>
+    <masterLabel>Contract Worker Job Status</masterLabel>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;Indicates that generation is no longer required. Transition to this status is automatic when the Job’s end date is now in the past.&lt;/p&gt;</info>
+        <picklistValueName>Done</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;Indicates that all Work Schedule based Shift Demands for the Job have been generated. Transition to this status is automatic.&lt;/p&gt;</info>
+        <picklistValueName>Fully Planned</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;&lt;span style=&quot;font-size: 13px;&quot;&gt;Indicates that the Job scheduling is ongoing and that Shift Demands are to be generated. Transition to this status is manual.&lt;/span&gt;&lt;/p&gt;</info>
+        <picklistValueName>Ongoing</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;The initial status for a Job, as set when the Job is first created.&lt;/p&gt;</info>
+        <picklistValueName>Pending</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>Contract</recordTypeName>
+</PathAssistant>

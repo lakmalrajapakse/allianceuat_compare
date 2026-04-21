@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>64.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <description>Notification when Job Offer accepted by Candidate</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>Notification_Body</name>
+        <dataType>String</dataType>
+        <expression>{!$Record.sirenum__Contact__r.FirstName} &amp; &apos; &apos; &amp; {!$Record.sirenum__Contact__r.LastName} &amp; &apos;  has accepted a Job Offer for Shift &apos; &amp; {!$Record.Name} &amp; &apos;.&apos;</expression>
+    </formulas>
+    <interviewLabel>Notification - Job Offer Acceptance {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Notification - Job Offer Acceptance</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Send_Notification</targetReference>
+        </connector>
+        <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>sirenum__Accepted__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <numberValue>1.0</numberValue>
+            </value>
+        </filters>
+        <object>sirenum__Shift__c</object>
+        <recordTriggerType>Update</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <subflows>
+        <name>Send_Notification</name>
+        <label>Send Notification</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <flowName>Notification_Sub_Flow</flowName>
+        <inputAssignments>
+            <name>Body</name>
+            <value>
+                <elementReference>Notification_Body</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>Branch</name>
+            <value>
+                <elementReference>$Record.sirenum__Contract__r.sirenum__Client__r.Branch__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>Notification_Name</name>
+            <value>
+                <stringValue>Job_Offer_Accepted</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>Target_Object_Id</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+    </subflows>
+</Flow>

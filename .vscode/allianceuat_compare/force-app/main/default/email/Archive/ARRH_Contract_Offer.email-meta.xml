@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>ARRH - Contract Offer</name>
+    <style>none</style>
+    <subject>Alliance Rural &amp; Remote Health - Contract Offer</subject>
+    <textOnly>CONTRACT OFFER.
+
+Hi {!Contact.FirstName},
+
+We&apos;d like to offer you the following contract:
+
+[Contract details]
+
+Please review the following documents:
+[BFIPOL - Canecllation and refunds]
+[BFIPOL - Travel Nurses]
+[SREFRM - Contract offer condistions]
+
+If you have any questions at all you can always call us on 07 4998 5550.
+
+Kind regards,
+Your team at Alliance Rural &amp; Remote Health</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

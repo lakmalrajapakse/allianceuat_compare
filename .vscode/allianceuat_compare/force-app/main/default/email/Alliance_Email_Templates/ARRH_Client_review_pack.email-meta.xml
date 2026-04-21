@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>ARRH - Client review pack</name>
+    <style>none</style>
+    <subject>Client review pack | Alliance Rural &amp; Remote Health</subject>
+    <textOnly>NURSE SUMMARY PACK.
+
+Hi {!Contact.FirstName},
+
+Nurse [Nurse name] has completed all required documentation and is ready to commence the {!TR1__Job__c.Name} contract pending your approval.
+
+Candidate details:
+
+[Nurse name]
+[Nurse AHPRA number]
+[Skills]
+[Certificates]
+[Agreed travel details]
+[Agreed accomodation details]
+[Other details]
+
+Please let us know if you&apos;re happy to proceed by replying to this email.
+
+If you have any questions, you can always call us on 07 4998 5550.
+
+Kind regards,
+Your team at Alliance Rural &amp; Remote Health</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

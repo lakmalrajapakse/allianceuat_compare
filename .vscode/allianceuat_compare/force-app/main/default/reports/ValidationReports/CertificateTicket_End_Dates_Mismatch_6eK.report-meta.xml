@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Contact$Name</field>
+    </columns>
+    <columns>
+        <field>Contact.sirenum__Tickets__r.Certificates__r$Name</field>
+    </columns>
+    <columns>
+        <field>Contact.sirenum__Tickets__r$Name</field>
+    </columns>
+    <columns>
+        <field>Contact.sirenum__Tickets__r.Certificates__r$b3o__Start_Date__c</field>
+    </columns>
+    <columns>
+        <field>Contact.sirenum__Tickets__r$sirenum__Valid_from__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>CDF1</field>
+    </columns>
+    <columns>
+        <field>Contact.sirenum__Tickets__r.Certificates__r$b3o__End_Date__c</field>
+    </columns>
+    <columns>
+        <field>Contact.sirenum__Tickets__r$sirenum__Valid_until__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Contact.sirenum__Tickets__r.Certificates__r$b3o__Expires_In_Days__c</field>
+    </columns>
+    <columns>
+        <field>Contact.sirenum__Tickets__r.Certificates__r$b3o__Certificate_Type__c</field>
+    </columns>
+    <columns>
+        <field>Contact$TR1__Candidate_Status__c</field>
+    </columns>
+    <customDetailFormulas>
+        <calculatedFormula>IF(
+AND(
+ISBLANK(b3o__Certificate__c.b3o__End_Date__c),
+ISBLANK(sirenum__Ticket__c.sirenum__Valid_until__c)
+),
+0,
+IF(
+OR(
+ISBLANK(b3o__Certificate__c.b3o__End_Date__c),
+ISBLANK(sirenum__Ticket__c.sirenum__Valid_until__c),
+b3o__Certificate__c.b3o__End_Date__c &lt;&gt; sirenum__Ticket__c.sirenum__Valid_until__c
+),
+1,
+0
+)
+)</calculatedFormula>
+        <dataType>Double</dataType>
+        <developerName>CDF1</developerName>
+        <label>Dates Mismatch</label>
+        <scale>0</scale>
+    </customDetailFormulas>
+    <description>Validation between End Date on a Certificate and Valid Until on a WFM Ticket</description>
+    <filter>
+        <criteriaItems>
+            <column>CDF1</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>1</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Contact$Branch_Name__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Certificate/Ticket End Dates Mismatch</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>People_with_Certificates_and_Tickets__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>false</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Contact$Birthdate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Indicates whether Payment Files related to this payment entity must be approved before they can be released. --></help>
+    <label><!-- Payment Files Require Approval --></label>
+    <name>tc9_pr__Payment_Files_Require_Approval__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,559 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ReportType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <baseObject>tc9_pr__Pay_Batch__c</baseObject>
+    <category>other</category>
+    <deployed>true</deployed>
+    <description>for aln 95</description>
+    <join>
+        <join>
+            <outerJoin>false</outerJoin>
+            <relationship>tc9_bgl__Accounting_Payroll_Journal_Lines__r</relationship>
+        </join>
+        <outerJoin>false</outerJoin>
+        <relationship>tc9_bgl__Accounting_Payroll_Journal__r</relationship>
+    </join>
+    <label>Pay Batch w/ Accounting Payroll Journal w/ Accounting Payroll Journal Lines</label>
+    <sections>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Pay Batch ID</displayNameOverride>
+            <field>Id</field>
+            <table>tc9_pr__Pay_Batch__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Owner</displayNameOverride>
+            <field>Owner</field>
+            <table>tc9_pr__Pay_Batch__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <displayNameOverride>Pay Batch Name</displayNameOverride>
+            <field>Name</field>
+            <table>tc9_pr__Pay_Batch__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Created Date</displayNameOverride>
+            <field>CreatedDate</field>
+            <table>tc9_pr__Pay_Batch__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Created By</displayNameOverride>
+            <field>CreatedBy</field>
+            <table>tc9_pr__Pay_Batch__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Last Modified Date</displayNameOverride>
+            <field>LastModifiedDate</field>
+            <table>tc9_pr__Pay_Batch__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Last Modified By</displayNameOverride>
+            <field>LastModifiedBy</field>
+            <table>tc9_pr__Pay_Batch__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Last Activity Date</displayNameOverride>
+            <field>LastActivityDate</field>
+            <table>tc9_pr__Pay_Batch__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Batch Id</displayNameOverride>
+            <field>tc9_pr__Batch_Id__c</field>
+            <table>tc9_pr__Pay_Batch__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Calendar Period</displayNameOverride>
+            <field>tc9_pr__Calendar_Period__c</field>
+            <table>tc9_pr__Pay_Batch__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Date Time Finalised</displayNameOverride>
+            <field>tc9_pr__Date_Time_Finalised__c</field>
+            <table>tc9_pr__Pay_Batch__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Enable Assignment Rate Calculation</displayNameOverride>
+            <field>tc9_pr__Enable_Assignment_Rate_Calculation__c</field>
+            <table>tc9_pr__Pay_Batch__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Enable Payee Allowance Calculation</displayNameOverride>
+            <field>tc9_pr__Enable_Payee_Allowance_Calculation__c</field>
+            <table>tc9_pr__Pay_Batch__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Enable Payee Deduction Calculation</displayNameOverride>
+            <field>tc9_pr__Enable_Payee_Deduction_Calculation__c</field>
+            <table>tc9_pr__Pay_Batch__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Enable Payee Leave Event Calculation</displayNameOverride>
+            <field>tc9_pr__Enable_Payee_Leave_Event_Calculation__c</field>
+            <table>tc9_pr__Pay_Batch__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Enable Payee Leave Rule Calculation</displayNameOverride>
+            <field>tc9_pr__Enable_Payee_Leave_Rule_Calculation__c</field>
+            <table>tc9_pr__Pay_Batch__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Filtered Calendar Periods</displayNameOverride>
+            <field>tc9_pr__Filtered_Calendar_Periods__c</field>
+            <table>tc9_pr__Pay_Batch__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Filtered Client</displayNameOverride>
+            <field>tc9_pr__Filtered_Client__c</field>
+            <table>tc9_pr__Pay_Batch__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Filtered Client</displayNameOverride>
+            <field>tc9_pr__Filtered_Clients__c</field>
+            <table>tc9_pr__Pay_Batch__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Filtered Employee</displayNameOverride>
+            <field>tc9_pr__Filtered_Employee__c</field>
+            <table>tc9_pr__Pay_Batch__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Filtered Employee</displayNameOverride>
+            <field>tc9_pr__Filtered_Employees__c</field>
+            <table>tc9_pr__Pay_Batch__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Filtered Funding Requirement</displayNameOverride>
+            <field>tc9_pr__Filtered_Funding_Requirement__c</field>
+            <table>tc9_pr__Pay_Batch__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Filtered Pay Location</displayNameOverride>
+            <field>tc9_pr__Filtered_Pay_Location__c</field>
+            <table>tc9_pr__Pay_Batch__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Filtered Pay Transactions</displayNameOverride>
+            <field>tc9_pr__Filtered_Pay_Transactions__c</field>
+            <table>tc9_pr__Pay_Batch__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Filtered Payee Location</displayNameOverride>
+            <field>tc9_pr__Filtered_Payee_Locations__c</field>
+            <table>tc9_pr__Pay_Batch__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Finalise Calendar Period</displayNameOverride>
+            <field>tc9_pr__Finalise_Calendar_Period__c</field>
+            <table>tc9_pr__Pay_Batch__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Include Earlier Dates</displayNameOverride>
+            <field>tc9_pr__Include_Earlier_Dates__c</field>
+            <table>tc9_pr__Pay_Batch__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <displayNameOverride>Narrative_l1</displayNameOverride>
+            <field>tc9_pr__Maximum_Payroll_Date__c</field>
+            <table>tc9_pr__Pay_Batch__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Pay Advice Net</displayNameOverride>
+            <field>tc9_pr__Pay_Advice_Net__c</field>
+            <table>tc9_pr__Pay_Batch__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Pay Batch Type</displayNameOverride>
+            <field>tc9_pr__Pay_Batch_Type__c</field>
+            <table>tc9_pr__Pay_Batch__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Payee Selection</displayNameOverride>
+            <field>tc9_pr__Payee_Selection__c</field>
+            <table>tc9_pr__Pay_Batch__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <displayNameOverride>Narrative_l4</displayNameOverride>
+            <field>tc9_pr__Payment_Date__c</field>
+            <table>tc9_pr__Pay_Batch__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Payment Entity</displayNameOverride>
+            <field>tc9_pr__Payment_Entity__c</field>
+            <table>tc9_pr__Pay_Batch__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Payment File Batch ID</displayNameOverride>
+            <field>tc9_pr__Payment_File_Apex_Batch_Log_ID__c</field>
+            <table>tc9_pr__Pay_Batch__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Payment File Net</displayNameOverride>
+            <field>tc9_pr__Payment_File_Net__c</field>
+            <table>tc9_pr__Pay_Batch__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Payment File Payment Date</displayNameOverride>
+            <field>tc9_pr__Payment_File_Payment_Date__c</field>
+            <table>tc9_pr__Pay_Batch__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Payroll Date</displayNameOverride>
+            <field>tc9_pr__Payroll_Date__c</field>
+            <table>tc9_pr__Pay_Batch__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Processed Date</displayNameOverride>
+            <field>tc9_pr__Processed_Date__c</field>
+            <table>tc9_pr__Pay_Batch__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Pay Schedule</displayNameOverride>
+            <field>tc9_pr__Schedule__c</field>
+            <table>tc9_pr__Pay_Batch__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Status</displayNameOverride>
+            <field>tc9_pr__Status__c</field>
+            <table>tc9_pr__Pay_Batch__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Total Employer Superannuation</displayNameOverride>
+            <field>tc9_pr__Total_Employer_Superannuation__c</field>
+            <table>tc9_pr__Pay_Batch__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Total Expenses</displayNameOverride>
+            <field>tc9_pr__Total_Expenses__c</field>
+            <table>tc9_pr__Pay_Batch__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Total Gross</displayNameOverride>
+            <field>tc9_pr__Total_Gross__c</field>
+            <table>tc9_pr__Pay_Batch__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Total Net</displayNameOverride>
+            <field>tc9_pr__Total_Net__c</field>
+            <table>tc9_pr__Pay_Batch__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Total Taxes</displayNameOverride>
+            <field>tc9_pr__Total_Taxes__c</field>
+            <table>tc9_pr__Pay_Batch__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Unique Payees</displayNameOverride>
+            <field>tc9_pr__Unique_Payees__c</field>
+            <table>tc9_pr__Pay_Batch__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Flag Incomplete Payment Entity</displayNameOverride>
+            <field>tc9_pr__Flag_Incomplete_Payment_Entity__c</field>
+            <table>tc9_pr__Pay_Batch__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Pay Batch Manager</displayNameOverride>
+            <field>tc9_pr__Pay_Batch_Manager__c</field>
+            <table>tc9_pr__Pay_Batch__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Payroll Reconciliation Status</displayNameOverride>
+            <field>tc9_ext_recon__Payroll_Reconciliation_Status__c</field>
+            <table>tc9_pr__Pay_Batch__c</table>
+        </columns>
+        <masterLabel>Pay Batches</masterLabel>
+    </sections>
+    <sections>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Accounting Payroll Journal ID</displayNameOverride>
+            <field>Id</field>
+            <table>tc9_pr__Pay_Batch__c.tc9_bgl__Accounting_Payroll_Journal__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Owner</displayNameOverride>
+            <field>Owner</field>
+            <table>tc9_pr__Pay_Batch__c.tc9_bgl__Accounting_Payroll_Journal__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <displayNameOverride>Payroll Journal Number</displayNameOverride>
+            <field>Name</field>
+            <table>tc9_pr__Pay_Batch__c.tc9_bgl__Accounting_Payroll_Journal__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Created Date</displayNameOverride>
+            <field>CreatedDate</field>
+            <table>tc9_pr__Pay_Batch__c.tc9_bgl__Accounting_Payroll_Journal__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Created By</displayNameOverride>
+            <field>CreatedBy</field>
+            <table>tc9_pr__Pay_Batch__c.tc9_bgl__Accounting_Payroll_Journal__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Last Modified Date</displayNameOverride>
+            <field>LastModifiedDate</field>
+            <table>tc9_pr__Pay_Batch__c.tc9_bgl__Accounting_Payroll_Journal__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Last Modified By</displayNameOverride>
+            <field>LastModifiedBy</field>
+            <table>tc9_pr__Pay_Batch__c.tc9_bgl__Accounting_Payroll_Journal__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Last Activity Date</displayNameOverride>
+            <field>LastActivityDate</field>
+            <table>tc9_pr__Pay_Batch__c.tc9_bgl__Accounting_Payroll_Journal__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Accounting System</displayNameOverride>
+            <field>tc9_bgl__Accounting_System__c</field>
+            <table>tc9_pr__Pay_Batch__c.tc9_bgl__Accounting_Payroll_Journal__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Calendar Period</displayNameOverride>
+            <field>tc9_bgl__Calendar_Period__c</field>
+            <table>tc9_pr__Pay_Batch__c.tc9_bgl__Accounting_Payroll_Journal__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Date Sent To GL</displayNameOverride>
+            <field>tc9_bgl__Date_Sent_To_GL__c</field>
+            <table>tc9_pr__Pay_Batch__c.tc9_bgl__Accounting_Payroll_Journal__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>External ID</displayNameOverride>
+            <field>tc9_bgl__External_ID__c</field>
+            <table>tc9_pr__Pay_Batch__c.tc9_bgl__Accounting_Payroll_Journal__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Integration Sync Message</displayNameOverride>
+            <field>tc9_bgl__Integration_Sync_Message__c</field>
+            <table>tc9_pr__Pay_Batch__c.tc9_bgl__Accounting_Payroll_Journal__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Journal Type</displayNameOverride>
+            <field>tc9_bgl__Journal_Type__c</field>
+            <table>tc9_pr__Pay_Batch__c.tc9_bgl__Accounting_Payroll_Journal__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Journal date</displayNameOverride>
+            <field>tc9_bgl__Journal_date__c</field>
+            <table>tc9_pr__Pay_Batch__c.tc9_bgl__Accounting_Payroll_Journal__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Journal Detailed Description</displayNameOverride>
+            <field>tc9_bgl__Journal_detailed_description__c</field>
+            <table>tc9_pr__Pay_Batch__c.tc9_bgl__Accounting_Payroll_Journal__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Payment File</displayNameOverride>
+            <field>tc9_bgl__Payment_File__c</field>
+            <table>tc9_pr__Pay_Batch__c.tc9_bgl__Accounting_Payroll_Journal__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Sent To GL Status</displayNameOverride>
+            <field>tc9_bgl__Sent_To_GL_Status__c</field>
+            <table>tc9_pr__Pay_Batch__c.tc9_bgl__Accounting_Payroll_Journal__r</table>
+        </columns>
+        <masterLabel>Accounting Payroll Journal</masterLabel>
+    </sections>
+    <sections>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Accounting Payroll Journal Lines ID</displayNameOverride>
+            <field>Id</field>
+            <table>tc9_pr__Pay_Batch__c.tc9_bgl__Accounting_Payroll_Journal__r.tc9_bgl__Accounting_Payroll_Journal_Lines__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Owner</displayNameOverride>
+            <field>Owner</field>
+            <table>tc9_pr__Pay_Batch__c.tc9_bgl__Accounting_Payroll_Journal__r.tc9_bgl__Accounting_Payroll_Journal_Lines__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <displayNameOverride>Payroll Journal Line</displayNameOverride>
+            <field>Name</field>
+            <table>tc9_pr__Pay_Batch__c.tc9_bgl__Accounting_Payroll_Journal__r.tc9_bgl__Accounting_Payroll_Journal_Lines__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Created Date</displayNameOverride>
+            <field>CreatedDate</field>
+            <table>tc9_pr__Pay_Batch__c.tc9_bgl__Accounting_Payroll_Journal__r.tc9_bgl__Accounting_Payroll_Journal_Lines__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Created By</displayNameOverride>
+            <field>CreatedBy</field>
+            <table>tc9_pr__Pay_Batch__c.tc9_bgl__Accounting_Payroll_Journal__r.tc9_bgl__Accounting_Payroll_Journal_Lines__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Last Modified Date</displayNameOverride>
+            <field>LastModifiedDate</field>
+            <table>tc9_pr__Pay_Batch__c.tc9_bgl__Accounting_Payroll_Journal__r.tc9_bgl__Accounting_Payroll_Journal_Lines__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Last Modified By</displayNameOverride>
+            <field>LastModifiedBy</field>
+            <table>tc9_pr__Pay_Batch__c.tc9_bgl__Accounting_Payroll_Journal__r.tc9_bgl__Accounting_Payroll_Journal_Lines__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Last Activity Date</displayNameOverride>
+            <field>LastActivityDate</field>
+            <table>tc9_pr__Pay_Batch__c.tc9_bgl__Accounting_Payroll_Journal__r.tc9_bgl__Accounting_Payroll_Journal_Lines__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>DO NOT USE</displayNameOverride>
+            <field>tc9_bgl__Accounting_Segments__c</field>
+            <table>tc9_pr__Pay_Batch__c.tc9_bgl__Accounting_Payroll_Journal__r.tc9_bgl__Accounting_Payroll_Journal_Lines__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Cost Code</displayNameOverride>
+            <field>tc9_bgl__Cost_Code__c</field>
+            <table>tc9_pr__Pay_Batch__c.tc9_bgl__Accounting_Payroll_Journal__r.tc9_bgl__Accounting_Payroll_Journal_Lines__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Credit</displayNameOverride>
+            <field>tc9_bgl__Credit__c</field>
+            <table>tc9_pr__Pay_Batch__c.tc9_bgl__Accounting_Payroll_Journal__r.tc9_bgl__Accounting_Payroll_Journal_Lines__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Debit</displayNameOverride>
+            <field>tc9_bgl__Debit__c</field>
+            <table>tc9_pr__Pay_Batch__c.tc9_bgl__Accounting_Payroll_Journal__r.tc9_bgl__Accounting_Payroll_Journal_Lines__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Department</displayNameOverride>
+            <field>tc9_bgl__Department__c</field>
+            <table>tc9_pr__Pay_Batch__c.tc9_bgl__Accounting_Payroll_Journal__r.tc9_bgl__Accounting_Payroll_Journal_Lines__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Description</displayNameOverride>
+            <field>tc9_bgl__Description__c</field>
+            <table>tc9_pr__Pay_Batch__c.tc9_bgl__Accounting_Payroll_Journal__r.tc9_bgl__Accounting_Payroll_Journal_Lines__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Entity</displayNameOverride>
+            <field>tc9_bgl__Entity__c</field>
+            <table>tc9_pr__Pay_Batch__c.tc9_bgl__Accounting_Payroll_Journal__r.tc9_bgl__Accounting_Payroll_Journal_Lines__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Location</displayNameOverride>
+            <field>tc9_bgl__Location__c</field>
+            <table>tc9_pr__Pay_Batch__c.tc9_bgl__Accounting_Payroll_Journal__r.tc9_bgl__Accounting_Payroll_Journal_Lines__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Natural Account</displayNameOverride>
+            <field>tc9_bgl__Natural_Account__c</field>
+            <table>tc9_pr__Pay_Batch__c.tc9_bgl__Accounting_Payroll_Journal__r.tc9_bgl__Accounting_Payroll_Journal_Lines__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Tax Included</displayNameOverride>
+            <field>tc9_bgl__Tax_Included__c</field>
+            <table>tc9_pr__Pay_Batch__c.tc9_bgl__Accounting_Payroll_Journal__r.tc9_bgl__Accounting_Payroll_Journal_Lines__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Ledger Code</displayNameOverride>
+            <field>Ledger_Code__c</field>
+            <table>tc9_pr__Pay_Batch__c.tc9_bgl__Accounting_Payroll_Journal__r.tc9_bgl__Accounting_Payroll_Journal_Lines__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <displayNameOverride>Narrative_l3</displayNameOverride>
+            <field>State__c</field>
+            <table>tc9_pr__Pay_Batch__c.tc9_bgl__Accounting_Payroll_Journal__r.tc9_bgl__Accounting_Payroll_Journal_Lines__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Account</displayNameOverride>
+            <field>Account__c</field>
+            <table>tc9_pr__Pay_Batch__c.tc9_bgl__Accounting_Payroll_Journal__r.tc9_bgl__Accounting_Payroll_Journal_Lines__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <displayNameOverride>Narrative_l2</displayNameOverride>
+            <field>tc9_bgl__Natural_Account__c.tc9_bgl__Segment_Description__c</field>
+            <table>tc9_pr__Pay_Batch__c.tc9_bgl__Accounting_Payroll_Journal__r.tc9_bgl__Accounting_Payroll_Journal_Lines__r</table>
+        </columns>
+        <masterLabel>Accounting Payroll Journal Lines</masterLabel>
+    </sections>
+</ReportType>

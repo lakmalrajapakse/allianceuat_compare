@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Indicates funding requirements for Timesheets at a Client level. This value will be used to populate the Funding Requirement field on related Timesheet based Pay Transactions --></help>
+    <label><!-- Timesheet Funding Requirement --></label>
+    <name>tc9_et__Timesheet_Funding_Requirement__c</name>
+</CustomFieldTranslation>

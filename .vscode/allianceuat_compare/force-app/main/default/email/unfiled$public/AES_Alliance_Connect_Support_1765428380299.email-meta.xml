@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>AES - Alliance Connect Support</name>
+    <relatedEntityType>Contact</relatedEntityType>
+    <style>none</style>
+    <subject>Let’s get your Alliance Connect App back on track!</subject>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

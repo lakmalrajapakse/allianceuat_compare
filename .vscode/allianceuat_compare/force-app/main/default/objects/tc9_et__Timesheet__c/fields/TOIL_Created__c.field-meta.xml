@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TOIL_Created__c</fullName>
+    <defaultValue>false</defaultValue>
+    <inlineHelpText>Indicates that there were TSE with TOIL selected and thus a TOIL credit has been created in place of the OT</inlineHelpText>
+    <label>TOIL Created</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

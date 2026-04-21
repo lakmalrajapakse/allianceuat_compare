@@ -1,0 +1,164 @@
+<html>
+ <head>
+  <title></title>
+ </head>
+ <body style="height: auto; min-height: auto;">
+  <table border="0" cellpadding="0" cellspacing="0" style="background-color: #f6f6f6; padding: 10px;" width="100%">
+   <tbody>
+    <tr>
+     <td align="center" bgcolor="#f6f6f6">
+      <table border="0" cellpadding="0" cellspacing="0" style="background-color:#ffffff; width: 600px;">
+       <tbody>
+        <tr>
+         <td style="padding: 0; background-color: #ffffff;"><img alt="AN-email-header" src="{[devName:ANemailheader]}" style="max-width: 1623.55px" title="AN-email-header" /><a href="https://www.alliancenursing.com.au"> </a></td>
+        </tr>
+        <tr>
+         <td style="height: 30px;">&nbsp;</td>
+        </tr>
+        <tr>
+         <td align="left" style="padding: 0 45px;"><h1 style="font-size: 30px; line-height: 37px; color: #007DC3; font-weight: 900; font-family: 'Montserrat', 'Arial Black', Arial, sans-serif;">CONTRACT OFFER FOR REVIEW.</h1> <p style="font-size:18px;line-height:25px;color:#000000; font-weight: 400; font-family: 'Roboto', Arial, sans-serif; margin:10px 0 20px;"><br /> Hi {{{Recipient.FirstName}}},&nbsp;<br /> <br /> [Facility name] would like to offer you a contract from [Contract start date] to [Contract end date]<br /> <br /> <strong>Facility information:</strong><br /> &nbsp;</p>
+          <ul>
+           <li style="font-size: 18px; line-height: 25px; color: rgb(0, 0, 0); font-weight: 400; font-family: Roboto, Arial, sans-serif; margin: 10px 0px 20px;">aaa</li>
+           <li style="font-size: 18px; line-height: 25px; color: rgb(0, 0, 0); font-weight: 400; font-family: Roboto, Arial, sans-serif; margin: 10px 0px 20px;">bbb</li>
+           <li style="font-size: 18px; line-height: 25px; color: rgb(0, 0, 0); font-weight: 400; font-family: Roboto, Arial, sans-serif; margin: 10px 0px 20px;">ccc</li>
+           <li style="font-size: 18px; line-height: 25px; color: rgb(0, 0, 0); font-weight: 400; font-family: Roboto, Arial, sans-serif; margin: 10px 0px 20px;">Mobile service - Since we cannot confirm the mobile service from each telecommunication provider in every town, please click <a href="https://www.whistleout.com.au/MobilePhones/Guides/who-has-the-best-mobile-coverage">here</a> to see if your provider has service available to you.</li>
+          </ul> <p style="font-size:18px;line-height:25px;color:#000000; font-weight: 400; font-family: 'Roboto', Arial, sans-serif; margin:10px 0 20px;">Please review the below details carefully and reply to this email with your approval in writing, if you're happy to proceed:</p>
+          <table style="width: 100%; border-collapse: collapse; font-family: Arial, sans-serif; margin-top: 20px;">
+           <thead>
+            <tr>
+             <th colspan="2" style="border: 1px solid #ddd; padding: 8px; text-align: left; background-color: #f4f4f4;">Contract Details</th>
+            </tr>
+           </thead>
+           <tbody>
+            <tr>
+             <td style="border: 1px solid #ddd; padding: 8px; width: 30%; padding: 10px;">Placement weeks</td>
+             <td style="border: 1px solid #ddd; padding: 8px; width: 70%; padding: 10px;">Insert contract length in weeks</td>
+            </tr>
+            <tr>
+             <td style="border: 1px solid #ddd; padding: 8px; width: 30%; padding: 10px;">Hours of work</td>
+             <td style="border: 1px solid #ddd; padding: 8px; width: 70%; padding: 10px;">Insert # of hours / fortnight</td>
+            </tr>
+            <tr>
+             <td style="border: 1px solid #ddd; padding: 8px; width: 30%; padding: 10px;">Shift types/days</td>
+             <td style="border: 1px solid #ddd; padding: 8px; width: 70%; padding: 10px;">Note shifts required to be worked. You will be required to work with an 8-hour break. Confirm IF YOU DO NOT WISH TO DO THIS. If no response, this will be included in the contract.</td>
+            </tr>
+            <tr>
+             <td style="border: 1px solid #ddd; padding: 8px; width: 30%; padding: 10px;">Working within</td>
+             <td style="border: 1px solid #ddd; padding: 8px; width: 70%; padding: 10px;">List areas required to be worked</td>
+            </tr>
+            <tr>
+             <td style="border: 1px solid #ddd; padding: 8px; width: 30%; padding: 10px;">In-charge or on-call requirements</td>
+             <td style="border: 1px solid #ddd; padding: 8px; width: 70%; padding: 10px;">Note any in-charge or on-call requirements</td>
+            </tr>
+            <tr>
+             <td style="border: 1px solid #ddd; padding: 8px; width: 30%; padding: 10px;">Position level and increment</td>
+             <td style="border: 1px solid #ddd; padding: 8px; width: 70%; padding: 10px;">Insert nurse level or increment</td>
+            </tr>
+            <tr>
+             <td style="border: 1px solid #ddd; padding: 8px; width: 30%; padding: 10px;">Rates of pay</td>
+             <td style="border: 1px solid #ddd; padding: 8px; width: 70%; padding: 10px;">This placement will be paid on Placement rates – please see attached / link.<br /> Being a placement contract, they will pay you as a CASUAL, which means you receive a casual loading on your hourly rate / you will also accrue ADO's/AL/SL. ADO's and AL owing can be paid out on completion of your contract.</td>
+            </tr>
+            <tr>
+             <td style="border: 1px solid #ddd; padding: 8px; width: 30%; padding: 10px;">Alliance Nursing Weekly Bonus</td>
+             <td style="border: 1px solid #ddd; padding: 8px; width: 70%; padding: 10px;">Being a Placement, you will also accrue $Bonus amount/week bonus, payable weekly from Alliance Nursing.<br /> <br /> Shifts less than 8 hours will be paid at a pro rata rate of this amount.<br /> <br /> To receive this you must complete your weekly shift record for NSW Placements and send it to our Finance Team no later than COB each Monday.</td>
+            </tr>
+            <tr>
+             <td style="border: 1px solid #ddd; padding: 8px; width: 30%; padding: 10px;">Work Perks</td>
+             <td style="border: 1px solid #ddd; padding: 8px; width: 70%; padding: 10px;">If accepted, this contract adds to your Alliance Nursing&nbsp;<a href="https://www.allianceruralremote.com.au/rural-remote-nursing/rewards">Work More Earn More</a> bonus. Ask how far away you are from your next bonus!</td>
+            </tr>
+           </tbody>
+          </table>
+          <table style="width: 100%; border-collapse: collapse; font-family: Arial, sans-serif; margin-top: 20px;">
+           <thead>
+            <tr>
+             <th colspan="2" style="border: 1px solid #ddd; padding: 8px; text-align: left; background-color: #f4f4f4;">Accommodation</th>
+            </tr>
+           </thead>
+           <tbody>
+            <tr>
+             <td style="border: 1px solid #ddd; padding: 8px; width: 30%; padding: 10px;">Accommodation type</td>
+             <td style="border: 1px solid #ddd; padding: 8px; width: 70%; padding: 10px;">Insert accommodation type available</td>
+            </tr>
+            <tr>
+             <td style="border: 1px solid #ddd; padding: 8px;">Accommodation costs</td>
+             <td style="border: 1px solid #ddd; padding: 8px;">Provided free of charge/at a cost of $xxx per week/fortnight.<br /> Alliance Nursing cannot guarantee that accommodation will be non-shared.</td>
+            </tr>
+           </tbody>
+          </table>
+          <table style="width: 100%; border-collapse: collapse; font-family: Arial, sans-serif; margin-top: 20px;">
+           <thead>
+            <tr>
+             <th colspan="2" style="border: 1px solid #ddd; padding: 8px; text-align: left; background-color: #f4f4f4;">Travel</th>
+            </tr>
+           </thead>
+           <tbody>
+            <tr>
+             <td style="border: 1px solid #ddd; padding: 8px; width: 30%; padding: 10px;">Travel bookings undertaken by</td>
+             <td style="border: 1px solid #ddd; padding: 8px; width: 70%; padding: 10px;">Facility/Nurse</td>
+            </tr>
+            <tr>
+             <td style="border: 1px solid #ddd; padding: 8px; width: 30%; padding: 10px;">Nurse travelling by</td>
+             <td style="border: 1px solid #ddd; padding: 8px; width: 70%; padding: 10px;">Air/Car/Public Transport</td>
+            </tr>
+            <tr>
+             <td style="border: 1px solid #ddd; padding: 8px; width: 30%; padding: 10px;">Travel will commence from</td>
+             <td style="border: 1px solid #ddd; padding: 8px; width: 70%; padding: 10px;">Home base</td>
+            </tr>
+            <tr>
+             <td style="border: 1px solid #ddd; padding: 8px; width: 30%; padding: 10px;">Nurse will commence travel on</td>
+             <td style="border: 1px solid #ddd; padding: 8px; width: 70%; padding: 10px;">Travel commencement date</td>
+            </tr>
+            <tr>
+             <td style="border: 1px solid #ddd; padding: 8px; width: 30%; padding: 10px;">Paid travel day</td>
+             <td style="border: 1px solid #ddd; padding: 8px; width: 70%; padding: 10px;">The facility will not pay a travel day.</td>
+            </tr>
+           </tbody>
+          </table>
+          <table style="width: 100%; border-collapse: collapse; font-family: Arial, sans-serif; margin-top: 20px;">
+           <thead>
+            <tr>
+             <th colspan="2" style="border: 1px solid #ddd; padding: 8px; text-align: left; background-color: #f4f4f4;">Travel Costs</th>
+            </tr>
+           </thead>
+           <tbody>
+            <tr>
+             <td style="border: 1px solid #ddd; padding: 8px; width: 30%; padding: 10px;">Facility will cover:</td>
+             <td style="border: 1px solid #ddd; padding: 8px; width: 70%; padding: 10px;">Forward: $$ capped amount<br /> Homeward: $$ capped amount<br /> En-route accommodation, if required: $$ capped amount<br /> <br /> This will be booked by NSW Health / Claimed through iExpense / or mention how travel will be reimbursed.</td>
+            </tr>
+            <tr>
+             <td style="border: 1px solid #ddd; padding: 8px; width: 30%; padding: 10px;">Alliance Nursing will cover:</td>
+             <td style="border: 1px solid #ddd; padding: 8px; width: 70%; padding: 10px;">Forward: $$ capped amount<br /> Homeward: $$ capped amount<br /> En-route accommodation, if required: $$ capped amount<br /> <br /> Reimbursement will only be made upon provision of legible digital copies or original tax invoices and a completed travel reimbursement form being provided to Alliance Nursing.</td>
+            </tr>
+            <tr>
+             <td style="border: 1px solid #ddd; padding: 8px; width: 30%; padding: 10px;">Nurse will cover</td>
+             <td style="border: 1px solid #ddd; padding: 8px; width: 70%; padding: 10px;">Any costs incurred in excess of the amounts listed above under costs of travel. This may include but is not limited to en-route accommodation, taxi fares, excess baggage, phone calls, meal costs. If driving, this may also include but is not limited to wear and tear on your vehicle, phone calls, car repairs, insurance excess, tolls, traffic infringements and meals.</td>
+            </tr>
+           </tbody>
+          </table> <p style="font-family: Arial, sans-serif;font-size:18px;line-height:25px;color:#000000;margin:10px 0 20px;">*Please refer to attachments for Alliance Nursing’s Contract Conditions, Cancellation Policy and Travel Policy which form part of this offer.<br /> <br /> Please also review the following documents before accepting the contract on offer:<br /> <a href="https://allianceaustralia.my.salesforce-sites.com/onboarding/apex/b3d__Document?templateId=a8POa00000OO8EyMAL&amp;recordId={{{Recipient.Id}}}">Cancelation and refund policy</a><br /> <a href="https://allianceaustralia.my.salesforce-sites.com/onboarding/apex/b3d__Document?templateId=a8POa00000OO8EzMAL&amp;recordId={{{Recipient.Id}}}">Travel nurses policy</a><br /> <a href="https://allianceaustralia.my.salesforce-sites.com/onboarding/apex/b3d__Document?templateId=a8POa00000OO8ExMAL&amp;recordId={{{Recipient.Id}}}">Contract offer conditions</a><br /> <br /> If you have any questions at all please call us on <a href="tel:1300034494">1300 034 494</a>.<br /> <br /> Kind regards,<br /> {{{Sender.Name}}} and your team at Alliance Nursing</p></td>
+        </tr>
+        <tr>
+         <td style="height: 20px;">&nbsp;</td>
+        </tr>
+        <tr>
+         <td style="padding: 35px 0px 10px 0px;"><img alt="Alliance-graphic-line" src="{[devName:Alliancegraphicline]}" style="max-width: 1623.55px" title="Alliance-graphic-line" /></td>
+        </tr>
+        <tr>
+         <td style="padding: 26px 45px 40px 45px;font-size: 12px;line-height: 22px;color: #374250;">
+          <table border="0" cellpadding="0" cellspacing="0" style="/* margin: 0 auto; */">
+           <tbody>
+            <tr>
+             <td style="padding-right: 16px;"><a href="https://www.facebook.com/alliancenursingaustralia"><img alt="fb-blue" src="{[devName:fbblue]}" style="max-width: 1623.55px" title="fb-blue" /></a></td>
+             <td style="padding-right: 16px;"><a href="https://www.linkedin.com/company/alliance-nursing-australia"><img alt="in-blue" src="{[devName:inblue]}" style="max-width: 1623.55px" title="in-blue" /></a></td>
+             <td style="padding-right: 16px;"><a href="https://www.instagram.com/alliancenursingaustralia/"><img alt="is-blue" src="{[devName:isblue]}" style="max-width: 1623.55px" title="is-blue" /></a></td>
+             <td><a href="https://www.youtube.com/channel/UCnMTM3MLQMFYj52ERo0E00Q"><img alt="yt-blue" src="{[devName:ytblue]}" style="max-width: 1623.55px" title="yt-blue" /></a></td>
+            </tr>
+           </tbody>
+          </table></td>
+        </tr>
+       </tbody>
+      </table></td>
+    </tr>
+   </tbody>
+  </table>
+ </body>
+</html>

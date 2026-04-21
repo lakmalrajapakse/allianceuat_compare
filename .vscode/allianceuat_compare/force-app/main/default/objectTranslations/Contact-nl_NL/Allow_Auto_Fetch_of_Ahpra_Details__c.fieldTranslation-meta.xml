@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>
+        <!-- Determines if this record is allowed to be added to the Ahpra Batch Job.  This is set automatically after the initial manual Ahpra check is made.  If the fetch is successful, this will be auto populated.
+
+If any Ahpra number is added or edited, this will be set to false until another manual check is made. -->
+    </help>
+    <label><!-- Allow Auto Fetch of Ahpra Details --></label>
+    <name>Allow_Auto_Fetch_of_Ahpra_Details__c</name>
+</CustomFieldTranslation>

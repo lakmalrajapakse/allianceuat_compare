@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>tc9_util__TC_Timesheet_Days_in_future__c</fullName>
+    <defaultValue>31</defaultValue>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <inlineHelpText>This field controls how many days into the future a TC can view/submit their timesheet. By default set to 31, which is based on the End Date of the timesheet.
+
+To submit a future timesheet, ie next month, set the days to &apos;62&apos;</inlineHelpText>
+    <label>TC Timesheet Days in future</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

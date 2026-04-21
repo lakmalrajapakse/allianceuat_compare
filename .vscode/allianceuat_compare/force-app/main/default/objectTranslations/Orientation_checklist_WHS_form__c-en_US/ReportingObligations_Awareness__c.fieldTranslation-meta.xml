@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>
+        <!-- Are you aware of your reporting obligations in cases of suspected child or
+elderly abuse and neglect? Have you familiarised yourself with the facilities policies and procedures around this type of reporting? -->
+    </help>
+    <label><!-- ReportingObligations Awareness --></label>
+    <name>ReportingObligations_Awareness__c</name>
+</CustomFieldTranslation>

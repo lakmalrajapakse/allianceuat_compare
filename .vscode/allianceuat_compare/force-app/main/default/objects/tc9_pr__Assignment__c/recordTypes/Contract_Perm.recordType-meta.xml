@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contract_Perm</fullName>
+    <active>true</active>
+    <description>Contracted Assignments - fee only</description>
+    <label>Payroll Services Fee</label>
+    <picklistValues>
+        <picklist>Contract_Fee_Type__c</picklist>
+        <values>
+            <fullName>Daily Fee</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hourly Fee</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Monthly Fee</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>One Off Fee</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Weekly Fee</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Cross_Assignment_Timesheet_Status__c</picklist>
+        <values>
+            <fullName>All</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Approved</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Department__c</picklist>
+        <values>
+            <fullName>Client Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Finance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>People %26 Culture</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sales</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Interpretation_Period__c</picklist>
+        <values>
+            <fullName>2 week</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4 week</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Weekly</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Round_Up_Part_Period_Fees__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

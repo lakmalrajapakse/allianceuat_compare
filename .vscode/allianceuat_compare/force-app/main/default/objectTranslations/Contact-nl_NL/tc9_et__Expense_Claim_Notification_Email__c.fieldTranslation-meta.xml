@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Expense Claim Notification Email --></label>
+    <name>tc9_et__Expense_Claim_Notification_Email__c</name>
+</CustomFieldTranslation>

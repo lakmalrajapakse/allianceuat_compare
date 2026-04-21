@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AnimationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <animationFrequency>often</animationFrequency>
+    <developerName>Client_Contact</developerName>
+    <isActive>true</isActive>
+    <masterLabel>Client Contact</masterLabel>
+    <recordTypeContext>Custom</recordTypeContext>
+    <recordTypeName>Client_Contact</recordTypeName>
+    <sobjectType>Contact</sobjectType>
+    <targetField>TR1__Client_Status__c</targetField>
+    <targetFieldChangeToValues>Active</targetFieldChangeToValues>
+</AnimationRule>

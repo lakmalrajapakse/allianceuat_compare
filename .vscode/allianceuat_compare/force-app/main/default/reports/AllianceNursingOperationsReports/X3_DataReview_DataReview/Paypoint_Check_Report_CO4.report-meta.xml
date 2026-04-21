@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Contact$Name</field>
+    </columns>
+    <columns>
+        <field>Contact.sirenum__Tickets__r$Name</field>
+    </columns>
+    <columns>
+        <field>Contact.sirenum__Tickets__r$sirenum__TicketType__c</field>
+    </columns>
+    <columns>
+        <field>Contact$TR1__Candidate_Status__c</field>
+    </columns>
+    <format>Tabular</format>
+    <name>Paypoint Check Report</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>People_with_Qualification_Tickets__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Contact.sirenum__Tickets__r$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

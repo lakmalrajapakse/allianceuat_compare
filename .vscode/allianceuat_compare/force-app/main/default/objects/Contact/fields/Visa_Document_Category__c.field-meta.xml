@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Visa_Document_Category__c</fullName>
+    <label>Visa Document Category</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>DFTTA</fullName>
+                <default>false</default>
+                <label>DFTTA</label>
+            </value>
+            <value>
+                <fullName>ImmiCard</fullName>
+                <default>false</default>
+                <label>ImmiCard</label>
+            </value>
+            <value>
+                <fullName>Passport</fullName>
+                <default>false</default>
+                <label>Passport</label>
+            </value>
+            <value>
+                <fullName>PLO56 (M56)</fullName>
+                <default>false</default>
+                <label>PLO56 (M56)</label>
+            </value>
+            <value>
+                <fullName>Titre de Voyage</fullName>
+                <default>false</default>
+                <label>Titre de Voyage</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

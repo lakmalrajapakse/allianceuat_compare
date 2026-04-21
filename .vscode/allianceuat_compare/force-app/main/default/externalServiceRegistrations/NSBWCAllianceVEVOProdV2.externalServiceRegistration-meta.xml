@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExternalServiceRegistration xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>NSBWCAllianceVEVOProdV2</label>
+    <namedCredentialReference>NSBWCAllianceVEVOProdV2</namedCredentialReference>
+    <operations>
+        <active>true</active>
+        <name>nsbwcalliancevevoprodv2</name>
+    </operations>
+    <registrationProviderType>Custom</registrationProviderType>
+    <schema>{
+  &quot;openapi&quot;: &quot;3.0.1&quot;,
+  &quot;info&quot;: {
+    &quot;title&quot;: &quot;NSBWCAllianceVEVOProdV2&quot;,
+    &quot;description&quot;: &quot;&quot;
+  },
+  &quot;paths&quot;: {
+    &quot;&quot;: {
+      &quot;post&quot;: {
+        &quot;operationId&quot;: &quot;NSBWCAllianceVEVOProdV2&quot;,
+        &quot;requestBody&quot;: {
+          &quot;required&quot;: true,
+          &quot;content&quot;: {
+            &quot;application/json&quot;: {
+              &quot;schema&quot;: {
+                &quot;type&quot;: &quot;object&quot;,
+                &quot;properties&quot;: {
+                  &quot;FamilyName&quot;: {
+                    &quot;type&quot;: &quot;string&quot;
+                  },
+                  &quot;GivenName&quot;: {
+                    &quot;type&quot;: &quot;string&quot;
+                  },
+                  &quot;BirthDate&quot;: {
+                    &quot;type&quot;: &quot;string&quot;
+                  },
+                  &quot;TravelDocumentNumber&quot;: {
+                    &quot;type&quot;: &quot;string&quot;
+                  },
+                  &quot;TravelDocumentIssuingCountryCode&quot;: {
+                    &quot;type&quot;: &quot;string&quot;
+                  }
+                }
+              }
+            }
+          }
+        },
+        &quot;responses&quot;: {
+          &quot;2XX&quot;: {
+            &quot;description&quot;: &quot;&quot;,
+            &quot;content&quot;: {
+              &quot;application/json&quot;: {
+                &quot;schema&quot;: {
+                  &quot;type&quot;: &quot;object&quot;,
+                  &quot;properties&quot;: {
+                    &quot;FamilyName&quot;: {
+                      &quot;type&quot;: &quot;string&quot;
+                    },
+                    &quot;GivenNames&quot;: {
+                      &quot;type&quot;: &quot;string&quot;
+                    },
+                    &quot;TravelDocumentNumber&quot;: {
+                      &quot;type&quot;: &quot;string&quot;
+                    },
+                    &quot;VisaClass&quot;: {
+                      &quot;type&quot;: &quot;string&quot;
+                    },
+                    &quot;VisaSubclass&quot;: {
+                      &quot;type&quot;: &quot;string&quot;
+                    },
+                    &quot;VisaGrantDate&quot;: {
+                      &quot;type&quot;: &quot;string&quot;
+                    },
+                    &quot;VisaExpiryDate&quot;: {
+                      &quot;type&quot;: &quot;string&quot;
+                    },
+                    &quot;CurrentDateTime&quot;: {
+                      &quot;type&quot;: &quot;string&quot;
+                    },
+                    &quot;WorkEntitlement&quot;: {
+                      &quot;type&quot;: &quot;object&quot;,
+                      &quot;properties&quot;: {
+                        &quot;WorkEntitlementStatus&quot;: {
+                          &quot;type&quot;: &quot;string&quot;
+                        },
+                        &quot;WorkCondition&quot;: {
+                          &quot;type&quot;: &quot;object&quot;,
+                          &quot;properties&quot;: {
+                            &quot;WorkConditionCode&quot;: {
+                              &quot;type&quot;: &quot;string&quot;
+                            },
+                            &quot;WorkConditionDescription&quot;: {
+                              &quot;type&quot;: &quot;string&quot;
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}</schema>
+    <schemaType>OpenApi3</schemaType>
+    <serviceBinding>{&quot;host&quot;:&quot;&quot;,&quot;basePath&quot;:&quot;/&quot;,&quot;allowedSchemes&quot;:[],&quot;requestMediaTypes&quot;:[],&quot;responseMediaTypes&quot;:[],&quot;compatibleMediaTypes&quot;:{},&quot;extensions&quot;:{}}</serviceBinding>
+    <status>Complete</status>
+    <systemVersion>7</systemVersion>
+</ExternalServiceRegistration>

@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "5a76140f-1a89-422d-8473-0f815dfd83da",
+  "appPageId" : "d9ce9f69-0e14-4b11-9233-6c5ce091d546",
+  "configurationTags" : [ ],
+  "devName" : "Payroll_Profile__c",
+  "id" : "87a4952f-4b2a-416b-900d-73c5ee436b50",
+  "label" : "Payroll Profile",
+  "pageAccess" : "UseParent",
+  "routeType" : "custom-payroll-profile",
+  "type" : "route",
+  "urlPrefix" : "payroll-profile"
+}

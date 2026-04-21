@@ -1,0 +1,46 @@
+<html>
+ <head>
+  <title></title>
+ </head>
+ <body style="margin: 0px; padding: 0px; background-color: #f6f6f6; font-family: Roboto, sans-serif; height: auto; min-height: auto;">
+  <table border="0" cellpadding="0" cellspacing="0" style="background-color: #f6f6f6; padding: 10px;" width="100%">
+   <tbody>
+    <tr>
+     <td align="center" bgcolor="#f6f6f6">
+      <table border="0" cellpadding="0" cellspacing="0" style="background-color:#ffffff; width: 600px;">
+       <tbody>
+        <tr>
+         <td style="padding: 0; background-color: #ffffff;"><img alt="AN-email-header" src="{[devName:ANemailheader]}" style="max-width: 1623.55px" title="AN-email-header" /><a href="https://www.alliancenursing.com.au"> </a></td>
+        </tr>
+        <tr>
+         <td style="height: 30px;">&nbsp;</td>
+        </tr>
+        <tr>
+         <td align="left" style="padding: 0 45px;"><h1 style="font-size: 30px; line-height: 37px; color: #007DC3; font-weight: 900; font-family: 'Montserrat', 'Arial Black', Arial, sans-serif;">EMAIL HEADING.</h1> <p style="font-size:18px;line-height:25px;color:#000000; font-weight: 400; font-family: 'Roboto', Arial, sans-serif; margin:10px 0 20px;">Hi,<br /> <br /> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed diam ex, varius at dictum nec, tempus et ex. Aliquam sed elementum massa. Sed consequat nunc velit, eu mattis enim posuere vitae. Vestibulum congue orci nisi.<br /> <br /> Praesent viverra nunc ut imperdiet rhoncus. Integer a eleifend eros, id viverra purus. Ut interdum purus id turpis gravida luctus. Etiam porta vitae dolor nec rutrum. Pellentesque venenatis erat ex, at iaculis orci tincidunt id.<br /> <br /> Fusce et eros sollicitudin sapien eleifend pellentesque nec eu nisi.<br /> <br /> Kind regards,&nbsp;<br /> Alliance Nursing</p></td>
+        </tr>
+        <tr>
+         <td style="height: 20px;">&nbsp;</td>
+        </tr>
+        <tr>
+         <td style="padding: 35px 0px 10px 0px;"><img alt="Alliance-graphic-line" src="{[devName:Alliancegraphicline]}" style="max-width: 1623.55px" title="Alliance-graphic-line" /></td>
+        </tr>
+        <tr>
+         <td style="padding: 26px 45px 40px 45px;font-size: 12px;line-height: 22px;color: #374250;">
+          <table border="0" cellpadding="0" cellspacing="0" style="/* margin: 0 auto; */">
+           <tbody>
+            <tr>
+             <td style="padding-right: 16px;"><a href="https://www.facebook.com/alliancenursingaustralia" target="_blank"><img alt="fb-blue" src="{[devName:fbblue]}" style="max-width: 1623.55px" title="fb-blue" /></a></td>
+             <td style="padding-right: 16px;"><a href="https://www.linkedin.com/company/alliance-nursing-australia" target="_blank"><img alt="in-blue" src="{[devName:inblue]}" style="max-width: 1623.55px" title="in-blue" /></a></td>
+             <td style="padding-right: 16px;"><a href="https://www.instagram.com/alliancenursingaustralia/" target="_blank"><img alt="is-blue" src="{[devName:isblue]}" style="max-width: 1623.55px" title="is-blue" /></a></td>
+             <td><a href="https://www.youtube.com/channel/UCnMTM3MLQMFYj52ERo0E00Q" target="_blank"><img alt="yt-blue" src="{[devName:ytblue]}" style="max-width: 1623.55px" title="yt-blue" /></a></td>
+            </tr>
+           </tbody>
+          </table></td>
+        </tr>
+       </tbody>
+      </table></td>
+    </tr>
+   </tbody>
+  </table>
+ </body>
+</html>

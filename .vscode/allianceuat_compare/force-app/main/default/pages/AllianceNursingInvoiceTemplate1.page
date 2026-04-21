@@ -1,0 +1,432 @@
+<apex:page standardController="tc9_et__Invoice__c" extensions="AllianceNursingInvoiceController" recordSetVar="tc9_et__Invoice__c"  renderAs="pdf" showHeader="false" sidebar="false" applyBodyTag="false">
+        <head>
+        <style type="text/css" media="print">
+            @page {
+                padding-top:10px;
+                size:A4;
+                margin-top:4.5cm;
+                margin-bottom:3cm;
+                margin-right:1cm;
+                margin-left:1cm;
+                @top-center {
+                    content: element(header);
+                   
+                }
+                @bottom-center {
+                    content: element(footer);   
+                }
+            }
+            div.header {
+                display: block;
+                position: running(header);
+                padding-top:20pt;
+            }
+            div.footer {
+                display: block;
+                padding-top: 1pt;
+                position: running(footer);
+            }
+            div.body {
+            	margin-left: -0.2cm;
+            	margin-right: -0.2cm;
+            }
+
+            .pagenumber:before {
+                content: 'Page ' counter(page);
+                font-size: 9pt;
+                font-family: Sans-serif;
+            }
+            @media print {
+                table { page-break-inside:auto }
+                tr    { page-break-inside:avoid !important; page-break-after:auto; }
+                thead { display:table-header-group; page-break-inside: avoid; overflow-hidden; }
+                tfoot { display:table-footer-group; }
+            
+            tbody::after {
+                content: ''; display: block;
+                page-break-after: auto;
+                page-break-inside: avoid;
+                page-break-before: avoid;
+                overflow:hidden;
+            }
+            }
+            .page-break-inside-avoid {
+                page-break-inside: avoid;
+            }
+            .displayNone {
+                display: none;
+            }
+            .text-header {
+                font-weight:bold; 
+                font-size:12pt;
+            }
+            .text-body-bold {
+                font-weight:bold; 
+                font-size:10pt;
+            }
+            .text-body {
+                font-size:10pt;
+            }
+            .text-table-data {
+                font-size:9pt;
+            } 
+            .invoiceTable {
+				-fs-table-paginate: paginate;
+                border-collapse: collapse;
+                border-spacing: 0;
+                font-family: Sans-serif;
+                font-size:9pt;
+            }
+            .totalBtmLine td {
+                border-bottom: 0.5pt solid #000000;
+                font-family: Sans-serif;
+                font-size:9pt;
+            }
+            .totalTopLine td {
+                border-bottom: 0.5pt solid #000000;
+                font-family: Sans-serif;
+                font-size:9pt;
+            }
+            .invoiceTable th {
+                border-collapse: collapse;
+                font-weight: bold;
+                font-size:9pt;
+            	border-bottom: 1px solid #d3d3d3;
+            	padding-bottom: 2pt;
+            }
+            .invoiceTable td {
+                vertical-align: top;
+            }
+            .invoiceTotalTable td,
+            .invoiceTotalTable th {
+                border-collapse: collapse;
+                vertical-align: top;
+                text-align: center;
+                font-family: Sans-serif;
+                font-size:9pt;
+            }
+            .subheaderContainer{
+                page-break-inside: avoid;
+                width: 100%;
+            } 
+            td{
+                font-size: 9pt;
+            } 
+            table {
+                font-family:Sans-serif
+            }
+            .invDetailTable {
+                padding-top: 30pt;
+            }
+            .invoiceTotalTable {
+                border-collapse: collapse;
+                width: 50%;
+                margin-left: 50%;
+                margin-right: 5%;
+                font-family: Sans-serif;
+                page-break-inside: avoid !important;
+                border :  solid 1px black;
+                font-size:9pt;
+            }
+            .invHeading {
+                font-size: 9pt;
+                font-weight:bold;
+                color:black;
+                padding-right: 5pt;
+            }
+            .invTextJustify{
+                text-align:right !important;
+            }
+            .backingSheetTable{
+                border-collapse: collapse;
+                width:100%; 
+                padding-top : 4pt;
+                margin-left: 0.5%;
+                font-size:9pt;
+                border: 1pt solid #D3D3D3;
+            }
+            .backingSheetTable td,
+            .backingSheetTable th {
+                border-top: 0.5pt solid black;
+                border-collapse: collapse;
+                padding-top: 4pt;
+                padding-bottom: 4pt;
+                vertical-align: top;
+                text-align: center;
+                font-family: Sans-serif;
+                font-size:9pt;
+                border: 0.2pt solid #D3D3D3;
+                border-left: 0.2pt solid #D3D3D3;
+                border-right: 0.2pt solid #D3D3D3;
+            }
+            .backingSheetTable th {
+                font-family: Sans-serif;
+                font-size:9pt;
+            }
+            .invAltRow {
+                background-color:#D3D3D3;
+            }
+            table{
+                page-break-inside: auto;
+            }
+            tr{
+                page-break-inside: avoid;
+            }
+            hr{
+                border:0.5px solid #c1c1c1;
+            }
+
+            .m-top-2 {
+            	margin-top: 2pt;
+            }
+            
+            .m-top-4 {
+            	margin-top: 4pt;
+            }
+            
+            .m-top-8 {
+            	margin-top: 8pt;
+            }
+            
+            .grey-box {
+            	background-color: #d3d3d3;
+            	border:1px solid #000000;
+            }
+            .disclaimer {
+            	width: 80%;
+            	text-align: center;
+                font-family: Sans-serif;
+                font-size:10pt;
+            }
+        </style>
+    </head>
+    
+    <apex:pageMessages ></apex:pageMessages>
+    
+    <apex:variable var="invoiceIndex" value="{!1}" />
+    <apex:repeat value="{!invoiceDatas}" var="data">
+        <!-- {!data} -->
+        
+        <div style="{!if(invoiceIndex <= 1, 'page-break-before:avoid;','page-break-before:always;')}">
+            <apex:variable var="invoiceIndex" value="{!invoiceIndex + 1}" />
+        </div>
+
+        <div class="header " style="height: 150px;">
+            <table style="width: 100%; font-family:Sans-serif;"> 
+                <tr>
+                    <td style="width: 50%; vertical-align: top">
+                        <div class="text-header">TAX INVOICE</div>
+                        <div class="text-body">Invoice Enquiries</div>
+                        <div class="text-body">{!data.sfInvoice.tc9_et__Invoice_Entity__r.Name}</div>
+                        <div class="text-body">{!data.sfInvoice.tc9_et__Invoice_Entity__r.BillingStreet}</div>
+                        <div class="text-body">{!data.sfInvoice.tc9_et__Invoice_Entity__r.BillingCity} {!data.sfInvoice.tc9_et__Invoice_Entity__r.BillingState} {!data.sfInvoice.tc9_et__Invoice_Entity__r.BillingPostalcode}</div>
+                        
+                        <div class="text-body" style="margin-top: 12pt">ABN: {!data.sfInvoice.tc9_et__Invoice_Entity__r.tc9_pr__ABN__c}</div>
+                        <div class="text-body">P. {!data.sfInvoice.tc9_et__Invoice_Entity__r.Phone}</div>
+                        <div class="text-body">E. {!data.sfInvoice.tc9_et__Invoice_Entity__r.tc9_et__Remittance_Email__c}</div>
+                    </td> 
+                    <td style="width: 50%; text-align: right; vertical-align: top">
+                        <apex:image width="250px" url="/sfc/servlet.shepherd/version/download/{!invoiceLogoMap[data.sfInvoice.tc9_et__Invoice_Entity__c]}" rendered="{!hasInvoiceLogoMap[data.sfInvoice.tc9_et__Invoice_Entity__c]}"/>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        
+        <!-- FOOTER -->
+        <div class="footer">
+            <br/>
+            <div style="width:100%; border-top:1pt #D3D3D3 solid;"></div>
+            <p style="float:left;font-size: 9pt;font-family: Sans-serif; margin-top:18pt">Invoice No: {!data.sfInvoice.Name}</p>
+            <p class="pagenumber" style="float:right"/>
+        </div>
+    
+        <div class="body">
+            <table style="width: 100%; font-family:Sans-serif;"> 
+                <tr>
+                    <td style="width: 50%; vertical-align: top">
+                        <div class="grey-box" style="width: 90%;">
+                            <div style="padding: 2pt">
+                                <div class="text-header" style="display: inline-block">ATTENTION:</div><div class="text-body" style="display: inline-block; margin-left:2pt">{! data.employeeName }</div>
+                                <div class="text-body m-top-4">{! data.clientName }</div>
+                                <div class="text-body">{! data.clientStreet }</div>
+                                <div class="text-body">{! data.clientCity } {! data.clientState } {! data.clientPostcode }</div>
+                            </div>
+                        </div>
+                    </td> 
+                    <td style="width: 50%; vertical-align: top;">
+                        <div style="width: 90%; float:right">
+                            <div class="grey-box" style="width: 99%; padding: 2pt 0pt 2pt 2pt;">
+                                <div class="text-body-bold">Invoice No: {!data.sfInvoice.Name}</div>
+                            </div>
+                            <div style="width: 100%; padding: 2pt;">
+                                <div><div class="text-body-bold" style="display: inline-block">Invoice Date:</div>
+                                    <div class="text-body" style="display: inline-block; margin-left:2pt">
+                                        <apex:outputText value="{0, date, dd MMMM yyyy}">
+                                            <apex:param value="{!data.sfInvoice.tc9_et__Invoice_Date__c}" />
+                                        </apex:outputText>
+                                    </div>
+                                </div>
+                                <div class="m-top-2"><div class="text-body-bold" style="display: inline-block">Due Date:</div>
+                                    <div class="text-body" style="display: inline-block; margin-left:2pt">
+                                        <apex:outputText value="{0, date, dd MMMM yyyy}">
+                                            <apex:param value="{!data.sfInvoice.tc9_et__Due_Date__c}" />
+                                        </apex:outputText>
+                                    </div>
+                                </div>
+                                <div class="m-top-2"><div class="text-body-bold" style="display: inline-block">Customer No:</div><div class="text-body" style="display: inline-block; margin-left:2pt">{!data.customerId}</div></div>
+                                <div class="m-top-2"><div class="text-body-bold" style="display: inline-block">Purchase Order:</div><div class="text-body" style="display: inline-block; margin-left:2pt">{!data.purchaseOrder}</div></div>
+                                <div class="m-top-2"><div class="text-body-bold" style="display: inline-block">Worksite:</div><div class="text-body" style="display: inline-block; margin-left:2pt">{!data.worksite}</div></div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table> 
+            
+            <div class="m-top-8" style="font-size:9pt; page-break-after:auto">
+                <table class="invoiceTable" style="page-break-inside:auto; width:100%" >
+                    <thead >								
+                        <tr  class="invDetailTable">
+                            <th style="width: 9%"> <apex:outputText styleClass="text-table-data" value="Date"/></th>
+                            <th style="width: 7%"> <apex:outputText styleClass="text-table-data" value="Shift"/></th>
+                            <th style="width: 12%"> <apex:outputText styleClass="text-table-data" value="Timesheet"/></th>
+                            <th style="width: 10%"> <apex:outputText styleClass="text-table-data" value="Name"/></th>
+                            <th style="width: 10%"> <apex:outputText styleClass="text-table-data" value="Position"/></th>
+                            <th style="width: 9%"> <apex:outputText styleClass="text-table-data" value="Type"/></th>
+                            <th style="width: 4%; text-align: right"> <apex:outputText styleClass="text-table-data" value="Hours / Quantity"/></th>
+                            <th style="width: 8%; text-align: right"> <apex:outputText styleClass="text-table-data" value="Rate"/></th>
+                            <th style="width: 11%; text-align: right"> <apex:outputText styleClass="text-table-data" value="Ex. GST"/></th>
+                            <th style="width: 8%; text-align: right"> <apex:outputText styleClass="text-table-data" value="GST"/></th>
+                            <th style="width: 12%; text-align: right"> <apex:outputText styleClass="text-table-data" value="Total"/></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <apex:repeat var="group" value="{! data.ItemGroups }">
+                            <tr style="page-break-inside:avoid; page-break-after:auto;padding-top:6pt;">
+                                <td style="vertical-align: top">
+                                    <apex:outputText value="{0, date,dd/MM/yyyy }">
+                                        <apex:param value="{! group.FirstGroupItemLine.startDate }" />
+                                    </apex:outputText>
+                                </td>
+                                <td>{! group.FirstGroupItemLine.shiftTimeString }</td>
+                                <td>{! group.FirstGroupItemLine.timesheetFormula }</td>
+                                <td>{! group.FirstGroupItemLine.employeeName }</td>
+                                <td>{! group.FirstGroupItemLine.position }</td>
+                                <td>{! group.FirstGroupItemLine.payCodeType }</td>
+                                <td style="text-align: right">
+                                    <apex:outputText value="{0, number,###,##0.00}">
+                                        <apex:param value="{! group.FirstGroupItemLine.quantity }" />
+                                    </apex:outputText>
+                                </td>
+                                <td style="text-align: right">
+                                    <apex:outputText value="${0, number,###,##0.00}">
+                                        <apex:param value="{! group.FirstGroupItemLine.rate }" />
+                                    </apex:outputText>
+                                </td>
+                                <td style="text-align: right">
+                                    <apex:outputText value="${0, number,###,##0.00}">
+                                        <apex:param value="{! group.FirstGroupItemLine.exGst }" />
+                                    </apex:outputText>
+                                </td>
+                                <td style="text-align: right">
+                                    <apex:outputText value="${0, number,###,##0.00}">
+                                        <apex:param value="{! group.FirstGroupItemLine.gst }" />
+                                    </apex:outputText>
+                                </td>
+                                <td style="text-align: right">
+                                    <apex:outputText value="${0, number,###,##0.00}">
+                                        <apex:param value="{! group.FirstGroupItemLine.total }" />
+                                    </apex:outputText>
+                                </td>
+                            </tr>  
+						
+                            <apex:repeat var="fgroup" value="{! group.FollowingGroupItemLines }">
+                                <tr style="page-break-inside:avoid; page-break-after:auto;padding-top:6pt;">
+                                    <td colspan="5"></td>
+                                    <td>{! fgroup.payCodeType }</td>
+                                    <td style="text-align: right">
+                                        <apex:outputText value="{0, number,###,##0.00}">
+                                            <apex:param value="{! fgroup.quantity }" />
+                                        </apex:outputText>
+                                    </td>
+                                    <td style="text-align: right">
+                                        <apex:outputText value="${0, number,###,##0.00}">
+                                            <apex:param value="{! fgroup.rate }" />
+                                        </apex:outputText>
+                                    </td>
+                                    <td style="text-align: right">
+                                        <apex:outputText value="${0, number,###,##0.00}">
+                                            <apex:param value="{! fgroup.exGst }" />
+                                        </apex:outputText>
+                                    </td>
+                                    <td style="text-align: right">
+                                        <apex:outputText value="${0, number,###,##0.00}">
+                                            <apex:param value="{! fgroup.gst }" />
+                                        </apex:outputText>
+                                    </td>
+                                    <td style="text-align: right">
+                                        <apex:outputText value="${0, number,###,##0.00}">
+                                            <apex:param value="{! fgroup.total }" />
+                                        </apex:outputText>
+                                    </td>
+                                </tr>    
+                            </apex:repeat>
+                        </apex:repeat>
+
+						                   
+                    </tbody>
+                </table>
+                
+                <!--Tax Invoice: TOTAL SECTION -->
+                <table class="invoiceTotalTable m-top-4" style="padding:0">
+                    <tr class="totalBtmLine"><td></td><td></td></tr>
+                    <tr style="">
+                        <td style="text-align:right;padding-right:50px; padding-bottom: 8px;padding-top: 4pt" class="invHeading">TOTAL:</td>
+                        <td class="invTextJustify" style="padding-bottom: 8px;padding-top: 4pt">
+                            <b>
+                                <apex:outputText value="${0, number,###,##0.00}">
+                                    <apex:param value="{! data.sfInvoice.tc9_et__Invoice_Total_Ex_Tax__c }" />
+                                </apex:outputText>
+                            </b>
+                        </td>
+                    </tr>
+                    <tr class="totalBtmLine">
+                        <td style="text-align:right;padding-right:50px; padding-top:8px; padding-bottom: 8px" class="invHeading">GST:</td>
+                        <td class="invTextJustify" style="padding-top:8px; padding-bottom: 8px">
+                            <b>
+                                <apex:outputText value="${0, number,###,##0.00}">
+                                    <apex:param value="{! data.sfInvoice.tc9_et__Invoice_Total_Tax__c }" />
+                                </apex:outputText>
+                            </b>
+                        </td>
+                    </tr>
+                    <tr class="totalBtmLine">
+                        <td style="text-align:right;padding-right:50px; padding-top:8px; padding-bottom: 8px" class="invHeading">INVOICE TOTAL:</td>
+                        <td class="invTextJustify" style="padding-top:8px; padding-bottom: 8px">
+                            <b>
+                                <apex:outputText value="${0, number,###,##0.00}">
+                                    <apex:param value="{! data.sfInvoice.tc9_et__Invoice_Total_Inc_Tax__c }" />
+                                </apex:outputText>
+                            </b>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            
+            <br/> 
+            <br/> 
+            <div class="disclaimer" style="margin: auto">
+                  <apex:outputtext style="white-space:pre-wrap;" value="{! data.sfInvoice.tc9_et__Invoice_Message__c }" escape="false" />
+            </div>
+        </div>
+
+        <apex:outputPanel rendered="{!IF(data.attachmentIds.size > 0, true,false)}" > 
+            <div style="page-break-before:always;">
+                <apex:repeat var="imgId" value="{! data.attachmentIds }">
+                    <div style="position:relative">
+                        <apex:image style="page-break-inside:avoid" width="100%" url="/sfc/servlet.shepherd/version/download/{!imgId}"/>
+                    </div>
+                </apex:repeat>
+            </div>
+        </apex:outputPanel>
+    </apex:repeat> 
+</apex:page>

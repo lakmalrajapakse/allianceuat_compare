@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type_Icon__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( RecordType.Name = &quot;Permanent&quot;,
+IMAGE(&quot;/resource/1724353752000/Permanent_Icon?&quot;,
+&quot;Permanent_Placement&quot;, 30, 120)
+,
+IF( RecordType.Name = &quot;Consulting&quot;,IMAGE(&quot;/resource/1724353238000/Pool_Icon?&quot;,
+&quot;Pool_Job&quot;, 30, 120)
+,IMAGE(&quot;resource/1724353238000/Pool_Icon?&quot;,
+&quot;Pool_Role&quot;, 30, 120)))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

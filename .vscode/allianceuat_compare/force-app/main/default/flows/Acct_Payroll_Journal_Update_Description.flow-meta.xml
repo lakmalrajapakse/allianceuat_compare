@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>58.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <description>nuuco - Utility Pack</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>ff_update_journl_descr</name>
+        <dataType>String</dataType>
+        <expression>text({!$Record.tc9_bgl__Journal_Type__c}) + &apos;: &apos; + {!$Record.tc9_bgl__Pay_Batch__r.tc9_pr__Calendar_Period__r.Name}</expression>
+    </formulas>
+    <interviewLabel>Acct Payroll Journal - Update Description {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Acct Payroll Journal - Update Description</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Update_Description</name>
+        <label>Update Description</label>
+        <locationX>1060</locationX>
+        <locationY>371</locationY>
+        <inputAssignments>
+            <field>tc9_bgl__Journal_detailed_description__c</field>
+            <value>
+                <elementReference>ff_update_journl_descr</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>934</locationX>
+        <locationY>48</locationY>
+        <connector>
+            <targetReference>Update_Description</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>tc9_bgl__Pay_Batch__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <object>tc9_bgl__Acc_Payroll_Journal__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

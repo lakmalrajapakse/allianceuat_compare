@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Automated email to the candidate when assigned the Alliance employment contract</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>ARRH - Contract Document Pack</name>
+    <style>none</style>
+    <subject>Contract Document Pack</subject>
+    <textOnly>WELCOME TO ALLIANCE RURAL AND REMOTE HEALTH.
+
+Hi {!Contact.FirstName},
+
+We are excited to finally welcome you to the Alliance Rural &amp; Remote Health family! Attached is a copy of your employment contract.
+
+You can add your digital signature here:
+
+SIGN CONTRACT
+
+We&apos;ve also added a copy of the Alliance Rural &amp; Remote Health employee handbook, where you can find all details regarding your new role, information consent and the Fair work statement. Please review these documents and confirm when you&apos;ve read the document.
+
+Once you&apos;ve signed the contract and the other documents, we&apos;ll send you a link to book yourself in for an Induction. Once you&apos;ve attended the session, you&apos;re ready to get booked in for contracts!
+
+If you have any questions at all you can always call us on 07 4998 5550.
+
+Your next adventure is just around the corner!
+
+Kind regards,
+Your team at Alliance Rural &amp; Remote Health</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

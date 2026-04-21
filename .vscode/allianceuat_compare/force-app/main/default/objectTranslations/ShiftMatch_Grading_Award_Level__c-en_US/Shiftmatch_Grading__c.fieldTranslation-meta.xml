@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Shiftmatch Grading --></label>
+    <name>Shiftmatch_Grading__c</name>
+    <relationshipLabel><!-- ShiftMatch Grading Award Levels --></relationshipLabel>
+</CustomFieldTranslation>

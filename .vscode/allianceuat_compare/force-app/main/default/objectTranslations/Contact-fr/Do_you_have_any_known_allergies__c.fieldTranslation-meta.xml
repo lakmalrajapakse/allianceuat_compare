@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Do you have any known allergies? --></help>
+    <label><!-- Do you have any known allergies? --></label>
+    <name>Do_you_have_any_known_allergies__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- If this is checked, use the label on the custom metadata instead of the field name. --></help>
+    <label><!-- Use Filter Condition As Label --></label>
+    <name>Use_Filter_Condition_As_Label__c</name>
+</CustomFieldTranslation>

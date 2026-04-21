@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>After an Ahpra check has been made, notify owner is a review is required.</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Ahpra Comliance Review Required</name>
+    <style>none</style>
+    <subject>Ahpra Candidate Review Required - {!Contact.FirstName} {!Contact.LastName}</subject>
+    <textOnly>An Ahpra check has been performed on candidate {!Contact.FirstName} {!Contact.LastName} and one or more compliance elements need a review. 
+
+Please review the associated Ahpra record {!Ahpra_Candidate_Check__c.Name}.  Thanks The Alliance Team.</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

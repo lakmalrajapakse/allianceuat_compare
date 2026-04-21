@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>non_Disabled_Packs</fullName>
+    <columns>NAME</columns>
+    <columns>b3o__Disabled__c</columns>
+    <columns>b3o__Public_Description__c</columns>
+    <columns>Category__c</columns>
+    <columns>States__c</columns>
+    <columns>b3o__Submit_in_Order__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>UPDATEDBY_USER</columns>
+    <columns>LAST_UPDATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>b3o__Disabled__c</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <filters>
+        <field>States__c</field>
+        <operation>equals</operation>
+        <value>QLD</value>
+    </filters>
+    <label>non Disabled Packs</label>
+</ListView>

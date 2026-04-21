@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Defines the Pay Schedule that applies to the Account --></help>
+    <label><!-- Pay Schedule --></label>
+    <lookupFilter>
+        <errorMessage><!-- The Pay Schedule defined on the Account/Client must have a record type of Pay Schedule --></errorMessage>
+    </lookupFilter>
+    <name>tc9_pr__Schedule__c</name>
+    <relationshipLabel><!-- Accounts --></relationshipLabel>
+</CustomFieldTranslation>

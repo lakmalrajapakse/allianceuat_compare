@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Facility_Confirmation_Status__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+  NOT(Confirmed_With_Employee__c) || sirenum__Cancelled__c,
+  &quot;-&quot;,
+  IF(
+    Confirmed_With_Employee__c &amp;&amp; NOT(Confirmed_With_Facility__c),
+    &quot;Facility Pending&quot;,
+    IF(
+      Confirmed_With_Employee__c &amp;&amp; Confirmed_With_Facility__c,
+      &quot;Facility Confirmed&quot;,
+      &quot;-&quot;
+    )
+  )
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Facility Confirmation Status</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

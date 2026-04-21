@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Activation_Validations</fullName>
+    <active>true</active>
+    <description>Fires when a candidate is updated to Active. Ensures there is a birthdate and timezone</description>
+    <errorConditionFormula>AND(
+OR(
+AND(ISNEW(), ISPICKVAL(TR1__Candidate_Status__c, &quot;Active&quot;)),
+AND(NOT(ISNEW()), ISCHANGED(TR1__Candidate_Status__c),
+ISPICKVAL(TR1__Candidate_Status__c, &quot;Active&quot;))
+),
+OR(
+ISBLANK(Birthdate),
+ISBLANK(TEXT(Candidate_Timezone__c))
+)
+)</errorConditionFormula>
+    <errorMessage>The candidate must have a Birthdate and Candidate Time Zone before activation. Please enter both fields before updating the status to Active.</errorMessage>
+</ValidationRule>

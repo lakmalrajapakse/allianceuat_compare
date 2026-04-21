@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Gives payroll officers the tools to manage payees, run payroll, lodge ATO/STP, adjust timesheets, calculate rates, reconcile payroll, and handle branch, expense, and integration tasks.</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>2c9 Payroll Officer</label>
+    <mutingPermissionSets>xc9_Payroll_Officer_Muted</mutingPermissionSets>
+    <permissionSets>Alliance_Custom_Payroll_Officer_Permission_Set</permissionSets>
+    <permissionSets>BSB_Manager</permissionSets>
+    <permissionSets>Branch_Expense_Rules</permissionSets>
+    <permissionSets>Cross_Assignment_Interpretation</permissionSets>
+    <permissionSets>Payroll_Profile_User</permissionSets>
+    <permissionSets>Skie_Custom_VF_Pages_and_Apex_Classes</permissionSets>
+    <permissionSets>X2C9_Eucalyptus_Upgrade_Read_Edit</permissionSets>
+    <permissionSets>X2cloudnine_Create_Payee</permissionSets>
+    <permissionSets>X2cloudnine_Pay_Transactions_Permission_Set</permissionSets>
+    <permissionSets>X2cloudnine_Standard_Objects_Permission_Set</permissionSets>
+    <permissionSets>X2cloudnine_nuuco_custom_permissions</permissionSets>
+    <permissionSets>tc9_bgl__Base_GL_Permission_Set</permissionSets>
+    <permissionSets>tc9_eau__X2cloudnine_Aus_Lodgement</permissionSets>
+    <permissionSets>tc9_ec__Approver_Portal_Permission_Set</permissionSets>
+    <permissionSets>tc9_ec__Employee_Community_Permission_Set</permissionSets>
+    <permissionSets>tc9_edc__X2cloudnine_Bulk_Data_Creation_Admin</permissionSets>
+    <permissionSets>tc9_edc__X2cloudnine_Bulk_Data_Creation_Field_Access_Only</permissionSets>
+    <permissionSets>tc9_edc__X2cloudnine_Interpretation_Callout</permissionSets>
+    <permissionSets>tc9_et__Time2Pay_Standard_Online_Invoice</permissionSets>
+    <permissionSets>tc9_et__X2Cloudnine_Rate_Calculator</permissionSets>
+    <permissionSets>tc9_et__X2cloudnine_Time2Pay_All_Access</permissionSets>
+    <permissionSets>tc9_ext_recon__X2cloudnine_FBT_Upload_Callout</permissionSets>
+    <permissionSets>tc9_ext_recon__X2cloudnine_Payroll_Reconciliation</permissionSets>
+    <permissionSets>tc9_ext_sirint__X2cloudnine_Sirenum_Integration</permissionSets>
+    <permissionSets>tc9_imp__X2cloudnine_Timesheet_Import</permissionSets>
+    <permissionSets>tc9_pr__X2cloudnine_Payroll_Admin</permissionSets>
+    <permissionSets>tc9_util__X2cloudnine_ATO_Kilometres</permissionSets>
+    <permissionSets>tc9_util__X2cloudnine_PO_Management</permissionSets>
+    <permissionSets>tc9_util__X2cloudnine_Timesheet_Adjustments</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

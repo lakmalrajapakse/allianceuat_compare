@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Visa Type --></label>
+    <name>Visa_Type__c</name>
+    <picklistValues>
+        <masterLabel>Adoption visa (subclass 102)</masterLabel>
+        <translation><!-- Adoption visa (subclass 102) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Aged Dependent Relative visa (subclass 114)</masterLabel>
+        <translation><!-- Aged Dependent Relative visa (subclass 114) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Aged Dependent Relative visa (subclass 838)</masterLabel>
+        <translation><!-- Aged Dependent Relative visa (subclass 838) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Aged Parent visa (subclass 804)</masterLabel>
+        <translation><!-- Aged Parent visa (subclass 804) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bridging visa A – BVA - (sub 010) + 8105 (sub 500)</masterLabel>
+        <translation><!-- Bridging visa A – BVA - (sub 010) + 8105 (sub 500) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bridging visa A – BVA - (subclass 010)</masterLabel>
+        <translation><!-- Bridging visa A – BVA - (subclass 010) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bridging visa B – BVB - (sub 020) + 8105 (sub 500)</masterLabel>
+        <translation><!-- Bridging visa B – BVB - (sub 020) + 8105 (sub 500) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bridging visa B – BVB – (subclass 020)</masterLabel>
+        <translation><!-- Bridging visa B – BVB – (subclass 020) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bridging visa C – BVC – (subclass 030)</masterLabel>
+        <translation><!-- Bridging visa C – BVC – (subclass 030) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bridging visa E – BVE – (subclass 050 and 051)</masterLabel>
+        <translation><!-- Bridging visa E – BVE – (subclass 050 and 051) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Business (Short Stay) visa (subclass 456)</masterLabel>
+        <translation><!-- Business (Short Stay) visa (subclass 456) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Business Innovation and Investment (permanent) visa (subclass 888)</masterLabel>
+        <translation><!-- Business Innovation and Investment (permanent) visa (subclass 888) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Business Innovation and Investment (provisional) visa (subclass 188)</masterLabel>
+        <translation><!-- Business Innovation and Investment (provisional) visa (subclass 188) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Business Owner (subclass 890)</masterLabel>
+        <translation><!-- Business Owner (subclass 890) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Business Skills (Provisional) visa (subclass 160 and 165)</masterLabel>
+        <translation><!-- Business Skills (Provisional) visa (subclass 160 and 165) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Business Talent (Permanent) visa (subclass 132)</masterLabel>
+        <translation><!-- Business Talent (Permanent) visa (subclass 132) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Carer visa (subclass 116)</masterLabel>
+        <translation><!-- Carer visa (subclass 116) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Carer visa (subclass 836)</masterLabel>
+        <translation><!-- Carer visa (subclass 836) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Child visa (subclass 101)</masterLabel>
+        <translation><!-- Child visa (subclass 101) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Child visa (subclass 802)</masterLabel>
+        <translation><!-- Child visa (subclass 802) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Confirmatory (Residence) visa (subclass 808)</masterLabel>
+        <translation><!-- Confirmatory (Residence) visa (subclass 808) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Contributory Aged Parent (Temporary) visa (subclass 884)</masterLabel>
+        <translation><!-- Contributory Aged Parent (Temporary) visa (subclass 884) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Contributory Aged Parent visa (subclass 864)</masterLabel>
+        <translation><!-- Contributory Aged Parent visa (subclass 864) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Contributory Parent (Temporary) visa (subclass 173)</masterLabel>
+        <translation><!-- Contributory Parent (Temporary) visa (subclass 173) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Contributory Parent visa (subclass 143)</masterLabel>
+        <translation><!-- Contributory Parent visa (subclass 143) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Crew Travel Authority visa (subclass 942)</masterLabel>
+        <translation><!-- Crew Travel Authority visa (subclass 942) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Dependent Child visa (subclass 445)</masterLabel>
+        <translation><!-- Dependent Child visa (subclass 445) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Distinguished Talent visa (subclass 124)</masterLabel>
+        <translation><!-- Distinguished Talent visa (subclass 124) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Domestic Worker (Temporary) Diplomatic and Consular visa (subclass 426)</masterLabel>
+        <translation><!-- Domestic Worker (Temporary) Diplomatic and Consular visa (subclass 426) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Domestic Worker (Temporary) Executive visa (subclass 427)</masterLabel>
+        <translation><!-- Domestic Worker (Temporary) Executive visa (subclass 427) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Electronic Travel Authority (Business Entrant) visa (subclass 956 and 977)</masterLabel>
+        <translation><!-- Electronic Travel Authority (Business Entrant) visa (subclass 956 and 977) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Electronic Travel Authority (Visitor) visa (subclass 976)</masterLabel>
+        <translation><!-- Electronic Travel Authority (Visitor) visa (subclass 976) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Electronic Travel Authority (subclass 601)</masterLabel>
+        <translation><!-- Electronic Travel Authority (subclass 601) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Employer Nomination Scheme (subclass 121 and 856)</masterLabel>
+        <translation><!-- Employer Nomination Scheme (subclass 121 and 856) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Employer Nomination Scheme (subclass 186)</masterLabel>
+        <translation><!-- Employer Nomination Scheme (subclass 186) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Established Business in Australia visa (subclass 845)</masterLabel>
+        <translation><!-- Established Business in Australia visa (subclass 845) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Exchange visa (subclass 411)</masterLabel>
+        <translation><!-- Exchange visa (subclass 411) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Foreign Affairs or Defence sector visa (subclass 576)</masterLabel>
+        <translation><!-- Foreign Affairs or Defence sector visa (subclass 576) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Foreign Government Agency (subclass 415)</masterLabel>
+        <translation><!-- Foreign Government Agency (subclass 415) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Former Resident visa (subclass 151)</masterLabel>
+        <translation><!-- Former Resident visa (subclass 151) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Global Special Humanitarian (subclass 202)</masterLabel>
+        <translation><!-- Global Special Humanitarian (subclass 202) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Global Talent visa (subclass 858)</masterLabel>
+        <translation><!-- Global Talent visa (subclass 858) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sponsored visa (subclass 886)</masterLabel>
+        <translation><!-- Sponsored visa (subclass 886) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sport visa (subclass 421)</masterLabel>
+        <translation><!-- Sport visa (subclass 421) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>State or Territory Sponsored Business Owner visa (subclass 892)</masterLabel>
+        <translation><!-- State or Territory Sponsored Business Owner visa (subclass 892) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>State or Territory Sponsored Investor visa (subclass 893)</masterLabel>
+        <translation><!-- State or Territory Sponsored Investor visa (subclass 893) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>State or Territory Sponsored Regional Established Business in Australia visa (subclass 846)</masterLabel>
+        <translation><!-- State or Territory Sponsored Regional Established Business in Australia visa (subclass 846) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Student Guardian visa (subclass 580)</masterLabel>
+        <translation><!-- Student Guardian visa (subclass 580) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Student Guardian visa (subclass 590)</masterLabel>
+        <translation><!-- Student Guardian visa (subclass 590) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Student visa (subclass 500)</masterLabel>
+        <translation><!-- Student visa (subclass 500) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Superyacht Crew visa (subclass 488)</masterLabel>
+        <translation><!-- Superyacht Crew visa (subclass 488) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Temporary Activity visa (subclass 408)</masterLabel>
+        <translation><!-- Temporary Activity visa (subclass 408) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Temporary Graduate visa (subclass 485)</masterLabel>
+        <translation><!-- Temporary Graduate visa (subclass 485) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Temporary Protection visa (subclass 785)</masterLabel>
+        <translation><!-- Temporary Protection visa (subclass 785) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Temporary Skill Shortage visa (subclass 482)</masterLabel>
+        <translation><!-- Temporary Skill Shortage visa (subclass 482) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Temporary Work (Entertainment) visa (subclass 420)</masterLabel>
+        <translation><!-- Temporary Work (Entertainment) visa (subclass 420) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Temporary Work (International Relations) visa (subclass 403)</masterLabel>
+        <translation><!-- Temporary Work (International Relations) visa (subclass 403) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Temporary Work (Short Stay Specialist) visa (subclass 400)</masterLabel>
+        <translation><!-- Temporary Work (Short Stay Specialist) visa (subclass 400) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Temporary Work (Skilled) visa (subclass 457)</masterLabel>
+        <translation><!-- Temporary Work (Skilled) visa (subclass 457) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Temporary Work (long Stay Activity) visa (subclass 401)</masterLabel>
+        <translation><!-- Temporary Work (long Stay Activity) visa (subclass 401) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Tourist visa (subclass 676)</masterLabel>
+        <translation><!-- Tourist visa (subclass 676) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Training and Research visa (subclass 402)</masterLabel>
+        <translation><!-- Training and Research visa (subclass 402) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Training visa (subclass 407)</masterLabel>
+        <translation><!-- Training visa (subclass 407) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Transit visa (subclass 771)</masterLabel>
+        <translation><!-- Transit visa (subclass 771) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Visiting Academic visa (subclass 419)</masterLabel>
+        <translation><!-- Visiting Academic visa (subclass 419) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Visitor (subclass 600)</masterLabel>
+        <translation><!-- Visitor (subclass 600) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Vocational Education and Training Sector visa (Subclass 572)</masterLabel>
+        <translation><!-- Vocational Education and Training Sector visa (Subclass 572) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Work and Holiday visa (subclass 462)</masterLabel>
+        <translation><!-- Work and Holiday visa (subclass 462) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Working Holiday visa (subclass 417)</masterLabel>
+        <translation><!-- Working Holiday visa (subclass 417) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>eVisitor (subclass 651)</masterLabel>
+        <translation><!-- eVisitor (subclass 651) --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

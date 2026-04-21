@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Job Type --></label>
+    <name>agx_Job_Type__c</name>
+    <picklistValues>
+        <masterLabel>Timesheet Approve</masterLabel>
+        <translation><!-- Timesheet Approve --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Timesheet Process Parameters</masterLabel>
+        <translation><!-- Timesheet Process Parameters --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Timesheet Submit</masterLabel>
+        <translation><!-- Timesheet Submit --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Timesheet Unprocess Parameters</masterLabel>
+        <translation><!-- Timesheet Unprocess Parameters --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Timesheet Unprocess to NEW</masterLabel>
+        <translation><!-- Timesheet Unprocess to NEW --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Timesheet Unprocess to READY</masterLabel>
+        <translation><!-- Timesheet Unprocess to READY --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

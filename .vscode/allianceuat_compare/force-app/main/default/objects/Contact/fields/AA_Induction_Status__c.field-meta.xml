@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AA_Induction_Status__c</fullName>
+    <label>Induction Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Induction to be booked</fullName>
+                <default>false</default>
+                <label>Induction to be booked</label>
+            </value>
+            <value>
+                <fullName>Induction Booked</fullName>
+                <default>false</default>
+                <label>Induction Booked</label>
+            </value>
+            <value>
+                <fullName>ID Badged Created</fullName>
+                <default>false</default>
+                <label>ID Badged Created</label>
+            </value>
+            <value>
+                <fullName>ID Badge &amp; Uniform Provided</fullName>
+                <default>false</default>
+                <label>ID Badge &amp; Uniform Provided</label>
+            </value>
+            <value>
+                <fullName>Allocations Introduction</fullName>
+                <default>false</default>
+                <label>Allocations Introduction</label>
+            </value>
+            <value>
+                <fullName>Induction Process Completed</fullName>
+                <default>false</default>
+                <label>Induction Process Completed</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

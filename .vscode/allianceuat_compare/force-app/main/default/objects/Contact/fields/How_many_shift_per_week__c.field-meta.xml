@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>How_many_shift_per_week__c</fullName>
+    <inlineHelpText>How many shifts per week are you looking for?</inlineHelpText>
+    <label>How many shift per week</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>1-2 shifts</fullName>
+                <default>false</default>
+                <label>1-2 shifts</label>
+            </value>
+            <value>
+                <fullName>3-4 shifts</fullName>
+                <default>false</default>
+                <label>3-4 shifts</label>
+            </value>
+            <value>
+                <fullName>5 shifts or more</fullName>
+                <default>false</default>
+                <label>5 shifts or more</label>
+            </value>
+            <value>
+                <fullName>Not sure</fullName>
+                <default>false</default>
+                <label>Not sure</label>
+            </value>
+            <value>
+                <fullName>Max one per week</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Max one per week</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

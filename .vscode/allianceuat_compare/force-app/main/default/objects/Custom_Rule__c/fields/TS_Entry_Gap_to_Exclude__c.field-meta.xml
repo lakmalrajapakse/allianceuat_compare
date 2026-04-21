@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TS_Entry_Gap_to_Exclude__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Specifies the gap in time (in minutes) between two Timesheet Entries where Minimum Engagement does not apply. 
+If a value of 60.00 is entered, any two Timesheet Entry records that start or end within 60 minutes of the next Timesheet Entry will not qualify for Minimum Engagement.</inlineHelpText>
+    <label>TS Entry Gap to Exclude</label>
+    <precision>4</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

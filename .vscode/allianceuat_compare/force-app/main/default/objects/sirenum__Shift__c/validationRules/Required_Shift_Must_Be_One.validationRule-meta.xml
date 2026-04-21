@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Required_Shift_Must_Be_One</fullName>
+    <active>true</active>
+    <description>Required shift = 1 all the time.</description>
+    <errorConditionFormula>sirenum__Broadcasts__c &lt;&gt; 1</errorConditionFormula>
+    <errorDisplayField>sirenum__Broadcasts__c</errorDisplayField>
+    <errorMessage># of Require Shifts must be 1.</errorMessage>
+</ValidationRule>

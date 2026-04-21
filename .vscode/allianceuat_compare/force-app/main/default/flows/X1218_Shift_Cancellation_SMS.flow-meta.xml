@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>62.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <environments>Default</environments>
+    <interviewLabel>1218 Shift Cancellation SMS {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>1218 Shift Cancellation SMS</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <name>Send_Shift_Cancellation_SMS</name>
+        <label>Send Shift Cancellation SMS</label>
+        <locationX>176</locationX>
+        <locationY>323</locationY>
+        <inputAssignments>
+            <field>Contact__c</field>
+            <value>
+                <elementReference>$Record.sirenum__Contact__r.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Direction__c</field>
+            <value>
+                <stringValue>outbound</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Message_Content__c</field>
+            <value>
+                <elementReference>SMSBody</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Sender_Name__c</field>
+            <value>
+                <stringValue>Alliance SMS</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Sender__c</field>
+            <value>
+                <elementReference>$User.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Source__c</field>
+            <value>
+                <stringValue>SMSShiftCancel</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Status__c</field>
+            <value>
+                <stringValue>Queued</stringValue>
+            </value>
+        </inputAssignments>
+        <object>MobileMessaging_SMS_Message__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Send_Shift_Cancellation_SMS</targetReference>
+        </connector>
+        <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+        <filterLogic>1 AND (2 OR 3)</filterLogic>
+        <filters>
+            <field>sirenum__Cancelled__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>sirenum__CancellationReason__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Cancelled by Facility NC</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>sirenum__CancellationReason__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Cancelled by Candidate</stringValue>
+            </value>
+        </filters>
+        <object>sirenum__Shift__c</object>
+        <recordTriggerType>Update</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Draft</status>
+    <textTemplates>
+        <name>SMSBody</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>Hi {!$Record.sirenum__Contact__r.FirstName}, Your Shift has been cancelled with {!$Record.sirenum__Site__r.Name} for {!$Record.sirenum__Scheduled_Start_Time__c}. Please contact Alliance Support in case of any questions.</text>
+    </textTemplates>
+</Flow>

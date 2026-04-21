@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Free_of_charge_OR_a_cost_required__c</fullName>
+    <label>Free of charge OR a cost required?</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Free of charge</fullName>
+                <default>false</default>
+                <label>Free of charge</label>
+            </value>
+            <value>
+                <fullName>Cost required (please specify how much?)</fullName>
+                <default>false</default>
+                <label>Cost required (please specify how much?)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

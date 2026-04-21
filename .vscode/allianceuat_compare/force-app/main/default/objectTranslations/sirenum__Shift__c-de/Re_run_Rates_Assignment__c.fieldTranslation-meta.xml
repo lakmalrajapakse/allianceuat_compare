@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- System Admin can set this to TRUE to re-run Rates Assignments to update MPR Rate etc. --></help>
+    <label><!-- Re-run Rates Assignment --></label>
+    <name>Re_run_Rates_Assignment__c</name>
+</CustomFieldTranslation>

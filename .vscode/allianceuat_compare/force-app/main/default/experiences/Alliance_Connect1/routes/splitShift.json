@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "f5953f37-027e-4fbc-8e74-147240c6c063",
+  "appPageId" : "d9ce9f69-0e14-4b11-9233-6c5ce091d546",
+  "configurationTags" : [ ],
+  "devName" : "Split_Shift_c__c",
+  "id" : "add5edaf-3ebb-4fc4-82b6-889b49f13426",
+  "label" : "Split Shift",
+  "pageAccess" : "UseParent",
+  "routeType" : "custom-split-shift",
+  "type" : "route",
+  "urlPrefix" : "split-shift"
+}

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Allowance_Template_Group__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Allows users to select a different Rate Calculator Template Group for Allowances and Timesheet Activities
+This can be used for global based allowances where rates do not change between Rate Calculator Template Groups.
+Where an Allowance Template Group is selected, the system will automatically create adhoc Assignment Rates for these allowances when a Timesheet Item or Timesheet Activity is created.</description>
+    <label>Allowance Template Group</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>tc9_pr__Template_Group__c.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Rate Calculator Template</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>tc9_pr__Template_Group__c</referenceTo>
+    <relationshipLabel>Job Roles (Allowance Template Group)</relationshipLabel>
+    <relationshipName>Job_Roles1</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

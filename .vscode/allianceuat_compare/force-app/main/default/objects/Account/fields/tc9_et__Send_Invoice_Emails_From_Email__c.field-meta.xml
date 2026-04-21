@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>tc9_et__Send_Invoice_Emails_From_Email__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Must be an Organization-Wide Address. When the Invoice Setting&apos;s Send Invoice Emails Setting defines the email source as &apos;Invoice Entity Defined&apos; the email address defined in this field will be used as the from / reply to email when emailing invoices.</description>
+    <inlineHelpText>Must be an Organization-Wide Address. When the Invoice Setting&apos;s Send Invoice Emails Setting defines the email source as &apos;Invoice Entity Defined&apos; the email address defined in this field will be used as the from / reply to email when emailing invoices.</inlineHelpText>
+    <label>Send Invoice Emails From Email</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>tc9_et__Send_Invoice_Emails_From_Email_Picklists</valueSetName>
+    </valueSet>
+</CustomField>

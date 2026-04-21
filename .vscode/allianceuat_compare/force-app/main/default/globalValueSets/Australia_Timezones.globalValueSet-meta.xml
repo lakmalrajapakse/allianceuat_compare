@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Australia/Adelaide</fullName>
+        <default>false</default>
+        <label>Australia/Adelaide</label>
+    </customValue>
+    <customValue>
+        <fullName>Australia/Brisbane</fullName>
+        <default>false</default>
+        <label>Australia/Brisbane</label>
+    </customValue>
+    <customValue>
+        <fullName>Australia/Broken_Hill</fullName>
+        <default>false</default>
+        <label>Australia/Broken_Hill</label>
+    </customValue>
+    <customValue>
+        <fullName>Australia/Currie</fullName>
+        <default>false</default>
+        <label>Australia/Currie</label>
+    </customValue>
+    <customValue>
+        <fullName>Australia/Darwin</fullName>
+        <default>false</default>
+        <label>Australia/Darwin</label>
+    </customValue>
+    <customValue>
+        <fullName>Australia/Eucla</fullName>
+        <default>false</default>
+        <label>Australia/Eucla</label>
+    </customValue>
+    <customValue>
+        <fullName>Australia/Hobart</fullName>
+        <default>false</default>
+        <label>Australia/Hobart</label>
+    </customValue>
+    <customValue>
+        <fullName>Australia/Lindeman</fullName>
+        <default>false</default>
+        <label>Australia/Lindeman</label>
+    </customValue>
+    <customValue>
+        <fullName>Australia/Lord_Howe</fullName>
+        <default>false</default>
+        <label>Australia/Lord_Howe</label>
+    </customValue>
+    <customValue>
+        <fullName>Australia/Melbourne</fullName>
+        <default>false</default>
+        <label>Australia/Melbourne</label>
+    </customValue>
+    <customValue>
+        <fullName>Australia/Perth</fullName>
+        <default>false</default>
+        <label>Australia/Perth</label>
+    </customValue>
+    <customValue>
+        <fullName>Australia/Sydney</fullName>
+        <default>false</default>
+        <label>Australia/Sydney</label>
+    </customValue>
+    <customValue>
+        <fullName>Canada/Edmonton</fullName>
+        <default>false</default>
+        <label>Canada/Edmonton</label>
+    </customValue>
+    <customValue>
+        <fullName>Canada/Halifax Regional Municipality</fullName>
+        <default>false</default>
+        <label>Canada/Halifax Regional Municipality</label>
+    </customValue>
+    <customValue>
+        <fullName>Canada/Newfoundland</fullName>
+        <default>false</default>
+        <label>Canada/Newfoundland</label>
+    </customValue>
+    <customValue>
+        <fullName>Canada/Regina</fullName>
+        <default>false</default>
+        <label>Canada/Regina</label>
+    </customValue>
+    <customValue>
+        <fullName>Canada/Vancouver</fullName>
+        <default>false</default>
+        <label>Canada/Vancouver</label>
+    </customValue>
+    <customValue>
+        <fullName>Canada/Winnipeg</fullName>
+        <default>false</default>
+        <label>Canada/Winnipeg</label>
+    </customValue>
+    <customValue>
+        <fullName>Indian/Christmas</fullName>
+        <default>false</default>
+        <label>Indian/Christmas</label>
+    </customValue>
+    <customValue>
+        <fullName>Indian/Cocos</fullName>
+        <default>false</default>
+        <label>Indian/Cocos</label>
+    </customValue>
+    <customValue>
+        <fullName>Ireland/Dublin</fullName>
+        <default>false</default>
+        <label>Ireland/Dublin</label>
+    </customValue>
+    <customValue>
+        <fullName>New Zealand/Tokelau</fullName>
+        <default>false</default>
+        <label>New Zealand/Tokelau</label>
+    </customValue>
+    <customValue>
+        <fullName>New Zealand/Waitangi</fullName>
+        <default>false</default>
+        <label>New Zealand/Waitangi</label>
+    </customValue>
+    <customValue>
+        <fullName>New Zealand/Wellington</fullName>
+        <default>false</default>
+        <label>New Zealand/Wellington</label>
+    </customValue>
+    <customValue>
+        <fullName>Pacific/Norfolk</fullName>
+        <default>false</default>
+        <label>Pacific/Norfolk</label>
+    </customValue>
+    <customValue>
+        <fullName>United Kingdom/London</fullName>
+        <default>false</default>
+        <label>United Kingdom/London</label>
+    </customValue>
+    <customValue>
+        <fullName>United States/Anchorage</fullName>
+        <default>false</default>
+        <label>United States/Anchorage</label>
+    </customValue>
+    <customValue>
+        <fullName>United States/Denver</fullName>
+        <default>false</default>
+        <label>United States/Denver</label>
+    </customValue>
+    <customValue>
+        <fullName>United States/Honolulu</fullName>
+        <default>false</default>
+        <label>United States/Honolulu</label>
+    </customValue>
+    <customValue>
+        <fullName>United States/Houston</fullName>
+        <default>false</default>
+        <label>United States/Houston</label>
+    </customValue>
+    <customValue>
+        <fullName>United States/Los Angeles</fullName>
+        <default>false</default>
+        <label>United States/Los Angeles</label>
+    </customValue>
+    <customValue>
+        <fullName>United States/New York</fullName>
+        <default>false</default>
+        <label>United States/New York</label>
+    </customValue>
+    <masterLabel>Australia Timezones</masterLabel>
+    <sorted>true</sorted>
+</GlobalValueSet>

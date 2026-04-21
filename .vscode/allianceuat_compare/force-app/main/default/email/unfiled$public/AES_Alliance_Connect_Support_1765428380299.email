@@ -1,0 +1,51 @@
+<html>
+ <head>
+  <title></title>
+ </head>
+ <body style="margin: 0px; padding: 0px; background-color: #f6f6f6; font-family: Roboto, sans-serif; height: auto; min-height: auto;">
+  <table border="0" cellpadding="0" cellspacing="0" style="background-color: #f6f6f6; padding: 10px;" width="100%">
+   <tbody>
+    <tr>
+     <td align="center" bgcolor="#f6f6f6">
+      <table border="0" cellpadding="0" cellspacing="0" style="background-color:#ffffff; width: 600px;">
+       <tbody>
+        <tr>
+         <td style="padding: 0; background-color: #ffffff;"><img alt="AES-email-header" src="{[devName:AESemailheader]}" style="max-width: 1623.55px" title="AES-email-header" /><a href="#0"> </a></td>
+        </tr>
+        <tr>
+         <td style="height: 30px;">&nbsp;</td>
+        </tr>
+        <tr>
+         <td align="left" style="padding: 0 45px;"><p style="font-size:18px;line-height:25px;color:#000000; font-weight: 400; font-family: 'Roboto', Arial, sans-serif; margin:10px 0 20px;">Hi {{{Recipient.FirstName}}},<br /> <br /> We’re sorry to hear you’ve had trouble accessing the Alliance Connect App. While we’re upgrading our technology, making sure you’re supported remains our top priority.&nbsp;<br /> <br /> Here’s how to get up and running again:</p>
+          <ol>
+           <li style="font-size: 18px; line-height: 25px; color: rgb(0, 0, 0); font-weight: 400; font-family: Roboto, Arial, sans-serif; margin: 10px 0px 20px;">First, delete and reinstall the app from the&nbsp;<a href="https://apps.apple.com/app/id6740983577">App Store</a>&nbsp;​​​​​​or&nbsp;<a href="https://play.google.com/store/apps/details?id=au.com.allianceaustralia.connect">Google Play</a>&nbsp;.</li>
+           <li style="font-size: 18px; line-height: 25px; color: rgb(0, 0, 0); font-weight: 400; font-family: Roboto, Arial, sans-serif; margin: 10px 0px 20px;">Check your inbox for an email titled "<em>Your new Alliance Connect password</em>". We've sent you a reset password link.</li>
+           <li style="font-size: 18px; line-height: 25px; color: rgb(0, 0, 0); font-weight: 400; font-family: Roboto, Arial, sans-serif; margin: 10px 0px 20px;">Follow the link in that email to update your password and log in.</li>
+          </ol> <p style="font-size:18px;line-height:25px;color:#000000;margin:10px 0 20px;">If you have any questions, please feel free to call our friendly staff on <a href="tel:1300662511">1300 662 511</a></p> <p style="font-size:18px;line-height:25px;color:#000000; font-weight: 400; font-family: 'Roboto', Arial, sans-serif; margin:10px 0 20px;"><br /> Kind regards,&nbsp;<br /> {{{Sender.FirstName}}}<br /> Alliance Extra Staff</p></td>
+        </tr>
+        <tr>
+         <td style="height: 20px;">&nbsp;</td>
+        </tr>
+        <tr>
+         <td style="padding: 35px 0px 10px 0px;"><img alt="Alliance-graphic-line" src="{[devName:Alliancegraphicline]}" style="max-width: 1623.55px" title="Alliance-graphic-line" /></td>
+        </tr>
+        <tr>
+         <td style="padding: 26px 45px 40px 45px;font-size: 12px;line-height: 22px;color: #374250;">
+          <table border="0" cellpadding="0" cellspacing="0" style="/* margin: 0 auto; */">
+           <tbody>
+            <tr>
+             <td style="padding-right: 32px" valign="middle"><a href="https://www.facebook.com/AllianceExtraStaff/" rel="noopener noreferrer"><img alt="fb-blue" src="{[devName:fbblue]}" style="max-width: 1623.55px" title="fb-blue" /></a></td>
+             <td style="padding-right: 32px" valign="middle"><a href="https://au.linkedin.com/company/allianceextrastaff" rel="noopener noreferrer"><img alt="in-blue" src="{[devName:inblue]}" style="max-width: 1623.55px" title="in-blue" /></a></td>
+             <td style="padding-right: 32px" valign="middle"><a href="https://www.instagram.com/allianceextrastaff/" rel="noopener noreferrer"><img alt="is-blue" src="{[devName:isblue]}" style="max-width: 1623.55px" title="is-blue" /></a></td>
+             <td style="padding-right: 32px" valign="middle"><a href="https://www.youtube.com/@AllianceExtraStaff/" rel="noopener noreferrer"><img alt="yt-blue" src="{[devName:ytblue]}" style="max-width: 1623.55px" title="yt-blue" /></a></td>
+            </tr>
+           </tbody>
+          </table></td>
+        </tr>
+       </tbody>
+      </table></td>
+    </tr>
+   </tbody>
+  </table>
+ </body>
+</html>

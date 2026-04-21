@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All</fullName>
+    <columns>NAME</columns>
+    <columns>tc9_et__Rate_Calculator_Template__c</columns>
+    <columns>Pay_Code_Name__c</columns>
+    <columns>tc9_et__Pay_Rate__c</columns>
+    <columns>tc9_et__Custom_Pay_Rate_1__c</columns>
+    <columns>tc9_et__Award_Classification__c</columns>
+    <columns>tc9_et__Award_Level__c</columns>
+    <columns>tc9_et__Interpretation_Rule__c</columns>
+    <columns>tc9_et__Create_Related_Margin_Mark_Up_Records__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>tc9_et__Effective_Date__c</columns>
+    <columns>tc9_et__Calculation_Method__c</columns>
+    <columns>tc9_et__Margin_Rate__c</columns>
+    <columns>tc9_et__Mark_Up_Rate__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>tc9_et__Award_Classification__c</field>
+        <operation>equals</operation>
+        <value>Storeworker</value>
+    </filters>
+    <filters>
+        <field>tc9_et__Award_Level__c</field>
+        <operation>equals</operation>
+        <value>SSO 1.2</value>
+    </filters>
+    <filters>
+        <field>tc9_et__Interpretation_Rule__c</field>
+        <operation>equals</operation>
+        <value>Local Government Industry Award</value>
+    </filters>
+    <label>All</label>
+</ListView>

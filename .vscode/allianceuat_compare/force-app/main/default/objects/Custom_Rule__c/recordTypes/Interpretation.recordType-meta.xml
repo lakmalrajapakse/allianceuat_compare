@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Interpretation</fullName>
+    <active>true</active>
+    <description>Used for Custom Rules related to Interpretation</description>
+    <label>Interpretation</label>
+    <picklistValues>
+        <picklist>Allowance_Payment_Frequency__c</picklist>
+        <values>
+            <fullName>Daily</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>One Per Shift</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shift Hours</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Weekly</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Available_on_Active_App__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Employee_Entry_Type__c</picklist>
+        <values>
+            <fullName>Quantity</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Start%2FEnd Times</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Interpretation_Type__c</picklist>
+        <values>
+            <fullName>Minimum Engagement</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Rate_Selection_Type__c</picklist>
+        <values>
+            <fullName>Award-Based</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fixed</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Timesheet_Activities_to_Include__c</picklist>
+        <values>
+            <fullName>Sleepover</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

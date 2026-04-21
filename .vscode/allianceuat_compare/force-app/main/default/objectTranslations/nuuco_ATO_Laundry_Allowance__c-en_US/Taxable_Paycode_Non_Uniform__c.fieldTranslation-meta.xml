@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Pay code to assign for taxable laundry allowance for uniform payee --></help>
+    <label><!-- Taxable Paycode (Non-Uniform) --></label>
+    <name>Taxable_Paycode_Non_Uniform__c</name>
+</CustomFieldTranslation>

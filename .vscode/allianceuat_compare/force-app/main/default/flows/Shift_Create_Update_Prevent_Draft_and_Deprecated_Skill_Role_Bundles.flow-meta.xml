@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>65.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <customErrors>
+        <name>Disallow_change</name>
+        <label>Disallow change</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <customErrorMessages>
+            <errorMessage>Template Bundles in a Draft status cannot be used for Skill or Role bundles. 
+Template Bundles in a Deprecated status cannot be used for Skill or Role bundles UNLESS they were already set before becoming Deprecated.</errorMessage>
+            <isFieldError>false</isFieldError>
+        </customErrorMessages>
+    </customErrors>
+    <description>Prevents assignment of template bundles in draft and deprecated status (unless incumbent) to Skill and ROle bundle fields but NOT OOTB bundle field.</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>roleBundleWasChanged</name>
+        <dataType>String</dataType>
+        <expression>IF(ISCHANGED({!$Record.Role_OR_Bundle__c}), &apos;Yes&apos;, &apos;No&apos;)</expression>
+    </formulas>
+    <formulas>
+        <name>skillBundleWasChanged</name>
+        <dataType>String</dataType>
+        <expression>IF(ISCHANGED({!$Record.Skill_Attribute_OR_Bundle__c}), &apos;Yes&apos;, &apos;No&apos;)</expression>
+    </formulas>
+    <interviewLabel>Shift: Create/Update: Prevent Draft and Deprecated Skill/Role Bundles {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Shift: Create/Update: Prevent Draft and Deprecated Skill/Role Bundles</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Disallow_change</targetReference>
+        </connector>
+        <filterFormula>/* Record is new and specifies a Draft or Deprecated template */
+(
+  ISNEW() &amp;&amp; 
+  (
+    TEXT({!$Record.Role_OR_Bundle__r.Template_Status__c}) = &apos;Draft&apos; ||
+    TEXT({!$Record.Role_OR_Bundle__r.Template_Status__c}) = &apos;Deprecated&apos; ||
+    TEXT({!$Record.Skill_Attribute_OR_Bundle__r.Template_Status__c}) = &apos;Draft&apos; ||
+    TEXT({!$Record.Skill_Attribute_OR_Bundle__r.Template_Status__c}) = &apos;Deprecated&apos;
+  ) 
+) 
+||
+/* Record is changed and now specifies a Draft template, or specifies a deprecated template WHICH IT DID NOT BEFORE */
+(
+  NOT(ISNEW()) &amp;&amp; 
+  (
+    TEXT({!$Record.Role_OR_Bundle__r.Template_Status__c}) = &apos;Draft&apos; ||
+    (
+      TEXT({!$Record.Role_OR_Bundle__r.Template_Status__c}) = &apos;Deprecated&apos; &amp;&amp; 
+      ISCHANGED({!$Record.Role_OR_Bundle__c})
+    )
+  )
+  ||
+  (
+    TEXT({!$Record.Skill_Attribute_OR_Bundle__r.Template_Status__c}) = &apos;Draft&apos; ||
+    (
+      TEXT({!$Record.Skill_Attribute_OR_Bundle__r.Template_Status__c}) = &apos;Deprecated&apos; &amp;&amp; 
+      ISCHANGED({!$Record.Skill_Attribute_OR_Bundle__c})
+    )
+  )
+)</filterFormula>
+        <object>sirenum__Shift__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

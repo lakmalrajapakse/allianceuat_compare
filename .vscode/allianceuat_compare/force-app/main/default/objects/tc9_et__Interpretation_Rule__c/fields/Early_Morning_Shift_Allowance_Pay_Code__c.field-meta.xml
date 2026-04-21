@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Early_Morning_Shift_Allowance_Pay_Code__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <label>Early Morning Shift Allowance Pay Code</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>tc9_pr__Pay_Code__c.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Allowance</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>tc9_pr__Pay_Code__c</referenceTo>
+    <relationshipLabel>Interpretation Rules (Early Morning Shift Allowance Pay Code)</relationshipLabel>
+    <relationshipName>Interpretation_Rules_Morning_Shift</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

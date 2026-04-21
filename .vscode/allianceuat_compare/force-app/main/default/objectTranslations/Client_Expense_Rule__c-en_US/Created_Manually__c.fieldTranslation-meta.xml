@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- When checked, indicates the record was manually created. --></help>
+    <label><!-- Created Manually --></label>
+    <name>Created_Manually__c</name>
+</CustomFieldTranslation>

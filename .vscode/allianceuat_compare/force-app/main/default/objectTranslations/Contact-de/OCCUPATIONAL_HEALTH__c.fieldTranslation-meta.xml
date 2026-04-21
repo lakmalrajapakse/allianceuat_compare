@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- OCCUPATIONAL HEALTH	Have you ever had: --></help>
+    <label><!-- OCCUPATIONAL HEALTH: Have you ever had: --></label>
+    <name>OCCUPATIONAL_HEALTH__c</name>
+    <picklistValues>
+        <masterLabel>Any broken bones or torn cartilage that impact your ability to carry out day to day tasks?</masterLabel>
+        <translation><!-- Any broken bones or torn cartilage that impact your ability to carry out day to day tasks? --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Any impairment with vision or hearing?</masterLabel>
+        <translation><!-- Any impairment with vision or hearing? --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Arthritis, rheumatism or painful joints or other musculoskeletal pain?</masterLabel>
+        <translation><!-- Arthritis, rheumatism or painful joints or other musculoskeletal pain? --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Asthma, chronic bronchitis or other chest problems?</masterLabel>
+        <translation><!-- Asthma, chronic bronchitis or other chest problems? --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Auto Immune Disease or on immunosuppressant medication?</masterLabel>
+        <translation><!-- Auto Immune Disease or on immunosuppressant medication? --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Diabetes?</masterLabel>
+        <translation><!-- Diabetes? --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Eczema, dermatitis, hives or other skin rashes or complaints?</masterLabel>
+        <translation><!-- Eczema, dermatitis, hives or other skin rashes or complaints? --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Epilepsy, dizzy/giddy/fainting spells, blackouts or neurological disorder?</masterLabel>
+        <translation><!-- Epilepsy, dizzy/giddy/fainting spells, blackouts or neurological disorder? --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Have you ever been diagnosed with latex allergy?</masterLabel>
+        <translation><!-- Have you ever been diagnosed with latex allergy? --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Have you ever had difficulties wearing PPE including closed in shoes?</masterLabel>
+        <translation><!-- Have you ever had difficulties wearing PPE including closed in shoes? --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Have you ever sustained a work-related injury or illness? If so, how was it addressed, and what preventative measures have you taken since then?</masterLabel>
+        <translation><!-- Have you ever sustained a work-related injury or illness? If so, how was it addressed, and what preventative measures have you taken since then? --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Have you had a full medical clearance for any injury identified in these questions?</masterLabel>
+        <translation><!-- Have you had a full medical clearance for any injury identified in these questions? --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Headaches/Migraines?</masterLabel>
+        <translation><!-- Headaches/Migraines? --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Hernia?</masterLabel>
+        <translation><!-- Hernia? --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>High blood pressure, chest pain or heart or circulatory trouble?</masterLabel>
+        <translation><!-- High blood pressure, chest pain or heart or circulatory trouble? --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Hip, knee or ankle pain or strain (including Sciatica)?</masterLabel>
+        <translation><!-- Hip, knee or ankle pain or strain (including Sciatica)? --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lower back, neck or thoracic spinal pain or strain (including back surgery)?</masterLabel>
+        <translation><!-- Lower back, neck or thoracic spinal pain or strain (including back surgery)? --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Mental health condition including severe anxiety, PTSD  and/or depression that may impact your abilities to carry out your professional tasks?</masterLabel>
+        <translation><!-- Mental health condition including severe anxiety, PTSD  and/or depression that may impact your abilities to carry out your professional tasks? --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Nail infections, or chronic skin infections?</masterLabel>
+        <translation><!-- Nail infections, or chronic skin infections? --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Scars/deformations which may restrict physical movement?</masterLabel>
+        <translation><!-- Scars/deformations which may restrict physical movement? --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Shoulder or neck or arm/wrist pain or strain?</masterLabel>
+        <translation><!-- Shoulder or neck or arm/wrist pain or strain? --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Tenosynovitis, carpel tunnel or RSI?</masterLabel>
+        <translation><!-- Tenosynovitis, carpel tunnel or RSI? --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

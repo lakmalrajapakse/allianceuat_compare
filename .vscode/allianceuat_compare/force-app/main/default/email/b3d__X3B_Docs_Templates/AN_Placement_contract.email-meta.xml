@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Alliance Nursing email template to send placement contract for signing</description>
+    <encodingKey>UTF-8</encodingKey>
+    <letterhead>AN_Letterhead</letterhead>
+    <name>AN - Placement contract</name>
+    <style>freeForm</style>
+    <subject>Your placement contract for signature</subject>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

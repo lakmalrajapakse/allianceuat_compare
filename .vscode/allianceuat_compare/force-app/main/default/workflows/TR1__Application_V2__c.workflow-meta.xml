@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>X1218_Confirmation_email_to_the_candidate_after_application1</fullName>
+        <description>1218 Confirmation email to the candidate after application</description>
+        <protected>false</protected>
+        <recipients>
+            <field>TR1__Applicant__c</field>
+            <type>contactLookup</type>
+        </recipients>
+        <senderAddress>notifications@allianceaustralia.com.au</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Alliance_Email_Templates/ARRH_Contract_Application_Confirmation_Members</template>
+    </alerts>
+</Workflow>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Classification --></label>
+    <name>Classification__c</name>
+    <picklistValues>
+        <masterLabel>CSSD Attendant</masterLabel>
+        <translation><!-- CSSD Attendant --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Chef</masterLabel>
+        <translation><!-- Chef --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Chef / Kitchen Hand</masterLabel>
+        <translation><!-- Chef / Kitchen Hand --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cleaner</masterLabel>
+        <translation><!-- Cleaner --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cook</masterLabel>
+        <translation><!-- Cook --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Enrolled Nurse</masterLabel>
+        <translation><!-- Enrolled Nurse --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Food Services Assistant</masterLabel>
+        <translation><!-- Food Services Assistant --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Kitchen Hand</masterLabel>
+        <translation><!-- Kitchen Hand --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Kitchen Hand / Cleaner</masterLabel>
+        <translation><!-- Kitchen Hand / Cleaner --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Laundry</masterLabel>
+        <translation><!-- Laundry --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Management</masterLabel>
+        <translation><!-- Management --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Medical and Healthcare Assistant</masterLabel>
+        <translation><!-- Medical and Healthcare Assistant --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Nursing Assistant</masterLabel>
+        <translation><!-- Nursing Assistant --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Patient Services Assistant (PSA)</masterLabel>
+        <translation><!-- Patient Services Assistant (PSA) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Personal Care Worker</masterLabel>
+        <translation><!-- Personal Care Worker --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Regional, Rural and Remote</masterLabel>
+        <translation><!-- Regional, Rural and Remote --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Registered Midwife</masterLabel>
+        <translation><!-- Registered Midwife --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Registered Nurse</masterLabel>
+        <translation><!-- Registered Nurse --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Theatre Technician</masterLabel>
+        <translation><!-- Theatre Technician --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

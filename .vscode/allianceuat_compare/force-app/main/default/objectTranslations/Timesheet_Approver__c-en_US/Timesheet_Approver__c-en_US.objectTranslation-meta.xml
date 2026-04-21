@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Timesheet Approver</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Timesheet Approvers</value>
+    </caseValues>
+    <layouts>
+        <layout>Standard Timesheet Approver Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Temporary Timesheet Approver Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <description><!-- Used to signify this is a Standard Timesheet Approver --></description>
+        <label><!-- Standard Approver --></label>
+        <name>Standard_Approver</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Used to signify this is a Temporary Timesheet Approver --></description>
+        <label><!-- Temporary Approver --></label>
+        <name>Temporary_Approver</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- The Account &gt; Primary Approval Method must be set. --></errorMessage>
+        <name>Primary_Approval_Method_cannot_be_empty</name>
+    </validationRules>
+</CustomObjectTranslation>

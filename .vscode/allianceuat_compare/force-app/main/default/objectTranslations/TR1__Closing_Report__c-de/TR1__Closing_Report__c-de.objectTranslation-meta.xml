@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <value>Abschlussbericht</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <value>Abschlussberichte</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <value>Abschlussbericht</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>true</plural>
+        <value>Abschlussberichte</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <value>Abschlussbericht</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>true</plural>
+        <value>Abschlussberichte</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <value>Abschlussbericht</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>true</plural>
+        <value>Abschlussberichte</value>
+    </caseValues>
+    <fieldSets>
+        <label><!-- DG_AA_Nursing --></label>
+        <name>DG_AA_Nursing</name>
+    </fieldSets>
+    <gender>Neuter</gender>
+    <layouts>
+        <layout>Contract</layout>
+        <sections>
+            <label><!-- Billing/Collection Information 2 --></label>
+            <section>Billing/Collection Information 2</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Payroll/Invoicing --></label>
+            <section>Payroll/Invoicing</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Contract (WFM)</layout>
+        <sections>
+            <label><!-- 2cloudnine --></label>
+            <section>2cloudnine</section>
+        </sections>
+        <sections>
+            <label><!-- Close Details --></label>
+            <section>Close Details</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>FFS Daily</layout>
+        <sections>
+            <label><!-- Billing/Collection Information 2 --></label>
+            <section>Billing/Collection Information 2</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Service Fee Details --></label>
+            <section>Service Fee Details</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>FFS Weekly</layout>
+        <sections>
+            <label><!-- Billing/Collection Information 2 --></label>
+            <section>Billing/Collection Information 2</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Service Fee Details --></label>
+            <section>Service Fee Details</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Nummer Abschlussbericht</nameFieldLabel>
+    <recordTypes>
+        <description><!-- Contract Close --></description>
+        <label><!-- Contract --></label>
+        <name>Contract</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Fee for Service Daily --></description>
+        <label><!-- FFS - Daily --></label>
+        <name>FFS_Daily</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Fee for Service Weekly --></description>
+        <label><!-- FFS - Weekly --></label>
+        <name>Fee_for_Service</name>
+    </recordTypes>
+</CustomObjectTranslation>

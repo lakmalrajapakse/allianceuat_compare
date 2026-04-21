@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Induction Status --></label>
+    <name>AA_Induction_Status__c</name>
+    <picklistValues>
+        <masterLabel>Allocations Introduction</masterLabel>
+        <translation><!-- Allocations Introduction --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ID Badge &amp; Uniform Provided</masterLabel>
+        <translation><!-- ID Badge &amp; Uniform Provided --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ID Badged Created</masterLabel>
+        <translation><!-- ID Badged Created --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Induction Booked</masterLabel>
+        <translation><!-- Induction Booked --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Induction Process Completed</masterLabel>
+        <translation><!-- Induction Process Completed --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Induction to be booked</masterLabel>
+        <translation><!-- Induction to be booked --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

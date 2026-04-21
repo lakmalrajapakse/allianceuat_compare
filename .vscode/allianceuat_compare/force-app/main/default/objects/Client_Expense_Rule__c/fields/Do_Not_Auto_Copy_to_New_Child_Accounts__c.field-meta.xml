@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Do_Not_Auto_Copy_to_New_Child_Accounts__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>When TRUE, the expense will not be automatically created for new child accounts. It should be manually created or updated as needed.</description>
+    <inlineHelpText>When checked, the expense will not be automatically created for new child accounts. It should be manually created or updated as needed.</inlineHelpText>
+    <label>Do Not Auto-Copy to New Child Accounts</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

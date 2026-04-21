@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- From the Contact.PrimaryPayee record --></help>
+    <label><!-- Overtime Treatment --></label>
+    <name>Overtime_Treatment__c</name>
+</CustomFieldTranslation>

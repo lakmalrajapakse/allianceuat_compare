@@ -1,0 +1,172 @@
+{
+  "appPageId" : "d9ce9f69-0e14-4b11-9233-6c5ce091d546",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "5a76140f-1a89-422d-8473-0f815dfd83da",
+  "label" : "Payroll Profile",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "7faf055c-a3ab-4974-85eb-a8c3109890b9",
+          "columns" : [ {
+            "UUID" : "d7eb803e-efe7-4e38-9e26-e467e1cec2ec",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "7faf055c-a3ab-4974-85eb-a8c3109890b9",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "tabsetConfig" : {
+              "UUID" : "3d8db600-d568-4c59-8b5f-79077ba26c94",
+              "activeTab" : "",
+              "tabs" : [ {
+                "UUID" : "113acbbd-c1c0-4759-9a46-6c80bb3d2ad5",
+                "allowGuestUser" : false,
+                "locked" : false,
+                "seedComponents" : [ ],
+                "tabKey" : "2",
+                "tabName" : "Payment Details"
+              }, {
+                "UUID" : "78684de7-eab3-440a-9378-873e0a762086",
+                "allowGuestUser" : false,
+                "locked" : false,
+                "seedComponents" : [ ],
+                "tabKey" : "3",
+                "tabName" : "TFN Declaration"
+              }, {
+                "UUID" : "0c74e687-3317-4918-822a-1cfe444b227b",
+                "allowGuestUser" : false,
+                "locked" : false,
+                "seedComponents" : [ ],
+                "tabKey" : "51bb0",
+                "tabName" : "Superannuation Choice"
+              }, {
+                "UUID" : "a0e508e8-3316-4ff6-9deb-1a62b1079fd4",
+                "allowGuestUser" : false,
+                "locked" : false,
+                "seedComponents" : [ ],
+                "tabKey" : "4ff53",
+                "tabName" : "Deductions"
+              } ],
+              "useOverflowMenu" : true
+            }
+          },
+          "componentName" : "forceCommunity:tabLayout",
+          "id" : "3d8db600-d568-4c59-8b5f-79077ba26c94",
+          "regions" : [ {
+            "components" : [ {
+              "componentAttributes" : {
+                "flowArguments" : "[]",
+                "flowName" : "Community_Capture_Bank_Details"
+              },
+              "componentName" : "forceCommunity:flowCommunity",
+              "id" : "a6d6baa3-4658-4c2c-9036-3eb6bcaa8fae",
+              "renderPriority" : "NEUTRAL",
+              "renditionMap" : { },
+              "type" : "component"
+            } ],
+            "id" : "113acbbd-c1c0-4759-9a46-6c80bb3d2ad5",
+            "regionLabel" : "Payment Details",
+            "regionName" : "2",
+            "renditionMap" : { },
+            "type" : "region"
+          }, {
+            "components" : [ {
+              "componentAttributes" : {
+                "flowArguments" : "[]",
+                "flowName" : "tc9_util__Community_Capture_TFN"
+              },
+              "componentName" : "forceCommunity:flowCommunity",
+              "id" : "fb6e7980-6752-4110-ac0f-2dc22b6be3f0",
+              "renderPriority" : "NEUTRAL",
+              "renditionMap" : { },
+              "type" : "component"
+            } ],
+            "id" : "78684de7-eab3-440a-9378-873e0a762086",
+            "regionLabel" : "TFN Declaration",
+            "regionName" : "3",
+            "renditionMap" : { },
+            "type" : "region"
+          }, {
+            "components" : [ {
+              "componentAttributes" : {
+                "flowArguments" : "",
+                "flowName" : "Community_Capture_Superannuation_Details"
+              },
+              "componentName" : "forceCommunity:flowCommunity",
+              "id" : "567a98c8-412a-411e-9ff6-f1d43d37fa14",
+              "renderPriority" : "NEUTRAL",
+              "renditionMap" : { },
+              "type" : "component"
+            } ],
+            "id" : "0c74e687-3317-4918-822a-1cfe444b227b",
+            "regionLabel" : "Superannuation Choice",
+            "regionName" : "51bb0",
+            "renditionMap" : { },
+            "type" : "region"
+          }, {
+            "components" : [ {
+              "componentAttributes" : {
+                "flowArguments" : "",
+                "flowName" : "Community_Employee_Deductions"
+              },
+              "componentName" : "forceCommunity:flowCommunity",
+              "id" : "7ada1f03-2179-4970-a576-14f873ec2a90",
+              "renderPriority" : "NEUTRAL",
+              "renditionMap" : { },
+              "type" : "component"
+            } ],
+            "id" : "a0e508e8-3316-4ff6-9deb-1a62b1079fd4",
+            "regionLabel" : "Deductions",
+            "regionName" : "4ff53",
+            "renditionMap" : { },
+            "type" : "region"
+          } ],
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "d7eb803e-efe7-4e38-9e26-e467e1cec2ec",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "91fd2341-5a6c-43e9-a639-e209f799dc2b",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Payroll Profile"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "6302af04-4fc4-4f4d-bad8-b5e4fb4860a7",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "d4de0255-fefb-4f1b-9514-f9b49e53d43a",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-payroll-profile"
+}

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>sirenum__TicketType__c$Id</field>
+    </columns>
+    <columns>
+        <field>sirenum__TicketType__c$Name</field>
+    </columns>
+    <columns>
+        <field>sirenum__TicketType__c$Competency_Category__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>sirenum__TicketType__c$sirenum__Expires__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>sirenum__TicketType__c$sirenum__Requires_Proof__c</field>
+    </columns>
+    <columns>
+        <field>sirenum__TicketType__c$Award_Classification__c</field>
+    </columns>
+    <columns>
+        <field>sirenum__TicketType__c$Award_Level__c</field>
+    </columns>
+    <description>master list of all WFM competancies</description>
+    <filter>
+        <criteriaItems>
+            <column>sirenum__TicketType__c$Competency_Category__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>,ID Doc,Licence,Mandatory Training,Practical Training,Qualification,Client Induction,Clearance,Vaccination/Immunisation,Skills</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Tabular</format>
+    <name>WFM Competancies Master List</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>WFM_Competancies__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>sirenum__TicketType__c$Name</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>sirenum__TicketType__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

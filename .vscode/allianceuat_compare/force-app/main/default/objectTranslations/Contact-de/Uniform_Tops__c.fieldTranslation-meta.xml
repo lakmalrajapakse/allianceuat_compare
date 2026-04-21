@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Uniform Tops --></label>
+    <name>Uniform_Tops__c</name>
+    <picklistValues>
+        <masterLabel>Unisex polo shirt</masterLabel>
+        <translation><!-- Unisex polo shirt --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Unisex scrub shirt</masterLabel>
+        <translation><!-- Unisex scrub shirt --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Women&apos;s polo shirt</masterLabel>
+        <translation><!-- Women&apos;s polo shirt --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Women&apos;s scrub shirt</masterLabel>
+        <translation><!-- Women&apos;s scrub shirt --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

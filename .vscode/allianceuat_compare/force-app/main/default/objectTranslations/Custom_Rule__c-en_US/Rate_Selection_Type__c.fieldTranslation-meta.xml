@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>
+        <!-- Defines how the rate of pay/charge will be determined for Allowances when creating Assignment Rates&quot;
+Award-Based Rate: The rate will be calculated based on the employee&apos;s Award Classification and Award Level.
+Fixed Rate: A flat rate will be applied, regardless of the employee&apos;s classification or level. -->
+    </help>
+    <label><!-- Rate Selection Type --></label>
+    <name>Rate_Selection_Type__c</name>
+    <picklistValues>
+        <masterLabel>Award-Based</masterLabel>
+        <translation><!-- Award-Based --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Fixed</masterLabel>
+        <translation><!-- Fixed --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Select the state or territory for the branch address. --></help>
+    <label><!-- State --></label>
+    <name>State__c</name>
+    <picklistValues>
+        <masterLabel>Australian Capital Territory</masterLabel>
+        <translation><!-- Australian Capital Territory --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>New South Wales</masterLabel>
+        <translation><!-- New South Wales --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Northern Territory</masterLabel>
+        <translation><!-- Northern Territory --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Queensland</masterLabel>
+        <translation><!-- Queensland --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>South Australia</masterLabel>
+        <translation><!-- South Australia --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Tasmania</masterLabel>
+        <translation><!-- Tasmania --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Victoria</masterLabel>
+        <translation><!-- Victoria --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Western Australia</masterLabel>
+        <translation><!-- Western Australia --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

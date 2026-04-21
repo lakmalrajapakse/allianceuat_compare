@@ -1,0 +1,110 @@
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:v="urn:schemas-microsoft-com:vml">
+<head><meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
+	<!--[if gte mso 9]><xml><o:OfficeDocumentSettings><o:AllowPNG></o:AllowPNG><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link href="https://fonts.googleapis.com" rel="preconnect" />
+	<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&amp;family=Roboto&amp;display=swap" rel="stylesheet" />
+	<style type="text/css">@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&amp;family=Roboto&amp;display=swap');
+    table {
+      border-collapse: collapse;
+    }
+    td {
+      border-collapse: collapse;
+    }
+    @font-face {
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 400;
+      src: local('Roboto'), local('Roboto'), url('https://fonts.gstatic.com/s/roboto/v27/KFOmCnqEu92Fr1Mu72xKKTU1Kvnz.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 900;
+      src: local('Montserrat'), local('Montserrat'), url('https://fonts.gstatic.com/s/montserrat/v15/JTURjIg1_i6t8kCHKm45_epG3gTD_vx3rCubqg.woff2') format('woff2');
+    }
+	</style>
+</head>
+<body style="background-color:#f6f6f6;">
+<table bgcolor="#f6f6f6" border="0" cellpadding="0" cellspacing="0" style="padding:10px;background-color:#f6f6f6;" width="100%">
+	<tbody>
+		<tr>
+			<td align="center" bgcolor="#f6f6f6">
+			<table border="0" cellpadding="0" cellspacing="0" class="EMAIL-BODY" style="margin: 0; font-family:'Roboto', sans-serif;font-size:1px;border-collapse: collapse;width:600;" width="600">
+				<tbody>
+					<tr class="SECTION-HEADER">
+						<td bgcolor="#ffffff" style="padding:0;height:146px;background-color:#ffffff;" width="100%">
+						<p style="mso-table-lspace:0;mso-table-rspace:0;margin:0;"><img alt=" " src="https://www.allianceruralremote.com.au/ANR/media/media-library/Email%20banners/Alliance-Rural-Remote-Email-header.jpg" /></p>
+						</td>
+					</tr>
+					<tr>
+						<td style="background-color:#ffffff; height:30px">&nbsp;</td>
+					</tr>
+					<tr class="SECTION" style="background-color: #ffffff;">
+						<td align="left" bgcolor="#ffffff" style="padding: 0 0 0 45px;">
+						<table border="0" cellpadding="0" cellspacing="0" width="510">
+							<tbody>
+								<tr>
+									<td>
+									<h1 style="mso-table-lspace:0;mso-table-rspace:0;margin:0;font-size:30px;line-height:37px;color:#007DC3;font-weight:900;font-family:'Montserrat','Arial Black','Arial',sans-serif;">PLACEMENT DETAILS.</h1>
+									</td>
+								</tr>
+								<tr>
+									<td style="height:20px">&nbsp;</td>
+								</tr>
+								<tr>
+									<td align="left">
+									<p style="font-size:18px;line-height:25px;color:#000000;margin:10px 0 20px;">Hi {!Contact.FirstName},<br />
+									<br />It's time to get ready for your next Rural & Remote adventure!<br /><br />This email contains all the details you need successfully start your {!TR1__Job__c.Name} contract<br /><br />Please review all the below details carefully and let us know if you have any questions.<br /><br />[Roster details]<br />[Travel details]<br />[Accomodation details]<br />[Paper timesheet]<br />[On-call addendum]<br /><br />
+
+<p style="font-size:18px;line-height:25px;color:#000000;margin:10px 0 20px;">Remember you can always call us on <a href="tel:0749985550">07 4998 5550</a> if you want to speak to a consultant directly.
+									<br /><br />
+									Kind regards,<br />
+									Your team at Alliance Rural & Remote Health</p>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						</td>
+					</tr>
+					<tr>
+						<td bgcolor="#ffffff" class="spacer" style="padding:35px 45px 10px 0px;background-color:#ffffff;">
+						<table border="0" cellpadding="0" cellspacing="0">
+							<tbody>
+								<tr>
+									<td><img alt="" src="https://www.allianceruralremote.com.au/ANR/media/media-library/Email%20banners/Alliance-Rural-Remote-Graphic-Line.png" style="width:108%" /></td>
+								</tr>
+							</tbody>
+						</table>
+						</td>
+					</tr>
+					<tr>
+						<td align="center" bgcolor="#ffffff" class="SECTION-FOOTER-TOP" style="padding:26px 45px 40px 45px;font-size:12px;line-height:22px;background-color:#ffffff">
+						<table align="left" border="0" cellpadding="0" cellspacing="0" class="footer-social" style="border:1px solid transparent;">
+							<tbody>
+								<tr>
+									<td bgcolor="#ffffff" style="padding: 0" valign="middle">
+									<table align="left" border="0" cellpadding="0" cellspacing="0" style="border:1px solid transparent;">
+										<tbody>
+											<tr>
+												<td style="padding-right: 32px" valign="middle"><a href="https://www.facebook.com/allianceruralremote" rel="noopener noreferrer" target="_blank"><img alt=" " src="https://www.allianceruralremote.com.au/ANR/media/media-library/Email%20banners/fb_1.png" /></a></td>
+												<td style="padding-right: 32px" valign="middle"><a href="https://www.linkedin.com/company/373910" rel="noopener noreferrer" target="_blank"><img alt=" " src="https://www.allianceruralremote.com.au/ANR/media/media-library/Email%20banners/in_1.png" /></a></td>
+												<td style="padding-right: 32px" valign="middle"><a href="https://www.instagram.com/allianceruralremote/" rel="noopener noreferrer" target="_blank"><img alt=" " height="21" src="https://www.allianceruralremote.com.au/ANR/media/media-library/Email%20banners/is_1.png" /></a></td>
+												<td valign="middle"><a href="https://www.youtube.com/channel/UCVvnStor2YEhu-sOfyJOvbw" rel="noopener noreferrer" target="_blank"><img alt=" " src="https://www.allianceruralremote.com.au/ANR/media/media-library/Email%20banners/yt_1.png" /></a></td>
+											</tr>
+										</tbody>
+									</table>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</body>
+</html>

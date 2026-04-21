@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- DOC5DEFADDRCODE --></label>
+    <name>DOC5DEFADDRCODE__c</name>
+</CustomFieldTranslation>

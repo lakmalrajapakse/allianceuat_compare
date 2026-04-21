@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>AN - Access Alliance Connect App</name>
+    <style>none</style>
+    <subject>Get the Alliance Connect app</subject>
+    <textOnly>ACCESS ALLIANCE CONNECT.
+
+Hi {!User.FirstName},
+
+You&apos;re almost ready to go! The Alliance Connect app will give you access to thousands of shifts, and contracts all across Australia. Pick when and where you want to work or put your availability in for priority access to your most wanted shifts.
+
+Follow the link below to get started!
+
+Got questions? Call our friendly staff on 1300 034 494.
+
+{Get Alliance Connect}
+
+Kind regards,
+Your team at Alliance Nursing</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

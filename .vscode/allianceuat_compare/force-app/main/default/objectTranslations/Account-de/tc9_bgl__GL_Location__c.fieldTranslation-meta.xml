@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Location for payment and Invoice entities used by the GL package --></help>
+    <label><!-- GL Location --></label>
+    <name>tc9_bgl__GL_Location__c</name>
+    <relationshipLabel><!-- Accounts (GL Location) --></relationshipLabel>
+</CustomFieldTranslation>

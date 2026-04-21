@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>Contact</entityName>
+    <fieldName>TR1__Candidate_Status__c</fieldName>
+    <masterLabel>Candidate Path</masterLabel>
+    <pathAssistantSteps>
+        <picklistValueName>Active</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>TR1__Executive_Summary__c</fieldNames>
+        <fieldNames>Email</fieldNames>
+        <fieldNames>MobilePhone</fieldNames>
+        <fieldNames>TR1__Source__c</fieldNames>
+        <picklistValueName>Applicant</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Inactive_Reason__c</fieldNames>
+        <fieldNames>Review_Reason__c</fieldNames>
+        <fieldNames>Review_Note__c</fieldNames>
+        <picklistValueName>Inactive</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <picklistValueName>Prospect</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>Candidate</recordTypeName>
+</PathAssistant>

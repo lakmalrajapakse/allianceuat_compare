@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Adjustment_Pending</fullName>
+    <booleanFilter>1 OR 2 OR 3</booleanFilter>
+    <columns>Branch__c</columns>
+    <columns>NAME</columns>
+    <columns>tc9_et__Assignment__c</columns>
+    <columns>tc9_et__Employee__c</columns>
+    <columns>tc9_et__Payee__c</columns>
+    <columns>tc9_et__Approval_Status_Colour__c</columns>
+    <columns>tc9_et__Transaction_Creation_Status_Colour__c</columns>
+    <columns>tc9_et__Start_Date__c</columns>
+    <columns>tc9_et__End_Date__c</columns>
+    <columns>tc9_et__Total_Hours__c</columns>
+    <columns>LAST_UPDATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>tc9_ext_sirint__ScheduledJobProcessed__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <filters>
+        <field>ScheduledJobProcessed__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <filters>
+        <field>tc9_util__ScheduledJobProcessed__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <label>Adjustment Pending</label>
+</ListView>

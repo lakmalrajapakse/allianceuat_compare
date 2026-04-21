@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>57.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <decisions>
+        <name>Is_Payee_a_PAYG_earner_type</name>
+        <label>Is Payee a PAYG earner type?</label>
+        <locationX>182</locationX>
+        <locationY>323</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Is_PAYG</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.tc9_pr__Earner_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>PAYG</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Get_AU_Payroll_Tax</targetReference>
+            </connector>
+            <label>Is PAYG</label>
+        </rules>
+    </decisions>
+    <description>S&amp;c nuuco - Auto create payroll tax withholding on creation of payee
+10/01/24 - Added get record type to only get AU Payroll Tax record type. This was missing and was throwing an error.
+18/01/25 - TR - Added decision element to only create for PAYG earner types</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>ff_PT_Exempt_Reason</name>
+        <dataType>String</dataType>
+        <expression>CASE({!$Record.Payroll_Tax_Exempt__c},
+&quot;No&quot;, &quot;&quot;,
+&quot;Yes&quot;, &quot;Exempt on Payee record&quot;,
+&quot;&quot;)</expression>
+    </formulas>
+    <interviewLabel>Payee - Auto Create PayTax Withholding {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Payee - Auto Create PayTax Withholding</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <name>Create_AU_Payroll_Tax_Record</name>
+        <label>Create AU Payroll Tax Record</label>
+        <locationX>50</locationX>
+        <locationY>539</locationY>
+        <inputAssignments>
+            <field>RecordTypeId</field>
+            <value>
+                <elementReference>Get_AU_Payroll_Tax.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>tc9_pr__Effective_Date__c</field>
+            <value>
+                <elementReference>$Record.tc9_pr__Payroll_Start_Date__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>tc9_pr__Employee__c</field>
+            <value>
+                <elementReference>$Record.tc9_pr__Employee__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>tc9_pr__Payee__c</field>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>tc9_pr__Payroll_Tax_Exempt_Reason__c</field>
+            <value>
+                <elementReference>ff_PT_Exempt_Reason</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>tc9_pr__Payroll_Tax_Exempt__c</field>
+            <value>
+                <elementReference>$Record.Payroll_Tax_Exempt__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>tc9_pr__Payroll_Tax_Locality__c</field>
+            <value>
+                <elementReference>$Record.tc9_pr__Primary_Location__r.tc9_pr__Payroll_Tax_Locality__c</elementReference>
+            </value>
+        </inputAssignments>
+        <object>tc9_pr__Payee_Withholding__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordLookups>
+        <name>Get_AU_Payroll_Tax</name>
+        <label>Get AU Payroll Tax</label>
+        <locationX>50</locationX>
+        <locationY>431</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Create_AU_Payroll_Tax_Record</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>SobjectType</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>tc9_pr__Payee_Withholding__c</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>DeveloperName</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>AU_Payroll_Tax</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>RecordType</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <start>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Is_Payee_a_PAYG_earner_type</targetReference>
+        </connector>
+        <object>tc9_pr__Payee__c</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Missing_Certificate__c</fullName>
+    <defaultValue>true</defaultValue>
+    <inlineHelpText>This box is checked to indicate the candidate has provided this cert. If the cert is missing, the box is blank</inlineHelpText>
+    <label>Certificate Provided</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

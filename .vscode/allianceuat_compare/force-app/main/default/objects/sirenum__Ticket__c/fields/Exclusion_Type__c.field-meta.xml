@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Exclusion_Type__c</fullName>
+    <label>Exclusion Type</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Client Requested</fullName>
+                <default>false</default>
+                <label>Client Requested</label>
+            </value>
+            <value>
+                <fullName>Candidate Requested</fullName>
+                <default>false</default>
+                <label>Candidate Requested</label>
+            </value>
+            <value>
+                <fullName>Both Requested</fullName>
+                <default>false</default>
+                <label>Both Requested</label>
+            </value>
+            <value>
+                <fullName>User Requested (internal call)</fullName>
+                <default>false</default>
+                <label>User Requested (internal call)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

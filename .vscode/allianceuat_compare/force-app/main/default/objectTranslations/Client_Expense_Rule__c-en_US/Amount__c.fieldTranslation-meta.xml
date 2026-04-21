@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- A distinct Markup dollar amount or margin percent that applies to a particular expense rule. --></help>
+    <label><!-- Markup ($) / Margin (%) --></label>
+    <name>Amount__c</name>
+</CustomFieldTranslation>

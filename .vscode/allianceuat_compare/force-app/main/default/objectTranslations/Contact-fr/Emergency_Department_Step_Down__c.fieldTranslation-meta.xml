@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Emergency Department (Step Down) --></label>
+    <name>Emergency_Department_Step_Down__c</name>
+</CustomFieldTranslation>

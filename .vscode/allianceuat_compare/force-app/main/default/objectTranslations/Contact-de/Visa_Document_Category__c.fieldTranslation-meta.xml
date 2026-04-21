@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Visa Document Category --></label>
+    <name>Visa_Document_Category__c</name>
+    <picklistValues>
+        <masterLabel>DFTTA</masterLabel>
+        <translation><!-- DFTTA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ImmiCard</masterLabel>
+        <translation><!-- ImmiCard --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PLO56 (M56)</masterLabel>
+        <translation><!-- PLO56 (M56) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Passport</masterLabel>
+        <translation><!-- Passport --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Titre de Voyage</masterLabel>
+        <translation><!-- Titre de Voyage --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

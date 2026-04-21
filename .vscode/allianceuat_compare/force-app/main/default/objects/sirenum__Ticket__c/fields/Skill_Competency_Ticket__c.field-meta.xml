@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Skill_Competency_Ticket__c</fullName>
+    <description>This field checks if this ticket is related to a Skill Competency.</description>
+    <formula>sirenum__TicketType__r.Is_Skill_Competency__c</formula>
+    <inlineHelpText>This field checks if this ticket is related to a Skill Competency.</inlineHelpText>
+    <label>Skill Competency Ticket</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

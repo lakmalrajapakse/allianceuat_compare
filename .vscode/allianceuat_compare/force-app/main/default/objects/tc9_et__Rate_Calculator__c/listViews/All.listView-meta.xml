@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All</fullName>
+    <columns>NAME</columns>
+    <columns>tc9_et__Rate_Calculator_Name__c</columns>
+    <columns>tc9_et__Effective_Date__c</columns>
+    <columns>tc9_et__Expiry_Date__c</columns>
+    <columns>RECORDTYPE</columns>
+    <columns>tc9_et__Interpretation_Rule__c</columns>
+    <columns>tc9_et__Define_Markup_Margin_Per_Pay_Code__c</columns>
+    <columns>tc9_et__Global_Template__c</columns>
+    <columns>tc9_et__Update_with_Parent__c</columns>
+    <columns>tc9_et__Update_with_MPR__c</columns>
+    <columns>CREATEDBY_USER</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>UPDATEDBY_USER</columns>
+    <columns>LAST_UPDATE</columns>
+    <columns>tc9_et__Calculated_By_Batch__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>All</label>
+</ListView>

@@ -1,0 +1,71 @@
+{
+  "appPageId" : "d9ce9f69-0e14-4b11-9233-6c5ce091d546",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "1592ba31-99ae-4151-a73e-44fca843231b",
+  "label" : "Allowances",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "84084df9-7b9e-4d4d-9622-34e3bc77b048",
+          "columns" : [ {
+            "UUID" : "6959cad4-3cf8-4727-9e2b-1aad580f9533",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "84084df9-7b9e-4d4d-9622-34e3bc77b048",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "flowArguments" : "[{\"label\":\"varShift\",\"dataType\":\"String\",\"supportsRecordId\":false,\"value\":\"{!id}\"}]",
+            "flowName" : "Community_Manage_Allowances"
+          },
+          "componentName" : "forceCommunity:flowCommunity",
+          "id" : "3dcd200d-4158-4876-9142-f995f1efc843",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "6959cad4-3cf8-4727-9e2b-1aad580f9533",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "8bf6166c-83b7-4dd8-a1fa-e69121da305c",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Allowances"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "bd090feb-f199-4d35-8cab-e2f188c56a76",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "5ed41cef-f3ab-46e2-9ab7-181c683612c9",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-allowances"
+}

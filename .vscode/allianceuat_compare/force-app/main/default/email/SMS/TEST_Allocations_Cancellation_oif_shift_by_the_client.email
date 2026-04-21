@@ -1,0 +1,3 @@
+Hi {!Contact.FirstName}, your shift at {!sirenum__Shift__c.sirenum__Site__c} on {!sirenum__Shift__c.sirenum__Shift_Date__c} has been cancelled. You can check the app for other available shifts.
+
+Your team at {!TR1__Job__c.Branch__c}

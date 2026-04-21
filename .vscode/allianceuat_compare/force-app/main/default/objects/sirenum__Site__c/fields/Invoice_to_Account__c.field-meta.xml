@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Invoice_to_Account__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>If the &apos;Invoice Group By&apos; on the related Account is &apos;Site&apos;, Invoices will be addressed to this Account.</description>
+    <inlineHelpText>If the &apos;Invoice Group By&apos; on the related Account is &apos;Site&apos;, Invoices will be addressed to this Account.</inlineHelpText>
+    <label>Invoice to Account</label>
+    <referenceTo>Account</referenceTo>
+    <relationshipLabel>Sites (Invoice to Account)</relationshipLabel>
+    <relationshipName>Sites</relationshipName>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

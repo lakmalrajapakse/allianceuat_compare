@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Indicates whether this Minimum Pay Rate record should be visible in the Template Group related list. The record will be included if the Pay Code is blank or if it is marked as a Default Pay Rate Pay Code. --></help>
+    <label><!-- Show in Filtered MPR List --></label>
+    <name>Show_in_Filtered_MPR_List__c</name>
+</CustomFieldTranslation>

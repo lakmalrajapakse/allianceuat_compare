@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Do you have any recurrent health problems that may interfere with your ability to attend work or perform your role? eg difficulties with shiftwork, drive a car --></help>
+    <label><!-- interfere with your ability to attend w --></label>
+    <name>interfere_with_your_ability_to_attend_w__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>tc9_et__Expense_Claim_Funding_Requirement__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Indicates funding requirements for Expense Claims at a Client level. This value will be used to populate the Funding Requirement field on related Expense Claim based Pay Transactions</description>
+    <inlineHelpText>Indicates funding requirements for Expense Claims at a Client level. This value will be used to populate the Funding Requirement field on related Expense Claim based Pay Transactions</inlineHelpText>
+    <label>Expense Claim Funding Requirement</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>tc9_pr__Funding_Requirements_Picklist</valueSetName>
+    </valueSet>
+</CustomField>

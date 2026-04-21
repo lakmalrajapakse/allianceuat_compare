@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- International stage --></label>
+    <name>International_stage__c</name>
+    <picklistValues>
+        <masterLabel>Stage 1</masterLabel>
+        <translation><!-- Stage 1 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Stage 2</masterLabel>
+        <translation><!-- Stage 2 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Stage 3</masterLabel>
+        <translation><!-- Stage 3 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Stage 4</masterLabel>
+        <translation><!-- Stage 4 --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

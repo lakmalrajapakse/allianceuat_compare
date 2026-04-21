@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>AN - Contract Document Pack</name>
+    <style>none</style>
+    <subject>Your contract with Alliance Nursing</subject>
+    <textOnly>WELCOME TO ALLIANCE NURSING.
+
+Hi {!Contact.FirstName},
+
+We are excited to finally welcome you to the Alliance Nursing family! Attached is a copy of your employment contract.
+
+You can add your digital signature here:
+
+SIGN CONTRACT
+
+We&apos;ve also added a copy of the Alliance Nursing employee handbook, where you can find all details regarding your new role, information consent and the Fair work statement. Please review these documents and confirm when you&apos;ve read the document.
+
+Once you&apos;ve signed the contract and the other documents, we&apos;ll send you a link to book yourself in for an Induction and once you&apos;ve attended the session, you&apos;re ready to get booked in for shifts!
+
+If you have any questions or need further information, please don&apos;t hesitate to call us on 1300 034 494.
+
+We can&apos;t wait to get you started!
+
+Kind regards,
+Your team at Alliance Nursing</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

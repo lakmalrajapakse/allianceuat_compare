@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Alternative_Email_Not_Set</fullName>
+    <active>true</active>
+    <description>Created to ensure alternative email is set where the Alternative Email is selected for a notification</description>
+    <errorConditionFormula>ISBLANK(tc9_pr__Alternative_Email__c) = TRUE &amp;&amp; 
+OR(
+ISPICKVAL( tc9_et__Timesheet_Notification_Email__c , &apos;Alternative&apos;),
+ISPICKVAL(  tc9_pr__Leave_Notification_Email__c , &apos;Alternative&apos;)
+)</errorConditionFormula>
+    <errorDisplayField>tc9_pr__Alternative_Email__c</errorDisplayField>
+    <errorMessage>Please set the alternative email address when selecting &apos;Alternative&apos; as an approver</errorMessage>
+</ValidationRule>

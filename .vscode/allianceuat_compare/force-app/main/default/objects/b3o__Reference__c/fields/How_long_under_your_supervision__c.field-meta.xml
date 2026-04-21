@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>How_long_under_your_supervision__c</fullName>
+    <inlineHelpText>How long was the candidate under your supervision during their placement?</inlineHelpText>
+    <label>How long under your supervision?</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Active_on_hires_RNs_NSW</fullName>
+    <columns>CONTACT.TITLE</columns>
+    <columns>FULL_NAME</columns>
+    <columns>Branch_Name__c</columns>
+    <columns>CONTACT.PHONE1</columns>
+    <columns>CONTACT.PHONE3</columns>
+    <columns>CONTACT.EMAIL</columns>
+    <columns>Classification__c</columns>
+    <columns>Speciality__c</columns>
+    <columns>Skill_area__c</columns>
+    <columns>Skill__c</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>TR1__Candidate_Status__c</field>
+        <operation>equals</operation>
+        <value>Active</value>
+    </filters>
+    <filters>
+        <field>Classification__c</field>
+        <operation>equals</operation>
+        <value>Registered Nurse</value>
+    </filters>
+    <filters>
+        <field>Branch_Name__c</field>
+        <operation>contains</operation>
+        <value>Sydney</value>
+    </filters>
+    <label>Active on-hires RNs - NSW</label>
+</ListView>

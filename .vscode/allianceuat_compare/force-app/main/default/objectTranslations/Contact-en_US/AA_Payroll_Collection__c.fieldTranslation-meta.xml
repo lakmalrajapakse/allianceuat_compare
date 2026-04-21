@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Payroll Collection Status --></label>
+    <name>AA_Payroll_Collection__c</name>
+    <picklistValues>
+        <masterLabel>Additional Ref Requested</masterLabel>
+        <translation><!-- Additional Ref Requested --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Complete</masterLabel>
+        <translation><!-- Complete --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Progress</masterLabel>
+        <translation><!-- Progress --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Ready to Review</masterLabel>
+        <translation><!-- Ready to Review --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Reject</masterLabel>
+        <translation><!-- Reject --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sent</masterLabel>
+        <translation><!-- Sent --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

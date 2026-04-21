@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>60.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <decisions>
+        <name>AR_Found</name>
+        <label>AR Found?</label>
+        <locationX>314</locationX>
+        <locationY>839</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Not_Found</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Assignment_Rate</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Create_AR_Platform_Event</targetReference>
+            </connector>
+            <label>Not Found</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Update_Quantity</name>
+        <label>Update Quantity?</label>
+        <locationX>314</locationX>
+        <locationY>431</locationY>
+        <defaultConnector>
+            <targetReference>Get_Assignment_Rate</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Custom_Rule</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Custom_Rule</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Timesheet_Item</targetReference>
+            </connector>
+            <label>Custom Rule</label>
+        </rules>
+        <rules>
+            <name>Cancellation_Payment</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.tc9_ext_sirint__Shift__r.Cancellation_Fee__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+            </conditions>
+            <connector>
+                <targetReference>Update_Timesheet_Item_Cancellation</targetReference>
+            </connector>
+            <label>Cancellation Payment</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <formulas>
+        <name>frmCancellationQuantity</name>
+        <dataType>Number</dataType>
+        <expression>CASE(
+    {!$Record.tc9_ext_sirint__Shift__r.Cancellation_Fee__c},
+    &quot;2 Hours&quot;, 2,
+    &quot;3 Hours&quot;, 3,
+    &quot;4 Hours&quot;, 4,
+    &quot;5 Hours&quot;, 5,
+    1  /* Default value if no match */
+)</expression>
+        <scale>2</scale>
+    </formulas>
+    <formulas>
+        <name>frmQuantity</name>
+        <dataType>Number</dataType>
+        <expression>IF(
+ISPICKVAL({!$Record.tc9_ext_sirint__Shift__r.tc9_ext_sirint__Payroll_Time_Type__c}, &quot;Billable&quot;),
+{!$Record.tc9_ext_sirint__Shift__r.sirenum__Billable_Calculated_Shift_Length__c},
+IF(
+ISPICKVAL({!$Record.tc9_ext_sirint__Shift__r.tc9_ext_sirint__Payroll_Time_Type__c}, &quot;Scheduled&quot;),
+{!$Record.tc9_ext_sirint__Shift__r.sirenum__Scheduled_Shift_Length_Decimal__c}, 1
+))</expression>
+        <scale>2</scale>
+    </formulas>
+    <interviewLabel>2c9 - Create Allowance Assignment Rates from TSI {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>2c9 - Create Allowance Assignment Rates from TSI</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <name>Create_AR_Platform_Event</name>
+        <label>Create AR Platform Event</label>
+        <locationX>182</locationX>
+        <locationY>947</locationY>
+        <inputAssignments>
+            <field>Assignment_ID__c</field>
+            <value>
+                <elementReference>$Record.tc9_et__Assignment__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Effective_Date__c</field>
+            <value>
+                <elementReference>$Record.tc9_et__Date_Incurred__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Paycode_ID__c</field>
+            <value>
+                <elementReference>$Record.tc9_et__Payee_Allowance_Record__r.tc9_pr__Pay_Code__c</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Custom_Assignment_Rate__e</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordLookups>
+        <name>Get_Assignment_Rate</name>
+        <label>Get Assignment Rate</label>
+        <locationX>314</locationX>
+        <locationY>731</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>AR_Found</targetReference>
+        </connector>
+        <filterLogic>1 AND 2 AND 3 AND (4 OR 5)</filterLogic>
+        <filters>
+            <field>tc9_pr__Assignment__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.tc9_et__Assignment__c</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>tc9_pr__Pay_code__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.tc9_et__Payee_Allowance_Record__r.tc9_pr__Pay_Code__c</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>tc9_pr__Effective_Date__c</field>
+            <operator>LessThanOrEqualTo</operator>
+            <value>
+                <elementReference>$Record.tc9_et__Date_Incurred__c</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>tc9_pr__Expiry_Date__c</field>
+            <operator>GreaterThanOrEqualTo</operator>
+            <value>
+                <elementReference>$Record.tc9_et__Date_Incurred__c</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>tc9_pr__Expiry_Date__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>tc9_pr__Assignment_Rate__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_Custom_Rule</name>
+        <label>Get Custom Rule</label>
+        <locationX>314</locationX>
+        <locationY>323</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Update_Quantity</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Shift__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.tc9_ext_sirint__Shift__c</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Allowance_Payment_Frequency__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Shift Hours - Allowance Only</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Allowance_Pay_Code__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.tc9_et__Payee_Allowance_Record__r.tc9_pr__Pay_Code__r.Name</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Custom_Rule__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <name>Update_Timesheet_Item</name>
+        <label>Update Timesheet Item</label>
+        <locationX>50</locationX>
+        <locationY>539</locationY>
+        <connector>
+            <targetReference>Get_Assignment_Rate</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>tc9_et__Quantity__c</field>
+            <value>
+                <elementReference>frmQuantity</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Timesheet_Item_Cancellation</name>
+        <label>Update Timesheet Item - Cancellation</label>
+        <locationX>314</locationX>
+        <locationY>539</locationY>
+        <connector>
+            <targetReference>Get_Assignment_Rate</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>tc9_et__Quantity__c</field>
+            <value>
+                <elementReference>frmCancellationQuantity</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>188</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Get_Custom_Rule</targetReference>
+        </connector>
+        <object>tc9_et__Timesheet_Item__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>varAssignmentRate</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>tc9_pr__Assignment_Rate__c</objectType>
+    </variables>
+</Flow>

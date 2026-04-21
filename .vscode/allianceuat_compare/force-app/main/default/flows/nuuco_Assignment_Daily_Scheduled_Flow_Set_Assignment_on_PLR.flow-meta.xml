@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>59.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <decisions>
+        <description>acts as filter. If yes, update. If no, no action.
+
+Timesheets Only - NO PAY = YES indicates that it is a boot assignment.</description>
+        <name>Is_record_start_date_less_than_or_equals_to_Today_and_is_NOT_a_BOOT_assignment</name>
+        <label>Is record start date less than or equals to Today and is NOT a BOOT assignment?</label>
+        <locationX>182</locationX>
+        <locationY>468</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Yes</name>
+            <conditionLogic>1 AND 2 AND (3 OR 4)</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.tc9_pr__Assignment_Start_Date__c</leftValueReference>
+                <operator>LessThanOrEqualTo</operator>
+                <rightValue>
+                    <elementReference>$Flow.CurrentDate</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>ContainsBootInAssignment</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.RecordTypeId</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>Get_Assignment_Employee_RT.Id</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.RecordTypeId</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>Get_Assignment_Temp_RT.Id</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_PLR</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <description>ALN-516 - Flow marked as REDUNDANT and must remain deactivated</description>
+    <environments>Default</environments>
+    <formulas>
+        <description>Checks if Assignment Name has &apos;BOOT&apos;. If yes, then formula returns TRUE.</description>
+        <name>ContainsBootInAssignment</name>
+        <dataType>Boolean</dataType>
+        <expression>CONTAINS({!$Record.tc9_pr__Assignment_Name__c}, &apos;BOOT&apos;)</expression>
+    </formulas>
+    <formulas>
+        <name>TodayAssignmentStartDate</name>
+        <dataType>Date</dataType>
+        <expression>TODAY()</expression>
+    </formulas>
+    <interviewLabel>{Assignment} - {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>(REDUNDANT) {Assignment} - Daily Scheduled Flow: Set Assignment on PLR</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <description>Employee Record Type (Assignment)</description>
+        <name>Get_Assignment_Employee_RT</name>
+        <label>Get Assignment - Employee RT</label>
+        <locationX>182</locationX>
+        <locationY>360</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Is_record_start_date_less_than_or_equals_to_Today_and_is_NOT_a_BOOT_assignment</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>SobjectType</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>tc9_pr__Assignment__c</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>DeveloperName</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Employee</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>RecordType</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <description>Temp Record Type (Assignment)</description>
+        <name>Get_Assignment_Temp_RT</name>
+        <label>Get Assignment - Temp RT</label>
+        <locationX>182</locationX>
+        <locationY>252</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Get_Assignment_Employee_RT</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>SobjectType</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>tc9_pr__Assignment__c</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>DeveloperName</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Temp</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>RecordType</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <name>Update_PLR</name>
+        <label>Update PLR</label>
+        <locationX>50</locationX>
+        <locationY>576</locationY>
+        <connector>
+            <targetReference>Update_triggering_record</targetReference>
+        </connector>
+        <filterLogic>1 AND (2 OR 3)</filterLogic>
+        <filters>
+            <field>tc9_pr__Payee__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.tc9_pr__Payee__c</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>tc9_pr__Expiry_Date__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>tc9_pr__Expiry_Date__c</field>
+            <operator>GreaterThanOrEqualTo</operator>
+            <value>
+                <elementReference>$Record.tc9_pr__Assignment_Start_Date__c</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>tc9_pr__Assignment__c</field>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <object>tc9_pr__Payee_Leave_Rule__c</object>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_triggering_record</name>
+        <label>Update triggering record</label>
+        <locationX>50</locationX>
+        <locationY>684</locationY>
+        <inputAssignments>
+            <field>PLR_Updated__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Get_Assignment_Temp_RT</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>PLR_Updated__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <object>tc9_pr__Assignment__c</object>
+        <schedule>
+            <frequency>Once</frequency>
+            <startDate>2024-01-12</startDate>
+            <startTime>06:00:00.000Z</startTime>
+        </schedule>
+        <triggerType>Scheduled</triggerType>
+    </start>
+    <status>Draft</status>
+</Flow>

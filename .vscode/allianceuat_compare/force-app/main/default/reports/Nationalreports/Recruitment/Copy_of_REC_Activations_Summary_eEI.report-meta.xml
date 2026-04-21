@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <chart>
+        <backgroundColor1>#FFFFFF</backgroundColor1>
+        <backgroundColor2>#FFFFFF</backgroundColor2>
+        <backgroundFadeDir>Diagonal</backgroundFadeDir>
+        <chartSummaries>
+            <aggregate>Unique</aggregate>
+            <axisBinding>y</axisBinding>
+            <column>CONTACT_ID</column>
+        </chartSummaries>
+        <chartType>Line</chartType>
+        <enableHoverLabels>false</enableHoverLabels>
+        <expandOthers>true</expandOthers>
+        <groupingColumn>CREATED_DATE</groupingColumn>
+        <location>CHART_BOTTOM</location>
+        <showAxisLabels>false</showAxisLabels>
+        <showPercentage>false</showPercentage>
+        <showTotal>false</showTotal>
+        <showValues>false</showValues>
+        <size>Medium</size>
+        <summaryAxisRange>Auto</summaryAxisRange>
+        <textColor>#000000</textColor>
+        <textSize>12</textSize>
+        <titleColor>#000000</titleColor>
+        <titleSize>18</titleSize>
+    </chart>
+    <columns>
+        <field>field_key</field>
+    </columns>
+    <columns>
+        <field>OLDVAL</field>
+    </columns>
+    <columns>
+        <field>NEWVAL</field>
+    </columns>
+    <columns>
+        <field>Contact.Classification__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Unique</aggregateTypes>
+        <field>CONTACT_ID</field>
+    </columns>
+    <columns>
+        <field>FIRST_NAME</field>
+    </columns>
+    <columns>
+        <field>LAST_NAME</field>
+    </columns>
+    <customDetailFormulas>
+        <calculatedFormula>IF(
+    (WEEKDAY(DATEVALUE(CREATED_DATE))) = 1, 
+    text(DATEVALUE(CREATED_DATE) - 6) &amp; &quot; - &quot; &amp; text(DATEVALUE(CREATED_DATE) + 0), 
+IF(
+    (WEEKDAY(DATEVALUE(CREATED_DATE))) = 2, 
+    text(DATEVALUE(CREATED_DATE) - 0) &amp; &quot; - &quot; &amp; text(DATEVALUE(CREATED_DATE) + 6),
+IF(
+    (WEEKDAY(DATEVALUE(CREATED_DATE))) = 3, 
+    text(DATEVALUE(CREATED_DATE) - 1) &amp; &quot; - &quot; &amp; text(DATEVALUE(CREATED_DATE) + 5),
+IF(
+    (WEEKDAY(DATEVALUE(CREATED_DATE))) = 4, 
+    text(DATEVALUE(CREATED_DATE) - 2) &amp; &quot; - &quot; &amp; text(DATEVALUE(CREATED_DATE) + 4),
+IF(
+    (WEEKDAY(DATEVALUE(CREATED_DATE))) = 5, 
+    text(DATEVALUE(CREATED_DATE) - 3) &amp; &quot; - &quot; &amp; text(DATEVALUE(CREATED_DATE) + 3),
+IF(
+    (WEEKDAY(DATEVALUE(CREATED_DATE))) = 6, 
+    text(DATEVALUE(CREATED_DATE) - 4) &amp; &quot; - &quot; &amp; text(DATEVALUE(CREATED_DATE) + 2),
+IF(
+    (WEEKDAY(DATEVALUE(CREATED_DATE))) = 7, 
+    text(DATEVALUE(CREATED_DATE) - 5) &amp; &quot; - &quot; &amp; text(DATEVALUE(CREATED_DATE) + 1),
+    &quot;NA&quot;)))))))</calculatedFormula>
+        <dataType>Text</dataType>
+        <description>Mon-Sun Week</description>
+        <developerName>CDF1</developerName>
+        <label>Mon-Sun Week</label>
+        <scale>2</scale>
+    </customDetailFormulas>
+    <filter>
+        <criteriaItems>
+            <column>field_key</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Candidate Status</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>OLDVAL</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value>Inactive</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>NEWVAL</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Active</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Contact.Branch_Name__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>contains</operator>
+            <value>brisbane,gold coast,sunshine coast</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Matrix</format>
+    <groupingsAcross>
+        <dateGranularity>Week</dateGranularity>
+        <field>CREATED_DATE</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Contact.Branch_Name__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>CREATED</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>0_Activations Summary v2</name>
+    <params>
+        <name>co</name>
+        <value>0</value>
+    </params>
+    <reportType>ContactAuditHistory@Contact.Branch__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_LAST120</interval>
+    </timeFrameFilter>
+</Report>

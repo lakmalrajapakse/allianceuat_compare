@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <letterhead>Alliance_group_email_header</letterhead>
+    <name>1218 Induction Confirmation - Consultant</name>
+    <style>freeForm</style>
+    <subject>Induction Confirmation - Alliance</subject>
+    <textOnly>Dear {!b3o__Session__c.b3o__Session_Leader__c},
+
+The applicant {!b3o__Session__c.b3o__Session_Leader__c} has booked their induction slot:
+
+Date: {!b3o__Session_Invitation__c.Booking_Start_Time_Session__c}
+Site: {!b3o__Session_Invitation__c.b3o__Site__c}
+
+
+{!b3o__Session_Invitation__c.b3o__Public_Message__c}
+
+Alliance Team</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

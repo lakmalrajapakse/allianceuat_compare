@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Check_for_allow_edit</fullName>
+    <columns>NAME</columns>
+    <columns>b3o__Allow_Editing_Submitted_Form__c</columns>
+    <columns>Certificate_Type__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>b3o__Document__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>b3o__Allow_Editing_Submitted_Form__c</field>
+        <operation>notEqual</operation>
+        <value>1</value>
+    </filters>
+    <label>Check for allow edit</label>
+</ListView>

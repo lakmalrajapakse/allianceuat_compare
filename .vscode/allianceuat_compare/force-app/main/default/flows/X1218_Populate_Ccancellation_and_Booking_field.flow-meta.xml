@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>65.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <name>Assign_Cancellation_Date_Time</name>
+        <label>Assign Cancellation Date Time</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Cancelled_Date_Time__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>cancellationDateTime</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <description>This flow is used to populate the Booking Date when a Shift Demand is created and to update the Cancellation Date/Time whenever the Schedule Status changes to Shift Cancelled.</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>bookingDate</name>
+        <dataType>Date</dataType>
+        <expression>NOW()</expression>
+    </formulas>
+    <formulas>
+        <name>cancellationDateTime</name>
+        <dataType>DateTime</dataType>
+        <expression>NOW()</expression>
+    </formulas>
+    <interviewLabel>1218 - Populate Ccancellation and Booking field {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>1218 - Populate Cancellation and Booking field</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Assign_Cancellation_Date_Time</targetReference>
+        </connector>
+        <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+        <filterLogic>or</filterLogic>
+        <filters>
+            <field>Schedule_Status__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Shift Cancelled Filled</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Schedule_Status__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Shift Cancelled</stringValue>
+            </value>
+        </filters>
+        <object>sirenum__Shift__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

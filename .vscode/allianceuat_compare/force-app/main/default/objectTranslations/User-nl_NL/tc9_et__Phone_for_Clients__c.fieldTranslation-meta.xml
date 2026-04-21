@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Defines the phone number that clients can contact the User on --></help>
+    <label><!-- Phone for Clients --></label>
+    <name>tc9_et__Phone_for_Clients__c</name>
+</CustomFieldTranslation>

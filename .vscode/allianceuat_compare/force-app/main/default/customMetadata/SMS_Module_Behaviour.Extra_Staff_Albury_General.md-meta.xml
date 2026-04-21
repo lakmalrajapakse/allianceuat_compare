@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Extra Staff Albury General</label>
+    <protected>false</protected>
+    <values>
+        <field>SMS_Disabled_Description__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>SMS_Disabled_Label__c</field>
+        <value xsi:type="xsd:string">SMS is not enabled for this User</value>
+    </values>
+    <values>
+        <field>X1218_Application_SMS_Configuration__c</field>
+        <value xsi:type="xsd:string">Alliance_Extra_Staff_Albury_General</value>
+    </values>
+</CustomMetadata>

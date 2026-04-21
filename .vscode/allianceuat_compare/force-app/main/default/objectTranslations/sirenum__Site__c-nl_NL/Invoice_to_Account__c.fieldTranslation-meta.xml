@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- If the &apos;Invoice Group By&apos; on the related Account is &apos;Site&apos;, Invoices will be addressed to this Account. --></help>
+    <label><!-- Invoice to Account --></label>
+    <name>Invoice_to_Account__c</name>
+    <relationshipLabel><!-- Sites (Invoice to Account) --></relationshipLabel>
+</CustomFieldTranslation>

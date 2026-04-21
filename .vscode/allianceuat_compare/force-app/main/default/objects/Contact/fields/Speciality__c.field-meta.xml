@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Speciality__c</fullName>
+    <label>Speciality</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <controllingField>Classification__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Aged Care</fullName>
+                <default>false</default>
+                <label>Aged Care</label>
+            </value>
+            <value>
+                <fullName>Hospital</fullName>
+                <default>false</default>
+                <label>Hospital</label>
+            </value>
+            <value>
+                <fullName>Paediatrics</fullName>
+                <default>false</default>
+                <label>Paediatrics</label>
+            </value>
+            <value>
+                <fullName>Childcare</fullName>
+                <default>false</default>
+                <label>Childcare</label>
+            </value>
+            <value>
+                <fullName>Corporate Health</fullName>
+                <default>false</default>
+                <label>Corporate Health</label>
+            </value>
+            <value>
+                <fullName>GP</fullName>
+                <default>false</default>
+                <label>GP</label>
+            </value>
+            <value>
+                <fullName>School</fullName>
+                <default>false</default>
+                <label>School</label>
+            </value>
+            <value>
+                <fullName>Disability</fullName>
+                <default>false</default>
+                <label>Disability</label>
+            </value>
+            <value>
+                <fullName>Facility Manager</fullName>
+                <default>false</default>
+                <label>Facility Manager</label>
+            </value>
+            <value>
+                <fullName>Regional, Rural and Remote</fullName>
+                <default>false</default>
+                <label>Regional, Rural and Remote</label>
+            </value>
+            <value>
+                <fullName>Midwifery Unit Manager</fullName>
+                <default>false</default>
+                <label>Midwifery Unit Manager</label>
+            </value>
+            <value>
+                <fullName>Nurse Unit Manager</fullName>
+                <default>false</default>
+                <label>Nurse Unit Manager</label>
+            </value>
+            <value>
+                <fullName>Clinical Midwife</fullName>
+                <default>false</default>
+                <label>Clinical Midwife</label>
+            </value>
+            <value>
+                <fullName>Clinical Midwife Consultant</fullName>
+                <default>false</default>
+                <label>Clinical Midwife Consultant</label>
+            </value>
+            <value>
+                <fullName>Clinical Nurse</fullName>
+                <default>false</default>
+                <label>Clinical Nurse</label>
+            </value>
+            <value>
+                <fullName>Clinical Nurse Consultant</fullName>
+                <default>false</default>
+                <label>Clinical Nurse Consultant</label>
+            </value>
+            <value>
+                <fullName>Director of Nursing</fullName>
+                <default>false</default>
+                <label>Director of Nursing</label>
+            </value>
+            <value>
+                <fullName>Director of Nursing - Midwifery</fullName>
+                <default>false</default>
+                <label>Director of Nursing - Midwifery</label>
+            </value>
+            <value>
+                <fullName>Executive Director of Nursing</fullName>
+                <default>false</default>
+                <label>Executive Director of Nursing</label>
+            </value>
+            <value>
+                <fullName>Executive Director of Nursing / Midwifery</fullName>
+                <default>false</default>
+                <label>Executive Director of Nursing / Midwifery</label>
+            </value>
+            <value>
+                <fullName>Flight Nurse</fullName>
+                <default>false</default>
+                <label>Flight Nurse</label>
+            </value>
+            <value>
+                <fullName>Remote Area Midwife (RAM)</fullName>
+                <default>false</default>
+                <label>Remote Area Midwife (RAM)</label>
+            </value>
+            <value>
+                <fullName>Remote Area Nurse (RAN)</fullName>
+                <default>false</default>
+                <label>Remote Area Nurse (RAN)</label>
+            </value>
+            <value>
+                <fullName>Mental Health</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Mental Health</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Chef</controllingFieldValue>
+            <controllingFieldValue>Nursing Assistant</controllingFieldValue>
+            <controllingFieldValue>Registered Nurse</controllingFieldValue>
+            <controllingFieldValue>Enrolled Nurse</controllingFieldValue>
+            <controllingFieldValue>Personal Care Worker</controllingFieldValue>
+            <controllingFieldValue>Food Services Assistant</controllingFieldValue>
+            <controllingFieldValue>Cleaner</controllingFieldValue>
+            <controllingFieldValue>Medical and Healthcare Assistant</controllingFieldValue>
+            <valueName>Aged Care</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Chef</controllingFieldValue>
+            <controllingFieldValue>Nursing Assistant</controllingFieldValue>
+            <controllingFieldValue>Registered Nurse</controllingFieldValue>
+            <controllingFieldValue>Registered Midwife</controllingFieldValue>
+            <controllingFieldValue>Enrolled Nurse</controllingFieldValue>
+            <controllingFieldValue>Food Services Assistant</controllingFieldValue>
+            <controllingFieldValue>Cleaner</controllingFieldValue>
+            <controllingFieldValue>Patient Services Assistant (PSA)</controllingFieldValue>
+            <controllingFieldValue>CSSD Attendant</controllingFieldValue>
+            <controllingFieldValue>Theatre Technician</controllingFieldValue>
+            <controllingFieldValue>Medical and Healthcare Assistant</controllingFieldValue>
+            <valueName>Hospital</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Chef</controllingFieldValue>
+            <valueName>Childcare</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Chef</controllingFieldValue>
+            <controllingFieldValue>Food Services Assistant</controllingFieldValue>
+            <controllingFieldValue>Cleaner</controllingFieldValue>
+            <valueName>Disability</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Management</controllingFieldValue>
+            <valueName>Midwifery Unit Manager</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Management</controllingFieldValue>
+            <valueName>Nurse Unit Manager</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Regional, Rural and Remote</controllingFieldValue>
+            <controllingFieldValue>Registered Midwife</controllingFieldValue>
+            <valueName>Regional, Rural and Remote</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Registered Nurse</controllingFieldValue>
+            <valueName>Paediatrics</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Registered Nurse</controllingFieldValue>
+            <valueName>Corporate Health</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Registered Nurse</controllingFieldValue>
+            <controllingFieldValue>Enrolled Nurse</controllingFieldValue>
+            <valueName>GP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Registered Nurse</controllingFieldValue>
+            <valueName>School</valueName>
+        </valueSettings>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

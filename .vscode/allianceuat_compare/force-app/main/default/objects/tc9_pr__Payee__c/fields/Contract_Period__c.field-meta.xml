@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contract_Period__c</fullName>
+    <description>This field indicates the period (1 week, 2 weeks, or 4 weeks) that the contracted hours are calculated over, assisting in accurate TOIL and payroll calculations.</description>
+    <inlineHelpText>Select the duration over which the contracted hours apply</inlineHelpText>
+    <label>Contract Period</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>1 week</fullName>
+                <default>false</default>
+                <label>1 week</label>
+            </value>
+            <value>
+                <fullName>2 weeks</fullName>
+                <default>false</default>
+                <label>2 weeks</label>
+            </value>
+            <value>
+                <fullName>4 weeks</fullName>
+                <default>false</default>
+                <label>4 weeks</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

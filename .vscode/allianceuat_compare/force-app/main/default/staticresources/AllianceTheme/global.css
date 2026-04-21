@@ -1,0 +1,139 @@
+:root {
+	--sirenum-brandPrimaryColor: #0078c3;
+	--sirenum-brandSecondaryColor: #00bfef;
+}
+
+.pbSubheader{
+	background-color: #0078c3 !important;
+}
+
+.sirenumPageParent[menuTop="true"] #sirenumNavigation {
+    border-bottom: 3px solid #0078c3 !important;
+}
+
+.sirenumPageParent[menuTop="true"] #sirenumNavigation .iconDiv[current=true] {
+    border-top: 3px solid #0078c3 !important;
+}
+/* .staffShift:has(.scheduleStatus[data-schedule-status="Allocated"]) { */
+.staffShift:has(.scheduleDispStatus[data-schedule-disp-status="Allocated"]) {
+	background-color: lightblue  !important;
+}
+/* Shift created more than 60 minutes ago */
+/* .staffShift:has(.scheduleStatus[data-schedule-status="Waiting"]):has(.createdDate[data-last-hour="false"]):has(.scheduledDate[data-old-shift-demand="false"], .scheduledDate[data-old-shift="false"], .scheduledDate[data-old-shift="true"]) { */
+.staffShift:has(.scheduleDispStatus[data-schedule-disp-status="Waiting"]):has(.createdDate[data-last-hour="false"]):has(.scheduledDate[data-old-shift-demand="false"], .scheduledDate[data-old-shift="false"], .scheduledDate[data-old-shift="true"]) {
+	background-color: lightgreen  !important;
+}
+/* Shift created less than 60 minutes ago */
+/* .staffShift:has(.scheduleStatus[data-schedule-status="Waiting"]):has(.createdDate[data-last-hour="true"]) { */
+.staffShift:has(.scheduleDispStatus[data-schedule-disp-status="Waiting"]):has(.createdDate[data-last-hour="true"]) {
+	background-color: yellow  !important;
+}
+/* PE-498 - Shift Demand Date Check */
+/* .staffShift:has(.scheduleStatus[data-schedule-status="Waiting"], .scheduleStatus[data-schedule-status="Unable to Fill"]):has(.scheduledDate[data-old-shift-demand="true"]) {
+	border-color: black !important;
+	border-style: solid !important;
+	border-width: thick !important;
+} */
+/* .staffShift:has(.scheduleStatus[data-schedule-status="Unable to Fill"], .scheduleDispStatus[data-schedule-disp-status="Unable to Fill"]) { */
+.staffShift:has(.scheduleDispStatus[data-schedule-disp-status="Unable to Fill"]) {
+	/* lightred example colour */
+	background-color: rgb(228, 85, 85)  !important;
+	/* display: none; */
+}
+/* Employee Changed = NO */
+/* .staffShift:has(.scheduleStatus[data-schedule-status="Name Given"]):has(.employeeChanged[data-emp-changed="false"]) { */
+.staffShift:has(.scheduleDispStatus[data-schedule-disp-status="Name Given"]):has(.employeeChanged[data-emp-changed="false"]) {
+	/* background-color: green  !important; */
+	background-color: #00CF00  !important;
+}
+/* Employee Changed = YES */
+/* .staffShift:has(.scheduleStatus[data-schedule-status="Name Given"]):has(.employeeChanged[data-emp-changed="true"]) { */
+.staffShift:has(.scheduleDispStatus[data-schedule-disp-status="Name Given"]):has(.employeeChanged[data-emp-changed="true"]) {
+	background-color: pink  !important;
+}
+/* .staffShift:has(.scheduleStatus[data-schedule-status="Confirmed"]) { */
+.staffShift:has(.scheduleDispStatus[data-schedule-disp-status="Confirmed"]) {
+	background-color: rgb(53, 146, 233)  !important;
+}
+/* .staffShift:has(.scheduleStatus[data-schedule-status="Reconfirm with Employee"]) { 
+.staffShift:has(.scheduleDispStatus[data-schedule-disp-status="Reconfirm with Employee"]) {
+	background-color: lightblue  !important;
+}*/
+.staffShift:has(.scheduleStatus[data-schedule-status="Reconfirm with Employee"]),
+.staffShift:has(.scheduleDispStatus[data-schedule-disp-status="Reconfirm with Employee"]) {
+    background-color: lightblue !important;
+}
+/* .staffShift:has(.scheduleStatus[data-schedule-status="Reconfirm with Facility"]) { */
+.staffShift:has(.scheduleDispStatus[data-schedule-disp-status="Reconfirm with Facility"]) {
+	background-color: lightblue  !important;
+}
+/* .staffShift:has(.scheduleStatus[data-schedule-status="Reconfirm"]) { */
+.staffShift:has(.scheduleDispStatus[data-schedule-disp-status="Reconfirm"]) {
+	background-color: lightblue  !important;
+}
+/* .staffShift:has(.scheduleStatus[data-schedule-status="In a Cancelled Shift"]) { */
+.staffShift:has(.scheduleDispStatus[data-schedule-disp-status="In a Cancelled Shift"]) {
+	background-color: orange  !important;
+}
+/* .staffShift:has(.scheduleStatus[data-schedule-status="Shift Cancelled Filled"]) { */
+.staffShift:has(.scheduleDispStatus[data-schedule-disp-status="Shift Cancelled Filled"]) {
+	background-color: rgb(236, 55, 55)  !important;
+}
+.staffShift:has(.scheduleDispStatus[data-schedule-disp-status="Shift Cancelled"]) {
+/* .staffShift:has(.scheduleStatus[data-schedule-status="Shift Cancelled"]) { */
+	background-color: rgb(236, 55, 55)   !important;
+}
+/* no back-ground colour */
+/* .staffShift:has(.scheduleStatus[data-schedule-status="Completed"], .scheduleDispStatus[data-schedule-disp-status="Completed"]) { */
+.staffShift:has(.scheduleDispStatus[data-schedule-disp-status="Completed"]) {
+	background-color: white  !important;
+	border-color: black !important;
+	border-style: solid !important;
+	border-width: thin !important;
+}
+/* .shiftRecFac.fas.fa-warehouse .staffShift:has(.scheduleStatus[data-schedule-status="Reconfirm"]){ */
+.shiftRecFac.fas.fa-warehouse .staffShift:has(.scheduleDispStatus[data-schedule-disp-status="Reconfirm"]){
+	display: none;
+}
+/* .shiftRecEmp.fas.fa-user .staffShift:has(.scheduleStatus[data-schedule-status="Reconfirm"]){ */
+.shiftRecEmp.fas.fa-user .staffShift:has(.scheduleDispStatus[data-schedule-disp-status="Reconfirm"]){
+	display: none;
+}
+
+span.shiftTimeDetail{
+	font-weight: bold;
+}
+
+span.c-status-icon{
+	width: 20px;
+	height: 20px;
+    border-radius:50%;
+	border-style: solid;
+	border-width: 1px;
+	border-color: black;
+	align-items: center;
+	text-align: center;	
+	padding-left:3px;
+    padding-right:3px;
+	margin-left: 3px;
+}
+span.c-info{
+    background-color:rgb(227, 227, 227);
+}
+span.c-success{
+    background-color:#65FF30;
+}
+span.c-warning{
+    background-color:#FFFF00;
+}
+
+/* PE-1403 */
+.shiftDetailContact {
+	font-weight: bold;
+}
+.shiftDetailTeam {
+	font-weight: bold;
+}
+.internalNotes {
+	font-weight: bold;
+}

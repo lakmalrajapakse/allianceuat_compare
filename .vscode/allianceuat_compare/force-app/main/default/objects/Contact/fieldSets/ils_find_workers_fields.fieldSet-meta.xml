@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FieldSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ils_find_workers_fields</fullName>
+    <description>Used by Invite Workers</description>
+    <displayedFields>
+        <field>Flag_Text__c</field>
+        <isFieldManaged>false</isFieldManaged>
+        <isRequired>false</isRequired>
+    </displayedFields>
+    <label>ils_find_workers_fields</label>
+</FieldSet>

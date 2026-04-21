@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>tc9_pr__External_ID__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Defines the ID of the corresponding record in an external system that has been used to create/update the record. Using in integrations.</description>
+    <externalId>true</externalId>
+    <inlineHelpText>Defines the ID of the corresponding record in an external system that has been used to create/update the record. Using in integrations.</inlineHelpText>
+    <label>External ID</label>
+    <length>50</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

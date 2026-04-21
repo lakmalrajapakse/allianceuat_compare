@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>AN [Perm] - Interview invite client</name>
+    <style>none</style>
+    <subject>Your interview with Alliance Nursing</subject>
+    <textOnly>WELCOME TO ALLIANCE NURSING.
+
+{!Candidate.FirstName}, welcome to Alliance Nursing. You are now ready to get go!
+
+Your day-to-day with us is managed through the Alliance Connect app.
+
+And as always, if you have any questions or concerns you can always call our friendly staff on 1300 034 494.
+
+We are so thrilled to have you onboard!
+
+Kind regards,
+Your team at Alliance Nursing</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

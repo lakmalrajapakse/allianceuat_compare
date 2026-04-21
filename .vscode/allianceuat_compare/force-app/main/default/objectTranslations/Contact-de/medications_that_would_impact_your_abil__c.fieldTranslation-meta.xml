@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Any prescribed medications that would impact your ability to do your job effectively? --></help>
+    <label><!-- medications that would impact your abil --></label>
+    <name>medications_that_would_impact_your_abil__c</name>
+</CustomFieldTranslation>

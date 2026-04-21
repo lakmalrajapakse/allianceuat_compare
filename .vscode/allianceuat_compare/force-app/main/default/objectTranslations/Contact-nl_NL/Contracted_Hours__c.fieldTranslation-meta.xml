@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- The total contracted hours for this employee --></help>
+    <label><!-- Contracted Hours --></label>
+    <name>Contracted_Hours__c</name>
+</CustomFieldTranslation>

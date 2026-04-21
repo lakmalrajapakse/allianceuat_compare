@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Uniform --></label>
+    <name>Uniform__c</name>
+    <picklistValues>
+        <masterLabel>Polo Shirt</masterLabel>
+        <translation><!-- Polo Shirt --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Scrub Pants</masterLabel>
+        <translation><!-- Scrub Pants --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Scrub Shirt</masterLabel>
+        <translation><!-- Scrub Shirt --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

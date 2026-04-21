@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Inactive_Reason__c</fullName>
+    <label>Inactive Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Do not Service</fullName>
+                <default>false</default>
+                <label>Do not Service</label>
+            </value>
+            <value>
+                <fullName>Credit check fail</fullName>
+                <default>false</default>
+                <label>Credit check fail</label>
+            </value>
+            <value>
+                <fullName>Terms Expired</fullName>
+                <default>false</default>
+                <label>Terms Expired</label>
+            </value>
+            <value>
+                <fullName>Service no longer Required</fullName>
+                <default>false</default>
+                <label>Service no longer Required</label>
+            </value>
+            <value>
+                <fullName>Pending review</fullName>
+                <default>false</default>
+                <label>Pending review</label>
+            </value>
+            <value>
+                <fullName>Post review - Do not place / re-hire</fullName>
+                <default>false</default>
+                <label>Post review - Do not place / re-hire</label>
+            </value>
+            <value>
+                <fullName>Terminated</fullName>
+                <default>false</default>
+                <label>Terminated</label>
+            </value>
+            <value>
+                <fullName>Dormant</fullName>
+                <default>false</default>
+                <label>Dormant</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>1218 BH Front Office Permission Set Group for Consultants</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>BH Front Office</label>
+    <permissionSets>BH4SF_User</permissionSets>
+    <permissionSets>Power_Notes_User_alliance</permissionSets>
+    <permissionSets>TR1__ATSv2</permissionSets>
+    <permissionSets>TR1__Candidate_Statistics</permissionSets>
+    <permissionSets>TR1__Email_Activity_Configuration</permissionSets>
+    <permissionSets>TR1__Email_Editor_2020_User</permissionSets>
+    <permissionSets>TR1__Email_Editor_Signature_User</permissionSets>
+    <permissionSets>TR1__Email_OptOut</permissionSets>
+    <permissionSets>TR1__Email_Resume_Application_Handler</permissionSets>
+    <permissionSets>TR1__GenericLookup_User</permissionSets>
+    <permissionSets>TR1__Job_Leads_User</permissionSets>
+    <permissionSets>TR1__Resume_Manager</permissionSets>
+    <permissionSets>USAM_Access</permissionSets>
+    <permissionSets>X1218_Ahpra_Check_V2</permissionSets>
+    <permissionSets>X1218_Bulk_Shift_Upload_v2</permissionSets>
+    <permissionSets>X1218_Notifications</permissionSets>
+    <permissionSets>X1218_Reset_Password_for_Alliance_Connect</permissionSets>
+    <permissionSets>X1218_SMS_Application</permissionSets>
+    <permissionSets>X1218_Shift_Approval_Manager</permissionSets>
+    <permissionSets>X1218_VEVO_Check_V2</permissionSets>
+    <permissionSets>csfiles__User</permissionSets>
+    <permissionSets>sirenum__Run_Logic_Services</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

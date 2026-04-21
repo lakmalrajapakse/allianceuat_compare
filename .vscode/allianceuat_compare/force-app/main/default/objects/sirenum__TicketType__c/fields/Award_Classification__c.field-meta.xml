@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Award_Classification__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <inlineHelpText>The Award Classification related to this competency. This will be used by the system when assigning rates to Shifts.</inlineHelpText>
+    <label>Award Classification</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>tc9_et__Award_Classifications_and_Levels__c.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Award Classification</value>
+        </filterItems>
+        <isOptional>true</isOptional>
+    </lookupFilter>
+    <referenceTo>tc9_et__Award_Classifications_and_Levels__c</referenceTo>
+    <relationshipLabel>Competencies</relationshipLabel>
+    <relationshipName>Competencies</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

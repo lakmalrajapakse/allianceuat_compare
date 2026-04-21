@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "6c944378-54cc-48f4-a693-d453843c592e",
+  "appPageId" : "d9ce9f69-0e14-4b11-9233-6c5ce091d546",
+  "configurationTags" : [ ],
+  "devName" : "Pay_Advice__c",
+  "id" : "f15c752a-32d8-4ec3-adf1-9d432e5763d6",
+  "label" : "Pay Advice",
+  "pageAccess" : "UseParent",
+  "routeType" : "custom-pay-advice",
+  "type" : "route",
+  "urlPrefix" : "pay-advice"
+}

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>TR1__Master_Skill__c$Name</field>
+    </columns>
+    <columns>
+        <field>TR1__Master_Skill__c$TR1__Master_Skill_Name__c</field>
+    </columns>
+    <columns>
+        <field>TR1__Master_Skill__c$TR1__Skill_Code__c</field>
+    </columns>
+    <columns>
+        <field>TR1__Master_Skill__c$TR1__Type__c</field>
+    </columns>
+    <description>complete list of BH Skills</description>
+    <format>Tabular</format>
+    <name>New BH Skills Report</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>BH_Skills__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>TR1__Master_Skill__c$TR1__Master_Skill_Name__c</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>TR1__Master_Skill__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- I&apos;d like to register for --></label>
+    <name>I_d_like_to_register_for__c</name>
+    <picklistValues>
+        <masterLabel>Alliance Extra Staff - Adelaide</masterLabel>
+        <translation><!-- Alliance Extra Staff - Adelaide --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Alliance Extra Staff - Albury</masterLabel>
+        <translation><!-- Alliance Extra Staff - Albury --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Alliance Extra Staff - Marion</masterLabel>
+        <translation><!-- Alliance Extra Staff - Marion --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Alliance Nursing - Adelaide</masterLabel>
+        <translation><!-- Alliance Nursing - Adelaide --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Alliance Nursing - Albury</masterLabel>
+        <translation><!-- Alliance Nursing - Albury --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Alliance Nursing - Brisbane</masterLabel>
+        <translation><!-- Alliance Nursing - Brisbane --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Alliance Nursing - Canberra</masterLabel>
+        <translation><!-- Alliance Nursing - Canberra --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Alliance Nursing - Geelong</masterLabel>
+        <translation><!-- Alliance Nursing - Geelong --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Alliance Nursing - Gold Coast</masterLabel>
+        <translation><!-- Alliance Nursing - Gold Coast --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Alliance Nursing - Melbourne</masterLabel>
+        <translation><!-- Alliance Nursing - Melbourne --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Alliance Nursing - Perth</masterLabel>
+        <translation><!-- Alliance Nursing - Perth --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Alliance Nursing - Sunshine Coast</masterLabel>
+        <translation><!-- Alliance Nursing - Sunshine Coast --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Alliance Nursing - Sydney</masterLabel>
+        <translation><!-- Alliance Nursing - Sydney --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Alliance Nursing - Townsville</masterLabel>
+        <translation><!-- Alliance Nursing - Townsville --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Alliance Nursing - Western Sydney</masterLabel>
+        <translation><!-- Alliance Nursing - Western Sydney --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

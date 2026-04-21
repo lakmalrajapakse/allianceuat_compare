@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Visa_Type__c</fullName>
+    <label>Visa Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Adoption visa (subclass 102)</fullName>
+                <default>false</default>
+                <label>Adoption visa (subclass 102)</label>
+            </value>
+            <value>
+                <fullName>Aged Dependent Relative visa (subclass 114)</fullName>
+                <default>false</default>
+                <label>Aged Dependent Relative visa (subclass 114)</label>
+            </value>
+            <value>
+                <fullName>Aged Dependent Relative visa (subclass 838)</fullName>
+                <default>false</default>
+                <label>Aged Dependent Relative visa (subclass 838)</label>
+            </value>
+            <value>
+                <fullName>Aged Parent visa (subclass 804)</fullName>
+                <default>false</default>
+                <label>Aged Parent visa (subclass 804)</label>
+            </value>
+            <value>
+                <fullName>Bridging visa A – BVA - (subclass 010)</fullName>
+                <default>false</default>
+                <label>Bridging visa A – BVA - (subclass 010)</label>
+            </value>
+            <value>
+                <fullName>Bridging visa B – BVB – (subclass 020)</fullName>
+                <default>false</default>
+                <label>Bridging visa B – BVB – (subclass 020)</label>
+            </value>
+            <value>
+                <fullName>Bridging visa C – BVC – (subclass 030)</fullName>
+                <default>false</default>
+                <label>Bridging visa C – BVC – (subclass 030)</label>
+            </value>
+            <value>
+                <fullName>Bridging visa E – BVE – (subclass 050 and 051)</fullName>
+                <default>false</default>
+                <label>Bridging visa E – BVE – (subclass 050 and 051)</label>
+            </value>
+            <value>
+                <fullName>Business (Short Stay) visa (subclass 456)</fullName>
+                <default>false</default>
+                <label>Business (Short Stay) visa (subclass 456)</label>
+            </value>
+            <value>
+                <fullName>Business Innovation and Investment (permanent) visa (subclass 888)</fullName>
+                <default>false</default>
+                <label>Business Innovation and Investment (permanent) visa (subclass 888)</label>
+            </value>
+            <value>
+                <fullName>Business Innovation and Investment (provisional) visa (subclass 188)</fullName>
+                <default>false</default>
+                <label>Business Innovation and Investment (provisional) visa (subclass 188)</label>
+            </value>
+            <value>
+                <fullName>Business Owner (subclass 890)</fullName>
+                <default>false</default>
+                <label>Business Owner (subclass 890)</label>
+            </value>
+            <value>
+                <fullName>Business Skills (Provisional) visa (subclass 160 and 165)</fullName>
+                <default>false</default>
+                <label>Business Skills (Provisional) visa (subclass 160 and 165)</label>
+            </value>
+            <value>
+                <fullName>Business Talent (Permanent) visa (subclass 132)</fullName>
+                <default>false</default>
+                <label>Business Talent (Permanent) visa (subclass 132)</label>
+            </value>
+            <value>
+                <fullName>Carer visa (subclass 116)</fullName>
+                <default>false</default>
+                <label>Carer visa (subclass 116)</label>
+            </value>
+            <value>
+                <fullName>Carer visa (subclass 836)</fullName>
+                <default>false</default>
+                <label>Carer visa (subclass 836)</label>
+            </value>
+            <value>
+                <fullName>Child visa (subclass 101)</fullName>
+                <default>false</default>
+                <label>Child visa (subclass 101)</label>
+            </value>
+            <value>
+                <fullName>Child visa (subclass 802)</fullName>
+                <default>false</default>
+                <label>Child visa (subclass 802)</label>
+            </value>
+            <value>
+                <fullName>Confirmatory (Residence) visa (subclass 808)</fullName>
+                <default>false</default>
+                <label>Confirmatory (Residence) visa (subclass 808)</label>
+            </value>
+            <value>
+                <fullName>Contributory Aged Parent (Temporary) visa (subclass 884)</fullName>
+                <default>false</default>
+                <label>Contributory Aged Parent (Temporary) visa (subclass 884)</label>
+            </value>
+            <value>
+                <fullName>Contributory Aged Parent visa (subclass 864)</fullName>
+                <default>false</default>
+                <label>Contributory Aged Parent visa (subclass 864)</label>
+            </value>
+            <value>
+                <fullName>Contributory Parent (Temporary) visa (subclass 173)</fullName>
+                <default>false</default>
+                <label>Contributory Parent (Temporary) visa (subclass 173)</label>
+            </value>
+            <value>
+                <fullName>Contributory Parent visa (subclass 143)</fullName>
+                <default>false</default>
+                <label>Contributory Parent visa (subclass 143)</label>
+            </value>
+            <value>
+                <fullName>Crew Travel Authority visa (subclass 942)</fullName>
+                <default>false</default>
+                <label>Crew Travel Authority visa (subclass 942)</label>
+            </value>
+            <value>
+                <fullName>Dependent Child visa (subclass 445)</fullName>
+                <default>false</default>
+                <label>Dependent Child visa (subclass 445)</label>
+            </value>
+            <value>
+                <fullName>Distinguished Talent visa (subclass 124)</fullName>
+                <default>false</default>
+                <label>Distinguished Talent visa (subclass 124)</label>
+            </value>
+            <value>
+                <fullName>Domestic Worker (Temporary) Diplomatic and Consular visa (subclass 426)</fullName>
+                <default>false</default>
+                <label>Domestic Worker (Temporary) Diplomatic and Consular visa (subclass 426)</label>
+            </value>
+            <value>
+                <fullName>Domestic Worker (Temporary) Executive visa (subclass 427)</fullName>
+                <default>false</default>
+                <label>Domestic Worker (Temporary) Executive visa (subclass 427)</label>
+            </value>
+            <value>
+                <fullName>Electronic Travel Authority (Business Entrant) visa (subclass 956 and 977)</fullName>
+                <default>false</default>
+                <label>Electronic Travel Authority (Business Entrant) visa (subclass 956 and 977)</label>
+            </value>
+            <value>
+                <fullName>Electronic Travel Authority (subclass 601)</fullName>
+                <default>false</default>
+                <label>Electronic Travel Authority (subclass 601)</label>
+            </value>
+            <value>
+                <fullName>Electronic Travel Authority (Visitor) visa (subclass 976)</fullName>
+                <default>false</default>
+                <label>Electronic Travel Authority (Visitor) visa (subclass 976)</label>
+            </value>
+            <value>
+                <fullName>Employer Nomination Scheme (subclass 121 and 856)</fullName>
+                <default>false</default>
+                <label>Employer Nomination Scheme (subclass 121 and 856)</label>
+            </value>
+            <value>
+                <fullName>Employer Nomination Scheme (subclass 186)</fullName>
+                <default>false</default>
+                <label>Employer Nomination Scheme (subclass 186)</label>
+            </value>
+            <value>
+                <fullName>Established Business in Australia visa (subclass 845)</fullName>
+                <default>false</default>
+                <label>Established Business in Australia visa (subclass 845)</label>
+            </value>
+            <value>
+                <fullName>eVisitor (subclass 651)</fullName>
+                <default>false</default>
+                <label>eVisitor (subclass 651)</label>
+            </value>
+            <value>
+                <fullName>Exchange visa (subclass 411)</fullName>
+                <default>false</default>
+                <label>Exchange visa (subclass 411)</label>
+            </value>
+            <value>
+                <fullName>Foreign Affairs or Defence sector visa (subclass 576)</fullName>
+                <default>false</default>
+                <label>Foreign Affairs or Defence sector visa (subclass 576)</label>
+            </value>
+            <value>
+                <fullName>Foreign Government Agency (subclass 415)</fullName>
+                <default>false</default>
+                <label>Foreign Government Agency (subclass 415)</label>
+            </value>
+            <value>
+                <fullName>Former Resident visa (subclass 151)</fullName>
+                <default>false</default>
+                <label>Former Resident visa (subclass 151)</label>
+            </value>
+            <value>
+                <fullName>Global Special Humanitarian (subclass 202)</fullName>
+                <default>false</default>
+                <label>Global Special Humanitarian (subclass 202)</label>
+            </value>
+            <value>
+                <fullName>Global Talent visa (subclass 858)</fullName>
+                <default>false</default>
+                <label>Global Talent visa (subclass 858)</label>
+            </value>
+            <value>
+                <fullName>Sponsored visa (subclass 886)</fullName>
+                <default>false</default>
+                <label>Sponsored visa (subclass 886)</label>
+            </value>
+            <value>
+                <fullName>Sport visa (subclass 421)</fullName>
+                <default>false</default>
+                <label>Sport visa (subclass 421)</label>
+            </value>
+            <value>
+                <fullName>State or Territory Sponsored Business Owner visa (subclass 892)</fullName>
+                <default>false</default>
+                <label>State or Territory Sponsored Business Owner visa (subclass 892)</label>
+            </value>
+            <value>
+                <fullName>State or Territory Sponsored Investor visa (subclass 893)</fullName>
+                <default>false</default>
+                <label>State or Territory Sponsored Investor visa (subclass 893)</label>
+            </value>
+            <value>
+                <fullName>State or Territory Sponsored Regional Established Business in Australia visa (subclass 846)</fullName>
+                <default>false</default>
+                <label>State or Territory Sponsored Regional Established Business in Australia visa (subclass 846)</label>
+            </value>
+            <value>
+                <fullName>Student Guardian visa (subclass 580)</fullName>
+                <default>false</default>
+                <label>Student Guardian visa (subclass 580)</label>
+            </value>
+            <value>
+                <fullName>Student Guardian visa (subclass 590)</fullName>
+                <default>false</default>
+                <label>Student Guardian visa (subclass 590)</label>
+            </value>
+            <value>
+                <fullName>Student visa (subclass 500)</fullName>
+                <default>false</default>
+                <label>Student visa (subclass 500)</label>
+            </value>
+            <value>
+                <fullName>Superyacht Crew visa (subclass 488)</fullName>
+                <default>false</default>
+                <label>Superyacht Crew visa (subclass 488)</label>
+            </value>
+            <value>
+                <fullName>Temporary Activity visa (subclass 408)</fullName>
+                <default>false</default>
+                <label>Temporary Activity visa (subclass 408)</label>
+            </value>
+            <value>
+                <fullName>Temporary Graduate visa (subclass 485)</fullName>
+                <default>false</default>
+                <label>Temporary Graduate visa (subclass 485)</label>
+            </value>
+            <value>
+                <fullName>Temporary Protection visa (subclass 785)</fullName>
+                <default>false</default>
+                <label>Temporary Protection visa (subclass 785)</label>
+            </value>
+            <value>
+                <fullName>Temporary Skill Shortage visa (subclass 482)</fullName>
+                <default>false</default>
+                <label>Temporary Skill Shortage visa (subclass 482)</label>
+            </value>
+            <value>
+                <fullName>Temporary Work (Entertainment) visa (subclass 420)</fullName>
+                <default>false</default>
+                <label>Temporary Work (Entertainment) visa (subclass 420)</label>
+            </value>
+            <value>
+                <fullName>Temporary Work (International Relations) visa (subclass 403)</fullName>
+                <default>false</default>
+                <label>Temporary Work (International Relations) visa (subclass 403)</label>
+            </value>
+            <value>
+                <fullName>Temporary Work (long Stay Activity) visa (subclass 401)</fullName>
+                <default>false</default>
+                <label>Temporary Work (long Stay Activity) visa (subclass 401)</label>
+            </value>
+            <value>
+                <fullName>Temporary Work (Short Stay Specialist) visa (subclass 400)</fullName>
+                <default>false</default>
+                <label>Temporary Work (Short Stay Specialist) visa (subclass 400)</label>
+            </value>
+            <value>
+                <fullName>Temporary Work (Skilled) visa (subclass 457)</fullName>
+                <default>false</default>
+                <label>Temporary Work (Skilled) visa (subclass 457)</label>
+            </value>
+            <value>
+                <fullName>Tourist visa (subclass 676)</fullName>
+                <default>false</default>
+                <label>Tourist visa (subclass 676)</label>
+            </value>
+            <value>
+                <fullName>Training and Research visa (subclass 402)</fullName>
+                <default>false</default>
+                <label>Training and Research visa (subclass 402)</label>
+            </value>
+            <value>
+                <fullName>Training visa (subclass 407)</fullName>
+                <default>false</default>
+                <label>Training visa (subclass 407)</label>
+            </value>
+            <value>
+                <fullName>Transit visa (subclass 771)</fullName>
+                <default>false</default>
+                <label>Transit visa (subclass 771)</label>
+            </value>
+            <value>
+                <fullName>Visiting Academic visa (subclass 419)</fullName>
+                <default>false</default>
+                <label>Visiting Academic visa (subclass 419)</label>
+            </value>
+            <value>
+                <fullName>Visitor (subclass 600)</fullName>
+                <default>false</default>
+                <label>Visitor (subclass 600)</label>
+            </value>
+            <value>
+                <fullName>Vocational Education and Training Sector visa (Subclass 572)</fullName>
+                <default>false</default>
+                <label>Vocational Education and Training Sector visa (Subclass 572)</label>
+            </value>
+            <value>
+                <fullName>Work and Holiday visa (subclass 462)</fullName>
+                <default>false</default>
+                <label>Work and Holiday visa (subclass 462)</label>
+            </value>
+            <value>
+                <fullName>Working Holiday visa (subclass 417)</fullName>
+                <default>false</default>
+                <label>Working Holiday visa (subclass 417)</label>
+            </value>
+            <value>
+                <fullName>Bridging visa A – BVA - (sub 010) + 8105 (sub 500)</fullName>
+                <default>false</default>
+                <label>Bridging visa A – BVA - (sub 010) + 8105 (sub 500)</label>
+            </value>
+            <value>
+                <fullName>Bridging visa B – BVB - (sub 020) + 8105 (sub 500)</fullName>
+                <default>false</default>
+                <label>Bridging visa B – BVB - (sub 020) + 8105 (sub 500)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

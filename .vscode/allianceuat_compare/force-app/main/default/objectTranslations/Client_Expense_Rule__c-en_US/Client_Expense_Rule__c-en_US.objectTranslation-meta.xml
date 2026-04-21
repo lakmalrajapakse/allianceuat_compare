@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Client Expense Rule</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Client Expense Rules</value>
+    </caseValues>
+    <layouts>
+        <layout>Child Client Expense Rule Layout</layout>
+        <sections>
+            <label><!-- Automation Control --></label>
+            <section>Automation Control</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Client Expense Rule Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Master Client Expense Rule Layout</layout>
+        <sections>
+            <label><!-- Automation Control --></label>
+            <section>Automation Control</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <description><!-- Expense from Child Client --></description>
+        <label><!-- Child Expense --></label>
+        <name>Child_Expense</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Expense from Parent Client --></description>
+        <label><!-- Parent Expense --></label>
+        <name>Parent_Expense</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

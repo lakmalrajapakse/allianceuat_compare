@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Inactive Reason --></label>
+    <name>Inactive_Reason__c</name>
+    <picklistValues>
+        <masterLabel>Credit check fail</masterLabel>
+        <translation><!-- Credit check fail --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Do not Service</masterLabel>
+        <translation><!-- Do not Service --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Dormant</masterLabel>
+        <translation><!-- Dormant --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pending review</masterLabel>
+        <translation><!-- Pending review --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Post review - Do not place / re-hire</masterLabel>
+        <translation><!-- Post review - Do not place / re-hire --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Service no longer Required</masterLabel>
+        <translation><!-- Service no longer Required --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Terminated</masterLabel>
+        <translation><!-- Terminated --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Terms Expired</masterLabel>
+        <translation><!-- Terms Expired --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

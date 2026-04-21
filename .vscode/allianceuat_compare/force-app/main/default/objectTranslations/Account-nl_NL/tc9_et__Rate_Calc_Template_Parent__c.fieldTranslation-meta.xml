@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- The client record that holds the parent Rate Calculator --></help>
+    <label><!-- Rate Calc Template Parent --></label>
+    <name>tc9_et__Rate_Calc_Template_Parent__c</name>
+    <relationshipLabel><!-- Accounts --></relationshipLabel>
+</CustomFieldTranslation>

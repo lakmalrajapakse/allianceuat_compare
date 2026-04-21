@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>ARRH - Renewal of Terms of Business</name>
+    <relatedEntityType>Contact</relatedEntityType>
+    <style>none</style>
+    <subject>Alliance Rural &amp; Remote Health (formerly CQ Nurse) - Renewal of Terms of Business</subject>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <aggregates>
+        <calculatedFormula>RowCount</calculatedFormula>
+        <datatype>number</datatype>
+        <developerName>FORMULA1</developerName>
+        <downGroupingContext>Contact$Name</downGroupingContext>
+        <isActive>false</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>Ticket Count</masterLabel>
+        <scale>0</scale>
+    </aggregates>
+    <columns>
+        <field>Contact$CreatedDate</field>
+    </columns>
+    <crossFilters>
+        <criteriaItems>
+            <column>sirenum__TicketType__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>National Police Check</value>
+        </criteriaItems>
+        <operation>without</operation>
+        <primaryTableColumn>Contact$Id</primaryTableColumn>
+        <relatedTable>sirenum__Ticket__c</relatedTable>
+        <relatedTableJoinColumn>sirenum__Owner__c</relatedTableJoinColumn>
+    </crossFilters>
+    <filter>
+        <criteriaItems>
+            <column>Contact$TR1__Candidate_Status__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Active</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Contact$Name</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Candidates without Police Check tickets</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>People_with_Qualification_Tickets__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>false</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Contact$Birthdate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

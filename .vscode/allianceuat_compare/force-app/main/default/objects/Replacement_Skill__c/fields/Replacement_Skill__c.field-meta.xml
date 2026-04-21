@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Replacement_Skill__c</fullName>
+    <deleteConstraint>Restrict</deleteConstraint>
+    <label>Replacement Skill</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>Shiftmatch_Skill__c.Status__c</field>
+            <operation>equals</operation>
+            <value>Mandatory</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Shiftmatch_Skill__c</referenceTo>
+    <relationshipLabel>Replacement Skills (Replacement Skill)</relationshipLabel>
+    <relationshipName>Replacement_Skills</relationshipName>
+    <required>true</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

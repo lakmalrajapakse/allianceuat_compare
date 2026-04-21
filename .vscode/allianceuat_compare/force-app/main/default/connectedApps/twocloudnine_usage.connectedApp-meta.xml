@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConnectedApp xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contactEmail>tech@2cloudnine.com</contactEmail>
+    <description>2cloudnine Payroll</description>
+    <label>2cloudnine Payroll</label>
+    <oauthConfig>
+        <callbackUrl>http://localhost:8080/callback</callbackUrl>
+        <certificate>LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUR3RENDQXFnQ0NRRHpRZG1yVFJLNEd6QU5CZ2txaGtpRzl3MEJBUXNGQURDQm9URUxNQWtHQTFVRUJoTUMKUVZVeEVUQVBCZ05WQkFnTUNGWnBZM1J2Y21saE1RMHdDd1lEVlFRSERBUkRhWFI1TVJNd0VRWURWUVFLREFveQpZMnh2ZFdSdWFXNWxNUll3RkFZRFZRUUxEQTFVWldOb0lGTmxjblpwWTJWek1SY3dGUVlEVlFRRERBNHlZMnh2CmRXUnVhVzVsTG1OdmJURXFNQ2dHQ1NxR1NJYjNEUUVKQVJZYmRHVmphSE5sY25acFkyVnpRREpqYkc5MVpHNXAKYm1VdVkyOXRNQjRYRFRJek1EVXdPVEEzTURrMU9Wb1hEVEkwTURVd09EQTNNRGsxT1Zvd2dhRXhDekFKQmdOVgpCQVlUQWtGVk1SRXdEd1lEVlFRSURBaFdhV04wYjNKcFlURU5NQXNHQTFVRUJ3d0VRMmwwZVRFVE1CRUdBMVVFCkNnd0tNbU5zYjNWa2JtbHVaVEVXTUJRR0ExVUVDd3dOVkdWamFDQlRaWEoyYVdObGN6RVhNQlVHQTFVRUF3d08KTW1Oc2IzVmtibWx1WlM1amIyMHhLakFvQmdrcWhraUc5dzBCQ1FFV0czUmxZMmh6WlhKMmFXTmxjMEF5WTJ4dgpkV1J1YVc1bExtTnZiVENDQVNJd0RRWUpLb1pJaHZjTkFRRUJCUUFEZ2dFUEFEQ0NBUW9DZ2dFQkFOZDJmdDA4CjlLN1FyUDlRRW5VRFp1bUJaYURSZVA0dncvSFJmdHhoTDM1T3AwaUZ0VW5rSzlia1ZoRUR5c3hnL1kyaXA5RmgKdUtjN051dUVCczVBQTFwUEpTWXlQTnQyREtXSnE4L3NJSFJuallhNlBwTGlHNUxtWnEzYmhqeXNBL0JGZHFMTApxOEpTUlR6N0xKK1YwOHBxbnRSNW1MTEtSS1o2MXhKejVpbmNiaCtCU3NhemRyMWdFT1FYbmtWSGVOUkFCRVJrCm81elQydEx4Qy80RndHYlYyZkt3bjJXcHQ2bk41SmxGQ0Jid2svM2lXakZuRWttWXJXNm1BQVhKOUFYTnRTZkcKV1VqZjhiZGZ3bzhFOXI0VXN4Rm5SeksyM3U4Vm51UXlqY1p5WGxxUU9aNnNGRHcwNG15aGhYSlVaemVwNWI1Ygo2MnBOQXpuLzR0YWhWNXNDQXdFQUFUQU5CZ2txaGtpRzl3MEJBUXNGQUFPQ0FRRUFEb3Ywcy9TejIwQmVQRExjCm8vU0dOK05OcW8wWjNJVFBmQVR5bHYxMERaMnVrK2x6a21DaDZDdXlHRm8yNy9vYTluN0tXdFUxa2hpZkRidTAKS1lodThOcWxEYk85Z3NMZDBDdkJhcEZmRjhEVm95R2N1d0pnb05YcUU2L1ZRdmp2cytSM2V5K2RBT0hVRlRIdAorV2lXcVhqWmdRbWV0TXE4UlcrT2xKUDJOS0lPTHJYQmpZWEExc3g5dHE4YXRwRzNCY0NJYUdRL2pCOVNvY2VjClJxc2dOYlFJYWNsTTQ5NCtaSG9qVzFPc3JsQVB5L3M1L29ySG9Ra0VEQkZraU9BUTVYOWtxOWhNdWt5a2tqRWQKTm1MblVkNW8rRFM0QWpJd0VxNnRWSWU3MjNrUXpjK25FMjNQcmQ3ZTVGTWZ6aURvR1k0c1JjU0s4OTJQTEZlYQpGUGt5ZkE9PQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0t</certificate>
+        <consumerKey>3MVG9mywN3hwYEwnV8jOpeEH05twKQanuU15lG8fMTjmmuDWZlXpbqJTXq5Ro5.7dt9dxt1dUc8lOnE3R_lyj</consumerKey>
+        <isAdminApproved>true</isAdminApproved>
+        <isClientCredentialEnabled>false</isClientCredentialEnabled>
+        <isCodeCredentialEnabled>false</isCodeCredentialEnabled>
+        <isCodeCredentialPostOnly>false</isCodeCredentialPostOnly>
+        <isConsumerSecretOptional>false</isConsumerSecretOptional>
+        <isIntrospectAllTokens>false</isIntrospectAllTokens>
+        <isNamedUserJwtEnabled>false</isNamedUserJwtEnabled>
+        <isPkceRequired>false</isPkceRequired>
+        <isRefreshTokenRotationEnabled>false</isRefreshTokenRotationEnabled>
+        <isSecretRequiredForRefreshToken>false</isSecretRequiredForRefreshToken>
+        <isSecretRequiredForTokenExchange>false</isSecretRequiredForTokenExchange>
+        <isTokenExchangeEnabled>false</isTokenExchangeEnabled>
+        <scopes>Api</scopes>
+        <scopes>RefreshToken</scopes>
+    </oauthConfig>
+    <oauthPolicy>
+        <ipRelaxation>BYPASS</ipRelaxation>
+        <isTokenExchangeFlowEnabled>false</isTokenExchangeFlowEnabled>
+        <refreshTokenPolicy>infinite</refreshTokenPolicy>
+    </oauthPolicy>
+    <profileName>Minimum Access - API Only Integrations</profileName>
+</ConnectedApp>

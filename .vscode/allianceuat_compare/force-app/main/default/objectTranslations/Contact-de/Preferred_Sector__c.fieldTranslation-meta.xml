@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Preferred Sector --></label>
+    <name>Preferred_Sector__c</name>
+    <picklistValues>
+        <masterLabel>Aged Care</masterLabel>
+        <translation><!-- Aged Care --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Child Care</masterLabel>
+        <translation><!-- Child Care --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Disability</masterLabel>
+        <translation><!-- Disability --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Hospital</masterLabel>
+        <translation><!-- Hospital --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Warehouse</masterLabel>
+        <translation><!-- Warehouse --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

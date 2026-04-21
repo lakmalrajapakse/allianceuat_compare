@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Education_Requirements__c</fullName>
+    <label>Education Requirements</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Basic Life Support Theory</fullName>
+                <default>false</default>
+                <label>Basic Life Support Theory</label>
+            </value>
+            <value>
+                <fullName>Manual Handling Theory</fullName>
+                <default>false</default>
+                <label>Manual Handling Theory</label>
+            </value>
+            <value>
+                <fullName>Infection Control Theory</fullName>
+                <default>false</default>
+                <label>Infection Control Theory</label>
+            </value>
+            <value>
+                <fullName>Aseptic Technique Theory</fullName>
+                <default>false</default>
+                <label>Aseptic Technique Theory</label>
+            </value>
+            <value>
+                <fullName>Managing Aggression Theory</fullName>
+                <default>false</default>
+                <label>Managing Aggression Theory</label>
+            </value>
+            <value>
+                <fullName>Mandatory Reporting</fullName>
+                <default>false</default>
+                <label>Mandatory Reporting</label>
+            </value>
+            <value>
+                <fullName>Clinical Transfusion Practice</fullName>
+                <default>false</default>
+                <label>Clinical Transfusion Practice</label>
+            </value>
+            <value>
+                <fullName>Emergency and Evacuation</fullName>
+                <default>false</default>
+                <label>Emergency and Evacuation</label>
+            </value>
+            <value>
+                <fullName>Medication Administration and Safety</fullName>
+                <default>false</default>
+                <label>Medication Administration and Safety</label>
+            </value>
+            <value>
+                <fullName>Aged Care Standards</fullName>
+                <default>false</default>
+                <label>Aged Care Standards</label>
+            </value>
+            <value>
+                <fullName>SIRS</fullName>
+                <default>false</default>
+                <label>SIRS</label>
+            </value>
+            <value>
+                <fullName>Recognising and Responding to Clinical Deterioration</fullName>
+                <default>false</default>
+                <label>Recognising and Responding to Clinical Deterioration</label>
+            </value>
+            <value>
+                <fullName>Falls Risk</fullName>
+                <default>false</default>
+                <label>Falls Risk</label>
+            </value>
+            <value>
+                <fullName>Basic Life Support Practical</fullName>
+                <default>false</default>
+                <label>Basic Life Support Practical</label>
+            </value>
+            <value>
+                <fullName>Manual Handling Practical</fullName>
+                <default>false</default>
+                <label>Manual Handling Practical</label>
+            </value>
+            <value>
+                <fullName>Infection Control Practical</fullName>
+                <default>false</default>
+                <label>Infection Control Practical</label>
+            </value>
+            <value>
+                <fullName>Aseptic Technique Practical</fullName>
+                <default>false</default>
+                <label>Aseptic Technique Practical</label>
+            </value>
+            <value>
+                <fullName>Managing Aggression Practical</fullName>
+                <default>false</default>
+                <label>Managing Aggression Practical</label>
+            </value>
+            <value>
+                <fullName>Emergency and Evacuation Practical</fullName>
+                <default>false</default>
+                <label>Emergency and Evacuation Practical</label>
+            </value>
+            <value>
+                <fullName>NHHI - Hand Hygiene</fullName>
+                <default>false</default>
+                <label>NHHI - Hand Hygiene</label>
+            </value>
+            <value>
+                <fullName>Paediatric Life Support</fullName>
+                <default>false</default>
+                <label>Paediatric Life Support</label>
+            </value>
+            <value>
+                <fullName>Advanced Life Support</fullName>
+                <default>false</default>
+                <label>Advanced Life Support</label>
+            </value>
+            <value>
+                <fullName>Neonatal Resus Practical</fullName>
+                <default>false</default>
+                <label>Neonatal Resus Practical</label>
+            </value>
+            <value>
+                <fullName>Neonatal Resus Theory</fullName>
+                <default>false</default>
+                <label>Neonatal Resus Theory</label>
+            </value>
+            <value>
+                <fullName>CTG Theory</fullName>
+                <default>false</default>
+                <label>CTG Theory</label>
+            </value>
+            <value>
+                <fullName>CTG Practical - Pre Level 1 &lt;55%</fullName>
+                <default>false</default>
+                <label>CTG Practical - Pre Level 1 &lt;55%</label>
+            </value>
+            <value>
+                <fullName>CTG Practical - Level 1 55-65%</fullName>
+                <default>false</default>
+                <label>CTG Practical - Level 1 55-65%</label>
+            </value>
+            <value>
+                <fullName>CTG Practical - Level 2 66-75%</fullName>
+                <default>false</default>
+                <label>CTG Practical - Level 2 66-75%</label>
+            </value>
+            <value>
+                <fullName>CTG Practical - Level 3 Above 75%</fullName>
+                <default>false</default>
+                <label>CTG Practical - Level 3 Above 75%</label>
+            </value>
+            <value>
+                <fullName>Obstetric Emergencies</fullName>
+                <default>false</default>
+                <label>Obstetric Emergencies</label>
+            </value>
+            <value>
+                <fullName>Epidural and Spinal Analgesia</fullName>
+                <default>false</default>
+                <label>Epidural and Spinal Analgesia</label>
+            </value>
+            <value>
+                <fullName>Breastfeeding</fullName>
+                <default>false</default>
+                <label>Breastfeeding</label>
+            </value>
+            <value>
+                <fullName>Safe Sleeping</fullName>
+                <default>false</default>
+                <label>Safe Sleeping</label>
+            </value>
+            <value>
+                <fullName>PARROT</fullName>
+                <default>false</default>
+                <label>PARROT</label>
+            </value>
+            <value>
+                <fullName>OHS/WHS</fullName>
+                <default>false</default>
+                <label>OHS/WHS</label>
+            </value>
+            <value>
+                <fullName>Restraint Training</fullName>
+                <default>false</default>
+                <label>Restraint Training</label>
+            </value>
+            <value>
+                <fullName>Code of Conduct/Ethics</fullName>
+                <default>false</default>
+                <label>Code of Conduct/Ethics</label>
+            </value>
+            <value>
+                <fullName>Medication Calculations</fullName>
+                <default>false</default>
+                <label>Medication Calculations</label>
+            </value>
+            <value>
+                <fullName>NPS - Medication Charts</fullName>
+                <default>false</default>
+                <label>NPS - Medication Charts</label>
+            </value>
+            <value>
+                <fullName>NPS - Medication Safety</fullName>
+                <default>false</default>
+                <label>NPS - Medication Safety</label>
+            </value>
+            <value>
+                <fullName>MRCSA - WA Govt</fullName>
+                <default>false</default>
+                <label>MRCSA - WA Govt</label>
+            </value>
+            <value>
+                <fullName>NDIS Worker Screening Clearance</fullName>
+                <default>false</default>
+                <label>NDIS Worker Screening Clearance</label>
+            </value>
+            <value>
+                <fullName>NDIS Worker Orientation</fullName>
+                <default>false</default>
+                <label>NDIS Worker Orientation</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>One Off Fee</fullName>
+        <default>false</default>
+        <label>One Off Fee</label>
+    </customValue>
+    <customValue>
+        <fullName>Weekly Fee</fullName>
+        <default>false</default>
+        <label>Weekly Fee</label>
+    </customValue>
+    <customValue>
+        <fullName>Monthly Fee</fullName>
+        <default>false</default>
+        <label>Monthly Fee</label>
+    </customValue>
+    <customValue>
+        <fullName>Daily Fee</fullName>
+        <default>false</default>
+        <label>Daily Fee</label>
+    </customValue>
+    <customValue>
+        <fullName>Hourly Fee</fullName>
+        <default>false</default>
+        <label>Hourly Fee</label>
+    </customValue>
+    <masterLabel>Contract Fee Type</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

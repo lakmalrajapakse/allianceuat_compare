@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Contact$Name</field>
+    </columns>
+    <columns>
+        <field>Contact.b3o__Certificates__r$Name</field>
+    </columns>
+    <columns>
+        <field>Contact.b3o__Certificates__r$b3o__Certificate_Type__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Contact.b3o__Certificates__r$b3o__Certificate_Type__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>,ATSI Training,Bullying,Harassment and Discrimination,Clinical Transfusion Practice - Bi Annually,Communication for Quality Care,CTG Practical,Cyber Security,Domestic and Family Violence,Emergency and Evacuation Practical,First Aid Certificate,Fraud Awareness,Infection Control Practical,Influenza Administration Information,Influenza Standing Order,Manual Handling Practical,Mask Fit Test,Meal Assistance in Residential Aged Care,Module 4 Cunningham Institute- vaccine management,National Police Check,NDIS Mealtime Management,NDIS Worker Orientation,NDIS Worker Screening Clearance,Neonatal Resus Practical,Neonatal Resus Theory,NHHI - Hand Hygiene,Paediatric Life Support,Recognising and Responding to Clinical Deterioration,Shoulder Injury Related to Vaccine Administration,SIRS,St Vincent&apos;s Private - Midwives | Induction Process,St Vincent&apos;s Private - RNs/EENs | Induction Process,The Australian Immunisation Handbook,Work Health Safety,Working with Children Check</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Contact.b3o__Certificates__r$Certificate_Status__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Certificate Amendments</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>People_with_3b_certificates__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Contact$Birthdate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

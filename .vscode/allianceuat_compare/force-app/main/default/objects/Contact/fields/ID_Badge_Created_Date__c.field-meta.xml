@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ID_Badge_Created_Date__c</fullName>
+    <description>The date when the candidate&apos;s last ID Badge was created.</description>
+    <inlineHelpText>The date when the candidate&apos;s last ID Badge was created.</inlineHelpText>
+    <label>ID Badge Created Date</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>DateTime</type>
+</CustomField>

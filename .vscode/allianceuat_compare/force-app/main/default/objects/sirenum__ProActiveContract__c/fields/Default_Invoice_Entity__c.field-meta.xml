@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Default_Invoice_Entity__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>All Pay Transactions related to this Contract will be assigned to this Invoice Entity for Invoicing.</description>
+    <inlineHelpText>All Pay Transactions related to this Contract will be assigned to this Invoice Entity for Invoicing.</inlineHelpText>
+    <label>Default Invoice Entity</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Invoice Entity</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Account</referenceTo>
+    <relationshipLabel>WFM Contracts (Default Invoice Entity)</relationshipLabel>
+    <relationshipName>WFM_Contracts</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

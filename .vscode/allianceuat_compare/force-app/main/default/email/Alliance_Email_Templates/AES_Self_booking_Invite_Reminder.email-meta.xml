@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>AES - Self-booking Invite Reminder</name>
+    <style>none</style>
+    <subject>Reminder to book a call to proceed your application with Alliance Extra Staff</subject>
+    <textOnly>REMINDER: BOOK TIME TO PROCEED YOUR APPLICATION.
+
+Hi {!Contact.FirstName},
+
+Hope you&apos;re well! We are excited to proceed your application with us and have tried to reach you via phone to discuss next steps. This is a kind reminder to please let us know when is a good time to talk and we&apos;ll get one of our recruiters to call you back.
+
+BOOK A CALL WITH A RECRUITER
+
+
+If you have any questions, please feel free to call our friendly staff on 1300 662 511.
+
+We are looking forward to working with you!
+
+Kind regards,
+Your team at Alliance Extra Staff</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

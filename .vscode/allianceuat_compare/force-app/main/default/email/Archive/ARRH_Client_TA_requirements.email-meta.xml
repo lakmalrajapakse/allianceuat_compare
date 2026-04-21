@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>ARRH - Client T&amp;A requirements</name>
+    <style>none</style>
+    <subject>Alliance Rural &amp; Remote Health | Travel &amp; Accommodation Requirements</subject>
+    <textOnly>NURSE AVAILABLE.
+
+Hi {!Contact.FirstName}, {!Candidate.FirstName} [Designation] is available to assist with your deficit. Please see attached her CV and references for your persual.
+
+Nurse name is available to start a contract [Start to End date]
+
+[Nurse Name] referees mention:
+
+
+XXXXXXX
+XXXXXXX
+XXXXXXX
+
+
+[Nurse name] is travelling alone from [Home Town] and will / will not require accomodation.
+
+If you think [Nurse name] would be helpful in covering your rostering needs, please let me know at your earliest convenience.
+
+If you have any questions at all you can always call us on 07 4998 5550.
+
+Have a great day!
+
+Kind regards,
+Your team at Alliance Rural &amp; Remote Health</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

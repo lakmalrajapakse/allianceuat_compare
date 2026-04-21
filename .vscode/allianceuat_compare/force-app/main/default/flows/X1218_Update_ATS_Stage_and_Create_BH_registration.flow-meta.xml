@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>62.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <decisions>
+        <name>Check_if_user_already_exist</name>
+        <label>Check if user already exist</label>
+        <locationX>50</locationX>
+        <locationY>600</locationY>
+        <defaultConnector>
+            <targetReference>Create_User_Create_Platform_Event</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Create New User</defaultConnectorLabel>
+        <rules>
+            <name>User_Already_Exists</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_User_Record</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Launch_Create_Payee</targetReference>
+            </connector>
+            <label>User Already Exists</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>If_Stage_is_Contracting</name>
+        <label>If Stage is Contracting</label>
+        <locationX>226</locationX>
+        <locationY>384</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Contracting</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.TR1__Value__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>BH_Connect</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Get_User_Record</targetReference>
+            </connector>
+            <label>Contracting</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Is_the_BH_Connect_Group_Assigned</name>
+        <label>Is the BH Connect Group Assigned?</label>
+        <locationX>798</locationX>
+        <locationY>816</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>No_Assign_the_group</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Existing_Group_Assignment</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Add_User_to_BH_Connect_Permission_Group</targetReference>
+            </connector>
+            <label>No, Assign the group</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Is_the_User_a_BH_Connect_User</name>
+        <label>Is the User a BH Connect User?</label>
+        <locationX>996</locationX>
+        <locationY>492</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Yes</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_New_User.Id</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Get_Permission_Set_Group</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <description>This flow triggers when an Application Sub Status record is created or updated to “BH Connect”. The flow checks whether a Salesforce User already exists for the related Contact. If no User exists, it creates the BH Connect User, pauses for 1 minute, and then assigns the required Permission Set (if not already assigned).</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>alias</name>
+        <dataType>String</dataType>
+        <expression>LEFT({!$Record.TR1__Application__r.TR1__Applicant__r.FirstName}, 1) &amp; 
+LEFT({!$Record.TR1__Application__r.TR1__Applicant__r.LastName}, 3)</expression>
+    </formulas>
+    <formulas>
+        <description>This take the Candidate Timezone and maps it to the User Timezone</description>
+        <name>ConvertCandidateTimezoneToUserTimeZone</name>
+        <dataType>String</dataType>
+        <expression>CASE(
+  {!$Record.TR1__Application__r.TR1__Applicant__r.Candidate_Timezone__c},
+  &quot;Australia/Melbourne&quot;, &quot;Australia/Melbourne&quot;,
+  &quot;Australia/Sydney&quot;, &quot;Australia/Sydney&quot;,
+  &quot;Australia/Brisbane&quot;, &quot;Australia/Brisbane&quot;,
+  &quot;Australia/Perth&quot;, &quot;Australia/Perth&quot;,
+  &quot;Australia/Adelaide&quot;, &quot;Australia/Adelaide&quot;,
+  &quot;Australia/Hobart&quot;, &quot;Australia/Hobart&quot;,
+  &quot;Australia/Broken_Hill&quot;, &quot;Australia/Broken_Hill&quot;,
+  &quot;Australia/Currie&quot;, &quot;Australia/Currie&quot;,
+  &quot;Australia/Darwin&quot;, &quot;Australia/Darwin&quot;,
+  &quot;Australia/Eucla&quot;, &quot;Australia/Eucla&quot;,
+  &quot;Australia/Lindeman&quot;, &quot;Australia/Lindeman&quot;,
+  &quot;Australia/Lord_Howe&quot;, &quot;Australia/Lord_Howe&quot;,
+  &quot;Indian/Christmas&quot;, &quot;Indian/Christmas&quot;,
+  &quot;Indian/Cocos&quot;, &quot;Indian/Cocos&quot;,
+  &quot;Pacific/Norfolk&quot;, &quot;Pacific/Norfolk&quot;,
+  /* Default timezone if none match */
+  &quot;Australia/Sydney&quot;
+)</expression>
+    </formulas>
+    <interviewLabel>1218-Update Candidate Status and Create BH registration {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>1218-Update ATS Stage and Create BH registration</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <name>Add_User_to_BH_Connect_Permission_Group</name>
+        <label>Add User to BH Connect Permission Group</label>
+        <locationX>666</locationX>
+        <locationY>924</locationY>
+        <inputAssignments>
+            <field>AssigneeId</field>
+            <value>
+                <elementReference>Get_New_User.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PermissionSetGroupId</field>
+            <value>
+                <elementReference>Get_Permission_Set_Group.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <object>PermissionSetAssignment</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
+        <name>Create_User_Create_Platform_Event</name>
+        <label>Create User Create Platform Event</label>
+        <locationX>138</locationX>
+        <locationY>708</locationY>
+        <connector>
+            <targetReference>Launch_Create_Payee</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>ContactId__c</field>
+            <value>
+                <elementReference>$Record.TR1__Application__r.TR1__Applicant__r.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <object>X1218_Create_BH_Connect_User__e</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordLookups>
+        <name>Get_Existing_Group_Assignment</name>
+        <label>Get Existing Group Assignment</label>
+        <locationX>798</locationX>
+        <locationY>708</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Is_the_BH_Connect_Group_Assigned</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>AssigneeId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Get_New_User.Id</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>PermissionSetGroupId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Get_Permission_Set_Group.Id</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>PermissionSetAssignment</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_List_of_Profiles</name>
+        <label>Get List of Profiles</label>
+        <locationX>996</locationX>
+        <locationY>276</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Get_New_User</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Alliance Connect User</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Profile</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_New_User</name>
+        <label>Get New User</label>
+        <locationX>996</locationX>
+        <locationY>384</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Is_the_User_a_BH_Connect_User</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>ContactId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.TR1__Application__r.TR1__Applicant__r.Id</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>ProfileId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Get_List_of_Profiles.Id</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>User</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_Permission_Set_Group</name>
+        <label>Get Permission Set Group</label>
+        <locationX>798</locationX>
+        <locationY>600</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Get_Existing_Group_Assignment</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>DeveloperName</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Alliance_Connect_Worker_App</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>PermissionSetGroup</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_Profile</name>
+        <label>Get Profile</label>
+        <locationX>226</locationX>
+        <locationY>276</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>If_Stage_is_Contracting</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Alliance Connect User</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Profile</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_User_Record</name>
+        <label>Get User Record</label>
+        <locationX>50</locationX>
+        <locationY>492</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Check_if_user_already_exist</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>ContactId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.TR1__Application__r.TR1__Applicant__r.Id</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>User</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <runInMode>SystemModeWithSharing</runInMode>
+    <start>
+        <locationX>485</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Get_Profile</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>TR1__Value__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>BH_Connect</stringValue>
+            </value>
+        </filters>
+        <object>TR1__Sub_Status__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <scheduledPaths>
+            <name>Update_Contact</name>
+            <connector>
+                <targetReference>Get_List_of_Profiles</targetReference>
+            </connector>
+            <label>Update Contact</label>
+            <offsetNumber>1</offsetNumber>
+            <offsetUnit>Minutes</offsetUnit>
+            <recordField>LastModifiedDate</recordField>
+            <timeSource>RecordField</timeSource>
+        </scheduledPaths>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <subflows>
+        <name>Launch_Create_Payee</name>
+        <label>Launch Create Payee</label>
+        <locationX>50</locationX>
+        <locationY>900</locationY>
+        <flowName>Nuuco_Create_Payee</flowName>
+        <inputAssignments>
+            <name>varSubStatus</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <variables>
+        <name>NewUserCreatedVAR</name>
+        <dataType>Boolean</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <booleanValue>false</booleanValue>
+        </value>
+    </variables>
+    <variables>
+        <name>PermissionSetAssignmentRecords</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>PermissionSetAssignment</objectType>
+    </variables>
+    <variables>
+        <name>PermissionSetAssignmentTemp</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>PermissionSetAssignment</objectType>
+    </variables>
+    <variables>
+        <name>recordid</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>Stage</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>UserIDVAR</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>varSubStatus</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+</Flow>

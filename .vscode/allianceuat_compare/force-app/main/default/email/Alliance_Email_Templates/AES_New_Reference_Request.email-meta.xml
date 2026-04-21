@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>AES - New Reference Request</name>
+    <style>none</style>
+    <subject>We need one more reference to keep things moving.</subject>
+    <textOnly>ONE MORE REFERENCE NEEDED.
+
+Hi {!Contact.FirstName},
+
+We’re currently reviewing your references as part of your application with Alliance Extra Staff, and we need one more to complete the process.
+
+This could be because:
+
+Your referee hasn’t responded or declined the request
+Their contact details weren’t valid
+Or the reference didn’t fully meet the role’s requirements
+
+To help us move things along, head over to the portal and add the contact details of another referee who can confirm your recent work history.
+
+SUBMIT NEW REFERENCE
+
+If you have any questions, please feel free to call our friendly staff on 1300 662 511.
+
+We are looking forward to working with you!
+
+Kind regards,
+Your team at Alliance Extra Staff</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

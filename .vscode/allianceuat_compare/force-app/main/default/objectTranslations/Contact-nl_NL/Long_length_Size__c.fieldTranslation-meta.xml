@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Long length Size: --></label>
+    <name>Long_length_Size__c</name>
+    <picklistValues>
+        <masterLabel>2XL</masterLabel>
+        <translation><!-- 2XL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>3XL</masterLabel>
+        <translation><!-- 3XL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>L</masterLabel>
+        <translation><!-- L --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>M</masterLabel>
+        <translation><!-- M --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>S</masterLabel>
+        <translation><!-- S --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>XL</masterLabel>
+        <translation><!-- XL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>XS</masterLabel>
+        <translation><!-- XS --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

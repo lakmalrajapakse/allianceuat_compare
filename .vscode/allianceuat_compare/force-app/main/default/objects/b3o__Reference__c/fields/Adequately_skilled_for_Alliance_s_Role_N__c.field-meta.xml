@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Adequately_skilled_for_Alliance_s_Role_N__c</fullName>
+    <inlineHelpText>If no - Please tell us a bit more</inlineHelpText>
+    <label>Adequately skilled for Alliance&apos;s Role?</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

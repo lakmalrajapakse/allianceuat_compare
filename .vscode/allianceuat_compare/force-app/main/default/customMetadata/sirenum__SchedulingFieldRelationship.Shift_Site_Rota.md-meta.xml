@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Shift =&gt; Rota</label>
+    <protected>false</protected>
+    <values>
+        <field>sirenum__PrimaryFieldPath__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>sirenum__PrimaryField__c</field>
+        <value xsi:type="xsd:string">sirenum__Shift_Site</value>
+    </values>
+    <values>
+        <field>sirenum__Relationship__c</field>
+        <value xsi:type="xsd:string">Field Match</value>
+    </values>
+    <values>
+        <field>sirenum__SecondaryFieldPath__c</field>
+        <value xsi:type="xsd:string">Site__c</value>
+    </values>
+    <values>
+        <field>sirenum__SecondaryField__c</field>
+        <value xsi:type="xsd:string">sirenum__Shift_Rota</value>
+    </values>
+</CustomMetadata>

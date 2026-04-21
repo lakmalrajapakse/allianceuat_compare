@@ -1,0 +1,671 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Skill__c</fullName>
+    <label>Skill</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Residential Aged Care</fullName>
+                <default>false</default>
+                <label>Residential Aged Care</label>
+            </value>
+            <value>
+                <fullName>Home and Community Care</fullName>
+                <default>false</default>
+                <label>Home and Community Care</label>
+            </value>
+            <value>
+                <fullName>Respite Care</fullName>
+                <default>false</default>
+                <label>Respite Care</label>
+            </value>
+            <value>
+                <fullName>Dementia-Specific Care</fullName>
+                <default>false</default>
+                <label>Dementia-Specific Care</label>
+            </value>
+            <value>
+                <fullName>Palliative Aged Care</fullName>
+                <default>false</default>
+                <label>Palliative Aged Care</label>
+            </value>
+            <value>
+                <fullName>Medical / Surgical</fullName>
+                <default>false</default>
+                <label>Medical / Surgical</label>
+            </value>
+            <value>
+                <fullName>General Medical Only</fullName>
+                <default>false</default>
+                <label>General Medical Only</label>
+            </value>
+            <value>
+                <fullName>Emergency Department (Step Down)</fullName>
+                <default>false</default>
+                <label>Emergency Department (Step Down)</label>
+            </value>
+            <value>
+                <fullName>Surgical Ward</fullName>
+                <default>false</default>
+                <label>Surgical Ward</label>
+            </value>
+            <value>
+                <fullName>Cardiology</fullName>
+                <default>false</default>
+                <label>Cardiology</label>
+            </value>
+            <value>
+                <fullName>Respiratory Medicine</fullName>
+                <default>false</default>
+                <label>Respiratory Medicine</label>
+            </value>
+            <value>
+                <fullName>Neurology</fullName>
+                <default>false</default>
+                <label>Neurology</label>
+            </value>
+            <value>
+                <fullName>Gastroenterology</fullName>
+                <default>false</default>
+                <label>Gastroenterology</label>
+            </value>
+            <value>
+                <fullName>Renal / Nephrology</fullName>
+                <default>false</default>
+                <label>Renal / Nephrology</label>
+            </value>
+            <value>
+                <fullName>Oncology / Haematology</fullName>
+                <default>false</default>
+                <label>Oncology / Haematology</label>
+            </value>
+            <value>
+                <fullName>Oncology / Chemo</fullName>
+                <default>false</default>
+                <label>Oncology / Chemo</label>
+            </value>
+            <value>
+                <fullName>Paediatrics</fullName>
+                <default>false</default>
+                <label>Paediatrics</label>
+            </value>
+            <value>
+                <fullName>Trauma</fullName>
+                <default>false</default>
+                <label>Trauma</label>
+            </value>
+            <value>
+                <fullName>Medical Short Stay Unit</fullName>
+                <default>false</default>
+                <label>Medical Short Stay Unit</label>
+            </value>
+            <value>
+                <fullName>Colorectal</fullName>
+                <default>false</default>
+                <label>Colorectal</label>
+            </value>
+            <value>
+                <fullName>Acute Assessment Unit</fullName>
+                <default>false</default>
+                <label>Acute Assessment Unit</label>
+            </value>
+            <value>
+                <fullName>Transitional Care</fullName>
+                <default>false</default>
+                <label>Transitional Care</label>
+            </value>
+            <value>
+                <fullName>Maternity / Obstetrics</fullName>
+                <default>false</default>
+                <label>Maternity / Obstetrics</label>
+            </value>
+            <value>
+                <fullName>Gynaecology</fullName>
+                <default>false</default>
+                <label>Gynaecology</label>
+            </value>
+            <value>
+                <fullName>Orthopaedics</fullName>
+                <default>false</default>
+                <label>Orthopaedics</label>
+            </value>
+            <value>
+                <fullName>Psychiatry / Mental Health</fullName>
+                <default>false</default>
+                <label>Psychiatry / Mental Health</label>
+            </value>
+            <value>
+                <fullName>Geriatrics / Aged Care</fullName>
+                <default>false</default>
+                <label>Geriatrics / Aged Care</label>
+            </value>
+            <value>
+                <fullName>Rehabilitation</fullName>
+                <default>false</default>
+                <label>Rehabilitation</label>
+            </value>
+            <value>
+                <fullName>Palliative Care</fullName>
+                <default>false</default>
+                <label>Palliative Care</label>
+            </value>
+            <value>
+                <fullName>Infectious Diseases</fullName>
+                <default>false</default>
+                <label>Infectious Diseases</label>
+            </value>
+            <value>
+                <fullName>General Surgical Only</fullName>
+                <default>false</default>
+                <label>General Surgical Only</label>
+            </value>
+            <value>
+                <fullName>Cardiothoracic Surgery</fullName>
+                <default>false</default>
+                <label>Cardiothoracic Surgery</label>
+            </value>
+            <value>
+                <fullName>Orthopaedic Surgery</fullName>
+                <default>false</default>
+                <label>Orthopaedic Surgery</label>
+            </value>
+            <value>
+                <fullName>Neurosurgery</fullName>
+                <default>false</default>
+                <label>Neurosurgery</label>
+            </value>
+            <value>
+                <fullName>Vascular Surgery</fullName>
+                <default>false</default>
+                <label>Vascular Surgery</label>
+            </value>
+            <value>
+                <fullName>Plastic Surgery</fullName>
+                <default>false</default>
+                <label>Plastic Surgery</label>
+            </value>
+            <value>
+                <fullName>Ear, Nose, and Throat (ENT) Surgery</fullName>
+                <default>false</default>
+                <label>Ear, Nose, and Throat (ENT) Surgery</label>
+            </value>
+            <value>
+                <fullName>Urology</fullName>
+                <default>false</default>
+                <label>Urology</label>
+            </value>
+            <value>
+                <fullName>Ophthalmology</fullName>
+                <default>false</default>
+                <label>Ophthalmology</label>
+            </value>
+            <value>
+                <fullName>Paediatric Surgery</fullName>
+                <default>false</default>
+                <label>Paediatric Surgery</label>
+            </value>
+            <value>
+                <fullName>Radiology / Medical Imaging</fullName>
+                <default>false</default>
+                <label>Radiology / Medical Imaging</label>
+            </value>
+            <value>
+                <fullName>Pathology / Laboratory</fullName>
+                <default>false</default>
+                <label>Pathology / Laboratory</label>
+            </value>
+            <value>
+                <fullName>Pharmacy</fullName>
+                <default>false</default>
+                <label>Pharmacy</label>
+            </value>
+            <value>
+                <fullName>Physiotherapy</fullName>
+                <default>false</default>
+                <label>Physiotherapy</label>
+            </value>
+            <value>
+                <fullName>Occupational Therapy</fullName>
+                <default>false</default>
+                <label>Occupational Therapy</label>
+            </value>
+            <value>
+                <fullName>Speech Therapy</fullName>
+                <default>false</default>
+                <label>Speech Therapy</label>
+            </value>
+            <value>
+                <fullName>Social Work</fullName>
+                <default>false</default>
+                <label>Social Work</label>
+            </value>
+            <value>
+                <fullName>Dietary / Nutrition Services</fullName>
+                <default>false</default>
+                <label>Dietary / Nutrition Services</label>
+            </value>
+            <value>
+                <fullName>Dialysis Unit</fullName>
+                <default>false</default>
+                <label>Dialysis Unit</label>
+            </value>
+            <value>
+                <fullName>DOSA - Day Observation Unit</fullName>
+                <default>false</default>
+                <label>DOSA - Day Observation Unit</label>
+            </value>
+            <value>
+                <fullName>Day Surgery Unit</fullName>
+                <default>false</default>
+                <label>Day Surgery Unit</label>
+            </value>
+            <value>
+                <fullName>Burns Unit</fullName>
+                <default>false</default>
+                <label>Burns Unit</label>
+            </value>
+            <value>
+                <fullName>Stroke Unit</fullName>
+                <default>false</default>
+                <label>Stroke Unit</label>
+            </value>
+            <value>
+                <fullName>Outpatient Clinics</fullName>
+                <default>false</default>
+                <label>Outpatient Clinics</label>
+            </value>
+            <value>
+                <fullName>Ambulatory Care</fullName>
+                <default>false</default>
+                <label>Ambulatory Care</label>
+            </value>
+            <value>
+                <fullName>Home Care / Hospital in the Home (HITH)</fullName>
+                <default>false</default>
+                <label>Home Care / Hospital in the Home (HITH)</label>
+            </value>
+            <value>
+                <fullName>Telehealth Services</fullName>
+                <default>false</default>
+                <label>Telehealth Services</label>
+            </value>
+            <value>
+                <fullName>Offender Health / Prison Health</fullName>
+                <default>false</default>
+                <label>Offender Health / Prison Health</label>
+            </value>
+            <value>
+                <fullName>Scrub General</fullName>
+                <default>false</default>
+                <label>Scrub General</label>
+            </value>
+            <value>
+                <fullName>Scout General</fullName>
+                <default>false</default>
+                <label>Scout General</label>
+            </value>
+            <value>
+                <fullName>Scrub - Eyes</fullName>
+                <default>false</default>
+                <label>Scrub - Eyes</label>
+            </value>
+            <value>
+                <fullName>Scrub - Minor Ortho</fullName>
+                <default>false</default>
+                <label>Scrub - Minor Ortho</label>
+            </value>
+            <value>
+                <fullName>Scrub - Major Ortho</fullName>
+                <default>false</default>
+                <label>Scrub - Major Ortho</label>
+            </value>
+            <value>
+                <fullName>Scrub - Spinal</fullName>
+                <default>false</default>
+                <label>Scrub - Spinal</label>
+            </value>
+            <value>
+                <fullName>Scrub - Neurological</fullName>
+                <default>false</default>
+                <label>Scrub - Neurological</label>
+            </value>
+            <value>
+                <fullName>Scrub - Gynae</fullName>
+                <default>false</default>
+                <label>Scrub - Gynae</label>
+            </value>
+            <value>
+                <fullName>Scrub - Plastics</fullName>
+                <default>false</default>
+                <label>Scrub - Plastics</label>
+            </value>
+            <value>
+                <fullName>Scrub - Ears, Nose, Throat (ENT)</fullName>
+                <default>false</default>
+                <label>Scrub - Ears, Nose, Throat (ENT)</label>
+            </value>
+            <value>
+                <fullName>Scrub - Endoscopy</fullName>
+                <default>false</default>
+                <label>Scrub - Endoscopy</label>
+            </value>
+            <value>
+                <fullName>Scrub - Thoracic</fullName>
+                <default>false</default>
+                <label>Scrub - Thoracic</label>
+            </value>
+            <value>
+                <fullName>Scrub - Robotics</fullName>
+                <default>false</default>
+                <label>Scrub - Robotics</label>
+            </value>
+            <value>
+                <fullName>Scrub - Bariatrics</fullName>
+                <default>false</default>
+                <label>Scrub - Bariatrics</label>
+            </value>
+            <value>
+                <fullName>Scrub - Dental</fullName>
+                <default>false</default>
+                <label>Scrub - Dental</label>
+            </value>
+            <value>
+                <fullName>Scrub - Cardiac</fullName>
+                <default>false</default>
+                <label>Scrub - Cardiac</label>
+            </value>
+            <value>
+                <fullName>Scrub - Vascular</fullName>
+                <default>false</default>
+                <label>Scrub - Vascular</label>
+            </value>
+            <value>
+                <fullName>Scrub - Urology</fullName>
+                <default>false</default>
+                <label>Scrub - Urology</label>
+            </value>
+            <value>
+                <fullName>Scrub - Colorectal</fullName>
+                <default>false</default>
+                <label>Scrub - Colorectal</label>
+            </value>
+            <value>
+                <fullName>Scrub - Cesarean</fullName>
+                <default>false</default>
+                <label>Scrub - Cesarean</label>
+            </value>
+            <value>
+                <fullName>Scrub - Pain</fullName>
+                <default>false</default>
+                <label>Scrub - Pain</label>
+            </value>
+            <value>
+                <fullName>Scrub - IVF</fullName>
+                <default>false</default>
+                <label>Scrub - IVF</label>
+            </value>
+            <value>
+                <fullName>Scrub - Dermatology</fullName>
+                <default>false</default>
+                <label>Scrub - Dermatology</label>
+            </value>
+            <value>
+                <fullName>Scrub - Maxillofacial</fullName>
+                <default>false</default>
+                <label>Scrub - Maxillofacial</label>
+            </value>
+            <value>
+                <fullName>Recovery (Post Anaesthetic Recovery)</fullName>
+                <default>false</default>
+                <label>Recovery (Post Anaesthetic Recovery)</label>
+            </value>
+            <value>
+                <fullName>Recovery - Paediatrics</fullName>
+                <default>false</default>
+                <label>Recovery - Paediatrics</label>
+            </value>
+            <value>
+                <fullName>Anaesthetics General</fullName>
+                <default>false</default>
+                <label>Anaesthetics General</label>
+            </value>
+            <value>
+                <fullName>Anaesthetics - Paediatrics</fullName>
+                <default>false</default>
+                <label>Anaesthetics - Paediatrics</label>
+            </value>
+            <value>
+                <fullName>Cardiac Cath Lab - Scrub Scout</fullName>
+                <default>false</default>
+                <label>Cardiac Cath Lab - Scrub Scout</label>
+            </value>
+            <value>
+                <fullName>Cardiac Cath Lab - Recovery</fullName>
+                <default>false</default>
+                <label>Cardiac Cath Lab - Recovery</label>
+            </value>
+            <value>
+                <fullName>Cardiac Cath Lab - Anaesthetics</fullName>
+                <default>false</default>
+                <label>Cardiac Cath Lab - Anaesthetics</label>
+            </value>
+            <value>
+                <fullName>Endoscopy - General</fullName>
+                <default>false</default>
+                <label>Endoscopy - General</label>
+            </value>
+            <value>
+                <fullName>Endoscopy - Recovery</fullName>
+                <default>false</default>
+                <label>Endoscopy - Recovery</label>
+            </value>
+            <value>
+                <fullName>Endoscopy - Anaesthetics</fullName>
+                <default>false</default>
+                <label>Endoscopy - Anaesthetics</label>
+            </value>
+            <value>
+                <fullName>Mental Health - General</fullName>
+                <default>false</default>
+                <label>Mental Health - General</label>
+            </value>
+            <value>
+                <fullName>Mental Health - Paediatrics</fullName>
+                <default>false</default>
+                <label>Mental Health - Paediatrics</label>
+            </value>
+            <value>
+                <fullName>Mental Health - Women&apos;s Services</fullName>
+                <default>false</default>
+                <label>Mental Health - Women&apos;s Services</label>
+            </value>
+            <value>
+                <fullName>Mental Health - ECT</fullName>
+                <default>false</default>
+                <label>Mental Health - ECT</label>
+            </value>
+            <value>
+                <fullName>Mental Health - Aged Mental Health</fullName>
+                <default>false</default>
+                <label>Mental Health - Aged Mental Health</label>
+            </value>
+            <value>
+                <fullName>Mental Health - Drugs &amp; Alcohol</fullName>
+                <default>false</default>
+                <label>Mental Health - Drugs &amp; Alcohol</label>
+            </value>
+            <value>
+                <fullName>Mental Health - Acute Mental Health</fullName>
+                <default>false</default>
+                <label>Mental Health - Acute Mental Health</label>
+            </value>
+            <value>
+                <fullName>Mental Health - Eating Disorders</fullName>
+                <default>false</default>
+                <label>Mental Health - Eating Disorders</label>
+            </value>
+            <value>
+                <fullName>Emergency Department (ED) / A&amp;E</fullName>
+                <default>false</default>
+                <label>Emergency Department (ED) / A&amp;E</label>
+            </value>
+            <value>
+                <fullName>Intensive Care Unit (ICU)</fullName>
+                <default>false</default>
+                <label>Intensive Care Unit (ICU)</label>
+            </value>
+            <value>
+                <fullName>High Dependency Unit (HDU)</fullName>
+                <default>false</default>
+                <label>High Dependency Unit (HDU)</label>
+            </value>
+            <value>
+                <fullName>Coronary Care Unit (CCU)</fullName>
+                <default>false</default>
+                <label>Coronary Care Unit (CCU)</label>
+            </value>
+            <value>
+                <fullName>Neonatal Intensive Care Unit (NICU)</fullName>
+                <default>false</default>
+                <label>Neonatal Intensive Care Unit (NICU)</label>
+            </value>
+            <value>
+                <fullName>Paediatric Intensive Care Unit (PICU)</fullName>
+                <default>false</default>
+                <label>Paediatric Intensive Care Unit (PICU)</label>
+            </value>
+            <value>
+                <fullName>Paediatric Emergency Department (PED) / A&amp;E</fullName>
+                <default>false</default>
+                <label>Paediatric Emergency Department (PED) / A&amp;E</label>
+            </value>
+            <value>
+                <fullName>Immunisation / Vaccination</fullName>
+                <default>false</default>
+                <label>Immunisation / Vaccination</label>
+            </value>
+            <value>
+                <fullName>Health Assessments</fullName>
+                <default>false</default>
+                <label>Health Assessments</label>
+            </value>
+            <value>
+                <fullName>Skin Checks</fullName>
+                <default>false</default>
+                <label>Skin Checks</label>
+            </value>
+            <value>
+                <fullName>General Practice / Primary Care</fullName>
+                <default>false</default>
+                <label>General Practice / Primary Care</label>
+            </value>
+            <value>
+                <fullName>School Nurse</fullName>
+                <default>false</default>
+                <label>School Nurse</label>
+            </value>
+            <value>
+                <fullName>Theatre Technician</fullName>
+                <default>false</default>
+                <label>Theatre Technician</label>
+            </value>
+            <value>
+                <fullName>Maintenance Worker</fullName>
+                <default>false</default>
+                <label>Maintenance Worker</label>
+            </value>
+            <value>
+                <fullName>Storeperson</fullName>
+                <default>false</default>
+                <label>Storeperson</label>
+            </value>
+            <value>
+                <fullName>Chef</fullName>
+                <default>false</default>
+                <label>Chef</label>
+            </value>
+            <value>
+                <fullName>Cook</fullName>
+                <default>false</default>
+                <label>Cook</label>
+            </value>
+            <value>
+                <fullName>Delivery</fullName>
+                <default>false</default>
+                <label>Delivery</label>
+            </value>
+            <value>
+                <fullName>Kitchen</fullName>
+                <default>false</default>
+                <label>Kitchen</label>
+            </value>
+            <value>
+                <fullName>Laundry</fullName>
+                <default>false</default>
+                <label>Laundry</label>
+            </value>
+            <value>
+                <fullName>Orderly</fullName>
+                <default>false</default>
+                <label>Orderly</label>
+            </value>
+            <value>
+                <fullName>Trolleys (Food Delivery)</fullName>
+                <default>false</default>
+                <label>Trolleys (Food Delivery)</label>
+            </value>
+            <value>
+                <fullName>Assistant Cook</fullName>
+                <default>false</default>
+                <label>Assistant Cook</label>
+            </value>
+            <value>
+                <fullName>Catering Supervisor</fullName>
+                <default>false</default>
+                <label>Catering Supervisor</label>
+            </value>
+            <value>
+                <fullName>Instrument Tech (CSSD)</fullName>
+                <default>false</default>
+                <label>Instrument Tech (CSSD)</label>
+            </value>
+            <value>
+                <fullName>Ante Natal</fullName>
+                <default>false</default>
+                <label>Ante Natal</label>
+            </value>
+            <value>
+                <fullName>Caseload Midwife</fullName>
+                <default>false</default>
+                <label>Caseload Midwife</label>
+            </value>
+            <value>
+                <fullName>Housekeeping</fullName>
+                <default>false</default>
+                <label>Housekeeping</label>
+            </value>
+            <value>
+                <fullName>Pantry / Servery</fullName>
+                <default>false</default>
+                <label>Pantry / Servery</label>
+            </value>
+            <value>
+                <fullName>Post Natal</fullName>
+                <default>false</default>
+                <label>Post Natal</label>
+            </value>
+            <value>
+                <fullName>Special Care Nursery</fullName>
+                <default>false</default>
+                <label>Special Care Nursery</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

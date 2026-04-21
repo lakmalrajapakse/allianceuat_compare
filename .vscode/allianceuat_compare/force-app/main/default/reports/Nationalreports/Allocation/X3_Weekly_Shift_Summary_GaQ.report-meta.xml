@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>sirenum__Shift__c.sirenum__Scheduled_Local_Start_Date__c</field>
+    </columns>
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>FK_$sirenum__Site__c.sirenum__Operating_Company__c</field>
+    </columns>
+    <columns>
+        <field>FK_NAME</field>
+    </columns>
+    <columns>
+        <field>sirenum__Shift__c.sirenum__Scheduled_Local_Start_Time__c</field>
+    </columns>
+    <columns>
+        <field>sirenum__Shift__c.sirenum__Scheduled_Local_End_Time__c</field>
+    </columns>
+    <columns>
+        <field>sirenum__Shift__c.sirenum__Contact__c</field>
+    </columns>
+    <customDetailFormulas>
+        <calculatedFormula>IF(
+    (WEEKDAY(sirenum__Shift__c.sirenum__Scheduled_Local_Start_Date__c)) = 1, 
+    text(sirenum__Shift__c.sirenum__Scheduled_Local_Start_Date__c - 6) &amp; &quot; - &quot; &amp; text(sirenum__Shift__c.sirenum__Scheduled_Local_Start_Date__c + 0), 
+IF(
+    (WEEKDAY(sirenum__Shift__c.sirenum__Scheduled_Local_Start_Date__c)) = 2, 
+    text(sirenum__Shift__c.sirenum__Scheduled_Local_Start_Date__c - 0) &amp; &quot; - &quot; &amp; text(sirenum__Shift__c.sirenum__Scheduled_Local_Start_Date__c + 6),
+IF(
+    (WEEKDAY(sirenum__Shift__c.sirenum__Scheduled_Local_Start_Date__c)) = 3, 
+    text(sirenum__Shift__c.sirenum__Scheduled_Local_Start_Date__c - 1) &amp; &quot; - &quot; &amp; text(sirenum__Shift__c.sirenum__Scheduled_Local_Start_Date__c + 5),
+IF(
+    (WEEKDAY(sirenum__Shift__c.sirenum__Scheduled_Local_Start_Date__c)) = 4, 
+    text(sirenum__Shift__c.sirenum__Scheduled_Local_Start_Date__c - 2) &amp; &quot; - &quot; &amp; text(sirenum__Shift__c.sirenum__Scheduled_Local_Start_Date__c + 4),
+IF(
+    (WEEKDAY(sirenum__Shift__c.sirenum__Scheduled_Local_Start_Date__c)) = 5, 
+    text(sirenum__Shift__c.sirenum__Scheduled_Local_Start_Date__c - 3) &amp; &quot; - &quot; &amp; text(sirenum__Shift__c.sirenum__Scheduled_Local_Start_Date__c + 3),
+IF(
+    (WEEKDAY(sirenum__Shift__c.sirenum__Scheduled_Local_Start_Date__c)) = 6, 
+    text(sirenum__Shift__c.sirenum__Scheduled_Local_Start_Date__c - 4) &amp; &quot; - &quot; &amp; text(sirenum__Shift__c.sirenum__Scheduled_Local_Start_Date__c + 2),
+IF(
+    (WEEKDAY(sirenum__Shift__c.sirenum__Scheduled_Local_Start_Date__c)) = 7, 
+    text(sirenum__Shift__c.sirenum__Scheduled_Local_Start_Date__c - 5) &amp; &quot; - &quot; &amp; text(sirenum__Shift__c.sirenum__Scheduled_Local_Start_Date__c + 1),
+    &quot;NA&quot;)))))))</calculatedFormula>
+        <dataType>Text</dataType>
+        <description>Mon-Sun Week</description>
+        <developerName>CDF1</developerName>
+        <label>Mon-Sun Week</label>
+        <scale>2</scale>
+    </customDetailFormulas>
+    <filter>
+        <criteriaItems>
+            <column>sirenum__Shift__c.Schedule_Display_Status__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>completed,shift cancelled filled,shift cancelled,unableto fill</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_$sirenum__Site__c.sirenum__Operating_Company__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notContain</operator>
+            <value>ffs</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>sirenum__Shift__c.Branch_for_reporting__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>alliance nursing - adelaide</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>sirenum__Shift__c.Branch_for_reporting__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>sirenum__Shift__c.Schedule_Display_Status__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>CDF1</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>2_Weekly Shift Summary</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$sirenum__Shift__c@sirenum__Shift__c.sirenum__Site__c</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>sirenum__Shift__c.sirenum__Scheduled_Local_Start_Date__c</dateColumn>
+        <endDate>2026-06-30</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2025-07-01</startDate>
+    </timeFrameFilter>
+</Report>

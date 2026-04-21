@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Type --></label>
+    <name>TypeSlot__c</name>
+    <picklistValues>
+        <masterLabel>AM - Available</masterLabel>
+        <translation><!-- AM - Available --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AM - Unavailable</masterLabel>
+        <translation><!-- AM - Unavailable --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ND - Available</masterLabel>
+        <translation><!-- ND - Available --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ND - Unavailable</masterLabel>
+        <translation><!-- ND - Unavailable --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PM - Available</masterLabel>
+        <translation><!-- PM - Available --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PM - Unavailable</masterLabel>
+        <translation><!-- PM - Unavailable --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

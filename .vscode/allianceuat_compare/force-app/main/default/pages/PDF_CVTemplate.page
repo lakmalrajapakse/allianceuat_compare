@@ -1,0 +1,298 @@
+<apex:page standardStylesheets="false" 
+  standardController="Contact" 
+  extensions="PDF_CVTemplateExtension" 
+  renderAs="pdf"
+  applyBodyTag="false">
+  <apex:variable var="record" value="{!record}" />
+  <head>
+    <style type="text/CSS" media="print">
+        @page {
+            margin-top: 1cm;
+            margin-bottom: 2cm;
+            /* @top-center {
+            content: element(header);
+            } */
+            /* @bottom-left{ */
+            @bottom-center{
+            content: element(footer);
+            }
+            @bottom-right{
+            font-size: 12px;
+            font-family: Arial, Helvetica, sans-serif;
+            content: "Page " counter(page) " of " counter(pages);
+            }
+        }
+
+        div.header {
+            height: auto;
+            display: block;
+            /* position: running(header); */
+        }
+
+        div.footer {
+            height: auto;
+            display: block;
+            position: running(footer);
+        }
+
+        table { page-break-inside:auto }
+        thead { display:table-header-group }
+        tfoot { display:table-footer-group }
+
+        
+        .td12{
+            width: 12.5%;
+        }
+        .td25{
+            width: 25%;
+        }
+        .td30{
+            width: 30%;
+        }
+        .td35{
+            width: 35%;
+        }
+        .td40{
+            width: 40%;
+        }
+        .td70{
+            width: 70%;
+        }
+        .td75{
+            width: 75%;
+        }
+
+        table{
+            /* border:1px dashed blue; */
+        }
+
+        .detailTable{
+            margin: 30px 0px;
+            break-inside: avoid;
+        }
+
+        .detailTable tr{
+            /* border:1px dashed Black; */
+            /* margin:5px 0px 5px 0px; */
+            margin: 0px;
+            /* background-color: lightblue; */
+            /* background-color: orange; */
+            /* font-size: 14px; */
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .detailTable tr th{
+            border:1px solid Black;
+            background-color: rgb(146, 194, 211);
+            /* background-color: orange; */
+            padding: 10px 10px;
+            /* font-size: 14px; */
+            font-family: Arial, Helvetica, sans-serif;
+            break-inside: avoid;
+            page-break-inside: avoid;
+        }
+
+        .detailTable td{
+            border: 1px solid black; 
+            padding: 10px 10px;
+            /* margin: 0px; */
+            break-inside: avoid;
+            page-break-inside: avoid;
+        }
+
+        .footerTable td{
+        padding: 1px 10px;
+        margin: 10px;
+        /* border:1px dotted red;  */
+        }
+
+        .title{        
+            color: black;
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            padding:5px;
+        }
+        .titleBold{        
+            color: black;
+            padding:10px;
+            font-size: 20px;
+            font-weight:bold;
+            font-family: Arial, Helvetica, sans-serif;
+            padding:5px;
+        }
+        .largetext{
+            /* color: #7ed3f6; */
+            font-size: 24px;
+            font-family: Arial, Helvetica, sans-serif;
+            padding-top:10px;
+        }
+        .largetextbold{
+            /* color: #7ed3f6; */
+            font-size: 24px;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+            padding-top:10px;
+        }
+        .standardtext{
+            /* color: #017dc3; */
+            font-size: 14px;
+            font-family: Arial, Helvetica, sans-serif;
+            padding-top: 10px;
+        }
+        .boldtext{
+            /* color: #017dc3; */
+            font-size: 14px;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+            padding-top: 10px;
+        }
+        .smalltext{
+            color: black;
+            font-size: 12px;
+            font-family: Arial, Helvetica, sans-serif;
+            padding-top: 2px;
+        }
+    </style>
+  </head>
+    <div class="header">
+      <table style="width:100%" cellspacing="0">
+        <tr>
+            <td>
+                <div class="largetext" style="text-align:left">CV Summary Sheet</div>
+              </td>
+            <td>
+              <div style="text-align:right">
+                <img src="{!$Resource.Logo_Alliance_RRH}" width="200px"/>
+              </div>
+            </td>
+        </tr>
+      </table>
+    </div>
+    <div class="footer" style="">
+        <table class="footerTable" style="width:100%" cellspacing="0">
+        <tr style="text-align:right">
+          <td class="smalltext" style="">{!record.Name} - CV</td>
+        </tr>
+        <tr style="text-align:right">
+            <td class="smalltext" style="">CV submitted by Alliance Rural &amp; Remote Health</td>
+          </tr>
+          <tr style="text-align:right">
+            <!-- URL -->
+            <td class="smalltext" style="">{!branchEmailAddress}</td> 
+          </tr>
+          <!-- <tr style="text-align:right"> -->
+            <!-- Page Number -->
+            <!-- <td class="smalltext" style="">Page x of x</td> 
+          </tr> -->
+       </table>
+    </div>
+    <!-- Contact Details  -->
+    <div>
+        <table class="detailTable" style="width:100%" cellspacing="0">
+            <tr class="standardtext">
+                <!-- <td class="td35" style="background-color: lightblue;">Nurse</td> -->
+                <th class="td35" style="background-color: lightblue;">Name</th>
+                <td class="td65">{!record.Name}</td>
+            </tr>
+            <tr class="standardtext">
+                <th class="td35">Designation</th>
+                <td class="td65">TEST</td>
+            </tr>
+            <tr class="standardtext">
+                <th class="td35">AHPHA Number</th>
+                <td class="td65">{!ahpraNumbers}</td>
+            </tr>
+        </table>
+    </div>
+    <!-- Clinical Skills Summary  -->
+    <div>
+        <table class="detailTable" style="width:100%" cellspacing="0">
+            <!-- <tr class="standardtext" style="width:100%">
+                <th colspan="4">Clinical Skills Summary</th>
+            </tr>
+            <tr class="standardtext" style="width:100%">
+                <td class="td25">TEST</td>
+                <td class="td25">TEST</td>
+                <td class="td25">TEST</td>
+                <td class="td25">TEST</td>
+            </tr> -->
+            <tr class="standardtext" style="width:100%">
+                <th colspan="1">Clinical Skills Summary</th>
+            </tr>
+            <!-- <tr class="standardtext" style="width:100%">
+                <td class="td25">TEST</td>
+                <td class="td25">TEST</td>
+                <td class="td25">TEST</td>
+                <td class="td25">TEST</td>
+            </tr> -->
+            <apex:outputText escape="false" value="{!clinicalSkills}" /> 
+        </table>
+    </div>
+    <!-- Qualifications  -->
+    <div>
+        <table class="detailTable" style="width:100%" cellspacing="0">
+            <tr class="standardtext" style="width:100%" >
+                <th class="td75">Qualifications</th>
+                <th class="td25" colspan="2">Completed</th>
+            </tr>
+            <!-- <tr class="standardtext" style="width:100%">
+                <td class="td75">TEST</td>
+                <td class="td25">TEST</td>
+
+            </tr> -->
+            <apex:outputText escape="false" value="{!educationHist}" />          
+        </table>
+    </div>
+    <!-- Major Professional Development  -->
+    <div>
+        <table class="detailTable" style="width:100%" cellspacing="0">
+            <tr class="standardtext" style="width:100%">
+                <th class="td75">Major Professional Development</th>
+                <th class="td25">Completed</th>
+            </tr>
+            <!-- <tr class="standardtext" style="width:100%">
+                <td class="td75">TEST</td>
+                <td class="td25">TEST</td>
+            </tr> -->
+            <apex:outputText escape="false" value="{!profDev}" />    
+        </table>
+    </div>
+    <!-- Employment History  -->
+    <div>
+        <table class="detailTable" style="width:100%" cellspacing="0">
+            <tr class="standardtext" style="width:100%">
+                <th colspan="4">Employment History at a Glance</th>
+            </tr>
+            <!-- <tr class="standardtext" style="width:100%">
+                <td colspan="3">TEST DETAILS</td>
+            </tr> -->
+            <!-- <apex:repeat value="{!empHists}" var ="empHists"> -->
+            <!-- <tr>
+                <td> -->
+                    <apex:outputText escape="false" value="{!employmentHist}" /> 
+                <!-- </td>
+            </tr> -->
+            <!-- </apex:repeat> -->
+        </table>
+    </div>
+    <!-- Recent Contracts  -->
+    <div>
+        <table class="detailTable" style="width:100%" cellspacing="0">
+            <tr class="standardtext" style="width:100%;page-break-inside:avoid;">
+                <th colspan="4">Recent Alliance Rural &amp; Remote Health Nurse Contracts</th>
+            </tr>
+            <!-- <tr class="standardtext" style="width:100%">
+                <td class="td25">TEST</td>
+                <td class="td25">TEST</td>
+                <td class="td25">TEST</td>
+                <td class="td25">TEST</td>
+            </tr> -->
+            <apex:outputText escape="false" value="{!recentContracts}" />    
+        </table>
+    </div>
+
+    <div>
+        <apex:outputText escape="false" value="{!resumeCV}" />    
+    </div>
+
+</apex:page>

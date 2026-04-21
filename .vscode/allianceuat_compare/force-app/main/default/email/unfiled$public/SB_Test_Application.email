@@ -1,0 +1,12 @@
+Test email re 3b form to pass application details to :
+
+Record ID: {!TR1__Application_V2__c.Id}
+Application Number: {!TR1__Application_V2__c.Name}
+Applicant: {!TR1__Application_V2__c.TR1__Applicant__c}
+Applicant ID: {!TR1__Application_V2__c.TR1__ApplicantId__c}
+
+Detail Link: {!TR1__Application_V2__c.Link}
+
+Appv1 recordID - {!TR1__Application__c.Id}
+Job ID - {!TR1__Job__c.Id}
+Job Title - {!TR1__Job__c.TR1__Job_Title__c}

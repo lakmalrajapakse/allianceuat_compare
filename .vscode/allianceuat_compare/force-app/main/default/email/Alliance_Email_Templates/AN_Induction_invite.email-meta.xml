@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>AN - Induction invite</name>
+    <style>none</style>
+    <subject>Time to book your Alliance Nursing Induction Session</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+Your first Alliance shift is just around the corner! But first you need to complete the Alliance Nursing Induction. You can select online or to visit one of our branches for an in-person induction.
+
+Start by selecting a day and time that suits you:
+
+BOOK MY INDUCTION
+
+If you come into one of our offices, you will leave with your new Alliance Nursing uniform, ID badge and your first shift!
+
+We are looking forward to working with you!
+
+Kind regards,
+Your team at Alliance Nursing</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

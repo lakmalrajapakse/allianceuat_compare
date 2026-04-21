@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Occupation --></label>
+    <name>Occupation__c</name>
+    <picklistValues>
+        <masterLabel>CSSD Attendant</masterLabel>
+        <translation><!-- CSSD Attendant --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Catering Supervisor</masterLabel>
+        <translation><!-- Catering Supervisor --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cleaner</masterLabel>
+        <translation><!-- Cleaner --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Clinical Midwife</masterLabel>
+        <translation><!-- Clinical Midwife --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Clinical Midwife Consultant</masterLabel>
+        <translation><!-- Clinical Midwife Consultant --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Clinical Nurse</masterLabel>
+        <translation><!-- Clinical Nurse --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Clinical Nurse Consultant</masterLabel>
+        <translation><!-- Clinical Nurse Consultant --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cook</masterLabel>
+        <translation><!-- Cook --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Director of Nursing</masterLabel>
+        <translation><!-- Director of Nursing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Director of Nursing - Midwifery</masterLabel>
+        <translation><!-- Director of Nursing - Midwifery --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Enrolled Nurse</masterLabel>
+        <translation><!-- Enrolled Nurse --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Executive Director of Nursing</masterLabel>
+        <translation><!-- Executive Director of Nursing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Executive Director of Nursing / Midwifery</masterLabel>
+        <translation><!-- Executive Director of Nursing / Midwifery --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Facility Manager</masterLabel>
+        <translation><!-- Facility Manager --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Food Service Assistant</masterLabel>
+        <translation><!-- Food Service Assistant --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Kitchen Hand</masterLabel>
+        <translation><!-- Kitchen Hand --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Maintenance Worker</masterLabel>
+        <translation><!-- Maintenance Worker --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Midwifery Unit Manager</masterLabel>
+        <translation><!-- Midwifery Unit Manager --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Nurse Unit Manager</masterLabel>
+        <translation><!-- Nurse Unit Manager --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Nursing Assistant</masterLabel>
+        <translation><!-- Nursing Assistant --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Patient Services Assistant (PSA)</masterLabel>
+        <translation><!-- Patient Services Assistant (PSA) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Personal Care Worker</masterLabel>
+        <translation><!-- Personal Care Worker --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Registered Midwife</masterLabel>
+        <translation><!-- Registered Midwife --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Registered Nurse</masterLabel>
+        <translation><!-- Registered Nurse --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Theatre Technician</masterLabel>
+        <translation><!-- Theatre Technician --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

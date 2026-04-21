@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>What_is_your_Australian_Residency_Status__c</fullName>
+    <label>What is your Australian Residency Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Australian Citizen</fullName>
+                <default>false</default>
+                <label>Australian Citizen</label>
+            </value>
+            <value>
+                <fullName>New Zealand Citizen</fullName>
+                <default>false</default>
+                <label>New Zealand Citizen</label>
+            </value>
+            <value>
+                <fullName>Permanent Resident</fullName>
+                <default>false</default>
+                <label>Permanent Resident</label>
+            </value>
+            <value>
+                <fullName>Non Resident/VISA</fullName>
+                <default>false</default>
+                <label>Non Resident/VISA</label>
+            </value>
+            <value>
+                <fullName>None</fullName>
+                <default>false</default>
+                <label>None</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

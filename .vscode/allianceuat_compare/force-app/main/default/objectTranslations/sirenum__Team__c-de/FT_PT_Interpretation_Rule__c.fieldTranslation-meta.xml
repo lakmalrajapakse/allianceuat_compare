@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- FT/PT Interpretation Rule --></label>
+    <name>FT_PT_Interpretation_Rule__c</name>
+    <relationshipLabel><!-- Job Roles (FT/PT Interpretation Rule) --></relationshipLabel>
+</CustomFieldTranslation>

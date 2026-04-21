@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>AN - Job board application confirmation</name>
+    <style>none</style>
+    <subject>Thank you, we&apos;ve received your application</subject>
+    <textOnly>THANK YOU, WE&apos;VE RECEIVED YOUR APPLICATION.
+
+Hi {!Contact.FirstName},
+
+Thanks for applying for the {!TR1__Job_Role__c.TR1__Role__c} role. We are looking forward to reviewing your application.
+
+You will soon receive an invite to start building your Alliance Profile. If you already have one, you will only be asked to add details specific to this role.
+
+If you have any questions, please feel free to call our friendly staff on 1300 034 494.
+
+We are looking forward to working with you!
+
+Kind regards,
+Your team at Alliance Nursing</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>AN - Payroll details</name>
+    <style>none</style>
+    <subject>Let&apos;s get you pay ready!</subject>
+    <textOnly>PAYROLL DETAILS.
+
+Hi {!User.FirstName},
+
+Thanks for completing the Alliance Onbaording packs. Next step is to setup your payroll details. Once we&apos;ve got that, we&apos;ll generate your contract and get you booked in for Induction. After that, you&apos;re ready to accept shifts!
+
+Please head over to the Portal to update your profile: {Link to candidate portal}
+
+If you have any questions, please don&apos;t hesitate to call us on 1300 034 494.
+
+Kind regards,
+Your team at Alliance Nursing</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

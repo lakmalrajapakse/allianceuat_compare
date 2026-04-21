@@ -1,0 +1,68 @@
+{
+  "appPageId" : "d9ce9f69-0e14-4b11-9233-6c5ce091d546",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "5f5875b2-737f-4e88-822b-8b33f36b81cc",
+  "label" : "Expense Claims",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "db03ede7-9e56-42f9-b409-8c4816e73f7b",
+          "columns" : [ {
+            "UUID" : "4c8356b2-1aba-49b0-974e-6f014cd341cb",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "db03ede7-9e56-42f9-b409-8c4816e73f7b",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : { },
+          "componentName" : "tc9_ec:empCommExpenses",
+          "id" : "4fe43721-a9d2-4f81-add0-33d8d69c6f7a",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "4c8356b2-1aba-49b0-974e-6f014cd341cb",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "5e1ae816-f5b8-48c5-8c79-885c40454db5",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Expense Claims"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "a861cfdc-0ded-46ca-9dce-62486ca6b6e7",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "ef7ad55a-7099-4ab5-9f8d-36b5fbc570e8",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-expense-claims"
+}

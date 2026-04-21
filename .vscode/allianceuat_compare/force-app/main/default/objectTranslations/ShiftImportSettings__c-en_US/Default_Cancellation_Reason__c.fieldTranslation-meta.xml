@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Must be present in Picklist Value Sets -&gt; Cancellation Reasons for versions of sirenum higher than 1.185 --></help>
+    <label><!-- Default Cancellation Reason --></label>
+    <name>Default_Cancellation_Reason__c</name>
+</CustomFieldTranslation>

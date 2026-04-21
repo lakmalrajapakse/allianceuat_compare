@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ID_Collection_List__c</fullName>
+    <label>ID Collection List</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Passport</fullName>
+                <default>false</default>
+                <label>Passport</label>
+            </value>
+            <value>
+                <fullName>Driver’s License</fullName>
+                <default>false</default>
+                <label>Driver’s License</label>
+            </value>
+            <value>
+                <fullName>WWCC</fullName>
+                <default>false</default>
+                <label>WWCC</label>
+            </value>
+            <value>
+                <fullName>Any Government issued ID with your photo</fullName>
+                <default>false</default>
+                <label>Any Government issued ID with your photo</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

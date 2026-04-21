@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Preferred type of accomodation --></label>
+    <name>Preferred_type_of_accomodation__c</name>
+    <picklistValues>
+        <masterLabel>Airbnb</masterLabel>
+        <translation><!-- Airbnb --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>On-site accommodation</masterLabel>
+        <translation><!-- On-site accommodation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>RV</masterLabel>
+        <translation><!-- RV --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>hostel</masterLabel>
+        <translation><!-- hostel --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>hotel</masterLabel>
+        <translation><!-- hotel --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

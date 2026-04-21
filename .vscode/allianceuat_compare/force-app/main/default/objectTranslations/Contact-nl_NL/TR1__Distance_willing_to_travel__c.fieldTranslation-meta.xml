@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Distance willing to travel --></label>
+    <name>TR1__Distance_willing_to_travel__c</name>
+</CustomFieldTranslation>

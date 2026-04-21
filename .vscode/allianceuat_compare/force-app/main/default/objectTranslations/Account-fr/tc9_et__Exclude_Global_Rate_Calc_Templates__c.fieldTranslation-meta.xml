@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Indicates whether global rate calculator templates can be applied to Assignments related to this Account record. --></help>
+    <label><!-- Exclude Global Rate Calc Templates? --></label>
+    <name>tc9_et__Exclude_Global_Rate_Calc_Templates__c</name>
+</CustomFieldTranslation>

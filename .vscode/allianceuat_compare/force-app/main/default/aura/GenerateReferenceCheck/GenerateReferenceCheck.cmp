@@ -1,0 +1,4 @@
+<aura:component implements="force:hasRecordId,force:lightningQuickAction" controller="PDFGenerateReferenceCheck">
+    <aura:handler name="init" value="{!this}" action="{!c.onInit}"/>
+    <p>Generating documents, please wait</p>
+</aura:component>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email to shift approval manager with new PIN</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>AN - PIN Creation Email</name>
+    <style>none</style>
+    <subject>Your shift approval PIN</subject>
+    <textOnly>YOUR ALLIANCE NURSING SHIFT APPROVAL PIN CODE.
+
+Hi {!Contact.FirstName},
+
+You&apos;ve been appointed as a Shift Approval Manager by your employer. This means you’re now authorised to approve timesheets on behalf of your facility for Alliance Nursing on-hire staff.
+
+To approve a timesheet in the Alliance Connect app, you need your personal PIN code:
+
+{!Contact.Shift_Approval_PIN_Number__c}
+
+Simply review the timesheet in the Alliance Connect app. Enter your PIN and signature. Done!
+
+If you have any questions, feel free to reach out to us at 1300 034 494 — we’re here to help!
+
+Kind regards,
+Your team at Alliance Nursing</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

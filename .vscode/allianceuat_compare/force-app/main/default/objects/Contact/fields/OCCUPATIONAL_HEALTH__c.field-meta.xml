@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OCCUPATIONAL_HEALTH__c</fullName>
+    <inlineHelpText>OCCUPATIONAL HEALTH	Have you ever had:</inlineHelpText>
+    <label>OCCUPATIONAL HEALTH: Have you ever had:</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Lower back, neck or thoracic spinal pain or strain (including back surgery)?</fullName>
+                <default>false</default>
+                <label>Lower back, neck or thoracic spinal pain or strain (including back surgery)?</label>
+            </value>
+            <value>
+                <fullName>Hip, knee or ankle pain or strain (including Sciatica)?</fullName>
+                <default>false</default>
+                <label>Hip, knee or ankle pain or strain (including Sciatica)?</label>
+            </value>
+            <value>
+                <fullName>Shoulder or neck or arm/wrist pain or strain?</fullName>
+                <default>false</default>
+                <label>Shoulder or neck or arm/wrist pain or strain?</label>
+            </value>
+            <value>
+                <fullName>Tenosynovitis, carpel tunnel or RSI?</fullName>
+                <default>false</default>
+                <label>Tenosynovitis, carpel tunnel or RSI?</label>
+            </value>
+            <value>
+                <fullName>Arthritis, rheumatism or painful joints or other musculoskeletal pain?</fullName>
+                <default>false</default>
+                <label>Arthritis, rheumatism or painful joints or other musculoskeletal pain?</label>
+            </value>
+            <value>
+                <fullName>Any broken bones or torn cartilage that impact your ability to carry out day to day tasks?</fullName>
+                <default>false</default>
+                <label>Any broken bones or torn cartilage that impact your ability to carry out day to day tasks?</label>
+            </value>
+            <value>
+                <fullName>Scars/deformations which may restrict physical movement?</fullName>
+                <default>false</default>
+                <label>Scars/deformations which may restrict physical movement?</label>
+            </value>
+            <value>
+                <fullName>Hernia?</fullName>
+                <default>false</default>
+                <label>Hernia?</label>
+            </value>
+            <value>
+                <fullName>Diabetes?</fullName>
+                <default>false</default>
+                <label>Diabetes?</label>
+            </value>
+            <value>
+                <fullName>Epilepsy, dizzy/giddy/fainting spells, blackouts or neurological disorder?</fullName>
+                <default>false</default>
+                <label>Epilepsy, dizzy/giddy/fainting spells, blackouts or neurological disorder?</label>
+            </value>
+            <value>
+                <fullName>Headaches/Migraines?</fullName>
+                <default>false</default>
+                <label>Headaches/Migraines?</label>
+            </value>
+            <value>
+                <fullName>Mental health condition including severe anxiety, PTSD  and/or depression that may impact your abilities to carry out your professional tasks?</fullName>
+                <default>false</default>
+                <label>Mental health condition including severe anxiety, PTSD  and/or depression that may impact your abilities to carry out your professional tasks?</label>
+            </value>
+            <value>
+                <fullName>High blood pressure, chest pain or heart or circulatory trouble?</fullName>
+                <default>false</default>
+                <label>High blood pressure, chest pain or heart or circulatory trouble?</label>
+            </value>
+            <value>
+                <fullName>Asthma, chronic bronchitis or other chest problems?</fullName>
+                <default>false</default>
+                <label>Asthma, chronic bronchitis or other chest problems?</label>
+            </value>
+            <value>
+                <fullName>Auto Immune Disease or on immunosuppressant medication?</fullName>
+                <default>false</default>
+                <label>Auto Immune Disease or on immunosuppressant medication?</label>
+            </value>
+            <value>
+                <fullName>Nail infections, or chronic skin infections?</fullName>
+                <default>false</default>
+                <label>Nail infections, or chronic skin infections?</label>
+            </value>
+            <value>
+                <fullName>Eczema, dermatitis, hives or other skin rashes or complaints?</fullName>
+                <default>false</default>
+                <label>Eczema, dermatitis, hives or other skin rashes or complaints?</label>
+            </value>
+            <value>
+                <fullName>Have you ever been diagnosed with latex allergy?</fullName>
+                <default>false</default>
+                <label>Have you ever been diagnosed with latex allergy?</label>
+            </value>
+            <value>
+                <fullName>Any impairment with vision or hearing?</fullName>
+                <default>false</default>
+                <label>Any impairment with vision or hearing?</label>
+            </value>
+            <value>
+                <fullName>Have you ever sustained a work-related injury or illness? If so, how was it addressed, and what preventative measures have you taken since then?</fullName>
+                <default>false</default>
+                <label>Have you ever sustained a work-related injury or illness? If so, how was it addressed, and what preventative measures have you taken since then?</label>
+            </value>
+            <value>
+                <fullName>Have you had a full medical clearance for any injury identified in these questions?</fullName>
+                <default>false</default>
+                <label>Have you had a full medical clearance for any injury identified in these questions?</label>
+            </value>
+            <value>
+                <fullName>Have you ever had difficulties wearing PPE including closed in shoes?</fullName>
+                <default>false</default>
+                <label>Have you ever had difficulties wearing PPE including closed in shoes?</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

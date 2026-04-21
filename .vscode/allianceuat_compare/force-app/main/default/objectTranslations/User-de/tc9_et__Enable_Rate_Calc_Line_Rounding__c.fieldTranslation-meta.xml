@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Enable Rate Calc Line Rounding --></label>
+    <name>tc9_et__Enable_Rate_Calc_Line_Rounding__c</name>
+</CustomFieldTranslation>

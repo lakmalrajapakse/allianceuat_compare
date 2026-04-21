@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Availability_Additional_Notes__c</fullName>
+    <description>Notes from the candidate with additional details about their contracting availability</description>
+    <inlineHelpText>Notes from the candidate with additional details about their contracting availability</inlineHelpText>
+    <label>Availability Additional Notes</label>
+    <length>32768</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>LongTextArea</type>
+    <visibleLines>30</visibleLines>
+</CustomField>

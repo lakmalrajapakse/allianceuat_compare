@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>sirenum__Employee_Request__c$sirenum__Contact__c</field>
+    </columns>
+    <columns>
+        <field>sirenum__Employee_Request__c$sirenum__Contact__c.Classification__c</field>
+    </columns>
+    <columns>
+        <field>sirenum__Employee_Request__c$sirenum__Contact__c.MobilePhone</field>
+    </columns>
+    <description>TEMPORARY ONLY</description>
+    <filter>
+        <criteriaItems>
+            <column>sirenum__Employee_Request__c$sirenum__Type__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>AM - Available,PM - Available,ND - Available</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>sirenum__Employee_Request__c$sirenum__Contact__c.Branch__c.Branch_Name__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Alliance Nursing - Adelaide</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>sirenum__Employee_Request__c$sirenum__Contact__c.Branch__c.Branch_Name__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <field>sirenum__Employee_Request__c$sirenum__Local_Start_Date__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>sirenum__Employee_Request__c$sirenum__Type__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>SA Nursing  Available Active Candidate</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Employee_Requests_and_Shifts__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>false</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>sirenum__Employee_Request__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_NEXT7</interval>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Type --></label>
+    <name>Type__c</name>
+    <picklistValues>
+        <masterLabel>Boolean Match</masterLabel>
+        <translation><!-- Boolean Match --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Date Match</masterLabel>
+        <translation><!-- Date Match --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Picklist Match</masterLabel>
+        <translation><!-- Picklist Match --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Related Object Match</masterLabel>
+        <translation><!-- Related Object Match --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Text Match</masterLabel>
+        <translation><!-- Text Match --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

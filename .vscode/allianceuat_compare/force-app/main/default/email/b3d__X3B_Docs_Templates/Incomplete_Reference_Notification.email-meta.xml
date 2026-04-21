@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Incomplete Reference Notification</description>
+    <encodingKey>UTF-8</encodingKey>
+    <letterhead>b3d__X3B_Docs_Letterhead</letterhead>
+    <name>Incomplete Reference Notification</name>
+    <style>freeForm</style>
+    <subject>Incomplete Reference Notification</subject>
+    <textOnly>Dear {!Contact.OwnerFullName},
+
+
+A Referee has not completed their reference form for {!Contact.Name}.
+
+
+Please click on the link below and go to the related Tab &gt; Reference to see the completed References.
+
+
+
+{!Contact.Link}
+
+
+
+
+Thank you
+
+
+Alliance Team</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <aggregates>
+        <calculatedFormula>RowCount</calculatedFormula>
+        <datatype>percent</datatype>
+        <developerName>FORMULA1</developerName>
+        <isActive>false</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>Category %</masterLabel>
+        <scale>2</scale>
+    </aggregates>
+    <aggregates>
+        <calculatedFormula>RowCount / PARENTGROUPVAL(RowCount,sirenum__Shift__c.sirenum__Scheduled_Local_Start_Date__c)</calculatedFormula>
+        <datatype>percent</datatype>
+        <developerName>FORMULA2</developerName>
+        <downGroupingContext>BucketField_72384899</downGroupingContext>
+        <isActive>true</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>Summary %</masterLabel>
+        <scale>2</scale>
+    </aggregates>
+    <buckets>
+        <bucketType>picklist</bucketType>
+        <developerName>BucketField_72384899</developerName>
+        <masterLabel>Shift Category</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <otherBucketLabel>Other</otherBucketLabel>
+        <sourceColumnName>sirenum__Shift__c$sirenum__CancellationReason__c</sourceColumnName>
+        <useOther>true</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Employee Withdrew</sourceValue>
+            </sourceValues>
+            <value>Candidate Withdrawal</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Facility Beds Closed / Surgery Cancelled</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Facility Booked filled by other Agency</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Facility Booking Error</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Facility Booking Filled Internally</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Facility Cancelled Not Required</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Facility Pre-bookings Cancelled</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Facility Cancelled on Arrival</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Facility Member DNS</sourceValue>
+            </sourceValues>
+            <value>Facility Cancellation</value>
+        </values>
+    </buckets>
+    <chart>
+        <backgroundColor1>#FFFFFF</backgroundColor1>
+        <backgroundColor2>#FFFFFF</backgroundColor2>
+        <backgroundFadeDir>Diagonal</backgroundFadeDir>
+        <chartSummaries>
+            <axisBinding>y</axisBinding>
+            <column>RowCount</column>
+        </chartSummaries>
+        <chartType>LineGrouped</chartType>
+        <enableHoverLabels>false</enableHoverLabels>
+        <expandOthers>true</expandOthers>
+        <groupingColumn>sirenum__Shift__c$sirenum__Scheduled_Local_Start_Date__c</groupingColumn>
+        <legendPosition>Right</legendPosition>
+        <location>CHART_BOTTOM</location>
+        <secondaryGroupingColumn>BucketField_72384899</secondaryGroupingColumn>
+        <showAxisLabels>true</showAxisLabels>
+        <showPercentage>false</showPercentage>
+        <showTotal>false</showTotal>
+        <showValues>false</showValues>
+        <size>Medium</size>
+        <summaryAxisRange>Auto</summaryAxisRange>
+        <textColor>#000000</textColor>
+        <textSize>12</textSize>
+        <titleColor>#000000</titleColor>
+        <titleSize>18</titleSize>
+    </chart>
+    <columns>
+        <field>sirenum__Shift__c$Name</field>
+    </columns>
+    <columns>
+        <field>sirenum__Shift__c$Schedule_Display_Status__c</field>
+    </columns>
+    <columns>
+        <field>sirenum__Shift__c$sirenum__CancellationReason__c</field>
+    </columns>
+    <filter>
+        <booleanFilter>(1 OR 2) AND 3 AND 4 AND 5</booleanFilter>
+        <criteriaItems>
+            <column>sirenum__Shift__c$Schedule_Display_Status__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Shift Cancelled Filled</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>sirenum__Shift__c$sirenum__Approved_By_Client__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value></value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>sirenum__Shift__c$sirenum__CancellationReason__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value>User Error</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>sirenum__Shift__c$sirenum__Site__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value></value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>sirenum__Shift__c$sirenum__Team__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value></value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>sirenum__Shift__c$Branch_for_reporting__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Week</dateGranularity>
+        <field>sirenum__Shift__c$sirenum__Scheduled_Local_Start_Date__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_72384899</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Withdrawal Rate</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Shifts_Custom__c</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>sirenum__Shift__c$sirenum__Scheduled_Local_Start_Date__c</dateColumn>
+        <interval>INTERVAL_LAST30</interval>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- How are workers made aware of OH&amp;S issues/responsibilities? Is this documented in procedures? --></help>
+    <label><!-- OHSAwareness Process --></label>
+    <name>OHSAwareness_Process__c</name>
+</CustomFieldTranslation>

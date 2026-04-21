@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>interfere_with_your_ability_to_attend_w__c</fullName>
+    <defaultValue>false</defaultValue>
+    <inlineHelpText>Do you have any recurrent health problems that may interfere with your ability to attend work or perform your role? eg difficulties with shiftwork, drive a car</inlineHelpText>
+    <label>interfere with your ability to attend w</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,244 @@
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:v="urn:schemas-microsoft-com:vml">
+<head><meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
+	<title>Alliance Nursing - Email Template</title>
+	<!--[if gte mso 9]><xml><o:OfficeDocumentSettings><o:AllowPNG></o:AllowPNG><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link href="https://fonts.googleapis.com" rel="preconnect" />
+	<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&amp;family=Roboto&amp;display=swap" rel="stylesheet" />
+	<style type="text/css">@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&amp;family=Roboto&amp;display=swap');
+    table {
+      border-collapse: collapse;
+    }
+    td {
+      border-collapse: collapse;
+    }
+    @font-face {
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 400;
+      src: local('Roboto'), local('Roboto'), url('https://fonts.gstatic.com/s/roboto/v27/KFOmCnqEu92Fr1Mu72xKKTU1Kvnz.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 900;
+      src: local('Montserrat'), local('Montserrat'), url('https://fonts.gstatic.com/s/montserrat/v15/JTURjIg1_i6t8kCHKm45_epG3gTD_vx3rCubqg.woff2') format('woff2');
+    }
+	</style>
+</head>
+<body style="background-color: #f6f6f6;">
+<table bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" style="padding:10px;background-color:#ffffff;" width="100%">
+	<tbody>
+		<tr>
+			<td align="center" bgcolor="#f6f6f6">
+			<table border="0" cellpadding="0" cellspacing="0" class="EMAIL-BODY" style="background-color:#ffffff; margin: 0; font-family:'Roboto', sans-serif;font-size:1px;border-collapse: collapse;width:600;" width="600">
+				<tbody>
+					<tr class="SECTION-HEADER">
+						<td bgcolor="#ffffff" style="padding:0;height:146px;background-color:#ffffff;" width="100%">
+						<p style="mso-table-lspace:0;mso-table-rspace:0;margin:0;"><a href="#0"><img alt=" " src="https://www.allianceruralremote.com.au/ANR/media/media-library/Email%20banners/Alliance-Rural-Remote-Email-header.jpg" /></a></p>
+						</td>
+					</tr>
+					<tr>
+						<td style="height:30px">&nbsp;</td>
+					</tr>
+					<tr class="SECTION" style="background-color: #ffffff;">
+						<td align="left" bgcolor="#ffffff" style="padding: 0 0 0 45px;">
+						<table border="0" cellpadding="0" cellspacing="0" width="510">
+							<tbody>
+								<tr>
+									<td>
+									<h1 style="mso-table-lspace:0;mso-table-rspace:0;margin:0;font-size:30px;line-height:37px;color:#007DC3;font-weight:900;font-family:'Montserrat','Arial Black','Arial',sans-serif;">CONTRACT OFFER FOR REVIEW.</h1>
+									</td>
+								</tr>
+								<tr>
+									<td style="height:20px">&nbsp;</td>
+								</tr>
+								<tr>
+									<td align="left">
+									<p style="font-size:18px;line-height:25px;color:#000000;margin:10px 0 20px;">Hi {!Contact.FirstName},<br />
+									<br />[Facility name] would like to offer you a contract from [Contract start date] to [Contract end date]<br /><br />Facility information:</p><ul><li>aaa</li><li>bbb</li><li>ccc</li>
+<li>Please note that although this is an offer for a particular facility, things can change unforeseeably and there is a possibility that CAHS/TEHS may need to move you to another clinic at their discretion. They try to avoid this at all costs however we want to advise of this in advance, in the event that a transfer is required.</li>
+<li>Mobile service - Since we cannot confirm the mobile service from each telecommunication
+provider in every town, please click <a href="https://www.whistleout.com.au/MobilePhones/Guides/who-has-the-best-mobile-coverage" target="_blank">here</a> to see if your provider has service available
+to you</li></ul><p style="font-size:18px;line-height:25px;color:#000000;margin:10px 0 20px;">Please review the below details carefully and reply to this email with your approval in writing, if you're happy to proceed:<br /><br />
+									<table style="width: 100%; border-collapse: collapse; font-family: Arial, sans-serif; margin-top: 20px;">
+									    <thead>
+									        <tr>
+									            <th colspan="2" style="border: 1px solid #ddd; padding: 8px; text-align: left; background-color: #f4f4f4;">
+            Contract Details
+        </th>
+									        </tr>
+									    </thead>
+									    <tbody>								        
+<tr>
+									            <td style="border: 1px solid #ddd; padding: 8px; width: 30%; padding: 10px;">Contract weeks</td>
+									            <td style="border: 1px solid #ddd; padding: 8px; width: 70%; padding: 10px;">Contract length</td>
+									        </tr>
+									        <tr>
+									            <td style="border: 1px solid #ddd; padding: 8px; width: 30%; padding: 10px;">Hours of work</td>
+									            <td style="border: 1px solid #ddd; padding: 8px; width: 70%; padding: 10px;">Insert # of hours hours/week<br />This is based on a 7.6 to 8 hour day, dependent on clinic requirements and opening times. If the clinic / facility manager requires you to attend work whilst on fatigue, yourself and the PHCM are to escalate it to the District Manager and gain approval PRIOR to you attending the clinic for work. As always, on call requirements are to be recorded on the on call addendum.</td>
+									        </tr>
+									        <tr>
+									            <td style="border: 1px solid #ddd; padding: 8px; width: 30%; padding: 10px;">Shift types/days</td>
+									            <td style="border: 1px solid #ddd; padding: 8px; width: 70%; padding: 10px;">List shifts required to be worked.</td>
+									        </tr>							        
+<tr>
+									            <td style="border: 1px solid #ddd; padding: 8px; width: 30%; padding: 10px;">Working within</td>
+									            <td style="border: 1px solid #ddd; padding: 8px; width: 70%; padding: 10px;">Ward or areas working in</td>
+									        </tr>
+									        <tr>
+									            <td style="border: 1px solid #ddd; padding: 8px; width: 30%; padding: 10px;">Position level and increment</td>
+									            <td style="border: 1px solid #ddd; padding: 8px; width: 70%; padding: 10px;">Insert nurse level or increment<br />On the provision that verified hours are provided to Alliance Rural & Remote Health and facility name. Increments will be paid based on evidence provided to Alliance Rural & Remote Health. If you do not provide evidence in the form of Statements of Service and/or Stat Decs, you will be paid at the lowest increment at this level until such time that the evidence is produced. DOES THE NURSE HAVE A POST GRAD RELEVANT TO THE CONTRACT OFFER?  Yes / No? (Take out if not applicable)</td>
+									        </tr>
+									        <tr>
+									            <td style="border: 1px solid #ddd; padding: 8px; width: 30%; padding: 10px;">Rates of pay</td>
+									            <td style="border: 1px solid #ddd; padding: 8px; width: 70%; padding: 10px;">This contract will be paid on Agency rates – please see attached. Being an agency contract, you will be employed as a casual employee and paid by Alliance Rural & Remote Health weekly.<br /><br />Timesheets will be required to be sent to our Finance team by midday on Monday.</td>
+									        </tr>								        
+<tr>
+									            <td style="border: 1px solid #ddd; padding: 8px; width: 30%; padding: 10px;">Work Perks</td>
+									            <td style="border: 1px solid #ddd; padding: 8px; width: 70%; padding: 10px;">If accepted, this contract adds to your Alliance Rural & Remote Health <a href="https://www.allianceruralremote.com.au/rural-remote-nursing/rewards" target="_blank">Work More Earn More</a> bonus. Ask how far away you are from your next bonus!</td>
+									        </tr>
+									    </tbody>
+									</table>
+
+									<table style="width: 100%; border-collapse: collapse; font-family: Arial, sans-serif; margin-top: 20px;">
+									    <thead>
+									        <tr>
+									            <th colspan="2" style="border: 1px solid #ddd; padding: 8px; text-align: left; background-color: #f4f4f4;">
+            Accomodation
+        </th>
+									        </tr>
+									    </thead>
+									    <tbody>								        
+<tr>
+									            <td style="border: 1px solid #ddd; padding: 8px; width: 30%; padding: 10px;">Accomodation type</td>
+									            <td style="border: 1px solid #ddd; padding: 8px; width: 70%; padding: 10px;">Insert accommodation type available</td>
+									        </tr>
+									        <tr>
+									            <td style="border: 1px solid #ddd; padding: 8px;">Accommodation costs</td>
+									            <td style="border: 1px solid #ddd; padding: 8px;">Provided free of charge/at a cost of $xxx per week/fortnight.<br />Alliance Rural & Remote Health cannot guarantee that accommodation will be non-shared.</td>
+									        </tr>
+									    </tbody>
+									</table>
+
+<table style="width: 100%; border-collapse: collapse; font-family: Arial, sans-serif; margin-top: 20px;">
+									    <thead>
+									        <tr>
+									            <th colspan="2" style="border: 1px solid #ddd; padding: 8px; text-align: left; background-color: #f4f4f4;">
+            Travel
+        </th>
+									        </tr>
+									    </thead>
+									    <tbody>								        
+<tr>
+									            <td style="border: 1px solid #ddd; padding: 8px; width: 30%; padding: 10px;">Travel bookings undertaken by</td>
+									            <td style="border: 1px solid #ddd; padding: 8px; width: 70%; padding: 10px;">Alliance Rural & Remote Health/Facility/Nurse</td>
+									        </tr>
+									        <tr>
+									            <td style="border: 1px solid #ddd; padding: 8px; width: 30%; padding: 10px;">Nurse travelling by</td>
+									            <td style="border: 1px solid #ddd; padding: 8px; width: 70%; padding: 10px;">Air/Car/Public Transport</td>
+									        </tr>
+<tr>
+									            <td style="border: 1px solid #ddd; padding: 8px; width: 30%; padding: 10px;">Travel will commence from</td>
+									            <td style="border: 1px solid #ddd; padding: 8px; width: 70%; padding: 10px;">Home base</td>
+									        </tr>
+<tr>
+									            <td style="border: 1px solid #ddd; padding: 8px; width: 30%; padding: 10px;">Nurse will commence travel on</td>
+									            <td style="border: 1px solid #ddd; padding: 8px; width: 70%; padding: 10px;">Travel commencement date</td>
+									        </tr>
+<tr>
+									            <td style="border: 1px solid #ddd; padding: 8px; width: 30%; padding: 10px;">Paid travel day</td>
+									            <td style="border: 1px solid #ddd; padding: 8px; width: 70%; padding: 10px;">The facility will/will not pay a travel day.<br />This will be inclusive/exclusive of your rostered hours.
+</td>
+									        </tr>
+									    </tbody>
+									</table>
+
+<table style="width: 100%; border-collapse: collapse; font-family: Arial, sans-serif; margin-top: 20px;">
+<thead>
+<tr>
+<th colspan="2" style="border: 1px solid #ddd; padding: 8px; text-align: left; background-color: #f4f4f4;">
+Travel Costs
+</th>
+</tr>
+</thead>
+<tbody>								        
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; width: 30%; padding: 10px;">Facility will cover:</td>
+<td style="border: 1px solid #ddd; padding: 8px; width: 70%; padding: 10px;">Forward: $$ capped amount<br />Homeward: $$ capped amount<br />En-route accommodation, if required: $$ capped amount<br /><br />
+Reimbursement will only be made upon provision of legible digital copies or original tax invoices and a completed travel reimbursement form being provided to Alliance Rural & Remote Health.
+<strong>OR</strong><br /> 
+To be reimbursed by the facility directly upon provision of original tax invoices and the appropriate Health Service form.
+</td>
+</tr>
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; width: 30%; padding: 10px;">Alliance Rural & Remote Health will cover:</td>
+<td style="border: 1px solid #ddd; padding: 8px; width: 70%; padding: 10px;">Forward: $$ capped amount<br />Homeward: $$ capped amount<br />En-route accommodation, if required: $$ capped amount<br /><br />
+Reimbursement will only be made upon provision of legible digital copies or original tax invoices and a completed travel reimbursement form being provided to Alliance Rural & Remote Health. 
+</td>
+</tr>
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; width: 30%; padding: 10px;">Nurse will cover</td>
+<td style="border: 1px solid #ddd; padding: 8px; width: 70%; padding: 10px;">Any costs incurred in excess of the amounts listed above under costs of travel. This may include but is not limited to en-route accommodation, taxi fares, excess baggage, phone calls, meal costs. If driving, this may also include but is not limited to wear and tear on your vehicle, phone calls, car repairs, insurance excess, tolls, traffic infringements and meals. </td>
+</tr>
+</tbody>
+</table>
+<br />
+*Please refer to attachments for Alliance Rural & Remote Health’s Contract Conditions, Cancellation Policy and Travel Policy which form part of this offer.<br /><br />Please also review the following documents before accepting the contract on offer:<br /><a href="https://allianceaustralia--uat.sandbox.my.salesforce-sites.com/onboarding/apex/b3d__Document?templateId=a8P9t00000AKhe9EAD&recordId={!Contact.Id}">Cancelation and refund policy</a><br /><a href="https://allianceaustralia--uat.sandbox.my.salesforce-sites.com/onboarding/apex/b3d__Document?templateId=a8P9t00000AKiiHEAT&recordId={!Contact.Id}">Travel nurses policy</a><br /><a href="https://allianceaustralia--uat.sandbox.my.salesforce-sites.com/onboarding/apex/b3d__Document?templateId=a8P9t00000AKh35EAD&recordId={!Contact.Id}">Contract offer conditions</a><br /><br />If you have any questions at all please call us on <a href="tel:0749985550">07 4998 5550</a>.
+									<br /><br />
+									Kind regards,<br />
+									Your team at Alliance Rural & Remote Health</p>
+									</td>
+								</tr>
+								<tr>
+									<td style="height:20px;">&nbsp;</td>
+								</tr>
+								<tr>
+									<td align="left" style="font-size: 14px; line-height: 24px; color: #374250; margin:5px 0 10px;"><br />
+									<!-- <![endif]--></td>
+								</tr>
+							</tbody>
+						</table>
+						</td>
+					</tr>
+					<tr>
+						<td bgcolor="#ffffff" class="spacer" style="padding:35px 45px 10px 45px;background-color:#ffffff;">
+						<table border="0" cellpadding="0" cellspacing="0">
+							<tbody>
+								<tr>
+									<td><img alt="" src="https://www.allianceruralremote.com.au/ANR/media/media-library/Email%20banners/Alliance-Rural-Remote-Graphic-Line.png" style="width:108%" /></td>
+								</tr>
+							</tbody>
+						</table>
+						</td>
+					</tr>
+					<tr>
+						<td align="center" bgcolor="#ffffff" class="SECTION-FOOTER-TOP" style="padding:26px 45px 40px 45px;font-size:12px;line-height:22px;background-color:#ffffff">
+						<table align="left" border="0" cellpadding="0" cellspacing="0" class="footer-social" style="border:1px solid transparent;">
+							<tbody>
+								<tr>
+									<td bgcolor="#ffffff" style="padding: 0" valign="middle">
+									<table align="left" border="0" cellpadding="0" cellspacing="0" style="border:1px solid transparent;">
+										<tbody>
+											<tr>
+												<td style="padding-right: 32px" valign="middle"><a href="https://www.facebook.com/allianceruralremote" rel="noopener noreferrer" target="_blank"><img alt=" " src="https://www.allianceruralremote.com.au/ANR/media/media-library/Email%20banners/fb_1.png" /></a></td>
+												<td style="padding-right: 32px" valign="middle"><a href="https://www.linkedin.com/company/373910" rel="noopener noreferrer" target="_blank"><img alt=" " src="https://www.allianceruralremote.com.au/ANR/media/media-library/Email%20banners/in_1.png" /></a></td>
+												<td style="padding-right: 32px" valign="middle"><a href="https://www.instagram.com/allianceruralremote/" rel="noopener noreferrer" target="_blank"><img alt=" " height="21" src="https://www.allianceruralremote.com.au/ANR/media/media-library/Email%20banners/is_1.png" /></a></td>
+												<td valign="middle"><a href="https://www.youtube.com/channel/UCVvnStor2YEhu-sOfyJOvbw" rel="noopener noreferrer" target="_blank"><img alt=" " src="https://www.allianceruralremote.com.au/ANR/media/media-library/Email%20banners/yt_1.png" /></a></td>
+											</tr>
+										</tbody>
+									</table>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon="{&quot;rayId&quot;:&quot;6732badd4d0efd26&quot;,&quot;version&quot;:&quot;2021.7.0&quot;,&quot;r&quot;:1,&quot;token&quot;:&quot;d7d18cdadb6449deb11a5d1bce6bfcc9&quot;,&quot;si&quot;:10}" type="text/javascript"></script></body>
+</html>

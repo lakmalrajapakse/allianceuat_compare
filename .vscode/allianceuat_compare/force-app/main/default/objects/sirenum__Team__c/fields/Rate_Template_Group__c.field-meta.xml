@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Rate_Template_Group__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>The template group of rates to automatically assign to the Rate Calculator during the automated rates assignment process.</description>
+    <inlineHelpText>The template group of rates to automatically assign to the Rate Calculator during the automated rates assignment process.</inlineHelpText>
+    <label>Rate Template Group</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>tc9_pr__Template_Group__c.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Rate Calculator Template</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>tc9_pr__Template_Group__c</referenceTo>
+    <relationshipLabel>Job Roles</relationshipLabel>
+    <relationshipName>Job_Roles</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

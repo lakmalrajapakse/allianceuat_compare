@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Competency_Master_Category__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(sirenum__TicketType__r.Is_Role_Competency__c,
+  &apos;Role&apos;,
+  &apos;Skill&apos;)
+
+/* previous iteration 
+IF(ISBLANK(TEXT(sirenum__TicketType__r.Competency_Category__c)), NULL ,
+  IF(TEXT(sirenum__TicketType__r.Competency_Category__c) = &apos;Paypoint&apos;, &apos;Paypoint&apos;,
+    IF(TEXT(sirenum__TicketType__r.Competency_Category__c) = &apos;Job Type&apos;, &apos;Role&apos;,
+      &apos;Skill&apos;)
+  )
+)
+*/</formula>
+    <label>Competency Master Category</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Invoice_Settings_Source__c</fullName>
+    <description>Select the origin of the Invoice Settings for Assignments related to this Contract. Choose &apos;Contract&apos; if the settings should be specific to this Contract, or &apos;Account&apos; if the settings should be inherited from the related Account. If &apos;Contract&apos; is selected, the system will automatically create Invoice Settings related to this Contract.</description>
+    <inlineHelpText>Select the origin of the Invoice Settings for Assignments related to this Contract. Choose &apos;Contract&apos; if the settings should be specific to this Contract, or &apos;Account&apos; if the settings should be inherited from the related Account. If &apos;Contract&apos; is selected, the system will automatically create Invoice Settings related to this Contract.</inlineHelpText>
+    <label>Invoice Settings Source</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Account</fullName>
+                <default>true</default>
+                <label>Account</label>
+            </value>
+            <value>
+                <fullName>Contract</fullName>
+                <default>false</default>
+                <label>Contract</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

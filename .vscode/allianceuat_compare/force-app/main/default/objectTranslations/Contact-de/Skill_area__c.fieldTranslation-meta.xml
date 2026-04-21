@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Skill area --></label>
+    <name>Skill_area__c</name>
+    <picklistValues>
+        <masterLabel>Aged care sector</masterLabel>
+        <translation><!-- Aged care sector --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Community and Outpatient Services</masterLabel>
+        <translation><!-- Community and Outpatient Services --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Critical Care Units</masterLabel>
+        <translation><!-- Critical Care Units --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Diagnostic &amp; Support Departments</masterLabel>
+        <translation><!-- Diagnostic &amp; Support Departments --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Environmental Services</masterLabel>
+        <translation><!-- Environmental Services --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Food Services</masterLabel>
+        <translation><!-- Food Services --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>General Practice / Primary Care</masterLabel>
+        <translation><!-- General Practice / Primary Care --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>General medical/surgical</masterLabel>
+        <translation><!-- General medical/surgical --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Health Assessment</masterLabel>
+        <translation><!-- Health Assessment --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Immunisation / Vaccination</masterLabel>
+        <translation><!-- Immunisation / Vaccination --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Kitchen</masterLabel>
+        <translation><!-- Kitchen --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Maintenance</masterLabel>
+        <translation><!-- Maintenance --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Medical Departments</masterLabel>
+        <translation><!-- Medical Departments --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Mental Health</masterLabel>
+        <translation><!-- Mental Health --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Midwifery</masterLabel>
+        <translation><!-- Midwifery --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Offender Health / Prison Health</masterLabel>
+        <translation><!-- Offender Health / Prison Health --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Operating Theatres / Perioperative Services</masterLabel>
+        <translation><!-- Operating Theatres / Perioperative Services --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>R&amp;R</masterLabel>
+        <translation><!-- R&amp;R --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>School</masterLabel>
+        <translation><!-- School --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Specialised Care Units</masterLabel>
+        <translation><!-- Specialised Care Units --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Surgical Departments</masterLabel>
+        <translation><!-- Surgical Departments --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Wards</masterLabel>
+        <translation><!-- Wards --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Warehouse</masterLabel>
+        <translation><!-- Warehouse --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>X1218_Send_AES_Placement_Contract</fullName>
+        <description>1218 Send AES Placement Contract</description>
+        <protected>false</protected>
+        <recipients>
+            <field>b3d__Contact__c</field>
+            <type>contactLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>b3d__X3B_Docs_Templates/AES_Placement_Contract</template>
+    </alerts>
+    <alerts>
+        <fullName>X1218_Send_AN_Placement_contract</fullName>
+        <description>1218 Send AN Placement contract</description>
+        <protected>false</protected>
+        <recipients>
+            <field>b3d__Contact__c</field>
+            <type>contactLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>b3d__X3B_Docs_Templates/AN_Placement_contract</template>
+    </alerts>
+    <alerts>
+        <fullName>X1218_Send_Contract</fullName>
+        <description>1218 Send Contract</description>
+        <protected>false</protected>
+        <recipients>
+            <field>b3d__Contact__c</field>
+            <type>contactLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>b3d__X3B_Docs_Templates/Contract</template>
+    </alerts>
+</Workflow>

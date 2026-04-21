@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Preferred_contract_length__c</fullName>
+    <inlineHelpText>What is your preferred contract length?</inlineHelpText>
+    <label>Preferred contract length</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>4 weeks</fullName>
+                <default>false</default>
+                <label>4 weeks</label>
+            </value>
+            <value>
+                <fullName>6 weeks</fullName>
+                <default>false</default>
+                <label>6 weeks</label>
+            </value>
+            <value>
+                <fullName>8 weeks</fullName>
+                <default>false</default>
+                <label>8 weeks</label>
+            </value>
+            <value>
+                <fullName>12 weeks</fullName>
+                <default>false</default>
+                <label>12 weeks</label>
+            </value>
+            <value>
+                <fullName>more than 12 weeks</fullName>
+                <default>false</default>
+                <label>more than 12 weeks</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <chart>
+        <backgroundColor1>#FFFFFF</backgroundColor1>
+        <backgroundColor2>#FFFFFF</backgroundColor2>
+        <backgroundFadeDir>Diagonal</backgroundFadeDir>
+        <chartSummaries>
+            <aggregate>Unique</aggregate>
+            <axisBinding>y</axisBinding>
+            <column>sirenum__Shift_Invitation__c$sirenum__Shift__c</column>
+        </chartSummaries>
+        <chartType>HorizontalBarGrouped</chartType>
+        <enableHoverLabels>false</enableHoverLabels>
+        <expandOthers>true</expandOthers>
+        <groupingColumn>sirenum__Shift_Invitation__c$CreatedBy</groupingColumn>
+        <legendPosition>Bottom</legendPosition>
+        <location>CHART_BOTTOM</location>
+        <secondaryGroupingColumn>CDF1</secondaryGroupingColumn>
+        <showAxisLabels>true</showAxisLabels>
+        <showPercentage>false</showPercentage>
+        <showTotal>false</showTotal>
+        <showValues>true</showValues>
+        <size>Medium</size>
+        <summaryAxisRange>Auto</summaryAxisRange>
+        <textColor>#000000</textColor>
+        <textSize>12</textSize>
+        <titleColor>#000000</titleColor>
+        <titleSize>18</titleSize>
+    </chart>
+    <columns>
+        <aggregateTypes>Unique</aggregateTypes>
+        <field>sirenum__Shift_Invitation__c$sirenum__Shift__c</field>
+    </columns>
+    <columns>
+        <field>sirenum__Shift_Invitation__c$CreatedDate</field>
+    </columns>
+    <customDetailFormulas>
+        <calculatedFormula>IF(
+    (WEEKDAY(DATEVALUE(sirenum__Shift_Invitation__c.CreatedDate))) = 1, 
+    text(DATEVALUE(sirenum__Shift_Invitation__c.CreatedDate) - 6) &amp; &quot; - &quot; &amp; text(DATEVALUE(sirenum__Shift_Invitation__c.CreatedDate) + 0), 
+IF(
+    (WEEKDAY(DATEVALUE(sirenum__Shift_Invitation__c.CreatedDate))) = 2, 
+    text(DATEVALUE(sirenum__Shift_Invitation__c.CreatedDate) - 0) &amp; &quot; - &quot; &amp; text(DATEVALUE(sirenum__Shift_Invitation__c.CreatedDate) + 6),
+IF(
+    (WEEKDAY(DATEVALUE(sirenum__Shift_Invitation__c.CreatedDate))) = 3, 
+    text(DATEVALUE(sirenum__Shift_Invitation__c.CreatedDate) - 1) &amp; &quot; - &quot; &amp; text(DATEVALUE(sirenum__Shift_Invitation__c.CreatedDate) + 5),
+IF(
+    (WEEKDAY(DATEVALUE(sirenum__Shift_Invitation__c.CreatedDate))) = 4, 
+    text(DATEVALUE(sirenum__Shift_Invitation__c.CreatedDate) - 2) &amp; &quot; - &quot; &amp; text(DATEVALUE(sirenum__Shift_Invitation__c.CreatedDate) + 4),
+IF(
+    (WEEKDAY(DATEVALUE(sirenum__Shift_Invitation__c.CreatedDate))) = 5, 
+    text(DATEVALUE(sirenum__Shift_Invitation__c.CreatedDate) - 3) &amp; &quot; - &quot; &amp; text(DATEVALUE(sirenum__Shift_Invitation__c.CreatedDate) + 3),
+IF(
+    (WEEKDAY(DATEVALUE(sirenum__Shift_Invitation__c.CreatedDate))) = 6, 
+    text(DATEVALUE(sirenum__Shift_Invitation__c.CreatedDate) - 4) &amp; &quot; - &quot; &amp; text(DATEVALUE(sirenum__Shift_Invitation__c.CreatedDate) + 2),
+IF(
+    (WEEKDAY(DATEVALUE(sirenum__Shift_Invitation__c.CreatedDate))) = 7, 
+    text(DATEVALUE(sirenum__Shift_Invitation__c.CreatedDate) - 5) &amp; &quot; - &quot; &amp; text(DATEVALUE(sirenum__Shift_Invitation__c.CreatedDate) + 1),
+    &quot;NA&quot;)))))))</calculatedFormula>
+        <dataType>Text</dataType>
+        <developerName>CDF1</developerName>
+        <label>Mon-Sun Week</label>
+        <scale>2</scale>
+    </customDetailFormulas>
+    <description>Number of shifts each allocator has broadcasted broken down by week</description>
+    <filter>
+        <criteriaItems>
+            <column>sirenum__Shift_Invitation__c$sirenum__Shift__c.Branch_for_reporting__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Alliance Nursing - Sydney,Alliance Nursing - Western Sydney,Alliance Nursing - Canberra</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>sirenum__Shift_Invitation__c$sirenum__Shift__c.Branch_for_reporting__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>sirenum__Shift_Invitation__c$CreatedBy</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>CDF1</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>NSW/ACT Monthly Broadcast Report</name>
+    <params>
+        <name>co</name>
+        <value>0</value>
+    </params>
+    <reportType>Job_Offers__c</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>sirenum__Shift_Invitation__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_LASTMONTH</interval>
+    </timeFrameFilter>
+</Report>

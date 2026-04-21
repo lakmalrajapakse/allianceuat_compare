@@ -1,0 +1,73 @@
+{
+  "appPageId" : "d9ce9f69-0e14-4b11-9233-6c5ce091d546",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "dataProviders" : [ ],
+  "id" : "5806ce15-1af6-476e-917c-6afd4a3137e9",
+  "label" : "My Documents",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "richTextValue" : "<p><img class=\"sfdcCbImage\" alt=\"\" src=\"{!contentAsset.alliance_rural_logo.1}\" style=\"width: 205.633px; height: 40.5312px;\"></p>"
+      },
+      "componentName" : "forceCommunity:richTextInline",
+      "id" : "465205ab-4117-4c17-ae44-183c1c26cb8b",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "004c15c9-8a77-4fa0-8acf-fbac56964769",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "alignment" : "left",
+        "label" : "Back to the Job Board",
+        "showAs" : "button",
+        "url" : "/allianceconnect/s/job-board",
+        "variant" : "brand"
+      },
+      "componentName" : "c:navigate",
+      "id" : "14bb989b-a97c-4efa-ad06-9a13547e45af",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "height" : "1000",
+        "pageName" : "Alliance_Internal_Job_Board_MyDocuments",
+        "recordId" : "{!recordId}"
+      },
+      "componentName" : "forceCommunity:visualforcePage",
+      "id" : "3808b232-b0c1-4450-a183-3bd70308c346",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "f22b8f91-4fe9-400d-97f0-94fe814abdfd",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "f947fccf-2782-464d-bb7a-9ed23c9d4100",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "My Documents"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "903c292a-21e6-4985-b12b-1a33b8925d12",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "2a8e3e23-68df-4aef-9c0c-c0d0096bab17",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-my-documents"
+}

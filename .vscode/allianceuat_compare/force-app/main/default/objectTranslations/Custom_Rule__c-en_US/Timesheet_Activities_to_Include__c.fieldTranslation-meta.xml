@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Specify which Timesheet Activities will be included when uplifting Timesheet Entries for Minimum Engagement. Any Timesheet Activities not included will not qualify for Minimum Engagement. --></help>
+    <label><!-- Timesheet Activities to Include --></label>
+    <name>Timesheet_Activities_to_Include__c</name>
+    <picklistValues>
+        <masterLabel>Call Back</masterLabel>
+        <translation><!-- Call Back --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Phone Call</masterLabel>
+        <translation><!-- Phone Call --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Recall</masterLabel>
+        <translation><!-- Recall --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sleepover</masterLabel>
+        <translation><!-- Sleepover --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

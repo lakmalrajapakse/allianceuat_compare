@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Auto_Broadcast_Prevent_UnBroadcast</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(NOT(ISNEW()), NOT(Auto_Broadcast__c), PRIORVALUE(Auto_Broadcast__c))</errorConditionFormula>
+    <errorMessage>You cannot switch Auto Broadcasting off once set.</errorMessage>
+</ValidationRule>

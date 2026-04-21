@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FieldSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DG_AA_Nursing</fullName>
+    <description>Doc Gen config for Alliance Nursing Division</description>
+    <displayedFields>
+        <field>TR1__Master_Skill_Name__c</field>
+        <isFieldManaged>false</isFieldManaged>
+        <isRequired>false</isRequired>
+    </displayedFields>
+    <label>DG_AA_Nursing</label>
+</FieldSet>

@@ -1,0 +1,2175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Candidate_Pool</fullName>
+    <active>true</active>
+    <label>Candidate Pool</label>
+    <picklistValues>
+        <picklist>AA__c</picklist>
+        <values>
+            <fullName>Health %26 Hospo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>International</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nursing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rural %26 Remote</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>AccountSource</picklist>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Approval_Type__c</picklist>
+        <values>
+            <fullName>Always Charged - As Paid</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Charged</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Industry</picklist>
+        <values>
+            <fullName>Agriculture</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Apparel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Banking</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Biotechnology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chemicals</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Communications</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Construction</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Consulting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Education</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Electronics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Energy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Engineering</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Entertainment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Environmental</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Finance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Food %26 Beverage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Government</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Healthcare</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hospitality</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Insurance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Machinery</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Manufacturing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Media</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not For Profit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Recreation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Retail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shipping</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Technology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Telecommunications</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transportation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Utilities</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Oncost_Setting__c</picklist>
+        <values>
+            <fullName>Margin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Markup</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Ownership</picklist>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Private</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Public</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Subsidiary</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Payroll_Tax_Exempt__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Yes - Workcover Only</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Primary_Approval_Method__c</picklist>
+        <values>
+            <fullName>Offline Timesheet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PIN Only</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PIN and Signature</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Signature Only</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Rating</picklist>
+        <values>
+            <fullName>Cold</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hot</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Warm</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Secondary_Approval_Method__c</picklist>
+        <values>
+            <fullName>PIN Only</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PIN and Signature</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Signature Only</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>TR1__LEA__c</picklist>
+        <values>
+            <fullName>East Midlands</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Eastern England</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Greater London</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>North East</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>North West</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>South East England</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>South West England</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wales</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>West Midlands</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yorkshire %26 Humberside</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>TR1__Status__c</picklist>
+        <values>
+            <fullName>Credit Check</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inactive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prospect</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Terms %26 Conditions</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prospect</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>aa_Credit_Check_Status__c</picklist>
+        <values>
+            <fullName>Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ready to Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reject</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>aa_Inactive_Reason__c</picklist>
+        <values>
+            <fullName>Credit check fail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Do not Service</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Service no longer Required</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Terms Expired</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>aa_Industry_Sector__c</picklist>
+        <values>
+            <fullName>Advertising %2F Media</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Aged Care</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Agency - Metro</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Agency - Regional</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Agriculture</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Banking</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Blank</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Childcare</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Civil</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>College</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Commercial</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Community Care</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Construction</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Consulting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Corporate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dental Clinic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Disability</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Drug and Alcohol Rehab Centre</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Education</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Education %26 Training</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Engineering</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Events</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FMCG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Financial Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GP Clinic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Government</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Group Home</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Heartbeat</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Heartbeat HACC RNS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hospital</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hospital - Private</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hospital - Private FFS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hospital - Public</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hospital - Public FFS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hospital - Warehouse</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hospitality</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Industrial</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Information Technology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Insurance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Justice Health</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Landscaping</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Legal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Maintenance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Manufacturing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Maritime</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Marketing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mining</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not For Profit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Office</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pharmaceutical</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prisons</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Professional Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Recruitment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Regional</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sister Agency</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>State Government</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transport %26 Logistics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Travel %2F Tourism</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Utilities</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Warehouse</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>aa_Monash_Model__c</picklist>
+        <values>
+            <fullName>MM1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MM2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MM3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MM4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MM5</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MM6</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MM7</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>aa_Sector_Name__c</picklist>
+        <values>
+            <fullName>Health %26 Hospo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>International</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nursing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rural %26 Remote</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>aa_Services__c</picklist>
+        <values>
+            <fullName>Enrolled Nurse</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nursing Assistant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Personal Care Worker</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Registered Nurse</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>tc9_bgl__Sent_To_GL_Status__c</picklist>
+        <values>
+            <fullName>Failed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Pending</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sent</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>tc9_eau__Superannuation_Payment_Type__c</picklist>
+        <values>
+            <fullName>Data Only</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Direct Credit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Direct Debit</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>tc9_et__Default_Invoice_Taxable__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>tc9_et__Exclude_Global_Rate_Calc_Templates__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>tc9_et__Expense_Claim_Funding_Requirement__c</picklist>
+        <values>
+            <fullName>Invoice paid before payroll</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Invoiced before payroll</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Funding Requirement</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Payroll before invoice</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>tc9_et__Invoice_Group_By__c</picklist>
+        <values>
+            <fullName>Assignment</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Client</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hiring Manager %28Invoice Client%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hiring Manager %28Invoice Hiring Manager%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Invoice To Account</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Invoice To Contact</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PO Number</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>tc9_et__Invoice_Split__c</picklist>
+        <values>
+            <fullName>No Split</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Per Calendar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Per Timesheet Period</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>tc9_et__Send_Invoice_Emails_From_Email__c</picklist>
+        <values>
+            <fullName>accounts%2Eqld%40alliancenursing%2Ecom%2Eau</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>accounts%2Esydney%40alliancenursing%2Ecom%2Eau</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>accounts%40allianceruralremote%2Ecom%2Eau</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>alliancewa%2Erecruitment%40alliancenursing%2Ecom%2Eau</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>corporate%2Ehealth%40hsga%2Ecom%2Eau</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>delivery%40nuuco%2Ecom%2Eau</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>rsga%40australianbusiness%2Ecom%2Eau</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>vic%2Eaccounts%40alliancenursing%2Ecom%2Eau</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>tc9_et__Timesheet_Funding_Requirement__c</picklist>
+        <values>
+            <fullName>Invoice paid before payroll</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Invoiced before payroll</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Funding Requirement</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Payroll before invoice</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>tc9_pr__Active__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>tc9_pr__Auto_Create_Employee_Community_Users__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>tc9_pr__Available_Payment_Methods__c</picklist>
+        <values>
+            <fullName>Payee Australian Bank</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Payee Cash</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Payee Cheque</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Payee International Bank</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>tc9_pr__CustomerPriority__c</picklist>
+        <values>
+            <fullName>High</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Low</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medium</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>tc9_pr__Default_Industry__c</picklist>
+        <values>
+            <fullName>117101 Bread Manufacturing %28Factory based%29 WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>117401 Bakery Product Manufacturing %28Non-factory based%29 WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>121401 Wine and Other Alcoholic Beverage Manufacturing WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>141100 Gravel and Sand Quarrying WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>149902 Wooden Containers Manufacturing WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>152201 Paper Bag Manufacturing WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>185101 Cleaning Compound Manufacturing WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>191201 Rigid and Semi-Rigid Polymer Product Manufacturing WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>20201 Offshore Caged Aquaculture WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>211130 Meat Processing WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>212900 Dairy Product Manufacturing WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>216100 Bread Manufacturing WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>216200 Cake and Pastry Manufacturing WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>21950 Other Services to Agriculture nec WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>222101 Structural Steel Fabricating WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>222120 Furniture Upholstery and Covers Mfg WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>222130 Non-canvas Textile Blind and Awning Manufacturing WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>229301 Metal Coating and Finishing WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>232300 Wooden Structural Component Manufacturing WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>241210 Printing WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>241901 Other Professional and Scientific Equipment Manufacturing WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>242901 Other Electronic Equipment Manufacturing WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>249101 Lifting and Material Handling Equipment Manufacturing WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>249901 Other Machinery and Equipment Manufacturing n%2Ee%2Ec%2E WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>251101 Wooden Furniture and Upholstered Seat Manufacturing WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>254300 Medicinal and Pharmaceutical Product Manufacturing WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>261000 Glass and Glass Product Manufacturing WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>263210 Fibro-Cement Sheeting Manufacturing WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>274200 Architectural Aluminium Product Manufacturing WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>276500 Non-Ferrous Pipe Fitting Manufacturing WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>281200 Motor Vehicle Body Manufacturing WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>282220 Boat repairers WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>284100 Computer and Business Machine Manufacturing WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>284200 Telecommunication%2C Broadcasting and Transceiving Equipment Manufacturing WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>284900 Other Electronic Equipment Manufacturing nec WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>286100 Agricultural Machinery Manufacturing WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>286700 Commercial Space Heating and Cooling Equipment Manufacturing WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>291100 Prefabricated Metal Building Manufacturing WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>292101 Waste Treatment and Disposal Services WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>294100 Jewellery and Silverware Manufacturing WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>302001 Non-Residential Building Construction WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>310101 Heavy and Civil Engineering Construction WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>321201 Site Preparation Services WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>322101 Concreting Services WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>323406 Fire and Security Alarm Installation Services WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>329101 Landscape Construction Services WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>329901 Other Construction Services n%2Ee%2Ec%2E WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>331902 Other Agricultural Supply Wholesaling WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>333902 Household Hardware Goods Wholesaling WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>341101 Agricultural and Construction Machinery Wholesaling WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>341901 Other Specialised Industrial Machinery and Equipment Wholesaling WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>349401 Other Electrical and Electronic Goods Wholesaling WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>360101 General Line Grocery Wholesaling WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>372001 Pharmaceutical and Toiletry Goods Wholesaling WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>373901 Other Goods Wholesaling n%2Ee%2Ec%2E WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>380002 Wholesaling goods not physically handling any stock WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>391201 Motor Cycle Retailing WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>411300 Non-Residential Building Construction WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>412101 Floor Covering Retailing WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>421020 Site Preparation Services WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>421101 Furniture Retailing WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>422101 Electrical %2C Electronic and Gas Appliance Retailing WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>422110 Concrete Construction Services WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>422200 Bricklaying Services WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>422300 Roofing Services WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>423100 Plumbing Services WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>423106 Hardware and Building Supplies Retailing WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>423200 Electrical Services WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>423300 Air Conditioning and Heating Services WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>423400 Telecommunication%2C Alarm and Security System Installation Services WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>424120 Plasterboard and Decorative Plaster Fixing WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>424200 Carpentry Services WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>424300 Tiling and Carpeting Services WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>424400 Painting and Decorating Services WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>425910 Scaffolding Services WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>425920 Exterior%2FInterior Blind and Awning Installation Services WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>425940 Construction Services nec WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>426002 General Variety Stores WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>427101 Pharmaceutical%2C Cosmetic and Toiletry Goods Retailing WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>451101 Cafes and Restaurants WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>461001 Road Freight Transport WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>461900 Machinery %26 Equipment Wholesaling nec WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>471900 Grocery Wholesaling nec WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>502901 Other Transport n%2Ee%2Ec%2E WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>510201 Courier Pick-up and Delivery Services WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>511000 Supermarket and Grocery Stores WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>512100 Fresh Meat%2C Fish and Poultry Retailing WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>525900 Retailing nec WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>52901 Other Agriculture and Fishing Support Services WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>532200 Automotive Electrical Services WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>532300 Smash Repairing WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>573000 Cafes and Restaurants WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>611020 Road Freight Transport - Short Distance WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>632101 Health Insurance WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>664220 Freight Forwarding %28Road%29 - No Goods Handling WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>664310 Freight Forwarding %28Other than Road%29 - Goods Handling WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>671101 Residential Property Operators WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>671201 Non-Residential Property Operators WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>672001 Real Estate Services WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>691001 Scientific Research Services WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>692201 Surveying and Mapping Services WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>692301 Engineering Design and Engineering Consulting Services WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>693101 Legal Services WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>712000 Telecommunication Services WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>721101 Employment Placement and Recruitment Services WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>721201 Labour Supply Services WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>721236 Contract Staff Services %28Own Admin Staff%29 WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>732001 Packaging Services WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>752001 State Government Administration WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>771120 Residential Property Operators WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>774310 Plant and Machinery Hiring and Leasing Without Operator WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>782100 Architectural Services WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>782300 Consulting Engineering Services WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>783100 Data Processing Services WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>786100 Employment Placement Services WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>786412 Security Services WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>786500 Pest Control Services WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>786900 Business Services nec WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>802101 Primary Education WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>802201 Secondary Education WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>821901 Adult%2C Community and Other Education n%2Ee%2Ec%2E WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>84000 Health Care %26 Social Assistance WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>842100 Infants and Primary Schools WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>843200 Technical and Further Education WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>85110 GENERAL PRACTICE MEDICAL SERVICES WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>851101 General Practice Medical Services WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>851201 Specialist Medical Services WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>852001 Pathology Services WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>853301 Physiotherapy Services WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>853901 Other Allied Health Services WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>8599 Other Health Care Services nec WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>859901 Other Health Care Services n%2Ee%2Ec%2E WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>860901 Other Residential Care Services WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>86120 Psychiatric WA WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>861200 Psychiatric Hospitals WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>86121 Psychiatric - NT WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>863100 Pathology Services WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>863400 Community Health Centres WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>86390 Health Services WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>863900 Other Health Services nec WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>871001 Child Care Services WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>872910 Home Care Services WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>872920 Non-Residential Care Services nec WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>879001 Other Social Assistance Services WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>913901 Amusement and Other Recreational Activities n%2Ee%2Ec%2E WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>941201 Automotive Body%2C Paint and Interior Repair WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>952600 Hairdressing and Beauty Salons WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>955901 Other Interest Group Services n%2Ee%2Ec%2E WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>963400 Waste Disposal Services WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ACT 84010 Hospitals %28Except Psychiatric Hospitals%29 WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>B06000 Mining WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>C11910 Potato%2C Corn and Other Crisp Manufacturing WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>C14920 Wooden Structural Fitting and Component Manufacturing WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>C14990 Other Basic Polymer Manufacturing WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>C16110 Printing WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>C16200 Reproduction of Recorded Media WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>C18290 Pump and Compressor WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>C19200 Natural Rubber Product Manufacturing WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>C21490 Other Basic Non- Ferrous Metal Product Manufacturing WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>C22310 Boiler%2C Tank and Other Heavy Gauge Metal Container Manufacturing WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>C23990 Other Transport Equipment Manufacturing n%2Ee%2Ec%2E WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>C24210 Computer and Electronic Office Equipment Manufacturing WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>C24290 Other Electronic Equipment Manufacturing WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>C24510 Road and Bridge Construction WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>C24520 Fixed Space Heating%2C Cooling and Ventilation Equipment Manufacturing WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>D28110 Water Supply WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>E30190 Other Residential Building Construction WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>E31010 Landscape Construction Services WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>E32110 Land Development and Subdivision WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>E32240 Structural Steel Erection Services WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>E32910 Other Construction WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>E32990 Car Wholesaling WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>F35010 Preschool Education WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>F35040 Motor Vehicle New Parts Wholesaling WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>F36020 Meat%2C Poultry and Smallgoods Wholesaling WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>F36050 Fruit and Vegetable Wholesaling WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>F37110 Textile Product Wholesaling WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>F37120 Clothing and Footwear Wholesaling WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>G39000 Retail Trade WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>G39110 Car Retailing WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>G43100 Non-Store Retailing WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>H44000 Accommodation %26 Food Services WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I52990 Other Transport Support Services N%2EE%2EC%2E WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I53090 Other Warehousing and Storage Services WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>J54000 Information Media %26 Telecommunications WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>J55110 Motion Picture and Video Production WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>K62000 Financial %26 Insurance Services WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>L66000 Rental%2C Hiring %26 Real Estate Services WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>M69000 Professional%2C Scientific %26 Technical Services WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>N72120 Labour Hire Services WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NSW 256500 Plastic Foam Product Manufacturing WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NSW 274100 Structural Steel Fabricating WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NSW 276900 Fabricated Metal Product Manufacturing nec WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NSW 281100 Motor Vehicle Manufacturing WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NSW 294900 Manufacturing nec WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NSW 411200 Residential Building Construction nec WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NSW 412100 Road and Bridge Construction WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NSW 412200 Non-Building Construction nec WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NSW 425100 Landscaping Services WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NSW 532900 Automotive Repair and Services nec WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NSW 611040 Furniture Delivery and Removal Service WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NSW 664210 Freight Forwarding %28Road%29 - Goods Handling WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NSW 670900 Storage nec WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NSW 785400 Business Administrative Services WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NSW 786610 Cleaning Services %28Non NSW Government Contract%29 WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NSW 812000 Justice WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NSW 861100 Hospitals %28Except Psychiatric Hospitals%29 WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NSW 861300 Nursing Homes WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NT 84010 Hospitals %28Except Psychiatric Hospitals%29 WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NT 86111 Hospital - NT WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NT 8612 Psychiatric Hospitals - NT WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NT 8613 Nursing Homes - NT WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NT 8634 Community Health Centres - NT WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NT 86341 Community Health Centres NT WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>P80100 GENERAL PRACTICE MEDICAL SERVICES WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Q84000 Health Care %26 Social Assistance WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Q84020 Psychiatric Hospitals WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Q85110 General Practice Medical Services WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Q85390 Other Allied Health Services WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Q87900 Other Social Assistance Services WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>QLD C11000 Manufacturing WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>QLD D26000 Electricity Gas Water and Waste Servcies WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>QLD E30000 Construction WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>QLD F33000 Wholesale Trade WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>QLD I46000 Transport%2C Postal %26 Warehousing WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>QLD N72000 Administrative and Support Services WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>QLD O75000 Public Administration %26 Safety WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>QLD P80000 Education %26 Training WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>QLD R89000 Arts %26 Recreation Services WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>R91390 Amusement and Other Recreational Activities n%2Ee%2Ec WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>S94000 Other Services WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SA 116201 Cereal%2C Pasta and Baking Mix Manufacturing WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SA 117201 Cake and Pastry Manufacturing %28Factory based%29 WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SA 118201 Confectionery Manufacturing WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SA 119901 Other Food Product Manufacturing n%2Ee%2Ec%2E WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SA 161106 Printing WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SA 191601 Paint and Coatings Manufacturing WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SA 212201 Steel Pipe and Tube Manufacturing WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SA 222901 Other Structural Metal Product Manufacturing WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SA 241201 Medical and Surgical Equipment Manufacturing WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SA 242201 SA 242201 Communications Equipment Manufacturing WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SA 251301 Mattress Manufacturing WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SA 323901 Other Building Installation Services WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SA 373101 Furniture and Floor Covering Wholesaling WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SA 530906 Other Warehousing and Storage Services WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SA 729101 Office Administrative Service WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SA 771401 Correctional and Detention Services WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SA 810101 Technical and Vocational Education and Training WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SA 840101 Hospitals %28Except Psychiatric Hospitals%29 WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SA 860101 Aged Care Residential Services WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SA 871001 Child Care Services WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SA 879001 Other Social Assistance Services WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TAS 8401 Hospitals %28Except Psychiatric Hospitals%29 WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TAS 8611 Hospitals - TAS WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TAS 8612 Psychiatric Hospitals - TAS WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TAS 8613 Nursing Homes - TAS WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TAS 8634 Community Health Centres - TAS WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VIC C11730 Biscuit Manufacturing %28Factory based%29 WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VIC C22210 Structural Steel Fabricating WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VIC C22230 Architectural Aluminium Product Manufacturing WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VIC C22290 Other Structural Metal Product Manufacturing WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VIC C22990 Other Fabricated Metal Product Manufacturing n%2Ee%2Ec%2E WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VIC C25130 Mattress Manufacturing WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VIC C25190 Other Furniture Manufacturing WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VIC E30200 Non-Residential Building Construction WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VIC H45130 Catering Services WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VIC I46100 Road Freight WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VIC N72910 Office Administrative Services WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VIC Q84010 Hospitals %28Except Psychiatric Hospitals%29 WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VIC Q84017 Hospitals %28Except Psychiatric Hospitals%29 Public Sector WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VIC Q84018 Hospitals %28Except Psychiatric Hospitals%29 Non-Public Sector WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VIC Q86010 Aged Care Residential Services WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VIC Q86090 Other Residential Care Services WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WA 84010 Hospitals %28Except Psychiatric Hospitals%29 WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WA 86010 Aged Care Residential Services WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WA 86110 Hospital- WA WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WA 86120 Psychiatric Hospitals - WA WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WA 86130 Nursing Homes - WA WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WA 86340 Community Health Centres - WA WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>XXX953102 Laundrettes and Dry-Cleaners WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>XXXC14990 Other Wood Product WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>XXXC18290 Other Basic Polymer Manufacturing WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>XXXC24510 Pump and Compressor WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>XXXE31010 Road and Bridge Construction WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>XXXE32910 Landscape Construction Services WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>XXXE32990 Other Construction WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>XXXF35010 Car Wholesaling WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>XXXP80100 Preschool Education WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>x785400 Business Administrative Services WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>xxx86110 GENERAL PRACTICE MEDICAL SERVICES WIC - Rate</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>tc9_pr__Employee_Community__c</picklist>
+        <values>
+            <fullName>EmployeePortal</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>tc9_pr__Maximum_Payment_Distributions__c</picklist>
+        <values>
+            <fullName>1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>tc9_pr__Payment_Details_Complete__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>tc9_pr__Payment_Files_Require_Approval__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>tc9_pr__SLA__c</picklist>
+        <values>
+            <fullName>Bronze</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gold</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Platinum</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Silver</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>tc9_pr__UpsellOpportunity__c</picklist>
+        <values>
+            <fullName>Maybe</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

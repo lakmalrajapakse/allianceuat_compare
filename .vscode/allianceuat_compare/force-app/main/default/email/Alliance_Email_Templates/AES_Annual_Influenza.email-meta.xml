@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>AES - Annual Influenza</name>
+    <style>none</style>
+    <subject>Its Flu Season Again</subject>
+    <textOnly>Alliance Nursing - Email Template
+
+
+IT&apos;S FLU SEASON AGAIN!
+
+Hi {!Contact.FirstName},
+
+Influenza (flu) vaccination requirements differ across our client facilities. Some facilities require all Agency Personnel to be vaccinated annually, while others strongly recommend it. For those working in the Aged Care sector, influenza vaccination is mandatory. All Alliance Members are encouraged to receive the influenza vaccine by 31/05/2026 to maximise their eligibility for shifts across our facilities.
+
+Agency Personnel who choose not to be vaccinated should be aware of the associated risks, including the potential transmission of infections to vulnerable individuals in their care. Many infectious diseases can be spread before symptoms appear, and vaccination helps protect both healthcare workers and those they support.
+
+For more detailed information, please refer to the  Australian Immunisation Handbook: Vaccination for people at occupational risk
+
+Upload Proof of Vaccination
+
+
+If you have any questions, please feel free to call our friendly staff on 1300 034 494.
+
+Kind regards,
+Your team at Alliance Extra Staff</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Documents_Only</fullName>
+    <columns>NAME</columns>
+    <columns>b3o__Allow_Editing_Submitted_Form__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>b3o__Document__c</columns>
+    <columns>Document_approval_required__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>NAME</field>
+        <operation>equals</operation>
+        <value>Privacy Information Statement</value>
+    </filters>
+    <label>Documents Only</label>
+</ListView>

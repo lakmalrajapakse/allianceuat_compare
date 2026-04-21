@@ -1,0 +1,72 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body style="height: auto; min-height: auto;">
+<p><span style="font-size:11pt"><span style="font-family:Aptos,sans-serif"><span style="font-family:&quot;Century Gothic&quot;,sans-serif">Hi,</span></span></span><br />
+<br />
+<span style="font-size:11pt"><span style="font-family:Aptos,sans-serif"><span style="font-family:&quot;Century Gothic&quot;,sans-serif">Please see below request for travel arrangements for NURSENAME at FACILITYNAME arriving/departing on DATE:</span></span></span><br />
+<br />
+<span style="font-size:11pt"><span style="font-family:Aptos,sans-serif"><b>Please complete and return the table below with your travel arrangements within 24 hours of receiving this email</b>. Failure to provide this information promptly may result in a delay to the start date of your agency staff.</span></span></p>
+
+<table class="Table" style="width:589px; border-collapse:collapse" width="589">
+	
+		<tr>
+			<td style="border-bottom:1px solid black; width:230px; padding:.100px 7px .100px 7px; height:19px; background-color:#00b0f0; border-top:1px solid black; border-right:1px solid black; border-left:1px solid black"><span style="font-size:11pt"><span style="font-family:Aptos,sans-serif"><b><span style="color:black">Mode of Transport</span></b></span></span></td>
+			<td nowrap="nowrap" style="border-bottom:1px solid black; width:358px; padding:.100px 7px .100px 7px; height:19px; border-top:1px solid black; border-right:1px solid black; border-left:none">&nbsp;</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="border-bottom:1px solid black; width:230px; padding:.100px 7px .100px 7px; height:19px; background-color:#00b0f0; border-top:none; border-right:1px solid black; border-left:1px solid black"><span style="font-size:11pt"><span style="font-family:Aptos,sans-serif"><b><span style="color:black">Travelling From</span></b></span></span></td>
+			<td nowrap="nowrap" style="border-bottom:1px solid black; width:358px; padding:.100px 7px .100px 7px; height:19px; border-top:none; border-right:1px solid black; border-left:none">&nbsp;</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="border-bottom:1px solid black; width:230px; padding:.100px 7px .100px 7px; height:19px; background-color:#00b0f0; border-top:none; border-right:1px solid black; border-left:1px solid black"><span style="font-size:11pt"><span style="font-family:Aptos,sans-serif"><b><span style="color:black">Travelling To</span></b></span></span></td>
+			<td nowrap="nowrap" style="border-bottom:1px solid black; width:358px; padding:.100px 7px .100px 7px; height:19px; border-top:none; border-right:1px solid black; border-left:none">&nbsp;</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="border-bottom:1px solid black; width:230px; padding:.100px 7px .100px 7px; height:19px; background-color:#00b0f0; border-top:none; border-right:1px solid black; border-left:1px solid black"><span style="font-size:11pt"><span style="font-family:Aptos,sans-serif"><b><span style="color:black">If travel time exceeds 8 hours, please specify a town where you would like to stop overnight. HNELHD will arrange the booking.</span></b></span></span></td>
+			<td nowrap="nowrap" style="border-bottom:1px solid black; width:358px; padding:.100px 7px .100px 7px; height:19px; border-top:none; border-right:1px solid black; border-left:none">&nbsp;</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="border-bottom:1px solid black; width:230px; padding:.100px 7px .100px 7px; height:19px; background-color:#00b0f0; border-top:none; border-right:1px solid black; border-left:1px solid black"><span style="font-size:11pt"><span style="font-family:Aptos,sans-serif"><b><span style="color:black">Date overnight accommodation required.</span></b></span></span></td>
+			<td nowrap="nowrap" style="border-bottom:1px solid black; width:358px; padding:.100px 7px .100px 7px; height:19px; border-top:none; border-right:1px solid black; border-left:none">&nbsp;</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="border-bottom:1px solid black; width:230px; padding:.100px 7px .100px 7px; height:25px; background-color:#00b0f0; border-top:none; border-right:1px solid black; border-left:1px solid black"><span style="font-size:11pt"><span style="font-family:Aptos,sans-serif"><b><span style="color:black">Total KMs / Milage*</span></b></span></span></td>
+			<td nowrap="nowrap" style="border-bottom:1px solid black; width:358px; padding:.100px 7px .100px 7px; height:25px; border-top:none; border-right:1px solid black; border-left:none">&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="2" nowrap="nowrap" style="border-bottom:1px solid black; width:589px; padding:.100px 7px .100px 7px; height:15px; border-top:none; border-right:1px solid black; border-left:1px solid black"><span style="font-size:11pt"><span style="font-family:Aptos,sans-serif">*Mileage is paid at 0.44 cents per km (casual rate) and entered in via Healthroster by Site Manager. Mileage is capped at 1000km total*</span></span></td>
+		</tr>
+	
+</table>
+&nbsp;
+
+<table class="Table" style="width:525px; border-collapse:collapse" width="525">
+	
+		<tr>
+			<td style="border-bottom:1px solid black; width:230px; padding:.100px 7px .100px 7px; height:19px; background-color:#00b0f0; border-top:1px solid black; border-right:1px solid black; border-left:1px solid black"><span style="font-size:11pt"><span style="font-family:Aptos,sans-serif"><b><span style="color:white">Mode of Transport</span></b></span></span></td>
+			<td nowrap="nowrap" style="border-bottom:1px solid black; width:295px; padding:.100px 7px .100px 7px; height:19px; border-top:1px solid black; border-right:1px solid black; border-left:none">&nbsp;</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="border-bottom:1px solid black; width:230px; padding:.100px 7px .100px 7px; height:19px; background-color:#00b0f0; border-top:none; border-right:1px solid black; border-left:1px solid black"><span style="font-size:11pt"><span style="font-family:Aptos,sans-serif"><b><span style="color:white">Travelling From Airport </span></b></span></span></td>
+			<td nowrap="nowrap" style="border-bottom:1px solid black; width:295px; padding:.100px 7px .100px 7px; height:19px; border-top:none; border-right:1px solid black; border-left:none">&nbsp;</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="border-bottom:1px solid black; width:230px; padding:.100px 7px .100px 7px; height:19px; background-color:#00b0f0; border-top:none; border-right:1px solid black; border-left:1px solid black"><span style="font-size:11pt"><span style="font-family:Aptos,sans-serif"><b><span style="color:white">Travelling To Airport</span></b></span></span></td>
+			<td nowrap="nowrap" style="border-bottom:1px solid black; width:295px; padding:.100px 7px .100px 7px; height:19px; border-top:none; border-right:1px solid black; border-left:none">&nbsp;</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="border-bottom:1px solid black; width:230px; padding:.100px 7px .100px 7px; height:19px; background-color:#00b0f0; border-top:none; border-right:1px solid black; border-left:1px solid black"><span style="font-size:11pt"><span style="font-family:Aptos,sans-serif"><b><span style="color:white">AM or PM flight time preference</span></b></span></span></td>
+			<td nowrap="nowrap" style="border-bottom:1px solid black; width:295px; padding:.100px 7px .100px 7px; height:19px; border-top:none; border-right:1px solid black; border-left:none">&nbsp;</td>
+		</tr>
+	
+</table>
+
+<p><br />
+<span style="font-size:11pt"><span style="font-family:Aptos,sans-serif"><b><span style="background:yellow">Hunter New England LHD will handle all flight bookings. Nurses or the Agency Company are not permitted to make bookings under any circumstances. Flight details will be provided shortly.</span></b></span></span><br />
+<br />
+<br />
+<span style="font-size:11pt"><span style="font-family:Aptos,sans-serif"><span style="font-family:&quot;Century Gothic&quot;,sans-serif">Thank you.</span></span></span></p>
+</body>
+</html>

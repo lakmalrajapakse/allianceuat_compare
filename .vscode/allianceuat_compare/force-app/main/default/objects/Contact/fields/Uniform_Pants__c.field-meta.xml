@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Uniform_Pants__c</fullName>
+    <label>Uniform Pants</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Scrub pants (regular length)</fullName>
+                <default>false</default>
+                <label>Scrub pants (regular length)</label>
+            </value>
+            <value>
+                <fullName>Scrub pants (long length)</fullName>
+                <default>false</default>
+                <label>Scrub pants (long length)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

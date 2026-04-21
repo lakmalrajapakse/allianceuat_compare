@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Accommodation_FeeCharged__c</fullName>
+    <description>Are you being charged a fee for any aspect of the accommodation you are staying in (rental fee, cost of utilities etc.)? If so, please provide details.</description>
+    <inlineHelpText>Are you being charged a fee for any aspect of the accommodation you are staying in (rental fee, cost of utilities etc.)? If so, please provide details.</inlineHelpText>
+    <label>Accommodation FeeCharged</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Yes</fullName>
+                <default>false</default>
+                <label>Yes</label>
+            </value>
+            <value>
+                <fullName>No</fullName>
+                <default>false</default>
+                <label>No</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

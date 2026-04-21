@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Calculated_Margin__c</fullName>
+    <description>The margin calculated as a percentage, used when calculating margin from an input of Pay and Charge into the related RC Rate record.</description>
+    <formula>IF(
+    tc9_et__Invoice_Rate_Ex_Tax__c &gt; 0,
+/* (tc9_et__Invoice_Rate_Ex_Tax__c - tc9_et__Total_Pay_Rate_Costs__c) / tc9_et__Invoice_Rate_Ex_Tax__c * 100, */
+( Margin_Amount__c / tc9_et__Total_Pay_Rate_Costs__c),
+    NULL
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>The margin calculated as a percentage, used when calculating margin from an input of Pay and Charge into the related RC Rate record.</inlineHelpText>
+    <label>Calculated Margin %</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>4</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Percent</type>
+</CustomField>

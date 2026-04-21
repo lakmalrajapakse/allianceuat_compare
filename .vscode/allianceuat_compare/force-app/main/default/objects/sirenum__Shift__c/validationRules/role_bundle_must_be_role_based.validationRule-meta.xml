@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>role_bundle_must_be_role_based</fullName>
+    <active>true</active>
+    <errorConditionFormula>Role_OR_Bundle__c != NULL &amp;&amp;
+NOT(Role_OR_Bundle__r.Is_Role_Bundle__c)</errorConditionFormula>
+    <errorMessage>Role Bundle (if specified) must be a role-based Competency Bundle.</errorMessage>
+</ValidationRule>

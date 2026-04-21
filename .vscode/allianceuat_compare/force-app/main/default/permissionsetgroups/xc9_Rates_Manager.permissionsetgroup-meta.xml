@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Gives rates managers the ability to calculate pay rates, update minimum pay rate records, and maintain accurate rate structures across the system.</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>2c9 Rates Manager</label>
+    <mutingPermissionSets>AATest_Rates_Manager_Muted_Set</mutingPermissionSets>
+    <permissionSets>Alliance_Custom_Rates_Manager_Permission_Set</permissionSets>
+    <permissionSets>tc9_et__X2Cloudnine_Rate_Calculator</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

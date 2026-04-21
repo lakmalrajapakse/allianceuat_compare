@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>ARRH - Referee Invite</name>
+    <style>none</style>
+    <subject>Would you be willing to provide a reference?</subject>
+    <textOnly>WE&apos;D LOVE YOUR INPUT.
+
+Hi {!b3o__Reference__c.b3o__First_Name_Referee__c},
+
+{!b3o__Reference__c.Candidate_Name__c} has applied for a role with Alliance Rural &amp; Remote Health, and you&apos;ve been nominated as their reference. We’d value your input on their character, performance, and how well they might suit this role.
+
+PROVIDE REFERENCE
+
+If you have any questions at all you can always call us on 07 4998 5550.
+
+Kind regards,
+Your team at Alliance Rural &amp; Remote Health</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

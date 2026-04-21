@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Can be used in Skill (AND/OR) Bundles if checked --></help>
+    <label><!-- Is Bundleable Skill Competency? --></label>
+    <name>Is_Skill_Competency__c</name>
+</CustomFieldTranslation>

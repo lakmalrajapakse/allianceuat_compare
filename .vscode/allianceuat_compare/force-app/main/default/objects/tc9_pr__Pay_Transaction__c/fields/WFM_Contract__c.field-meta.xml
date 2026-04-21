@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>WFM_Contract__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>The WFM Contract related to this Pay Transaction. This is updated via the custom flow &quot;Pay Transaction on Create&quot; and utilised in custom Invoicing functionality.</description>
+    <inlineHelpText>The WFM Contract related to this Pay Transaction. This is updated via the custom flow &quot;Pay Transaction on Create&quot; and utilised in custom Invoicing functionality.</inlineHelpText>
+    <label>WFM Contract</label>
+    <referenceTo>sirenum__ProActiveContract__c</referenceTo>
+    <relationshipLabel>Pay Transactions</relationshipLabel>
+    <relationshipName>Pay_Transactions</relationshipName>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

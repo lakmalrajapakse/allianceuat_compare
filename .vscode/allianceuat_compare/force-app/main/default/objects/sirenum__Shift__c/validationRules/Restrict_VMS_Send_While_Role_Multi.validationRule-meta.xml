@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Restrict_VMS_Send_While_Role_Multi</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(sirenum__Team__r.Name = &apos;Multi&apos;, ISPICKVAL( VMS_Send_Status__c , &quot;Ready To Send&quot;))</errorConditionFormula>
+    <errorMessage>Job Role must be set correctly before this shift can be released to the VMS</errorMessage>
+</ValidationRule>

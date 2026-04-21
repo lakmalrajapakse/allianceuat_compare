@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "666c3ee3-6b06-491f-8813-0d83b92269b1",
+  "appPageId" : "d9ce9f69-0e14-4b11-9233-6c5ce091d546",
+  "configurationTags" : [ ],
+  "devName" : "Availability_Schedule_c__c",
+  "id" : "bd570d7a-dac2-4cce-9b29-08e8b540629c",
+  "label" : "Availability Schedule",
+  "pageAccess" : "UseParent",
+  "routeType" : "custom-availability-schedule",
+  "type" : "route",
+  "urlPrefix" : "availability-schedule"
+}

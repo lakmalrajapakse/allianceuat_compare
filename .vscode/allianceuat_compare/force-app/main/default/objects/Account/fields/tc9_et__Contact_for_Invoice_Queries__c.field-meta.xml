@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>tc9_et__Contact_for_Invoice_Queries__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <deprecated>false</deprecated>
+    <description>Identifies the User who will be detailed as the Invoice Entity&apos;s Invoice Contact. The invoice contact and their contact details will be detailed on standard Invoice emails to be used in case of invoice queries.</description>
+    <inlineHelpText>Identifies the User who will be detailed as the Invoice Entity&apos;s Invoice Contact. The invoice contact and their contact details will be detailed on standard Invoice emails to be used in case of invoice queries.</inlineHelpText>
+    <label>Contact for Invoice Queries</label>
+    <referenceTo>User</referenceTo>
+    <relationshipName>Accounts</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

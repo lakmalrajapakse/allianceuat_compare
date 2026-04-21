@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Referral Pathway --></label>
+    <name>Referral_Pathway__c</name>
+    <picklistValues>
+        <masterLabel>AN Website</masterLabel>
+        <translation><!-- AN Website --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Clan Na Gael</masterLabel>
+        <translation><!-- Clan Na Gael --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cork Seminar</masterLabel>
+        <translation><!-- Cork Seminar --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DUL Expo</masterLabel>
+        <translation><!-- DUL Expo --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Dublin seminar</masterLabel>
+        <translation><!-- Dublin seminar --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>E-Guide</masterLabel>
+        <translation><!-- E-Guide --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Email/EDM</masterLabel>
+        <translation><!-- Email/EDM --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Facebook</masterLabel>
+        <translation><!-- Facebook --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Galway Seminar</masterLabel>
+        <translation><!-- Galway Seminar --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Glasgow Event 2024</masterLabel>
+        <translation><!-- Glasgow Event 2024 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Google</masterLabel>
+        <translation><!-- Google --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Indeed</masterLabel>
+        <translation><!-- Indeed --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Influencer</masterLabel>
+        <translation><!-- Influencer --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Instagram</masterLabel>
+        <translation><!-- Instagram --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Limerick Seminar</masterLabel>
+        <translation><!-- Limerick Seminar --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Linkedln</masterLabel>
+        <translation><!-- Linkedln --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Liverpool Event 2023</masterLabel>
+        <translation><!-- Liverpool Event 2023 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Manchester Event 2026</masterLabel>
+        <translation><!-- Manchester Event 2026 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Partner Referral</masterLabel>
+        <translation><!-- Partner Referral --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Podcast</masterLabel>
+        <translation><!-- Podcast --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pre RDB</masterLabel>
+        <translation><!-- Pre RDB --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Quiz</masterLabel>
+        <translation><!-- Quiz --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Seminar - pre location definition</masterLabel>
+        <translation><!-- Seminar - pre location definition --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>University Lead</masterLabel>
+        <translation><!-- University Lead --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Web Enquiry (old attribute)</masterLabel>
+        <translation><!-- Web Enquiry (old attribute) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Word of mouth</masterLabel>
+        <translation><!-- Word of mouth --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

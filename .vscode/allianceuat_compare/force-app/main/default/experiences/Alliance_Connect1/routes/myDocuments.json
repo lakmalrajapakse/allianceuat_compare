@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "5806ce15-1af6-476e-917c-6afd4a3137e9",
+  "appPageId" : "d9ce9f69-0e14-4b11-9233-6c5ce091d546",
+  "configurationTags" : [ ],
+  "devName" : "mydocuments__c",
+  "id" : "762526d6-fa7f-40ff-b943-ede2b2a80d7a",
+  "label" : "My Documents",
+  "pageAccess" : "UseParent",
+  "routeType" : "custom-my-documents",
+  "type" : "route",
+  "urlPrefix" : "my-documents"
+}

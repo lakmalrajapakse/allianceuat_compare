@@ -1,0 +1,529 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Skill --></label>
+    <name>Skill__c</name>
+    <picklistValues>
+        <masterLabel>Acute Assessment Unit</masterLabel>
+        <translation><!-- Acute Assessment Unit --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Ambulatory Care</masterLabel>
+        <translation><!-- Ambulatory Care --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Anaesthetics - Paediatrics</masterLabel>
+        <translation><!-- Anaesthetics - Paediatrics --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Anaesthetics General</masterLabel>
+        <translation><!-- Anaesthetics General --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Ante Natal</masterLabel>
+        <translation><!-- Ante Natal --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Assistant Cook</masterLabel>
+        <translation><!-- Assistant Cook --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Burns Unit</masterLabel>
+        <translation><!-- Burns Unit --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cardiac Cath Lab - Anaesthetics</masterLabel>
+        <translation><!-- Cardiac Cath Lab - Anaesthetics --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cardiac Cath Lab - Recovery</masterLabel>
+        <translation><!-- Cardiac Cath Lab - Recovery --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cardiac Cath Lab - Scrub Scout</masterLabel>
+        <translation><!-- Cardiac Cath Lab - Scrub Scout --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cardiology</masterLabel>
+        <translation><!-- Cardiology --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cardiothoracic Surgery</masterLabel>
+        <translation><!-- Cardiothoracic Surgery --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Caseload Midwife</masterLabel>
+        <translation><!-- Caseload Midwife --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Catering Supervisor</masterLabel>
+        <translation><!-- Catering Supervisor --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Chef</masterLabel>
+        <translation><!-- Chef --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Colorectal</masterLabel>
+        <translation><!-- Colorectal --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cook</masterLabel>
+        <translation><!-- Cook --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Coronary Care Unit (CCU)</masterLabel>
+        <translation><!-- Coronary Care Unit (CCU) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DOSA - Day Observation Unit</masterLabel>
+        <translation><!-- DOSA - Day Observation Unit --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Day Surgery Unit</masterLabel>
+        <translation><!-- Day Surgery Unit --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Delivery</masterLabel>
+        <translation><!-- Delivery --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Dementia-Specific Care</masterLabel>
+        <translation><!-- Dementia-Specific Care --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Dialysis Unit</masterLabel>
+        <translation><!-- Dialysis Unit --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Dietary / Nutrition Services</masterLabel>
+        <translation><!-- Dietary / Nutrition Services --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Ear, Nose, and Throat (ENT) Surgery</masterLabel>
+        <translation><!-- Ear, Nose, and Throat (ENT) Surgery --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Emergency Department (ED) / A&amp;E</masterLabel>
+        <translation><!-- Emergency Department (ED) / A&amp;E --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Emergency Department (Step Down)</masterLabel>
+        <translation><!-- Emergency Department (Step Down) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Endoscopy - Anaesthetics</masterLabel>
+        <translation><!-- Endoscopy - Anaesthetics --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Endoscopy - General</masterLabel>
+        <translation><!-- Endoscopy - General --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Endoscopy - Recovery</masterLabel>
+        <translation><!-- Endoscopy - Recovery --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Gastroenterology</masterLabel>
+        <translation><!-- Gastroenterology --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>General Medical Only</masterLabel>
+        <translation><!-- General Medical Only --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>General Practice / Primary Care</masterLabel>
+        <translation><!-- General Practice / Primary Care --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>General Surgical Only</masterLabel>
+        <translation><!-- General Surgical Only --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Geriatrics / Aged Care</masterLabel>
+        <translation><!-- Geriatrics / Aged Care --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Gynaecology</masterLabel>
+        <translation><!-- Gynaecology --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Health Assessments</masterLabel>
+        <translation><!-- Health Assessments --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>High Dependency Unit (HDU)</masterLabel>
+        <translation><!-- High Dependency Unit (HDU) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Home Care / Hospital in the Home (HITH)</masterLabel>
+        <translation><!-- Home Care / Hospital in the Home (HITH) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Home and Community Care</masterLabel>
+        <translation><!-- Home and Community Care --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Housekeeping</masterLabel>
+        <translation><!-- Housekeeping --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Immunisation / Vaccination</masterLabel>
+        <translation><!-- Immunisation / Vaccination --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Infectious Diseases</masterLabel>
+        <translation><!-- Infectious Diseases --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Instrument Tech (CSSD)</masterLabel>
+        <translation><!-- Instrument Tech (CSSD) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Intensive Care Unit (ICU)</masterLabel>
+        <translation><!-- Intensive Care Unit (ICU) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Kitchen</masterLabel>
+        <translation><!-- Kitchen --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Laundry</masterLabel>
+        <translation><!-- Laundry --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Maintenance Worker</masterLabel>
+        <translation><!-- Maintenance Worker --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Maternity / Obstetrics</masterLabel>
+        <translation><!-- Maternity / Obstetrics --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Medical / Surgical</masterLabel>
+        <translation><!-- Medical / Surgical --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Medical Short Stay Unit</masterLabel>
+        <translation><!-- Medical Short Stay Unit --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Mental Health - Acute Mental Health</masterLabel>
+        <translation><!-- Mental Health - Acute Mental Health --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Mental Health - Aged Mental Health</masterLabel>
+        <translation><!-- Mental Health - Aged Mental Health --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Mental Health - Drugs &amp; Alcohol</masterLabel>
+        <translation><!-- Mental Health - Drugs &amp; Alcohol --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Mental Health - ECT</masterLabel>
+        <translation><!-- Mental Health - ECT --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Mental Health - Eating Disorders</masterLabel>
+        <translation><!-- Mental Health - Eating Disorders --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Mental Health - General</masterLabel>
+        <translation><!-- Mental Health - General --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Mental Health - Paediatrics</masterLabel>
+        <translation><!-- Mental Health - Paediatrics --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Mental Health - Women&apos;s Services</masterLabel>
+        <translation><!-- Mental Health - Women&apos;s Services --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Neonatal Intensive Care Unit (NICU)</masterLabel>
+        <translation><!-- Neonatal Intensive Care Unit (NICU) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Neurology</masterLabel>
+        <translation><!-- Neurology --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Neurosurgery</masterLabel>
+        <translation><!-- Neurosurgery --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Occupational Therapy</masterLabel>
+        <translation><!-- Occupational Therapy --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Offender Health / Prison Health</masterLabel>
+        <translation><!-- Offender Health / Prison Health --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Oncology / Chemo</masterLabel>
+        <translation><!-- Oncology / Chemo --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Oncology / Haematology</masterLabel>
+        <translation><!-- Oncology / Haematology --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Ophthalmology</masterLabel>
+        <translation><!-- Ophthalmology --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Orderly</masterLabel>
+        <translation><!-- Orderly --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Orthopaedic Surgery</masterLabel>
+        <translation><!-- Orthopaedic Surgery --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Orthopaedics</masterLabel>
+        <translation><!-- Orthopaedics --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Outpatient Clinics</masterLabel>
+        <translation><!-- Outpatient Clinics --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Paediatric Emergency Department (PED) / A&amp;E</masterLabel>
+        <translation><!-- Paediatric Emergency Department (PED) / A&amp;E --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Paediatric Intensive Care Unit (PICU)</masterLabel>
+        <translation><!-- Paediatric Intensive Care Unit (PICU) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Paediatric Surgery</masterLabel>
+        <translation><!-- Paediatric Surgery --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Paediatrics</masterLabel>
+        <translation><!-- Paediatrics --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Palliative Aged Care</masterLabel>
+        <translation><!-- Palliative Aged Care --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Palliative Care</masterLabel>
+        <translation><!-- Palliative Care --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pantry / Servery</masterLabel>
+        <translation><!-- Pantry / Servery --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pathology / Laboratory</masterLabel>
+        <translation><!-- Pathology / Laboratory --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pharmacy</masterLabel>
+        <translation><!-- Pharmacy --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Physiotherapy</masterLabel>
+        <translation><!-- Physiotherapy --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Plastic Surgery</masterLabel>
+        <translation><!-- Plastic Surgery --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Post Natal</masterLabel>
+        <translation><!-- Post Natal --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Psychiatry / Mental Health</masterLabel>
+        <translation><!-- Psychiatry / Mental Health --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Radiology / Medical Imaging</masterLabel>
+        <translation><!-- Radiology / Medical Imaging --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Recovery (Post Anaesthetic Recovery)</masterLabel>
+        <translation><!-- Recovery (Post Anaesthetic Recovery) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Recovery - Paediatrics</masterLabel>
+        <translation><!-- Recovery - Paediatrics --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Rehabilitation</masterLabel>
+        <translation><!-- Rehabilitation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Renal / Nephrology</masterLabel>
+        <translation><!-- Renal / Nephrology --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Residential Aged Care</masterLabel>
+        <translation><!-- Residential Aged Care --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Respiratory Medicine</masterLabel>
+        <translation><!-- Respiratory Medicine --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Respite Care</masterLabel>
+        <translation><!-- Respite Care --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>School Nurse</masterLabel>
+        <translation><!-- School Nurse --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Scout General</masterLabel>
+        <translation><!-- Scout General --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Scrub - Bariatrics</masterLabel>
+        <translation><!-- Scrub - Bariatrics --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Scrub - Cardiac</masterLabel>
+        <translation><!-- Scrub - Cardiac --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Scrub - Cesarean</masterLabel>
+        <translation><!-- Scrub - Cesarean --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Scrub - Colorectal</masterLabel>
+        <translation><!-- Scrub - Colorectal --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Scrub - Dental</masterLabel>
+        <translation><!-- Scrub - Dental --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Scrub - Dermatology</masterLabel>
+        <translation><!-- Scrub - Dermatology --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Scrub - Ears, Nose, Throat (ENT)</masterLabel>
+        <translation><!-- Scrub - Ears, Nose, Throat (ENT) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Scrub - Endoscopy</masterLabel>
+        <translation><!-- Scrub - Endoscopy --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Scrub - Eyes</masterLabel>
+        <translation><!-- Scrub - Eyes --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Scrub - Gynae</masterLabel>
+        <translation><!-- Scrub - Gynae --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Scrub - IVF</masterLabel>
+        <translation><!-- Scrub - IVF --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Scrub - Major Ortho</masterLabel>
+        <translation><!-- Scrub - Major Ortho --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Scrub - Maxillofacial</masterLabel>
+        <translation><!-- Scrub - Maxillofacial --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Scrub - Minor Ortho</masterLabel>
+        <translation><!-- Scrub - Minor Ortho --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Scrub - Neurological</masterLabel>
+        <translation><!-- Scrub - Neurological --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Scrub - Pain</masterLabel>
+        <translation><!-- Scrub - Pain --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Scrub - Plastics</masterLabel>
+        <translation><!-- Scrub - Plastics --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Scrub - Robotics</masterLabel>
+        <translation><!-- Scrub - Robotics --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Scrub - Spinal</masterLabel>
+        <translation><!-- Scrub - Spinal --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Scrub - Thoracic</masterLabel>
+        <translation><!-- Scrub - Thoracic --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Scrub - Urology</masterLabel>
+        <translation><!-- Scrub - Urology --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Scrub - Vascular</masterLabel>
+        <translation><!-- Scrub - Vascular --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Scrub General</masterLabel>
+        <translation><!-- Scrub General --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Skin Checks</masterLabel>
+        <translation><!-- Skin Checks --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Social Work</masterLabel>
+        <translation><!-- Social Work --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Special Care Nursery</masterLabel>
+        <translation><!-- Special Care Nursery --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Speech Therapy</masterLabel>
+        <translation><!-- Speech Therapy --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Storeperson</masterLabel>
+        <translation><!-- Storeperson --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Stroke Unit</masterLabel>
+        <translation><!-- Stroke Unit --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Surgical Ward</masterLabel>
+        <translation><!-- Surgical Ward --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Telehealth Services</masterLabel>
+        <translation><!-- Telehealth Services --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Theatre Technician</masterLabel>
+        <translation><!-- Theatre Technician --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Transitional Care</masterLabel>
+        <translation><!-- Transitional Care --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Trauma</masterLabel>
+        <translation><!-- Trauma --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Trolleys (Food Delivery)</masterLabel>
+        <translation><!-- Trolleys (Food Delivery) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Urology</masterLabel>
+        <translation><!-- Urology --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Vascular Surgery</masterLabel>
+        <translation><!-- Vascular Surgery --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

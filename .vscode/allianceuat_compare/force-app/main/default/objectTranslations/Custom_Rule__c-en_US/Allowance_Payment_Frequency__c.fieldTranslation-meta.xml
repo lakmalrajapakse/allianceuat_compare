@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>
+        <!-- Determines the frequency of payment for this allowance.
+Pay Rule allowances are automatically processed with the defined frequency at the time of Timesheet interpretation. -->
+    </help>
+    <label><!-- Allowance Payment Frequency --></label>
+    <name>Allowance_Payment_Frequency__c</name>
+    <picklistValues>
+        <masterLabel>Allowance Hours</masterLabel>
+        <translation><!-- Allowance Hours --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Daily</masterLabel>
+        <translation><!-- Daily --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>One Per Shift</masterLabel>
+        <translation><!-- One Per Shift --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>One Per Shift - Allowance Only</masterLabel>
+        <translation><!-- One Per Shift - Allowance Only --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Quantity</masterLabel>
+        <translation><!-- Quantity --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Shift Hours</masterLabel>
+        <translation><!-- Shift Hours --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Shift Hours - Allowance Only</masterLabel>
+        <translation><!-- Shift Hours - Allowance Only --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Weekly</masterLabel>
+        <translation><!-- Weekly --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

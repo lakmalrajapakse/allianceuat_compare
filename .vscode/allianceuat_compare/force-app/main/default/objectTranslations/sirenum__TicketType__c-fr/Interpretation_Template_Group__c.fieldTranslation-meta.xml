@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- The Interpretation Template Group this competency relates to. --></help>
+    <label><!-- Interpretation Template Group --></label>
+    <name>Interpretation_Template_Group__c</name>
+    <relationshipLabel><!-- Competencies --></relationshipLabel>
+</CustomFieldTranslation>

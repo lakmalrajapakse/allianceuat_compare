@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Candidate Signed Permission to Represent</description>
+    <encodingKey>UTF-8</encodingKey>
+    <letterhead>AN_Letterhead</letterhead>
+    <name>1218 - Candidate Signed Permission to Represent</name>
+    <style>freeForm</style>
+    <subject>Candidate has signed the &apos;Permission to Represent&apos;</subject>
+    <textOnly>Hi {!Contact.OwnerFirstName},
+
+
+{!Contact.FirstName} {!Contact.LastName} has given permission to represent them.
+
+
+Please find the Document Trace here
+
+
+
+Kind regards,
+
+The Alliance Team</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Relates the Custom Rule to a Template Group. --></help>
+    <label><!-- Template Group --></label>
+    <name>Template_Group__c</name>
+    <relationshipLabel><!-- Custom Rules --></relationshipLabel>
+</CustomFieldTranslation>

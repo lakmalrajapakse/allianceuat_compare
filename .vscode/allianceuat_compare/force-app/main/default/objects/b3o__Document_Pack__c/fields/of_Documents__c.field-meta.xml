@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>of_Documents__c</fullName>
+    <description>The number of Documents in this Document Pack.</description>
+    <inlineHelpText>The number of Documents in this Document Pack.</inlineHelpText>
+    <label># of Documents</label>
+    <summaryForeignKey>b3o__Document__c.b3o__Document_Pack__c</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

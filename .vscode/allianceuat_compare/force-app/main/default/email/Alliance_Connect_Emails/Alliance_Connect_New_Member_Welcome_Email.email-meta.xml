@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Welcome email to new mobile app users</description>
+    <encodingKey>UTF-8</encodingKey>
+    <letterhead>Alliance_group_email_header</letterhead>
+    <name>Alliance Connect: New Member Welcome Email</name>
+    <style>freeForm</style>
+    <subject>Welcome to {!Community_Name}</subject>
+    <textOnly>Hi {!Receiving_User.FirstName},
+
+You&apos;re almost ready to go! The Alliance Connect app will give you access to thousands of shifts, and contracts all across Australia. Sign-in via the link below and setup your payee profiles. Once you&apos;re made active you can pick when and where you want to work or put your availability in for priority access to your preferred shifts.
+
+Complete the steps to setup your Alliance Connect profile.
+
+Review your payroll details, or enter them if this is your first time.
+
+Go to the main menu, open Payroll Profile. Select More, then complete each section:
+
+Payment details
+TFN declaration
+Superannuation choice
+Deductions (if applicable)
+
+Follow the link below to get started:
+
+{!Community_Url}
+
+Username: {!Receiving_User.Username}
+
+Please update your payroll details including banking details and super choice.
+
+Thanks,
+{!Organization.Name}</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>AN - New Compliance Requirement</name>
+    <style>none</style>
+    <subject>We need a few more documents to support your application</subject>
+    <textOnly>WE NEED A FEW MORE DOCUMENTS.
+
+Hi {!Contact.FirstName},
+
+in order to proceed your recent application with us, we need a few more documents from you.
+
+Please head over to the portal to get started!
+
+OPEN THE ALLIANCE PORTAL
+
+if you have any questions you can always call our friendly staff on 1300 034 494.
+
+Kind regards,
+Your team at Alliance Nursing</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

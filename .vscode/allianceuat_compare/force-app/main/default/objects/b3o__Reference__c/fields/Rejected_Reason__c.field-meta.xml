@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Rejected_Reason__c</fullName>
+    <label>Rejected Reason</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Referee Unresponsive</fullName>
+                <default>false</default>
+                <label>Referee Unresponsive</label>
+            </value>
+            <value>
+                <fullName>Referee declined</fullName>
+                <default>false</default>
+                <label>Referee declined</label>
+            </value>
+            <value>
+                <fullName>Unresponsive</fullName>
+                <default>false</default>
+                <label>Unresponsive</label>
+            </value>
+            <value>
+                <fullName>Not relevant</fullName>
+                <default>false</default>
+                <label>Not relevant</label>
+            </value>
+            <value>
+                <fullName>Invalid contact details</fullName>
+                <default>false</default>
+                <label>Invalid contact details</label>
+            </value>
+            <value>
+                <fullName>Declined</fullName>
+                <default>false</default>
+                <label>Declined</label>
+            </value>
+            <value>
+                <fullName>Invalid Contact Details for Referee</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Invalid Contact Details for Referee</label>
+            </value>
+            <value>
+                <fullName>Referee Declined_to_Provide_Reference</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Referee Declined_to_Provide_Reference</label>
+            </value>
+            <value>
+                <fullName>Referee Not Relevant to Employment History</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Referee Not Relevant to Employment History</label>
+            </value>
+            <value>
+                <fullName>Reference Did Not Align with Expectations</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Reference Did Not Align with Expectations</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

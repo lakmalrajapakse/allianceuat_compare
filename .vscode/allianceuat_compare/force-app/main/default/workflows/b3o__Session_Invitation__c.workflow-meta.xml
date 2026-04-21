@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>X1218_Induction_Confirmation_Consultant</fullName>
+        <description>1218 Induction Confirmation - Consultant</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>notifications@allianceaustralia.com.au</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>b3d__X3B_Docs_Templates/X1218_Induction_Confirmation_Consultant</template>
+    </alerts>
+    <alerts>
+        <fullName>X1218_Interview_Confirmation_Consultant</fullName>
+        <description>1218 Interview Confirmation - Consultant</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>noreply@allianceaustralia.com.au</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>b3d__X3B_Docs_Templates/X1218_Interview_confirmation_consultant</template>
+    </alerts>
+</Workflow>

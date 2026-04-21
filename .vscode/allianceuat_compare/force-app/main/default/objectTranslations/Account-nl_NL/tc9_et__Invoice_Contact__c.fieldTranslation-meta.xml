@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Defines the Invoice Contact that will be detailed on invoices when the Invoice Group By of &quot;Client&quot;, &quot;Hiring Manager (Invoice Client)&quot;, &quot;PO Number&quot; and &quot;Invoice To Account&quot; are used. --></help>
+    <label><!-- Invoice Contact --></label>
+    <name>tc9_et__Invoice_Contact__c</name>
+    <relationshipLabel><!-- Accounts with Contact as Invoice Contact --></relationshipLabel>
+</CustomFieldTranslation>

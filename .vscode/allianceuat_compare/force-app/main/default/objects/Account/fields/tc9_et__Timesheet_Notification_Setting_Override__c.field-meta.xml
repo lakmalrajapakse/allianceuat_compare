@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>tc9_et__Timesheet_Notification_Setting_Override__c</fullName>
+    <deleteConstraint>Restrict</deleteConstraint>
+    <deprecated>false</deprecated>
+    <description>Defines the notification setting which will be used for Timesheet Notifications when an Assignment is related to the Client. If blank the Timesheet Notification Setting defined on the Pay Schedule related to the Assignment will be applied.</description>
+    <inlineHelpText>Defines the notification setting which will be used for Timesheet Notifications when an Assignment is related to the Client. If blank the Timesheet Notification Setting defined on the Pay Schedule related to the Assignment will be applied.</inlineHelpText>
+    <label>Timesheet Notification Setting Override</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>tc9_pr__Notification_Setting__c.RecordType.DeveloperName</field>
+            <operation>equals</operation>
+            <value>Timesheet</value>
+        </filterItems>
+        <isOptional>true</isOptional>
+    </lookupFilter>
+    <referenceTo>tc9_pr__Notification_Setting__c</referenceTo>
+    <relationshipLabel>Accounts</relationshipLabel>
+    <relationshipName>Accounts</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

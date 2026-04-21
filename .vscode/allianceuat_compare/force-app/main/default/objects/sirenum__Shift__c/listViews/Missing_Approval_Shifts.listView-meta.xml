@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Missing_Approval_Shifts</fullName>
+    <columns>NAME</columns>
+    <columns>sirenum__Contact__c</columns>
+    <columns>tc9_ext_sirint__Assignment__c</columns>
+    <columns>tc9_ext_sirint__Timesheet__c</columns>
+    <columns>tc9_ext_sirint__Timesheet_Entry__c</columns>
+    <columns>sirenum__Scheduled_Start_Time__c</columns>
+    <columns>sirenum__Scheduled_End_Time__c</columns>
+    <columns>sirenum__Site__c</columns>
+    <columns>RECORDTYPE</columns>
+    <columns>sirenum__Published__c</columns>
+    <columns>Minimum_Pay_Rate__c</columns>
+    <columns>sirenum__Approved_By_Client__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>sirenum__Actual_Start_Time__c</field>
+        <operation>lessOrEqual</operation>
+        <value>TODAY</value>
+    </filters>
+    <filters>
+        <field>sirenum__Approved_By_Client__c</field>
+        <operation>equals</operation>
+    </filters>
+    <filters>
+        <field>sirenum__Cancelled__c</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>sirenum__Shift__c.sirenum__Shift</value>
+    </filters>
+    <label>Shifts Missing Approval</label>
+</ListView>

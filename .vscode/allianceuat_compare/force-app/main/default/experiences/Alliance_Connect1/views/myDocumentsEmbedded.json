@@ -1,0 +1,50 @@
+{
+  "appPageId" : "d9ce9f69-0e14-4b11-9233-6c5ce091d546",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "dataProviders" : [ ],
+  "id" : "dd4b7918-d286-4172-9e40-da3401aaa52f",
+  "label" : "My Documents Embedded",
+  "regions" : [ {
+    "id" : "cc1dd9c2-af73-4946-8179-ae549315b6e2",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "height" : "1000",
+        "pageName" : "Alliance_Internal_Job_Board_MyDocuments",
+        "recordId" : "{!recordId}"
+      },
+      "componentName" : "forceCommunity:visualforcePage",
+      "id" : "15046488-166b-4d89-8445-c471fe2240b4",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "da488a7e-0d10-49d7-bdf6-c337c831f25f",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "71296d43-5c10-4a41-a776-22d725d47147",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "My Documents Embedded"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "8efd47d2-a11e-4557-9c25-55feb7f9cee5",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "e7dc3abb-d0d2-45af-a2d2-19e160f8c5bd",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-my-documents-embedded"
+}

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type__c</fullName>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>Type</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Related Object Match</fullName>
+                <default>true</default>
+                <label>Related Object Match</label>
+            </value>
+            <value>
+                <fullName>Text Match</fullName>
+                <default>false</default>
+                <label>Text Match</label>
+            </value>
+            <value>
+                <fullName>Date Match</fullName>
+                <default>false</default>
+                <label>Date Match</label>
+            </value>
+            <value>
+                <fullName>Boolean Match</fullName>
+                <default>false</default>
+                <label>Boolean Match</label>
+            </value>
+            <value>
+                <fullName>Picklist Match</fullName>
+                <default>false</default>
+                <label>Picklist Match</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

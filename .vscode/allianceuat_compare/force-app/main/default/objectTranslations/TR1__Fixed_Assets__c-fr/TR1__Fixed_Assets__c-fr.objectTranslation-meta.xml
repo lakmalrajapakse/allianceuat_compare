@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Immobilisation</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Immobilisations</value>
+    </caseValues>
+    <gender>Masculine</gender>
+    <layouts>
+        <layout>ID Badge</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Uniform</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Nom des immobilisations</nameFieldLabel>
+    <quickActions>
+        <label><!-- Print ID Badge --></label>
+        <name>Print_ID_Badge</name>
+    </quickActions>
+    <recordTypes>
+        <label><!-- ID Badge --></label>
+        <name>ID_Badge</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Uniform --></label>
+        <name>Uniform</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Select the correct size for the selected Uniform and Type. --></errorMessage>
+        <name>Ensure_Correct_Size_Selection</name>
+    </validationRules>
+</CustomObjectTranslation>

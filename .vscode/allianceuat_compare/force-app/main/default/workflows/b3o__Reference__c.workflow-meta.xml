@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Incomplete_Reference_Notification</fullName>
+        <description>Incomplete Reference Notification</description>
+        <protected>false</protected>
+        <recipients>
+            <field>b3o__Contact__c</field>
+            <type>contactLookup</type>
+        </recipients>
+        <recipients>
+            <type>creator</type>
+        </recipients>
+        <senderAddress>ictalliance.nursing@businessnsw.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>b3d__X3B_Docs_Templates/Incomplete_Reference_Notification</template>
+    </alerts>
+    <alerts>
+        <fullName>X3B_Request_References</fullName>
+        <description>3B Request References - General</description>
+        <protected>false</protected>
+        <recipients>
+            <field>b3o__Email_Referee__c</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>notifications@allianceaustralia.com.au</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Alliance_Email_Templates/AN_Referee_invite</template>
+    </alerts>
+    <alerts>
+        <fullName>X3B_Request_References_Non_Clinical</fullName>
+        <description>3B Request References - Non - Clinical</description>
+        <protected>false</protected>
+        <recipients>
+            <field>b3o__Email_Referee__c</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>notifications@allianceaustralia.com.au</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Alliance_Email_Templates/AES_Referee_invite</template>
+    </alerts>
+    <alerts>
+        <fullName>X3B_Request_References_Rural_Remote</fullName>
+        <description>3B Request References - Rural Remote</description>
+        <protected>false</protected>
+        <recipients>
+            <field>b3o__Email_Referee__c</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>notifications@allianceaustralia.com.au</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Alliance_Email_Templates/ARRH_Referee_Invite</template>
+    </alerts>
+</Workflow>

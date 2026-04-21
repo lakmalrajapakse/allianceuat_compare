@@ -1,0 +1,84 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body style="height: auto; min-height: auto;">
+<style type="text/css">@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&amp;family=Roboto&amp;display=swap');
+    table {
+      border-collapse: collapse;
+    }
+    td {
+      border-collapse: collapse;
+    }
+    @font-face {
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 400;
+      src: local('Roboto'), local('Roboto'), url('https://fonts.gstatic.com/s/roboto/v27/KFOmCnqEu92Fr1Mu72xKKTU1Kvnz.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 900;
+      src: local('Montserrat'), local('Montserrat'), url('https://fonts.gstatic.com/s/montserrat/v15/JTURjIg1_i6t8kCHKm45_epG3gTD_vx3rCubqg.woff2') format('woff2');
+    }
+</style>
+<table border="0" cellpadding="0" cellspacing="0" style="background-color: #f6f6f6; padding: 0px;" width="100%">
+	
+		<tr>
+			<td align="center" bgcolor="#f6f6f6">
+			<table border="0" cellpadding="0" cellspacing="0" style="background-color:#ffffff; width:600px;">
+				
+					<tr>
+						<td align="left" style="padding: 0 45px;">
+						<h1 style="font-size: 30px; line-height: 37px; color: #007DC3; font-weight: 900; font-family: 'Montserrat', 'Arial Black', Arial, sans-serif;">Template with letterhead<br />
+						<br />
+						NURSE AVAILABLE.</h1>
+
+						<p style="font-size:18px;line-height:25px;color:#000000; font-weight: 400; font-family: 'Roboto', Arial, sans-serif; margin:10px 0 20px;">Hi Name,<br />
+						<br />
+						[Nurse name]&nbsp;[Designation] is available to assist with your deficit. Please see attached her CV and references for your persual.<br />
+						<br />
+						[Nurse name] is available to start a contract [Start to End date]<br />
+						<br />
+						[Nurse Name] referees mention:</p>
+
+						<ul style="font-size:18px;line-height:25px;color:#000000; font-weight: 400; font-family: 'Roboto', Arial, sans-serif;">
+							<li>XXXXXXX</li>
+							<li>XXXXXXX</li>
+							<li>XXXXXXX</li>
+						</ul>
+
+						<p style="font-size:18px;line-height:25px;color:#000000; font-weight: 400; font-family: 'Roboto', Arial, sans-serif; margin:10px 0 20px;">[Nurse name] is travelling alone from [Home Town] and will / will not require accomodation.</p>
+
+						<p style="font-size:18px;line-height:25px;color:#000000; font-weight: 400; font-family: 'Roboto', Arial, sans-serif; margin:10px 0 20px;">[Nurse name] compliance&nbsp;summary:</p>
+
+						<ul style="font-size:18px;line-height:25px;color:#000000; font-weight: 400; font-family: 'Roboto', Arial, sans-serif;">
+							<li>XXXXXXX</li>
+							<li>XXXXXXX</li>
+							<li>XXXXXXX</li>
+						</ul>
+
+						<p style="font-size:18px;line-height:25px;color:#000000; font-weight: 400; font-family: 'Roboto', Arial, sans-serif; margin:10px 0 20px;">[Nurse name] skillset summary:</p>
+
+						<ul style="font-size:18px;line-height:25px;color:#000000; font-weight: 400; font-family: 'Roboto', Arial, sans-serif;">
+							<li>XXXXXXX</li>
+							<li>XXXXXXX</li>
+							<li>XXXXXXX</li>
+						</ul>
+
+						<p style="font-size:18px;line-height:25px;color:#000000; font-weight: 400; font-family: 'Roboto', Arial, sans-serif; margin:10px 0 20px;">If you think [Nurse name] would be helpful in covering your rostering needs, please let me know at your earliest convenience.</p>
+
+						<p style="font-size:18px;line-height:25px;color:#000000; font-weight: 400; font-family: 'Roboto', Arial, sans-serif; margin:10px 0 20px;">If you have any questions at all you can always call us on <a href="tel:0749985550">07 4998 5550</a>.<br />
+						<br />
+						Have a great day!</p>
+						</td>
+					</tr>
+				
+			</table>
+			</td>
+		</tr>
+	
+</table>
+</body>
+</html>

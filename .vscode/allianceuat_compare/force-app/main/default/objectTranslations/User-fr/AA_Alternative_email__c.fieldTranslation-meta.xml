@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Alternative Email --></label>
+    <name>AA_Alternative_email__c</name>
+    <picklistValues>
+        <masterLabel>accounts.adelaide@allianceextrastaff.com.au</masterLabel>
+        <translation><!-- accounts.adelaide@allianceextrastaff.com.au --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>accounts.adelaide@alliancenursing.com.au</masterLabel>
+        <translation><!-- accounts.adelaide@alliancenursing.com.au --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>accounts.perth@alliancenursing.com.au</masterLabel>
+        <translation><!-- accounts.perth@alliancenursing.com.au --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>accounts.qld@alliancenursing.com.au</masterLabel>
+        <translation><!-- accounts.qld@alliancenursing.com.au --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>accounts.sydney@alliancenursing.com.au</masterLabel>
+        <translation><!-- accounts.sydney@alliancenursing.com.au --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>allocation.adelaide@allianceextrastaff.com.au</masterLabel>
+        <translation><!-- allocation.adelaide@allianceextrastaff.com.au --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>bookings.perth@alliancenursing.com.au</masterLabel>
+        <translation><!-- bookings.perth@alliancenursing.com.au --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>bookings.qld@alliancenursing.com.au</masterLabel>
+        <translation><!-- bookings.qld@alliancenursing.com.au --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>candidatemanagement.adelaide@allianceextrastaff.com.au</masterLabel>
+        <translation><!-- candidatemanagement.adelaide@allianceextrastaff.com.au --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>candidatemanagement.adelaide@alliancenursing.com.au</masterLabel>
+        <translation><!-- candidatemanagement.adelaide@alliancenursing.com.au --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>candidatemanagement.albury@allianceextrastaff.com.au</masterLabel>
+        <translation><!-- candidatemanagement.albury@allianceextrastaff.com.au --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>candidatemanagement.perth@alliancenursing.com.au</masterLabel>
+        <translation><!-- candidatemanagement.perth@alliancenursing.com.au --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>education.adelaide@allianceextrastaff.com.au</masterLabel>
+        <translation><!-- education.adelaide@allianceextrastaff.com.au --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>education.adelaide@alliancenursing.com.au</masterLabel>
+        <translation><!-- education.adelaide@alliancenursing.com.au --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>education.albury@allianceextrastaff.com.au</masterLabel>
+        <translation><!-- education.albury@allianceextrastaff.com.au --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>education.perth@alliancenursing.com.au</masterLabel>
+        <translation><!-- education.perth@alliancenursing.com.au --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>education.qld@alliancenursing.com.au</masterLabel>
+        <translation><!-- education.qld@alliancenursing.com.au --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>education.sydney@alliancenursing.com.au</masterLabel>
+        <translation><!-- education.sydney@alliancenursing.com.au --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>info.adelaide@allianceextrastaff.com.au</masterLabel>
+        <translation><!-- info.adelaide@allianceextrastaff.com.au --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>info.adelaide@alliancenursing.com.au</masterLabel>
+        <translation><!-- info.adelaide@alliancenursing.com.au --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>info.albury@allianceextrastaff.com.au</masterLabel>
+        <translation><!-- info.albury@allianceextrastaff.com.au --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>info.international@alliancenursing.com.au</masterLabel>
+        <translation><!-- info.international@alliancenursing.com.au --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>info.perth@alliancenursing.com.au</masterLabel>
+        <translation><!-- info.perth@alliancenursing.com.au --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>info.qld@alliancenursing.com.au</masterLabel>
+        <translation><!-- info.qld@alliancenursing.com.au --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>info.sydney@alliancenursing.com.au</masterLabel>
+        <translation><!-- info.sydney@alliancenursing.com.au --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>payroll.adelaide@alliancenursing.com.au</masterLabel>
+        <translation><!-- payroll.adelaide@alliancenursing.com.au --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>payroll.qld@alliancenursing.com.au</masterLabel>
+        <translation><!-- payroll.qld@alliancenursing.com.au --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>recruitment.adelaide@allianceextrastaff.com.au</masterLabel>
+        <translation><!-- recruitment.adelaide@allianceextrastaff.com.au --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>recruitment.wa@alliancenursing.com.au</masterLabel>
+        <translation><!-- recruitment.wa@alliancenursing.com.au --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>sydneyruralplacements@alliancenursing.com.au</masterLabel>
+        <translation><!-- sydneyruralplacements@alliancenursing.com.au --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>timesheets@allianceextrastaff.com.au</masterLabel>
+        <translation><!-- timesheets@allianceextrastaff.com.au --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>wa.finance@alliancenursing.com.au</masterLabel>
+        <translation><!-- wa.finance@alliancenursing.com.au --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

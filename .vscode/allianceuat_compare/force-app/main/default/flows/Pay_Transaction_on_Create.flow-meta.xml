@@ -1,0 +1,1232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>62.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <name>assign_group_by</name>
+        <label>assign group by</label>
+        <locationX>1018</locationX>
+        <locationY>1451</locationY>
+        <assignmentItems>
+            <assignToReference>var_original_group_by</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>get_matching_PTIX.tc9_et__Invoice_Group_By_ID__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>var_original_contract</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>get_matching_PTIX.WFM_Contract__c</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Update_Pay_Transaction</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Copy_2_of_Update_Pay_Transaction_Allowance</name>
+        <label>Update Pay Transaction - Allowance</label>
+        <locationX>314</locationX>
+        <locationY>1451</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.tc9_et__T2P_Product_Override__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Yes</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.tc9_pr__Pay_Rate__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>frmPayRate</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.tc9_et__Invoice_Rate__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>frmInvoiceRate</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Additional_Types</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Set_T2P_Override1</name>
+        <label>Set T2P Override</label>
+        <locationX>50</locationX>
+        <locationY>1451</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.tc9_et__T2P_Product_Override__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Yes</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Additional_Types</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>SetT2POverride2</name>
+        <label>Set T2P Override</label>
+        <locationX>1150</locationX>
+        <locationY>1751</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.tc9_et__T2P_Product_Override__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Yes</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Additional_Types</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Update_Branch</name>
+        <label>Update Branch</label>
+        <locationX>468</locationX>
+        <locationY>611</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Branch_ID__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>get_Assignment.Branch__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Alliance_Branch__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>get_Assignment.Branch__c</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Get_Contract</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Update_Pay_Transaction</name>
+        <label>Update Pay Transaction</label>
+        <locationX>1150</locationX>
+        <locationY>1643</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Shift__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>frmShift</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.WFM_Contract__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>ff_WFM_Contract</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.WFM_Site_ID__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>frmSiteID</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.WFM_Location_ID__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>frmLocationID</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.WFM_MPR_ID__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Shift__r.Minimum_Pay_Rate__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.tc9_et__T2P_Product_Override__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Yes</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.tc9_et__Invoice_Group_By_ID__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>frmInvoiceGroupByID</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.tc9_pr__Pay_Rate__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>frmPayRate</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.tc9_et__Invoice_Rate__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>frmInvoiceRate</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.tc9_et__Invoice_Entity__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>get_Assignment.tc9_ext_sirint__Job_Role__r.sirenum__Account__r.Default_Invoice_Entity__c</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>SetT2POverride2</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Update_Pay_Transaction1</name>
+        <label>Update Pay Transaction</label>
+        <locationX>468</locationX>
+        <locationY>2051</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.tc9_pr__Exclude_From_Pay_Batch__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.tc9_et__To_Be_Invoiced__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Exclusions</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Update_Pay_Transaction_Allowance</name>
+        <label>Update Pay Transaction - Allowance</label>
+        <locationX>446</locationX>
+        <locationY>1235</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.tc9_et__Invoice_Group_By_ID__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>frmInvoiceGroupByID_Allowance</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.tc9_et__Invoice_Entity__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>get_Assignment.tc9_ext_sirint__Job_Role__r.sirenum__Account__r.Default_Invoice_Entity__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.tc9_et__T2P_Product_Override__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Yes</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Cancellation</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Update_Pay_Transaction_Allowance3</name>
+        <label>Update Pay Transaction - Allowance</label>
+        <locationX>754</locationX>
+        <locationY>1667</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.tc9_et__Invoice_Group_By_ID__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Get_PTIX_with_Shift_Details.tc9_et__Invoice_Group_By_ID__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.WFM_Site_ID__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Get_PTIX_with_Shift_Details.WFM_Site_ID__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.WFM_Contract__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Get_PTIX_with_Shift_Details.WFM_Contract__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.tc9_et__T2P_Product_Override__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Yes</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.tc9_et__Invoice_Calendar_Period__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Get_Calendar_period.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Additional_Types</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Update_Pay_Transaction_Exclude_from_Invoicing</name>
+        <label>Update Pay Transaction - Exclude from Invoicing</label>
+        <locationX>600</locationX>
+        <locationY>2351</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.tc9_et__To_Be_Invoiced__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Set_Re_Trigger_back_to_FALSE</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Update_Pay_Transaction_Exclude_from_PB</name>
+        <label>Update Pay Transaction - Exclude from PB</label>
+        <locationX>336</locationX>
+        <locationY>2351</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.tc9_pr__Exclude_From_Pay_Batch__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Set_Re_Trigger_back_to_FALSE</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Update_Pay_Transaction_TSE_Not_Null</name>
+        <label>Update Pay Transaction</label>
+        <locationX>50</locationX>
+        <locationY>1343</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Shift__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>frmShift</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.WFM_Contract__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>frmWFMContract</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.WFM_Site_ID__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>frmSiteID</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.WFM_Location_ID__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>frmLocationID</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.WFM_MPR_ID__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Shift__r.Minimum_Pay_Rate__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.tc9_et__T2P_Product_Override__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Yes</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.tc9_et__Invoice_Group_By_ID__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>frmInvoiceGroupByID</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.tc9_pr__Pay_Rate__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>frmPayRate</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.tc9_et__Invoice_Rate__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>frmInvoiceRate</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.tc9_et__Purchase_Order_Number__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Get_Timesheet_Entry.Purchase_Order_Number__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.tc9_et__Invoice_Entity__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Get_Contract.Default_Invoice_Entity__c</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Set_T2P_Override1</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <description>Provides additional updates based upon the Pay Transaction relationship to other processes.</description>
+        <name>Additional_Types</name>
+        <label>Additional Types</label>
+        <locationX>600</locationX>
+        <locationY>1943</locationY>
+        <defaultConnector>
+            <targetReference>Exclusions</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Cross_Assignment</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.tc9_et__Timesheet_Entry__r.Cross_Assignment_Timesheet_Entry__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Pay_Transaction1</targetReference>
+            </connector>
+            <label>Cross Assignment</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Assignment_Set</name>
+        <label>Assignment Set</label>
+        <locationX>600</locationX>
+        <locationY>395</locationY>
+        <defaultConnector>
+            <targetReference>Get_Contract</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Yes4</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.tc9_pr__Assignment__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>get_Assignment</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Cancellation</name>
+        <label>Cancellation?</label>
+        <locationX>446</locationX>
+        <locationY>1343</locationY>
+        <defaultConnector>
+            <targetReference>Additional_Types</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Yes_Override_pay_charge</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Shift__r.Cancellation_Outcome__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Copy_2_of_Update_Pay_Transaction_Allowance</targetReference>
+            </connector>
+            <label>Yes - Override pay/charge</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Exclusions</name>
+        <label>Exclusions</label>
+        <locationX>600</locationX>
+        <locationY>2243</locationY>
+        <defaultConnector>
+            <targetReference>Set_Re_Trigger_back_to_FALSE</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Exlcude_from_Pay_Batch</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.tc9_pr__Pay_Rate__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <numberValue>0.0</numberValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.tc9_pr__Pay_Code__r.Name</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Unpaid Leave</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Qty_converted_to_TOIL__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.tc9_pr__Pay_Rate__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <numberValue>0.0</numberValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Pay_Transaction_Exclude_from_PB</targetReference>
+            </connector>
+            <label>Exlcude from Pay Batch</label>
+        </rules>
+        <rules>
+            <name>Exclude_from_Invoicing</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.tc9_et__Invoice_Rate__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <numberValue>0.0</numberValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Pay_Transaction_Exclude_from_Invoicing</targetReference>
+            </connector>
+            <label>Exclude from Invoicing</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Group_By</name>
+        <label>Group By</label>
+        <locationX>1150</locationX>
+        <locationY>1235</locationY>
+        <defaultConnector>
+            <targetReference>Update_Pay_Transaction</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Blank_Find_on_existing</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>frmInvoiceGroupByID</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>get_matching_PTIX</targetReference>
+            </connector>
+            <label>Blank - Find on existing</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Is_Timesheet_Entry_not_null</name>
+        <label>Is Timesheet Entry not null?</label>
+        <locationX>600</locationX>
+        <locationY>1127</locationY>
+        <defaultConnector>
+            <targetReference>Group_By</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Timesheet_Entry_is_not_null</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.tc9_et__Timesheet_Entry__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.tc9_et__Timesheet_Activity__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>Get_Call_In_Timesheet_Activity.Id</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Get_Timesheet_Entry</targetReference>
+            </connector>
+            <label>Timesheet Entry is not null</label>
+        </rules>
+        <rules>
+            <name>RT_is_Allowance</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.RecordTypeId</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>Get_Pay_Transaction_Allowance_Record_Type.Id</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Pay_Transaction_Allowance</targetReference>
+            </connector>
+            <label>RT is Allowance</label>
+        </rules>
+        <rules>
+            <name>Timesheet_Item_or_Timesheet_Activity_is_not_null</name>
+            <conditionLogic>(1 OR 5) AND (2 OR 3 OR 4)</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.tc9_et__Timesheet_Item__r.Id</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Shift__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.WFM_Contract__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.WFM_Site_ID__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.tc9_et__Timesheet_Activity__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>Get_Call_In_Timesheet_Activity.Id</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Get_PTIX_with_Shift_Details</targetReference>
+            </connector>
+            <label>Timesheet Item or Timesheet Activity is not null</label>
+        </rules>
+    </decisions>
+    <description>ALN-21 - Created to do FF actions on Pay Transactions
+ALN-47 - frmInvoiceGroupById - new group-by values
+ALN-222 - Added Invoice Group by for non TS
+ALN-272 - Stamp Branch ID from Assignment on PTIX
+ALN-186 - Update invoice rate &amp; pay rate formulas
+ALN-371 - Ensuring flow of Purchase Order numbers onto TS entries for splitting of invoices
+ALN-374 - Invoice Group By fix for Allowance
+ALN-401: Enable bypassing of T2P Override
+ALN-426: Remove decision element for &apos;Is PO Number Null&apos;
+ALN-439: Update trigger to on-create only. Update the frmSiteID to have 3rd criteria and reference SiteID on PTIX record. Also cater for re-trigger via checkbox.
+ALN-456: Remove the outdated default outcome on TSE/TSI Pay Transactions that does not reference WFM Contracts.
+ALN-507: Cater for reversal transactions and getting correct invoice group by.  Also added WFM Contract
+ALN-514 - Cater for cancellation pay/charge option (Cancellation Option from Shift) on Allowances
+ALN-515 -  Cater for Invoice Group by Employee
+ALN-532 - Updated to cater for update of Invoice Entity on PTIX from Contract.DefaultInvoiceEntity
+ALN-546 - Updated frmWFMContract formula to add WFM_Contract__c as third fallback to align Payment and Allowance Group By ID generation
+ALN-512 - &apos;Exclude from Pay Batch&apos; logic to no longer exclude Pay Transactions where Pay Rate = 0 if &apos;QTY Converted to TOIL&apos; is not null.
+ALN-480 Added additional decision outcome to cater for missing Inv calendar period and Inv group by ID
+Added Record type filter for Calendar to be Invoice</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>ff_assignment_GroupBy</name>
+        <dataType>String</dataType>
+        <expression>CASE(
+        TEXT({!get_Assignment.tc9_ext_sirint__Job_Role__r.sirenum__Account__r.Custom_Invoice_Group_By__c}),
+        &quot;Account &amp; Site&quot;, {!$Record.tc9_pr__Client__c} &amp; &quot;_&quot; &amp; {!frmSiteID} &amp; &quot;_&quot; &amp; {!$Record.tc9_pr__Assignment__r.Payroll_Invoice_Setting_ID__c},
+        &quot;Account&quot;, {!$Record.tc9_pr__Client__c} &amp; &quot;_&quot; &amp; {!$Record.tc9_pr__Assignment__r.Payroll_Invoice_Setting_ID__c},  
+        &quot;Contract &amp; Site&quot;, {!get_Assignment.tc9_ext_sirint__Job_Role__r.sirenum__Account__c} &amp; &quot;_&quot; &amp; {!$Record.WFM_Site_ID__c} &amp; &quot;_&quot; &amp; {!$Record.tc9_pr__Assignment__r.Payroll_Invoice_Setting_ID__c},
+        &quot;Contract&quot;, {!get_Assignment.tc9_ext_sirint__Job_Role__r.sirenum__Account__c} &amp; &quot;_&quot; &amp; {!$Record.tc9_pr__Assignment__r.Payroll_Invoice_Setting_ID__c},
+        &quot;Site &amp; Employee&quot;, {!frmSiteID} &amp; &quot;_&quot; &amp; {!$Record.tc9_pr__Employee__c} &amp; &quot;_&quot; &amp; {!$Record.tc9_pr__Assignment__r.Payroll_Invoice_Setting_ID__c},
+        &quot;Site&quot;, {!frmSiteID} &amp; &quot;_&quot; &amp; {!$Record.tc9_pr__Assignment__r.Payroll_Invoice_Setting_ID__c},
+        &quot;Branch&quot;, {!$Record.tc9_pr__Assignment__r.Branch__c} &amp; &quot;_&quot; &amp; {!$Record.tc9_pr__Assignment__r.Payroll_Invoice_Setting_ID__c},
+        &quot;Job Type&quot;, {!$Record.tc9_pr__Assignment__r.tc9_ext_sirint__Job_Role__c} &amp; &quot;_&quot; &amp; {!$Record.tc9_pr__Assignment__r.Payroll_Invoice_Setting_ID__c},
+        &quot;Shift&quot;, {!$Record.Shift__c} &amp; &quot;_&quot; &amp; {!$Record.tc9_pr__Assignment__r.Payroll_Invoice_Setting_ID__c},
+        &quot;Award Classification&quot;, {!$Record.tc9_pr__Client__c} &amp; &quot;_&quot; &amp; {!$Record.tc9_pr__Assignment__r.tc9_et__Award_Classification__c} &amp; &quot;_&quot; &amp; {!$Record.tc9_pr__Assignment__r.Payroll_Invoice_Setting_ID__c}, 
+        &quot;Award Level&quot;, {!$Record.tc9_pr__Client__c} &amp; &quot;_&quot; &amp; {!$Record.tc9_pr__Assignment__r.tc9_et__Award_Level__c} &amp; &quot;_&quot; &amp; {!$Record.tc9_pr__Assignment__r.Payroll_Invoice_Setting_ID__c},
+        &quot;PO Number&quot;, {!$Record.tc9_et__Purchase_Order_Number__c} &amp; &quot;_&quot; &amp; {!$Record.tc9_pr__Assignment__r.Payroll_Invoice_Setting_ID__c},
+        &quot;Employee&quot;, {!$Record.tc9_pr__Client__c} &amp; &quot;_&quot; &amp; {!$Record.tc9_pr__Employee__c},
+        &quot;&quot;
+    )</expression>
+    </formulas>
+    <formulas>
+        <name>ff_nonTSE_InvoiceGroupBy</name>
+        <dataType>String</dataType>
+        <expression>{!$Record.tc9_pr__Assignment__c} + &quot;_&quot; + {!$Record.tc9_pr__Assignment__r.Payroll_Invoice_Setting_ID__c}</expression>
+    </formulas>
+    <formulas>
+        <name>ff_WFM_Contract</name>
+        <dataType>String</dataType>
+        <expression>if(isblank({!frmWFMContract}), {!var_original_contract}, {!frmWFMContract})</expression>
+    </formulas>
+    <formulas>
+        <name>frmInvoiceGroupByID</name>
+        <dataType>String</dataType>
+        <expression>IF( 
+    NOT(ISBLANK(TEXT({!Get_Contract.Custom_Invoice_Group_By__c}))),
+    CASE(
+        TEXT({!Get_Contract.Custom_Invoice_Group_By__c}),
+        &quot;Account &amp; Site&quot;, {!$Record.tc9_pr__Client__c} &amp; &quot;_&quot; &amp; {!frmSiteID} &amp; &quot;_&quot; &amp; {!$Record.tc9_pr__Assignment__r.Payroll_Invoice_Setting_ID__c},
+        &quot;Account&quot;, {!$Record.tc9_pr__Client__c} &amp; &quot;_&quot; &amp; {!$Record.tc9_pr__Assignment__r.Payroll_Invoice_Setting_ID__c},  
+        &quot;Contract &amp; Site&quot;, {!frmWFMContract} &amp; &quot;_&quot; &amp; {!$Record.WFM_Site_ID__c} &amp; &quot;_&quot; &amp; {!$Record.tc9_pr__Assignment__r.Payroll_Invoice_Setting_ID__c},
+        &quot;Contract&quot;, {!frmWFMContract} &amp; &quot;_&quot; &amp; {!$Record.tc9_pr__Assignment__r.Payroll_Invoice_Setting_ID__c},
+        &quot;Site &amp; Employee&quot;, {!frmSiteID} &amp; &quot;_&quot; &amp; {!$Record.tc9_pr__Employee__c} &amp; &quot;_&quot; &amp; {!$Record.tc9_pr__Assignment__r.Payroll_Invoice_Setting_ID__c},
+        &quot;Site&quot;, {!frmSiteID} &amp; &quot;_&quot; &amp; {!$Record.tc9_pr__Assignment__r.Payroll_Invoice_Setting_ID__c},
+        &quot;Branch&quot;, {!$Record.tc9_pr__Assignment__r.Branch__c} &amp; &quot;_&quot; &amp; {!$Record.tc9_pr__Assignment__r.Payroll_Invoice_Setting_ID__c},
+        &quot;Job Type&quot;, {!$Record.tc9_pr__Assignment__r.tc9_ext_sirint__Job_Role__c} &amp; &quot;_&quot; &amp; {!$Record.tc9_pr__Assignment__r.Payroll_Invoice_Setting_ID__c},
+        &quot;Shift&quot;, {!$Record.Shift__c} &amp; &quot;_&quot; &amp; {!$Record.tc9_pr__Assignment__r.Payroll_Invoice_Setting_ID__c},
+        &quot;Award Classification&quot;, {!$Record.tc9_pr__Client__c} &amp; &quot;_&quot; &amp; {!$Record.tc9_pr__Assignment__r.tc9_et__Award_Classification__c} &amp; &quot;_&quot; &amp; {!$Record.tc9_pr__Assignment__r.Payroll_Invoice_Setting_ID__c}, 
+        &quot;Award Level&quot;, {!$Record.tc9_pr__Client__c} &amp; &quot;_&quot; &amp; {!$Record.tc9_pr__Assignment__r.tc9_et__Award_Level__c} &amp; &quot;_&quot; &amp; {!$Record.tc9_pr__Assignment__r.Payroll_Invoice_Setting_ID__c},
+        &quot;PO Number&quot;, {!Get_Timesheet_Entry.Purchase_Order_Number__c} &amp; &quot;_&quot; &amp; {!$Record.tc9_pr__Assignment__r.Payroll_Invoice_Setting_ID__c},
+        &quot;Employee&quot;, {!$Record.tc9_pr__Client__c} &amp; &quot;_&quot; &amp; {!$Record.tc9_pr__Employee__c},
+        &quot;&quot;
+    ),
+    {!var_original_group_by}
+)</expression>
+    </formulas>
+    <formulas>
+        <name>frmInvoiceGroupByID_Allowance</name>
+        <dataType>String</dataType>
+        <expression>IF( 
+    NOT(ISBLANK(TEXT({!Get_Contract_from_Pay_Transaction.Custom_Invoice_Group_By__c}))),
+    CASE(
+        TEXT({!Get_Contract_from_Pay_Transaction.Custom_Invoice_Group_By__c}),
+        &quot;Account &amp; Site&quot;, {!$Record.tc9_pr__Client__c} &amp; &quot;_&quot; &amp; {!frmSiteID} &amp; &quot;_&quot; &amp; {!$Record.tc9_pr__Assignment__r.Payroll_Invoice_Setting_ID__c},
+        &quot;Account&quot;, {!$Record.tc9_pr__Client__c} &amp; &quot;_&quot; &amp; {!$Record.tc9_pr__Assignment__r.Payroll_Invoice_Setting_ID__c},  
+        &quot;Contract &amp; Site&quot;, {!frmWFMContract} &amp; &quot;_&quot; &amp; {!$Record.WFM_Site_ID__c} &amp; &quot;_&quot; &amp; {!$Record.tc9_pr__Assignment__r.Payroll_Invoice_Setting_ID__c},
+        &quot;Contract&quot;, {!frmWFMContract} &amp; &quot;_&quot; &amp; {!$Record.tc9_pr__Assignment__r.Payroll_Invoice_Setting_ID__c},
+        &quot;Site &amp; Employee&quot;, {!frmSiteID} &amp; &quot;_&quot; &amp; {!$Record.tc9_pr__Employee__c} &amp; &quot;_&quot; &amp; {!$Record.tc9_pr__Assignment__r.Payroll_Invoice_Setting_ID__c},
+        &quot;Site&quot;, {!frmSiteID} &amp; &quot;_&quot; &amp; {!$Record.tc9_pr__Assignment__r.Payroll_Invoice_Setting_ID__c},
+        &quot;Branch&quot;, {!$Record.tc9_pr__Assignment__r.Branch__c} &amp; &quot;_&quot; &amp; {!$Record.tc9_pr__Assignment__r.Payroll_Invoice_Setting_ID__c},
+        &quot;Job Type&quot;, {!$Record.tc9_pr__Assignment__r.tc9_ext_sirint__Job_Role__c} &amp; &quot;_&quot; &amp; {!$Record.tc9_pr__Assignment__r.Payroll_Invoice_Setting_ID__c},
+        &quot;Shift&quot;, {!$Record.Shift__c} &amp; &quot;_&quot; &amp; {!$Record.tc9_pr__Assignment__r.Payroll_Invoice_Setting_ID__c},
+        &quot;Award Classification&quot;, {!$Record.tc9_pr__Client__c} &amp; &quot;_&quot; &amp; {!$Record.tc9_pr__Assignment__r.tc9_et__Award_Classification__c} &amp; &quot;_&quot; &amp; {!$Record.tc9_pr__Assignment__r.Payroll_Invoice_Setting_ID__c}, 
+        &quot;Award Level&quot;, {!$Record.tc9_pr__Client__c} &amp; &quot;_&quot; &amp; {!$Record.tc9_pr__Assignment__r.tc9_et__Award_Level__c} &amp; &quot;_&quot; &amp; {!$Record.tc9_pr__Assignment__r.Payroll_Invoice_Setting_ID__c},
+        &quot;PO Number&quot;, {!$Record.tc9_et__Purchase_Order_Number__c} &amp; &quot;_&quot; &amp; {!$Record.tc9_pr__Assignment__r.Payroll_Invoice_Setting_ID__c},
+        &quot;Employee&quot;, {!$Record.tc9_pr__Client__c} &amp; &quot;_&quot; &amp; {!$Record.tc9_pr__Employee__c},
+        &quot;&quot;
+    ),
+{!ff_assignment_GroupBy}
+)</expression>
+    </formulas>
+    <formulas>
+        <name>frmInvoiceRate</name>
+        <dataType>Number</dataType>
+        <expression>IF(
+ISPICKVAL({!$Record.Shift__r.Cancellation_Outcome__c}, &quot;No Charge, Pay&quot;), 0, {!$Record.tc9_et__Invoice_Rate__c}
+)</expression>
+        <scale>6</scale>
+    </formulas>
+    <formulas>
+        <name>frmLocationID</name>
+        <dataType>String</dataType>
+        <expression>IF(
+    NOT(ISBLANK({!$Record.tc9_et__Timesheet_Entry__r.tc9_ext_sirint__Location__c})),
+    {!$Record.tc9_et__Timesheet_Entry__r.tc9_ext_sirint__Location__c},
+IF(
+        NOT(ISBLANK({!$Record.tc9_et__Timesheet_Item__r.tc9_ext_sirint__Location__c})),
+        {!$Record.tc9_et__Timesheet_Item__r.tc9_ext_sirint__Location__c},
+        &quot;&quot;
+    )
+)</expression>
+    </formulas>
+    <formulas>
+        <name>frmPayRate</name>
+        <dataType>Number</dataType>
+        <expression>IF(
+ISPICKVAL({!$Record.Shift__r.Cancellation_Outcome__c}, &quot;Charge, No Pay&quot;), 0, {!$Record.tc9_pr__Pay_Rate__c}
+)</expression>
+        <scale>6</scale>
+    </formulas>
+    <formulas>
+        <name>frmShift</name>
+        <dataType>String</dataType>
+        <expression>IF(
+NOT(ISBLANK({!$Record.tc9_et__Timesheet_Entry__r.tc9_ext_sirint__Shift__c})),{!$Record.tc9_et__Timesheet_Entry__r.tc9_ext_sirint__Shift__c},
+IF(
+NOT(ISBLANK({!$Record.tc9_et__Timesheet_Item__r.tc9_ext_sirint__Shift__c})),{!$Record.tc9_et__Timesheet_Item__r.tc9_ext_sirint__Shift__c}, {!$Record.Shift__c}
+))</expression>
+    </formulas>
+    <formulas>
+        <name>frmSiteID</name>
+        <dataType>String</dataType>
+        <expression>IF(
+    NOT(ISBLANK({!$Record.tc9_et__Timesheet_Entry__r.tc9_ext_sirint__Site__c})),
+    {!$Record.tc9_et__Timesheet_Entry__r.tc9_ext_sirint__Site__c},
+IF(
+        NOT(ISBLANK({!$Record.tc9_et__Timesheet_Item__r.tc9_ext_sirint__Site__c})),
+        {!$Record.tc9_et__Timesheet_Item__r.tc9_ext_sirint__Site__c},
+IF(
+       NOT(ISBLANK({!$Record.WFM_Site_ID__c})),
+       {!$Record.WFM_Site_ID__c},
+        &quot;&quot;
+    )
+)
+)</expression>
+    </formulas>
+    <formulas>
+        <name>frmWFMContract</name>
+        <dataType>String</dataType>
+        <expression>IF(
+    NOT(
+        ISBLANK(
+            {!$Record.tc9_et__Timesheet_Entry__r.tc9_ext_sirint__Contract__c}
+        )
+    ),
+    {!$Record.tc9_et__Timesheet_Entry__r.tc9_ext_sirint__Contract__c},
+    IF(
+        NOT(
+            ISBLANK(
+                {!$Record.tc9_et__Timesheet_Item__r.tc9_ext_sirint__Contract__c}
+            )
+        ),
+        {!$Record.tc9_et__Timesheet_Item__r.tc9_ext_sirint__Contract__c},
+        {!$Record.WFM_Contract__c}
+    )
+)</expression>
+    </formulas>
+    <interviewLabel>Pay Transaction on Create {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Pay Transaction on Create</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>get_Assignment</name>
+        <label>get Assignment</label>
+        <locationX>468</locationX>
+        <locationY>503</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Update_Branch</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.tc9_pr__Assignment__c</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>tc9_pr__Assignment__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_Calendar</name>
+        <label>Get Calendar</label>
+        <locationX>754</locationX>
+        <locationY>1451</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Get_Calendar_period</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>tc9_et__Invoice_Schedule__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.tc9_et__Invoice_Schedule__c</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>tc9_et__Invoice_Entity__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Get_PTIX_with_Shift_Details.WFM_Contract__r.Default_Invoice_Entity__c</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>tc9_pr__Status__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Active</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>RecordTypeId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Get_Calendar_Record_Type.Id</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>tc9_pr__Calendar__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_Calendar_period</name>
+        <label>Get Calendar period</label>
+        <locationX>754</locationX>
+        <locationY>1559</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Update_Pay_Transaction_Allowance3</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>tc9_pr__Calendar__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Get_Calendar.Id</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>tc9_pr__Start_Date__c</field>
+            <operator>LessThanOrEqualTo</operator>
+            <value>
+                <elementReference>$Record.tc9_pr__Entry_Date__c</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>tc9_pr__End_Date__c</field>
+            <operator>GreaterThanOrEqualTo</operator>
+            <value>
+                <elementReference>$Record.tc9_pr__Entry_Date__c</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>tc9_pr__Calendar_Period__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_Calendar_Record_Type</name>
+        <label>Get Calendar Record Type</label>
+        <locationX>754</locationX>
+        <locationY>1343</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Get_Calendar</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>SobjectType</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>tc9_pr__Calendar__c</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>DeveloperName</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Invoice</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>RecordType</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_Call_In_Timesheet_Activity</name>
+        <label>Get Call In Timesheet Activity</label>
+        <locationX>600</locationX>
+        <locationY>1019</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Is_Timesheet_Entry_not_null</targetReference>
+        </connector>
+        <filterLogic>(1 OR 2) AND 3</filterLogic>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Call In</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>tc9_et__Variation_Type__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Call In</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>tc9_pr__Assignment__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.tc9_pr__Assignment__c</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>tc9_pr__Project_Code__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_Contract</name>
+        <label>Get Contract</label>
+        <locationX>600</locationX>
+        <locationY>803</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Get_Contract_from_Pay_Transaction</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>frmWFMContract</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>sirenum__ProActiveContract__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_Contract_from_Pay_Transaction</name>
+        <label>Get Contract from Pay Transaction</label>
+        <locationX>600</locationX>
+        <locationY>911</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Get_Call_In_Timesheet_Activity</targetReference>
+        </connector>
+        <filterLogic>or</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.WFM_Contract__c</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Shift__r.sirenum__Contract__c</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>sirenum__ProActiveContract__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>get_matching_PTIX</name>
+        <label>get matching PTIX</label>
+        <locationX>1018</locationX>
+        <locationY>1343</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>assign_group_by</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Shift__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Shift__c</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>tc9_pr__Pay_Code__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.tc9_pr__Pay_Code__c</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>tc9_pr__Quantity__c</field>
+            <operator>GreaterThan</operator>
+            <value>
+                <numberValue>0.0</numberValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>tc9_pr__Pay_Transaction__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_Pay_Transaction_Allowance_Record_Type</name>
+        <label>Get Pay Transaction Allowance Record Type</label>
+        <locationX>600</locationX>
+        <locationY>287</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Assignment_Set</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>SobjectType</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>tc9_pr__Pay_Transaction__c</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>DeveloperName</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Allowance</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>RecordType</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_PTIX_with_Shift_Details</name>
+        <label>Get PTIX with Shift Details</label>
+        <locationX>754</locationX>
+        <locationY>1235</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Get_Calendar_Record_Type</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>tc9_et__Timesheet__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.tc9_et__Timesheet__c</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Shift__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>tc9_pr__Pay_Transaction__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_Timesheet_Entry</name>
+        <label>Get Timesheet Entry</label>
+        <locationX>50</locationX>
+        <locationY>1235</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Update_Pay_Transaction_TSE_Not_Null</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.tc9_et__Timesheet_Entry__c</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>tc9_et__Timesheet_Entry__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <name>Set_Re_Trigger_back_to_FALSE</name>
+        <label>Set Re-Trigger back to FALSE</label>
+        <locationX>600</locationX>
+        <locationY>2543</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Re_Trigger_Grouping__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Re_Trigger_Grouping__c</field>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>474</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Get_Pay_Transaction_Allowance_Record_Type</targetReference>
+        </connector>
+        <filterFormula>AND(
+{!$Record.tc9_pr__Quantity__c} &gt; 0,
+{!$Record.tc9_et__Is_Re_invoice_Record__c} = False,
+OR(
+      ISNEW(),
+      {!$Record.Re_Trigger_Grouping__c}=TRUE
+))</filterFormula>
+        <object>tc9_pr__Pay_Transaction__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Draft</status>
+    <variables>
+        <name>var_original_contract</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>var_original_group_by</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

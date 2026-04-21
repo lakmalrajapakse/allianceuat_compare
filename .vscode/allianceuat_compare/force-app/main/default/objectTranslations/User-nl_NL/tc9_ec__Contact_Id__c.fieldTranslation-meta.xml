@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- The record Id of the contact that this user record is related to for the purpose of accessing community components as an internal user. --></help>
+    <label><!-- Contact Id --></label>
+    <name>tc9_ec__Contact_Id__c</name>
+</CustomFieldTranslation>

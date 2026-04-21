@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Will you be travelling on your own or with company? --></help>
+    <label><!-- Travel on your own --></label>
+    <name>Travel_on_your_own__c</name>
+    <picklistValues>
+        <masterLabel>On my own</masterLabel>
+        <translation><!-- On my own --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>With Company</masterLabel>
+        <translation><!-- With Company --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

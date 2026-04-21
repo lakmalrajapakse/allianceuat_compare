@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "dd4b7918-d286-4172-9e40-da3401aaa52f",
+  "appPageId" : "d9ce9f69-0e14-4b11-9233-6c5ce091d546",
+  "configurationTags" : [ ],
+  "devName" : "myDocumentsEmbedded__c",
+  "id" : "2352e0f0-db6e-4dc6-8782-65908eca711f",
+  "label" : "My Documents Embedded",
+  "pageAccess" : "UseParent",
+  "routeType" : "custom-my-documents-embedded",
+  "type" : "route",
+  "urlPrefix" : "my-documents-embedded"
+}

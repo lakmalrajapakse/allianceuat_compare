@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Contact$Name</field>
+    </columns>
+    <columns>
+        <field>Contact$Id</field>
+    </columns>
+    <columns>
+        <field>Contact.sirenum__Tickets__r$Id</field>
+    </columns>
+    <columns>
+        <field>Contact.sirenum__Tickets__r$Competency_Id__c</field>
+    </columns>
+    <columns>
+        <field>Contact.sirenum__Tickets__r$sirenum__TicketType__c</field>
+    </columns>
+    <columns>
+        <field>Contact.sirenum__Tickets__r$sirenum__Valid_from__c</field>
+    </columns>
+    <columns>
+        <field>Contact.sirenum__Tickets__r$sirenum__Valid_until__c</field>
+    </columns>
+    <format>Tabular</format>
+    <name>All Tickets</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>People_with_Tickets__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Contact$Ahpra_Last_Checked__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

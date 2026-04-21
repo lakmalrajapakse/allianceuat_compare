@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Provider Name --></label>
+    <name>Provider_Name__c</name>
+    <picklistValues>
+        <masterLabel>MessageMedia</masterLabel>
+        <translation><!-- MessageMedia --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TextUs</masterLabel>
+        <translation><!-- TextUs --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Twilio</masterLabel>
+        <translation><!-- Twilio --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

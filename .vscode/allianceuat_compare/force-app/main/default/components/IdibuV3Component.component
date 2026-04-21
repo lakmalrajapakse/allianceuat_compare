@@ -1,0 +1,39 @@
+<apex:component controller="IdibuV3Controller">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" ></script>
+    <div class="slds-media slds-media--center slds-no-space slds-has-divider--bottom-space slds-media__body slds-page-header__title slds-align-middle">
+        <h3 class="uiOutputText">
+            <a href="{!BackUrl}">&lt; {!WindowTitle}</a>
+        </h3>
+    </div>
+    <apex:outputPanel id="mainPanel" rendered="{!Enabled}">               
+            <apex:PageBlock mode="edit">
+             <apex:outputPanel id="framePanel" rendered="{!Enabled}" >
+                <form action="https://v3.idibu.com/c/integration/salesforce" id="idibuForm" method="post" target="idibuV3frame" style="display: none">
+                    <input type="text" name="id" value="{!AppId}" />
+                    <input type="text" name="secret" value="{!AppSecret}" />
+                    <input type="text" name="vacancy" value="{!Vacancy}" />
+                    <input type="text" name="title" value="{!Title}" />
+                    <input type="text" name="userid" value="{!UserId}" />
+                    <input type="text" name="email" value="{!Email}" />
+                    <input type="text" name="fname" value="{!Fname}" />
+                    <input type="text" name="lname" value="{!Lname}" />
+                    <input type="text" name="minsalary" value="{!Minsalary}" />
+                    <input type="text" name="maxsalary" value="{!Maxsalary}" />
+                    <input type="text" name="description" value="{!Description}" />
+                    <input type="text" name="appurl" value="{!AppUrl}" />
+                    <input type="submit" value="dothat" />
+                </form>
+                <iframe name="idibuV3frame" src="about:blank" width="100%" height="960" style="border: none" />
+             </apex:outputPanel>
+             </apex:PageBlock>
+    </apex:outputPanel>
+    <apex:outputPanel id="errorPanel" rendered="{!NOT(Enabled)}">
+    <h3 style="float: left; width: 100%; text-align: center;">Please enter your idibu integration credentials in the "Custom Settings" menu under "Idibu V3 Settings".</h3>
+    </apex:outputPanel>
+
+    <script>
+        $(function() {
+            $("#idibuForm").submit();
+        });
+    </script>
+</apex:component>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Uniform Pants --></label>
+    <name>Uniform_Pants__c</name>
+    <picklistValues>
+        <masterLabel>Scrub pants (long length)</masterLabel>
+        <translation><!-- Scrub pants (long length) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Scrub pants (regular length)</masterLabel>
+        <translation><!-- Scrub pants (regular length) --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

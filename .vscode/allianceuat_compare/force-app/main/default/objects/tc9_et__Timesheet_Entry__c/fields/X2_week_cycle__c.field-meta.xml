@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X2_week_cycle__c</fullName>
+    <externalId>false</externalId>
+    <formula>mceiling((tc9_et__Start_Date__c - (tc9_et__Timesheet__r.tc9_et__Assignment__r.First_2_week_period_start_date__c-1))/14)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>2 week cycle number, based on the assignment 4 week start date</inlineHelpText>
+    <label>2 week cycle</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

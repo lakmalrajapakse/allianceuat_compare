@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Weekly_Limit__c</fullName>
+    <description>Maximum cumulative non-taxable laundry allowance allowed per pay week, in dollars.</description>
+    <inlineHelpText>Maximum cumulative non-taxable laundry allowance allowed per pay week, in dollars.</inlineHelpText>
+    <label>Weekly Limit</label>
+    <precision>17</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

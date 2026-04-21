@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Indicates if by default there will be tax applied to the invoice. This value can be overridden at lower levels --></help>
+    <label><!-- Default Invoice Taxable --></label>
+    <name>tc9_et__Default_Invoice_Taxable__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Accommodation shared in any way? --></label>
+    <name>Accommodation_shared_in_any_way__c</name>
+    <picklistValues>
+        <masterLabel>No</masterLabel>
+        <translation><!-- No --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Yes - please specify (eg: shared common areas, etc.)</masterLabel>
+        <translation><!-- Yes - please specify (eg: shared common areas, etc.) --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Est, Travel Allowance --></label>
+    <name>Est_Travel_Allowance__c</name>
+    <picklistValues>
+        <masterLabel>All covered</masterLabel>
+        <translation><!-- All covered --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Capped total</masterLabel>
+        <translation><!-- Capped total --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Certain amount</masterLabel>
+        <translation><!-- Certain amount --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>One way only</masterLabel>
+        <translation><!-- One way only --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Open to negotiate</masterLabel>
+        <translation><!-- Open to negotiate --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Return trip</masterLabel>
+        <translation><!-- Return trip  --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

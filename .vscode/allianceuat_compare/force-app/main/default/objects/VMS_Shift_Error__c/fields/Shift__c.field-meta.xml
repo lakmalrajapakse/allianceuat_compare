@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Shift__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>VMS Shift related to this Error</description>
+    <label>Shift</label>
+    <referenceTo>sirenum__Shift__c</referenceTo>
+    <relationshipLabel>VMS Shift Errors</relationshipLabel>
+    <relationshipName>VMS_Shift_Errors</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

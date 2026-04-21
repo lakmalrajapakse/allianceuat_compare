@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Syd_AHPRA_Night_Check_Candidates</fullName>
+    <columns>FULL_NAME</columns>
+    <columns>TR1__Candidate_Status__c</columns>
+    <columns>Classification__c</columns>
+    <columns>aa_AHPRA_Number__c</columns>
+    <columns>Add_to_Ahpra_nightly_Batch_Job__c</columns>
+    <columns>Ahpra_Last_Checked__c</columns>
+    <columns>Branch_Name__c</columns>
+    <columns>CONTACT.PHONE1</columns>
+    <columns>CONTACT.EMAIL</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>CONTACT.CREATED_DATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Branch_Name__c</field>
+        <operation>contains</operation>
+        <value>Sydney</value>
+    </filters>
+    <filters>
+        <field>CONTACT.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Contact.Candidate</value>
+    </filters>
+    <filters>
+        <field>Classification__c</field>
+        <operation>notContain</operation>
+        <value>Nursing Assistant</value>
+    </filters>
+    <label>Syd AHPRA Night Check Candidates</label>
+</ListView>

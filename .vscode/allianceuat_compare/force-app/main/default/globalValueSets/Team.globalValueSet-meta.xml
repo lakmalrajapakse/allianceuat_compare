@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Allocations</fullName>
+        <default>false</default>
+        <label>Allocations</label>
+    </customValue>
+    <customValue>
+        <fullName>General</fullName>
+        <default>false</default>
+        <label>General</label>
+    </customValue>
+    <customValue>
+        <fullName>Recruitment</fullName>
+        <default>false</default>
+        <label>Recruitment</label>
+    </customValue>
+    <description>Teams for Notifications</description>
+    <masterLabel>Team</masterLabel>
+    <sorted>true</sorted>
+</GlobalValueSet>

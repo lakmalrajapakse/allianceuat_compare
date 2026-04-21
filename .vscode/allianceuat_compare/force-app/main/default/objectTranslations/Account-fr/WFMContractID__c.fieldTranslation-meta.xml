@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>
+        <!-- Custom Field used by the automated invoice setting creation process.
+When populated the flow &apos;Invoice Settings auto creation&apos; will create Invoice Settings specific to this Contract ID.
+Once completed this field will be cleared. -->
+    </help>
+    <label><!-- WFMContractID --></label>
+    <name>WFMContractID__c</name>
+</CustomFieldTranslation>

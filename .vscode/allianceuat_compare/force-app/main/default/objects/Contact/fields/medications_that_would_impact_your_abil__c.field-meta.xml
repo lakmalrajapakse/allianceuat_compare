@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>medications_that_would_impact_your_abil__c</fullName>
+    <defaultValue>false</defaultValue>
+    <inlineHelpText>Any prescribed medications that would impact your ability to do your job effectively?</inlineHelpText>
+    <label>medications that would impact your abil</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

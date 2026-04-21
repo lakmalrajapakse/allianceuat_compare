@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>
+        <!-- Please select the appropriate size based on your uniform type:
+
+**For Scrub Shirt:
+- Women&apos;s: Select size 6, 8, 10, 12, 14, or 16
+- Unisex: Select size XS, S, M, L, XL, or 2XL
+
+**For Polo Shirt:
+- Women&apos;s: Select size 6, 8, 10, 12, 14, 16, 22, or 24
+- Unisex: Select size S, M, L, XL, 2XL, or 3XL
+
+**For Scrub Pants (both Regular and Long Length):
+Select size XS, S, M, L, XL, 2XL, or 3XL -->
+    </help>
+    <label><!-- Size --></label>
+    <name>Size__c</name>
+    <picklistValues>
+        <masterLabel>10</masterLabel>
+        <translation><!-- 10 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>12</masterLabel>
+        <translation><!-- 12 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>14</masterLabel>
+        <translation><!-- 14 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>16</masterLabel>
+        <translation><!-- 16 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>22</masterLabel>
+        <translation><!-- 22 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>24</masterLabel>
+        <translation><!-- 24 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>2XL</masterLabel>
+        <translation><!-- 2XL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>3XL</masterLabel>
+        <translation><!-- 3XL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>6</masterLabel>
+        <translation><!-- 6 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>8</masterLabel>
+        <translation><!-- 8 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>L</masterLabel>
+        <translation><!-- L --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>M</masterLabel>
+        <translation><!-- M --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>S</masterLabel>
+        <translation><!-- S --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>XL</masterLabel>
+        <translation><!-- XL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>XS</masterLabel>
+        <translation><!-- XS --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

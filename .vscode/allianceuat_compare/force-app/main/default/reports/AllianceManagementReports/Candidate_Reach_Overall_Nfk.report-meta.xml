@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <aggregates>
+        <calculatedFormula>RowCount / sirenum__Shift_Invitation__c.sirenum__Shift__c.Name:UNIQUE</calculatedFormula>
+        <datatype>number</datatype>
+        <developerName>FORMULA1</developerName>
+        <isActive>true</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>Average Job Offers per Shift Demand</masterLabel>
+        <scale>2</scale>
+    </aggregates>
+    <buckets>
+        <bucketType>text</bucketType>
+        <developerName>BucketField_23162465</developerName>
+        <masterLabel>Job Role Type</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <otherBucketLabel>Other</otherBucketLabel>
+        <sourceColumnName>sirenum__Shift_Invitation__c$sirenum__Shift__c.sirenum__Team__c.Name</sourceColumnName>
+        <useOther>true</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Multi</sourceValue>
+            </sourceValues>
+            <value>Multi</value>
+        </values>
+    </buckets>
+    <chart>
+        <backgroundColor1>#FFFFFF</backgroundColor1>
+        <backgroundColor2>#FFFFFF</backgroundColor2>
+        <backgroundFadeDir>Diagonal</backgroundFadeDir>
+        <chartSummaries>
+            <axisBinding>y</axisBinding>
+            <column>FORMULA1</column>
+        </chartSummaries>
+        <chartType>Line</chartType>
+        <enableHoverLabels>false</enableHoverLabels>
+        <expandOthers>true</expandOthers>
+        <groupingColumn>sirenum__Shift_Invitation__c$CreatedDate</groupingColumn>
+        <location>CHART_BOTTOM</location>
+        <showAxisLabels>true</showAxisLabels>
+        <showPercentage>false</showPercentage>
+        <showTotal>false</showTotal>
+        <showValues>false</showValues>
+        <size>Medium</size>
+        <summaryAxisRange>Auto</summaryAxisRange>
+        <textColor>#000000</textColor>
+        <textSize>12</textSize>
+        <titleColor>#000000</titleColor>
+        <titleSize>18</titleSize>
+    </chart>
+    <columns>
+        <aggregateTypes>Average</aggregateTypes>
+        <field>sirenum__Shift_Invitation__c$sirenum__Shift__c.sirenum__FillRateByCount__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Unique</aggregateTypes>
+        <field>sirenum__Shift_Invitation__c$sirenum__Shift__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Unique</aggregateTypes>
+        <field>sirenum__Shift_Invitation__c$Id</field>
+    </columns>
+    <columns>
+        <field>sirenum__Shift_Invitation__c$Name</field>
+    </columns>
+    <columns>
+        <field>sirenum__Shift_Invitation__c$CreatedBy</field>
+    </columns>
+    <columns>
+        <field>sirenum__Shift_Invitation__c$sirenum__Contact__c.Id</field>
+    </columns>
+    <columns>
+        <field>sirenum__Shift_Invitation__c$sirenum__Contact__c</field>
+    </columns>
+    <columns>
+        <field>sirenum__Shift_Invitation__c$sirenum__Shift__c.sirenum__Local_Weekday__c</field>
+    </columns>
+    <columns>
+        <field>BucketField_23162465</field>
+    </columns>
+    <columns>
+        <field>sirenum__Shift_Invitation__c$sirenum__Shift__c.sirenum__Team__c.Name</field>
+    </columns>
+    <columns>
+        <field>CDF1</field>
+    </columns>
+    <customDetailFormulas>
+        <calculatedFormula>IF(Weekday(datevalue(sirenum__Shift_Invitation__c.CreatedDate))= 1, &apos;7_Sunday&apos;,
+IF(Weekday(datevalue(sirenum__Shift_Invitation__c.CreatedDate))= 2, &apos;1_Monday&apos;,
+IF(Weekday(datevalue(sirenum__Shift_Invitation__c.CreatedDate))= 3, &apos;2_Tuesday&apos;,
+IF(Weekday(datevalue(sirenum__Shift_Invitation__c.CreatedDate))= 4, &apos;3_Wednesday&apos;,
+IF(Weekday(datevalue(sirenum__Shift_Invitation__c.CreatedDate))= 5, &apos;4_Thursday&apos;,
+IF(Weekday(datevalue(sirenum__Shift_Invitation__c.CreatedDate))= 6, &apos;5_Friday&apos;, &apos;6_Saturday&apos;)))
+)))</calculatedFormula>
+        <dataType>Text</dataType>
+        <developerName>CDF1</developerName>
+        <label>Weekday (Created Date)</label>
+        <scale>2</scale>
+    </customDetailFormulas>
+    <filter>
+        <criteriaItems>
+            <column>sirenum__Shift_Invitation__c$sirenum__Shift__c.RecordType</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>sirenum__Shift__c.sirenum__Shift_Demand</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>sirenum__Shift_Invitation__c$sirenum__Shift__c.sirenum__CancellationReason__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value>User Error,Unable to Fill (Internal)</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>sirenum__Shift_Invitation__c$sirenum__Shift__c.Branch_for_reporting__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Week</dateGranularity>
+        <field>sirenum__Shift_Invitation__c$CreatedDate</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Candidate Reach - Overall</name>
+    <params>
+        <name>co</name>
+        <value>0</value>
+    </params>
+    <reportType>Job_Offers__c</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>sirenum__Shift_Invitation__c$sirenum__Shift__c.sirenum__FillRateByCount__c</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>sirenum__Shift_Invitation__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_LAST60</interval>
+    </timeFrameFilter>
+</Report>

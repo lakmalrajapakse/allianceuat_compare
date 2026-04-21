@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All</fullName>
+    <columns>NAME</columns>
+    <columns>tc9_pr__Employment_Cost__c</columns>
+    <columns>tc9_pr__Location__c</columns>
+    <columns>tc9_et__Risk_Classification__c</columns>
+    <columns>tc9_pr__Industry__c</columns>
+    <columns>tc9_et__Invoiceable_Calculated_Based_On__c</columns>
+    <columns>tc9_et__Invoiceable_Calculation_Rate__c</columns>
+    <columns>tc9_pr__Payable_Calculated_Based_On__c</columns>
+    <columns>tc9_pr__Payable_Calculation_Rate__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>CREATEDBY_USER</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>tc9_pr__Employment_Cost_Item__c.tc9_pr__Payroll_Tax</value>
+    </filters>
+    <label>All</label>
+</ListView>

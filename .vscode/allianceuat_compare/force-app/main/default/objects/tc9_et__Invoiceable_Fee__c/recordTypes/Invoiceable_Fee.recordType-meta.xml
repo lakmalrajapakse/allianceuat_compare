@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Invoiceable_Fee</fullName>
+    <active>true</active>
+    <description>Custom Invoiceable Fee Record Type used for all Invoiceable Fees. This record type removes the need to maintain and manage multiple fee record types.</description>
+    <label>Invoiceable Fee</label>
+</RecordType>

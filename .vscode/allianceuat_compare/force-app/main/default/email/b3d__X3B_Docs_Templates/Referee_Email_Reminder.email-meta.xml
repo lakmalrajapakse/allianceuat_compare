@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Referee Email - Reminder</description>
+    <encodingKey>UTF-8</encodingKey>
+    <letterhead>Alliance_group_email_header</letterhead>
+    <name>Referee Email - Reminder</name>
+    <style>freeForm</style>
+    <subject>Reminder - Please provide References</subject>
+    <textOnly>Dear  {!b3o__Reference__c.b3o__First_Name_Referee__c} {!b3o__Reference__c.b3o__Last_Name_Referee__c},
+
+Applicant {!b3o__Reference__c.b3o__Contact__c} has applied for one of our roles and has provided your details as one of their references.
+
+Would you mind filling out the form in the link below please as it would speed up the application process?
+
+Click Here
+
+Thank you
+
+Alliance Team</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

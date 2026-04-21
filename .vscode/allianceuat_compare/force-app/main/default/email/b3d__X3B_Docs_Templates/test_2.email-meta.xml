@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <encodingKey>UTF-8</encodingKey>
+    <letterhead>b3d__X3B_Docs_Letterhead</letterhead>
+    <name>test 2</name>
+    <style>freeForm</style>
+    <subject>Provide ref</subject>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

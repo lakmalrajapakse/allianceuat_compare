@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Compétence</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Compétences</value>
+    </caseValues>
+    <fieldSets>
+        <label><!-- DG_AA_Nursing --></label>
+        <name>DG_AA_Nursing</name>
+    </fieldSets>
+    <gender>Masculine</gender>
+    <nameFieldLabel>Numéro de la compétence</nameFieldLabel>
+    <recordTypes>
+        <label><!-- Classification --></label>
+        <name>Classification</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Job Classification --></label>
+        <name>Job_Classification</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Job Skill --></label>
+        <name>Job_Skill</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Job Skill Area --></label>
+        <name>Job_Skill_Area</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Job Speciality --></label>
+        <name>Job_Speciality</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Other --></label>
+        <name>Other</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Skill --></label>
+        <name>Skill</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Skill Area --></label>
+        <name>Skill_Area</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Speciality --></label>
+        <name>Speciality</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

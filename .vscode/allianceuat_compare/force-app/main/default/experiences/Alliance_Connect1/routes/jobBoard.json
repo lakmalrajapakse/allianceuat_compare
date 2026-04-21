@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "4d262173-3b03-4b5d-8bf7-2c59902faa0d",
+  "appPageId" : "d9ce9f69-0e14-4b11-9233-6c5ce091d546",
+  "configurationTags" : [ ],
+  "devName" : "job_board__c",
+  "id" : "caeb541e-07e3-4de0-9cd7-7d3b6c167755",
+  "label" : "Job Board",
+  "pageAccess" : "UseParent",
+  "routeType" : "custom-job-board",
+  "type" : "route",
+  "urlPrefix" : "job-board"
+}

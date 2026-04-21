@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Shift Demand Skill Bundle</label>
+    <protected>false</protected>
+    <values>
+        <field>sirenum__Field__c</field>
+        <value xsi:type="xsd:string">Skill_Attribute_OR_Bundle__c</value>
+    </values>
+    <values>
+        <field>sirenum__HideDateInDatetime__c</field>
+        <value xsi:type="xsd:boolean">false</value>
+    </values>
+    <values>
+        <field>sirenum__LabelOverride__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>sirenum__Layout__c</field>
+        <value xsi:type="xsd:string">Shift Demand</value>
+    </values>
+    <values>
+        <field>sirenum__LookupFilter__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>sirenum__Make_Mandatory__c</field>
+        <value xsi:type="xsd:boolean">false</value>
+    </values>
+    <values>
+        <field>sirenum__Make_Readonly__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>sirenum__Object__c</field>
+        <value xsi:type="xsd:string">sirenum__Shift__c</value>
+    </values>
+    <values>
+        <field>sirenum__Order__c</field>
+        <value xsi:type="xsd:double">999.0</value>
+    </values>
+    <values>
+        <field>sirenum__Placeholder__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>sirenum__Rendering__c</field>
+        <value xsi:type="xsd:string">{}</value>
+    </values>
+</CustomMetadata>

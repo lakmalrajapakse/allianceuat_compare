@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Custom Rule</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Custom Rules</value>
+    </caseValues>
+    <layouts>
+        <layout>Custom Rule Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Expense Rule</layout>
+        <sections>
+            <label><!-- Allowance Rule --></label>
+            <section>Allowance Rule</section>
+        </sections>
+        <sections>
+            <label><!-- Assigned To --></label>
+            <section>Assigned To</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Pay Rule --></label>
+            <section>Pay Rule</section>
+        </sections>
+        <sections>
+            <label><!-- Shift Details --></label>
+            <section>Shift Details</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Pay Rule</layout>
+        <sections>
+            <label><!-- Allowance Rule --></label>
+            <section>Allowance Rule</section>
+        </sections>
+        <sections>
+            <label><!-- Assigned To --></label>
+            <section>Assigned To</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Pay Rule --></label>
+            <section>Pay Rule</section>
+        </sections>
+        <sections>
+            <label><!-- Shift Details --></label>
+            <section>Shift Details</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Expense Rule --></label>
+        <name>Expense_Rule</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Used for Custom Rules related to Interpretation --></description>
+        <label><!-- Interpretation --></label>
+        <name>Interpretation</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Pay Rule --></label>
+        <name>Pay_Rule</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

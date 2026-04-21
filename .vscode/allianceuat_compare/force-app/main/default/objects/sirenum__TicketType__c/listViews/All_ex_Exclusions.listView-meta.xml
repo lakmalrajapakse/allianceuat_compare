@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_ex_Exclusions</fullName>
+    <columns>NAME</columns>
+    <columns>OBJECT_ID</columns>
+    <columns>Competency_Category__c</columns>
+    <columns>sirenum__Expires__c</columns>
+    <columns>sirenum__Requires_Proof__c</columns>
+    <columns>sirenum__Comment__c</columns>
+    <columns>sirenum__TicketType__c</columns>
+    <columns>sirenum__Searchable_Name__c</columns>
+    <columns>CREATEDBY_USER</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>Award_Classification__c</columns>
+    <columns>Award_Level__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Competency_Category__c</field>
+        <operation>notEqual</operation>
+        <value>Exclusion,Client Induction,Mandatory Training,Practical Training,Paypoint</value>
+    </filters>
+    <label>All (ex Exclusions)</label>
+</ListView>

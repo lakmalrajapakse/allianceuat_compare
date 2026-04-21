@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Integration_Error_Checks__c</fullName>
+    <description>Integration Checks for 2c9. Any errors displayed will result in the Integration not running for this Shift.</description>
+    <externalId>false</externalId>
+    <formula>IF(
+ISBLANK(sirenum__Approved_By_Client__c), &quot;Shift Not Approved, &quot;, &quot;&quot;) +
+IF(
+ISBLANK( sirenum__Contact__c), &quot;No Contact, &quot;, &quot;&quot;) +
+IF(
+ISBLANK(sirenum__Site__r.sirenum__Timezone__c), &quot;No Site Timezone, &quot;, &quot;&quot;) +
+IF(
+AND(
+ISPICKVAL(sirenum__Team__r.tc9_ext_sirint__Inherit_Rate_Calculator_Values_From__c, &quot;Assignment&quot;),
+ISBLANK( Minimum_Pay_Rate__c)
+), &quot;No Minimum Pay Rate Found, &quot;, &quot;&quot;) +
+IF(
+ISBLANK(tc9_ext_sirint__Public_Holiday_Calendar__c), &quot;No Public Holiday Calendar, &quot;, &quot;&quot;) +
+IF(
+AND(
+ISBLANK(tc9_ext_sirint__TSE_Start_Date__c),
+ISBLANK(tc9_ext_sirint__TSE_End_Date__c),
+ISBLANK(tc9_ext_sirint__TSE_Start_Time__c),
+ISBLANK(tc9_ext_sirint__TSE_End_Time__c)
+), &quot;No Integration Times, &quot;, &quot;&quot;) +
+IF(
+OR(
+tc9_ext_sirint__TSE_First_Break_Time__c &lt; tc9_ext_sirint__TSE_Start_Time__c,
+tc9_ext_sirint__TSE_Second_Break_Time__c &lt; tc9_ext_sirint__TSE_Start_Time__c,
+tc9_ext_sirint__TSE_First_Break_Time__c &gt; tc9_ext_sirint__TSE_End_Time__c,
+tc9_ext_sirint__TSE_Second_Break_Time__c &gt; tc9_ext_sirint__TSE_End_Time__c,
+tc9_ext_sirint__TSE_Second_Break_Time__c &lt; tc9_ext_sirint__TSE_First_Break_Time__c,
+AND(
+NOT(ISBLANK(tc9_ext_sirint__TSE_First_Break_Time__c)),
+sirenum__Break_Length__c = 0
+),
+AND(
+NOT(ISBLANK(tc9_ext_sirint__TSE_Second_Break_Time__c)),
+tc9_ext_sirint__Second_Break_Length__c = 0
+),
+AND(ISBLANK(tc9_ext_sirint__TSE_First_Break_Time__c),NOT(ISBLANK(tc9_ext_sirint__TSE_Second_Break_Time__c)))
+),&quot;Potential Break Issue, &quot;,&quot;&quot;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Integration Checks for 2c9. Any errors displayed will result in the Integration not running for this Shift.</inlineHelpText>
+    <label>Integration Error Checks</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

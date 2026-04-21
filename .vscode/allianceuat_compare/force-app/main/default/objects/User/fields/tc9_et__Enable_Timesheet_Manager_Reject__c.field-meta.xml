@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>tc9_et__Enable_Timesheet_Manager_Reject__c</fullName>
+    <defaultValue>false</defaultValue>
+    <deprecated>false</deprecated>
+    <description>When set to TRUE, if the &apos;Hide Timesheet Manager Reject&apos; setting within the TimeCards Config custom setting is set to TRUE, the user will be able to use the &quot;Reject&quot; button</description>
+    <inlineHelpText>When set to TRUE, if the &apos;Hide Timesheet Manager Reject&apos; setting within the TimeCards Config custom setting is set to TRUE, the user will be able to use the &quot;Reject&quot; button</inlineHelpText>
+    <label>Enable Timesheet Manager Reject</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

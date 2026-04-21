@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- How many shifts per week are you looking for? --></help>
+    <label><!-- How many shift per week --></label>
+    <name>How_many_shift_per_week__c</name>
+    <picklistValues>
+        <masterLabel>1-2 shifts</masterLabel>
+        <translation><!-- 1-2 shifts --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>3-4 shifts</masterLabel>
+        <translation><!-- 3-4 shifts --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>5 shifts or more</masterLabel>
+        <translation><!-- 5 shifts or more --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Not sure</masterLabel>
+        <translation><!-- Not sure --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

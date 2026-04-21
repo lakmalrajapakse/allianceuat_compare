@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Defines the ID of the corresponding record in an external system that has been used to create/update the record. Using in integrations. --></help>
+    <label><!-- External ID --></label>
+    <name>tc9_pr__External_ID__c</name>
+</CustomFieldTranslation>

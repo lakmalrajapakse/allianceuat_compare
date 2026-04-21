@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Employee_Entry_Type__c</fullName>
+    <description>Allows the user to choose how allowances should be captured - either as Start/End Times or by default Quantity.</description>
+    <inlineHelpText>Allows the user to choose how allowances should be captured - either as Start/End Times or by default Quantity.</inlineHelpText>
+    <label>Employee Entry Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Quantity</fullName>
+                <default>true</default>
+                <label>Quantity</label>
+            </value>
+            <value>
+                <fullName>Start/End Times</fullName>
+                <default>false</default>
+                <label>Start/End Times</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

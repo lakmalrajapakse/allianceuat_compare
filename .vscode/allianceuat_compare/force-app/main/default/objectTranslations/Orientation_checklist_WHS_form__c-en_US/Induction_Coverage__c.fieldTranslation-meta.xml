@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Does the induction cover location of policies and procedures, documentation requirements and after-hours on call contacts? --></help>
+    <label><!-- Induction Coverage --></label>
+    <name>Induction_Coverage__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- If the Invoice Message field on the Invoice Setting related to the Invoice is blank, defines the message that will be included on the PDF Invoices created. If blank, the Invoice Message on the Invoice will be blank. Can be overridden at the Invoice level --></help>
+    <label><!-- Invoice Message --></label>
+    <name>tc9_et__Invoice_Message__c</name>
+</CustomFieldTranslation>

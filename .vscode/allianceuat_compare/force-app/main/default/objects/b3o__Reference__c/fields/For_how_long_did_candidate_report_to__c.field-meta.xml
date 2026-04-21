@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>For_how_long_did_candidate_report_to__c</fullName>
+    <inlineHelpText>For how long did the candidate report to you?</inlineHelpText>
+    <label>For how long did candidate report to</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

@@ -1,0 +1,320 @@
+<apex:page standardController="tc9_et__Timesheet__c"
+           extensions="TimesheetItemsAllowanceController"
+           lightningStylesheets="true"
+           showHeader="false"
+           sidebar="false"
+           docType="html-5.0">
+
+    <style>
+        html, body { height: 100%; overflow-y: scroll; margin: 0; padding: 0; }
+        .ts-thead th {
+            background-color: #706e6b !important;
+            color: #fff !important;
+            font-size: 11px !important;
+            font-weight: 700 !important;
+            text-transform: uppercase !important;
+            letter-spacing: .5px !important;
+            border-right: 1px solid #a8a8a8 !important;
+            white-space: nowrap !important;
+            padding: 8px 12px !important;
+        }
+        .slds-table tbody tr {
+            border-bottom: 1px solid #dddbda !important;
+        }
+        .slds-table tbody td {
+            padding: 5px 10px !important;
+            border-right: 1px solid #e8e8e8 !important;
+        }
+        .slds-table tbody tr:hover td {
+            background-color: #f3f2f2 !important;
+        }
+        #ts-toast-wrap {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            z-index: 9998;
+            pointer-events: all;
+            background: rgba(0,0,0,0.25);
+        }
+        #ts-toast {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            pointer-events: all;
+            min-width: 320px;
+            max-width: 420px;
+            background: #f3faf5;
+            border-left: 4px solid #04844b;
+            border-radius: 4px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.22);
+            padding: 18px 48px 18px 20px;
+            font-size: 13px;
+            color: #181818;
+            text-align: center;
+            z-index: 9999;
+        }
+        #ts-toast.error { background: #fdf3f2; border-left-color: #c23934; }
+        #ts-toast-close {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 12px;
+            background: none;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            color: #706e6b;
+            line-height: 1;
+        }
+    </style>
+
+    <apex:form id="mainForm">
+
+        <div id="timeDropdown"></div>
+
+        <apex:outputPanel rendered="{!AND(itemWrappers != null, itemWrappers.size > 0)}">
+            <table class="slds-table slds-table_bordered slds-table_col-bordered" style="width:100%;">
+                <thead class="slds-thead ts-thead">
+                    <tr>
+                        <th class="slds-text-title_caps" scope="col">Timesheet Item</th>
+                        <th class="slds-text-title_caps" scope="col">Start Time</th>
+                        <th class="slds-text-title_caps" scope="col">End Time</th>
+                        <th class="slds-text-title_caps" scope="col">Quantity</th>
+                        <th class="slds-text-title_caps" scope="col">Payee Allowance Record</th>
+                        <th class="slds-text-title_caps" scope="col">Date Incurred</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <apex:repeat value="{!itemWrappers}" var="w">
+                        <tr id="row_{!w.item.Id}">
+                            <td>
+                                <a href="/{!w.item.Id}" target="_blank">{!w.item.Name}</a>
+                            </td>
+                            <apex:outputPanel layout="none" rendered="{!NOT(isProcessed)}">
+                                <td>
+                                    <input type="text" value="{!w.startTimeStr}" class="time-input"
+                                           onfocus="openDropdown(this)"
+                                           oninput="filterDropdown(this)"
+                                           onchange="syncHidden(this); markEdited(this);"
+                                           autocomplete="off" placeholder="HH:MM am/pm"/>
+                                    <apex:inputHidden value="{!w.startTimeStr}"/>
+                                </td>
+                                <td>
+                                    <input type="text" value="{!w.endTimeStr}" class="time-input"
+                                           onfocus="openDropdown(this)"
+                                           oninput="filterDropdown(this)"
+                                           onchange="syncHidden(this); markEdited(this);"
+                                           autocomplete="off" placeholder="HH:MM am/pm"/>
+                                    <apex:inputHidden value="{!w.endTimeStr}"/>
+                                </td>
+                                <td>
+                                    <apex:inputField value="{!w.item.tc9_et__Quantity__c}" onchange="markEdited(this)"/>
+                                </td>
+                            </apex:outputPanel>
+                            <apex:outputPanel layout="none" rendered="{!isProcessed}">
+                                <td>{!w.startTimeStr}</td>
+                                <td>{!w.endTimeStr}</td>
+                                <td>{!w.item.tc9_et__Quantity__c}</td>
+                            </apex:outputPanel>
+                            <td><a href="/{!w.item.tc9_et__Payee_Allowance_Record__c}" target="_blank" style="color:#0070d2;">{!w.item.tc9_et__Payee_Allowance_Record__r.Name}</a></td>
+                            <td><apex:outputField value="{!w.item.tc9_et__Date_Incurred__c}"/></td>
+                        </tr>
+                    </apex:repeat>
+                </tbody>
+            </table>
+        </apex:outputPanel>
+
+        <apex:outputPanel rendered="{!AND(isProcessed, itemWrappers.size > 0)}">
+            <p style="text-align:center; color:#706e6b; font-size:12px; margin-top:10px;">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width:14px;height:14px;vertical-align:middle;margin-right:4px;fill:#706e6b;"><path d="M18 8h-1V6A5 5 0 0 0 7 6v2H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2zm-6 9a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm3.1-9H8.9V6a3.1 3.1 0 0 1 6.2 0v2z"/></svg> Editing is not allowed in the current state. To make changes, click <strong>Revert To New</strong> above.
+            </p>
+        </apex:outputPanel>
+
+        <apex:outputPanel rendered="{!AND(itemWrappers != null, itemWrappers.size == 0)}">
+            <p>No Allowance timesheet items found.</p>
+        </apex:outputPanel>
+
+        <!-- Toast inside the form so it renders within the iframe -->
+        <div id="ts-toast-wrap">
+            <div id="ts-toast">
+                <span id="ts-toast-msg"></span>
+                <button id="ts-toast-close" onclick="closeToast()">&#x2715;</button>
+            </div>
+        </div>
+
+        <apex:outputPanel id="btnWrapper" layout="block">
+            <apex:outputPanel id="btnPanel" rendered="{!AND(NOT(isProcessed), itemWrappers.size > 0)}">
+                <div style="display:flex; justify-content:center; gap:8px; margin-top:33px; padding-bottom:8px;">
+                    <apex:commandButton value="Cancel" action="{!cancel}" reRender="mainForm" oncomplete="resetEditState();"
+                        style="padding:6px 16px; border-radius:4px; border:1px solid #dddbda; cursor:pointer; background:#fff; color:#0070d2;"/>
+                    <apex:commandButton value="Update" action="{!saveItems}" reRender="mainForm" oncomplete="checkAndShowToast();"
+                        style="padding:6px 16px; border-radius:4px; border:none; cursor:pointer; background:#0070d2; color:#fff; font-weight:600;"/>
+                </div>
+            </apex:outputPanel>
+        </apex:outputPanel>
+
+        <apex:inputHidden value="{!hasEdits}" id="hasEditsHidden"/>
+        <apex:inputHidden value="{!successMessage}" id="successMsgHidden"/>
+        <apex:inputHidden value="{!errorMessage}" id="errorMsgHidden"/>
+
+        <apex:actionFunction name="serverMarkEdited" action="{!markEdited}" reRender="btnWrapper" immediate="true"/>
+
+        <!-- Poll every 5 seconds but only when timesheet is locked, to detect when it reverts to New -->
+        <apex:actionFunction name="pollRefresh" action="{!refreshIfStageChanged}" reRender="mainForm"/>
+        <apex:actionPoller onsubmit="pollRefresh(); return false;" interval="5" enabled="{!isProcessed}"/>
+
+
+
+    </apex:form>
+
+    <script>
+        var editedRows = {};
+        var activeInput = null;
+        var userInteracted = false;
+
+        function getDropdown() {
+            return document.getElementById('timeDropdown');
+        }
+
+        // Use attribute selector ending match to handle VF id prefixing
+        function getHidden(suffix) {
+            return document.querySelector('input[id$="' + suffix + '"]');
+        }
+
+        document.addEventListener('mousedown', function(e) {
+            userInteracted = true;
+            var dd = getDropdown();
+            if (dd && e.target !== dd && !dd.contains(e.target) &&
+                !(e.target.classList && e.target.classList.contains('time-input'))) {
+                closeDropdown();
+            }
+        });
+
+        var ALL_TIMES = (function() {
+            var times = [];
+            for (var h = 0; h < 24; h++) {
+                for (var m = 0; m < 60; m += 15) {
+                    var ampm = h >= 12 ? 'pm' : 'am';
+                    var h12 = h % 12 || 12;
+                    var mm = m < 10 ? '0' + m : '' + m;
+                    times.push(h12 + ':' + mm + ' ' + ampm);
+                }
+            }
+            return times;
+        })();
+
+        function openDropdown(inputEl) {
+            if (!userInteracted) return;
+            activeInput = inputEl;
+            renderOptions('');
+            positionDropdown(inputEl);
+            getDropdown().style.display = 'block';
+        }
+
+        function filterDropdown(inputEl) {
+            activeInput = inputEl;
+            renderOptions(inputEl.value);
+            positionDropdown(inputEl);
+            getDropdown().style.display = 'block';
+        }
+
+        function renderOptions(filter) {
+            var dd = getDropdown();
+            if (!dd) return;
+            var f = (filter || '').toLowerCase().trim();
+            var matched = ALL_TIMES.filter(function(t) { return f === '' || t.indexOf(f) !== -1; });
+            dd.innerHTML = matched.map(function(t) {
+                return '<div onmousedown="pickOption(\'' + t + '\')" style="padding:7px 12px;cursor:pointer;" onmouseover="this.style.background=\'#e8f4ff\'" onmouseout="this.style.background=\'\'">' + t + '</div>';
+            }).join('');
+        }
+
+        function positionDropdown(inputEl) {
+            var dd = getDropdown();
+            if (!dd) return;
+            dd.style.cssText = 'display:block;position:fixed;z-index:9999;background:#fff;border:1px solid #ccc;border-radius:4px;max-height:128px;overflow-y:auto;font-size:13px;';
+            var rect = inputEl.getBoundingClientRect();
+            var ddHeight = 128;
+            var spaceBelow = window.innerHeight - rect.bottom;
+            var spaceAbove = rect.top;
+            if (spaceBelow < ddHeight && spaceAbove > ddHeight) {
+                dd.style.top = (rect.top - ddHeight - 2) + 'px';
+            } else {
+                dd.style.top = (rect.bottom + 2) + 'px';
+            }
+            dd.style.left = rect.left + 'px';
+            dd.style.width = rect.width + 'px';
+        }
+
+        function pickOption(val) {
+            if (activeInput) {
+                activeInput.value = val;
+                syncHidden(activeInput);
+                markEdited(activeInput);
+            }
+            closeDropdown();
+        }
+
+        function closeDropdown() {
+            var dd = getDropdown();
+            if (dd) dd.style.display = 'none';
+            activeInput = null;
+        }
+
+        function syncHidden(inputEl) {
+            var node = inputEl.nextSibling;
+            while (node) {
+                if (node.nodeType === 1 && node.tagName === 'INPUT' && node.type === 'hidden') {
+                    node.value = inputEl.value;
+                    break;
+                }
+                node = node.nextSibling;
+            }
+        }
+
+        function resetEditState() {
+            editedRows = {};
+            userInteracted = false;
+        }
+
+        function checkAndShowToast() {
+            var msgEl = getHidden('successMsgHidden');
+            var errEl = getHidden('errorMsgHidden');
+            var msg = msgEl ? msgEl.value : '';
+            var err = errEl ? errEl.value : '';
+            if (msg) {
+                showToast(msg, false);
+                resetEditState();
+            } else if (err) {
+                showToast(err, true);
+            }
+        }
+
+        var toastTimer = null;
+        function showToast(msg, isError) {
+            var wrap = document.getElementById('ts-toast-wrap');
+            var toast = document.getElementById('ts-toast');
+            var m = document.getElementById('ts-toast-msg');
+            if (!wrap || !toast || !m) return;
+            m.textContent = msg;
+            toast.className = isError ? 'error' : '';
+            wrap.style.display = 'block';
+            if (toastTimer) clearTimeout(toastTimer);
+            toastTimer = setTimeout(function() { closeToast(); }, 10000);
+        }
+
+        function closeToast() {
+            var wrap = document.getElementById('ts-toast-wrap');
+            if (wrap) wrap.style.display = 'none';
+            window.location.reload();
+        }
+
+        function markEdited(inputEl) {
+            var row = inputEl.closest('tr');
+            if (row) row.style.background = '#fffbea';
+            if (Object.keys(editedRows).length === 0) { serverMarkEdited(); }
+            editedRows[row ? row.id : 'x'] = true;
+        }
+    </script>
+
+</apex:page>

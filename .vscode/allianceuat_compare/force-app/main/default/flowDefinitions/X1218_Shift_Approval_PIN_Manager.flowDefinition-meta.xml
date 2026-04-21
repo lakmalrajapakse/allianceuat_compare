@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Sends new PIN number to Client Contact when PIN expires and allow client contacts to approve shifts in the BH Connect App.
+
+Added SAM additional features.
+Added Fault Path in the Update Shift Element.</description>
+    <masterLabel>1218 Shift approval PIN manager (legacy)</masterLabel>
+</FlowDefinition>

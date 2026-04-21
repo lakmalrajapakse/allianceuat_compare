@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- What is the physical address of the accommodation you are staying in for the duration of your contract? --></help>
+    <label><!-- Accommodation PhysicalAddress --></label>
+    <name>Accommodation_PhysicalAddress__c</name>
+</CustomFieldTranslation>

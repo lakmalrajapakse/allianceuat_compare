@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Please attach any additional information/documents that you would like us to send to the nurse prior to commencement. --></help>
+    <label><!-- Additional Documentation --></label>
+    <name>Additional_Documentation__c</name>
+</CustomFieldTranslation>

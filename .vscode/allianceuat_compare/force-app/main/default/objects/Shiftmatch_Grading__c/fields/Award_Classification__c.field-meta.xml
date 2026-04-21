@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Award_Classification__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <label>Award Classification</label>
+    <referenceTo>tc9_et__Award_Classifications_and_Levels__c</referenceTo>
+    <relationshipLabel>Shiftmatch Gradings</relationshipLabel>
+    <relationshipName>Shiftmatch_Gradings</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

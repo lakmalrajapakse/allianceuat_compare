@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- The Payment Methods that are available to use by the Payment Entity --></help>
+    <label><!-- Available Payment Methods --></label>
+    <name>tc9_pr__Available_Payment_Methods__c</name>
+    <picklistValues>
+        <masterLabel>Payee Australian Bank</masterLabel>
+        <translation><!-- Payee Australian Bank --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Payee Cash</masterLabel>
+        <translation><!-- Payee Cash --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Payee Cheque</masterLabel>
+        <translation><!-- Payee Cheque --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Payee International Bank</masterLabel>
+        <translation><!-- Payee International Bank --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

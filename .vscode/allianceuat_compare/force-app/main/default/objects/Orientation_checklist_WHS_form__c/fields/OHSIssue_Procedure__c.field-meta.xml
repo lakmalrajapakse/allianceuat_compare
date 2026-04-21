@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OHSIssue_Procedure__c</fullName>
+    <description>What is the procedure for minimising/resolving OH&amp;S issues?</description>
+    <externalId>false</externalId>
+    <inlineHelpText>What is the procedure for minimising/resolving OH&amp;S issues?</inlineHelpText>
+    <label>OHSIssue Procedure</label>
+    <length>255</length>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email to candidates with links toTriage education providers</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>ARRH - Triage education providers</name>
+    <style>none</style>
+    <subject>Recommended Triage education providers</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+It is possible to do some self-study with the Triage - ETEK booklet (attached).  Then you can book in an online exam here: Nurse CPD Online – Introduction to Triage. This course costs approximately $35.00.
+
+Other options:
+
+FLECC (First Line Emergency Care Course) – NSW Health course
+
+WACHS Triage – WA Health course
+
+CRANA – &quot;Triage Emergency Care&quot; has theory &amp; practical components. 1 day face-to-face workshop.
+You would need to register your interest via CRANA’s website for any upcoming courses that may become available.
+
+PLEASE NOTE: These courses are suggestions only, it is always best to also do your own research.
+
+Kind regards,
+{!User.FirstName}
+Alliance Rural &amp; Remote Health
+Tel: 07 4998 5550</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>AN - Self-booking Final Reminder</name>
+    <style>none</style>
+    <subject>Final reminder to schedule a call with Alliance Nursing</subject>
+    <textOnly>WE&apos;D LOVE TO CONTINUE YOUR JOURNEY WITH US.
+
+Hi {!Contact.FirstName},
+
+We noticed you haven&apos;t booked in a time to discuss your application. As a final reminder, please let us know when is a good time for us to contact you. Or you can call us directly on 1300 034 494.
+
+BOOK A CALL WITH A RECRUITER
+
+If we don&apos;t hear back from you, we will assume you&apos;re no longer interested in the position and will remove your application.
+
+Please feel free to resubmit your interest in the future, should your circumstances change.
+
+Kind regards,
+Your team at Alliance Nursing</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

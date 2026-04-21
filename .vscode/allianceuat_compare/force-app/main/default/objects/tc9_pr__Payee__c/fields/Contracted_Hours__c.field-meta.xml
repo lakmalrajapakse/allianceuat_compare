@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contracted_Hours__c</fullName>
+    <description>This field represents the total contracted hours associated with this payee. It helps in calculating TOIL and other payroll-related metrics.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Enter the total contracted hours for this payee.</inlineHelpText>
+    <label>Contracted Hours</label>
+    <precision>3</precision>
+    <required>false</required>
+    <scale>1</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Client --></label>
+    <lookupFilter>
+        <errorMessage><!-- You can only associate client expense rules to client account records. --></errorMessage>
+    </lookupFilter>
+    <name>Client__c</name>
+    <relationshipLabel><!-- Client Expense Rules --></relationshipLabel>
+</CustomFieldTranslation>

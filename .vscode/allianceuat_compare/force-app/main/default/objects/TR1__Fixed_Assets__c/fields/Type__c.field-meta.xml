@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type__c</fullName>
+    <label>Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Uniform__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Womens</fullName>
+                <default>false</default>
+                <label>Womens</label>
+            </value>
+            <value>
+                <fullName>Mens</fullName>
+                <default>false</default>
+                <label>Mens</label>
+            </value>
+            <value>
+                <fullName>Unisex</fullName>
+                <default>false</default>
+                <label>Unisex</label>
+            </value>
+            <value>
+                <fullName>Reg Length</fullName>
+                <default>false</default>
+                <label>Reg Length</label>
+            </value>
+            <value>
+                <fullName>Long Length</fullName>
+                <default>false</default>
+                <label>Long Length</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Scrub Shirt</controllingFieldValue>
+            <controllingFieldValue>Polo Shirt</controllingFieldValue>
+            <valueName>Womens</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Scrub Shirt</controllingFieldValue>
+            <controllingFieldValue>Polo Shirt</controllingFieldValue>
+            <valueName>Unisex</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Scrub Pants</controllingFieldValue>
+            <valueName>Reg Length</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Scrub Pants</controllingFieldValue>
+            <valueName>Long Length</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

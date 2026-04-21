@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Highest_Award_Level__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <inlineHelpText>Enter the Highest Award Level for this Award Classification. If provided, any Employees assigned to a Shift without a matching Award Classification will automatically be placed at this highest Award Level. This feature is helpful for accommodating Employees with a higher Award Classification in situations where they are assigned to a lower Classification, ensuring they receive payment at the highest level.</inlineHelpText>
+    <label>Highest Award Level</label>
+    <referenceTo>tc9_et__Award_Classifications_and_Levels__c</referenceTo>
+    <relationshipLabel>Job Roles (Highest Award Level)</relationshipLabel>
+    <relationshipName>Job_Roles</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

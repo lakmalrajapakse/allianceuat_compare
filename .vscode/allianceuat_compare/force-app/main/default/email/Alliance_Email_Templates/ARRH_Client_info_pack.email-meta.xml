@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>ARRH - Client info pack</name>
+    <style>none</style>
+    <subject>Alliance Rural &amp; Remote Health - [Job name] - [Candidate name] - Available</subject>
+    <textOnly>NURSE AVAILABLE.
+
+Hi {!Contact.FirstName},
+
+Regarding: {!TR1__Job__c.Name}
+Reference: {!TR1__Job__c.aa_Client_Job_Reference_Number__c}
+
+Test Application V2 Fields:
+Applicant name: {!TR1__Application_V2__c.TR1__Applicant__c}
+Application number: {!TR1__Application_V2__c.Name}
+Record ID: {!TR1__Application_V2__c.Id}
+Applicant ID: {!TR1__Application_V2__c.TR1__ApplicantId__c}
+
+
+{!TR1__Application_V2__c.TR1__Applicant__c}, [Applicant occupation] is available to assist with your deficit.
+
+Please see attached CV and references for your perusal.
+
+{!TR1__Application_V2__c.TR1__Applicant__c} is available from {!TR1__Job__c.TR1__Estimated_Start_Date__c} to {!TR1__Job__c.TR1__Estimated_End_Date__c}
+
+{!TR1__Application_V2__c.TR1__Applicant__c}&apos;s compliance summary: ###
+
+{!TR1__Application_V2__c.TR1__Applicant__c}&apos;s skillset summary:###
+
+{!TR1__Application_V2__c.TR1__Applicant__c} is travelling [alone/in comapny of] from [Home Town] and [will / will not] require accommodation.
+
+If you think [she/he] would be helpful in covering your rostering needs, please let me know at your earliest convenience.
+
+If you have any questions at all you can always call us on 07 4998 5550.
+
+Have a great day!
+
+Kind regards,
+{!User.FirstName}
+Your team at Alliance Rural &amp; Remote Health</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

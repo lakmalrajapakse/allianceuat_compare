@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <content>Payroll_Home_Page</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+        <pageOrSobjectType>standard-home</pageOrSobjectType>
+    </actionOverrides>
+    <brand>
+        <headerColor>#0070D2</headerColor>
+        <shouldOverrideOrgTheme>false</shouldOverrideOrgTheme>
+    </brand>
+    <formFactors>Small</formFactors>
+    <formFactors>Large</formFactors>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
+    <isOmniPinnedViewEnabled>false</isOmniPinnedViewEnabled>
+    <label>Alliance Australia - Payroll</label>
+    <navType>Standard</navType>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Custom_Rule_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Custom_Rule__c</pageOrSobjectType>
+        <recordType>Custom_Rule__c.Pay_Rule</recordType>
+        <type>Flexipage</type>
+        <profile>2cloudnine Payroll User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Custom_Rule_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Custom_Rule__c</pageOrSobjectType>
+        <recordType>Custom_Rule__c.Pay_Rule</recordType>
+        <type>Flexipage</type>
+        <profile>2cloudnine Payroll User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Custom_Rule_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Custom_Rule__c</pageOrSobjectType>
+        <recordType>Custom_Rule__c.Pay_Rule</recordType>
+        <type>Flexipage</type>
+        <profile>AATest Payroll Users</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Custom_Rule_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Custom_Rule__c</pageOrSobjectType>
+        <recordType>Custom_Rule__c.Pay_Rule</recordType>
+        <type>Flexipage</type>
+        <profile>AATest Payroll Users</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Custom_Rule_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Custom_Rule__c</pageOrSobjectType>
+        <recordType>Custom_Rule__c.Pay_Rule</recordType>
+        <type>Flexipage</type>
+        <profile>Alliance Connect Profile</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Custom_Rule_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Custom_Rule__c</pageOrSobjectType>
+        <recordType>Custom_Rule__c.Pay_Rule</recordType>
+        <type>Flexipage</type>
+        <profile>Alliance Connect Profile</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Custom_Rule_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Custom_Rule__c</pageOrSobjectType>
+        <recordType>Custom_Rule__c.Pay_Rule</recordType>
+        <type>Flexipage</type>
+        <profile>Alliance Connect User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Custom_Rule_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Custom_Rule__c</pageOrSobjectType>
+        <recordType>Custom_Rule__c.Pay_Rule</recordType>
+        <type>Flexipage</type>
+        <profile>Alliance Connect User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Custom_Rule_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Custom_Rule__c</pageOrSobjectType>
+        <recordType>Custom_Rule__c.Pay_Rule</recordType>
+        <type>Flexipage</type>
+        <profile>Alliance User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Custom_Rule_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Custom_Rule__c</pageOrSobjectType>
+        <recordType>Custom_Rule__c.Pay_Rule</recordType>
+        <type>Flexipage</type>
+        <profile>Alliance User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Custom_Rule_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Custom_Rule__c</pageOrSobjectType>
+        <recordType>Custom_Rule__c.Pay_Rule</recordType>
+        <type>Flexipage</type>
+        <profile>Analytics Cloud Integration User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Custom_Rule_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Custom_Rule__c</pageOrSobjectType>
+        <recordType>Custom_Rule__c.Pay_Rule</recordType>
+        <type>Flexipage</type>
+        <profile>Analytics Cloud Integration User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Custom_Rule_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Custom_Rule__c</pageOrSobjectType>
+        <recordType>Custom_Rule__c.Pay_Rule</recordType>
+        <type>Flexipage</type>
+        <profile>Analytics Cloud Security User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Custom_Rule_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Custom_Rule__c</pageOrSobjectType>
+        <recordType>Custom_Rule__c.Pay_Rule</recordType>
+        <type>Flexipage</type>
+        <profile>Analytics Cloud Security User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Custom_Rule_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Custom_Rule__c</pageOrSobjectType>
+        <recordType>Custom_Rule__c.Pay_Rule</recordType>
+        <type>Flexipage</type>
+        <profile>Anypoint Integration</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Custom_Rule_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Custom_Rule__c</pageOrSobjectType>
+        <recordType>Custom_Rule__c.Pay_Rule</recordType>
+        <type>Flexipage</type>
+        <profile>Anypoint Integration</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Custom_Rule_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Custom_Rule__c</pageOrSobjectType>
+        <recordType>Custom_Rule__c.Pay_Rule</recordType>
+        <type>Flexipage</type>
+        <profile>Approver Portal Profile</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Custom_Rule_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Custom_Rule__c</pageOrSobjectType>
+        <recordType>Custom_Rule__c.Pay_Rule</recordType>
+        <type>Flexipage</type>
+        <profile>Approver Portal Profile</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Custom_Rule_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Custom_Rule__c</pageOrSobjectType>
+        <recordType>Custom_Rule__c.Pay_Rule</recordType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Custom_Rule_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Custom_Rule__c</pageOrSobjectType>
+        <recordType>Custom_Rule__c.Pay_Rule</recordType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <tabs>standard-home</tabs>
+    <tabs>tc9_pr__Assignment__c</tabs>
+    <tabs>standard-Contact</tabs>
+    <tabs>standard-Account</tabs>
+    <tabs>tc9_pr__Payee__c</tabs>
+    <tabs>tc9_pr__Pay_Batch__c</tabs>
+    <tabs>tc9_pr__Payee_Allowance_Record__c</tabs>
+    <tabs>tc9_pr__Pay_Transaction__c</tabs>
+    <tabs>tc9_pr__Payee_Deduction_Record__c</tabs>
+    <tabs>tc9_pr__Payee_Withholding__c</tabs>
+    <tabs>tc9_pr__Payee_Leave_Rule__c</tabs>
+    <tabs>tc9_pr__Pay_Advice__c</tabs>
+    <tabs>TR1__Application_V2__c</tabs>
+    <tabs>b3o__Reference__c</tabs>
+    <tabs>b3o__Certificate__c</tabs>
+    <uiType>Lightning</uiType>
+    <utilityBar>Alliance_Australia_Payroll_UtilityBar</utilityBar>
+</CustomApplication>

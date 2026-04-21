@@ -1,0 +1,68 @@
+{
+  "appPageId" : "d9ce9f69-0e14-4b11-9233-6c5ce091d546",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "6c944378-54cc-48f4-a693-d453843c592e",
+  "label" : "Pay Advice",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "70b0d068-fb08-4513-a9dc-0eb0291fc698",
+          "columns" : [ {
+            "UUID" : "9b6518c3-13a7-4378-99cd-361687bbbaf0",
+            "columnKey" : "fff29",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "70b0d068-fb08-4513-a9dc-0eb0291fc698",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : { },
+          "componentName" : "tc9_ec:empCommPayAdvice",
+          "id" : "2ce7d64f-a46e-4bfb-b89c-6b91f46fb58d",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "9b6518c3-13a7-4378-99cd-361687bbbaf0",
+        "regionLabel" : "Column 1",
+        "regionName" : "fff29",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "5aed3ee2-12b8-4d39-ab8c-c46e809e113d",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Pay Advice"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "c912e762-8a32-40f7-9e1e-054cc2d6f0f6",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "3d169e1e-e2ed-42df-b8de-ac462b5b0586",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-pay-advice"
+}

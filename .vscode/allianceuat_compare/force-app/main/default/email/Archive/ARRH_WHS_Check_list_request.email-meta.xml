@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>ARRH - WHS Check list request</name>
+    <style>none</style>
+    <subject>Please complete the WHS checklist</subject>
+    <textOnly>PLACEMENT ORIENTATION PACK.
+
+Hi {!Contact.FirstName},
+
+It&apos;s time to get ready for your next Rural &amp; Remote adventure!
+
+This email contains all the details you need successfully start your {!TR1__Job__c.Name} contract
+
+Please review all the below details carefully and let us know if you have any questions.
+
+[Roster details]
+[Travel details]
+[Accomodation details]
+[Paper timesheet]
+[On-call addendum]
+
+Once you&apos;ve arrived at your location, please make sure to complete the Orientation Checklist within the first 48 hrs: [Link to WHS form]
+
+Remember you can always call us on 07 4998 5550 if you want to speak to a consultant directly.
+
+Kind regards,
+Your team at Alliance Rural &amp; Remote Health</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

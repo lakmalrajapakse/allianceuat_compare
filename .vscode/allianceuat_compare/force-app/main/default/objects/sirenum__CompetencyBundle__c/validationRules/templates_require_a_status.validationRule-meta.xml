@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>templates_require_a_status</fullName>
+    <active>true</active>
+    <errorConditionFormula>Is_Template__c &amp;&amp; ISBLANK(TEXT(Template_Status__c))</errorConditionFormula>
+    <errorMessage>Template Bundles require a Status.</errorMessage>
+</ValidationRule>

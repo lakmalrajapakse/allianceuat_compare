@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>AN - Onboarding pack Final reminder</name>
+    <style>none</style>
+    <subject>Final reminder to complete Onboarding with Alliance Nursing</subject>
+    <textOnly>FINAL REMINDER TO UPLOAD YOUR DOCUMENTATION.
+
+Hi {!Contact.FirstName},
+
+In order to proceed with you application we need copies of your qualification and training certificates, as well as few other compliance documents.
+
+Please head to the Alliance Portal to complete your documentation:
+
+MY ALLIANCE PORTAL
+
+If you&apos;re no longer interested in proceeding with you application, this will be our last attempt to contact you. Any questions, please feel free to call our friendly staff on 1300 034 494.
+
+Kind regards,
+Your team at Alliance Nursing</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

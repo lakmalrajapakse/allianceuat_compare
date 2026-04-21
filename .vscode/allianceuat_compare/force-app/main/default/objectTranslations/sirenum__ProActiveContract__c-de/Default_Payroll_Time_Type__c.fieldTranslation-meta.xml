@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Defines the default Payroll Time Type set on Shift record when created or edited. --></help>
+    <label><!-- Default Payroll Time Type --></label>
+    <name>Default_Payroll_Time_Type__c</name>
+</CustomFieldTranslation>

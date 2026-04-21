@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Rejection Reason --></label>
+    <name>Rejection_Reason__c</name>
+    <picklistValues>
+        <masterLabel>Client Issues</masterLabel>
+        <translation><!-- Client Issues --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Distance</masterLabel>
+        <translation><!-- Distance --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Incorrect Time</masterLabel>
+        <translation><!-- Incorrect Time --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other Other</masterLabel>
+        <translation><!-- Other Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pay Too Low</masterLabel>
+        <translation><!-- Pay Too Low --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Unavailable</masterLabel>
+        <translation><!-- Unavailable --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

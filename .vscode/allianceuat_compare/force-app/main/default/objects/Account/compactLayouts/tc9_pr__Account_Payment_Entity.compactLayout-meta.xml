@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>tc9_pr__Account_Payment_Entity</fullName>
+    <fields>Name</fields>
+    <fields>tc9_pr__ABN__c</fields>
+    <fields>tc9_pr__Schedule__c</fields>
+    <label>Account - Payment Entity</label>
+</CompactLayout>

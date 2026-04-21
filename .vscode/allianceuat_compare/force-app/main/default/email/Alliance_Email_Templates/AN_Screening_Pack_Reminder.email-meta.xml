@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>AN - Screening Pack Reminder</name>
+    <style>none</style>
+    <subject>Reminder to proceed your application with Alliance Nursing</subject>
+    <textOnly>REMINDER: TELL US A BIT MORE ABOUT YOU.
+
+Hi {!Contact.FirstName},
+
+In order to match you with contracts that plays on your skills and experience, we need a few more details from you. Follow the link below to tell us a bit more about you:
+
+OK, LET&apos;S GET STARTED
+
+If you have any questions, please feel free to call our friendly staff on 1300 034 494.
+
+Kind regards,
+Your team at Alliance Nursing</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

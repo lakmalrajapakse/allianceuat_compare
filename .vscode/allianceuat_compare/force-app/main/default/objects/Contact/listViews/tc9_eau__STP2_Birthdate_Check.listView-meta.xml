@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>tc9_eau__STP2_Birthdate_Check</fullName>
+    <columns>FULL_NAME</columns>
+    <columns>CONTACT.RECORDTYPE</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>CONTACT.BIRTHDATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CONTACT.BIRTHDATE</field>
+        <operation>notEqual</operation>
+    </filters>
+    <filters>
+        <field>CONTACT.BIRTHDATE</field>
+        <operation>lessOrEqual</operation>
+        <value>1/1/1903</value>
+    </filters>
+    <label>STP2 Birthdate Check</label>
+</ListView>

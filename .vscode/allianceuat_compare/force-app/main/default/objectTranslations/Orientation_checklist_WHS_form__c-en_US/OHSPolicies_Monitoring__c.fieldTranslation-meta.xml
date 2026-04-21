@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- How do senior staff monitor that the agency nurse is following OH&amp;S policies and procedures? --></help>
+    <label><!-- OHSPolicies Monitoring --></label>
+    <name>OHSPolicies_Monitoring__c</name>
+</CustomFieldTranslation>

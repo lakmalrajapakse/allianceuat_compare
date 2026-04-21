@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Syd_Jobs</fullName>
+    <columns>NAME</columns>
+    <columns>Branch__c</columns>
+    <columns>Interview_Session__c</columns>
+    <columns>Induction_Session__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Branch__c</field>
+        <operation>contains</operation>
+        <value>BR-0001</value>
+    </filters>
+    <label>Syd Jobs</label>
+</ListView>

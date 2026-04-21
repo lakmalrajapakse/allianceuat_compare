@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>tc9_pr__Leave_Approval_Notification_Opt_Out__c</fullName>
+    <defaultValue>false</defaultValue>
+    <deprecated>false</deprecated>
+    <description>Identifies if the Employee has opted out of having email notification advising of their Leaves approval sent. If True, emails will not be sent</description>
+    <inlineHelpText>Identifies if the Employee has opted out of having email notification advising of their Leaves approval sent. If True, emails will not be sent</inlineHelpText>
+    <label>Leave Approval Notification Opt Out</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

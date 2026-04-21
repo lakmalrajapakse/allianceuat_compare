@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>AES - Screening Pack Invite</name>
+    <style>none</style>
+    <subject>Thank you for applying with Alliance Extra Staff!</subject>
+    <textOnly>THANKS FOR APPLYING — WE&apos;D LOVE TO GET TO KNOW YOU A LITTLE BETTER.
+
+Hi {!Contact.FirstName},
+
+Thank you for applying with Alliance Extra Staff. In order to match you with shifts and contracts that plays on your skills and experience, we need a few more details from you.
+
+Please follow the link below and let us know your skills and when would be a good time for us to call you and discuss your application.
+
+OK, LET&apos;S GET STARTED
+
+
+If you have any questions, please feel free to call our friendly staff on 1300 662 511.
+
+We are looking forward to working with you!
+
+Kind regards,
+Your team at Alliance Extra Staff</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

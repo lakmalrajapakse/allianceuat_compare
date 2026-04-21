@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Which email to use to receive pay advice --></label>
+    <name>Which_email_do_you_want_to_use_to_receiv__c</name>
+    <picklistValues>
+        <masterLabel>Alternative Email</masterLabel>
+        <translation><!-- Alternative Email --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Primary Email</masterLabel>
+        <translation><!-- Primary Email --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

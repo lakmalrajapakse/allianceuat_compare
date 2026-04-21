@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>AN - Blank email template</name>
+    <style>none</style>
+    <subject>Enter you email subject line here</subject>
+    <textOnly>WELCOME TO ALLIANCE NURSING.
+
+{!Contact.FirstName}, welcome to Alliance Nursing.
+
+Your day-to-day with Alliance is best managed via the Alliance Connect app. This is where you can:
+
+Update your availability and accept shifts
+Submit timesheets
+View payslips
+
+And as always, if you have any questions or concerns you can always call our friendly staff on 1300 034 494.
+
+We are thrilled to have you onboard!
+
+Kind regards,
+Your team at Alliance Nursing</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

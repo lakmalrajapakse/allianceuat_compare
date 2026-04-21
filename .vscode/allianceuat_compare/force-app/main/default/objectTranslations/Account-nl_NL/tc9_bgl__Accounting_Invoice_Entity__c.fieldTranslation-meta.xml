@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Lookup to the related Invoice Entity record from the Accounting System --></help>
+    <label><!-- Accounting Invoice Entity --></label>
+    <name>tc9_bgl__Accounting_Invoice_Entity__c</name>
+    <relationshipLabel><!-- Invoice Entities --></relationshipLabel>
+</CustomFieldTranslation>

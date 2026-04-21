@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Payroll_Calendars</fullName>
+    <columns>NAME</columns>
+    <columns>tc9_pr__Status__c</columns>
+    <columns>tc9_pr__Payment_Entity__c</columns>
+    <columns>RECORDTYPE</columns>
+    <columns>tc9_pr__Schedule__c</columns>
+    <columns>tc9_pr__Pay_Schedule_Period_Type__c</columns>
+    <columns>tc9_pr__Start_Date__c</columns>
+    <columns>tc9_pr__End_Date__c</columns>
+    <columns>tc9_pr__Expiry_Date__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>tc9_pr__Calendar__c.tc9_pr__Payroll</value>
+    </filters>
+    <label>Payroll Calendars</label>
+</ListView>

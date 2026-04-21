@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Invoice_Calendars</fullName>
+    <columns>NAME</columns>
+    <columns>tc9_pr__Status__c</columns>
+    <columns>tc9_et__Invoice_Schedule__c</columns>
+    <columns>RECORDTYPE</columns>
+    <columns>tc9_pr__Start_Date__c</columns>
+    <columns>tc9_pr__End_Date__c</columns>
+    <columns>tc9_pr__Expiry_Date__c</columns>
+    <columns>tc9_et__Invoice_Entity__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>LAST_UPDATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>tc9_pr__Calendar__c.tc9_et__Invoice</value>
+    </filters>
+    <label>Invoice Calendars</label>
+</ListView>

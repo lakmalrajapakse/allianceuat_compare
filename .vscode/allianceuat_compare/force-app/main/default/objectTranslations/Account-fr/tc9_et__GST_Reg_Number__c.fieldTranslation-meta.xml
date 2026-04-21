@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Records the GST Registration number for the Invoice Entity --></help>
+    <label><!-- GST Reg Number --></label>
+    <name>tc9_et__GST_Reg_Number__c</name>
+</CustomFieldTranslation>

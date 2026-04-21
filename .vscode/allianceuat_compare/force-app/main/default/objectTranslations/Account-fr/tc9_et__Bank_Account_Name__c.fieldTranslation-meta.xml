@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Records the Bank Account Name of the Invoice Entity. This information is used to provide bank details on invoices for Clients to remit payments --></help>
+    <label><!-- Bank Account Name --></label>
+    <name>tc9_et__Bank_Account_Name__c</name>
+</CustomFieldTranslation>

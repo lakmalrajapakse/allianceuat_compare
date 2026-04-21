@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prevent_Alliance_Connect_User_Shift_Upd</fullName>
+    <active>true</active>
+    <description>With this rule:
+
+A candidate cannot change any shift timing fields if:
+
+- The shift has both Actual Start and Actual End
+- And the shift has been Approved</description>
+    <errorConditionFormula>AND(
+$Profile.Name = &quot;Alliance Connect User&quot;,
+OR(
+ISCHANGED(sirenum__Actual_Start_Time__c),
+ISCHANGED(sirenum__Actual_End_Time__c),
+ISCHANGED(sirenum__BreakStartTime__c),
+ISCHANGED(sirenum__Break_Length__c),
+ISCHANGED(tc9_ext_sirint__Second_Break_Start_Time__c),
+ISCHANGED(tc9_ext_sirint__Second_Break_Length__c)
+),
+AND(
+NOT(ISBLANK(sirenum__Approved_By_Client__c)),
+NOT(ISCHANGED(sirenum__Approved_By_Client__c))
+)
+)</errorConditionFormula>
+    <errorMessage>You are not allowed to update Actual Start/End Time or Break fields.</errorMessage>
+</ValidationRule>

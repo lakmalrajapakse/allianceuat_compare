@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>AN - Referee invite reminder</name>
+    <style>none</style>
+    <subject>We’d appreciate your help with a reference</subject>
+    <textOnly>WE&apos;D LOVE YOUR INPUT.
+
+Hi {!Referee.FirstName},
+
+A couple of days ago we sent you an invite to leave a reference for {!TR1__Candidates_Marketed__c.Name} who&apos;s applied for a {!TR1__Application__c.TR1__Job__c} role with us at Alliance Nursing. We’d appreciate it if you could take a few moments to share your insights about their professional experience and suitability for the role.
+
+PROVIDE  REFERENCE
+
+If you have any questions or need further information, please don&apos;t hesitate to call us on 1300 034 494.
+
+Thank you for your time and assistance in helping us make an informed decision.
+
+Kind regards,
+Alliance Nursing, Recruitment</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

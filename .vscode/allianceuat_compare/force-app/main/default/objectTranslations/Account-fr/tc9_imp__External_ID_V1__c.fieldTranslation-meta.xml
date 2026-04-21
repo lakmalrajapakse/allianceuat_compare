@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Defines the unique external system ID of the corresponding record that has been used to create/update the record to hold unique values for integration as part Import Tool V1 process --></help>
+    <label><!-- External ID (V1) --></label>
+    <name>tc9_imp__External_ID_V1__c</name>
+</CustomFieldTranslation>

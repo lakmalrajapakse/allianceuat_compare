@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>CustomScorer</label>
+    <protected>false</protected>
+    <values>
+        <field>sirenum__Active__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>sirenum__ClassName__c</field>
+        <value xsi:type="xsd:string">SIM_SchedulerCustomScorer</value>
+    </values>
+    <values>
+        <field>sirenum__Enabled__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>sirenum__InitialState__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>sirenum__LongInitialState__c</field>
+        <value xsi:type="xsd:string">{&quot;availabilityBonus&quot;: 0.5,&quot;unavailabilityBonus&quot;:10.0, &quot;newCandidateIncentiveNoWeeks&quot;:10.0,&quot;newCandidateIncentiveBonus&quot;:0.0,&quot;newCandidateIncentiveNoShiftsWorked&quot;:5.0,&quot;availabilityUpdateBonus&quot;:0.15}</value>
+    </values>
+    <values>
+        <field>sirenum__Namespace__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>sirenum__Type__c</field>
+        <value xsi:type="xsd:string">WorkerSearchScorer</value>
+    </values>
+</CustomMetadata>

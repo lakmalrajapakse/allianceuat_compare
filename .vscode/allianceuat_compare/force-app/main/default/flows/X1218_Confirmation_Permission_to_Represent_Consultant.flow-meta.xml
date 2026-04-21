@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>62.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <description>Sends an email confirmation to the Consultant (Contact Owner) when the candidate has signed the &apos;Permission to Represent&apos; document.</description>
+    <environments>Default</environments>
+    <interviewLabel>1218 - Confirmation &apos;Permission to Represent&apos; - Consultant {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>1218 - Confirmation &apos;Permission to Represent&apos; - Consultant</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <name>Create_Platform_Event</name>
+        <label>Create Platform Event</label>
+        <locationX>176</locationX>
+        <locationY>323</locationY>
+        <inputAssignments>
+            <field>Record_Id__c</field>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Type__c</field>
+            <value>
+                <stringValue>Permission to Represent</stringValue>
+            </value>
+        </inputAssignments>
+        <object>X3B_Platform_Event__e</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Create_Platform_Event</targetReference>
+        </connector>
+        <filterFormula>AND(
+  {!$Record.b3d__Template__r.Name} = &apos;AN - Permission to present&apos;,
+  ISCHANGED({!$Record.b3d__Document_Signed__c}),
+  {!$Record.b3d__Document_Signed__c} = True
+)</filterFormula>
+        <object>b3d__Document_Trace__c</object>
+        <recordTriggerType>Update</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- The type of custom Interpretation Rule to be applied. --></help>
+    <label><!-- Interpretation Type --></label>
+    <name>Interpretation_Type__c</name>
+    <picklistValues>
+        <masterLabel>Minimum Engagement</masterLabel>
+        <translation><!-- Minimum Engagement --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Gives finance staff the tools to run reports, review minimum pay rates, access department data, and manage GL integration for payroll and finance processes.</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>2c9 Finance User</label>
+    <mutingPermissionSets>AATest_Finance_Muted_Set</mutingPermissionSets>
+    <permissionSets>Alliance_Custom_Finance_User_Permission_Set</permissionSets>
+    <permissionSets>tc9_bgl__Base_GL_Permission_Set</permissionSets>
+    <permissionSets>tc9_ec__Employee_Community_Permission_Set</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

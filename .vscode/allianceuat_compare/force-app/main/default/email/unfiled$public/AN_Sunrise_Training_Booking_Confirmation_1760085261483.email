@@ -1,0 +1,46 @@
+<html>
+ <head>
+  <title></title>
+ </head>
+ <body style="height: auto; min-height: auto;">
+  <table border="0" cellpadding="0" cellspacing="0" style="background-color: #f6f6f6; padding: 10px;" width="100%">
+   <tbody>
+    <tr>
+     <td align="center" bgcolor="#f6f6f6">
+      <table border="0" cellpadding="0" cellspacing="0" style="background-color:#ffffff; width: 600px;">
+       <tbody>
+        <tr>
+         <td style="padding: 0; background-color: #ffffff;"><img alt="AN-email-header" src="{[devName:ANemailheader]}" style="max-width: 1623.55px" title="AN-email-header" /><a href="https://www.alliancenursing.com.au"> </a></td>
+        </tr>
+        <tr>
+         <td style="height: 30px;">&nbsp;</td>
+        </tr>
+        <tr>
+         <td align="left" style="padding: 0 45px;"><h1 style="font-size: 30px; line-height: 37px; color: #007DC3; font-weight: 900; font-family: 'Montserrat', 'Arial Black', Arial, sans-serif;">SUNRISE TRAINING.</h1> <p style="font-size:18px;line-height:25px;color:#000000; font-weight: 400; font-family: 'Roboto', Arial, sans-serif; margin:10px 0 20px;">Hi {{{Recipient.FirstName}}},<br /> <br /> I have booked you for Sunrise Training on (enter date) so please do not forget! This is a PAID Training Day!<br /> <br /> Sunrise Training Course:<br /> <strong>(enter date)</strong><br /> <strong>(enter time)</strong><br /> Address: Green Room, Level 4, 99 Gawler Place, Adelaide<br /> <br /> Please arrive 10 mins early - if you arrive after&nbsp;<strong>(enter time)</strong>&nbsp;you will not be admitted to the training.<br /> <br /> You need to go to level 4 and use the phone in the foyer to call the Green training room to be admitted to the class.<br /> <br /> Please be advise that you are not to take any photos during the training or in break times<br /> <br /> Remember to take your mask with you and lodge an Alliance Nursing Timesheet with Sunrise Training written on it for the day you attend. You are not required to get this signed.<br /> <br /> Please find attached the training videos that are required to be completed as part of your Sunrise Training. &nbsp;Read instructions carefully - do not send videos to anyone else or you risk being unable to work for SA Health.<br /> <br /> <a href="https://allianceaustralia.my.salesforce.com/sfc/p/QE000002y78j/a/Oa000002N2b4/cCPfz.tEKojlg.NynBWBZK4aGbt1Z5yyVUrnzIsEpyM">Sunrise Training Videos</a><br /> <a href="https://allianceaustralia.my.salesforce.com/sfc/p/QE000002y78j/a/Oa000002N3FN/LoK4AtFSC5N3GB_SKeg6GvMcB..LHIiEQBZA84ruwnI">Sunrise Training - Alliance Nursing Time Sheet</a><br /> <br /> When you have completed this task email us to confirm so&nbsp;we can add this to your file.<br /> <br /> Kind regards,&nbsp;<br /> {{{Sender.FirstName}}}<br /> Alliance Nursing - Adelaide</p></td>
+        </tr>
+        <tr>
+         <td style="height: 20px;">&nbsp;</td>
+        </tr>
+        <tr>
+         <td style="padding: 35px 0px 10px 0px;"><img alt="Alliance-graphic-line" src="{[devName:Alliancegraphicline]}" style="max-width: 1623.55px" title="Alliance-graphic-line" /></td>
+        </tr>
+        <tr>
+         <td style="padding: 26px 45px 40px 45px;font-size: 12px;line-height: 22px;color: #374250;">
+          <table border="0" cellpadding="0" cellspacing="0" style="/* margin: 0 auto; */">
+           <tbody>
+            <tr>
+             <td style="padding-right: 16px;"><a href="https://www.facebook.com/alliancenursingaustralia"><img alt="fb-blue" src="{[devName:fbblue]}" style="max-width: 1623.55px" title="fb-blue" /></a></td>
+             <td style="padding-right: 16px;"><a href="https://www.linkedin.com/company/alliance-nursing-australia"><img alt="in-blue" src="{[devName:inblue]}" style="max-width: 1623.55px" title="in-blue" /></a></td>
+             <td style="padding-right: 16px;"><a href="https://www.instagram.com/alliancenursingaustralia/"><img alt="is-blue" src="{[devName:isblue]}" style="max-width: 1623.55px" title="is-blue" /></a></td>
+             <td><a href="https://www.youtube.com/channel/UCnMTM3MLQMFYj52ERo0E00Q"><img alt="yt-blue" src="{[devName:ytblue]}" style="max-width: 1623.55px" title="yt-blue" /></a></td>
+            </tr>
+           </tbody>
+          </table></td>
+        </tr>
+       </tbody>
+      </table></td>
+    </tr>
+   </tbody>
+  </table>
+ </body>
+</html>

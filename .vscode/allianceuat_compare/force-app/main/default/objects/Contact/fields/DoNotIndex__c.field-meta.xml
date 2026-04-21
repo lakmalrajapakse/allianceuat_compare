@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DoNotIndex__c</fullName>
+    <formula>OR(RecordType.Name=&apos;Client&apos;,RecordType.Name=&apos;Inactive_Candidate&apos;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>DoNotIndex</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

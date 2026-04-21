@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Induction_Date__c</fullName>
+    <description>It reads the local date/time of the Induction session this candidate has been booked into.</description>
+    <inlineHelpText>It reads the local date/time of the Induction session this candidate has been booked into.</inlineHelpText>
+    <label>Induction Date</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>DateTime</type>
+</CustomField>

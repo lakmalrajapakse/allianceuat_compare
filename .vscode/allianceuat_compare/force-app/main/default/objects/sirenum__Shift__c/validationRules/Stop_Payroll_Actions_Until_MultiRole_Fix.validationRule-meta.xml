@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Stop_Payroll_Actions_Until_MultiRole_Fix</fullName>
+    <active>true</active>
+    <description>Do not allow the check of the ‘shift approval’ actions until Multi job role is resolved</description>
+    <errorConditionFormula>AND(sirenum__Team__r.Name = &quot;Multi&quot;,
+    OR( sirenum__Allow_charge__c ,  sirenum__Allow_pay__c )
+   )</errorConditionFormula>
+    <errorMessage>Job Role must be resolved before payroll actions can be allowed</errorMessage>
+</ValidationRule>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- LMS Status --></label>
+    <name>AA_LMS_Status__c</name>
+    <picklistValues>
+        <masterLabel>Completed</masterLabel>
+        <translation><!-- Completed --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>In Progress</masterLabel>
+        <translation><!-- In Progress --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Progressed</masterLabel>
+        <translation><!-- Progressed --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Rejected</masterLabel>
+        <translation><!-- Rejected --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sent</masterLabel>
+        <translation><!-- Sent --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Submitted (Applicant)</masterLabel>
+        <translation><!-- Submitted (Applicant) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Update Required</masterLabel>
+        <translation><!-- Update Required --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Update in Progress</masterLabel>
+        <translation><!-- Update in Progress --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

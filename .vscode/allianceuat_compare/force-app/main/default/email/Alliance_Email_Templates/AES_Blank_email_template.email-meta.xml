@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>AES - Blank email template</name>
+    <style>none</style>
+    <subject>Enter you email subject line here</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+[Enter your message here]
+
+
+
+Kind regards,
+{!User.FirstName}
+Alliance Extra Staff
+Tel: 1300 662 511</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

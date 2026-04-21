@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cross_Assignment_Status__c</fullName>
+    <description>Current status of the cross-assignment interpretation process.</description>
+    <inlineHelpText>Current status of the cross-assignment interpretation process.</inlineHelpText>
+    <label>Cross Assignment Status</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Pending Insert</fullName>
+                <default>false</default>
+                <label>Pending Insert</label>
+            </value>
+            <value>
+                <fullName>Pending Delete</fullName>
+                <default>false</default>
+                <label>Pending Delete</label>
+            </value>
+            <value>
+                <fullName>Insert Failed</fullName>
+                <default>false</default>
+                <label>Insert Failed</label>
+            </value>
+            <value>
+                <fullName>Delete Failed</fullName>
+                <default>false</default>
+                <label>Delete Failed</label>
+            </value>
+            <value>
+                <fullName>Complete</fullName>
+                <default>false</default>
+                <label>Complete</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

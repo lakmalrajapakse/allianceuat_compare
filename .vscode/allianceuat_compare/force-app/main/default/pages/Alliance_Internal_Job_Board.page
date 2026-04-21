@@ -1,0 +1,79 @@
+<apex:page showHeader="false" sidebar="false" standardStylesheets="false" docType="HTML-5.0" applyHtmlTag="false" applyBodyTag="false" controller="b3o.GlobalRemotingRouter" cache="false">
+    <html>
+    <head>
+        <title>Jobs</title>
+        <meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0" />
+        <script>
+            window.performanceStart = new Date();
+            window['globals'] = {
+                sessionId: '{!GETSESSIONID()}',
+                siteUrl: '{!JSENCODE($Setup.AllianceJobBoardCustomSettings__c.SiteURL__c)}',
+                orgUrl: '{!JSENCODE($Setup.AllianceJobBoardCustomSettings__c.OrgURL__c)}',
+                onboardingUrl: '{!JSENCODE($Setup.AllianceJobBoardCustomSettings__c.onboardingURL__c)}',
+                userTimezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
+                userId: '{!$User.Id}',
+                userType: 'CspLitePortal',
+                clientTimezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
+                customerLogo: "{!JSENCODE($Setup.b3o__Onboarding_Default_Settings__c.b3o__Customer_Logo__c)}",
+                router: b3o.GlobalRemotingRouter
+            }
+            if(!window["globals"]?.onboardingUrl){
+                alert('Please set b3o__Onboarding_Default_Settings__c.b3o__Site_URL__c');
+            }
+        </script>
+        
+        <script src="{!URLFOR($Resource.b3o__JobBoardResources, 'index.js')}" defer="true" type="module"></script>
+
+        <style>
+            .myDocLink {
+                font-family: arial;
+                display: block;
+                margin: 10px 0;
+                font-size: 14px;
+                color: #0070d2;
+                text-decoration: none;
+                float: right;
+                margin-right: 20px;
+                /* text-transform: uppercase; */
+                font-weight: bold;
+            }
+            .myDocLink:hover {
+                text-decoration: underline;
+            }
+        </style>
+
+        <script>
+            function goToDocs() {
+                window.top.location.href = "{!$Site.BaseUrl}/s/my-documents";
+            }
+        </script>
+
+    </head>
+    <!-- From version 6.12+, you must also include the standard components scripts -->
+
+
+    <body>
+        <a class="myDocLink"
+        href="javascript:void(0);"
+        onclick="goToDocs();">
+            View Assigned Documents
+        </a>
+        <div style="clear: both;"></div>
+
+        <div class="container">
+            <job-board job-board-name="InternalJobBoard" job-board-path="JobBoard_Assigned_Job_Board__c" places-api-key="" job-object-name="TR1__Job__c"
+                job-ref-path="Id" job-title-path="JobBoard_Job_Title__c" job-short-path="JobBoard_Short_Description__c" job-reg-form-path="JobBoard_Registration_Form__c"
+                job-app-form-path="JobBoard_Application_Form__c" job-app-btn-label-path="JobBoard_Apply_Button_Text__c" job-type-path="X3BJobBoard_Job_Type__r.Name"
+                job-type-field-path="X3BJobBoard_Job_Type__c" job-featured-path="JobBoard_Featured_Job__c" job-posted-path="JobBoard_Date_Job_Posted__c"
+                job-body-path="JobBoard_Job_Description__c" job-foot-path="JobBoard_Job_Footer__c" site-field-path='X3B_JobboardSite__c'
+                site-name-path='X3B_JobboardSite__r.Name' site-coordinates-path="X3B_JobboardSite__r.b3o__Coordinates__c" emp-type-path="JobBoard_Employment_Type__c"
+                pay-info-path="JobBoard_Salary__c" job-doc-pack-path="JobBoard_Document_Pack__c" job-expiry-path="JobBoard_Job_Expiry_Date__c"
+                hide-theme-switch="true" theme-type="light" searchemptype="JobBoard_Employment_Type__c" job-relationship-field="TR1__Job__c"
+                candidate-relationship-field="TR1__Applicant__c" application-field-path="Job_Application_V2__c" app-documents-link="s/my-documents"
+                app-documents-params="?id={0}&dpId={1}&applicationId={2}" job-app-schema="TR1__Application_V2__c:TR1__Job__c:TR1__Applicant__c">
+            </job-board>
+        </div>
+    </body>
+
+    </html>
+</apex:page>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Within 15 Mins of Shift Start --></label>
+    <name>Within_15_Mins_of_Shift_Start__c</name>
+</CustomFieldTranslation>

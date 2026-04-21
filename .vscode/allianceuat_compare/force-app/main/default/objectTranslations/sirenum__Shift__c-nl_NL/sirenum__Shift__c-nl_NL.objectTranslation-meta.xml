@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Dienst</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Diensten</value>
+    </caseValues>
+    <fieldSets>
+        <label><!-- Custom Rule Fields --></label>
+        <name>custom_rule_fields</name>
+    </fieldSets>
+    <gender>Neuter</gender>
+    <nameFieldLabel>Naam dienst</nameFieldLabel>
+    <validationRules>
+        <errorMessage><!-- You cannot switch Auto Broadcasting off once set. --></errorMessage>
+        <name>Auto_Broadcast_Prevent_UnBroadcast</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You are not allowed to update Actual Start/End Time or Break fields. --></errorMessage>
+        <name>Prevent_Alliance_Connect_User_Shift_Upd</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Job Role must be set correctly before this shift can be Confirmed --></errorMessage>
+        <name>Prevent_Confirmed_While_Role_Multi</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- # of Require Shifts must be 1. --></errorMessage>
+        <name>Required_Shift_Must_Be_One</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Job Role must be set correctly before this shift can be released to the VMS --></errorMessage>
+        <name>Restrict_VMS_Send_While_Role_Multi</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Job Role must be resolved before payroll actions can be allowed --></errorMessage>
+        <name>Stop_Payroll_Actions_Until_MultiRole_Fix</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Role Bundle (if specified) must be a role-based Competency Bundle. --></errorMessage>
+        <name>role_bundle_must_be_role_based</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Skill Bundle (if specified) must be a skill-based Competency Bundle. --></errorMessage>
+        <name>skill_bundle_must_be_skill_based</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- Claim_Employee_Allowance --></label>
+        <name>Claim_Employee_Allowance</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Create_Expense --></label>
+        <name>Create_Expense</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Pay_Rule_Builder --></label>
+        <name>Pay_Rule_Builder</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Split_Shift --></label>
+        <name>Split_Shift</name>
+    </webLinks>
+</CustomObjectTranslation>

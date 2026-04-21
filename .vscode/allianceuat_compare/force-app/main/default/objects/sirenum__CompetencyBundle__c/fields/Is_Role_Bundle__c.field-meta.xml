@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Is_Role_Bundle__c</fullName>
+    <defaultValue>false</defaultValue>
+    <inlineHelpText>If true, bundle only contains Items which are Roles. If false, bundle only contains items which are Skills.</inlineHelpText>
+    <label>Is Role Bundle?</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

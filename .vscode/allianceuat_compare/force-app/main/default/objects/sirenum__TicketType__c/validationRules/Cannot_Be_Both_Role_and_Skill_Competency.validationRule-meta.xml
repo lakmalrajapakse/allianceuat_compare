@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cannot_Be_Both_Role_and_Skill_Competency</fullName>
+    <active>true</active>
+    <description>A competency can be used in either role bundles or skill bundles but not both</description>
+    <errorConditionFormula>AND(Is_Role_Competency__c, Is_Skill_Competency__c)</errorConditionFormula>
+    <errorDisplayField>Is_Skill_Competency__c</errorDisplayField>
+    <errorMessage>A competency can be either a role or a skill competency but not both</errorMessage>
+</ValidationRule>

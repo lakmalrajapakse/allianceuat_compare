@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>sirenum__Site__c.Branch__c</field>
+    </columns>
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>CUST_ID</field>
+    </columns>
+    <columns>
+        <field>sirenum__Site__c.WFM_Contract__c</field>
+    </columns>
+    <columns>
+        <field>sirenum__Site__c.sirenum__Timezone__c</field>
+    </columns>
+    <description>Check for sites missing timezone</description>
+    <format>Tabular</format>
+    <name>Sites - Timezone check</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$sirenum__Site__c@sirenum__Site__c.sirenum__Operating_Company__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>sirenum__Site__c.sirenum__Last_Visited_day__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

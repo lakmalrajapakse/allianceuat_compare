@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Shift_Invoice_Allowance_Column__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Used in the &apos;Nursing AllowanceInLine&apos; invoice template to determine if the allowance pay code should count as part of the &apos;Shift&apos; allowance column.</description>
+    <inlineHelpText>Used in the &apos;Nursing AllowanceInLine&apos; invoice template to determine if the allowance pay code should count as part of the &apos;Shift&apos; allowance column.</inlineHelpText>
+    <label>Shift - Invoice Allowance Column</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

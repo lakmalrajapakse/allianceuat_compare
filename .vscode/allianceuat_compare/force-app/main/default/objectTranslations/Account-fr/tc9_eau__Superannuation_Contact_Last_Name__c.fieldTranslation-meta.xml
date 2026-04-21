@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Last Name of appointed Superannuation Contact. --></help>
+    <label><!-- Superannuation Contact Last Name --></label>
+    <name>tc9_eau__Superannuation_Contact_Last_Name__c</name>
+</CustomFieldTranslation>

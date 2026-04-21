@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- How many days after the assignment end date to deactivate the portal users.  Used in the Deactivate Community Users Flow --></help>
+    <label><!-- Deactivate portal users after assignment --></label>
+    <name>Deactivate_portal_users_after_assignment__c</name>
+</CustomFieldTranslation>

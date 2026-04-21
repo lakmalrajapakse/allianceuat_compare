@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- What safety precautions are takeing to ensure the safety of staff in the accomodation? --></help>
+    <label><!-- SafetyPrecautions Accommodation --></label>
+    <name>SafetyPrecautions_Accommodation__c</name>
+</CustomFieldTranslation>

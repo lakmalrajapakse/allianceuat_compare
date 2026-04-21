@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Match_Object_Field__c</fullName>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <inlineHelpText>This is the shift field which must be an ID field</inlineHelpText>
+    <label>Match Object Field</label>
+    <metadataRelationshipControllingField>SIM_Filter_Condition__mdt.Match_Object__c</metadataRelationshipControllingField>
+    <referenceTo>FieldDefinition</referenceTo>
+    <relationshipLabel>Shift_Approval_Conditions</relationshipLabel>
+    <relationshipName>Shift_Approval_Conditions</relationshipName>
+    <required>false</required>
+    <type>MetadataRelationship</type>
+    <unique>false</unique>
+</CustomField>

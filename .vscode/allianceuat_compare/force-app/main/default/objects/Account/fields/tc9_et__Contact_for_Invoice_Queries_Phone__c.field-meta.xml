@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>tc9_et__Contact_for_Invoice_Queries_Phone__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Defines the phone number for Clients of the User who will be detailed as a Invoice Entity&apos;s Invoice Contact.</description>
+    <externalId>false</externalId>
+    <formula>tc9_et__Contact_for_Invoice_Queries__r.tc9_et__Phone_for_Clients__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Defines the phone number for Clients of the User who will be detailed as a Invoice Entity&apos;s Invoice Contact.</inlineHelpText>
+    <label>Contact for Invoice Queries Phone</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

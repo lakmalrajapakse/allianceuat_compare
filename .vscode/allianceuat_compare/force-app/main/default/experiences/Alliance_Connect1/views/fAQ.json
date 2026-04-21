@@ -1,0 +1,70 @@
+{
+  "appPageId" : "d9ce9f69-0e14-4b11-9233-6c5ce091d546",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "c25d49a5-676a-4e25-ba96-a33124d858a6",
+  "label" : "FAQ",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "fb9dca48-520e-4248-81c1-d9650604fd28",
+          "columns" : [ {
+            "UUID" : "62208237-fc79-40fd-801c-f32098513c2a",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "fb9dca48-520e-4248-81c1-d9650604fd28",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<h1 id=\"faq\">Alliance Connect App – FAQs</h1>\n  <p>Whether you're brand new to Alliance Connect or just need a quick refresher, this FAQ has everything you need to navigate the app with confidence.</p>\n<br />\n  <ol>\n    <li><a href=\"#why-profile\">Why do I need a profile?</a></li>\n    <li><a href=\"#how-profile\">How do I see my profile?</a></li>\n    <li><a href=\"#update-payee\">How do I update my Payroll profile?</a></li>\n    <li><a href=\"#update-availability\">How do I update my availability?</a></li>\n    <li><a href=\"#see-open-shifts\">How do I see open shifts on offer?</a></li>\n    <li><a href=\"#scheduled-shifts\">How do I see which shifts I'm scheduled to work?</a></li>\n    <li><a href=\"#submit-timesheets\">How do I submit my timesheets?</a></li>\n    <li><a href=\"#shift-approval-manager\">How do I use the Shift Approval Manager?</a></li>\n    <li><a href=\"#view-pay-advice\">How do I view my pay advice?</a></li>\n    <li><a href=\"#access-documents\">How do I access my documents and compliance items?</a></li>\n    <li><a href=\"#time-zone\">Should I set a time zone?</a></li>\n  </ol>\n<br />\n<div id=\"why-profile\">\n    <h2>Why do I need a profile?</h2>\n    <p>We use the details from your profile to contact you, to offer you appropriate work and, more importantly, to pay you for the shifts you complete. If your profile isn’t set up, we may not be able to offer you as much work, and we won’t be able to pay you correctly.</p>\n    <p><a href=\"#faq\">Back to top</a></p>\n  </div>\n<br />\n  <div id=\"how-profile\">\n    <h2>How do I see my profile?</h2>\n    <p>Use the Connect menu to access your profile via the <strong>Profile</strong> option. From here, you can view and edit your personal details.</p>\n    <p><a href=\"#faq\">Back to top</a></p>\n  </div>\n<br />\n  <div id=\"update-payee\">\n    <h2>How do I update my payroll profile?</h2>\n    <p>Go to the <strong>main menu</strong> and tap <strong>Payroll profile</strong>.<br>\n    Here, you can update your bank account, superannuation, and tax file number. If anything doesn’t look right, contact your local branch team for support.</p>\n    <p><a href=\"#faq\">Back to top</a></p>\n  </div>\n<br />\n  <div id=\"update-availability\">\n    <h2>How do I update my availability?</h2>\n    <p>From the <strong>main menu</strong>, tap <strong>Availability for shift work availability</strong>.<br>\n    Select the start date for your update and choose how many days you'd like to apply it to. Press <strong>Refresh</strong> to load the schedule.</p>\n    <p>In the table view showing AM, PM and Night duty slots:</p>\n    <ul>\n      <li>Tap once to mark yourself <strong>available</strong></li>\n      <li>Tap twice to mark yourself <strong>not available</strong></li>\n      <li>Tap a third time to <strong>clear the slot</strong></li>\n    </ul>\n    <p>Don’t forget to <strong>save your preferences</strong>. You can view your updated availability in the main <strong>Schedule</strong> view.</p>\n    <p><a href=\"#faq\">Back to top</a></p>\n  </div>\n<br />\n  <div id=\"see-open-shifts\">\n    <h2>How do I see open shifts on offer?</h2>\n    <p>Open the <strong>Shifts</strong> tab and select <strong>Available shifts</strong>.<br>\n    Here, you’ll find shifts currently on offer based on your role and location. Tap on a shift for more details or press <strong>Confirm</strong> to accept it.</p>\n    <p><a href=\"#faq\">Back to top</a></p>\n  </div>\n<br />\n  <div id=\"scheduled-shifts\">\n    <h2>How do I see which shifts I'm scheduled to work?</h2>\n    <p>Go to the <strong>Shifts</strong> tab and view <strong>Confirmed shifts</strong>.<br>\n    You’ll see a list of your upcoming bookings, including shift times, locations and any relevant notes.</p>\n    <p><a href=\"#faq\">Back to top</a></p>\n  </div>\n<br />\n  <div id=\"submit-timesheets\">\n    <h2>How do I submit my timesheets?</h2>\n    <ol>\n      <li>Open the relevant shift from the <strong>calendar view</strong>.</li>\n      <li>Tap <strong>Shift approval manager</strong>.</li>\n      <li>Enter your hours worked and break times.</li>\n      <li>Hand your phone to a <strong>registered shift approver</strong>.</li>\n    </ol>\n    <p>They can approve your timesheet using one of the following methods:</p>\n    <ul>\n      <li>Name and <strong>signature</strong></li>\n      <li>Name and <strong>PIN</strong></li>\n      <li>Name, <strong>signature and PIN</strong></li>\n    </ul>\n    <p>If the approver has forgotten their PIN, they can use a <strong>temporary PIN</strong> sent to their work email.<br>\n    If no registered approver is available, a <strong>non-registered approver</strong> can approve the shift using a temporary PIN.</p>\n    <p><strong>Note:</strong> Expenses and allowances are added directly on the shift. Open the shift and scroll down to view available options. Only expense types and allowances specific to the facility or ward will be displayed.</p>\n    <p><a href=\"#faq\">Back to top</a></p>\n  </div>\n<br />\n    <div id=\"shift-approval-manager\">\n      <h2>How to use the Shift Approval Manager</h2>\n      <strong>1. Manual/Offline Timesheet</strong>\n      <ul>\n        <li>Open your finished shift</li>\n        <li>Select <i>Shift Approval Manager</i></li>\n        <li>Confirm your shift details and site worked</li>\n        <li>Tap <i>Continue</i></li>\n        <li>Your shift will be matched to the facility’s paper timesheet for approval</li>\n      </ul><br />\n        <strong>2. PIN Approval</strong>\n      <ul>\n        <li>Open your finished shift</li>\n        <li>Tap Shift Approval Manager</li>\n        <li>Confirm your shift details and site worked</li>\n        <li>Hand your phone to the supervisor</li>\n        <li>Supervisor enters their PIN and, if required, signs then select Approve</li>\n        <li>For supervisors: forgot your pin? Select I’ve forgotten my PIN and select continue.</li>\n        <li>Find your name on the dropdown list. If your name is not there, please select I can’t find my name from the list.</li>\n        <li>Select I confirm I am the person above and continue.</li>\n        <li>If you are already a shift approver, your new PIN will be sent to your email. For temporary approvers please enter you information on the next screen and select continue. The new PIN will be sent to the number entered in the form.</li>\n        <li>Please enter your new PIN in the PIN screen and press Continue.</li>\n        <li>The shift will be automatically approved.</li>\n      </ul><br />\n        <strong>3. Digital Signature</strong>\n      <ul>\n        <li>Open your finished shift.</li>\n        <li>Tap Shift Approval Manager</li>\n        <li>Confirm your shift details and site worked</li>\n        <li>For supervisors: Select your name from the dropdown list (or choose Can’t Find My Name), confirm you are person selected and press Continue.</li>\n        <li>For existing approvers, please review the shift details, sign, Upload and Save, and select Approve.</li>\n        <li>For temporary or new supervisors, please enter your details, sign, Upload and Save, and Approve.</li>\n      </ul><br />\n      <p>For a visual guide: <a href=\"https://allianceaustralia.my.salesforce.com/sfc/p/QE000002y78j/a/Oa000002d2IX/RIUx6FwEAthIl7bDZu.8xbFqgI13OYM2WID933exg9w\" target=\"_blank\">download the Shift Approval Manager Guide</a></p>\n    </div>\n<br />\n  <div id=\"view-pay-advice\">\n    <h2>How do I view my pay advice?</h2>\n    <p>From the <strong>main menu</strong>, tap <strong>Pay advice</strong>.<br>\n    You’ll see a list of recent pay slips with a breakdown of gross pay, deductions, and net pay. You can also download a PDF copy of your records.</p>\n    <p><a href=\"#faq\">Back to top</a></p>\n  </div>\n<br />\n  <div id=\"access-documents\">\n    <h2>How do I access my documents and compliance items?</h2>\n    <p>Tap <strong>My Compliance and Docs</strong> from the <strong>main menu</strong>.<br>\n    This will open the Alliance portal, where you’ll find a checklist of outstanding items, submitted documentation, and anything that may require an update. You can upload files directly from your mobile device.</p>\n    <p><a href=\"#faq\">Back to top</a></p>\n  </div>\n<br />\n  <div id=\"time-zone\">\n    <h2>Should I set a time zone?</h2>\n    <p>If the time zone displayed in your profile isn’t correct, we recommend updating it to match where you usually live and work. Most screens in the app use your device’s time zone, but setting your correct profile time zone ensures accuracy across all features.</p>    \n<p><a href=\"#faq\">Back to top</a></p>\n  </div>\n<br />\n  <p>If you need help at any point, please reach out to your local Alliance branch. Go to the Get in touch page to find the contact details of your nearest office. We’re here to support you.</p>\n<br />"
+          },
+          "componentName" : "forceCommunity:htmlBlock",
+          "id" : "4079c49f-b8cc-46d7-a2d3-b94ba09ef8ee",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "62208237-fc79-40fd-801c-f32098513c2a",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "81326724-d4a7-4d62-8ee0-98ed11b8459f",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "FAQ"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "65fbf765-1d11-47da-8192-27b86a3faaa7",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "d632b768-7a71-45fb-a6b8-be849475707b",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-faq"
+}

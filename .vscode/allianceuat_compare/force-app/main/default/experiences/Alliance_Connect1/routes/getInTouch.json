@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "289bd4aa-3fbe-4368-aa64-058c4377cc4c",
+  "appPageId" : "d9ce9f69-0e14-4b11-9233-6c5ce091d546",
+  "configurationTags" : [ ],
+  "devName" : "Get_in_touch__c",
+  "id" : "c4aa11a6-1c83-476d-a287-92eeac6b58b2",
+  "label" : "Get in touch",
+  "pageAccess" : "UseParent",
+  "routeType" : "custom-get-in-touch",
+  "type" : "route",
+  "urlPrefix" : "get-in-touch"
+}

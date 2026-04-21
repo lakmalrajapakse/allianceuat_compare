@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldSets>
+        <label><!-- Power Notes Default --></label>
+        <name>TR1__Power_Notes_Default</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Power Notes Event --></label>
+        <name>TR1__Power_Notes_Event</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Power Notes Tableview --></label>
+        <name>TR1__Power_Notes_Tableview</name>
+    </fieldSets>
+    <recordTypes>
+        <label><!-- External Interview --></label>
+        <name>TR1__External_Interview</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Used for Internal Interviews only. --></description>
+        <label><!-- Internal Interview --></label>
+        <name>TR1__Internal_Interview</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Power Notes Event --></label>
+        <name>TR1__Power_Notes_Event</name>
+    </recordTypes>
+    <webLinks>
+        <label><!-- Internal_Interview --></label>
+        <name>TR1__Internal_Interview</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Log_A_Call --></label>
+        <name>TR1__Log_A_Call</name>
+    </webLinks>
+</CustomObjectTranslation>

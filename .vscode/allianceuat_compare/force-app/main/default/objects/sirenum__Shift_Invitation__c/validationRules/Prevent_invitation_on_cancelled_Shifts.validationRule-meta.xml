@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prevent_invitation_on_cancelled_Shifts</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(ISNEW(), NOT(ISNULL(sirenum__Shift__c)), sirenum__Shift__r.sirenum__Cancelled__c)</errorConditionFormula>
+    <errorMessage>Job Offers cannot be created on cancelled Shift Demands.</errorMessage>
+</ValidationRule>

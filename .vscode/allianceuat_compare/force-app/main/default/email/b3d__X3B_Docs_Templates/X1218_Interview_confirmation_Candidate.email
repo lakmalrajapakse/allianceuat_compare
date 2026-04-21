@@ -1,0 +1,22 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><br></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><br></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="white-space:pre">	</span>Hi&nbsp;<span style="font-size: 12pt;">{!b3o__Session_Invitation__c.b3o__Contact__c},</span></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="white-space:pre">	</span>Thank you for booking an interview slot with:</p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><br></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="white-space:pre">	</span>{!b3o__Session_Invitation__c.Branch__c}&nbsp;<o:p></o:p></p><p class="MsoNormal" style=""><span style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; white-space: pre;">	</span>&nbsp;<font face="arial">{!b3o__Session_Invitation__c.Booking_Time_Local__c}</font><o:p style="font-family: arial; font-size: 12pt;">&nbsp;</o:p><span style="font-family: arial; font-size: 12pt;">&nbsp;</span><span style="font-family: arial; font-size: 12pt; white-space: pre;">	</span></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><br></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="white-space:pre">	</span>{!b3o__Session__c.b3o__Booking_Confirmation_Message__c}</p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span lang="IT" style="mso-ansi-language:IT"><o:p>&nbsp;</o:p></span></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="font-size: 12pt;"><span style="white-space:pre">	</span>We are looking forward to speaking with you!&nbsp;</span></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="font-size: 12pt;">&nbsp;</span></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="font-size: 12pt;"><span style="white-space:pre">	</span>Best regards,</span></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="white-space:pre">	</span>Your Alliance Team</p>]]></td>
+</tr>
+</table>

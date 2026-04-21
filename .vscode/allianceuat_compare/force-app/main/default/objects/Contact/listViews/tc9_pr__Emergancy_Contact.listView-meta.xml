@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>tc9_pr__Emergancy_Contact</fullName>
+    <columns>FULL_NAME</columns>
+    <columns>CONTACT.RECORDTYPE</columns>
+    <columns>tc9_pr__Emergency_Contact_of_Employee__c</columns>
+    <columns>tc9_pr__Emergency_Contact_Relationship__c</columns>
+    <columns>CONTACT.EMAIL</columns>
+    <columns>CONTACT.PHONE1</columns>
+    <columns>CONTACT.PHONE3</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>CONTACT.LAST_UPDATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CONTACT.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Contact.tc9_pr__Emergency_Contact</value>
+    </filters>
+    <label>Emergency Contact</label>
+</ListView>

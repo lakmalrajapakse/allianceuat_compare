@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Do you have any medical conditions or disabilities that may require accommodations in the workplace? How can we support your needs? --></help>
+    <label><!-- accommodations in the workplace? How can --></label>
+    <name>accommodations_in_the_workplace_How_can__c</name>
+</CustomFieldTranslation>

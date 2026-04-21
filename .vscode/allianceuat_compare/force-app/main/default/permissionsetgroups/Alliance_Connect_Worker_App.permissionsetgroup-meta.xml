@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Permission Set Group for all Alliance Connect candidates/workers</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Alliance Connect Worker App</label>
+    <permissionSets>Alliance_Mobile_Worker</permissionSets>
+    <permissionSets>X1218_SMS_Application_Connect_App</permissionSets>
+    <permissionSets>X1218_Shift_Approval_Connect_App</permissionSets>
+    <permissionSets>X2cloudnine_Standard_Objects_Permission_Set</permissionSets>
+    <permissionSets>tc9_ec__Employee_Community_Permission_Set</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

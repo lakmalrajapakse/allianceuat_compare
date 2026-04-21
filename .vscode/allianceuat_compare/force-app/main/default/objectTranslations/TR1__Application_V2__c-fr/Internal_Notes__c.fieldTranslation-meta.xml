@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>
+        <!-- Internal notes for each application record.
+Character limit: 255. -->
+    </help>
+    <label><!-- Internal Notes --></label>
+    <name>Internal_Notes__c</name>
+</CustomFieldTranslation>

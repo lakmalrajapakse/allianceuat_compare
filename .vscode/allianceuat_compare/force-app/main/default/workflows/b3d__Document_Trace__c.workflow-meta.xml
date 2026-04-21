@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>X1218_Candidate_Signed_Permission_to_Represent</fullName>
+        <description>1218 - Candidate Signed Permission to Represent</description>
+        <protected>false</protected>
+        <recipients>
+            <field>ContactOwner__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderAddress>notifications@allianceaustralia.com.au</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>b3d__X3B_Docs_Templates/X1218_Candidate_Signed_Permission_to_Represent</template>
+    </alerts>
+</Workflow>

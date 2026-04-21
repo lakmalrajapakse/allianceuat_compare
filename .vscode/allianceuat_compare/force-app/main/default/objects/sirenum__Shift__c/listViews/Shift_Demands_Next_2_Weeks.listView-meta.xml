@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Shift_Demands_Next_2_Weeks</fullName>
+    <columns>NAME</columns>
+    <columns>sirenum__Scheduled_Local_Start_Date__c</columns>
+    <columns>sirenum__Scheduled_Local_Start_Time__c</columns>
+    <columns>sirenum__Scheduled_Local_End_Time__c</columns>
+    <columns>sirenum__Site__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>sirenum__Scheduled_Local_Start_Date__c</field>
+        <operation>equals</operation>
+        <value>NEXT_N_DAYS:7</value>
+    </filters>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>sirenum__Shift__c.sirenum__Shift_Demand</value>
+    </filters>
+    <label>Shift Demands_Next 7 Days</label>
+</ListView>

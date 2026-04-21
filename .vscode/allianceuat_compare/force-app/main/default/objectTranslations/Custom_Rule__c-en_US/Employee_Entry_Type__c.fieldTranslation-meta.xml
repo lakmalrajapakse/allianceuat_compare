@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Allows the user to choose how allowances should be captured - either as Start/End Times or by default Quantity. --></help>
+    <label><!-- Employee Entry Type --></label>
+    <name>Employee_Entry_Type__c</name>
+    <picklistValues>
+        <masterLabel>Quantity</masterLabel>
+        <translation><!-- Quantity --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Start/End Times</masterLabel>
+        <translation><!-- Start/End Times --></translation>
+    </picklistValues>
+</CustomFieldTranslation>
